@@ -86,7 +86,7 @@ const SignUpForm = () => {
                     <Form.Label className="d-none" >Password</Form.Label>
                     <Form.Control 
                       className={styles.Input}
-                      type="password" placeholder="Password1"
+                      type="password" placeholder="Password"
                       name="password1" 
                       value={password1}
                       onChange={handleChange}
