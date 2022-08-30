@@ -31,23 +31,34 @@ const NavBar = () => {
       <i className="far fa-plus-square"></i>Add post
     </NavLink>
   );
+
   const loggedInIcons = (
     <>
       <NavLink
-        className={styles.NavLink}
+        exact
+        className={`mt-1 ${styles.NavLink}`}
+        activeClassName={styles.Active}
+        to="/"
+      >
+        <i className="fas fa-home"></i>Home
+      </NavLink>
+      <NavLink
+        className={`mt-1 ${styles.NavLink}`}
         activeClassName={styles.Active}
         to="/feed"
       >
         <i className="fas fa-stream"></i>Feed
       </NavLink>
       <NavLink
-        className={styles.NavLink}
+        className={`mt-1 ${styles.NavLink}`}
         activeClassName={styles.Active}
         to="/liked"
       >
         <i className="fas fa-heart"></i>Liked
       </NavLink>
-      <NavLink className={styles.NavLink} to="/" onClick={handleSignOut}>
+      <NavLink 
+        className={`mt-1 ${styles.NavLink}`}
+        to="/" onClick={handleSignOut}>
         <i className="fas fa-sign-out-alt"></i>Sign out
       </NavLink>
       <NavLink
@@ -61,7 +72,7 @@ const NavBar = () => {
   const loggedOutIcons = (
     <>
       <NavLink
-        className={styles.NavLink}
+        className={`${styles.NavLink}`}
         activeClassName={styles.Active}
         to="/signin"
       >
@@ -73,9 +84,6 @@ const NavBar = () => {
         activeClassName={styles.Active}
       >
         <i className="fas fa-user-plus"></i>Sign up
-      </NavLink>
-      <NavLink className={styles.NavLink} to="/" onClick={handleSignOut}>
-        <i className="fas fa-sign-out-alt"></i>Sign out
       </NavLink>
     </>
   );
@@ -95,15 +103,6 @@ const NavBar = () => {
          aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto text-left">
-            <NavLink
-              exact
-              className={styles.NavLink}
-              activeClassName={styles.Active}
-              to="/"
-            >
-              <i className="fas fa-home"></i>Home
-            </NavLink>
-
             {currentUser ? loggedInIcons : loggedOutIcons}
           </Nav>
         </Navbar.Collapse>
