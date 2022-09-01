@@ -22,11 +22,11 @@ const NavBar = () => {
     }
   };
 
-  const addPostIcon = (
+  const addChatIcon = (
     <NavLink
       className={styles.NavLink}
       activeClassName={styles.Active}
-      to="/posts/create"
+      to="/chat/create"
     >
       <i className="far fa-plus-square"></i>Add post
     </NavLink>
@@ -96,7 +96,8 @@ const NavBar = () => {
           <img src={logo} alt="logo" height="30" /> Shot Caller
           </Navbar.Brand>
         </NavLink>
-        {currentUser && addPostIcon}
+        {currentUser && addChatIcon}
+        {currentUser && currentUser.username}
         <Navbar.Toggle
          ref={ref}
          onClick={() => setExpanded(!expanded)}
