@@ -45,6 +45,13 @@ const NavBar = () => {
       <NavLink
         className={`mt-1 ${styles.NavLink}`}
         activeClassName={styles.Active}
+        to="/chat"
+      >
+        <i className="fas fa-stream"></i>Chat
+      </NavLink>
+      <NavLink
+        className={`mt-1 ${styles.NavLink}`}
+        activeClassName={styles.Active}
         to="/feed"
       >
         <i className="fas fa-stream"></i>Feed

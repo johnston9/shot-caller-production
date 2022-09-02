@@ -1,0 +1,188 @@
+import React from 'react';
+import Card from "react-bootstrap/Card";
+import OverlayTrigger from "react-bootstrap/OverlayTrigger";
+import Tooltip from "react-bootstrap/Tooltip";
+
+import styles from "../../styles/Chat.module.css";
+import Button from "react-bootstrap/Button"
+import btnStyles from "../../styles/Button.module.css";
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
+import { Link, useHistory } from 'react-router-dom';
+import Avatar from "../../components/Avatar";
+import { axiosRes } from '../../api/axiosDefaults';
+// import { PostDropdown } from '../../components/PostDropdown';
+// import { useRedirect } from '../../hooks/Redirect';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+
+const Chat = (props) => {
+//   useRedirect("loggedOut");
+    const {
+        id,
+        owner,
+        name,
+        company,
+        profile_id,
+        profile_image,
+        comments_count,
+        likes_count,
+        like_id,
+        title,
+        content,
+        image,
+        updated_at,
+        setChat,
+      } = props;
+
+      const currentUser = useCurrentUser();
+      console.log(currentUser)
+      const user = currentUser?.username || '';
+      const is_owner = currentUser?.username === owner;
+      console.log(is_owner)
+      const history = useHistory();
+
+      const handleEdit = () => {
+        history.push(`/chat/${id}/edit`);
+      };
+    
+      const handleDelete = async () => {
+        try {
+          await axiosRes.delete(`/chat/${id}/`);
+          history.goBack();
+        } catch (err) {
+        } 
+      };
+
+      const handleLike = async () => {
+        console.log("click")
+        try {
+          const { data } = await axiosRes.post("/likes/", { chatmessage: id });
+          console.log(data)
+          setChat((prevChat) => ({
+            ...prevChat,
+            results: prevChat.results.map((chat) => {
+              return chat.id === id
+                ? { ...chat, likes_count: chat.likes_count + 1, like_id: data.id }
+                : chat;
+            }),
+          }));
+        } catch (err) {
+            console.log(err)
+        }
+      };
+
+      const handleUnlike = async () => {
+        try {
+          await axiosRes.delete(`/likes/${like_id}/`);
+          setChat((prevChat) => ({
+            ...prevChat,
+            results: prevChat.results.map((chat) => {
+              return chat.id === id
+                ? { ...chat, likes_count: chat.likes_count - 1, like_id: null }
+                : chat;
+            }),
+          }));
+        } catch (err) {
+        }
+      };
+
+
+    return (
+        <div>
+          <Button
+                  className={`${btnStyles.Button} ${btnStyles.Blue} mb-2`}
+                  onClick={() => history.goBack()}
+                >
+                  Back
+                </Button>
+            <Card  >
+                {/* new */}
+              <Card.Body className={`${styles.PostTop} py-1`} >
+                <Row className="d-flex align-items-center">
+                    <Col xs={12} lg={8} >
+                      <Row>
+                        <Col className="d-flex align-items-center justify-content-center" xs={12} md={8}>
+                        <Link to={`/profiles/${profile_id}`}>
+                        <Avatar src={profile_image} height={45}  />
+                        </Link>
+                        <span style={{ fontWeight: '700', textTransform: 'capitalize'}} 
+                        className='ml-1 ml-md-3'>{owner} {name} <span className='d-none d-sm-inline-block' > {company} </span>  </span>
+                        <span className='ml-3'>{updated_at}</span>
+                        {/* {is_owner && (
+                        <PostDropdown
+                            handleEdit={handleEdit}
+                            handleDelete={handleDelete}
+                        />
+                        ) }  */}
+                        </Col>
+                        <Col xs={12} className='d-sm-none text-center'>
+                        <p  >{company}</p>
+                        </Col>
+                        <Col className="d-flex align-items-center justify-content-center" xs={12} md={4}>
+                        <div className={` ${styles.PostBar}`} >
+                        {/* like */}
+                        {is_owner ? (
+                        <OverlayTrigger
+                        placement="top"
+                        overlay={<Tooltip>You can't like your own post!</Tooltip>}
+                        >
+                        <i className="far fa-heart" />
+                        </OverlayTrigger>
+                    ) : like_id ? (
+                        <span onClick={handleUnlike}>
+                        <i className={`fas fa-heart ${styles.Heart}`} />
+                        </span>
+                    ) : currentUser ? (
+                        <span onClick={handleLike}>
+                        <i className={`far fa-heart ${styles.HeartOutline}`} />
+                        </span>
+                    ) : (
+                        <OverlayTrigger
+                        placement="top"
+                        overlay={<Tooltip>Log in to like posts!</Tooltip>}
+                        >
+                        <i className="far fa-heart" />
+                        </OverlayTrigger>
+                    )}
+                                    {likes_count}
+                        <OverlayTrigger
+                            placement="top"
+                            overlay={<Tooltip>Comments</Tooltip>}
+                            >
+                        <Link to={`/posts/${id}`}>
+                            <i className="far fa-comments" />
+                        </Link>
+                        </OverlayTrigger>
+                        {comments_count}
+                        </div> 
+                        </Col>
+                      </Row>            
+                    </Col>                    
+                      <Col xs={12} lg={4} 
+                      className="d-flex align-items-center justify-content-center" >
+                      </Col>
+                </Row>
+                </Card.Body>
+                {/* end new */}
+                <Card.Body className='py-1'  >
+                    {title && <h4 style={{ fontStyle: 'italic' }}
+                    className="mb-0 pb-0 text-center">{title}</h4>}
+                    <hr />
+                    {content && <Card.Text>{content}</Card.Text>}
+                </Card.Body>
+                <hr />
+                <Row className='mb-2'>
+                  {/* image */}
+                  <Col xs={12} md={6}  >
+                      {image && <> 
+                          <Card.Img src={image} alt="image" className="px-3" />
+                          </>
+                          }
+                  </Col>  
+              </Row >
+            </Card>
+        </div>
+    )
+}
+
+export default Chat
