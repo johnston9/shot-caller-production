@@ -3,6 +3,10 @@
     max-width: 50%;
     padding: 0px;
   }
+
+.DropdownItem i {
+  color: #000;
+}
   
   .Absolute {
     position: absolute;

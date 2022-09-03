@@ -19,7 +19,6 @@ export const UniDropdown = ({ handleEdit, handleDelete }) => {
   return (
     <Dropdown className="ml-auto" drop="left">
       <Dropdown.Toggle as={EditDeleteIcon} />
-
       <Dropdown.Menu
         className="text-center"
         popperConfig={{ strategy: "fixed" }}

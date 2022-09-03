@@ -114,7 +114,7 @@ function ChatCreateForm() {
 
     try {
       const { data } = await axiosReq.post("/chat/", formData);
-      history.push(`/posts/${data.id}`);
+      history.push(`/chat/${data.id}`);
       console.log(data)
     } catch (err) {
       console.log(err);

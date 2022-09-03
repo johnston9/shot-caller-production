@@ -10,10 +10,10 @@ import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { Link, useHistory } from 'react-router-dom';
 import Avatar from "../../components/Avatar";
 import { axiosRes } from '../../api/axiosDefaults';
-// import { PostDropdown } from '../../components/PostDropdown';
 // import { useRedirect } from '../../hooks/Redirect';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import { UniDropdown } from '../../components/UniDropDown';
 
 const Chat = (props) => {
 //   useRedirect("loggedOut");
@@ -99,17 +99,9 @@ const Chat = (props) => {
                         <Avatar src={profile_image} height={45}  />
                         </Link>
                         <span style={{ fontWeight: '700', textTransform: 'capitalize'}} 
-                        className='ml-1 ml-md-3'>{owner} {name} <span className='d-none d-sm-inline-block' > {company} </span>  </span>
+                        className='ml-1 ml-md-3'>{owner} {name}
+                        <span className='d-none d-sm-inline-block' > {company} </span>  </span>
                         <span className='ml-3'>{updated_at}</span>
-                        {/* {is_owner && (
-                        <PostDropdown
-                            handleEdit={handleEdit}
-                            handleDelete={handleDelete}
-                        />
-                        ) }  */}
-                        </Col>
-                        <Col xs={12} className='d-sm-none text-center'>
-                        <p  >{company}</p>
                         </Col>
                         <Col className="d-flex align-items-center justify-content-center" xs={12} md={4}>
                         <div className={` ${styles.PostBar}`} >
@@ -153,6 +145,12 @@ const Chat = (props) => {
                     </Col>                    
                       <Col xs={12} lg={4} 
                       className="d-flex align-items-center justify-content-center" >
+                        {is_owner && (
+                            <UniDropdown
+                            handleEdit={handleEdit}
+                            handleDelete={handleDelete}
+                        />
+                        ) } 
                       </Col>
                 </Row>
                 </Card.Body>
