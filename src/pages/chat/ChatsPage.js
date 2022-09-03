@@ -4,6 +4,7 @@ import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
+import { fetchMoreData } from "../../utils/utils";
 
 import appStyles from "../../App.module.css";
 import styles from "../../styles/ChatsPage.module.css";
@@ -13,6 +14,7 @@ import { useEffect } from "react";
 import { axiosReq } from "../../api/axiosDefaults";
 import Chat from "./Chat";
 import Asset from "../../components/Asset";
+import InfiniteScroll from "react-infinite-scroll-component";
 
 function ChatsPage({message, filter=""} ) {
   const [chat, setChat] = useState({ results: [] });
@@ -20,11 +22,12 @@ function ChatsPage({message, filter=""} ) {
   const { pathname } = useLocation();
   // eslint-disable-next-line
   const [error, setErrors] = useState({});
+  const [query, setQuery] = useState("");
 
   useEffect(() => {
     const fetchChat = async () => {
       try {
-        const { data } = await axiosReq.get(`/chat/?${filter}`);
+        const { data } = await axiosReq.get(`/chat/?${filter}search=${query}`);
         setChat(data);
         setHasLoaded(true);
       } catch (err) {
@@ -33,19 +36,48 @@ function ChatsPage({message, filter=""} ) {
     };
 
     setHasLoaded(false);
-    fetchChat();
-  }, [filter, pathname]);
+    const timer = setTimeout(() => {
+      fetchChat();
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+
+  }, [filter, pathname, query]);
   
   return (
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={8}>
         <p>Popular profiles mobile</p>
+        {/* search */}
+        <i className={`fas fa-search ${styles.SearchIcon}`} />
+        <Form
+          className={styles.SearchBar}
+          onSubmit={(event) => event.preventDefault()}
+        >
+          <Form.Control
+            value={query}
+            onChange={(event) => setQuery(event.target.value)}
+            type="text"
+            className="mr-sm-2"
+            placeholder="Search posts"
+          />
+        </Form>
+        {/* chats */}
         {hasLoaded ? (
           <>
             {chat.results.length ? (
-              chat.results.map((cha) => (
-                <Chat key={cha.id} {...cha} setChat={setChat} />
-              ))
+              <InfiniteScroll 
+               children={
+                chat.results.map((cha) => (
+                  <Chat key={cha.id} {...cha} setChat={setChat} />
+                )) }
+                dataLength={chat.results.length}
+                loader={<Asset spinner />}
+                hasMore={!!chat.next}
+                next={() => fetchMoreData(chat, setChat)}
+              />
             ) : (
               <Container className={appStyles.Content}>
                 <Asset src={NoResults} message={message} />

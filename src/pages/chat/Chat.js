@@ -89,14 +89,7 @@ const Chat = (props) => {
 
     return (
         <div>
-          <Button
-                  className={`${btnStyles.Button} ${btnStyles.Blue} mb-2`}
-                  onClick={() => history.goBack()}
-                >
-                  Back
-                </Button>
-            <Card  >
-                {/* new */}
+            <Card className='mb-3' >
               <Card.Body className={`${styles.PostTop} py-1`} >
                 <Row className="d-flex align-items-center">
                     <Col xs={12} lg={8} >
