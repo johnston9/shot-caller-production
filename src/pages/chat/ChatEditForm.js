@@ -13,13 +13,14 @@ import btnStyles from "../../styles/Button.module.css";
 import Image from "react-bootstrap/Image";
 import Alert from "react-bootstrap/Alert";
 
-import { useHistory } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import { axiosReq } from "../../api/axiosDefaults";
 import Asset2 from "../../components/Asset2";
 import Asset from "../../components/Asset";
+import { useEffect } from "react";
 // import useRedirect from "../../hooks/Redirect";
 
-function ChatCreateForm() {
+function ChatEditForm() {
   const [errors, setErrors] = useState({});
 
   const [postData, setPostData] = useState({
@@ -31,6 +32,22 @@ function ChatCreateForm() {
 
   const imageInput = useRef(null);
   const history = useHistory();
+  const { id } = useParams();
+
+  useEffect(() => {
+    const handleMount = async () => {
+      try {
+        const { data } = await axiosReq.get(`/chat/${id}/`);
+        const { title, content, image, is_owner } = data;
+
+        is_owner ? setPostData({ title, content, image }) : history.push("/");
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
+    handleMount();
+  }, [history, id]);
 
   const handleChange = (event) => {
     setPostData({
@@ -98,7 +115,7 @@ function ChatCreateForm() {
         Cancel
       </Button>
       <Button className={`${btnStyles.Button} ${btnStyles.Blue} px-5 pl-3`} type="submit">
-        Create
+        Edit
       </Button>
     </div>
   );
@@ -108,14 +125,13 @@ function ChatCreateForm() {
     const formData = new FormData();
     formData.append("title", title);
     formData.append("content", content);
-    if(imageInput.current.files[0]) {
-      formData.append("image", imageInput.current.files[0]);
-    }
+    if (imageInput?.current?.files[0]) {
+        formData.append("image", imageInput.current.files[0]);
+      }
 
     try {
-      const { data } = await axiosReq.post("/chat/", formData);
-      history.push(`/chat/${data.id}`);
-      console.log(data)
+      await axiosReq.put(`/chat/${id}/`, formData);
+      history.push(`/chat/${id}`);
     } catch (err) {
       console.log(err);
       if (err.response?.status !== 401) {
@@ -128,7 +144,7 @@ function ChatCreateForm() {
     <div className={`${styles.Back} mt-3`} >
        <h5 style={{ textTransform: 'uppercase'}} 
           className={`mt-1 mb-1 pl-3 py-1 ${styles.SubTitle } text-center`}>
-          CREATE CHAT
+          EDIT CHAT
       </h5>
     <Form className="mt-3 px-3" onSubmit={handleSubmit}>
       <Row>
@@ -189,4 +205,4 @@ function ChatCreateForm() {
   );
 }
 
-export default ChatCreateForm;
+export default ChatEditForm;

@@ -35,14 +35,12 @@ const Chat = (props) => {
       } = props;
 
       const currentUser = useCurrentUser();
-      console.log(currentUser)
       const user = currentUser?.username || '';
       const is_owner = currentUser?.username === owner;
-      console.log(is_owner)
       const history = useHistory();
 
       const handleEdit = () => {
-        history.push(`/chat/${id}/edit`);
+        history.push(`/chat/edit/${id}`);
       };
     
       const handleDelete = async () => {
@@ -99,7 +97,7 @@ const Chat = (props) => {
                         <Avatar src={profile_image} height={45}  />
                         </Link>
                         <span style={{ fontWeight: '700', textTransform: 'capitalize'}} 
-                        className='ml-1 ml-md-3'>{owner} {name}
+                        className='ml-1 ml-md-3'>{user} {owner} {name}
                         <span className='d-none d-sm-inline-block' > {company} </span>  </span>
                         <span className='ml-3'>{updated_at}</span>
                         </Col>
