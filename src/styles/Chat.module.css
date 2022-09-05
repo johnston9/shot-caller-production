@@ -6,12 +6,19 @@
     text-align: center;
   }
 
-.PostTop {
+.ChatTop {
     background-color: #1ea7ae;
     color: #fff;
     border-bottom: 2px solid #fafafa;
   }
-.PostTop i {
+
+  .ChatTopLink:hover {
+    cursor: pointer;
+    background-color: #666;
+    color: #fff;
+  }
+
+.ChatTop i {
   color: #fff;
   font-size: .75rem;
 }

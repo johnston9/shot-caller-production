@@ -12,10 +12,13 @@ import Chat from "./Chat";
 import Comment from "../comments/Comment";
 import CommentCreateForm from "../comments/CommentCreateForm";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
+import InfiniteScroll from "react-infinite-scroll-component";
+import Asset from "../../components/Asset";
+import { fetchMoreData } from "../../utils/utils";
 
 function ChatPage() {
   const { id } = useParams();
-  const history = useHistory;
+  const history = useHistory();
   const [chat, setChat] = useState({ results: [] });
 
   const currentUser = useCurrentUser();
@@ -49,8 +52,7 @@ function ChatPage() {
       Back
     </Button>
     <Row className="h-100">
-      <Col className="py-2 p-0 p-lg-2" lg={8}>
-        <p>Popular profiles for mobile</p>
+      <Col className="py-2 p-0 p-lg-2" >
         <Chat {...chat.results[0]} setChat={setChat} postPage />
         <Container className={appStyles.Content}>
         {currentUser ? (
@@ -65,23 +67,26 @@ function ChatPage() {
             "Comments"
           ) : null}
         {comments.results.length ? (
-            comments.results.map((comment) => (
-              <Comment 
-                key={comment.id} 
-                {...comment} 
+            <InfiniteScroll
+            children={comments.results.map((comment) => (
+              <Comment
+                key={comment.id}
+                {...comment}
                 setChat={setChat}
                 setComments={setComments}
-                />
-            ))
+              />
+            ))}
+            dataLength={comments.results.length}
+            loader={<Asset spinner />}
+            hasMore={!!comments.next}
+            next={() => fetchMoreData(comments, setComments)}
+          />
           ) : currentUser ? (
             <span>No comments yet, be the first to comment!</span>
           ) : (
             <span>No comments... yet</span>
           )}
         </Container>
-      </Col>
-      <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
-        Popular profiles for desktop
       </Col>
     </Row>
     </div>

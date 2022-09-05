@@ -6,20 +6,23 @@ import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 import { fetchMoreData } from "../../utils/utils";
 
+import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
+import Button from "react-bootstrap/Button";
 import styles from "../../styles/ChatsPage.module.css";
 import NoResults from "../../assets/no-results.png";
-import { useLocation } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
 import { useEffect } from "react";
 import { axiosReq } from "../../api/axiosDefaults";
-import Chat from "./Chat";
 import Asset from "../../components/Asset";
 import InfiniteScroll from "react-infinite-scroll-component";
+import ChatTop from "./ChatTop";
 
 function ChatsPage({message, filter=""} ) {
   const [chat, setChat] = useState({ results: [] });
   const [hasLoaded, setHasLoaded] = useState(false);
   const { pathname } = useLocation();
+  const history = useHistory();
   // eslint-disable-next-line
   const [error, setErrors] = useState({});
   const [query, setQuery] = useState("");
@@ -47,13 +50,31 @@ function ChatsPage({message, filter=""} ) {
   }, [filter, pathname, query]);
   
   return (
-    <Row className="h-100">
-      <Col className="py-2 p-0 p-lg-2" lg={8}>
-        <p>Popular profiles mobile</p>
+    <div>
+    <Row>
+    <Col xs={6}>
+    <Button
+      className={`${btnStyles.Button} ${btnStyles.Blue} mb-2`}
+      onClick={() => history.goBack()}
+    >
+      Back
+    </Button>
+    </Col>
+    <Col xs={6}>
+    <Button
+      className={`${btnStyles.Button} ${btnStyles.Blue} float-right mb-2`}
+      onClick={() => history.goBack()}
+    >
+      Profiles
+    </Button>
+    </Col>
+    </Row>
+    <Row>
+      <Col className="py-2 p-0 p-lg-2" 
+        xs={{span: 10, offset: 1}} md={{span: 6, offset: 3}} >
         {/* search */}
-        <i className={`fas fa-search ${styles.SearchIcon}`} />
         <Form
-          className={styles.SearchBar}
+          className={`${styles.SearchBar}`}
           onSubmit={(event) => event.preventDefault()}
         >
           <Form.Control
@@ -61,9 +82,13 @@ function ChatsPage({message, filter=""} ) {
             onChange={(event) => setQuery(event.target.value)}
             type="text"
             className="mr-sm-2"
-            placeholder="Search posts"
+            placeholder="Search chat"
           />
         </Form>
+        </Col>
+        </Row>
+        <Row>
+        <Col className="py-2 p-0 p-lg-2" >
         {/* chats */}
         {hasLoaded ? (
           <>
@@ -71,7 +96,7 @@ function ChatsPage({message, filter=""} ) {
               <InfiniteScroll 
                children={
                 chat.results.map((cha) => (
-                  <Chat key={cha.id} {...cha} setChat={setChat} />
+                  <ChatTop key={cha.id} {...cha} setChat={setChat} />
                 )) }
                 dataLength={chat.results.length}
                 loader={<Asset spinner />}
@@ -90,10 +115,8 @@ function ChatsPage({message, filter=""} ) {
           </Container>
         )}
       </Col>
-      <Col md={4} className="d-none d-lg-block p-0 p-lg-2">
-        <p>Popular profiles for desktop</p>
-      </Col>
     </Row>
+    </div>
   );
 }
 

@@ -1,17 +1,26 @@
 import React from 'react';
-import { Navbar, Container, Nav } from "react-bootstrap";
+import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 import logo from "../assets/logo1.png";
 import styles from "../styles/NavBar.module.css";
 import { NavLink } from "react-router-dom";
 import { useCurrentUser, useSetCurrentUser } from "../contexts/CurrentUserContext";
 import axios from 'axios';
 import Avatar from './Avatar';
-import useClickOutsideToggle from '../hooks/useClickOutsideToggle';
+// import useClickOutsideToggle from '../hooks/useClickOutsideToggle';
+import useDropdownClick from '../hooks/useDropdownClick';
 
 const NavBar = () => {
   const currentUser = useCurrentUser();
   const setCurrentUser = useSetCurrentUser();
-  const { expanded, setExpanded, ref } = useClickOutsideToggle();
+  // const { expanded, setExpanded, ref } = useClickOutsideToggle();
+  // const { expanded, setExpanded, ref, 
+  //   refw, refw1, refw2, refw3, refw4,
+  //   reff, reff1, reff2, reff3, reff4, reff5, reff6, 
+  //   refm, refm1, refm2, refin, refin2,
+  //   refs, refs1, refs2, refs3,
+  //   refp, refp1, refp2 } = useDropdownClick();
+  const { expanded, setExpanded, ref, 
+    refp, refp1, refp2 } = useDropdownClick();
 
   const handleSignOut = async () => {
     try {
@@ -68,12 +77,45 @@ const NavBar = () => {
         to="/" onClick={handleSignOut}>
         <i className="fas fa-sign-out-alt"></i>Sign out
       </NavLink>
-      <NavLink
+      {/* <NavLink
         className={styles.NavLink}
         to={`/profiles/${currentUser?.profile_id}`}
       >
         <Avatar src={currentUser?.profile_image} text="Profile" height={40} />
+      </NavLink> */}
+      {/* profiles */}
+      <NavDropdown
+          title={
+            <span style={{ color: '#555555'}} className={styles.Title}>
+              <Avatar src={currentUser?.profile_image} text="" height={40} />Profiles
+            </span>
+          }
+          ref={refp}
+          id="nav-dropdown5"
+          // activeClassName={styles.Active}
+          className={`py-0 ${styles.NavLink} `}
+          >
+        <NavDropdown.Item >
+          <NavLink
+          className={` ${styles.DropLink} `}
+          activeClassName={styles.Active}
+          ref={refp1}
+          to="/profiles"
+        >
+          <i className="navicon fas fa-play"></i>Profiles
+        </NavLink>
+        </NavDropdown.Item>
+        <NavDropdown.Item >
+        <NavLink
+          className={`mt-2 ${styles.NavLink} `}
+          activeClassName={styles.Active}
+          ref={refp2}
+          to={`/profiles/${currentUser?.profile_id}`}
+        >
+          <i className="navicon fas fa-play"></i>My Profile 
       </NavLink>
+      </NavDropdown.Item>
+      </NavDropdown>
     </>
   );
   const loggedOutIcons = (

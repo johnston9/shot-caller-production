@@ -10,6 +10,7 @@ import ChatPage from "./pages/chat/ChatPage";
 import ChatsPage from "./pages/chat/ChatsPage";
 import { useCurrentUser } from "./contexts/CurrentUserContext";
 import ChatEditForm from "./pages/chat/ChatEditForm";
+import ProfilesPage from "./pages/profiles/ProfilesPage";
 
 function App() {
   const currentUser = useCurrentUser()
@@ -23,6 +24,7 @@ function App() {
           <Route exact path="/" render={() => <h1>Landing Page</h1>} />
           <Route exact path="/signin" render={() => <SignInForm />} />
           <Route exact path="/signup" render={() => <SignUpForm/> } />
+          <Route exact path="/profiles" render={() => <ProfilesPage /> } />
           <Route exact path="/chat/create" render={() => <ChatCreateForm />} />
           <Route exact path="/chat/edit/:id" render={() => <ChatEditForm />} />
           <Route 

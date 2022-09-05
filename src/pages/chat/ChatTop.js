@@ -13,8 +13,7 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import { UniDropdown } from '../../components/UniDropDown';
 
-const Chat = (props) => {
-//   useRedirect("loggedOut");
+const ChatTop = (props) => {
     const {
         id,
         owner,
@@ -27,7 +26,6 @@ const Chat = (props) => {
         like_id,
         title,
         content,
-        image,
         updated_at,
         setChat,
       } = props;
@@ -81,10 +79,9 @@ const Chat = (props) => {
         }
       };
 
-
-    return (
-        <div>
-            <Card className='mb-3' >
+  return (
+    <div>
+        <Card >
             <Card.Body className={`${styles.ChatTop} py-1`} >
             <Row className="d-flex align-items-center">
                 <Col xs={2} >
@@ -99,7 +96,7 @@ const Chat = (props) => {
                     className='ml-1 ml-md-3'>{owner} {name} {company} </span>
                     </Col>
                     <Col  xs={12} md={6}>
-                    <div className={` ${styles.PostBar}`} >
+                    <div className={`ml-5 ${styles.PostBar}`} >
                     <span className='mr-3'>{updated_at}</span>
                     {/* like */}
                     {is_owner ? (
@@ -150,26 +147,18 @@ const Chat = (props) => {
                 </Col>
             </Row>
             </Card.Body>
-                {/* end new */}
-                <Card.Body className='py-1'  >
-                    {title && <h4 style={{ fontStyle: 'italic' }}
-                    className="mb-0 pb-0 text-center">{title}</h4>}
-                    <hr />
-                    {content && <Card.Text>{content}</Card.Text>}
-                </Card.Body>
+            {/* end new className="d-flex align-items-center justify-content-center"*/}
+            <Link to={`/chat/${id}`}>
+            <Card.Body className={`${styles.ChatTopLink} py-1`}  >
+                {title && <h4 style={{ fontStyle: 'italic' }}
+                className="mb-0 pb-0 text-center">{title}</h4>}
                 <hr />
-                <Row className='mb-2'>
-                  {/* image */}
-                  <Col xs={12} md={{span: 6, offset: 3}} >
-                      {image && <> 
-                          <Card.Img src={image} alt="image" className="px-3" />
-                          </>
-                          }
-                  </Col>  
-              </Row >
-            </Card>
-        </div>
-    )
+                {content && <Card.Text>{content}</Card.Text>}
+            </Card.Body>
+            </Link>
+        </Card>
+    </div>
+  )
 }
 
-export default Chat
+export default ChatTop
