@@ -33,3 +33,33 @@ export const fetchMoreData = async (resource, setResource) => {
     }));
   } catch (err) {}
 };
+
+export const followHelper = (profile, clickedProfile, following_id) => {
+  return profile.id === clickedProfile.id
+    ? // update followers count and set following id
+      {
+        ...profile,
+        followers_count: profile.followers_count + 1,
+        following_id,
+      }
+    : profile.is_owner
+    ? // update following count
+      { ...profile, following_count: profile.following_count + 1 }
+    : // return unchanged
+      profile;
+};
+
+export const unfollowHelper = (profile, clickedProfile) => {
+  return profile.id === clickedProfile.id
+    ? // update followers count and set following id
+      {
+        ...profile,
+        followers_count: profile.followers_count - 1,
+        following_id: null,
+      }
+    : profile.is_owner
+    ? // update following count
+      { ...profile, following_count: profile.following_count - 1 }
+    : // return unchanged
+      profile;
+};
