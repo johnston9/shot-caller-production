@@ -1,350 +1,54 @@
-/* scene card  */
-.Story {
-    object-fit: cover;
-    height: 100%;
-    width: 100%}
-  
-  .Frame {
-    height: 1000px;
+.WordBreakWhite {
+  color: #fff;
+}
+
+.Back {
+  /* background-color: #2c9da3; */
+  background-color: #1ea7ae;
+  color: #000;
+  height: 180px;
+}
+
+.Back2 {
+  background-color: #2c9da3;
+  color: #ffffff;
+}
+
+.CardHead {
+  height: 140px;
+}
+
+.CardHead:hover {
+  background-color: #22b9c1;
+}
+
+.Likes {
+  color: #fff;
+  font-weight: 700;
+}
+.Follow {
+  background-color: #58666b;
+  color: #fff;
+}
+
+a:hover {
+  color:aqua
+}
+
+.SubTitle2   {
+  background-color: #d6fcff;
+  font-weight: 700;
+}
+
+/* profilepage */
+
+.Titlelist {
+  font-size: 1em;
+}
+
+@media screen and (max-width: 991px) {
+  .ProfileImage {
+    width: 80px;
+    height: 80px;
   }
-  
-  i:hover {
-    color: #fff;
-  }
-  
-  .Images {
-    object-fit: cover;
-    height: 200px;
-    width: 100%;
-  }
-  
-  .White {
-    background-color: #fff;
-  }
-  
-  .SceneCard {
-    border: 5px solid #fff;
-    transition-timing-function: ease;
-    transition: border .5s, background-color .5s, transform .5s;
-    color: #000;
-  }
-  
-  .Header {
-    background-color: #fff;
-  }
-  
-  .SceneCard:hover {
-    background-color: rgb(209, 227, 250);
-    color: #000;
-    /* border: 10px solid #fff; */
-    /* animation: bounce 1s; */
-    /* -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);  */
-    /* transform: matrix(1, -0.3, 0, 1, 0, 0); */
-  }
-  
-  @keyframes bounce {
-    0%, 20%, 60%, 100% {
-      -webkit-transform: translateY(0);
-      transform: translateY(0);
-    }
-  
-    40% {
-      -webkit-transform: translateY(-20px);
-      transform: translateY(-20px);
-    }
-  
-    80% {
-      -webkit-transform: translateY(-10px);
-      transform: translateY(-10px);
-    }
-  }
-  
-  .SceneCard a {
-    color: #000;
-  }
-  
-  .SceneCard a:hover {
-    color: #000;
-  }
-  
-  .Back {
-    background-color: #fff;
-  }
-  
-  .AddScene {
-    background-color: cornsilk;
-  }
-  
-  .Bold { 
-    font-weight: 700;
-  }
-  
-  .ButtonLine {
-    background-color: #fff;
-    border-top: 3px solid #fff;
-  }
-  
-  .BoldTitle {
-    font-weight: 700;
-    /* background-color: rgb(209, 240, 240); */
-    background-color: #d6fcff;
-  }
-  
-  .Actor {
-    background-color: rgb(227, 246, 246);
-    min-height: 65px;
-  }
-  
-  .Button {
-    color: aqua;
-    cursor: pointer;
-  }
-  
-  .Button:hover {
-    color: rgb(34, 153, 153);
-  }
-  
-  .Close {
-    color: rgb(28, 131, 131);
-    padding-right: 30px;
-    cursor: pointer;
-  }
-  
-  .Close:hover {
-    color: rgb(0, 8, 8);
-  }
-  
-  .CloseIns {
-    color: red;
-  }
-  
-  .CloseIns:hover {
-    color: rgb(231, 226, 226);
-  }
-  
-  .BreakBox {
-    border:1px solid aquamarine;
-    min-height: 100px;
-  }
-  
-  .BreakBoxTitle {
-    color: crimson;
-  }
-  
-  .SubTitle {
-    background-color: #e8f0f1;
-    font-weight: 700;
-  }
-  
-  .SubTitle2   {
-    background-color: #d6fcff;
-    font-weight: 700;
-  }
-  
-  .SubTitle3 {
-    background-color: #e4f2f4;
-    font-weight: 700;
-  }
-  
-  .GuideTitle {
-    font-style: italic;
-    background-color: #e8f0f1;
-  }
-  
-  .Guide {
-    background-color: aliceblue;
-  }
-  
-  .GuideBox {
-    /* background-color: rgb(229 224 201); */
-    background-color: aliceblue;
-    /* border-bottom: 1px solid #999 ; */
-  }
-  
-  .Button {
-    color: rgb(10, 173, 173);
-  }
-  
-  .Button:hover {
-    color: rgb(9, 182, 182);
-  }
-  
-  .Instructions {
-    background-color: aliceblue;
-  }
-  
-  .Guide {
-    background-color: aliceblue;
-  }
-  
-  .Break {
-    border-bottom: #000;
-    background-color: #000;
-    color: #000;
-  }
-  
-  .UniImg {
-    max-height: 130px;
-    cursor: pointer;
-  }
-  
-  .CardBox {
-    border: 1px solid #fff;
-    transition-timing-function: ease;
-    transition: border .5s, background-color .5s, transform .5s;
-  }
-  
-  .CardBox:hover {
-    border: 1px solid rgb(255, 255, 255);
-    /* animation: bounce 1s; */
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1); 
-    /* transform: matrix(1, -0.3, 0, 1, 0, 0); */
-  }
-  
-  .CostumeLink {
-    color: rgb(26, 172, 172);
-    text-transform: uppercase;
-    cursor: pointer;
-  }
-  
-  .CostumeLink:hover {
-    color: rgb(228, 103, 72);
-  }
-  
-  .SearchBar input {
-      border-radius: 20px;
-      color: #242a3d;
-      padding-left: 40px;
-      margin-bottom: 16px;
-    }
-    
-    .SearchIcon {
-      position: absolute;
-      font-size: 1.2rem;
-      padding: 9px;
-      padding-left: 15px;
-    }
-    
-    .SearchIcon:hover {
-      cursor: default;
-      color: #cfced3;
-    }
-  
-    .Edit {
-      color: #fff;
-    }
-  
-    .Edit:hover {
-      color: #fff;
-    }
-  
-    .Action {
-      font-size: 1rem;
-    }
-  
-    .Bold {
-      font-weight: 700;
-    }
-  
-    .Italics {
-      font-style: italic;
-    }
-  
-    .Div50 {
-      height: 50px;
-      overflow: hidden;
-    }
-  
-    .Div25 {
-      height: 25px;
-      overflow: hidden;
-    }
-  
-    .ShotInfo {
-      background-color: blanchedalmond;
-    }
-  
-    .Input {
-      background: #ffffff;
-      border: 1px solid #f0f1f9;
-      box-sizing: border-box;
-      border-radius: 2px;
-      color: #7177a1;
-      padding: 0px 10px;
-      height: 30px !important;
-      text-align: center;
-  }
-  
-  .InputScene {
-     background: #ffffff;
-     border: 1px solid #f0f1f9;
-     box-sizing: border-box;
-     border-radius: 2px;
-     color: #7177a1;
-     padding: 0px 10px;
-  }
-  
-  .InputChar {
-     background: #ffffff;
-     border: 1px solid #f0f1f9;
-     box-sizing: border-box;
-     border-radius: 2px;
-     color: #7177a1;
-     padding: 0px 0px;
-     height: 30px !important;
-  }
-  
-  .InputArea {
-    background: #ffffff;
-      border: 1px solid #f0f1f9;
-      box-sizing: border-box;
-      border-radius: 2px;
-      color: #7177a1;
-      padding: 0px 10px;
-      height: 50px !important;
-  }
-  
-  .ShotEditForm {
-    border-bottom: 1px solid rgb(46, 46, 46);
-  }
-  
-  .Back {
-    background-color: aliceblue;
-  }
-  
-  .Width {
-    width: 50%;
-  }
-  
-  .Width2 {
-    width: 80%;
-  }
-  
-  .Width3 {
-    width: 80%;
-  }
-  
-  .Drop {
-    color: #000;
-  }
-  @media screen and (max-width: 600px) {
-    .Title {
-      font-size: .75em;
-    }
-  
-    .Titledetail {
-      font-size: 1.25em;
-    }
-  
-    .Titlelist {
-      font-size: 1em;
-    }
-  
-    .SceneTitle {
-      font-size: 1.25em;
-    }
-  }
+}
