@@ -47,7 +47,7 @@ const NavBar = () => {
         exact
         className={`mt-1 ${styles.NavLink}`}
         activeClassName={styles.Active}
-        to="/"
+        to="/home"
       >
         <i className="fas fa-home"></i>Home
       </NavLink>
