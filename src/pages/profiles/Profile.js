@@ -5,11 +5,11 @@ import { useCurrentUser } from '../../contexts/CurrentUserContext';
 import { Link } from 'react-router-dom';
 import Avatar from '../../components/Avatar';
 import Button from "react-bootstrap/Button";
-// import { useSetProfileData } from '../../contexts/ProfileDataContext';
 // import { useRedirect } from '../../hooks/Redirect';
 import Card from "react-bootstrap/Card";
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import { useSetProfileData } from '../../contexts/ProfileDataContext';
 
 const Profile = (props) => {
   const { profile, imageSize="40" } = props;
@@ -17,6 +17,8 @@ const Profile = (props) => {
 
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
+
+  const { handleFollow, handleUnfollow } = useSetProfileData();
 
   return (
     <div>
@@ -50,7 +52,7 @@ const Profile = (props) => {
                 </Row>
                 </Link>
                 </Card.Body>
-                {/* <Card.Header className="my-0 py-1 px-0"> 
+                <Card.Header className="my-0 py-1 px-0"> 
                 <Row>
                     <Col xs={12}>
                     <div className="mt-1" >
@@ -74,7 +76,7 @@ const Profile = (props) => {
                     </div>
                     </Col>
                 </Row>
-                </Card.Header> */}
+                </Card.Header>
             </Card>
         </div>
         {/* his */}
@@ -86,7 +88,7 @@ const Profile = (props) => {
           <Avatar src={image} height={imageSize} />
         </Link>
       </div>
-      <div className={`mx-2 ${styles.WordBreak}`}>
+      <div className={`mx-0 ${styles.WordBreak}`}>
         <strong>{owner}</strong>
       </div>
       <div className={`text-right`}>
@@ -96,16 +98,16 @@ const Profile = (props) => {
           (following_id ? (
             <Button
               className={`${btnStyles.Button} ${btnStyles.BlackOutline}`}
-              onClick={() => {}}
+              onClick={() => handleUnfollow(profile)}
             >
-              unfollow
+              unf
             </Button>
           ) : (
             <Button
               className={`${btnStyles.Button} ${btnStyles.Black}`}
-              onClick={() => {}}
+              onClick={() => handleFollow(profile)}
             >
-              follow
+              fol
             </Button>
           ))}
       </div>

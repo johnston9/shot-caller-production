@@ -1,7 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { axiosReq } from "../../api/axiosDefaults";
+import React from "react"
 import Asset from "../../components/Asset";
-import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import Profile from "./Profile";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";

@@ -16,14 +16,17 @@ import NoResults from "../../assets/no-results.png";
 import InfiniteScroll from "react-infinite-scroll-component";
 import ChatTop from "../chat/ChatTop";
 import { fetchMoreData } from "../../utils/utils";
+import { ProfileEditDropdown } from "../../components/UniDropDown";
 
 function ProfilePage() {
   const [hasLoaded, setHasLoaded] = useState(false);
   const [profileChat, setProfileChat] = useState({ results: [] });
   const currentUser = useCurrentUser();
   const { id } = useParams();
-  const setProfileData = useSetProfileData();
+
+  const { setProfileData, handleFollow, handleUnfollow } = useSetProfileData();
   const { profilePage } = useProfileData();
+
   const [profile] = profilePage.results;
   const is_owner = currentUser?.username === profile?.owner;
 
@@ -52,6 +55,7 @@ function ProfilePage() {
 
   const mainProfile = (
     <>
+      {profile?.is_owner && <ProfileEditDropdown id={profile?.id} />}
       <Row className="px-3 text-center">
         <Col lg={3} className="text-lg-left">
         <Image
@@ -61,7 +65,9 @@ function ProfilePage() {
           />
         </Col>
         <Col lg={6}>
-          <h3 className="m-2">{profile?.owner}</h3>
+          <h3 className="m-0">{profile?.company}</h3>
+          <h4 className="m-0">{profile?.name}</h4>
+          <h5>{profile?.owner}</h5>
           <Row className="justify-content-center no-gutters">
             <Col xs={3} className="my-2">
               <div>{profile?.posts_count ? (
@@ -87,14 +93,14 @@ function ProfilePage() {
             (profile?.following_id ? (
               <Button
                 className={`${btnStyles.Button} ${btnStyles.BlackOutline}`}
-                onClick={() => {}}
+                onClick={() => handleUnfollow(profile)}
               >
                 unfollow
               </Button>
             ) : (
               <Button
                 className={`${btnStyles.Button} ${btnStyles.Black}`}
-                onClick={() => {}}
+                onClick={() => handleFollow(profile)}
               >
                 follow
               </Button>

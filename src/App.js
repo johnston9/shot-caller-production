@@ -14,6 +14,9 @@ import ProfilesPage from "./pages/profiles/ProfilesPage";
 import ProfilePage from "./pages/profiles/ProfilePage";
 import Home from "./pages/home/Home";
 import Landing from "./pages/home/Landing";
+import UsernameForm from "./pages/profiles/UsernameForm";
+import UserPasswordForm from "./pages/profiles/UserPasswordForm";
+import ProfileEditForm from "./pages/profiles/ProfileEditForm";
 
 function App() {
   const currentUser = useCurrentUser()
@@ -61,6 +64,21 @@ function App() {
               />
             ) } />
           <Route exact path="/chat/:id" render={() => <ChatPage />} />
+          <Route
+              exact
+              path="/profiles/:id/edit/username"
+              render={() => <UsernameForm />}
+            />
+            <Route
+              exact
+              path="/profiles/:id/edit/password"
+              render={() => <UserPasswordForm />}
+            />
+            <Route
+              exact
+              path="/profiles/:id/edit"
+              render={() => <ProfileEditForm />}
+            />
           <Route render={() => <p>Page not found!</p>} />
         </Switch>
       </Container>
