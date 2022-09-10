@@ -8,13 +8,13 @@ import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { Link, useHistory } from 'react-router-dom';
 import Avatar from "../../components/Avatar";
 import { axiosRes } from '../../api/axiosDefaults';
-import { useRedirect } from '../../hooks/Redirect';
+// import { useRedirect } from '../../hooks/Redirect';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import { UniDropdown } from '../../components/UniDropDown';
 
 const ChatTop = (props) => {
-  useRedirect("loggedOut");
+  // useRedirect("loggedOut");
     const {
         id,
         owner,

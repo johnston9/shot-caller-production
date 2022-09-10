@@ -11,16 +11,17 @@ import appStyles from "../../App.module.css";
 import Button from "react-bootstrap/Button";
 import styles from "../../styles/ChatsPage.module.css";
 import NoResults from "../../assets/no-results.png";
-import { useHistory, useLocation } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router';
 import { useEffect } from "react";
 import { axiosReq } from "../../api/axiosDefaults";
 import Asset from "../../components/Asset";
 import InfiniteScroll from "react-infinite-scroll-component";
 import ChatTop from "./ChatTop";
-import { useRedirect } from "../../hooks/Redirect";
+import TopBox from "../../components/TopBox";
+// import { useRedirect } from "../../hooks/Redirect";
 
 function ChatsPage({message, filter=""} ) {
-  useRedirect("loggedOut");
+  // useRedirect("loggedOut");
   const [chat, setChat] = useState({ results: [] });
   const [hasLoaded, setHasLoaded] = useState(false);
   const { pathname } = useLocation();
@@ -53,8 +54,9 @@ function ChatsPage({message, filter=""} ) {
   
   return (
     <div>
-    <Row>
-    <Col xs={6}>
+      <TopBox title="Chat"/>
+    {/* <Row>
+    <Col xs={3}>
     <Button
       className={`${btnStyles.Button} ${btnStyles.Blue} mb-2`}
       onClick={() => history.goBack()}
@@ -62,10 +64,36 @@ function ChatsPage({message, filter=""} ) {
       Back
     </Button>
     </Col>
-    <Col xs={6}>
+    </Row> */}
+    <Row>
+    <Col xs={3}>
     <Button
-      className={`${btnStyles.Button} ${btnStyles.Blue} float-right mb-2`}
+      className={`${btnStyles.Button} ${btnStyles.Blue} mb-2`}
       onClick={() => history.goBack()}
+    >
+      Back
+    </Button>
+    </Col>
+    <Col xs={3}>
+    <Button
+      className={`${btnStyles.Button} ${btnStyles.Order} mb-2`}
+      onClick={() => history.push("/feed")}
+    >
+      Feed
+    </Button>
+    </Col>
+    <Col xs={3} className="text-center" >
+    <Button
+      className={`${btnStyles.Button} ${btnStyles.Order} mb-2`}
+      onClick={() => history.push("/liked")}
+    >
+      Liked
+    </Button>
+    </Col>
+    <Col xs={3}>
+    <Button
+      className={`${btnStyles.Button} ${btnStyles.Order} float-right mb-2`}
+      onClick={() => history.push("/profiles")}
     >
       Profiles
     </Button>

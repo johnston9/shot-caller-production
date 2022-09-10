@@ -13,7 +13,6 @@ import ChatEditForm from "./pages/chat/ChatEditForm";
 import ProfilesPage from "./pages/profiles/ProfilesPage";
 import ProfilePage from "./pages/profiles/ProfilePage";
 import Home from "./pages/home/Home";
-import Landing from "./pages/home/Landing";
 import UsernameForm from "./pages/profiles/UsernameForm";
 import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
@@ -27,8 +26,7 @@ function App() {
       <NavBar />
       <Container className={styles.Main}>
         <Switch>
-          <Route exact path="/" render={() => <Landing />} />
-          <Route exact path="/home" render={() => <Home /> } />
+          <Route exact path="/" render={() => <Home /> } />
           <Route exact path="/signin" render={() => <SignInForm />} />
           <Route exact path="/signup" render={() => <SignUpForm/> } />
           <Route exact path="/profiles" render={() => <ProfilesPage /> } />

@@ -2,10 +2,8 @@ import React from 'react';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import styles from "../../styles/Profiles.module.css";
-import { useRedirect } from '../../hooks/Redirect';
 
 const Info = () => {
-  useRedirect("loggedOut");
   return (
     <div>
         <Row className='mb-3'>

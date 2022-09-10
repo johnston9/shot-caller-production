@@ -1,18 +1,39 @@
-import React from "react"
+import React, { useState } from "react"
 import Asset from "../../components/Asset";
 import Profile from "./Profile";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import { useProfileData } from "../../contexts/ProfileDataContext";
-import { useRedirect } from '../../hooks/Redirect';
+import btnStyles from "../../styles/Button.module.css";
+import { useHistory } from 'react-router';
+import Button from "react-bootstrap/Button";
+import TopBox from "../../components/TopBox";
 
 const ProfilesPage = () => {
-  useRedirect("loggedOut");
+  const [show, setShow] = useState(false);
+  const history = useHistory();
   const {profilesAll} = useProfileData();
 
   return (
-    <div className={`mt-3 mx-3`}>
-      <p>ProfilesPage</p>
+    <div>
+      <TopBox title="Profiles"/>
+      <Row>
+      <Col xs={3}>
+      <Button
+        className={`${btnStyles.Button} ${btnStyles.Blue} my-2`}
+        onClick={() => history.goBack()}
+      >
+        Back
+      </Button>
+      </Col>
+      </Row>
+      <Row>
+      <Col xs={{span: 8, offset: 2}} className="text-center" >
+      <p>Click on a Profile's "follow" button to add them to 
+                your feed.
+           </p>
+      </Col>
+      </Row>
       <Row>
       {profilesAll.results.length ? (
         <>

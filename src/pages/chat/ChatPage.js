@@ -15,10 +15,10 @@ import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Asset from "../../components/Asset";
 import { fetchMoreData } from "../../utils/utils";
-import { useRedirect } from "../../hooks/Redirect";
+// import { useRedirect } from "../../hooks/Redirect";
 
 function ChatPage() {
-  useRedirect("loggedOut");
+  // useRedirect("loggedOut");
   const { id } = useParams();
   const history = useHistory();
   const [chat, setChat] = useState({ results: [] });

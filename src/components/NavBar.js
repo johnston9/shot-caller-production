@@ -6,8 +6,8 @@ import { NavLink } from "react-router-dom";
 import { useCurrentUser, useSetCurrentUser } from "../contexts/CurrentUserContext";
 import axios from 'axios';
 import Avatar from './Avatar';
-// import useClickOutsideToggle from '../hooks/useClickOutsideToggle';
 import useDropdownClick from '../hooks/useDropdownClick';
+import { removeTokenTimestamp } from '../utils/utils';
 
 const NavBar = () => {
   const currentUser = useCurrentUser();
@@ -26,6 +26,7 @@ const NavBar = () => {
     try {
       await axios.post("dj-rest-auth/logout/");
       setCurrentUser(null);
+      removeTokenTimestamp();
     } catch (err) {
       console.log(err);
     }
@@ -40,82 +41,72 @@ const NavBar = () => {
       <i className="far fa-plus-square"></i>Add post
     </NavLink>
   );
+  {/* feed */}
+  <NavLink
+  className={`mt-1 ${styles.NavLink}`}
+  activeClassName={styles.Active}
+  to="/feed"
+>
+  <i className="fas fa-stream"></i>Feed
+  </NavLink>
+  {/* liked */}
+  <NavLink
+    className={`mt-1 ${styles.NavLink}`}
+    activeClassName={styles.Active}
+    to="/liked"
+  >
+    <i className="fas fa-heart"></i>Liked
+  </NavLink>
+  {/* profiles */}
+  <NavDropdown
+  title={
+    <span style={{ color: '#555555'}} className={styles.Title}>
+      <Avatar src={currentUser?.profile_image} text="" height={40} />Profiles
+    </span>
+  }
+  ref={refp}
+  id="nav-dropdown5"
+  // activeClassName={styles.Active}
+  className={`py-0 ${styles.NavLink} `}
+  >
+  <NavDropdown.Item >
+  <NavLink
+  className={` ${styles.DropLink} `}
+  activeClassName={styles.Active}
+  ref={refp1}
+  to="/profiles"
+  >
+  <i className="navicon fas fa-play"></i>Profiles
+  </NavLink>
+  </NavDropdown.Item>
+  <NavDropdown.Item >
+  <NavLink
+  className={`mt-2 ${styles.NavLink} `}
+  activeClassName={styles.Active}
+  ref={refp2}
+  to={`/profiles/${currentUser?.profile_id}`}
+  >
+  <i className="navicon fas fa-play"></i>My Profile 
+  </NavLink>
+  </NavDropdown.Item>
+  </NavDropdown>
 
   const loggedInIcons = (
     <>
-      <NavLink
-        exact
-        className={`mt-1 ${styles.NavLink}`}
-        activeClassName={styles.Active}
-        to="/home"
-      >
-        <i className="fas fa-home"></i>Home
-      </NavLink>
-      <NavLink
-        className={`mt-1 ${styles.NavLink}`}
-        activeClassName={styles.Active}
-        to="/chat"
-      >
-        <i className="fas fa-stream"></i>Chat
-      </NavLink>
-      <NavLink
-        className={`mt-1 ${styles.NavLink}`}
-        activeClassName={styles.Active}
-        to="/feed"
-      >
-        <i className="fas fa-stream"></i>Feed
-      </NavLink>
-      <NavLink
-        className={`mt-1 ${styles.NavLink}`}
-        activeClassName={styles.Active}
-        to="/liked"
-      >
-        <i className="fas fa-heart"></i>Liked
-      </NavLink>
+      {/* sign out */}
       <NavLink 
         className={`mt-1 ${styles.NavLink}`}
         to="/" onClick={handleSignOut}>
         <i className="fas fa-sign-out-alt"></i>Sign out
       </NavLink>
-      {/* <NavLink
+      {/* my profile */}
+      <NavLink
         className={styles.NavLink}
         to={`/profiles/${currentUser?.profile_id}`}
       >
-        <Avatar src={currentUser?.profile_image} text="Profile" height={40} />
-      </NavLink> */}
-      {/* profiles */}
-      <NavDropdown
-          title={
-            <span style={{ color: '#555555'}} className={styles.Title}>
-              <Avatar src={currentUser?.profile_image} text="" height={40} />Profiles
-            </span>
-          }
-          ref={refp}
-          id="nav-dropdown5"
-          // activeClassName={styles.Active}
-          className={`py-0 ${styles.NavLink} `}
-          >
-        <NavDropdown.Item >
-          <NavLink
-          className={` ${styles.DropLink} `}
-          activeClassName={styles.Active}
-          ref={refp1}
-          to="/profiles"
-        >
-          <i className="navicon fas fa-play"></i>Profiles
-        </NavLink>
-        </NavDropdown.Item>
-        <NavDropdown.Item >
-        <NavLink
-          className={`mt-2 ${styles.NavLink} `}
-          activeClassName={styles.Active}
-          ref={refp2}
-          to={`/profiles/${currentUser?.profile_id}`}
-        >
-          <i className="navicon fas fa-play"></i>My Profile 
-      </NavLink>
-      </NavDropdown.Item>
-      </NavDropdown>
+        <i className="navicon fas fa-play"></i>My Profile 
+        <Avatar src={currentUser?.profile_image} text="" height={40} />
+      </NavLink> 
     </>
   );
   const loggedOutIcons = (
@@ -145,14 +136,29 @@ const NavBar = () => {
           <img src={logo} alt="logo" height="30" /> Shot Caller
           </Navbar.Brand>
         </NavLink>
-        {currentUser && addChatIcon}
-        {currentUser && currentUser.username}
         <Navbar.Toggle
          ref={ref}
          onClick={() => setExpanded(!expanded)}
          aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto text-left">
+          {/* home */}
+          <NavLink
+            exact
+            className={`mt-1 ${styles.NavLink}`}
+            activeClassName={styles.Active}
+            to="/"
+          >
+            <i className="fas fa-home"></i>Home
+          </NavLink>
+          {/* chat */}
+          <NavLink
+            className={`mt-1 ${styles.NavLink}`}
+            activeClassName={styles.Active}
+            to="/chat"
+          >
+            <i className="fas fa-stream"></i>Chat
+          </NavLink>
             {currentUser ? loggedInIcons : loggedOutIcons}
           </Nav>
         </Navbar.Collapse>
