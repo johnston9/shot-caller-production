@@ -18,14 +18,14 @@ import Asset from "../../components/Asset";
 import InfiniteScroll from "react-infinite-scroll-component";
 import ChatTop from "./ChatTop";
 import TopBox from "../../components/TopBox";
-// import { useRedirect } from "../../hooks/Redirect";
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
 function ChatsPage({message, filter=""} ) {
-  // useRedirect("loggedOut");
   const [chat, setChat] = useState({ results: [] });
   const [hasLoaded, setHasLoaded] = useState(false);
   const { pathname } = useLocation();
   const history = useHistory();
+  const currentUser = useCurrentUser();
   // eslint-disable-next-line
   const [error, setErrors] = useState({});
   const [query, setQuery] = useState("");
@@ -50,7 +50,7 @@ function ChatsPage({message, filter=""} ) {
       clearTimeout(timer);
     };
 
-  }, [filter, pathname, query]);
+  }, [filter, pathname, query, currentUser]);
   
   return (
     <div>
@@ -65,7 +65,7 @@ function ChatsPage({message, filter=""} ) {
     </Button>
     </Col>
     </Row> */}
-    <Row>
+    <Row className="mt-3" >
     <Col xs={3}>
     <Button
       className={`${btnStyles.Button} ${btnStyles.Blue} mb-2`}

@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import Asset from "../../components/Asset";
 import Profile from "./Profile";
 import Col from "react-bootstrap/Col";
@@ -10,7 +10,6 @@ import Button from "react-bootstrap/Button";
 import TopBox from "../../components/TopBox";
 
 const ProfilesPage = () => {
-  const [show, setShow] = useState(false);
   const history = useHistory();
   const {profilesAll} = useProfileData();
 
