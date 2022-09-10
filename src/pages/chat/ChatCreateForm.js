@@ -16,9 +16,10 @@ import Alert from "react-bootstrap/Alert";
 import { useHistory } from "react-router-dom";
 import { axiosReq } from "../../api/axiosDefaults";
 import Asset from "../../components/Asset";
-// import useRedirect from "../../hooks/Redirect";
+import { useRedirect } from "../../hooks/Redirect";
 
 function ChatCreateForm() {
+  useRedirect("loggedOut");
   const [errors, setErrors] = useState({});
 
   const [postData, setPostData] = useState({

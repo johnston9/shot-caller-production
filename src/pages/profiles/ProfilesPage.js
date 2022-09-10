@@ -4,8 +4,10 @@ import Profile from "./Profile";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import { useProfileData } from "../../contexts/ProfileDataContext";
+import { useRedirect } from '../../hooks/Redirect';
 
 const ProfilesPage = () => {
+  useRedirect("loggedOut");
   const {profilesAll} = useProfileData();
 
   return (

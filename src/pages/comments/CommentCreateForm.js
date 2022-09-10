@@ -7,8 +7,10 @@ import InputGroup from "react-bootstrap/InputGroup";
 import styles from "../../styles/CommentCreate.module.css";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
+import { useRedirect } from '../../hooks/Redirect';
 
 function CommentCreateForm(props) {
+  useRedirect("loggedOut");
   const { chat, setChat, setComments, profileImage, profile_id } = props;
   const [content, setContent] = useState("");
 

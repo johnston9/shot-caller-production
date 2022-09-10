@@ -10,8 +10,10 @@ import Card from "react-bootstrap/Card";
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import { useSetProfileData } from '../../contexts/ProfileDataContext';
+import { useRedirect } from '../../hooks/Redirect';
 
 const Profile = (props) => {
+  useRedirect("loggedOut");
   const { profile, imageSize="40" } = props;
   const { id, following_id, image, owner, name, company } = profile;
 

@@ -7,8 +7,10 @@ import { UniDropdown } from "../../components/UniDropDown";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import styles from "../../styles/Comment.module.css";
 import CommentEditForm from "./CommentEditForm";
+import { useRedirect } from '../../hooks/Redirect';
 
 const Comment = (props) => {
+  useRedirect("loggedOut");
   const { profile_id, 
     profile_image, owner, 
     updated_at, 

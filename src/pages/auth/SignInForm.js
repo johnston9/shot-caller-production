@@ -22,7 +22,6 @@ import { setTokenTimestamp } from "../../utils/utils";
 const SignInForm = () => {
   const setCurrentUser = useSetCurrentUser();
   useRedirectSign("loggedIn");
-  // const setSignin = useSetSignin();
 
   const [signInData, setSignInData] = useState({
     username: "",

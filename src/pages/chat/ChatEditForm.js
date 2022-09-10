@@ -17,9 +17,10 @@ import { useHistory, useParams } from "react-router-dom";
 import { axiosReq } from "../../api/axiosDefaults";
 import Asset from "../../components/Asset";
 import { useEffect } from "react";
-// import useRedirect from "../../hooks/Redirect";
+import { useRedirect } from "../../hooks/Redirect";
 
 function ChatEditForm() {
+  useRedirect("loggedOut");
   const [errors, setErrors] = useState({});
 
   const [postData, setPostData] = useState({

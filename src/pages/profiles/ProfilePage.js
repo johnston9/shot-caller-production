@@ -17,8 +17,10 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import ChatTop from "../chat/ChatTop";
 import { fetchMoreData } from "../../utils/utils";
 import { ProfileEditDropdown } from "../../components/UniDropDown";
+import { useRedirect } from '../../hooks/Redirect';
 
 function ProfilePage() {
+  useRedirect("loggedOut");
   const [hasLoaded, setHasLoaded] = useState(false);
   const [profileChat, setProfileChat] = useState({ results: [] });
   const currentUser = useCurrentUser();

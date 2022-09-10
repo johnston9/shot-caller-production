@@ -17,8 +17,10 @@ import { axiosReq } from "../../api/axiosDefaults";
 import Asset from "../../components/Asset";
 import InfiniteScroll from "react-infinite-scroll-component";
 import ChatTop from "./ChatTop";
+import { useRedirect } from "../../hooks/Redirect";
 
 function ChatsPage({message, filter=""} ) {
+  useRedirect("loggedOut");
   const [chat, setChat] = useState({ results: [] });
   const [hasLoaded, setHasLoaded] = useState(false);
   const { pathname } = useLocation();
