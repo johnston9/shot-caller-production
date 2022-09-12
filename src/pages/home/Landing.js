@@ -32,21 +32,22 @@ const Landing = () => {
           <Col className="my-3 pr-0 pl-3 pl-md-4"
             xs={1} md={1}>
             <Image
-                className={`${styles.FillerImagel}`}
+                className={`${styles.FillerImagel} mt-5`}
                 src={door}/>
           </Col>
-          <Col className=" my-auto py-2 p-md-2" xs={10}>
+          <Col className="my-5 my-lg-auto " xs={10}>
             <Row>
-               <Col xs={12} className={`py-5 text-center ${styles.Header}`} >
+               <Col xs={12} className={` text-center ${styles.Header}`} >
                 <h2 className={`${styles.Header}`}>TV and Film Production Software</h2>
                 <h5 className={`px-2 ${styles.Header}`}>The entire Creative and Production processes 
                   in one work flow.</h5>
-                  <Row className="mt-3 px-3" >
-                <Col className={`text-center`} md={6}>
-                <h5 className={`mb-2 text-center ${styles.Creative}`}
-                    style={{fontStyle: 'italic'}}>
+                  <Row className="mt-5 px-3" >
+                <Col className={`text-center  ${styles.Creative} `}
+                style={{fontStyle: 'italic'}} md={6}>
+                <h4 className={`mb-2 text-center ${styles.Creative}`}
+                    style={{fontStyle: 'normal'}}>
                 The Creative
-                </h5>
+                </h4>
                 <Link to={`/scenes`} >
                 <p>
                 Scene Breakdowns
@@ -64,11 +65,11 @@ const Landing = () => {
                 </p>
                 </Link>
                 </Col>
-                <Col md={6}>
-                <h5 className={`mb-2 text-center ${styles.Creative}`}
-                    style={{fontStyle: 'italic'}}>
+                <Col md={6} style={{fontStyle: 'italic'}} className={`text-center  ${styles.Creative} `} >
+                <h4 className={`mb-2 text-center ${styles.Creative}`}
+                    style={{fontStyle: 'normal'}}>
                 Production
-                </h5>
+                </h4>
                 <Link to={`/scenes`} >
                 <p>
                 Scheduling
@@ -169,7 +170,7 @@ const Landing = () => {
           <Col className={`my-3 pl-0 pr-3 pr-md-4`}
             xs={1} md={1}>
             <Image
-              className={`${styles.FillerImagel}`}
+              className={`${styles.FillerImagel} mt-5`}
               src={rightdoor}
             />
           </Col>
