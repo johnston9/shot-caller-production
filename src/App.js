@@ -17,6 +17,7 @@ import UsernameForm from "./pages/profiles/UsernameForm";
 import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
 import PageNotFound from "./components/PageNotFound";
+import Landing from "./pages/home/Landing";
 
 function App() {
   const currentUser = useCurrentUser()
@@ -25,9 +26,10 @@ function App() {
   return (
     <div className={styles.App}>
       <NavBar />
-      <Container className={styles.Main}>
+      <div className={styles.Main}>
         <Switch>
           <Route exact path="/" render={() => <Home /> } />
+          <Route exact path="/landing" render={() => <Landing /> } />
           <Route exact path="/signin" render={() => <SignInForm />} />
           <Route exact path="/signup" render={() => <SignUpForm/> } />
           <Route exact path="/profiles" render={() => <ProfilesPage /> } />
@@ -80,7 +82,7 @@ function App() {
             />
           <Route render={() => <PageNotFound />} />
         </Switch>
-      </Container>
+      </div>
     </div>
   );
 }

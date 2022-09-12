@@ -53,7 +53,7 @@ function ChatsPage({message, filter=""} ) {
   }, [filter, pathname, query, currentUser]);
   
   return (
-    <div>
+    <div className="mx-md-5">
       <TopBox title="Chat"/>
     {/* <Row>
     <Col xs={3}>
@@ -65,6 +65,7 @@ function ChatsPage({message, filter=""} ) {
     </Button>
     </Col>
     </Row> */}
+    <div>
     <Row className="mt-3" >
     <Col xs={3}>
     <Button
@@ -116,8 +117,8 @@ function ChatsPage({message, filter=""} ) {
           />
         </Form>
         </Col>
-        </Row>
-        <Row>
+    </Row>
+    <Row>
         <Col className="py-2 p-0 p-lg-2" >
         {/* chats */}
         {hasLoaded ? (
@@ -146,6 +147,7 @@ function ChatsPage({message, filter=""} ) {
         )}
       </Col>
     </Row>
+    </div>
     </div>
   );
 }

@@ -8,6 +8,7 @@ import axios from 'axios';
 import Avatar from './Avatar';
 import useDropdownClick from '../hooks/useDropdownClick';
 import { removeTokenTimestamp } from '../utils/utils';
+import TopBox from './TopBox';
 
 const NavBar = () => {
   const currentUser = useCurrentUser();
@@ -69,8 +70,8 @@ const NavBar = () => {
 
   return (
     <Navbar expanded={expanded} className={styles.NavBar} expand="lg" fixed="top">
-      <Container>
-        <NavLink to="/">
+      <Container className='pl-3 mx-0'>
+        <NavLink to="/landing">
           <Navbar.Brand>
           <img src={logo} alt="logo" height="30" /> Shot Caller
           </Navbar.Brand>
