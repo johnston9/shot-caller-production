@@ -18,6 +18,7 @@ import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
 import PageNotFound from "./components/PageNotFound";
 import Landing from "./pages/home/Landing";
+import HomeTwo from "./pages/home/HomeTwo";
 
 function App() {
   const currentUser = useCurrentUser()
@@ -29,6 +30,7 @@ function App() {
       <div className={styles.Main}>
         <Switch>
           <Route exact path="/" render={() => <Home /> } />
+          <Route exact path="/home2" render={() => <HomeTwo /> } />
           <Route exact path="/landing" render={() => <Landing /> } />
           <Route exact path="/signin" render={() => <SignInForm />} />
           <Route exact path="/signup" render={() => <SignUpForm/> } />

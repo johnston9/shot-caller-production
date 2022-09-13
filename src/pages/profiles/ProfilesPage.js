@@ -5,7 +5,7 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import { useProfileData } from "../../contexts/ProfileDataContext";
 import btnStyles from "../../styles/Button.module.css";
-import { useHistory } from 'react-router';
+import { useHistory } from 'react-router-dom';
 import Button from "react-bootstrap/Button";
 import TopBox from "../../components/TopBox";
 

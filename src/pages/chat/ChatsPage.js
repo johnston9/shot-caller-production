@@ -11,7 +11,7 @@ import appStyles from "../../App.module.css";
 import Button from "react-bootstrap/Button";
 import styles from "../../styles/ChatsPage.module.css";
 import NoResults from "../../assets/no-results.png";
-import { useHistory, useLocation } from 'react-router';
+import { useHistory, useLocation } from 'react-router-dom';
 import { useEffect } from "react";
 import { axiosReq } from "../../api/axiosDefaults";
 import Asset from "../../components/Asset";

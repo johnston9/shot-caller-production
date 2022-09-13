@@ -91,6 +91,15 @@ const NavBar = () => {
           >
             <i className="fas fa-home"></i>Home
           </NavLink>
+          {/* home */}
+          <NavLink
+            exact
+            className={`mt-1 ${styles.NavLink}`}
+            activeClassName={styles.Active}
+            to="/home2"
+          >
+            <i className="fas fa-home"></i>Home2
+          </NavLink>
           {/* chat */}
           <NavLink
             className={`mt-1 ${styles.NavLink}`}

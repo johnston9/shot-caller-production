@@ -5,7 +5,7 @@ import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 import btnStyles from "../../styles/Button.module.css";
 import Asset from "../../components/Asset";
-import { useParams } from "react-router";
+import { useParams } from "react-router-dom";
 import styles from "../../styles/ProfilePage.module.css";
 import appStyles from "../../App.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";

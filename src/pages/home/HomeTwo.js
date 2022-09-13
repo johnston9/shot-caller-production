@@ -15,29 +15,29 @@ import Container from "react-bootstrap/Container";
 import { useSetCurrentUser } from "../../contexts/CurrentUserContext";
 import TopBox2 from "../../components/TopBox2";
 
-const Home = () => {
+const HomeTwo = () => {
   const setCurrentUser = useSetCurrentUser();
   const admin = true;
   const history = useHistory()
 
   return (
       <div >
-        <TopBox2 title="SHOT CALLER PRODUCTION" />
         <div className={styles.HomeBox} 
           // style={{ backgroundImage: `url(${r1})`, height:'100vh',
           // backgroundSize: 'cover',
           // backgroundRepeat: 'no-repeat', }}
-          // style={{ backgroundImage: `url(${city2})`, height:'100vh',
-          // backgroundSize: 'cover',
-          // backgroundRepeat: 'no-repeat', }}
-          style={{ backgroundImage: `url(${city1})`,
+          style={{ backgroundImage: `url(${city1})`, height:'100vh',
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat', }}
+        //   style={{ backgroundImage: `url(${city1})`, height:'100vh',
+        //   backgroundSize: 'cover',
+        //   backgroundRepeat: 'no-repeat', }}
           >
         <Row className={styles.Row}>
           <Col className="my-5" xs={12}>
-            <Row>
+          <Row>
                <Col xs={12} className={` text-center ${styles.Header}`} >
+                <h1>SHOT CALLER PRODUCTION</h1>
                 <h2 className={`${styles.Header}`}>TV and Film Production Software</h2>
                 <h5 className={`px-2 ${styles.Header}`}>
                   The entire Creative and Production processes 
@@ -100,28 +100,8 @@ const Home = () => {
           </Col>
         </Row>
         </div>
-        {/* page 2 */}
-        <div className={`mt-5 ${styles.Overview}`}>
-        <h2 className={`py-2 ${styles.OverviewText} ${appStyles.playfair} text-center`} >Overview</h2>
-        </div>
-        <div className="px-3">
-        <Row>
-        <Col xs={12} md={{span: 10, offset: 1}} className="text-center">
-        <p >
-        The initial set up requires inputing scene details to create
-        the Scene Breakdowns. This atuomatically generates the Scenes, Characters and 
-        Locations Pages.</p>
-        <p>Each Scene Page contains 12 Department Workspaces where initially 
-        Requirements for each can be added. Then Collaborate, design and build within each Workspace.</p>
-        <p>
-        Explore and guide styles and choices with Mood Shoots which interlink the 
-        Scenes, Characters and locations.
-        </p>
-        </Col>
-        </Row>
-        </div>
     </div>
   );
 };
 
-export default Home;
+export default HomeTwo

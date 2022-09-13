@@ -6,7 +6,7 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import btnStyles from "../styles/Button.module.css";
 import Button from "react-bootstrap/Button";
-import { useHistory } from 'react-router';
+import { useHistory } from 'react-router-dom';
 
 const PageNotFound = () => {
   const history = useHistory();
