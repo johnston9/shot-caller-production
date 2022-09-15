@@ -107,15 +107,34 @@ const Home = () => {
         <div className="px-3">
         <Row>
         <Col xs={12} md={{span: 10, offset: 1}} className="text-center">
-        <p >
-        The initial set up requires inputing scene details to create
-        the Scene Breakdowns. This atuomatically generates the Scenes, Characters and 
-        Locations Pages.</p>
-        <p>Each Scene Page contains 12 Department Workspaces where initially 
-        Requirements for each can be added. Then Collaborate, design and build within each Workspace.</p>
         <p>
-        Explore and guide styles and choices with Mood Shoots which interlink the 
-        Scenes, Characters and locations.
+        Shot Caller provides a resource to contain all the information 
+        involved in a TV or film Production the one place and the necessary tools to manage it.
+        Once added all information can be readily accessed between features
+        as it is brought through the production flow.
+        </p>
+        <p >
+        Simply input scene details to generate the Scenes, Characters and 
+        Locations Pages. Then Collaborate, design and build in
+        the Scene Pages Universal or Department Workspaces.</p>
+        <p>
+        Explore styles, ideas and choices with Mood Shoots and find any category of any 
+        Scene Deartment with the Quick Find feature.
+        </p>
+        <p>
+        Manage the crew by registering them and their details to give them 
+        full access to collaborate. 
+        </p>
+        <p>
+        Schedule easily with the autogeneration schedule feature which generates
+        a stylish schedule page using the details added to the breakdown. 
+        </p>
+        <p>
+        Create stylish Callsheets with each user having their own personal calltime.
+        </p>
+        <p>
+        Manage the cast by registering them giving the access to the Callsheets pages
+        and linking them to their Character page which will contain their details and costumes. 
         </p>
         </Col>
         </Row>
