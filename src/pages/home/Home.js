@@ -5,6 +5,7 @@ import appStyles from "../../App.module.css";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import city1 from "../../assets/city1.png";
+import pic from "../../assets/fight.png";
 // eslint-disable-next-line 
 import city2 from "../../assets/city2.png";
 
@@ -12,6 +13,7 @@ import Container from "react-bootstrap/Container";
 // eslint-disable-next-line 
 import { useSetCurrentUser } from "../../contexts/CurrentUserContext";
 import TopBox2 from "../../components/TopBox2";
+import { Image } from "react-bootstrap";
 
 const Home = () => {
   // const setCurrentUser = useSetCurrentUser();
@@ -39,12 +41,11 @@ const Home = () => {
                 <h2 >TV and Film Production Software</h2>
                 <h5 style={{fontStyle: 'italic'}}>
                   The entire Creative and Production processes 
-                  in one work flow.</h5>
-                <Row className="mt-5 px-3" >
+                  in one Workflow.</h5>
+                <Row className="mt-5" >
                 <Col className={`text-center  ${styles.Creative} `}
                  md={6}>
-                <h4 className={`mb-2 text-center ${styles.Creative}`}
-                    style={{fontStyle: 'normal'}}>
+                <h4 className={`mb-2 ${styles.Creative}`}>
                 The Creative
                 </h4>
                 <p className={`${styles.Creative}`} 
@@ -52,15 +53,15 @@ const Home = () => {
                 Collaborate and design in Scene Department Workspaces
                 </p>
                 {/* on1 */}
-                <Row>
-                <Col mx={6} className="px-0" >
+                <Row >
+                <Col mx={6} >
                 <p className={`${styles.Depts}`}
                   onClick={() => history.push('/scenes')}>
                 Scene Breakdowns
                 </p>
                 </Col>
-                <Col mx={6}>
-                <span className={`ml-3 ${styles.Depts}`}
+                <Col mx={6} >
+                <span className={`${styles.Depts}`}
                   onClick={() => history.push('/scenes')} >
                 Mood Shots
                 </span>
@@ -68,22 +69,22 @@ const Home = () => {
                 </Row>
                 {/* on2 */}
                 <Row>
-                <Col xs={6} className="px-0">
+                <Col xs={6} >
                 <p className={`${styles.Depts}`}
                   onClick={() => history.push('/scenes')}>
                 Scene Workspaces
                 </p>
                 </Col>
                 <Col mx={6}>
-                <span className={`ml-3 ${styles.Depts}`}
+                <span className={`${styles.Depts}`}
                   onClick={() => history.push('/scenes')} >
                 Shotlists
                 </span>
                 </Col>
                 </Row>
                 </Col>
-                <Col md={6} className={`text-center  ${styles.Creative} `} >
-                <h4 className={`mb-2 text-center ${styles.Creative}`}>
+                <Col md={6} className={` ${styles.Creative} `} >
+                <h4 className={`mb-2 ${styles.Creative}`}>
                 Production
                 </h4>
                 <p className={`${styles.Header}`}
@@ -99,10 +100,10 @@ const Home = () => {
                 </p>
                 </Col>
                 <Col mx={6}>
-                <span className={`ml-3 ${styles.Depts}`}
+                <p className={`${styles.Depts}`}
                   onClick={() => history.push('/scenes')} >
                 Cast Admin
-                </span>
+                </p>
                 </Col>
                 </Row>
                 {/* on2 */}
@@ -114,10 +115,10 @@ const Home = () => {
                 </p>
                 </Col>
                 <Col mx={6}>
-                <span className={`ml-3 ${styles.Depts}`}
+                <p className={`${styles.Depts}`}
                   onClick={() => history.push('/scenes')} >
                 Callsheets
-                </span>
+                </p>
                 </Col>
                 </Row>
                 </Col>
@@ -133,48 +134,87 @@ const Home = () => {
         </Row>
         </div>
         {/* page 2 */}
-        <div>
+        <div className={`mt-5 px-5 mx-5 ${styles.Overview}`}>
+        <h2 className={`pb-1 ${styles.OverviewText} ${appStyles.playfair}
+         text-center`} >Overview</h2>
+        </div>
+        <div className="px-3 mt-3">
+        {/* platform */}
+        <Row className="mt-1 mt-md-5 d-flex align-items-center justify-content-center">
+        <Col xs={6} md={{span: 3, offset: 1 }}
+        className="text-center" >
+        <p >
+        Build and manage TV and Film Production in the 
+        one platform utilizing interlinking tools.
+        </p>
+        </Col>
+        <Col xs={6} md={{span: 6, offset: 2 }}>
+        <div className="text-center d-flex align-items-center justify-content-center">
+        <Image src={pic} alt="image" 
+          className={` ${styles.Image}`} />
+        </div>
+        </Col>
+        </Row>
+        {/* Workspaces */}
+        <Row className="mt-1 mt-md-5 d-flex align-items-center justify-content-center">
+        <Col xs={6} md={6}>
+        <div className="text-center d-flex justify-content-center">
+        <Image src={pic} alt="image" 
+          className={` ${styles.Image}`} />
+        </div>
+        </Col>
+        <Col xs={6} md={{span: 3, offset: 2 }}
+        className="text-center" >
+        <p >
+        Collaborate and design in Scene Department Workspaces and use 
+        Moodshots to explore ideas.
+        </p>
+        </Col>
+        </Row>
+        {/* mobile */}
+        <Row className="mt-1 mt-md-5 d-flex align-items-center justify-content-center">
+        <Col xs={6} md={{span: 3, offset: 1 }}
+        className="text-center" >
+        <p >
+        As easy to use in mobile as desktop. Use Quick Find to locate all info fast.
+        </p>
+        </Col>
+        <Col xs={6} md={{span: 6, offset: 2 }}>
+        <div className="text-center d-flex align-items-center justify-content-center">
+        <Image src={pic} alt="image" 
+          className={` ${styles.Image}`} />
+        </div>
+        </Col>
+        </Row>
+        {/* Callsheets */}
+        <Row className="mt-1 mt-md-5 d-flex align-items-center justify-content-center">
+        <Col xs={6} md={6}>
+        <div className="text-center d-flex justify-content-center">
+        <Image src={pic} alt="image" 
+          className={` ${styles.Image}`} />
+        </div>
+        </Col>
+        <Col xs={6} md={{span: 3, offset: 2 }}
+        className="text-center" >
+        <p >
+        Manage the cast and crew. Easily create Shotlists, Schedules and 
+        personalized Callsheets.
+        </p>
+        </Col>
+        </Row>
         <Row>
-        <Col>
+        <Col xs={12} md={{span: 10, offset: 1}} className="text-center">
         </Col>
         </Row>
         </div>
-        {/* page 2 */}
-        <div className={`mt-5 ${styles.Overview}`}>
-        <h2 className={`py-2 ${styles.OverviewText} ${appStyles.playfair} text-center`} >Overview</h2>
+        {/* page 3 */}
+        <div className={`mt-5 px-5 mx-5 ${styles.Overview}`}>
+        <h2 className={`pb-1 ${styles.OverviewText} ${appStyles.playfair} 
+        text-center`} >Features</h2>
         </div>
-        <div className="px-3">
+        <div>
         <Row>
-        <Col xs={12} md={{span: 10, offset: 1}} className="text-center">
-        <p>
-        Shot Caller provides a resource to contain all the information 
-        involved in a TV or film Production the one place and the necessary tools to manage it.
-        Once added all information can be readily accessed between features
-        as it is brought through the production flow.
-        </p>
-        <p >
-        Simply input scene details to generate the Scenes, Characters and 
-        Locations Pages. Then Collaborate, design and build in
-        the Scene Pages Universal or Department Workspaces.</p>
-        <p>
-        Explore styles, ideas and choices with Mood Shoots and find any category of any 
-        Scene Deartment with the Quick Find feature.
-        </p>
-        <p>
-        Manage the crew by registering them and their details to give them 
-        full access to collaborate. 
-        </p>
-        <p>
-        Schedule easily with the autogeneration schedule feature which generates
-        a stylish schedule page using the details added to the breakdown. 
-        </p>
-        <p>
-        Create stylish Callsheets with each user having their own personal calltime.
-        </p>
-        <p>
-        Manage the cast by registering them giving the access to the Callsheets pages
-        and linking them to their Character page which will contain their details and costumes. 
-        </p>
+        <Col>
         </Col>
         </Row>
         </div>

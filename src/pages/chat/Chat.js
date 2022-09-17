@@ -2,7 +2,6 @@ import React from 'react';
 import Card from "react-bootstrap/Card";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
-
 import styles from "../../styles/Chat.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { Link, useHistory } from 'react-router-dom';
@@ -125,7 +124,7 @@ const Chat = (props) => {
                     <i className="far fa-heart" />
                     </OverlayTrigger>
                 )}
-                                {likes_count}
+                    {likes_count}
                     <OverlayTrigger
                         placement="top"
                         overlay={<Tooltip>Comments</Tooltip>}
@@ -162,7 +161,8 @@ const Chat = (props) => {
                   {/* image */}
                   <Col xs={12} md={{span: 6, offset: 3}} >
                       {image && <> 
-                          <Card.Img src={image} alt="image" className="px-3" />
+                          <Card.Img src={image} alt="image"
+                           className={`px-3 ${styles.Image}`} />
                           </>
                           }
                   </Col>  
