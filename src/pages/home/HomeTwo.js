@@ -1,23 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link, useHistory } from "react-router-dom";
 import styles from "../../styles/Home.module.css";
-import btnStyles from "../../styles/Button.module.css";
-import appStyles from "../../App.module.css";
-import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import r1 from "../../assets/r-1.png";
 import city1 from "../../assets/city1.png";
+// eslint-disable-next-line 
 import city2 from "../../assets/city2.png";
 
-import Image from "react-bootstrap/Image";
 import Container from "react-bootstrap/Container";
+// eslint-disable-next-line 
 import { useSetCurrentUser } from "../../contexts/CurrentUserContext";
-import TopBox2 from "../../components/TopBox2";
 
 const HomeTwo = () => {
-  const setCurrentUser = useSetCurrentUser();
-  const admin = true;
+  // const setCurrentUser = useSetCurrentUser();
+  // const admin = true;
   const history = useHistory()
 
   return (

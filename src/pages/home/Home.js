@@ -1,23 +1,21 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link, useHistory } from "react-router-dom";
 import styles from "../../styles/Home.module.css";
-import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
-import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import r1 from "../../assets/r-1.png";
 import city1 from "../../assets/city1.png";
+// eslint-disable-next-line 
 import city2 from "../../assets/city2.png";
 
-import Image from "react-bootstrap/Image";
 import Container from "react-bootstrap/Container";
+// eslint-disable-next-line 
 import { useSetCurrentUser } from "../../contexts/CurrentUserContext";
 import TopBox2 from "../../components/TopBox2";
 
 const Home = () => {
-  const setCurrentUser = useSetCurrentUser();
-  const admin = true;
+  // const setCurrentUser = useSetCurrentUser();
+  // const admin = true;
   const history = useHistory()
 
   return (
@@ -38,56 +36,90 @@ const Home = () => {
           <Col className="my-5" xs={12}>
             <Row>
                <Col xs={12} className={` text-center ${styles.Header}`} >
-                <h2 className={`${styles.Header}`}>TV and Film Production Software</h2>
-                <h5 className={`px-2 ${styles.Header}`}>
+                <h2 >TV and Film Production Software</h2>
+                <h5 style={{fontStyle: 'italic'}}>
                   The entire Creative and Production processes 
                   in one work flow.</h5>
-                  <Row className="mt-5 px-3" >
+                <Row className="mt-5 px-3" >
                 <Col className={`text-center  ${styles.Creative} `}
-                style={{fontStyle: 'italic'}} md={6}>
+                 md={6}>
                 <h4 className={`mb-2 text-center ${styles.Creative}`}
                     style={{fontStyle: 'normal'}}>
                 The Creative
                 </h4>
-                <p className={`px-2 ${styles.Header}`}>
+                <p className={`${styles.Creative}`} 
+                  style={{fontStyle: 'italic'}}>
                 Collaborate and design in Scene Department Workspaces
                 </p>
-                <p onClick={() => history.push('/scenes')}>
+                {/* on1 */}
+                <Row>
+                <Col mx={6} className="px-0" >
+                <p className={`${styles.Depts}`}
+                  onClick={() => history.push('/scenes')}>
                 Scene Breakdowns
-                <span onClick={() => history.push('/scenes')}
-                className="ml-3">
-                Mood Shots
-                </span>
-                </p>
-                <p>
-                Scene Workspaces
-                <span onClick={() => history.push('/scenes')}
-                className="ml-3">
-                Shotlists
-                </span>
                 </p>
                 </Col>
-                <Col md={6} style={{fontStyle: 'italic'}} className={`text-center  ${styles.Creative} `} >
-                <h4 className={`mb-2 text-center ${styles.Creative}`}
-                    style={{fontStyle: 'normal'}}>
+                <Col mx={6}>
+                <span className={`ml-3 ${styles.Depts}`}
+                  onClick={() => history.push('/scenes')} >
+                Mood Shots
+                </span>
+                </Col>
+                </Row>
+                {/* on2 */}
+                <Row>
+                <Col xs={6} className="px-0">
+                <p className={`${styles.Depts}`}
+                  onClick={() => history.push('/scenes')}>
+                Scene Workspaces
+                </p>
+                </Col>
+                <Col mx={6}>
+                <span className={`ml-3 ${styles.Depts}`}
+                  onClick={() => history.push('/scenes')} >
+                Shotlists
+                </span>
+                </Col>
+                </Row>
+                </Col>
+                <Col md={6} className={`text-center  ${styles.Creative} `} >
+                <h4 className={`mb-2 text-center ${styles.Creative}`}>
                 Production
                 </h4>
-                <p className={`px-2 ${styles.Header}`}>
-                Manage Requirement and Production in Scene Workspaces
+                <p className={`${styles.Header}`}
+                  style={{fontStyle: 'italic'}}>
+                All Production Software Tools in one Connected Workflow
                 </p>
-                <p>
-                <span onClick={() => history.push('/scenes')}
-                className="ml-3">
-                Cast and Crew Admin
+                {/* on1 */}
+                <Row>
+                <Col mx={6}>
+                <p className={`${styles.Depts}`}
+                  onClick={() => history.push('/scenes')}>
+                Crew Admin
+                </p>
+                </Col>
+                <Col mx={6}>
+                <span className={`ml-3 ${styles.Depts}`}
+                  onClick={() => history.push('/scenes')} >
+                Cast Admin
                 </span>
-                </p>
-                <p>
+                </Col>
+                </Row>
+                {/* on2 */}
+                <Row>
+                <Col xs={6}>
+                <p className={`${styles.Depts}`}
+                  onClick={() => history.push('/scenes')}>
                 Scheduling
-                <span onClick={() => history.push('/scenes')}
-                className="ml-3">
+                </p>
+                </Col>
+                <Col mx={6}>
+                <span className={`ml-3 ${styles.Depts}`}
+                  onClick={() => history.push('/scenes')} >
                 Callsheets
                 </span>
-                </p>
+                </Col>
+                </Row>
                 </Col>
                 </Row>
                   <Container className="mt-3" >
@@ -98,6 +130,13 @@ const Home = () => {
                </Col>
              </Row>
           </Col>
+        </Row>
+        </div>
+        {/* page 2 */}
+        <div>
+        <Row>
+        <Col>
+        </Col>
         </Row>
         </div>
         {/* page 2 */}

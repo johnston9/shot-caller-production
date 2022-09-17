@@ -35,6 +35,15 @@
     color: #fff;
 }
 
+.Depts {
+    color: rgb(170, 248, 248);
+}
+
+.Depts:hover {
+    cursor: pointer;
+    color: rgb(238, 242, 242);
+}
+
 hr.LineWhite {
     border-top: 2px solid #fff ;
     width: 70%

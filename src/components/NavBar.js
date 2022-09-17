@@ -8,7 +8,6 @@ import axios from 'axios';
 import Avatar from './Avatar';
 import useDropdownClick from '../hooks/useDropdownClick';
 import { removeTokenTimestamp } from '../utils/utils';
-import TopBox from './TopBox';
 
 const NavBar = () => {
   const currentUser = useCurrentUser();
