@@ -3,12 +3,31 @@
     width: 100%; 
     height: 80vh;
   }
+
+p { 
+    color: #666;
+}
+
+h1, h2, h3, h4, h5 { 
+    color: #666;
+}
+
+.FeaturesImage {
+    border-radius: 50%;
+    object-fit: cover;
+    max-height: 40vh;
+    max-width: 100%;
+  }
   
 .Image {
     max-height: 40vh;
     max-width: 100%;
     object-fit: contain;
 }
+
+.Bold {
+    font-weight: 700;
+  }
 
 .Inner {
     background-color: #0b3d63;
@@ -64,11 +83,11 @@ hr.LineWhite {
 }
 
 .Overview {   
-	background-color: #3b444b;
+	background-color: #fff;
 }
 
 .OverviewText {
-    color: #fff;
+    color: #000;
 }
 
 .Container {

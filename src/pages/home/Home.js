@@ -8,6 +8,7 @@ import city1 from "../../assets/city1.png";
 import pic from "../../assets/fight.png";
 // eslint-disable-next-line 
 import city2 from "../../assets/city2.png";
+import features from "../../assets/r-1.png";
 
 import Container from "react-bootstrap/Container";
 // eslint-disable-next-line 
@@ -18,7 +19,8 @@ import { Image } from "react-bootstrap";
 const Home = () => {
   // const setCurrentUser = useSetCurrentUser();
   // const admin = true;
-  const history = useHistory()
+  const history = useHistory();
+  const height = "75px";
 
   return (
       <div >
@@ -38,8 +40,8 @@ const Home = () => {
           <Col className="my-5" xs={12}>
             <Row>
                <Col xs={12} className={` text-center ${styles.Header}`} >
-                <h2 >TV and Film Production Software</h2>
-                <h5 style={{fontStyle: 'italic'}}>
+                <h2 className={`${styles.Header}`} >TV and Film Production Software</h2>
+                <h5 className={`${styles.Header}`}  style={{fontStyle: 'italic'}}>
                   The entire Creative and Production processes 
                   in one Workflow.</h5>
                 <Row className="mt-5" >
@@ -134,22 +136,21 @@ const Home = () => {
         </Row>
         </div>
         {/* page 2 */}
-        <div className={`mt-5 px-5 mx-5 ${styles.Overview}`}>
+        <div className={`mt-5 ${styles.Overview}`}>
         <h2 className={`pb-1 ${styles.OverviewText} ${appStyles.playfair}
          text-center`} >Overview</h2>
         </div>
         <div className="px-3 mt-3">
         {/* platform */}
         <Row className="mt-1 mt-md-5 d-flex align-items-center justify-content-center">
-        <Col xs={6} md={{span: 3, offset: 1 }}
-        className="text-center" >
+        <Col xs={6} md={{span: 3, offset: 1 }} className="text-center" >
         <p >
         Build and manage TV and Film Production in the 
         one platform utilizing interlinking tools.
         </p>
         </Col>
         <Col xs={6} md={{span: 6, offset: 2 }}>
-        <div className="text-center d-flex align-items-center justify-content-center">
+        <div className="text-center">
         <Image src={pic} alt="image" 
           className={` ${styles.Image}`} />
         </div>
@@ -158,7 +159,7 @@ const Home = () => {
         {/* Workspaces */}
         <Row className="mt-1 mt-md-5 d-flex align-items-center justify-content-center">
         <Col xs={6} md={6}>
-        <div className="text-center d-flex justify-content-center">
+        <div className="text-center">
         <Image src={pic} alt="image" 
           className={` ${styles.Image}`} />
         </div>
@@ -174,13 +175,14 @@ const Home = () => {
         {/* mobile */}
         <Row className="mt-1 mt-md-5 d-flex align-items-center justify-content-center">
         <Col xs={6} md={{span: 3, offset: 1 }}
-        className="text-center" >
+          className="text-center" >
         <p >
-        As easy to use in mobile as desktop. Use Quick Find to locate all info fast.
+        Manage the cast and crew. Easily create Shotlists, Schedules and 
+        personalized Callsheets.
         </p>
         </Col>
         <Col xs={6} md={{span: 6, offset: 2 }}>
-        <div className="text-center d-flex align-items-center justify-content-center">
+        <div className="text-center">
         <Image src={pic} alt="image" 
           className={` ${styles.Image}`} />
         </div>
@@ -189,16 +191,15 @@ const Home = () => {
         {/* Callsheets */}
         <Row className="mt-1 mt-md-5 d-flex align-items-center justify-content-center">
         <Col xs={6} md={6}>
-        <div className="text-center d-flex justify-content-center">
+        <div className="text-center">
         <Image src={pic} alt="image" 
           className={` ${styles.Image}`} />
         </div>
         </Col>
         <Col xs={6} md={{span: 3, offset: 2 }}
-        className="text-center" >
+          className="text-center" >
         <p >
-        Manage the cast and crew. Easily create Shotlists, Schedules and 
-        personalized Callsheets.
+        Fully functional on mobile as on desktop. Use Quick Find to locate all info fast.
         </p>
         </Col>
         </Row>
@@ -212,9 +213,31 @@ const Home = () => {
         <h2 className={`pb-1 ${styles.OverviewText} ${appStyles.playfair} 
         text-center`} >Features</h2>
         </div>
-        <div>
-        <Row>
-        <Col>
+        <div className="px-5">
+        <Row >
+        {/* one */}
+        <Col xs={12} md={6} >
+        <Row className="d-flex align-items-center justify-content-center my-5">
+        <Col xs={3} >
+        <div className="text-center" >
+        <Image 
+          height={height}
+          width={height}
+          src={features} alt="image" 
+          className={`round ${styles.FeaturesImage}`} />
+        </div>
+        </Col>
+        <Col xs={9} className="text-center" >
+        <h4>Scene Breakdowns</h4>
+        <p >
+        Build and manage TV and Film Production in the 
+        one platform utilizing interlinking tools.
+        </p>
+        </Col>
+        </Row>
+        </Col>
+        {/* two */}
+        <Col xs={12} md={6}>
         </Col>
         </Row>
         </div>
