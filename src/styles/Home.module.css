@@ -18,6 +18,27 @@ h1, h2, h3, h4, h5 {
     max-height: 40vh;
     max-width: 100%;
   }
+
+/* .FeaturesImage:hover {
+    border-radius: 25%;
+}  */
+
+.FeatureLink:hover {
+    background-color: #e9e6e6;
+    cursor: pointer;
+}
+
+.FeatureLink:hover h4 {
+    color: #000;
+}
+
+.FeatureLink:hover p {
+    color: #000;
+}
+
+.FeatureLink:hover .FeaturesImage {
+    border-radius: 25%;
+}
   
 .Image {
     max-height: 40vh;

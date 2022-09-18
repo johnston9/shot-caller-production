@@ -25,6 +25,7 @@ const Home = () => {
   return (
       <div >
         <TopBox2 title="SHOT CALLER PRODUCTION" />
+        {/* page 1 */}
         <div className={styles.HomeBox} 
           // style={{ backgroundImage: `url(${r1})`, height:'100vh',
           // backgroundSize: 'cover',
@@ -136,6 +137,7 @@ const Home = () => {
         </Row>
         </div>
         {/* page 2 */}
+        <div>
         <div className={`mt-5 ${styles.Overview}`}>
         <h2 className={`pb-1 ${styles.OverviewText} ${appStyles.playfair}
          text-center`} >Overview</h2>
@@ -172,12 +174,12 @@ const Home = () => {
         </p>
         </Col>
         </Row>
-        {/* mobile */}
+        {/* Callsheets  */}
         <Row className="mt-1 mt-md-5 d-flex align-items-center justify-content-center">
         <Col xs={6} md={{span: 3, offset: 1 }}
           className="text-center" >
         <p >
-        Manage the cast and crew. Easily create Shotlists, Schedules and 
+        Manage Cast and Crew. Easily create Shotlists, Schedules and 
         personalized Callsheets.
         </p>
         </Col>
@@ -188,7 +190,7 @@ const Home = () => {
         </div>
         </Col>
         </Row>
-        {/* Callsheets */}
+        {/* mobile */}
         <Row className="mt-1 mt-md-5 d-flex align-items-center justify-content-center">
         <Col xs={6} md={6}>
         <div className="text-center">
@@ -199,28 +201,28 @@ const Home = () => {
         <Col xs={6} md={{span: 3, offset: 2 }}
           className="text-center" >
         <p >
-        Fully functional on mobile as on desktop. Use Quick Find to locate all info fast.
+        All features easy to use on Mobile. Use Quick Find to locate all Info fast.
         </p>
         </Col>
         </Row>
-        <Row>
-        <Col xs={12} md={{span: 10, offset: 1}} className="text-center">
-        </Col>
-        </Row>
+        </div>
         </div>
         {/* page 3 */}
         <div className={`mt-5 px-5 mx-5 ${styles.Overview}`}>
         <h2 className={`pb-1 ${styles.OverviewText} ${appStyles.playfair} 
-        text-center`} >Features</h2>
+        text-center`} >The Creative Features</h2>
         </div>
         <div className="px-5">
-        <Row >
-        {/* one */}
+        {/* 1 Breakdowns - Characters and Locations */}
+        <Row className="mb-3 mt-5">
+        {/* Breakdowns */}
         <Col xs={12} md={6} >
-        <Row className="d-flex align-items-center justify-content-center my-5">
+        <Row className="d-flex align-items-center justify-content-center">
+        <div className={`${styles.FeatureLink} d-flex align-items-center justify-content-center`}>
         <Col xs={3} >
         <div className="text-center" >
         <Image 
+          onClick={() => history.push('/landing')}
           height={height}
           width={height}
           src={features} alt="image" 
@@ -230,16 +232,297 @@ const Home = () => {
         <Col xs={9} className="text-center" >
         <h4>Scene Breakdowns</h4>
         <p >
-        Build and manage TV and Film Production in the 
-        one platform utilizing interlinking tools.
+        Create Scene Breakdowns for all the Scene Info including Department
+        Info 
         </p>
         </Col>
+        </div>
         </Row>
         </Col>
-        {/* two */}
+        {/* Characters and Locations */}
         <Col xs={12} md={6}>
+        <Row className="d-flex align-items-center justify-content-center">
+        <div className={`${styles.FeatureLink} d-flex align-items-center justify-content-center`}>
+        <Col xs={9} className="text-center" >
+        <h4>Characters and Locations</h4>
+        <p >
+        Create Characters and Locations pages with Images
+        and all relevant Info.
+        </p>
+        </Col>
+        <Col xs={3} >
+        <div className="text-center" >
+        <Image 
+          onClick={() => history.push('/landing')}
+          height={height}
+          width={height}
+          src={features} alt="image" 
+          className={`round ${styles.FeaturesImage}`} />
+        </div>
+        </Col>
+        </div>
+        </Row>
         </Col>
         </Row>
+        {/* 2 Workspaces - Script, Storyboard and Shotlists */}
+        <Row className="my-3">
+        {/* Workspaces */}
+        <Col xs={12} md={6} >
+        <Row className="d-flex align-items-center justify-content-center">
+        <div className={`${styles.FeatureLink} d-flex align-items-center justify-content-center`}>
+        <Col xs={3} >
+        <div className="text-center" >
+        <Image 
+          onClick={() => history.push('/landing')}
+          height={height}
+          width={height}
+          src={features} alt="image" 
+          className={`round ${styles.FeaturesImage}`} />
+        </div>
+        </Col>
+        <Col xs={9} className="text-center" >
+        <h4>Scene Workspaces</h4>
+        <p >
+        Utilize the Primary Creative feature the Scene Workspaces
+        to Design, Collaborate and Build in each Scene Department.
+        </p>
+        </Col>
+        </div>
+        </Row>
+        </Col>
+        {/* Script, Storyboard and Shotlists */}
+        <Col xs={12} md={6}>
+        <Row className="d-flex align-items-center justify-content-center">
+        <div className={`${styles.FeatureLink} d-flex align-items-center justify-content-center`}>
+        <Col xs={9} className="text-center" >
+        <h4>Shotlists, Script and Storyboard</h4>
+        <p >
+        Create Scene Shotlists in the Scene Page and add it's Script 
+        and Storyboard 
+        </p>
+        </Col>
+        <Col xs={3} >
+        <div className="text-center" >
+        <Image 
+          onClick={() => history.push('/landing')}
+          height={height}
+          width={height}
+          src={features} alt="image" 
+          className={`round ${styles.FeaturesImage}`} />
+        </div>
+        </Col>
+        </div>
+        </Row>
+        </Col>
+        </Row>
+        {/* 3 Moodshots - Script, Storyboard and Shotlists */}
+        <Row className="my-3">
+        {/* Moodshots */}
+        <Col xs={12} md={6} >
+        <Row className="d-flex align-items-center justify-content-center">
+        <div className={`${styles.FeatureLink} d-flex align-items-center justify-content-center`}>
+        <Col xs={3} >
+        <div className="text-center" >
+        <Image 
+          onClick={() => history.push('/landing')}
+          height={height}
+          width={height}
+          src={features} alt="image" 
+          className={`round ${styles.FeaturesImage}`} />
+        </div>
+        </Col>
+        <Col xs={9} className="text-center" >
+        <h4>Moodshots</h4>
+        <p >
+        Use Moodshots to explore and guide Scene, Character and 
+        Location design and style 
+        </p>
+        </Col>
+        </div>
+        </Row>
+        </Col>
+        {/* Script, Storyboard and Shotlists */}
+        <Col xs={12} md={6}>
+        <Row className="d-flex align-items-center justify-content-center">
+        <div className={`${styles.FeatureLink} d-flex align-items-center justify-content-center`}>
+        <Col xs={9} className="text-center" >
+        <h4>Shotlists, Script and Storyboard</h4>
+        <p >
+        Create Scene Shotlists in the Scene Page and add it's Script 
+        and Storyboard 
+        </p>
+        </Col>
+        <Col xs={3} >
+        <div className="text-center" >
+        <Image 
+          onClick={() => history.push('/landing')}
+          height={height}
+          width={height}
+          src={features} alt="image" 
+          className={`round ${styles.FeaturesImage}`} />
+        </div>
+        </Col>
+        </div>
+        </Row>
+        </Col>
+        </Row>
+        </div>
+        {/* page 4 */}
+        <div className={`mt-5 px-5 mx-5 ${styles.Overview}`}>
+        <h2 className={`pb-1 ${styles.OverviewText} ${appStyles.playfair} 
+        text-center`} >Production Features</h2>
+        </div>
+        <div className="px-5">
+        {/* 1 Cast and Crew - Schedule */}
+        <Row className="mb-3 mt-5">
+        {/* Cast and Crew */}
+        <Col xs={12} md={6} >
+        <Row className="d-flex align-items-center justify-content-center">
+        <div className={`${styles.FeatureLink} d-flex align-items-center justify-content-center`}>
+        <Col xs={3} >
+        <div className="text-center" >
+        <Image 
+          onClick={() => history.push('/landing')}
+          height={height}
+          width={height}
+          src={features} alt="image" 
+          className={`round ${styles.FeaturesImage}`} />
+        </div>
+        </Col>
+        <Col xs={9} className="text-center" >
+        <h4>Cast and Crew</h4>
+        <p >
+        Manage the Cast and Crew with all the necessary Info Requirements
+        </p>
+        </Col>
+        </div>
+        </Row>
+        </Col>
+        {/* Schedule */}
+        <Col xs={12} md={6}>
+        <Row className="d-flex align-items-center justify-content-center">
+        <div className={`${styles.FeatureLink} d-flex align-items-center justify-content-center`}>
+        <Col xs={9} className="text-center" >
+        <h4>Create Schedules</h4>
+        <p >
+        Create Schedules and Stripboards in a flash automatically 
+        adding all details from the Scene Breakdown 
+        </p>
+        </Col>
+        <Col xs={3} >
+        <div className="text-center" >
+        <Image 
+          onClick={() => history.push('/landing')}
+          height={height}
+          width={height}
+          src={features} alt="image" 
+          className={`round ${styles.FeaturesImage}`} />
+        </div>
+        </Col>
+        </div>
+        </Row>
+        </Col>
+        </Row>
+        {/* 2 Callsheets */}
+        <Row className="my-3">
+        {/* Callsheets */}
+        <Col xs={12} md={6} >
+        <Row className="d-flex align-items-center justify-content-center">
+        <div className={`${styles.FeatureLink} d-flex align-items-center justify-content-center`}>
+        <Col xs={3} >
+        <div className="text-center" >
+        <Image 
+          onClick={() => history.push('/landing')}
+          height={height}
+          width={height}
+          src={features} alt="image" 
+          className={`round ${styles.FeaturesImage}`} />
+        </div>
+        </Col>
+        <Col xs={9} className="text-center" >
+        <h4>Callsheets</h4>
+        <p >
+        Create stylish Callsheets with personalized Call Times
+        and Google Maps for Locations
+        </p>
+        </Col>
+        </div>
+        </Row>
+        </Col>
+        {/* Mobile */}
+        <Col xs={12} md={6}>
+        <Row className="d-flex align-items-center justify-content-center">
+        <div className={`${styles.FeatureLink} d-flex align-items-center justify-content-center`}>
+        <Col xs={9} className="text-center" >
+        <h4>Mobile View</h4>
+        <p >
+        Use all Features in Mobile View and find all Info fast 
+        using the Quick Find Feature
+        </p>
+        </Col>
+        <Col xs={3} >
+        <div className="text-center" >
+        <Image 
+          onClick={() => history.push('/landing')}
+          height={height}
+          width={height}
+          src={features} alt="image" 
+          className={`round ${styles.FeaturesImage}`} />
+        </div>
+        </Col>
+        </div>
+        </Row>
+        </Col>
+        </Row>
+        {/* 3  */}
+        {/* <Row >
+        <Col xs={12} md={6} >
+        <Row className="d-flex align-items-center justify-content-center">
+        <div className={`${styles.FeatureLink} d-flex align-items-center justify-content-center my-5`}>
+        <Col xs={3} >
+        <div className="text-center" >
+        <Image 
+          onClick={() => history.push('/landing')}
+          height={height}
+          width={height}
+          src={features} alt="image" 
+          className={`round ${styles.FeaturesImage}`} />
+        </div>
+        </Col>
+        <Col xs={9} className="text-center" >
+        <h4>Moodshots</h4>
+        <p >
+        Use Moodshots to explore and guide Scene, Character and 
+        Location design and style 
+        </p>
+        </Col>
+        </div>
+        </Row>
+        </Col>
+        <Col xs={12} md={6}>
+        <Row className="d-flex align-items-center justify-content-center">
+        <div className={`${styles.FeatureLink} d-flex align-items-center justify-content-center my-5`}>
+        <Col xs={9} className="text-center" >
+        <h4>Shotlists, Script and Storyboard</h4>
+        <p >
+        Create Scene Shotlists in the Scene Page and add it's Script 
+        and Storyboard 
+        </p>
+        </Col>
+        <Col xs={3} >
+        <div className="text-center" >
+        <Image 
+          onClick={() => history.push('/landing')}
+          height={height}
+          width={height}
+          src={features} alt="image" 
+          className={`round ${styles.FeaturesImage}`} />
+        </div>
+        </Col>
+        </div>
+        </Row>
+        </Col>
+        </Row> */}
         </div>
     </div>
   );
