@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, Container, Nav } from "react-bootstrap";
+import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 import logo from "../assets/logo1.png";
 import styles from "../styles/NavBar.module.css";
 import { NavLink } from "react-router-dom";
@@ -12,13 +12,14 @@ import { removeTokenTimestamp } from '../utils/utils';
 const NavBar = () => {
   const currentUser = useCurrentUser();
   const setCurrentUser = useSetCurrentUser();
-  // const { expanded, setExpanded, ref, 
-  //   refw, refw1, refw2, refw3, refw4,
+  // const { 
   //   reff, reff1, reff2, reff3, reff4, reff5, reff6, 
   //   refm, refm1, refm2, refin, refin2,
   //   refs, refs1, refs2, refs3,
   //   refp, refp1, refp2 } = useDropdownClick();
-  const { expanded, setExpanded, ref, } = useDropdownClick();
+  const { expanded, setExpanded, ref,
+    refw, refw1, refw2, refw3, refw4,
+    reff, reff1, reff2, reff3, reff4, } = useDropdownClick();
 
   const handleSignOut = async () => {
     try {
@@ -29,6 +30,112 @@ const NavBar = () => {
       console.log(err);
     }
   };
+
+  const creativeIcons = (
+    <>
+    <NavDropdown
+    title="Creative"
+    ref={refw}
+    id="nav-dropdown1"
+    // activeClassName={styles.Active}
+    className={`py-0 ${styles.NavLink} `}
+    >
+    <NavDropdown.Item >
+    <NavLink
+    className={` ${styles.DropLink} `}
+    activeClassName={styles.Active}
+    ref={refw1}
+    to="/breakdown"
+    >
+    <i className="navicon fas fa-play"></i>Scene Breakdowns
+    </NavLink>
+    </NavDropdown.Item>
+    <NavDropdown.Item >
+    <NavLink
+    className={`mt-2 ${styles.NavLink} `}
+    activeClassName={styles.Active}
+    ref={refw2}
+    to="charslocates"
+    >
+    <i className="navicon fas fa-play"></i>Characters and Locations 
+    </NavLink>
+    </NavDropdown.Item>
+    <NavDropdown.Item >
+    <NavLink
+    className={`mt-2 ${styles.NavLink} `}
+    activeClassName={styles.Active}
+    ref={refw3}
+    to="workspaces"
+    >
+    <i className="navicon fas fa-play"></i>Scene Workspaces
+    </NavLink>
+    </NavDropdown.Item>
+    <NavDropdown.Item >
+    <NavLink
+    className={`mt-2 ${styles.NavLink} `}
+    activeClassName={styles.Active}
+    ref={refw4}
+    to="shotscrstory"
+    >
+    <i className="navicon fas fa-play"></i>Shotlists, Script and Storyboard 
+    </NavLink>
+    </NavDropdown.Item>
+    </NavDropdown>
+    </>
+  )
+
+  const productionIcons = (
+    <>
+    <NavDropdown
+    title="Production"
+    ref={reff}
+    id="nav-dropdown2"
+    // activeClassName={styles.Active}
+    className={`py-0 ${styles.NavLink} `}
+    >
+    <NavDropdown.Item >
+    <NavLink
+    className={` ${styles.DropLink} `}
+    activeClassName={styles.Active}
+    ref={reff1}
+    to="/castcrew"
+    >
+    <i className="navicon fas fa-play"></i>Cast and Crew
+    </NavLink>
+    </NavDropdown.Item>
+    <NavDropdown.Item >
+    <NavLink
+    className={`mt-2 ${styles.NavLink} `}
+    activeClassName={styles.Active}
+    ref={reff2}
+    to="schedule"
+    >
+    <i className="navicon fas fa-play"></i>Schedule and Stripboard
+    </NavLink>
+    </NavDropdown.Item>
+    <NavDropdown.Item >
+    <NavLink
+    className={`mt-2 ${styles.NavLink} `}
+    activeClassName={styles.Active}
+    ref={reff3}
+    to="callsheets"
+    >
+    <i className="navicon fas fa-play"></i>Callsheets
+    </NavLink>
+    </NavDropdown.Item>
+    <NavDropdown.Item >
+    <NavLink
+    className={`mt-2 ${styles.NavLink} `}
+    activeClassName={styles.Active}
+    ref={reff4}
+    to="mobile"
+    >
+    <i className="navicon fas fa-play"></i>Mobile and Quick Find 
+    </NavLink>
+    </NavDropdown.Item>
+    </NavDropdown>
+    </>
+  )
 
   const loggedInIcons = (
     <>
@@ -90,7 +197,7 @@ const NavBar = () => {
           >
             <i className="fas fa-home"></i>Home
           </NavLink>
-          {/* home */}
+          {/* home2 */}
           <NavLink
             exact
             className={`mt-1 ${styles.NavLink}`}
@@ -99,6 +206,10 @@ const NavBar = () => {
           >
             <i className="fas fa-home"></i>Home2
           </NavLink>
+          {/* creative */}
+          {creativeIcons}
+          {/* Production */}
+          {productionIcons}
           {/* chat */}
           <NavLink
             className={`mt-1 ${styles.NavLink}`}
@@ -116,36 +227,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-
-{/* <NavDropdown
-  title={
-    <span style={{ color: '#555555'}} className={styles.Title}>
-      <Avatar src={currentUser?.profile_image} text="" height={40} />Profiles
-    </span>
-  }
-  ref={refp}
-  id="nav-dropdown5"
-  // activeClassName={styles.Active}
-  className={`py-0 ${styles.NavLink} `}
-  >
-  <NavDropdown.Item >
-  <NavLink
-  className={` ${styles.DropLink} `}
-  activeClassName={styles.Active}
-  ref={refp1}
-  to="/profiles"
-  >
-  <i className="navicon fas fa-play"></i>Profiles
-  </NavLink>
-  </NavDropdown.Item>
-  <NavDropdown.Item >
-  <NavLink
-  className={`mt-2 ${styles.NavLink} `}
-  activeClassName={styles.Active}
-  ref={refp2}
-  to={`/profiles/${currentUser?.profile_id}`}
-  >
-  <i className="navicon fas fa-play"></i>My Profile 
-  </NavLink>
-  </NavDropdown.Item>
-  </NavDropdown> */}

@@ -9,6 +9,8 @@ import pic from "../../assets/fight.png";
 // eslint-disable-next-line 
 import city2 from "../../assets/city2.png";
 import features from "../../assets/r-1.png";
+import btnStyles from "../../styles/Button.module.css";
+import Button from "react-bootstrap/Button";
 
 import Container from "react-bootstrap/Container";
 // eslint-disable-next-line 
@@ -18,7 +20,6 @@ import { Image } from "react-bootstrap";
 
 const Home = () => {
   // const setCurrentUser = useSetCurrentUser();
-  // const admin = true;
   const history = useHistory();
   const height = "75px";
 
@@ -218,11 +219,13 @@ const Home = () => {
         {/* Breakdowns */}
         <Col xs={12} md={6} >
         <Row className="d-flex align-items-center justify-content-center">
-        <div className={`${styles.FeatureLink} d-flex align-items-center justify-content-center`}>
+        <div onClick={() => history.push('/breakdown')}
+          className={`${styles.FeatureLink} d-flex align-items-center 
+           justify-content-center`}>
         <Col xs={3} >
         <div className="text-center" >
         <Image 
-          onClick={() => history.push('/landing')}
+          onClick={() => history.push('/breakdown')}
           height={height}
           width={height}
           src={features} alt="image" 
@@ -242,18 +245,19 @@ const Home = () => {
         {/* Characters and Locations */}
         <Col xs={12} md={6}>
         <Row className="d-flex align-items-center justify-content-center">
-        <div className={`${styles.FeatureLink} d-flex align-items-center justify-content-center`}>
+        <div onClick={() => history.push('/charslocates')}
+          className={`${styles.FeatureLink} d-flex align-items-center 
+          justify-content-center`}>
         <Col xs={9} className="text-center" >
         <h4>Characters and Locations</h4>
         <p >
         Create Characters and Locations pages with Images
-        and all relevant Info.
+        and all relevant Info. Use Moodshots to explore and guide design and style 
         </p>
         </Col>
         <Col xs={3} >
         <div className="text-center" >
         <Image 
-          onClick={() => history.push('/landing')}
           height={height}
           width={height}
           src={features} alt="image" 
@@ -269,11 +273,12 @@ const Home = () => {
         {/* Workspaces */}
         <Col xs={12} md={6} >
         <Row className="d-flex align-items-center justify-content-center">
-        <div className={`${styles.FeatureLink} d-flex align-items-center justify-content-center`}>
+        <div onClick={() => history.push('/workspaces')}
+          className={`${styles.FeatureLink} d-flex align-items-center 
+          justify-content-center`}>
         <Col xs={3} >
         <div className="text-center" >
         <Image 
-          onClick={() => history.push('/landing')}
           height={height}
           width={height}
           src={features} alt="image" 
@@ -293,69 +298,19 @@ const Home = () => {
         {/* Script, Storyboard and Shotlists */}
         <Col xs={12} md={6}>
         <Row className="d-flex align-items-center justify-content-center">
-        <div className={`${styles.FeatureLink} d-flex align-items-center justify-content-center`}>
+        <div onClick={() => history.push('/shotscrstory')}
+          className={`${styles.FeatureLink} d-flex align-items-center
+          justify-content-center`}>
         <Col xs={9} className="text-center" >
         <h4>Shotlists, Script and Storyboard</h4>
         <p >
-        Create Scene Shotlists in the Scene Page and add it's Script 
+        Create Scene Shotlists in the Scene Page and add the Script 
         and Storyboard 
         </p>
         </Col>
         <Col xs={3} >
         <div className="text-center" >
         <Image 
-          onClick={() => history.push('/landing')}
-          height={height}
-          width={height}
-          src={features} alt="image" 
-          className={`round ${styles.FeaturesImage}`} />
-        </div>
-        </Col>
-        </div>
-        </Row>
-        </Col>
-        </Row>
-        {/* 3 Moodshots - Script, Storyboard and Shotlists */}
-        <Row className="my-3">
-        {/* Moodshots */}
-        <Col xs={12} md={6} >
-        <Row className="d-flex align-items-center justify-content-center">
-        <div className={`${styles.FeatureLink} d-flex align-items-center justify-content-center`}>
-        <Col xs={3} >
-        <div className="text-center" >
-        <Image 
-          onClick={() => history.push('/landing')}
-          height={height}
-          width={height}
-          src={features} alt="image" 
-          className={`round ${styles.FeaturesImage}`} />
-        </div>
-        </Col>
-        <Col xs={9} className="text-center" >
-        <h4>Moodshots</h4>
-        <p >
-        Use Moodshots to explore and guide Scene, Character and 
-        Location design and style 
-        </p>
-        </Col>
-        </div>
-        </Row>
-        </Col>
-        {/* Script, Storyboard and Shotlists */}
-        <Col xs={12} md={6}>
-        <Row className="d-flex align-items-center justify-content-center">
-        <div className={`${styles.FeatureLink} d-flex align-items-center justify-content-center`}>
-        <Col xs={9} className="text-center" >
-        <h4>Shotlists, Script and Storyboard</h4>
-        <p >
-        Create Scene Shotlists in the Scene Page and add it's Script 
-        and Storyboard 
-        </p>
-        </Col>
-        <Col xs={3} >
-        <div className="text-center" >
-        <Image 
-          onClick={() => history.push('/landing')}
           height={height}
           width={height}
           src={features} alt="image" 
@@ -378,11 +333,12 @@ const Home = () => {
         {/* Cast and Crew */}
         <Col xs={12} md={6} >
         <Row className="d-flex align-items-center justify-content-center">
-        <div className={`${styles.FeatureLink} d-flex align-items-center justify-content-center`}>
+        <div onClick={() => history.push('/castcrew')}
+          className={`${styles.FeatureLink} d-flex align-items-center 
+          justify-content-center`}>
         <Col xs={3} >
         <div className="text-center" >
         <Image 
-          onClick={() => history.push('/landing')}
           height={height}
           width={height}
           src={features} alt="image" 
@@ -401,7 +357,9 @@ const Home = () => {
         {/* Schedule */}
         <Col xs={12} md={6}>
         <Row className="d-flex align-items-center justify-content-center">
-        <div className={`${styles.FeatureLink} d-flex align-items-center justify-content-center`}>
+        <div onClick={() => history.push('/schedule')}
+          className={`${styles.FeatureLink} d-flex align-items-center 
+          justify-content-center`}>
         <Col xs={9} className="text-center" >
         <h4>Create Schedules</h4>
         <p >
@@ -412,7 +370,6 @@ const Home = () => {
         <Col xs={3} >
         <div className="text-center" >
         <Image 
-          onClick={() => history.push('/landing')}
           height={height}
           width={height}
           src={features} alt="image" 
@@ -428,11 +385,12 @@ const Home = () => {
         {/* Callsheets */}
         <Col xs={12} md={6} >
         <Row className="d-flex align-items-center justify-content-center">
-        <div className={`${styles.FeatureLink} d-flex align-items-center justify-content-center`}>
+        <div onClick={() => history.push('/callsheets')}
+          className={`${styles.FeatureLink} d-flex align-items-center 
+          justify-content-center`}>
         <Col xs={3} >
         <div className="text-center" >
         <Image 
-          onClick={() => history.push('/landing')}
           height={height}
           width={height}
           src={features} alt="image" 
@@ -452,7 +410,9 @@ const Home = () => {
         {/* Mobile */}
         <Col xs={12} md={6}>
         <Row className="d-flex align-items-center justify-content-center">
-        <div className={`${styles.FeatureLink} d-flex align-items-center justify-content-center`}>
+        <div onClick={() => history.push('/mobile')}
+          className={`${styles.FeatureLink} d-flex align-items-center 
+          justify-content-center`}>
         <Col xs={9} className="text-center" >
         <h4>Mobile View</h4>
         <p >
@@ -463,7 +423,6 @@ const Home = () => {
         <Col xs={3} >
         <div className="text-center" >
         <Image 
-          onClick={() => history.push('/landing')}
           height={height}
           width={height}
           src={features} alt="image" 

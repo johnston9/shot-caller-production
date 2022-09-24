@@ -18,6 +18,14 @@ import ProfileEditForm from "./pages/profiles/ProfileEditForm";
 import PageNotFound from "./components/PageNotFound";
 import Landing from "./pages/home/Landing";
 import HomeTwo from "./pages/home/HomeTwo";
+import Breakdown from "./pages/home/Breakdown";
+import CharsLocates from "./pages/home/CharsLocates";
+import Workspaces from "./pages/home/Workspaces";
+import ShotScrStory from "./pages/home/ShotScrStory";
+import CastCrew from "./pages/home/CastCrew";
+import Schedules from "./pages/home/Schedules";
+import Callsheets from "./pages/home/Callsheets";
+import Mobile from "./pages/home/Mobile";
 
 function App() {
   const currentUser = useCurrentUser()
@@ -28,13 +36,22 @@ function App() {
       <NavBar />
       <div className={styles.Main}>
         <Switch>
+          {/* home */}
           <Route exact path="/" render={() => <Home /> } />
           <Route exact path="/home2" render={() => <HomeTwo /> } />
           <Route exact path="/landing" render={() => <Landing /> } />
           <Route exact path="/signin" render={() => <SignInForm />} />
-          <Route exact path="/signup" render={() => <SignUpForm/> } />
-          <Route exact path="/profiles" render={() => <ProfilesPage /> } />
-          <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
+          <Route exact path="/signup" render={() => <SignUpForm /> } />
+          {/* features */}
+          <Route exact path="/breakdown" render={() => <Breakdown /> } />
+          <Route exact path="/charslocates" render={() => <CharsLocates /> } />
+          <Route exact path="/workspaces" render={() => <Workspaces /> } />
+          <Route exact path="/shotscrstory" render={() => <ShotScrStory /> } />
+          <Route exact path="/castcrew" render={() => <CastCrew /> } />
+          <Route exact path="/schedule" render={() => <Schedules /> } />
+          <Route exact path="/callsheets" render={() => <Callsheets /> } />
+          <Route exact path="/mobile" render={() => <Mobile /> } />
+          {/* chat */}
           <Route exact path="/chat/create" render={() => <ChatCreateForm />} />
           <Route exact path="/chat/edit/:id" render={() => <ChatEditForm />} />
           <Route 
@@ -66,6 +83,9 @@ function App() {
               />
             ) } />
           <Route exact path="/chat/:id" render={() => <ChatPage />} />
+          {/* profiles */}
+          <Route exact path="/profiles" render={() => <ProfilesPage /> } />
+          <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
           <Route
               exact
               path="/profiles/:id/edit/username"
