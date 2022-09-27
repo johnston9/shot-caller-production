@@ -42,7 +42,17 @@ const NavBar = () => {
     >
     <NavDropdown.Item >
     <NavLink
-    className={` ${styles.DropLink} `}
+    className={`mt-2 ${styles.NavLink} `}
+    activeClassName={styles.Active}
+    ref={refw3}
+    to="workspaces"
+    >
+    <i className="navicon fas fa-play"></i>Scene Workspaces
+    </NavLink>
+    </NavDropdown.Item>
+    <NavDropdown.Item >
+    <NavLink
+    className={` ${styles.NavLink} `}
     activeClassName={styles.Active}
     ref={refw1}
     to="/breakdown"
@@ -54,30 +64,20 @@ const NavBar = () => {
     <NavLink
     className={`mt-2 ${styles.NavLink} `}
     activeClassName={styles.Active}
-    ref={refw2}
-    to="charslocates"
-    >
-    <i className="navicon fas fa-play"></i>Characters and Locations 
-    </NavLink>
-    </NavDropdown.Item>
-    <NavDropdown.Item >
-    <NavLink
-    className={`mt-2 ${styles.NavLink} `}
-    activeClassName={styles.Active}
-    ref={refw3}
-    to="workspaces"
-    >
-    <i className="navicon fas fa-play"></i>Scene Workspaces
-    </NavLink>
-    </NavDropdown.Item>
-    <NavDropdown.Item >
-    <NavLink
-    className={`mt-2 ${styles.NavLink} `}
-    activeClassName={styles.Active}
     ref={refw4}
     to="shotscrstory"
     >
     <i className="navicon fas fa-play"></i>Shotlists, Script and Storyboard 
+    </NavLink>
+    </NavDropdown.Item>
+    <NavDropdown.Item >
+    <NavLink
+    className={`mt-2 ${styles.NavLink} `}
+    activeClassName={styles.Active}
+    ref={refw2}
+    to="charslocates"
+    >
+    <i className="navicon fas fa-play"></i>Characters and Locations 
     </NavLink>
     </NavDropdown.Item>
     </NavDropdown>

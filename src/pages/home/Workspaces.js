@@ -4,9 +4,10 @@ import styles from "../../styles/Home.module.css";
 import appStyles from "../../App.module.css";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import pic from "../../assets/fight.png";
+import work1 from "../../assets/work1.png";
+import work2 from "../../assets/work2.png";
 // eslint-disable-next-line 
-import city2 from "../../assets/city2.png";
+import pic from "../../assets/fight.png";
 import btnStyles from "../../styles/Button.module.css";
 import Button from "react-bootstrap/Button";
 import { Image } from "react-bootstrap";
@@ -31,38 +32,38 @@ const Workspaces = () => {
         </Col>
     </Row>
     <div className="px-3 mt-3">
-    {/* platform */}
+    {/* one */}
     <Row className="mt-1 mt-md-5 d-flex align-items-center justify-content-center">
     <Col xs={6} md={{span: 3, offset: 1 }} className="text-center" >
     <p >
-    Build and manage TV and Film Production in the 
-    one platform utilizing interlinking tools.
+    Create the Scenes quickly then easily select the one you wish to work on
     </p>
     </Col>
     <Col xs={6} md={{span: 6, offset: 2 }}>
     <div className="text-center">
-    <Image src={pic} alt="image" 
-      className={` ${styles.Image}`} />
+    <Image src={work1} alt="image" 
+      className={` ${styles.FeatureImage}`} />
     </div>
     </Col>
     </Row>
-    {/* Workspaces */}
+    {/* two */}
     <Row className="mt-1 mt-md-5 d-flex align-items-center justify-content-center">
     <Col xs={6} md={6}>
     <div className="text-center">
-    <Image src={pic} alt="image" 
-      className={` ${styles.Image}`} />
+    <Image src={work2} alt="image" 
+      className={` ${styles.FeatureImage}`} />
     </div>
     </Col>
     <Col xs={6} md={{span: 3, offset: 2 }}
     className="text-center" >
     <p >
-    Collaborate and design in Scene Department Workspaces and use 
-    Moodshots to explore ideas.
+    Collaborate and design in Scene Department Workspaces
+    using the Workspace Guide to show which spaces you
+    will be using 
     </p>
     </Col>
     </Row>
-    {/* Callsheets  */}
+    {/* three  */}
     <Row className="mt-1 mt-md-5 d-flex align-items-center justify-content-center">
     <Col xs={6} md={{span: 3, offset: 1 }}
       className="text-center" >
@@ -74,16 +75,16 @@ const Workspaces = () => {
     <Col xs={6} md={{span: 6, offset: 2 }}>
     <div className="text-center">
     <Image src={pic} alt="image" 
-      className={` ${styles.Image}`} />
+      className={` ${styles.FeatureImage}`} />
     </div>
     </Col>
     </Row>
-    {/* mobile */}
+    {/* four */}
     <Row className="mt-1 mt-md-5 d-flex align-items-center justify-content-center">
     <Col xs={6} md={6}>
     <div className="text-center">
     <Image src={pic} alt="image" 
-      className={` ${styles.Image}`} />
+      className={` ${styles.FeatureImage}`} />
     </div>
     </Col>
     <Col xs={6} md={{span: 3, offset: 2 }}

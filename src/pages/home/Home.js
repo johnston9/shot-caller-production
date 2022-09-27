@@ -214,62 +214,8 @@ const Home = () => {
         text-center`} >The Creative Features</h2>
         </div>
         <div className="px-5">
-        {/* 1 Breakdowns - Characters and Locations */}
+        {/* 1 Workspaces - Breakdowns*/}
         <Row className="mb-3 mt-5">
-        {/* Breakdowns */}
-        <Col xs={12} md={6} >
-        <Row className="d-flex align-items-center justify-content-center">
-        <div onClick={() => history.push('/breakdown')}
-          className={`${styles.FeatureLink} d-flex align-items-center 
-           justify-content-center`}>
-        <Col xs={3} >
-        <div className="text-center" >
-        <Image 
-          onClick={() => history.push('/breakdown')}
-          height={height}
-          width={height}
-          src={features} alt="image" 
-          className={`round ${styles.FeaturesImage}`} />
-        </div>
-        </Col>
-        <Col xs={9} className="text-center" >
-        <h4>Scene Breakdowns</h4>
-        <p >
-        Create Scene Breakdowns for all the Scene Info including Department
-        Info 
-        </p>
-        </Col>
-        </div>
-        </Row>
-        </Col>
-        {/* Characters and Locations */}
-        <Col xs={12} md={6}>
-        <Row className="d-flex align-items-center justify-content-center">
-        <div onClick={() => history.push('/charslocates')}
-          className={`${styles.FeatureLink} d-flex align-items-center 
-          justify-content-center`}>
-        <Col xs={9} className="text-center" >
-        <h4>Characters and Locations</h4>
-        <p >
-        Create Characters and Locations pages with Images
-        and all relevant Info. Use Moodshots to explore and guide design and style 
-        </p>
-        </Col>
-        <Col xs={3} >
-        <div className="text-center" >
-        <Image 
-          height={height}
-          width={height}
-          src={features} alt="image" 
-          className={`round ${styles.FeaturesImage}`} />
-        </div>
-        </Col>
-        </div>
-        </Row>
-        </Col>
-        </Row>
-        {/* 2 Workspaces - Script, Storyboard and Shotlists */}
-        <Row className="my-3">
         {/* Workspaces */}
         <Col xs={12} md={6} >
         <Row className="d-flex align-items-center justify-content-center">
@@ -295,17 +241,71 @@ const Home = () => {
         </div>
         </Row>
         </Col>
+        {/* Breakdowns */}
+        <Col xs={12} md={6} >
+        <Row className="d-flex align-items-center justify-content-center">
+        <div onClick={() => history.push('/breakdown')}
+          className={`${styles.FeatureLink} d-flex align-items-center 
+           justify-content-center`}>
+        <Col xs={9} className="text-center" >
+        <h4>Scene Breakdowns</h4>
+        <p >
+        Create Scene Breakdowns for all the Scene Info including Department
+        Info 
+        </p>
+        </Col>
+        <Col xs={3} >
+        <div className="text-center" >
+        <Image 
+          onClick={() => history.push('/breakdown')}
+          height={height}
+          width={height}
+          src={features} alt="image" 
+          className={`round ${styles.FeaturesImage}`} />
+        </div>
+        </Col>
+        </div>
+        </Row>
+        </Col>
+        </Row>
+        {/* 2 Script, Storyboard and Shotlists - Characters and Locations */}
+        <Row className="my-3">
         {/* Script, Storyboard and Shotlists */}
         <Col xs={12} md={6}>
         <Row className="d-flex align-items-center justify-content-center">
         <div onClick={() => history.push('/shotscrstory')}
           className={`${styles.FeatureLink} d-flex align-items-center
           justify-content-center`}>
+        <Col xs={3} >
+        <div className="text-center" >
+        <Image 
+          height={height}
+          width={height}
+          src={features} alt="image" 
+          className={`round ${styles.FeaturesImage}`} />
+        </div>
+        </Col>
         <Col xs={9} className="text-center" >
         <h4>Shotlists, Script and Storyboard</h4>
         <p >
         Create Scene Shotlists in the Scene Page and add the Script 
         and Storyboard 
+        </p>
+        </Col>
+        </div>
+        </Row>
+        </Col>
+        {/* Characters and Locations */}
+        <Col xs={12} md={6}>
+        <Row className="d-flex align-items-center justify-content-center">
+        <div onClick={() => history.push('/charslocates')}
+          className={`${styles.FeatureLink} d-flex align-items-center 
+          justify-content-center`}>
+        <Col xs={9} className="text-center" >
+        <h4>Characters and Locations</h4>
+        <p >
+        Create Characters and Locations pages with Images
+        and all relevant Info. Use Moodshots to explore and guide design and style 
         </p>
         </Col>
         <Col xs={3} >
