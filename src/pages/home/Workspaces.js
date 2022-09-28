@@ -6,6 +6,8 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import work1 from "../../assets/work1.png";
 import work2 from "../../assets/work2.png";
+import work3 from "../../assets/work3.png";
+import work4 from "../../assets/work4.png";
 // eslint-disable-next-line 
 import pic from "../../assets/fight.png";
 import btnStyles from "../../styles/Button.module.css";
@@ -57,9 +59,10 @@ const Workspaces = () => {
     <Col xs={6} md={{span: 3, offset: 2 }}
     className="text-center" >
     <p >
-    Collaborate and design in Scene Department Workspaces
-    using the Workspace Guide to show which spaces you
-    will be using 
+    Work on the Scene in the Universal Workspace and or the
+    Department Workspaces.
+    Use the Universal Workspace Guide to indicate where
+    the work is.
     </p>
     </Col>
     </Row>
@@ -68,13 +71,13 @@ const Workspaces = () => {
     <Col xs={6} md={{span: 3, offset: 1 }}
       className="text-center" >
     <p >
-    Manage Cast and Crew. Easily create Shotlists, Schedules and 
-    personalized Callsheets.
+    Use the Requirements category to set the Department Requirements
+    then Collaborate via Posts
     </p>
     </Col>
     <Col xs={6} md={{span: 6, offset: 2 }}>
     <div className="text-center">
-    <Image src={pic} alt="image" 
+    <Image src={work3} alt="image" 
       className={` ${styles.FeatureImage}`} />
     </div>
     </Col>
@@ -83,14 +86,14 @@ const Workspaces = () => {
     <Row className="mt-1 mt-md-5 d-flex align-items-center justify-content-center">
     <Col xs={6} md={6}>
     <div className="text-center">
-    <Image src={pic} alt="image" 
+    <Image src={work4} alt="image" 
       className={` ${styles.FeatureImage}`} />
     </div>
     </Col>
     <Col xs={6} md={{span: 3, offset: 2 }}
       className="text-center" >
     <p >
-    All features easy to use on Mobile. Use Quick Find to locate all Info fast.
+    Upload Ideas and Images in Posts each with a Comments Section
     </p>
     </Col>
     </Row>
