@@ -71,8 +71,8 @@ const Workspaces = () => {
     <Col xs={6} md={{span: 3, offset: 1 }}
       className="text-center" >
     <p >
-    Use the Requirements category to set the Department Requirements
-    then Collaborate via Posts
+    Use Requirements and Workspace Posts to 
+    guide and collaborate on the Scene
     </p>
     </Col>
     <Col xs={6} md={{span: 6, offset: 2 }}>

@@ -241,17 +241,18 @@ const Home = () => {
         </div>
         </Row>
         </Col>
-        {/* Breakdowns */}
+        {/* Breakdowns and Script*/}
         <Col xs={12} md={6} >
         <Row className="d-flex align-items-center justify-content-center">
         <div onClick={() => history.push('/breakdown')}
           className={`${styles.FeatureLink} d-flex align-items-center 
            justify-content-center`}>
         <Col xs={9} className="text-center" >
-        <h4>Scene Breakdowns</h4>
+        <h4>Scene Breakdowns and Script</h4>
         <p >
         Create Scene Breakdowns for all the Scene Info including Department
-        Info 
+        Info. Add the Script to the main Scenes Page and 
+        add the Scene Script the Scene Page
         </p>
         </Col>
         <Col xs={3} >
@@ -268,9 +269,9 @@ const Home = () => {
         </Row>
         </Col>
         </Row>
-        {/* 2 Script, Storyboard and Shotlists - Characters and Locations */}
+        {/* 2, Storyboard and Shotlists - Characters and Locations */}
         <Row className="my-3">
-        {/* Script, Storyboard and Shotlists */}
+        {/*  Storyboard and Shotlists */}
         <Col xs={12} md={6}>
         <Row className="d-flex align-items-center justify-content-center">
         <div onClick={() => history.push('/shotscrstory')}
@@ -286,9 +287,9 @@ const Home = () => {
         </div>
         </Col>
         <Col xs={9} className="text-center" >
-        <h4>Shotlists, Script and Storyboard</h4>
+        <h4>Shotlists and Storyboard</h4>
         <p >
-        Create Scene Shotlists in the Scene Page and add the Script 
+        Create Scene Shotlists in the Scene Page and add the 
         and Storyboard 
         </p>
         </Col>

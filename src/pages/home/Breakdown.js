@@ -7,6 +7,7 @@ import Row from "react-bootstrap/Row";
 import pic from "../../assets/fight.png";
 // eslint-disable-next-line 
 import break1 from "../../assets/break1.png";
+import break2 from "../../assets/break2.png";
 import btnStyles from "../../styles/Button.module.css";
 import Button from "react-bootstrap/Button";
 import { Image } from "react-bootstrap";
@@ -18,7 +19,7 @@ const Breakdown = () => {
     <div>
     <div className={`mt-2 ${styles.Overview}`}>
     <h2 className={`pb-1 ${styles.OverviewText} ${appStyles.playfair}
-     text-center`} >Scene Breakdowns</h2>
+     text-center`} >Scene Breakdowns and Script</h2>
     </div>
     <Row className="mt-1 ml-2" >
         <Col xs={3}>
@@ -31,33 +32,35 @@ const Breakdown = () => {
         </Col>
     </Row>
     <div className="px-3 mt-3">
-    {/* platform */}
+    {/* one */}
     <Row className="mt-1 mt-md-5 d-flex align-items-center justify-content-center">
     <Col xs={6} md={{span: 3, offset: 1 }} className="text-center" >
     <p >
-    Create the Scene pages
+    Access all Scene Info including Character, Costumes, BG,
+    and Department info with a click. This will be 
+    automatically loaded for other features.
     </p>
     </Col>
     <Col xs={6} md={{span: 6, offset: 2 }}>
     <div className="text-center">
     <Image src={break1} alt="image" 
-      className={` ${styles.Image}`} />
+      className={` ${styles.FeatureImage}`} />
     </div>
     </Col>
     </Row>
-    {/* Workspaces */}
+    {/* two */}
     <Row className="mt-1 mt-md-5 d-flex align-items-center justify-content-center">
     <Col xs={6} md={6}>
     <div className="text-center">
-    <Image src={pic} alt="image" 
-      className={` ${styles.Image}`} />
+    <Image src={break2} alt="image" 
+      className={` ${styles.FeatureImage}`} />
     </div>
     </Col>
     <Col xs={6} md={{span: 3, offset: 2 }}
     className="text-center" >
     <p >
-    Collaborate and design in Scene Department Workspaces and use 
-    Moodshots to explore ideas.
+    Add the whole script to the Scenes page along with change notes
+    and add the Scene script to the Scene page
     </p>
     </Col>
     </Row>
