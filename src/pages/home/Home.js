@@ -274,7 +274,7 @@ const Home = () => {
         {/*  Storyboard and Shotlists */}
         <Col xs={12} md={6}>
         <Row className="d-flex align-items-center justify-content-center">
-        <div onClick={() => history.push('/shotscrstory')}
+        <div onClick={() => history.push('/shotstory')}
           className={`${styles.FeatureLink} d-flex align-items-center
           justify-content-center`}>
         <Col xs={3} >
@@ -287,10 +287,10 @@ const Home = () => {
         </div>
         </Col>
         <Col xs={9} className="text-center" >
-        <h4>Shotlists and Storyboard</h4>
+        <h4>Shotlists and Storyboards</h4>
         <p >
         Create Scene Shotlists in the Scene Page and add the 
-        and Storyboard 
+        Storyboards
         </p>
         </Col>
         </div>

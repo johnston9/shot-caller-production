@@ -21,7 +21,7 @@ import HomeTwo from "./pages/home/HomeTwo";
 import Breakdown from "./pages/home/Breakdown";
 import CharsLocates from "./pages/home/CharsLocates";
 import Workspaces from "./pages/home/Workspaces";
-import ShotScrStory from "./pages/home/ShotScrStory";
+import ShotStory from "./pages/home/ShotStory";
 import CastCrew from "./pages/home/CastCrew";
 import Schedules from "./pages/home/Schedules";
 import Callsheets from "./pages/home/Callsheets";
@@ -46,7 +46,7 @@ function App() {
           <Route exact path="/breakdown" render={() => <Breakdown /> } />
           <Route exact path="/charslocates" render={() => <CharsLocates /> } />
           <Route exact path="/workspaces" render={() => <Workspaces /> } />
-          <Route exact path="/shotscrstory" render={() => <ShotScrStory /> } />
+          <Route exact path="/shotstory" render={() => <ShotStory /> } />
           <Route exact path="/castcrew" render={() => <CastCrew /> } />
           <Route exact path="/schedule" render={() => <Schedules /> } />
           <Route exact path="/callsheets" render={() => <Callsheets /> } />

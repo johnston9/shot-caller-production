@@ -65,9 +65,9 @@ const NavBar = () => {
     className={`mt-2 ${styles.NavLink} `}
     activeClassName={styles.Active}
     ref={refw4}
-    to="shotscrstory"
+    to="shotstory"
     >
-    <i className="navicon fas fa-play"></i>Shotlists, Script and Storyboard 
+    <i className="navicon fas fa-play"></i>Shotlists and Storyboards 
     </NavLink>
     </NavDropdown.Item>
     <NavDropdown.Item >
