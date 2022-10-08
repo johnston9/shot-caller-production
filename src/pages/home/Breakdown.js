@@ -16,8 +16,8 @@ const Breakdown = () => {
   const history = useHistory();
 
   return (
-    <div>
-    <div className={`mt-2 ${styles.Overview}`}>
+    <div className={`mt-0 ${styles.PinkBody}`}>
+    <div className={`${styles.Overview}`}>
     <h2 className={`pb-1 ${styles.OverviewText} ${appStyles.playfair}
      text-center`} >Scene Breakdowns and Script</h2>
     </div>
@@ -34,62 +34,62 @@ const Breakdown = () => {
     <div className="px-3 mt-3">
     {/* one */}
     <Row className="mt-1 mt-md-5 d-flex align-items-center justify-content-center">
-    <Col xs={6} md={{span: 3, offset: 1 }} className="text-center" >
+    <Col xs={12} md={{span: 3, offset: 1 }} className="text-center px-1 px-md-3" >
     <p >
     Access all Scene Info including Character, Costumes, BG,
     and Department info with a click. This will be 
     automatically loaded for other features.
     </p>
     </Col>
-    <Col xs={6} md={{span: 6, offset: 2 }}>
-    <div className="text-center">
+    <Col xs={12} md={8}>
+    <div className="text-center px-1 px-md-3">
     <Image src={break1} alt="image" 
       className={` ${styles.FeatureImage}`} />
     </div>
     </Col>
     </Row>
     {/* two */}
-    <Row className="mt-1 mt-md-5 d-flex align-items-center justify-content-center">
-    <Col xs={6} md={6}>
-    <div className="text-center">
+    <Row className="mt-5 d-flex align-items-center justify-content-center">
+    <Col xs={12} md={8}>
+    <div className="text-center px-1 px-md-3">
     <Image src={break2} alt="image" 
       className={` ${styles.FeatureImage}`} />
     </div>
     </Col>
-    <Col xs={6} md={{span: 3, offset: 2 }}
-    className="text-center" >
+    <Col xs={12} md={{span: 3, offset: 0 }}
+    className="text-center px-1 px-md-3" >
     <p >
     Add the whole script to the Scenes page along with change notes
     and add the Scene script to the Scene page
     </p>
     </Col>
     </Row>
-    {/* Callsheets  */}
-    <Row className="mt-1 mt-md-5 d-flex align-items-center justify-content-center">
-    <Col xs={6} md={{span: 3, offset: 1 }}
-      className="text-center" >
+    {/* 3  */} 
+    <Row className="mt-5 d-flex align-items-center justify-content-center">
+    <Col xs={12} md={{span: 3, offset: 1 }}
+      className="text-center px-1 px-md-3" >
     <p >
     Manage Cast and Crew. Easily create Shotlists, Schedules and 
     personalized Callsheets.
     </p>
     </Col>
-    <Col xs={6} md={{span: 6, offset: 2 }}>
-    <div className="text-center">
+    <Col xs={12} md={8}>
+    <div className="text-center px-1 px-md-3">
     <Image src={pic} alt="image" 
       className={` ${styles.Image}`} />
     </div>
     </Col>
     </Row>
-    {/* mobile */}
-    <Row className="mt-1 mt-md-5 d-flex align-items-center justify-content-center">
-    <Col xs={6} md={6}>
-    <div className="text-center">
+    {/* 4 */}
+    <Row className="mt-5 d-flex align-items-center justify-content-center">
+    <Col xs={12} md={8}>
+    <div className="text-center px-1 px-md-3">
     <Image src={pic} alt="image" 
       className={` ${styles.Image}`} />
     </div>
     </Col>
-    <Col xs={6} md={{span: 3, offset: 2 }}
-      className="text-center" >
+    <Col xs={12} md={{span: 3, offset: 0 }}
+      className="text-center px-1 px-md-3" >
     <p >
     All features easy to use on Mobile. Use Quick Find to locate all Info fast.
     </p>
