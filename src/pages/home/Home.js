@@ -241,18 +241,17 @@ const Home = () => {
         </div>
         </Row>
         </Col>
-        {/* Breakdowns and Script*/}
+        {/* Breakdowns, Moodshots and Script*/}
         <Col xs={12} md={6} >
         <Row className="d-flex align-items-center justify-content-center">
         <div onClick={() => history.push('/breakdown')}
           className={`${styles.FeatureLink} d-flex align-items-center 
            justify-content-center`}>
         <Col xs={9} className="text-center" >
-        <h4>Scene Breakdowns and Script</h4>
+        <h4>Breakdowns, Moodshots Script</h4>
         <p >
-        Create Scene Breakdowns for all the Scene Info including Department
-        Info. Add the Script to the main Scenes Page and 
-        add the Scene Script the Scene Page
+        Create Breakdowns for all the Scene Info. Add Scene Scripts.
+        Use Moodshots to and guide design.
         </p>
         </Col>
         <Col xs={3} >
@@ -306,7 +305,7 @@ const Home = () => {
         <h4>Characters and Locations</h4>
         <p >
         Create Characters and Locations pages with Images
-        and all relevant Info. Use Moodshots to explore and guide design and style 
+        and all relevant Info.
         </p>
         </Col>
         <Col xs={3} >

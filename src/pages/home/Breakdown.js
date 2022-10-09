@@ -8,6 +8,8 @@ import pic from "../../assets/fight.png";
 // eslint-disable-next-line 
 import break1 from "../../assets/break1.png";
 import break2 from "../../assets/break2.png";
+import mood1 from "../../assets/mood1.png";
+import mood2 from "../../assets/mood2.png";
 import btnStyles from "../../styles/Button.module.css";
 import Button from "react-bootstrap/Button";
 import { Image } from "react-bootstrap";
@@ -16,10 +18,10 @@ const Breakdown = () => {
   const history = useHistory();
 
   return (
-    <div className={`mt-0 ${styles.PinkBody}`}>
+    <div className={`mt-0 ${styles.BlueBody}`}>
     <div className={`${styles.Overview}`}>
     <h2 className={`pb-1 ${styles.OverviewText} ${appStyles.playfair}
-     text-center`} >Scene Breakdowns and Script</h2>
+     text-center`} >Breakdowns, Moodshots and Script</h2>
     </div>
     <Row className="mt-1 ml-2" >
         <Col xs={3}>
@@ -59,8 +61,10 @@ const Breakdown = () => {
     <Col xs={12} md={{span: 3, offset: 0 }}
     className="text-center px-1 px-md-3" >
     <p >
-    Add the whole script to the Scenes page along with change notes
-    and add the Scene script to the Scene page
+    Add the Scene script to the Scene page.
+    Add the Script to the Scenes page.
+    Add changes details and notes.
+    and 
     </p>
     </Col>
     </Row>
@@ -69,14 +73,14 @@ const Breakdown = () => {
     <Col xs={12} md={{span: 3, offset: 1 }}
       className="text-center px-1 px-md-3" >
     <p >
-    Manage Cast and Crew. Easily create Shotlists, Schedules and 
-    personalized Callsheets.
+    Use Moodshots to explore and design. Create them by
+    Character, Location, Scene or any combination of the three.
     </p>
     </Col>
     <Col xs={12} md={8}>
     <div className="text-center px-1 px-md-3">
-    <Image src={pic} alt="image" 
-      className={` ${styles.Image}`} />
+    <Image src={mood1} alt="image" 
+      className={` ${styles.FeatureImage}`} />
     </div>
     </Col>
     </Row>
@@ -84,14 +88,15 @@ const Breakdown = () => {
     <Row className="mt-5 d-flex align-items-center justify-content-center">
     <Col xs={12} md={8}>
     <div className="text-center px-1 px-md-3">
-    <Image src={pic} alt="image" 
-      className={` ${styles.Image}`} />
+    <Image src={mood2} alt="image" 
+      className={` ${styles.FeatureImage}`} />
     </div>
     </Col>
     <Col xs={12} md={{span: 3, offset: 0 }}
       className="text-center px-1 px-md-3" >
     <p >
-    All features easy to use on Mobile. Use Quick Find to locate all Info fast.
+    Add and view Moodshots from their subject's pages or 
+    from the Moodshots page.
     </p>
     </Col>
     </Row>
