@@ -5,8 +5,10 @@ import appStyles from "../../App.module.css";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import pic from "../../assets/fight.png";
-// eslint-disable-next-line 
-import city2 from "../../assets/city2.png";
+import char1 from "../../assets/char1.png";
+import char2 from "../../assets/char2.png";
+import loca1 from "../../assets/loca1.png";
+import loca2 from "../../assets/loca2.png";
 import btnStyles from "../../styles/Button.module.css";
 import Button from "react-bootstrap/Button";
 import { Image } from "react-bootstrap";
@@ -31,66 +33,63 @@ const CharsLocates = () => {
         </Col>
     </Row>
     <div className="px-3 mt-3">
-    {/* one */}
+    {/* char one */}
     <Row className="mt-1 mt-md-5 d-flex align-items-center justify-content-center">
     <Col xs={12} md={{span: 3, offset: 1 }} className="text-center px-1 px-md-3" >
     <p >
-    Create the Scenes quickly then easily select the one you wish to work on
+    Add the Character Details, Actor Details and Actor Callsheet Details
     </p>
     </Col>
     <Col xs={12} md={8}>
     <div className="text-center px-1 px-md-3">
-    <Image src={pic} alt="image" 
+    <Image src={char1} alt="image" 
       className={` ${styles.FeatureImage}`} />
     </div>
     </Col>
     </Row>
-    {/* two */}
+    {/* char two */}
     <Row className="mt-5 d-flex align-items-center justify-content-center">
     <Col xs={12} md={8}>
     <div className="text-center px-1 px-md-3">
-    <Image src={pic} alt="image" 
+    <Image src={char2} alt="image" 
       className={` ${styles.FeatureImage}`} />
     </div>
     </Col>
     <Col xs={12} md={{span: 3, offset: 0 }}
     className="text-center px-1 px-md-3" >
     <p >
-    Work on the Scene in the Universal Workspace and or the
-    Department Workspaces.
-    Use the Universal Workspace Guide to indicate where
-    the work is.
+    Add the Character Makeup Details and Image 
+    and up to seven Costume Details and Images
     </p>
     </Col>
     </Row>
-    {/* three  */}
+    {/* loc one  */}
     <Row className="mt-5 d-flex align-items-center justify-content-center">
     <Col xs={12} md={{span: 3, offset: 1 }}
       className="text-center px-1 px-md-3" >
     <p >
-    Use Requirements and Workspace Posts to 
-    collaborate on the Scene
+    Add Location details and addresses
     </p>
     </Col>
     <Col xs={12} md={8}>
     <div className="text-center px-1 px-md-3">
-    <Image src={pic} alt="image" 
+    <Image src={loca1} alt="image" 
       className={` ${styles.FeatureImage}`} />
     </div>
     </Col>
     </Row>
-    {/* four */}
+    {/* loc two */}
     <Row className="mt-5 d-flex align-items-center justify-content-center">
     <Col xs={12} md={8}>
     <div className="text-center px-1 px-md-3">
-    <Image src={pic} alt="image" 
+    <Image src={loca2} alt="image" 
       className={` ${styles.FeatureImage}`} />
     </div>
     </Col>
     <Col xs={12} md={{span: 3, offset: 0 }}
       className="text-center px-1 px-md-3" >
     <p >
-    Upload Ideas and Images in Posts each with a Comments Section
+    Add Location Images 
     </p>
     </Col>
     </Row>
