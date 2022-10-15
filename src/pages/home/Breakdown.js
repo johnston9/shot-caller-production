@@ -33,9 +33,9 @@ const Breakdown = () => {
         </Button>
         </Col>
     </Row>
-    <div className="px-3 mt-3">
+    <div className="px-3 mt-1 mt-md-3">
     {/* one */}
-    <Row className="mt-1 mt-md-5 d-flex align-items-center justify-content-center">
+    <Row className="pb-4 d-flex align-items-center justify-content-center">
     <Col xs={12} md={{span: 3, offset: 1 }} className="text-center px-1 px-md-3" >
     <p >
     Access all Scene Info including Character, Costumes, BG,
@@ -50,8 +50,44 @@ const Breakdown = () => {
     </div>
     </Col>
     </Row>
+    </div>
+    <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
     {/* two */}
-    <Row className="mt-5 d-flex align-items-center justify-content-center">
+    <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
+    <Col xs={12} md={8}>
+    <div className="text-center px-1 px-md-3">
+    <Image src={mood1} alt="image" 
+      className={` ${styles.FeatureImage}`} />
+    </div>
+    </Col>
+    <Col xs={12} md={{span: 3, offset: 0 }}
+    className="text-center px-1 px-md-3" >
+    <p >
+    Use Moodshots to explore and design. Create them by
+    Character, Location, Scene or any combination of the three.
+    </p>
+    </Col>
+    </Row>
+    <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
+    {/* 3  */} 
+    <Row className="px-3 mt-4 pb-4 d-flex align-items-center justify-content-center">
+    <Col xs={12} md={{span: 3, offset: 1 }}
+      className="text-center px-1 px-md-3" >
+    <p >
+    Add and view Moodshots from their subject's pages or 
+    from the Moodshots page.
+    </p>
+    </Col>
+    <Col xs={12} md={8}>
+    <div className="text-center px-1 px-md-3">
+    <Image src={mood2} alt="image" 
+      className={` ${styles.FeatureImage}`} />
+    </div>
+    </Col>
+    </Row>
+    <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
+    {/* 4 */}
+    <Row className="px-3 mt-4 pb-4 d-flex align-items-center justify-content-center">
     <Col xs={12} md={8}>
     <div className="text-center px-1 px-md-3">
     <Image src={break2} alt="image" 
@@ -59,7 +95,7 @@ const Breakdown = () => {
     </div>
     </Col>
     <Col xs={12} md={{span: 3, offset: 0 }}
-    className="text-center px-1 px-md-3" >
+      className="text-center px-1 px-md-3" >
     <p >
     Add the Scene script to the Scene page.
     Add the Script to the Scenes page.
@@ -68,39 +104,6 @@ const Breakdown = () => {
     </p>
     </Col>
     </Row>
-    {/* 3  */} 
-    <Row className="mt-5 d-flex align-items-center justify-content-center">
-    <Col xs={12} md={{span: 3, offset: 1 }}
-      className="text-center px-1 px-md-3" >
-    <p >
-    Use Moodshots to explore and design. Create them by
-    Character, Location, Scene or any combination of the three.
-    </p>
-    </Col>
-    <Col xs={12} md={8}>
-    <div className="text-center px-1 px-md-3">
-    <Image src={mood1} alt="image" 
-      className={` ${styles.FeatureImage}`} />
-    </div>
-    </Col>
-    </Row>
-    {/* 4 */}
-    <Row className="mt-5 d-flex align-items-center justify-content-center">
-    <Col xs={12} md={8}>
-    <div className="text-center px-1 px-md-3">
-    <Image src={mood2} alt="image" 
-      className={` ${styles.FeatureImage}`} />
-    </div>
-    </Col>
-    <Col xs={12} md={{span: 3, offset: 0 }}
-      className="text-center px-1 px-md-3" >
-    <p >
-    Add and view Moodshots from their subject's pages or 
-    from the Moodshots page.
-    </p>
-    </Col>
-    </Row>
-    </div>
     </div>
   )
 }

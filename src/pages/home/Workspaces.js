@@ -33,9 +33,8 @@ const Workspaces = () => {
         </Button>
         </Col>
     </Row>
-    <div className="px-3 mt-3">
     {/* one */}
-    <Row className="mt-1 mt-md-5 d-flex align-items-center justify-content-center">
+    <Row className="mt-1 mt-md-3 pb-4 px-3 d-flex align-items-center justify-content-center">
     <Col xs={12} md={{span: 3, offset: 1 }} className="text-center px-1 px-md-3" >
     <p >
     Create the Scenes quickly then easily select the one you wish to work on
@@ -48,8 +47,9 @@ const Workspaces = () => {
     </div>
     </Col>
     </Row>
+    <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
     {/* two */}
-    <Row className="mt-5 d-flex align-items-center justify-content-center">
+    <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
     <Col xs={12} md={8}>
     <div className="text-center px-1 px-md-3">
     <Image src={work2} alt="image" 
@@ -66,8 +66,9 @@ const Workspaces = () => {
     </p>
     </Col>
     </Row>
+    <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
     {/* three  */}
-    <Row className="mt-5 d-flex align-items-center justify-content-center">
+    <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
     <Col xs={12} md={{span: 3, offset: 1 }}
       className="text-center px-1 px-md-3" >
     <p >
@@ -82,8 +83,9 @@ const Workspaces = () => {
     </div>
     </Col>
     </Row>
+    <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
     {/* four */}
-    <Row className="mt-5 d-flex align-items-center justify-content-center">
+    <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
     <Col xs={12} md={8}>
     <div className="text-center px-1 px-md-3">
     <Image src={work4} alt="image" 
@@ -97,7 +99,6 @@ const Workspaces = () => {
     </p>
     </Col>
     </Row>
-    </div>
     </div>
   )
 }

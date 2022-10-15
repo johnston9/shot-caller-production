@@ -57,7 +57,7 @@ const NavBar = () => {
     ref={refw1}
     to="/breakdown"
     >
-    <i className="navicon fas fa-play"></i>Scene Breakdowns
+    <i className="navicon fas fa-play"></i>Breakdowns / Moodshots
     </NavLink>
     </NavDropdown.Item>
     <NavDropdown.Item >
@@ -67,7 +67,7 @@ const NavBar = () => {
     ref={refw4}
     to="shotstory"
     >
-    <i className="navicon fas fa-play"></i>Shotlists and Storyboards 
+    <i className="navicon fas fa-play"></i>Shotlists / Storyboards 
     </NavLink>
     </NavDropdown.Item>
     <NavDropdown.Item >
@@ -77,7 +77,7 @@ const NavBar = () => {
     ref={refw2}
     to="charslocates"
     >
-    <i className="navicon fas fa-play"></i>Characters and Locations 
+    <i className="navicon fas fa-play"></i>Characters / Locations 
     </NavLink>
     </NavDropdown.Item>
     </NavDropdown>
@@ -93,16 +93,6 @@ const NavBar = () => {
     // activeClassName={styles.Active}
     className={`py-0 ${styles.NavLink} `}
     >
-    <NavDropdown.Item >
-    <NavLink
-    className={` ${styles.DropLink} `}
-    activeClassName={styles.Active}
-    ref={reff1}
-    to="/castcrew"
-    >
-    <i className="navicon fas fa-play"></i>Cast and Crew
-    </NavLink>
-    </NavDropdown.Item>
     <NavDropdown.Item >
     <NavLink
     className={`mt-2 ${styles.NavLink} `}
@@ -121,6 +111,16 @@ const NavBar = () => {
     to="callsheets"
     >
     <i className="navicon fas fa-play"></i>Callsheets
+    </NavLink>
+    </NavDropdown.Item>
+    <NavDropdown.Item >
+    <NavLink
+    className={` ${styles.DropLink} `}
+    activeClassName={styles.Active}
+    ref={reff1}
+    to="/castcrew"
+    >
+    <i className="navicon fas fa-play"></i>Cast and Crew
     </NavLink>
     </NavDropdown.Item>
     <NavDropdown.Item >

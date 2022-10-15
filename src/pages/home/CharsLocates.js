@@ -32,9 +32,9 @@ const CharsLocates = () => {
         </Button>
         </Col>
     </Row>
-    <div className="px-3 mt-3">
+    <div className="px-3 mt-3 mt-md-3">
     {/* char one */}
-    <Row className="mt-1 mt-md-5 d-flex align-items-center justify-content-center">
+    <Row className="pb-4 d-flex align-items-center justify-content-center">
     <Col xs={12} md={{span: 3, offset: 1 }} className="text-center px-1 px-md-3" >
     <p >
     Add the Character Details, Actor Details and Actor Callsheet Details
@@ -47,8 +47,10 @@ const CharsLocates = () => {
     </div>
     </Col>
     </Row>
+    </div>
+    <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
     {/* char two */}
-    <Row className="mt-5 d-flex align-items-center justify-content-center">
+    <Row className="px-3 pb-4 mt-4  d-flex align-items-center justify-content-center">
     <Col xs={12} md={8}>
     <div className="text-center px-1 px-md-3">
     <Image src={char2} alt="image" 
@@ -63,8 +65,9 @@ const CharsLocates = () => {
     </p>
     </Col>
     </Row>
+    <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
     {/* loc one  */}
-    <Row className="mt-5 d-flex align-items-center justify-content-center">
+    <Row className="px-3 pb-4 mt-4  d-flex align-items-center justify-content-center">
     <Col xs={12} md={{span: 3, offset: 1 }}
       className="text-center px-1 px-md-3" >
     <p >
@@ -78,8 +81,9 @@ const CharsLocates = () => {
     </div>
     </Col>
     </Row>
+    <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
     {/* loc two */}
-    <Row className="mt-5 d-flex align-items-center justify-content-center">
+    <Row className="px-3 pb-4 mt-4  d-flex align-items-center justify-content-center">
     <Col xs={12} md={8}>
     <div className="text-center px-1 px-md-3">
     <Image src={loca2} alt="image" 
@@ -93,7 +97,6 @@ const CharsLocates = () => {
     </p>
     </Col>
     </Row>
-    </div>
     </div>
   )
 }

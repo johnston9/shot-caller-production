@@ -34,9 +34,8 @@ const ShotStory = () => {
         </Button>
         </Col>
     </Row>
-    <div className="px-3 mt-3">
     {/* one */}
-    <Row className="mt-1 mt-md-5 d-flex align-items-center justify-content-center">
+    <Row className="mt-1 mt-md-3 px-3 pb-4 d-flex align-items-center justify-content-center">
     <Col xs={12} md={{span: 3, offset: 1 }} className="text-center" >
     <p >
     Create the Storyboard in your prefered method then upload it 
@@ -50,8 +49,9 @@ const ShotStory = () => {
     </div>
     </Col>
     </Row>
+    <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
     {/* two */}
-    <Row className="mt-1 mt-md-5 d-flex align-items-center justify-content-center">
+    <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
     <Col xs={12} md={8}>
     <div className="text-center">
     <Image src={shot2} alt="image" 
@@ -65,8 +65,9 @@ const ShotStory = () => {
     </p>
     </Col>
     </Row>
+    <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
     {/* three  */}
-    <Row className="mt-1 mt-md-5 d-flex align-items-center justify-content-center">
+    <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
     <Col xs={12} md={{span: 3, offset: 1 }}
       className="text-center" >
     <p >
@@ -81,8 +82,9 @@ const ShotStory = () => {
     </div>
     </Col>
     </Row>
+    <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
     {/* four */}
-    <Row className="mt-1 mt-md-5 d-flex align-items-center justify-content-center">
+    <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
     <Col xs={12} md={8}>
     <div className="text-center">
     <Image src={shot7} alt="image" 
@@ -97,8 +99,9 @@ const ShotStory = () => {
     </p>
     </Col>
     </Row>
+    <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
     {/* five  */}
-    <Row className="mt-1 mt-md-5 d-flex align-items-center justify-content-center">
+    <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
     <Col xs={12} md={{span: 3, offset: 1 }}
       className="text-center" >
     <p >
@@ -112,8 +115,9 @@ const ShotStory = () => {
     </div>
     </Col>
     </Row>
+    <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
     {/* six */}
-    <Row className="mt-1 mt-md-5 d-flex align-items-center justify-content-center">
+    <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
     <Col xs={12} md={8}>
     <div className="text-center">
     <Image src={sketchshot} alt="image" 
@@ -127,7 +131,6 @@ const ShotStory = () => {
     </p>
     </Col>
     </Row>
-    </div>
     </div>
   )
 }

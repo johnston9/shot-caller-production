@@ -60,29 +60,29 @@ const Home = () => {
                 <Row >
                 <Col mx={6} >
                 <p className={`${styles.Depts}`}
-                  onClick={() => history.push('/scenes')}>
-                Scene Breakdowns
+                  onClick={() => history.push('/workspaces')}>
+                Scene Workspaces
                 </p>
                 </Col>
                 <Col mx={6} >
-                <span className={`${styles.Depts}`}
-                  onClick={() => history.push('/scenes')} >
-                Mood Shots
-                </span>
+                <p className={`${styles.Depts}`}
+                  onClick={() => history.push('/breakdown')}>
+                Breakdowns / Moodshots
+                </p>
                 </Col>
                 </Row>
                 {/* on2 */}
                 <Row>
                 <Col xs={6} >
-                <p className={`${styles.Depts}`}
-                  onClick={() => history.push('/scenes')}>
-                Scene Workspaces
-                </p>
+                <span className={`${styles.Depts}`}
+                  onClick={() => history.push('/shotstory')} >
+                Shotlists / Storyboards
+                </span>
                 </Col>
                 <Col mx={6}>
                 <span className={`${styles.Depts}`}
-                  onClick={() => history.push('/scenes')} >
-                Shotlists
+                  onClick={() => history.push('/charslocates')} >
+                Characters / Locations 
                 </span>
                 </Col>
                 </Row>
@@ -97,41 +97,41 @@ const Home = () => {
                 </p>
                 {/* on1 */}
                 <Row>
-                <Col mx={6}>
+                <Col xs={6}>
                 <p className={`${styles.Depts}`}
-                  onClick={() => history.push('/scenes')}>
-                Crew Admin
+                  onClick={() => history.push('/schedule')}>
+                Schedule / Stripboard
                 </p>
                 </Col>
                 <Col mx={6}>
                 <p className={`${styles.Depts}`}
-                  onClick={() => history.push('/scenes')} >
-                Cast Admin
+                  onClick={() => history.push('/callsheets')} >
+                Callsheets
                 </p>
                 </Col>
                 </Row>
                 {/* on2 */}
                 <Row>
-                <Col xs={6}>
+                <Col mx={6}>
                 <p className={`${styles.Depts}`}
-                  onClick={() => history.push('/scenes')}>
-                Scheduling
+                  onClick={() => history.push('/castcrew')}>
+                Crew / Crew
                 </p>
                 </Col>
                 <Col mx={6}>
                 <p className={`${styles.Depts}`}
-                  onClick={() => history.push('/scenes')} >
-                Callsheets
+                  onClick={() => history.push('/mobile')} >
+                Mobile View
                 </p>
                 </Col>
                 </Row>
                 </Col>
                 </Row>
-                  <Container className="mt-3" >
+                <Container className="mt-3" >
                 <Link className={styles.Link} to="/signup">
                   Sign up <span>Here</span>
                 </Link>
-              </Container>
+                </Container>
                </Col>
              </Row>
           </Col>
@@ -248,7 +248,7 @@ const Home = () => {
           className={`${styles.FeatureLink} d-flex align-items-center 
            justify-content-center`}>
         <Col xs={9} className="text-center" >
-        <h4>Breakdowns, Moodshots Script</h4>
+        <h4>Breakdowns, Moodshots, Script</h4>
         <p >
         Create Breakdowns for all the Scene Info. Add Scene Scripts.
         Use Moodshots to and guide design.
@@ -288,8 +288,8 @@ const Home = () => {
         <Col xs={9} className="text-center" >
         <h4>Shotlists and Storyboards</h4>
         <p >
-        Create Scene Shotlists in the Scene Page and add the 
-        Storyboards
+        Create the Shotlists in the Scene Page and add the 
+        Storyboard
         </p>
         </Col>
         </div>
