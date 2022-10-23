@@ -6,7 +6,10 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import pic from "../../assets/fight.png";
 // eslint-disable-next-line 
-import city2 from "../../assets/city2.png";
+import shed1 from "../../assets/shed1.png";
+import schinfo from "../../assets/schinfo.png";
+import schcast from "../../assets/schcast.png";
+import schadd from "../../assets/schadd.png";
 import btnStyles from "../../styles/Button.module.css";
 import Button from "react-bootstrap/Button";
 import { Image } from "react-bootstrap";
@@ -34,13 +37,12 @@ const Schedules = () => {
       <Row className="mt-1 mt-md-3 pb-4 px-3 d-flex align-items-center justify-content-center">
       <Col xs={12} md={{span: 3, offset: 1 }} className="text-center px-1 px-md-3" >
       <p >
-      Autogenerate Stripboards in minutes in the Schedule Create Page 
-      by choosing Scenes by Act or Location then adding the Shooting Info
+      Create easy to read Stripboards in minutes and re-order them in a flash
       </p>
       </Col>
       <Col xs={12} md={8}>
       <div className="text-center px-1 px-md-3">
-      <Image src={pic} alt="image" 
+      <Image src={shed1} alt="image" 
         className={` ${styles.FeatureImage}`} />
       </div>
       </Col>
@@ -50,17 +52,15 @@ const Schedules = () => {
       <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
       <Col xs={12} md={8}>
       <div className="text-center px-1 px-md-3">
-      <Image src={pic} alt="image" 
+      <Image src={schadd} alt="image" 
         className={` ${styles.FeatureImage}`} />
       </div>
       </Col>
       <Col xs={12} md={{span: 3, offset: 0 }}
       className="text-center px-1 px-md-3" >
       <p >
-      Work on the Scene in the Universal Workspace and or the
-      Department Workspaces.
-      Use the Universal Workspace Guide to indicate where
-      the work is.
+      Select Scenes quickly from the Act or Location menus then add the Shooting Info
+      to autogenerate Stripboard Scenes with the Scene Breakdown Info 
       </p>
       </Col>
       </Row>
@@ -70,13 +70,12 @@ const Schedules = () => {
       <Col xs={12} md={{span: 3, offset: 1 }}
         className="text-center px-1 px-md-3" >
       <p >
-      Use Requirements and Workspace Posts to 
-      collaborate on the Scene
+      Edit the Scene Shooting Info quickly and open the Scene Info box for extra Info or 
       </p>
       </Col>
       <Col xs={12} md={8}>
       <div className="text-center px-1 px-md-3">
-      <Image src={pic} alt="image" 
+      <Image src={schinfo} alt="image" 
         className={` ${styles.FeatureImage}`} />
       </div>
       </Col>
@@ -86,14 +85,14 @@ const Schedules = () => {
       <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
       <Col xs={12} md={8}>
       <div className="text-center px-1 px-md-3">
-      <Image src={pic} alt="image" 
+      <Image src={schcast} alt="image" 
         className={` ${styles.FeatureImage}`} />
       </div>
       </Col>
       <Col xs={12} md={{span: 3, offset: 0 }}
         className="text-center px-1 px-md-3" >
       <p >
-      Upload Ideas and Images in Posts each with a Comments Section
+      Open the Cast box for Cast, BG and Costumes Info
       </p>
       </Col>
       </Row>
