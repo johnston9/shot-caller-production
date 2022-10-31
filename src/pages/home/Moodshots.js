@@ -21,7 +21,7 @@ const Breakdown = () => {
     <div className={`mt-0 ${styles.BlueBody}`}>
     <div className={`${styles.Overview}`}>
     <h2 className={`pb-1 ${styles.OverviewText} ${appStyles.playfair}
-     text-center`} >Breakdowns, Moodshots and Script</h2>
+     text-center`} >Moodshots and Script</h2>
     </div>
     <Row className="mt-1 ml-2" >
         <Col xs={3}>
@@ -33,27 +33,9 @@ const Breakdown = () => {
         </Button>
         </Col>
     </Row>
-    <div className="px-3 mt-1 mt-md-3">
-    {/* one */}
-    <Row className="pb-4 d-flex align-items-center justify-content-center">
-    <Col xs={12} md={{span: 3, offset: 1 }} className="text-center px-1 px-md-3" >
-    <p >
-    Access all Scene Info including Character, Costumes, BG,
-    and Department info with a click. This will be 
-    automatically loaded for other features.
-    </p>
-    </Col>
-    <Col xs={12} md={8}>
-    <div className="text-center px-1 px-md-3">
-    <Image src={break1} alt="image" 
-      className={` ${styles.FeatureImage}`} />
-    </div>
-    </Col>
-    </Row>
-    </div>
     <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
     {/* two */}
-    <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
+    <Row className="px-3 pb-4 mt-1 mt-md-3 d-flex align-items-center justify-content-center">
     <Col xs={12} md={8}>
     <div className="text-center px-1 px-md-3">
     <Image src={mood1} alt="image" 

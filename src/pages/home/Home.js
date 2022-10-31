@@ -61,13 +61,13 @@ const Home = () => {
                 <Col mx={6} >
                 <p className={`${styles.Depts}`}
                   onClick={() => history.push('/workspaces')}>
-                Scene Workspaces
+                Breakdowns / Workspaces
                 </p>
                 </Col>
                 <Col mx={6} >
                 <p className={`${styles.Depts}`}
-                  onClick={() => history.push('/breakdown')}>
-                Breakdowns / Moodshots
+                  onClick={() => history.push('/moodshots')}>
+                Moodshots / Script
                 </p>
                 </Col>
                 </Row>
@@ -115,7 +115,7 @@ const Home = () => {
                 <Col mx={6}>
                 <p className={`${styles.Depts}`}
                   onClick={() => history.push('/castcrew')}>
-                Crew / Crew
+                Cast / Crew
                 </p>
                 </Col>
                 <Col mx={6}>
@@ -232,26 +232,28 @@ const Home = () => {
         </div>
         </Col>
         <Col xs={9} className="text-center" >
-        <h4>Scene Workspaces</h4>
+        <h4>Breakdowns and Workspaces</h4>
         <p >
-        Utilize the Primary Creative feature the Scene Workspaces
-        to Design, Collaborate and Build in each Scene Department.
+        Create a Scene Page for each Scene
+        that contains the all the work features 
+        including Breakdowns and Department Workspaces.
         </p>
         </Col>
         </div>
         </Row>
         </Col>
-        {/* Breakdowns, Moodshots and Script*/}
+        {/* Moodshots and Script*/}
         <Col xs={12} md={6} >
         <Row className="d-flex align-items-center justify-content-center">
         <div onClick={() => history.push('/breakdown')}
           className={`${styles.FeatureLink} d-flex align-items-center 
            justify-content-center`}>
         <Col xs={9} className="text-center" >
-        <h4>Breakdowns, Moodshots, Script</h4>
+        <h4>Moodshots and Script</h4>
         <p >
-        Create Breakdowns for all the Scene Info. Add Scene Scripts.
-        Use Moodshots to and guide design.
+        Use Moodshots to guide and design, interlinking Scenes,
+        Characters and Locations. Add the Scene Script
+        to each Scene Page.
         </p>
         </Col>
         <Col xs={3} >
@@ -289,7 +291,7 @@ const Home = () => {
         <h4>Shotlists and Storyboards</h4>
         <p >
         Create the Shotlists in the Scene Page and add the 
-        Storyboard
+        Storyboard.
         </p>
         </Col>
         </div>
@@ -304,7 +306,7 @@ const Home = () => {
         <Col xs={9} className="text-center" >
         <h4>Characters and Locations</h4>
         <p >
-        Create Characters and Locations pages with Images
+        Create Characters and Locations Pages with Images
         and all relevant Info.
         </p>
         </Col>

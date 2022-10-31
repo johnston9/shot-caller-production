@@ -47,7 +47,7 @@ const NavBar = () => {
     ref={refw3}
     to="workspaces"
     >
-    <i className="navicon fas fa-play"></i>Scene Workspaces
+    <i className="navicon fas fa-play"></i>Breakdowns / Workspaces
     </NavLink>
     </NavDropdown.Item>
     <NavDropdown.Item >
@@ -55,9 +55,9 @@ const NavBar = () => {
     className={` ${styles.NavLink} `}
     activeClassName={styles.Active}
     ref={refw1}
-    to="/breakdown"
+    to="/moodshots"
     >
-    <i className="navicon fas fa-play"></i>Breakdowns / Moodshots
+    <i className="navicon fas fa-play"></i>Moodshots / Script
     </NavLink>
     </NavDropdown.Item>
     <NavDropdown.Item >

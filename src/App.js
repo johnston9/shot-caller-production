@@ -18,7 +18,7 @@ import ProfileEditForm from "./pages/profiles/ProfileEditForm";
 import PageNotFound from "./components/PageNotFound";
 import Landing from "./pages/home/Landing";
 import HomeTwo from "./pages/home/HomeTwo";
-import Breakdown from "./pages/home/Breakdown";
+import Mooddhots from "./pages/home/Moodshots";
 import CharsLocates from "./pages/home/CharsLocates";
 import Workspaces from "./pages/home/Workspaces";
 import ShotStory from "./pages/home/ShotStory";
@@ -43,7 +43,7 @@ function App() {
           <Route exact path="/signin" render={() => <SignInForm />} />
           <Route exact path="/signup" render={() => <SignUpForm /> } />
           {/* features */}
-          <Route exact path="/breakdown" render={() => <Breakdown /> } />
+          <Route exact path="/breakdown" render={() => <Mooddhots /> } />
           <Route exact path="/charslocates" render={() => <CharsLocates /> } />
           <Route exact path="/workspaces" render={() => <Workspaces /> } />
           <Route exact path="/shotstory" render={() => <ShotStory /> } />

@@ -4,6 +4,7 @@ import styles from "../../styles/Home.module.css";
 import appStyles from "../../App.module.css";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
+import break1 from "../../assets/break1.png";
 import work1 from "../../assets/work1.png";
 import work2 from "../../assets/work2.png";
 import work3 from "../../assets/work3.png";
@@ -21,7 +22,7 @@ const Workspaces = () => {
     <div className={`mt-0 ${styles.BlueBody}`}>
     <div className={`mt-0 ${styles.Overview}`}>
     <h2 className={`pb-1 ${styles.OverviewText} ${appStyles.playfair}
-     text-center`} >Scene Workspaces</h2>
+     text-center`} >Scene Page - Breakdowns and Workspaces</h2>
     </div>
     <Row className="mt-1 ml-2" >
         <Col xs={3}>
@@ -37,7 +38,8 @@ const Workspaces = () => {
     <Row className="mt-1 mt-md-3 pb-4 px-3 d-flex align-items-center justify-content-center">
     <Col xs={12} md={{span: 3, offset: 1 }} className="text-center px-1 px-md-3" >
     <p >
-    Create the Scenes quickly then easily select the one you wish to work on
+    Create the Scene Pages quickly then easily select the 
+    Scenes
     </p>
     </Col>
     <Col xs={12} md={8}>
@@ -52,33 +54,32 @@ const Workspaces = () => {
     <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
     <Col xs={12} md={8}>
     <div className="text-center px-1 px-md-3">
-    <Image src={work2} alt="image" 
+    <Image src={break1} alt="image" 
       className={` ${styles.FeatureImage}`} />
     </div>
     </Col>
     <Col xs={12} md={{span: 3, offset: 0 }}
     className="text-center px-1 px-md-3" >
     <p >
-    Work on the Scene in the Universal Workspace and or the
-    Department Workspaces.
-    Use the Universal Workspace Guide to indicate where
-    the work is.
+    Create Breakdowns that include Characters, 
+    Costumes, BG, and Department Info, which will be
+    automatically loaded in all other features including Stripboards
     </p>
     </Col>
     </Row>
     <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
-    {/* three  */}
+    {/* three */}
     <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
     <Col xs={12} md={{span: 3, offset: 1 }}
       className="text-center px-1 px-md-3" >
     <p >
-    Use Requirements and Workspace Posts to 
-    collaborate on the Scene
+    Collaborate, design and build in the Scene Universal Workspace and or the
+    Scene Department Workspaces using the Workspace Guide to instruct.
     </p>
     </Col>
     <Col xs={12} md={8}>
     <div className="text-center px-1 px-md-3">
-    <Image src={work3} alt="image" 
+    <Image src={work2} alt="image" 
       className={` ${styles.FeatureImage}`} />
     </div>
     </Col>
@@ -88,15 +89,32 @@ const Workspaces = () => {
     <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
     <Col xs={12} md={8}>
     <div className="text-center px-1 px-md-3">
-    <Image src={work4} alt="image" 
+    <Image src={work3} alt="image" 
       className={` ${styles.FeatureImage}`} />
     </div>
     </Col>
     <Col xs={12} md={{span: 3, offset: 0 }}
       className="text-center px-1 px-md-3" >
     <p >
+    Use Requirements and Workspace Posts to 
+    collaborate on the Scene
+    </p>
+    </Col>
+    </Row>
+    <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
+    {/* five */}
+    <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
+    <Col xs={12} md={{span: 3, offset: 1 }}
+      className="text-center px-1 px-md-3" >
+    <p >
     Upload Ideas and Images in Posts each with a Comments Section
     </p>
+    </Col>
+    <Col xs={12} md={8}>
+    <div className="text-center px-1 px-md-3">
+    <Image src={work4} alt="image" 
+      className={` ${styles.FeatureImage}`} />
+    </div>
     </Col>
     </Row>
     </div>
