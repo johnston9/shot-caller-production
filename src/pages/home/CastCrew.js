@@ -34,7 +34,9 @@ const CastCrew = () => {
     <Row className="mt-1 mt-md-3 pb-4 px-3 d-flex align-items-center justify-content-center">
       <Col xs={12} md={{span: 3, offset: 1 }} className="text-center px-1 px-md-3" >
       <p >
-      Create the Scenes quickly then easily select the one you wish to work on
+       Add the Crew easily with the Departments dropdown. Each Department 
+       page contains that Department's main positions and five additional
+       positions. 
       </p>
       </Col>
       <Col xs={12} md={8}>

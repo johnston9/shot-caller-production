@@ -34,11 +34,11 @@ const ShotStory = () => {
         </Button>
         </Col>
     </Row>
-    {/* one */}
+    {/* story */}
     <Row className="mt-1 mt-md-3 px-3 pb-4 d-flex align-items-center justify-content-center">
     <Col xs={12} md={{span: 3, offset: 1 }} className="text-center" >
     <p >
-    Create the Storyboard in your prefered method then upload it 
+    Create the Scene Storyboard in your prefered method then upload it 
     to the Scene Page
     </p>
     </Col>
@@ -50,40 +50,7 @@ const ShotStory = () => {
     </Col>
     </Row>
     <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
-    {/* two */}
-    <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
-    <Col xs={12} md={8}>
-    <div className="text-center">
-    <Image src={shot2} alt="image" 
-      className={` ${styles.FeatureImage}`} />
-    </div>
-    </Col>
-    <Col xs={12} md={{span: 3, offset: 0 }}
-    className="text-center" >
-    <p >
-    Create the Shotlist, individually adding each Shot in the Shotlist Create form
-    </p>
-    </Col>
-    </Row>
-    <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
-    {/* three  */}
-    <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
-    <Col xs={12} md={{span: 3, offset: 1 }}
-      className="text-center" >
-    <p >
-    View the Storyboard and the Shotlist Create Form 
-    side by side
-    </p>
-    </Col>
-    <Col xs={12} md={8}>
-    <div className="text-center">
-    <Image src={shot1} alt="image" 
-      className={` ${styles.FeatureImage}`} />
-    </div>
-    </Col>
-    </Row>
-    <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
-    {/* four */}
+    {/* shot 1*/}
     <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
     <Col xs={12} md={8}>
     <div className="text-center">
@@ -94,13 +61,13 @@ const ShotStory = () => {
     <Col xs={12} md={{span: 3, offset: 0 }}
       className="text-center" >
     <p >
-    View the Shotlist on the Scene Page. Each Shot
+    Create easy to read Shotlists on each Scene Page. Each Shot
     can be quickly edited without a page refresh.
     </p>
     </Col>
     </Row>
     <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
-    {/* five  */}
+    {/* shot 2  */}
     <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
     <Col xs={12} md={{span: 3, offset: 1 }}
       className="text-center" >
@@ -116,7 +83,7 @@ const ShotStory = () => {
     </Col>
     </Row>
     <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
-    {/* six */}
+    {/* shot 3 */}
     <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
     <Col xs={12} md={8}>
     <div className="text-center">
@@ -127,10 +94,45 @@ const ShotStory = () => {
     <Col xs={12} md={{span: 3, offset: 0 }}
       className="text-center" >
     <p >
-    Expand each shot to view Shot Sketch
+    Expand each shot to view the Shot Sketch
     </p>
     </Col>
     </Row>
+    <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
+    {/* shot Create*/}
+    <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
+    <Col xs={12} md={8}>
+    <div className="text-center">
+    <Image src={shot2} alt="image" 
+      className={` ${styles.FeatureImage}`} />
+    </div>
+    </Col>
+    <Col xs={12} md={{span: 3, offset: 0 }}
+    className="text-center" >
+    <p >
+    Create each shot, including a camera and lighting sketch,
+     for the Scene Shotlist in the Shotlist Create form
+    </p>
+    </Col>
+    </Row>
+    <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
+    {/* three  */}
+    <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
+    <Col xs={12} md={{span: 3, offset: 1 }}
+      className="text-center" >
+    <p >
+    View the Storyboard and the Shotlist Create Form 
+    side by side to facilitate the process
+    </p>
+    </Col>
+    <Col xs={12} md={8}>
+    <div className="text-center">
+    <Image src={shot1} alt="image" 
+      className={` ${styles.FeatureImage}`} />
+    </div>
+    </Col>
+    </Row>
+    <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
     </div>
   )
 }
