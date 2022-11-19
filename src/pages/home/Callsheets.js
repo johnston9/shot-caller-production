@@ -6,7 +6,14 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import pic from "../../assets/fight.png";
 // eslint-disable-next-line 
-import call1 from "../../assets/call1.png";
+import calltop from "../../assets/calltop.png";
+import caltopmo from "../../assets/caltopmo.png";
+import callocdesk from "../../assets/callocdesk.png";
+import callocmo from "../../assets/callocmo.png";
+import calshed2 from "../../assets/calshed2.png";
+import calshedmo2 from "../../assets/calshedmo2.png";
+import adshed from "../../assets/adshed.png";
+import caltal from "../../assets/caltal.png";
 import call2 from "../../assets/call2.png";
 import call3 from "../../assets/call3.png";
 import btnStyles from "../../styles/Button.module.css";
@@ -32,11 +39,148 @@ const Callsheets = () => {
           </Button>
           </Col>
       </Row>
-      {/* cast 1 */}
+      {/* 1  */}
+      <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
+      <Col xs={12} md={{span: 3, offset: 1 }}
+        className="text-center px-1 px-md-3" >
+      <p >
+      Create Callsheets for each Shoot Day. The top section containing 
+      Company info, Times, Automatic live weather info
+      and a Personalised Calltime for each individual user.
+      </p>
+      </Col>
+      <Col xs={12} md={8}>
+      <div className="text-center px-1 px-md-3">
+      <Image src={calltop} alt="image" 
+        className={` ${styles.FeatureImage}`} />
+      </div>
+      </Col>
+      </Row>
+      <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
+      {/* 2 */}
+      <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
+      <Col xs={12} md={8}>
+      <div className="text-center px-1 px-md-3">
+      <Image src={caltopmo} alt="image" 
+        className={` ${styles.FeatureImage}`} />
+      </div>
+      </Col>
+      <Col xs={12} md={{span: 3, offset: 0 }}
+        className="text-center px-1 px-md-3" >
+      <p >
+      View the Callsheet on mobile with the top section displaying 
+      all desktop info including the Personalised Calltime and with 
+      links below to open all the other sections below it.
+      </p>
+      </Col>
+      </Row>
+      <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
+      {/* Locations  */}
+      <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
+      <Col xs={12} md={{span: 3, offset: 1 }}
+        className="text-center px-1 px-md-3" >
+      <p >
+      The Locations section show all Locations 
+      each with a Google Maps box that opens underneath it.
+      </p>
+      </Col>
+      <Col xs={12} md={8}>
+      <div className="text-center px-1 px-md-3">
+      <Image src={callocdesk} alt="image" 
+        className={` ${styles.FeatureImage}`} />
+      </div>
+      </Col>
+      </Row>
+      <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
+      {/* Locations mo */}
+      <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
+      <Col xs={12} md={8}>
+      <div className="text-center px-1 px-md-3">
+      <Image src={callocmo} alt="image" 
+        className={` ${styles.FeatureImage}`} />
+      </div>
+      </Col>
+      <Col xs={12} md={{span: 3, offset: 0 }}
+        className="text-center px-1 px-md-3" >
+      <p >
+      View the Locations section on Mobile, as with the desktop 
+      each Location with a Google Maps box that opens underneath it.
+      </p>
+      </Col>
+      </Row>
+      <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
+      {/* Schedule  */}
+      <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
+      <Col xs={12} md={{span: 3, offset: 1 }}
+        className="text-center px-1 px-md-3" >
+      <p >
+      View the Schedule section beneath which is added 
+      automatically from the Schedule page
+      </p>
+      </Col>
+      <Col xs={12} md={8}>
+      <div className="text-center px-1 px-md-3">
+      <Image src={calshed2} alt="image" 
+        className={` ${styles.FeatureImage}`} />
+      </div>
+      </Col>
+      </Row>
+      <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
+      {/* Schedule mo */}
+      <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
+      <Col xs={12} md={8}>
+      <div className="text-center px-1 px-md-3">
+      <Image src={calshedmo2} alt="image" 
+        className={` ${styles.FeatureImage}`} />
+      </div>
+      </Col>
+      <Col xs={12} md={{span: 3, offset: 0 }}
+        className="text-center px-1 px-md-3" >
+      <p >
+      View the Schedule section on Mobile with extra info 
+      opening in a seperate bos beneath 
+      </p>
+      </Col>
+      </Row>
+      <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
+      {/* Advanced Schedule  */}
+      <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
+      <Col xs={12} md={{span: 3, offset: 1 }}
+        className="text-center px-1 px-md-3" >
+      <p >
+      View the Advanced Schedule section which is added 
+      automatically from the Schedule page. Underneath view 
+      the Walkies Channels
+      </p>
+      </Col>
+      <Col xs={12} md={8}>
+      <div className="text-center px-1 px-md-3">
+      <Image src={adshed} alt="image" 
+        className={` ${styles.FeatureImage}`} />
+      </div>
+      </Col>
+      </Row>
+      <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
+      {/* Cast */}
+      <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
+      <Col xs={12} md={8}>
+      <div className="text-center px-1 px-md-3">
+      <Image src={caltal} alt="image" 
+        className={` ${styles.FeatureImage}`} />
+      </div>
+      </Col>
+      <Col xs={12} md={{span: 3, offset: 0 }}
+        className="text-center px-1 px-md-3" >
+      <p >
+      View the Cast and BG / Standins</p>
+      </Col>
+      </Row>
+      {/* cast add */}
       <Row className="mt-1 mt-md-3 pb-4 px-3 d-flex align-items-center justify-content-center">
       <Col xs={12} md={{span: 3, offset: 1 }} className="text-center px-1 px-md-1" >
       <p >
-      Use the Add Cast and Add BG forms to quickly and easily add Cast and BG calls to the Callsheet.
+      When creating the Callsheet the Add Cast and Add BG forms allow 
+      the Cast and BG calls to be quickly added.
       The Select Role feature allows Cast members to be quickly selected
       from a character dropdown. Once selected their details including their Makeup
       and Commute times will display on top and their address will be automatically
@@ -51,7 +195,7 @@ const Callsheets = () => {
       </Col>
       </Row>
       <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
-      {/* two */}
+      {/* side by side */}
       <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
       <Col xs={12} md={8}>
       <div className="text-center px-1 px-md-3">
@@ -69,38 +213,6 @@ const Callsheets = () => {
       </Col>
       </Row>
       <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
-      {/* three  */}
-      <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
-      <Col xs={12} md={{span: 3, offset: 1 }}
-        className="text-center px-1 px-md-3" >
-      <p >
-      Use Requirements and Workspace Posts to 
-      collaborate on the Scene
-      </p>
-      </Col>
-      <Col xs={12} md={8}>
-      <div className="text-center px-1 px-md-3">
-      <Image src={pic} alt="image" 
-        className={` ${styles.FeatureImage}`} />
-      </div>
-      </Col>
-      </Row>
-      <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
-      {/* four */}
-      <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
-      <Col xs={12} md={8}>
-      <div className="text-center px-1 px-md-3">
-      <Image src={pic} alt="image" 
-        className={` ${styles.FeatureImage}`} />
-      </div>
-      </Col>
-      <Col xs={12} md={{span: 3, offset: 0 }}
-        className="text-center px-1 px-md-3" >
-      <p >
-      Upload Ideas and Images in Posts each with a Comments Section
-      </p>
-      </Col>
-      </Row>
       </div>
     )
   }

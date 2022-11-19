@@ -6,7 +6,7 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import pic from "../../assets/fight.png";
 // eslint-disable-next-line 
-import city2 from "../../assets/city2.png";
+import crewaddview from "../../assets/crewaddview.png";
 import btnStyles from "../../styles/Button.module.css";
 import Button from "react-bootstrap/Button";
 import { Image } from "react-bootstrap";
@@ -41,7 +41,7 @@ const CastCrew = () => {
       </Col>
       <Col xs={12} md={8}>
       <div className="text-center px-1 px-md-3">
-      <Image src={pic} alt="image" 
+      <Image src={crewaddview} alt="image" 
         className={` ${styles.FeatureImage}`} />
       </div>
       </Col>
