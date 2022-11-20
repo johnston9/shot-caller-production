@@ -7,6 +7,7 @@ import Row from "react-bootstrap/Row";
 import pic from "../../assets/fight.png";
 // eslint-disable-next-line 
 import crewaddview from "../../assets/crewaddview.png";
+import calact from "../../assets/calact.png";
 import btnStyles from "../../styles/Button.module.css";
 import Button from "react-bootstrap/Button";
 import { Image } from "react-bootstrap";
@@ -36,7 +37,8 @@ const CastCrew = () => {
       <p >
        Add the Crew easily with the Departments dropdown. Each Department 
        page contains that Department's main positions and five additional
-       positions. 
+       positions. All Crew added it automatically display on the Callsheet 
+       Create page, all you have to do is add the Calltime.
       </p>
       </Col>
       <Col xs={12} md={8}>
@@ -51,17 +53,14 @@ const CastCrew = () => {
     <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
     <Col xs={12} md={8}>
     <div className="text-center px-1 px-md-3">
-    <Image src={pic} alt="image" 
+    <Image src={calact} alt="image" 
       className={` ${styles.FeatureImage}`} />
     </div>
     </Col>
     <Col xs={12} md={{span: 3, offset: 0 }}
     className="text-center px-1 px-md-3" >
     <p >
-    Work on the Scene in the Universal Workspace and or the
-    Department Workspaces.
-    Use the Universal Workspace Guide to indicate where
-    the work is.
+    Add the Cast to their Character page
     </p>
     </Col>
     </Row>

@@ -214,7 +214,7 @@ const Home = () => {
         text-center`} >The Creative Features</h2>
         </div>
         <div className="px-5">
-        {/* 1 Workspaces - Breakdowns*/}
+        {/* 1 Workspaces - Moodshots*/}
         <Row className="mb-3 mt-5">
         {/* Workspaces */}
         <Col xs={12} md={6} >
@@ -245,7 +245,7 @@ const Home = () => {
         {/* Moodshots and Script*/}
         <Col xs={12} md={6} >
         <Row className="d-flex align-items-center justify-content-center">
-        <div onClick={() => history.push('/breakdown')}
+        <div onClick={() => history.push('/moodshots')}
           className={`${styles.FeatureLink} d-flex align-items-center 
            justify-content-center`}>
         <Col xs={9} className="text-center" >

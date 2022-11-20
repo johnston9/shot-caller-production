@@ -14,6 +14,8 @@ import calshed2 from "../../assets/calshed2.png";
 import calshedmo2 from "../../assets/calshedmo2.png";
 import adshed from "../../assets/adshed.png";
 import caltal from "../../assets/caltal.png";
+import calcrew from "../../assets/calcrew.png";
+import calnotes from "../../assets/calnotes.png";
 import call2 from "../../assets/call2.png";
 import call3 from "../../assets/call3.png";
 import btnStyles from "../../styles/Button.module.css";
@@ -173,6 +175,39 @@ const Callsheets = () => {
         className="text-center px-1 px-md-3" >
       <p >
       View the Cast and BG / Standins</p>
+      </Col>
+      </Row>
+      <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
+      {/* crew  */}
+      <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
+      <Col xs={12} md={{span: 3, offset: 1 }}
+        className="text-center px-1 px-md-3" >
+      <p >
+      View the Crew Calls by Department. Easily add Calltime in the Create Callsheet form 
+      as Crew added to the Crew Info page will at automatically display 
+      with an imput box for their Calltime.
+      </p>
+      </Col>
+      <Col xs={12} md={8}>
+      <div className="text-center px-1 px-md-3">
+      <Image src={calcrew} alt="image" 
+        className={` ${styles.FeatureImage}`} />
+      </div>
+      </Col>
+      </Row>
+      <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
+      {/* notes */}
+      <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
+      <Col xs={12} md={8}>
+      <div className="text-center px-1 px-md-3">
+      <Image src={calnotes} alt="image" 
+        className={` ${styles.FeatureImage}`} />
+      </div>
+      </Col>
+      <Col xs={12} md={{span: 3, offset: 0 }}
+        className="text-center px-1 px-md-3" >
+      <p >
+      View Department, Transport and Important notes</p>
       </Col>
       </Row>
       {/* cast add */}
