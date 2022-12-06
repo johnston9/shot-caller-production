@@ -17,6 +17,9 @@ import { ProfileEditDropdown } from "../../components/UniDropDown";
 function AccountPage() {
   const [hasLoaded, setHasLoaded] = useState(false);
   const [account, setAccount] = useState({ results: [] });
+  const [name, setName] = useState({ results: [] });
+  const acc = account?.results[0].owner;
+  const created_at = account?.results[0].created_at;
   const currentUser = useCurrentUser();
   const { id } = useParams();
 
@@ -32,13 +35,15 @@ function AccountPage() {
         const [{ data: profilePage }, { data: accountInfo }] =
           await Promise.all([
             axiosReq.get(`/profiles/${id}/`),
-            axiosReq.get(`/accounts/${id}`),
+            axiosReq.get(`/accounts/?owner__profile=${id}`),
           ]);
         setProfileData((prevState) => ({
           ...prevState,
           profilePage: { results: [profilePage] },
         }));
+        console.log(accountInfo);
         setAccount(accountInfo);
+        setName(accountInfo.results[0].name)
         setHasLoaded(true);
       } catch (err) {
         console.log(err);
@@ -63,19 +68,15 @@ function AccountPage() {
           <h4 className="m-0">{profile?.name}</h4>
           <h5>{profile?.owner}</h5>
           <Row className="justify-content-center no-gutters">
-            <Col xs={3} className="my-2">
-              <div>{account?.created_at ? (
-                <p>Account Created: {account?.created_at} </p>
+            <Col xs={6} className="my-2">
+              <div>{created_at ? (
+                <p>Account Created: {created_at} </p>
               ) : (
                 "0"
               ) }</div>
-              <div>posts</div>
             </Col>
-            <Col xs={3} className="my-2">
-              <div>{account?.created_at}</div>
-            </Col>
-            <Col xs={3} className="my-2">
-              <div>account?.created_at</div>
+            <Col xs={6} className="my-2">
+              <div><p>Account Owner: {acc} </p></div>
             </Col>
           </Row>
         </Col>
