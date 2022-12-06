@@ -12,15 +12,11 @@ import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { useProfileData, useSetProfileData } from "../../contexts/ProfileDataContext";
 import { axiosReq } from "../../api/axiosDefaults";
 import { Button, Image } from "react-bootstrap";
-import NoResults from "../../assets/no-results.png";
-import InfiniteScroll from "react-infinite-scroll-component";
-import ChatTop from "../chat/ChatTop";
-import { fetchMoreData } from "../../utils/utils";
 import { ProfileEditDropdown } from "../../components/UniDropDown";
 
-function ProfilePage() {
+function AccountPage() {
   const [hasLoaded, setHasLoaded] = useState(false);
-  const [profileChat, setProfileChat] = useState({ results: [] });
+  const [account, setAccount] = useState({ results: [] });
   const currentUser = useCurrentUser();
   const { id } = useParams();
 
@@ -33,18 +29,16 @@ function ProfilePage() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const [{ data: profilePage }, { data: profilePosts }] =
+        const [{ data: profilePage }, { data: accountInfo }] =
           await Promise.all([
             axiosReq.get(`/profiles/${id}/`),
-            axiosReq.get(`/chat/?owner__profile=${id}`),
+            axiosReq.get(`/accounts/${id}`),
           ]);
-
-          console.log(profilePosts)
         setProfileData((prevState) => ({
           ...prevState,
           profilePage: { results: [profilePage] },
         }));
-        setProfileChat(profilePosts);
+        setAccount(accountInfo);
         setHasLoaded(true);
       } catch (err) {
         console.log(err);
@@ -70,80 +64,32 @@ function ProfilePage() {
           <h5>{profile?.owner}</h5>
           <Row className="justify-content-center no-gutters">
             <Col xs={3} className="my-2">
-              <div>{profile?.posts_count ? (
-                <p>{profile?.posts_count} </p>
+              <div>{account?.created_at ? (
+                <p>Account Created: {account?.created_at} </p>
               ) : (
                 "0"
               ) }</div>
               <div>posts</div>
             </Col>
             <Col xs={3} className="my-2">
-              <div>{profile?.followers_count}</div>
-              <div>followers</div>
+              <div>{account?.created_at}</div>
             </Col>
             <Col xs={3} className="my-2">
-              <div>{profile?.following_count}</div>
-              <div>following</div>
+              <div>account?.created_at</div>
             </Col>
           </Row>
         </Col>
-        <Col lg={3} className="text-lg-right">
-          {currentUser &&
-            !is_owner &&
-            (profile?.following_id ? (
-              <Button
-                className={`${btnStyles.Button} ${btnStyles.BlackOutline}`}
-                onClick={() => handleUnfollow(profile)}
-              >
-                unfollow
-              </Button>
-            ) : (
-              <Button
-                className={`${btnStyles.Button} ${btnStyles.Black}`}
-                onClick={() => handleFollow(profile)}
-              >
-                follow
-              </Button>
-            ))}
-        </Col>
-        {profile?.content && <Col className="p-3">{profile.content}</Col>}
       </Row>
     </>
   );
 
-  const mainProfilePosts = (
-    <>
-      <hr />
-      <p className="text-center">{profile?.owner}'s Chats</p>
-      <hr />
-      {profileChat.results.length ? (
-        <InfiniteScroll
-          children={profileChat.results.map((chat) => (
-            <ChatTop key={chat.id} {...chat} setChat={setProfileChat} />
-          ))}
-          dataLength={profileChat.results.length}
-          loader={<Asset spinner />}
-          hasMore={!!profileChat.next}
-          next={() => fetchMoreData(profileChat, setProfileChat)}
-        />
-      ) : (
-        <Asset
-          src={NoResults}
-          message={`No results found for ${profile?.owner}`}
-        />
-      )}
-    </>
-  );
-
   return (
-    <div className="mt-5">
     <Row>
       <Col className="py-2 p-0 p-lg-2" >
         <Container className={appStyles.Content}>
           {hasLoaded ? (
             <>
               {mainProfile}
-              {mainProfilePosts}
             </>
           ) : (
             <Asset spinner />
@@ -151,8 +97,7 @@ function ProfilePage() {
         </Container>
       </Col>
     </Row>
-    </div>
   );
 }
 
-export default ProfilePage;
+export default AccountPage

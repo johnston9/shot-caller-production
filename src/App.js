@@ -26,6 +26,7 @@ import CastCrew from "./pages/home/CastCrew";
 import Schedules from "./pages/home/Schedules";
 import Callsheets from "./pages/home/Callsheets";
 import Mobile from "./pages/home/Mobile";
+import AccountPage from "./pages/accounts/AccountPage";
 
 function App() {
   const currentUser = useCurrentUser()
@@ -83,6 +84,8 @@ function App() {
               />
             ) } />
           <Route exact path="/chat/:id" render={() => <ChatPage />} />
+          {/* accounts */}
+          <Route exact path="/accounts/:id" render={() => <AccountPage />} />
           {/* profiles */}
           <Route exact path="/profiles" render={() => <ProfilesPage /> } />
           <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
