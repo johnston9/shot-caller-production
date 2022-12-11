@@ -158,7 +158,9 @@ const NavBar = () => {
       <NavDropdown 
           title={
             <span style={{ color: '#555555'}} className={styles.Title}>
-              My Account <Avatar src={currentUser?.profile_image} text="" height={40} />
+              My Account 
+                  <Avatar src={currentUser?.profile_image} 
+                  text="" height={40} />
             </span>
           }
           ref={refp}
@@ -252,6 +254,14 @@ const NavBar = () => {
             to="/chat"
           >
             <i className="fas fa-stream"></i>Chat
+          </NavLink>
+          {/* add chat */}
+          <NavLink
+            className={`mt-2 pt-1  ${styles.NavLink}`}
+            activeClassName={styles.Active}
+            to="/chat/create"
+          >
+            <i className="fas fa-stream"></i>Chat Add
           </NavLink>
             {currentUser ? loggedInIcons : loggedOutIcons}
           </Nav>

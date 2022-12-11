@@ -29,8 +29,9 @@ const Profile = (props) => {
                 <Link to={`/profiles/${id}`}>
                 {/* Avatar */}
                 <Row>
-                <Col xs={12} >
-                    <Avatar src={image} height={imageSize}/>
+                <Col xs={3} >
+                    <Avatar src={image}
+                    width={40} height={40}/>
                 </Col>
                 </Row>
                 <Row className='mt-2 text-center'>

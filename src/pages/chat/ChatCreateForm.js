@@ -189,4 +189,4 @@ function ChatCreateForm() {
   );
 }
 
-export default ChatCreateForm;
+export default ChatCreateForm
