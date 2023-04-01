@@ -56,7 +56,7 @@ const NavBar = () => {
     className={` ${styles.NavLink} `}
     activeClassName={styles.Active}
     ref={refw1}
-    to="/Moodboards"
+    to="/moodboards"
     >
     <i className="navicon fas fa-play"></i>Moodboards / Script
     </NavLink>
