@@ -5,7 +5,13 @@ import appStyles from "../../App.module.css";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import city1 from "../../assets/city1.png";
-import pic from "../../assets/fight.png";
+import home1 from "../../assets/home1.png";
+import home2 from "../../assets/home2.png";
+import home3 from "../../assets/home3.png";
+import home6 from "../../assets/home6.png";
+import home7 from "../../assets/home7.png";
+import home8 from "../../assets/home8.png";
+import home9 from "../../assets/home9.png";
 // eslint-disable-next-line 
 import city2 from "../../assets/city2.png";
 import features from "../../assets/r-1.png";
@@ -66,8 +72,8 @@ const Home = () => {
                 </Col>
                 <Col mx={6} >
                 <p className={`${styles.Depts}`}
-                  onClick={() => history.push('/moodshots')}>
-                Moodshots / Script
+                  onClick={() => history.push('/moodboards')}>
+                Moodboards / Script
                 </p>
                 </Col>
                 </Row>
@@ -154,7 +160,7 @@ const Home = () => {
         </Col>
         <Col xs={6} md={{span: 6, offset: 2 }}>
         <div className="text-center">
-        <Image src={pic} alt="image" 
+        <Image src={home1} alt="image" 
           className={` ${styles.Image}`} />
         </div>
         </Col>
@@ -163,7 +169,7 @@ const Home = () => {
         <Row className="mt-1 mt-md-5 d-flex align-items-center justify-content-center">
         <Col xs={6} md={6}>
         <div className="text-center">
-        <Image src={pic} alt="image" 
+        <Image src={home8} alt="image" 
           className={` ${styles.Image}`} />
         </div>
         </Col>
@@ -171,7 +177,7 @@ const Home = () => {
         className="text-center" >
         <p >
         Collaborate and design in Scene Department Workspaces and use 
-        Moodshots to explore ideas.
+        Moodboards to explore ideas.
         </p>
         </Col>
         </Row>
@@ -186,7 +192,7 @@ const Home = () => {
         </Col>
         <Col xs={6} md={{span: 6, offset: 2 }}>
         <div className="text-center">
-        <Image src={pic} alt="image" 
+        <Image src={home2} alt="image" 
           className={` ${styles.Image}`} />
         </div>
         </Col>
@@ -195,7 +201,7 @@ const Home = () => {
         <Row className="mt-1 mt-md-5 d-flex align-items-center justify-content-center">
         <Col xs={6} md={6}>
         <div className="text-center">
-        <Image src={pic} alt="image" 
+        <Image src={home3} alt="image" 
           className={` ${styles.Image}`} />
         </div>
         </Col>
@@ -214,7 +220,7 @@ const Home = () => {
         text-center`} >The Creative Features</h2>
         </div>
         <div className="px-5">
-        {/* 1 Workspaces - Moodshots*/}
+        {/* 1 Workspaces - moodboards*/}
         <Row className="mb-3 mt-5">
         {/* Workspaces */}
         <Col xs={12} md={6} >
@@ -242,16 +248,16 @@ const Home = () => {
         </div>
         </Row>
         </Col>
-        {/* Moodshots and Script*/}
+        {/* Moodboards and Script*/}
         <Col xs={12} md={6} >
         <Row className="d-flex align-items-center justify-content-center">
-        <div onClick={() => history.push('/moodshots')}
+        <div onClick={() => history.push('/moodboards')}
           className={`${styles.FeatureLink} d-flex align-items-center 
            justify-content-center`}>
         <Col xs={9} className="text-center" >
-        <h4>Moodshots and Script</h4>
+        <h4>Moodboards and Script</h4>
         <p >
-        Use Moodshots to guide and design, interlinking Scenes,
+        Use Moodboards to guide and design, interlinking Scenes,
         Characters and Locations. Add the Scene Script
         to each Scene Page.
         </p>

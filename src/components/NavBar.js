@@ -56,9 +56,9 @@ const NavBar = () => {
     className={` ${styles.NavLink} `}
     activeClassName={styles.Active}
     ref={refw1}
-    to="/moodshots"
+    to="/Moodboards"
     >
-    <i className="navicon fas fa-play"></i>Moodshots / Script
+    <i className="navicon fas fa-play"></i>Moodboards / Script
     </NavLink>
     </NavDropdown.Item>
     <NavDropdown.Item >

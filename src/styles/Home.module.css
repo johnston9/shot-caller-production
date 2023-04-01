@@ -26,16 +26,17 @@ h1, h2, h3, h4, h5 {
 }
 
 .FeatureLink:hover {
-    background-color: #e9e6e6;
+    background-color: #3b444b;
+    color: #fafafa;
     cursor: pointer;
 }
 
 .FeatureLink:hover h4 {
-    color: #000;
+    color: #fafafa;
 }
 
 .FeatureLink:hover p {
-    color: #000;
+    color: #fafafa;
 }
 
 .FeatureLink:hover .FeaturesImage {

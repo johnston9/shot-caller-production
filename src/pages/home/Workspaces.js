@@ -9,6 +9,9 @@ import work1 from "../../assets/work1.png";
 import work2 from "../../assets/work2.png";
 import work3 from "../../assets/work3.png";
 import work4 from "../../assets/work4.png";
+import work5 from "../../assets/work5.png";
+import work6 from "../../assets/work6.png";
+
 // eslint-disable-next-line 
 import pic from "../../assets/fight.png";
 import btnStyles from "../../styles/Button.module.css";
@@ -39,7 +42,7 @@ const Workspaces = () => {
     <Col xs={12} md={{span: 3, offset: 1 }} className="text-center px-1 px-md-3" >
     <p >
     Create the Scene Pages quickly then easily select the 
-    Scenes
+    Scene
     </p>
     </Col>
     <Col xs={12} md={8}>
@@ -79,7 +82,7 @@ const Workspaces = () => {
     </Col>
     <Col xs={12} md={8}>
     <div className="text-center px-1 px-md-3">
-    <Image src={work2} alt="image" 
+    <Image src={work5} alt="image" 
       className={` ${styles.FeatureImage}`} />
     </div>
     </Col>
@@ -89,7 +92,7 @@ const Workspaces = () => {
     <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
     <Col xs={12} md={8}>
     <div className="text-center px-1 px-md-3">
-    <Image src={work3} alt="image" 
+    <Image src={work6} alt="image" 
       className={` ${styles.FeatureImage}`} />
     </div>
     </Col>
