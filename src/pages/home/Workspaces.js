@@ -11,6 +11,8 @@ import work3 from "../../assets/work3.png";
 import work4 from "../../assets/work4.png";
 import work5 from "../../assets/work5.png";
 import work6 from "../../assets/work6.png";
+import break23 from "../../assets/break23.png";
+import charbg from "../../assets/charbg.png";
 
 // eslint-disable-next-line 
 import pic from "../../assets/fight.png";
@@ -56,16 +58,35 @@ const Workspaces = () => {
     {/* two */}
     <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
     <Col xs={12} md={8}>
-    <div className="text-center px-1 px-md-3">
-    <Image src={break1} alt="image" 
+    <div className="text-center px-1 px-md-3 mb-3">
+    <Image src={break23} alt="image" 
       className={` ${styles.FeatureImage}`} />
     </div>
     </Col>
     <Col xs={12} md={{span: 3, offset: 0 }}
     className="text-center px-1 px-md-3" >
     <p >
-    Create Breakdowns that include Characters, 
-    Costumes, BG, and Department Info, which will be
+    Create Breakdowns that include Department Info which will be
+    automatically loaded in all other features including Stripboards
+    </p>
+    </Col>
+    </Row>
+    <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
+    <Col xs={12} md={8}>
+    <div className="text-center px-1 px-md-3">
+    <Image src={charbg} alt="image" 
+      className={` ${styles.FeatureImage}`} />
+    </div>
+    <div className="text-center px-1 px-md-3">
+    <Image src={charbg} alt="image" 
+      className={` ${styles.FeatureImage}`} />
+    </div>
+    </Col>
+    <Col xs={12} md={{span: 3, offset: 0 }}
+    className="text-center px-1 px-md-3" >
+    <p >
+    Create the Character / BG Breakdown which includes
+    Costumes and will also be
     automatically loaded in all other features including Stripboards
     </p>
     </Col>
