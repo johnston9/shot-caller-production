@@ -1,3 +1,13 @@
+/* Component containing all the dropdowns and their icons used to edit
+   and delete items and select categories
+ * Contains:
+ * The EditDeleteIcon 
+ * The UniDropdown which is used throughout
+   to allow edit and delete functions
+ * The ProfileEditDropdown to allow 
+   users to edit their profiles
+ * CURRENTLY IT IS NOT DISPLAYING CORRECTLY AND NEEDS FIXING 
+   FOR X, Y AND Z POSITIONING */
 import React from "react";
 import Dropdown from "react-bootstrap/Dropdown";
 import styles from "../styles/Dropdown.module.css";

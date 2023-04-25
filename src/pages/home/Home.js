@@ -1,3 +1,9 @@
+/* Home Page 
+ * Section 1 - the temporary background image city1
+   Quick links to the Creative and Production feature information pages
+ * Section 2 - Overview in 4 parts with temporary images
+ * Section 3 - Links to the Creative feature information pages
+ * Section 4 - Links to the Production feature information pages */
 import React from "react";
 import { Link, useHistory } from "react-router-dom";
 import styles from "../../styles/Home.module.css";
@@ -32,14 +38,9 @@ const Home = () => {
   return (
       <div >
         <TopBox2 title="SHOT CALLER PRODUCTION" />
-        {/* page 1 */}
+        {/* Section 1 - the temporary background image city1
+            and The Creative and Production feature information links */}
         <div className={styles.HomeBox} 
-          // style={{ backgroundImage: `url(${r1})`, height:'100vh',
-          // backgroundSize: 'cover',
-          // backgroundRepeat: 'no-repeat', }}
-          // style={{ backgroundImage: `url(${city2})`, height:'100vh',
-          // backgroundSize: 'cover',
-          // backgroundRepeat: 'no-repeat', }}
           style={{ backgroundImage: `url(${city1})`,
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat', }}
@@ -55,6 +56,7 @@ const Home = () => {
                 <Row className="mt-5" >
                 <Col className={`text-center  ${styles.Creative} `}
                  md={6}>
+                {/* The Creative links */}
                 <h4 className={`mb-2 ${styles.Creative}`}>
                 The Creative
                 </h4>
@@ -62,14 +64,15 @@ const Home = () => {
                   style={{fontStyle: 'italic'}}>
                 Collaborate and design in Scene Department Workspaces
                 </p>
-                {/* on1 */}
                 <Row >
+                {/* Breakdowns / Workspaces */}
                 <Col mx={6} >
                 <p className={`${styles.Depts}`}
                   onClick={() => history.push('/workspaces')}>
                 Breakdowns / Workspaces
                 </p>
                 </Col>
+                {/* Moodboards / Script */}
                 <Col mx={6} >
                 <p className={`${styles.Depts}`}
                   onClick={() => history.push('/moodboards')}>
@@ -77,8 +80,8 @@ const Home = () => {
                 </p>
                 </Col>
                 </Row>
-                {/* on2 */}
                 <Row>
+                {/* Shotlists / Storyboards */}
                 <Col xs={6} >
                 <span className={`${styles.Depts}`}
                   onClick={() => history.push('/shotstory')} >
@@ -86,6 +89,7 @@ const Home = () => {
                 </span>
                 </Col>
                 <Col mx={6}>
+                {/* Characters / Locations  */}
                 <span className={`${styles.Depts}`}
                   onClick={() => history.push('/charslocates')} >
                 Characters / Locations 
@@ -101,14 +105,15 @@ const Home = () => {
                   style={{fontStyle: 'italic'}}>
                 All Production Software Tools in one Connected Workflow
                 </p>
-                {/* on1 */}
                 <Row>
+                {/* Schedule / Stripboard */}
                 <Col xs={6}>
                 <p className={`${styles.Depts}`}
                   onClick={() => history.push('/schedule')}>
                 Schedule / Stripboard
                 </p>
                 </Col>
+                {/* Callsheets */}
                 <Col mx={6}>
                 <p className={`${styles.Depts}`}
                   onClick={() => history.push('/callsheets')} >
@@ -116,14 +121,15 @@ const Home = () => {
                 </p>
                 </Col>
                 </Row>
-                {/* on2 */}
                 <Row>
+                {/* Cast / Crew */}
                 <Col mx={6}>
                 <p className={`${styles.Depts}`}
                   onClick={() => history.push('/castcrew')}>
                 Cast / Crew
                 </p>
                 </Col>
+                {/* Mobile View */}
                 <Col mx={6}>
                 <p className={`${styles.Depts}`}
                   onClick={() => history.push('/mobile')} >
@@ -143,14 +149,15 @@ const Home = () => {
           </Col>
         </Row>
         </div>
-        {/* page 2 */}
+        {/* Section 2 - Overview in 4 parts with
+            temporary image   */}
         <div>
         <div className={`mt-5 ${styles.Overview}`}>
         <h2 className={`pb-1 ${styles.OverviewText} ${appStyles.playfair}
          text-center`} >Overview</h2>
         </div>
         <div className="px-3 mt-3">
-        {/* platform */}
+        {/* part 1 - platform */}
         <Row className="mt-1 mt-md-5 d-flex align-items-center justify-content-center">
         <Col xs={6} md={{span: 3, offset: 1 }} className="text-center" >
         <p >
@@ -165,7 +172,7 @@ const Home = () => {
         </div>
         </Col>
         </Row>
-        {/* Workspaces */}
+        {/* part 2 - Workspaces */}
         <Row className="mt-1 mt-md-5 d-flex align-items-center justify-content-center">
         <Col xs={6} md={6}>
         <div className="text-center">
@@ -181,7 +188,7 @@ const Home = () => {
         </p>
         </Col>
         </Row>
-        {/* Callsheets  */}
+        {/* part 3 - Callsheets  */}
         <Row className="mt-1 mt-md-5 d-flex align-items-center justify-content-center">
         <Col xs={6} md={{span: 3, offset: 1 }}
           className="text-center" >
@@ -197,7 +204,7 @@ const Home = () => {
         </div>
         </Col>
         </Row>
-        {/* mobile */}
+        {/* part 4 - mobile */}
         <Row className="mt-1 mt-md-5 d-flex align-items-center justify-content-center">
         <Col xs={6} md={6}>
         <div className="text-center">
@@ -214,13 +221,12 @@ const Home = () => {
         </Row>
         </div>
         </div>
-        {/* page 3 */}
+        {/* Section 3 - Links to the Creative feature information pages */}
         <div className={`mt-5 px-5 mx-5 ${styles.Overview}`}>
         <h2 className={`pb-1 ${styles.OverviewText} ${appStyles.playfair} 
         text-center`} >The Creative Features</h2>
         </div>
         <div className="px-5">
-        {/* 1 Workspaces - moodboards*/}
         <Row className="mb-3 mt-5">
         {/* Workspaces */}
         <Col xs={12} md={6} >
@@ -276,7 +282,6 @@ const Home = () => {
         </Row>
         </Col>
         </Row>
-        {/* 2, Storyboard and Shotlists - Characters and Locations */}
         <Row className="my-3">
         {/*  Storyboard and Shotlists */}
         <Col xs={12} md={6}>
@@ -330,13 +335,12 @@ const Home = () => {
         </Col>
         </Row>
         </div>
-        {/* page 4 */}
+        {/* Section 4 - Links to the Production feature information pages  */}
         <div className={`mt-5 px-5 mx-5 ${styles.Overview}`}>
         <h2 className={`pb-1 ${styles.OverviewText} ${appStyles.playfair} 
         text-center`} >Production Features</h2>
         </div>
         <div className="px-5">
-        {/* 1 Cast and Crew - Schedule */}
         <Row className="mb-3 mt-5">
         {/* Cast and Crew */}
         <Col xs={12} md={6} >
@@ -388,7 +392,6 @@ const Home = () => {
         </Row>
         </Col>
         </Row>
-        {/* 2 Callsheets */}
         <Row className="my-3">
         {/* Callsheets */}
         <Col xs={12} md={6} >
@@ -441,55 +444,6 @@ const Home = () => {
         </Row>
         </Col>
         </Row>
-        {/* 3  */}
-        {/* <Row >
-        <Col xs={12} md={6} >
-        <Row className="d-flex align-items-center justify-content-center">
-        <div className={`${styles.FeatureLink} d-flex align-items-center justify-content-center my-5`}>
-        <Col xs={3} >
-        <div className="text-center" >
-        <Image 
-          onClick={() => history.push('/landing')}
-          height={height}
-          width={height}
-          src={features} alt="image" 
-          className={`round ${styles.FeaturesImage}`} />
-        </div>
-        </Col>
-        <Col xs={9} className="text-center" >
-        <h4>Moodshots</h4>
-        <p >
-        Use Moodshots to explore and guide Scene, Character and 
-        Location design and style 
-        </p>
-        </Col>
-        </div>
-        </Row>
-        </Col>
-        <Col xs={12} md={6}>
-        <Row className="d-flex align-items-center justify-content-center">
-        <div className={`${styles.FeatureLink} d-flex align-items-center justify-content-center my-5`}>
-        <Col xs={9} className="text-center" >
-        <h4>Shotlists, Script and Storyboard</h4>
-        <p >
-        Create Scene Shotlists in the Scene Page and add it's Script 
-        and Storyboard 
-        </p>
-        </Col>
-        <Col xs={3} >
-        <div className="text-center" >
-        <Image 
-          onClick={() => history.push('/landing')}
-          height={height}
-          width={height}
-          src={features} alt="image" 
-          className={`round ${styles.FeaturesImage}`} />
-        </div>
-        </Col>
-        </div>
-        </Row>
-        </Col>
-        </Row> */}
         </div>
     </div>
   );

@@ -1,21 +1,17 @@
+/* Page to display the info for the Scene Page
+    Breakdowns and Workspaces features */
 import React from "react";
 import { useHistory } from "react-router-dom";
 import styles from "../../styles/Home.module.css";
 import appStyles from "../../App.module.css";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import break1 from "../../assets/break1.png";
 import work1 from "../../assets/work1.png";
-import work2 from "../../assets/work2.png";
-import work3 from "../../assets/work3.png";
 import work4 from "../../assets/work4.png";
 import work5 from "../../assets/work5.png";
 import work6 from "../../assets/work6.png";
 import break23 from "../../assets/break23.png";
 import charbg from "../../assets/charbg.png";
-
-// eslint-disable-next-line 
-import pic from "../../assets/fight.png";
 import btnStyles from "../../styles/Button.module.css";
 import Button from "react-bootstrap/Button";
 import { Image } from "react-bootstrap";
@@ -73,10 +69,6 @@ const Workspaces = () => {
     </Row>
     <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
     <Col xs={12} md={8}>
-    <div className="text-center px-1 px-md-3">
-    <Image src={charbg} alt="image" 
-      className={` ${styles.FeatureImage}`} />
-    </div>
     <div className="text-center px-1 px-md-3">
     <Image src={charbg} alt="image" 
       className={` ${styles.FeatureImage}`} />

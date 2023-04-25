@@ -4,11 +4,10 @@ import styles from "../../styles/Home.module.css";
 import appStyles from "../../App.module.css";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import pic from "../../assets/fight.png";
 // eslint-disable-next-line 
 import shed1 from "../../assets/shed1.png";
 import schinfo from "../../assets/schinfo.png";
-import schcast from "../../assets/schcast.png";
+import schedchar77 from "../../assets/schedchar77.png";
 import schadd from "../../assets/schadd.png";
 import btnStyles from "../../styles/Button.module.css";
 import Button from "react-bootstrap/Button";
@@ -59,8 +58,9 @@ const Schedules = () => {
       <Col xs={12} md={{span: 3, offset: 0 }}
       className="text-center px-1 px-md-3" >
       <p >
-      Select Scenes quickly from the Act or Location menus then add the Shooting Info
-      to autogenerate Stripboard Scenes with the Scene Breakdown Info 
+      This is done in a flash by firstly selecting a scenes from the Act or 
+      Location menus to autogenerate Stripboard Scenes with the Scene Breakdown Info 
+      then adding the Shooting Info
       </p>
       </Col>
       </Row>
@@ -70,7 +70,9 @@ const Schedules = () => {
       <Col xs={12} md={{span: 3, offset: 1 }}
         className="text-center px-1 px-md-3" >
       <p >
-      Edit the Scene Shooting Info quickly and open the Scene Info box for extra Info or 
+      The Scene Shooting Info can be edited quickly by the edit button 
+      and the scene can be re-ordered even quicker by the re-order button.</p>
+      <p> Open the Scene Info box for extra Info 
       </p>
       </Col>
       <Col xs={12} md={8}>
@@ -85,7 +87,7 @@ const Schedules = () => {
       <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
       <Col xs={12} md={8}>
       <div className="text-center px-1 px-md-3">
-      <Image src={schcast} alt="image" 
+      <Image src={schedchar77} alt="image" 
         className={` ${styles.FeatureImage}`} />
       </div>
       </Col>

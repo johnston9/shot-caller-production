@@ -1,5 +1,9 @@
+/* NavBar Component
+   Currently the activeClassName item is working but is throwing an
+   error in the console so is commented out on each link
+   Am looking for a way to resolve this issue */  
 import React from 'react';
-import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
+import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import logo from "../assets/logo1.png";
 import styles from "../styles/NavBar.module.css";
 import { NavLink } from "react-router-dom";
@@ -23,6 +27,7 @@ const NavBar = () => {
     refp, refp1, refp2 } = useDropdownClick();
 
   const handleSignOut = async () => {
+    /* Function to sign a user out */
     try {
       await axios.post("dj-rest-auth/logout/");
       setCurrentUser(null);
@@ -35,7 +40,12 @@ const NavBar = () => {
   const creativeIcons = (
     <>
     <NavDropdown
-    title="Creative"
+    title={
+      <span style={{ color: '#555555'}}>
+        <i 
+        className="navicon fas fa-stream pt-1"></i>Creative
+      </span>
+    }
     ref={refw}
     id="nav-dropdown1"
     // activeClassName={styles.Active}
@@ -88,7 +98,12 @@ const NavBar = () => {
   const productionIcons = (
     <>
     <NavDropdown
-    title="Production"
+    title={
+      <span style={{ color: '#555555'}}>
+        <i 
+        className="navicon fas fa-stream pt-1"></i>Production
+      </span>
+    }
     ref={reff}
     id="nav-dropdown2"
     // activeClassName={styles.Active}
@@ -146,14 +161,6 @@ const NavBar = () => {
         to="/" onClick={handleSignOut}>
         <i className="fas fa-sign-out-alt"></i>Sign out
       </NavLink>
-      {/* my profile old*/}
-      {/* <NavLink
-        className={styles.NavLink}
-        to={`/profiles/${currentUser?.profile_id}`}
-      >
-        <i className="navicon fas fa-play"></i>My Profile 
-        <Avatar src={currentUser?.profile_image} text="" height={40} />
-      </NavLink> */}
       {/* my account */}
       <NavDropdown 
           title={
@@ -191,10 +198,12 @@ const NavBar = () => {
       </NavDropdown>
     </>
   );
+
   const loggedOutIcons = (
+  /* Icons that display when a user is logged out */
     <>
       <NavLink
-        className={`mt-2 ${styles.NavLink}`}
+        className={`mt-2 mx-2 ${styles.NavLink}`}
         activeClassName={styles.Active}
         to="/signin"
       >
@@ -213,7 +222,6 @@ const NavBar = () => {
   return (
     <Navbar expanded={expanded} className={styles.NavBar} 
       expand="lg" fixed="top">
-      {/* <Container className='pl-3 mx-0'> */}
         <NavLink to="/landing">
           <Navbar.Brand>
           <img src={logo} alt="logo" height="30" /> Shot Caller
@@ -228,20 +236,11 @@ const NavBar = () => {
           {/* home */}
           <NavLink
             exact
-            className={`mt-2 pt-1 ${styles.NavLink}`}
+            className={`mt-2 pt-1 mx-2 ${styles.NavLink}`}
             activeClassName={styles.Active}
             to="/"
           >
-            <i className="fas fa-home"></i>Home
-          </NavLink>
-          {/* home2 */}
-          <NavLink
-            exact
-            className={`mt-2 pt-1  ${styles.NavLink}`}
-            activeClassName={styles.Active}
-            to="/home2"
-          >
-            <i className="fas fa-home"></i>Home2
+            <i className="fas fa-play"></i>Home
           </NavLink>
           {/* creative */}
           {creativeIcons}
@@ -249,19 +248,19 @@ const NavBar = () => {
           {productionIcons}
           {/* chat */}
           <NavLink
-            className={`mt-2 pt-1  ${styles.NavLink}`}
+            className={`mt-2 pt-1 mx-2  ${styles.NavLink}`}
             activeClassName={styles.Active}
             to="/chat"
           >
-            <i className="fas fa-stream"></i>Chat
+            <i className="fas fa-play"></i>Chat
           </NavLink>
           {/* add chat */}
           <NavLink
-            className={`mt-2 pt-1  ${styles.NavLink}`}
+            className={`mt-2 pt-1 mx-2 ${styles.NavLink}`}
             activeClassName={styles.Active}
             to="/chat/create"
           >
-            <i className="fas fa-stream"></i>Chat Add
+            <i className="far fa-plus-square"></i>Chat Add
           </NavLink>
             {currentUser ? loggedInIcons : loggedOutIcons}
           </Nav>

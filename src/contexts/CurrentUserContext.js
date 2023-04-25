@@ -1,3 +1,10 @@
+/* Context file used to fetch the current user
+ * Interceptors used to keep a user loged in
+ * Fix needed - affected by the Gmail mobile browser issue
+ * A fix is needed for the Gmail mobile browser issue as it is
+   affecting the axiosReq interceptor in mobile
+ * The Gmail mobile browser issue seems to be all requests 
+   getting 401 so the token refresh is being rejected */
 import { createContext, useContext, useEffect, useMemo, useState } from "react";
 import axios from "axios";
 import { axiosReq, axiosRes } from "../api/axiosDefaults";

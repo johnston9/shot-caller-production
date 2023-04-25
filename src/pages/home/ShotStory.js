@@ -1,10 +1,11 @@
+/* Page to display the info for the Scene Page Shotlist 
+   and Storyboard features */
 import React from "react";
 import { useHistory } from "react-router-dom";
 import styles from "../../styles/Home.module.css";
 import appStyles from "../../App.module.css";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-// eslint-disable-next-line 
 import story1 from "../../assets/story1.png";
 import shot1 from "../../assets/shot1.png";
 import shot2 from "../../assets/shot2.png";

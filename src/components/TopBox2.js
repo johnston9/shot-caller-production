@@ -1,3 +1,6 @@
+/* Second Component used on the top of all pages to 
+   display that page's title and other information
+   Used to compare different style Topbox components */
 import React from "react";
 import door from "../assets/door.png";
 import appStyles from "../App.module.css";

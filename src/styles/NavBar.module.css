@@ -9,6 +9,10 @@ padding: 2px;
 font-size: 12px;
 }
 
+i {
+  color: rgb(41, 180, 180);
+}
+
 .DropLink {
 color: black;
 }

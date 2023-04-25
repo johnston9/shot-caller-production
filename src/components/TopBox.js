@@ -1,3 +1,5 @@
+/* Component used on the top of all pages to 
+   display that page's title and other information */
 import React from "react";
 import door from "../assets/door.png";
 import styles from "../styles/TopBox.module.css";

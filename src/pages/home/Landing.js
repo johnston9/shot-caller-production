@@ -1,3 +1,4 @@
+/* Page just to compare background images and styles for the home page */
 import React from "react";
 import { Link, useHistory } from "react-router-dom";
 import styles from "../../styles/Home.module.css";
@@ -24,9 +25,6 @@ const Landing = () => {
           style={{ backgroundImage: `url(${city1})`, height:'100vh',
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat', }}
-        //   style={{ backgroundImage: `url(${city1})`, height:'100vh',
-        //   backgroundSize: 'cover',
-        //   backgroundRepeat: 'no-repeat', }}
           >
         <Row className={styles.Row}>
           <Col className="my-5" xs={12}>

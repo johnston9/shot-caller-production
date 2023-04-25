@@ -1,10 +1,10 @@
+/* Page to display the info for the Characters and Locations features */
 import React from "react";
 import { useHistory } from "react-router-dom";
 import styles from "../../styles/Home.module.css";
 import appStyles from "../../App.module.css";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import pic from "../../assets/fight.png";
 import char1 from "../../assets/char1.png";
 import char2 from "../../assets/char2.png";
 import loca1 from "../../assets/loca1.png";

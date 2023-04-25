@@ -1,3 +1,7 @@
+/* Context file to fetch all Profiles
+ * handleFollow and unhandleFollow functions
+   Which use the followHelper function in utils
+ * query context is just used to reload after selection is changed */
 import { createContext, useContext, useEffect, useState } from "react";
 import { axiosReq, axiosRes } from "../api/axiosDefaults";
 import { useCurrentUser } from "../contexts/CurrentUserContext";
@@ -11,7 +15,7 @@ export const useSetProfileData = () => useContext(SetProfileDataContext);
 
 export const ProfileDataProvider = ({ children }) => {
   const [profileData, setProfileData] = useState({
-    // we will use the pageProfile later!
+    // This is used on the Profile page
     profilePage: { results: [] },
     profilesAll: { results: [] },
   });
@@ -19,6 +23,8 @@ export const ProfileDataProvider = ({ children }) => {
   const currentUser = useCurrentUser();
 
   const handleFollow = async (clickedProfile) => {
+    /* Function to create a follow item if a users clicks Follow
+         and update the states to reflect this */
     try {
       const { data } = await axiosRes.post("/followers/", {
         followed: clickedProfile.id,
@@ -44,6 +50,8 @@ export const ProfileDataProvider = ({ children }) => {
   };
 
   const handleUnfollow = async (clickedProfile) => {
+    /* Function to remove a follow item if a users clicks unFollow
+         and update the states to reflect this */
     try {
       await axiosRes.delete(`/followers/${clickedProfile.following_id}/`);
 

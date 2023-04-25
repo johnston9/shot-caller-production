@@ -17,7 +17,6 @@ import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
 import PageNotFound from "./components/PageNotFound";
 import Landing from "./pages/home/Landing";
-import HomeTwo from "./pages/home/HomeTwo";
 import Moodboards from "./pages/home/Moodboards";
 import CharsLocates from "./pages/home/CharsLocates";
 import Workspaces from "./pages/home/Workspaces";
@@ -39,7 +38,6 @@ function App() {
         <Switch>
           {/* home */}
           <Route exact path="/" render={() => <Home /> } />
-          <Route exact path="/home2" render={() => <HomeTwo /> } />
           <Route exact path="/landing" render={() => <Landing /> } />
           <Route exact path="/signin" render={() => <SignInForm />} />
           <Route exact path="/signup" render={() => <SignUpForm /> } />

@@ -1,17 +1,14 @@
+/* Page to display the info for the Moodboards feature */
 import React from "react";
 import { useHistory } from "react-router-dom";
 import styles from "../../styles/Home.module.css";
 import appStyles from "../../App.module.css";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import pic from "../../assets/fight.png";
-// eslint-disable-next-line 
-import break1 from "../../assets/break1.png";
 import break2 from "../../assets/break2.png";
 import mood8 from "../../assets/mood8.png";
 import mood2 from "../../assets/mood2.png";
 import mood1a from "../../assets/mood1a.png";
-import mood2b from "../../assets/mood2b.png";
 import btnStyles from "../../styles/Button.module.css";
 import Button from "react-bootstrap/Button";
 import { Image } from "react-bootstrap";

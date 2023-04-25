@@ -1,3 +1,5 @@
+/* File to contain the Axios base and create the
+   axiosReq and axiosRes */
 import axios from "axios";
 
 axios.defaults.baseURL = "https://shot-caller-production-api.herokuapp.com/";
