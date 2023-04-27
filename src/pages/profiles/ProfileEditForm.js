@@ -1,6 +1,6 @@
+/* Form Page to edit a Profile */
 import React, { useState, useEffect, useRef } from "react";
 import { useHistory, useParams } from "react-router-dom";
-
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Image from "react-bootstrap/Image";
@@ -20,7 +20,7 @@ import appStyles from "../../App.module.css";
 import { useRedirect } from '../../hooks/Redirect';
 
 const ProfileEditForm = () => {
-  useRedirect("loggedOut");
+  useRedirect();
   const currentUser = useCurrentUser();
   const setCurrentUser = useSetCurrentUser();
   const { id } = useParams();

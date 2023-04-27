@@ -1,3 +1,6 @@
+/* Page to fetch all the Profiles data and render the cover info 
+ * Contains the Profile component to which it passes the data 
+   for each Profile cover */
 import React from "react"
 import Asset from "../../components/Asset";
 import Profile from "./Profile";
@@ -46,19 +49,6 @@ const ProfilesPage = () => {
         <Asset spinner />
       )}
       </Row>
-      {/* <Row>
-      {profilesAll.results.length ? (
-        <>
-          {profilesAll.results.map((profile) => (
-            <Col xs={6} sm={4} md={3} lg={2} className="px-2 py-2 p-0 p-lg-2">
-            <Profile key={profile.id} profile={profile} />
-            </Col>
-          ))}
-        </>
-      ) : (
-        <Asset spinner />
-      )}
-      </Row> */}
     </div>
   );
 };

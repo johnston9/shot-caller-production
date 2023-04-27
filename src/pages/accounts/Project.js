@@ -1,16 +1,13 @@
+/* Component in the Projects Component to display a Project data */
 import React from 'react';
 import Card from "react-bootstrap/Card";
-import OverlayTrigger from "react-bootstrap/OverlayTrigger";
-import Tooltip from "react-bootstrap/Tooltip";
 import styles from "../../styles/Account.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import { Link, useHistory } from 'react-router-dom';
-import Avatar from "../../components/Avatar";
 import { axiosRes } from '../../api/axiosDefaults';
-// import { useRedirect } from '../../hooks/Redirect';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import { UniDropdown } from '../../components/UniDropDown';
+import { useHistory } from 'react-router-dom';
 
 const Project = ({id, name, stripe_id, company, owner, owner_name, profile_id} ) => {
     const currentUser = useCurrentUser();

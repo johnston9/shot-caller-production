@@ -1,3 +1,4 @@
+/* Component in ChatsPage to display the Chat cover data */
 import React from 'react';
 import Card from "react-bootstrap/Card";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
@@ -7,13 +8,11 @@ import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { Link, useHistory } from 'react-router-dom';
 import Avatar from "../../components/Avatar";
 import { axiosRes } from '../../api/axiosDefaults';
-// import { useRedirect } from '../../hooks/Redirect';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import { UniDropdown } from '../../components/UniDropDown';
 
 const Chat = (props) => {
-  // useRedirect("loggedOut");
     const {
         id,
         owner,

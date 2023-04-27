@@ -1,5 +1,5 @@
+/* Form Page to edit a Chat */
 import React, { useRef, useState } from "react";
-
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
@@ -20,7 +20,7 @@ import { useEffect } from "react";
 import { useRedirect } from "../../hooks/Redirect";
 
 function ChatEditForm() {
-  useRedirect("loggedOut");
+  useRedirect();
   const [errors, setErrors] = useState({});
 
   const [postData, setPostData] = useState({

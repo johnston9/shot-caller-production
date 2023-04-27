@@ -1,24 +1,15 @@
-import React, { useRef, useState } from "react";
-
+/* Component in the Account component to create Projects */
+import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Container from "react-bootstrap/Container";
-
-import Upload from "../../assets/upload.png";
 import styles from "../../styles/ChatCreate.module.css";
-import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
-import Image from "react-bootstrap/Image";
 import Alert from "react-bootstrap/Alert";
 import { axiosReq } from "../../api/axiosDefaults";
-import Asset from "../../components/Asset";
-import { useRedirect } from "../../hooks/Redirect";
-import { useHistory } from "react-router-dom";
 
 function CreateProject({setShow} ) {
-  useRedirect("loggedOut");
   const [errors, setErrors] = useState({});
 
   const [postData, setPostData] = useState({
@@ -26,8 +17,6 @@ function CreateProject({setShow} ) {
     stripe_id: "",
   });
   const { name, stripe_id } = postData;
-
-  const history = useHistory();
 
   const handleChange = (event) => {
     setPostData({

@@ -1,32 +1,27 @@
+/* Page to fetch the user's Profile and Account data
+ * Contains the Account Component to which it passes the data*/
 import React, { useEffect, useState } from "react";
-
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import Container from "react-bootstrap/Container";
-import btnStyles from "../../styles/Button.module.css";
 import Asset from "../../components/Asset";
 import { useParams } from "react-router-dom";
-import styles from "../../styles/ProfilePage.module.css";
-import appStyles from "../../App.module.css";
-import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { useProfileData, useSetProfileData } from "../../contexts/ProfileDataContext";
 import { axiosReq } from "../../api/axiosDefaults";
-import { Button, Image } from "react-bootstrap";
-import { ProfileEditDropdown } from "../../components/UniDropDown";
 import Account from "./Account";
+import useRedirect from "../../hooks/Redirect";
 
 function AccountPage() {
+  useRedirect();
   const [hasLoaded, setHasLoaded] = useState(false);
   const [account, setAccount] = useState({ results: [] });
+  // eslint-disable-next-line
   const [name, setName] = useState({ results: [] });
-  const currentUser = useCurrentUser();
   const { id } = useParams();
 
-  const { setProfileData, handleFollow, handleUnfollow } = useSetProfileData();
+  const { setProfileData } = useSetProfileData();
   const { profilePage } = useProfileData();
 
   const [profile] = profilePage.results;
-  const is_owner = currentUser?.username === profile?.owner;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -40,6 +35,8 @@ function AccountPage() {
           profilePage: { results: [profilePage] },
         }));
         setAccount(accountInfo);
+        console.log(accountInfo);
+        console.log(profilePage);
         setName(accountInfo.results[0].name)
         setHasLoaded(true);
       } catch (err) {

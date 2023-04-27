@@ -1,3 +1,8 @@
+/* Component rendered on the ProfilesPage to display the 
+   cover info for each Profile
+ * When clicked on it opens that Profile's ProfilePage 
+ * Contains the handleFollow and handleUnFollow functions
+   from useSetProfileData */
 import React from 'react';
 import styles from "../../styles/Profiles.module.css";
 import btnStyles from "../../styles/Button.module.css";
@@ -5,7 +10,6 @@ import { useCurrentUser } from '../../contexts/CurrentUserContext';
 import { Link } from 'react-router-dom';
 import Avatar from '../../components/Avatar';
 import Button from "react-bootstrap/Button";
-// import { useRedirect } from '../../hooks/Redirect';
 import Card from "react-bootstrap/Card";
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
@@ -22,7 +26,7 @@ const Profile = (props) => {
 
   return (
     <div>
-      {/* mine */}
+      {/* version 1 */}
       <div className='mt-1 text-center'>
             <Card className={styles.Back}>
                 <Card.Body className={`px-0 ${styles.CardHead}`} >
@@ -79,11 +83,9 @@ const Profile = (props) => {
                 </Row>
                 </Card.Header>
             </Card>
-        </div>
-        {/* his */}
-        <div
-      className={`my-3 d-flex align-items-center`}
-    >
+      </div>
+      {/* version 2 */}
+      <div className={`my-3 d-flex align-items-center`}>
       <div>
         <Link className="align-self-center" to={`/profiles/${id}`}>
           <Avatar src={image} height={imageSize} />
@@ -101,14 +103,14 @@ const Profile = (props) => {
               className={`${btnStyles.Button} ${btnStyles.BlackOutline}`}
               onClick={() => handleUnfollow(profile)}
             >
-              unf
+              unfollow
             </Button>
           ) : (
             <Button
               className={`${btnStyles.Button} ${btnStyles.Black}`}
               onClick={() => handleFollow(profile)}
             >
-              fol
+              follow
             </Button>
           ))}
       </div>

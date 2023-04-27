@@ -1,5 +1,5 @@
+/* Page to fetch and display the data and chats for each Profile */
 import React, { useEffect, useState } from "react";
-
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";

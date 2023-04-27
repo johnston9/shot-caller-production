@@ -14,19 +14,11 @@ import city1 from "../../assets/city1.png";
 import home1 from "../../assets/home1.png";
 import home2 from "../../assets/home2.png";
 import home3 from "../../assets/home3.png";
-import home6 from "../../assets/home6.png";
-import home7 from "../../assets/home7.png";
 import home8 from "../../assets/home8.png";
-import home9 from "../../assets/home9.png";
 // eslint-disable-next-line 
 import city2 from "../../assets/city2.png";
 import features from "../../assets/r-1.png";
-import btnStyles from "../../styles/Button.module.css";
-import Button from "react-bootstrap/Button";
-
 import Container from "react-bootstrap/Container";
-// eslint-disable-next-line 
-import { useSetCurrentUser } from "../../contexts/CurrentUserContext";
 import TopBox2 from "../../components/TopBox2";
 import { Image } from "react-bootstrap";
 

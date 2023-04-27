@@ -5,17 +5,12 @@
    If the link in Gmail is pressed so as to offer an open in 
    browser option the app does work.
  * The Gmail mobile browser issue was affecting the original code which
-   used a request to see if there is a refresh token
- * It is also affecting the request to dj-rest-auth/user which I used
-   to replace the refresh token request 
- * FIX NEEDED REFRESH ISSUE
-   I attempted to use the useCurrenrUser instead of making continued
-   request but on REFRESH this returned null */
+   used a request to see if there is a refresh token */
 import { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { useCurrentUser } from "../contexts/CurrentUserContext";
 
-export const useRedirect = (userAuthStatus) => {
+export const useRedirect = () => {
   const history = useHistory();
   const user = useCurrentUser();
 
@@ -27,8 +22,7 @@ export const useRedirect = (userAuthStatus) => {
     };
 
     handleMount();
-    // eslint-disable-next-line
-  }, [history, userAuthStatus, ]);
+  }, [user, history]);
 };
 
 export default useRedirect

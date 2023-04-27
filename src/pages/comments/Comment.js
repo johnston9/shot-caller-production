@@ -1,3 +1,4 @@
+/* Component to display Comments on the ChatPage */
 import React, { useState } from "react";
 import { Media } from "react-bootstrap";
 import { Link } from "react-router-dom";

@@ -1,6 +1,7 @@
+/* Component in Accountpage to display the Profile and Account data
+ * Contains the CreateProject and Projects components */
 import React from "react";
 import btnStyles from "../../styles/Button.module.css";
-import appStyles from "../../App.module.css";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
@@ -8,13 +9,11 @@ import styles from "../../styles/ProfilePage.module.css";
 import { Image } from "react-bootstrap";
 import { ProfileEditDropdown } from "../../components/UniDropDown";
 import { useState } from "react";
-import { useHistory } from "react-router-dom";
 import CreateProject from "./CreateProject";
 import Projects from "./Projects";
 
-const Account = ({id, profile, account, projects, is_owner} ) => {
+const Account = ({id, profile, account} ) => {
   const [showCreateProject, setShowCreateProject ] = useState(false);
-  const {history} = useHistory();
 
 const topProfile = (
     <div className={`px-3 ${styles.TopBack}`}>
@@ -59,37 +58,28 @@ return (
   <div>
       {topProfile}
       {accountInfo}
-  <Row className="px-3">
-  <Col className="text-center">
-  <h3 className="mb-3" >PROJECTS</h3>
-  <Button
-      className={`${btnStyles.Button} ${btnStyles.Blue} mb-2`}
-      onClick={() => setShowCreateProject(showCreateProject => !showCreateProject)} >
-      Create Project
-  </Button>
-  </Col>
-  </Row>
-  {showCreateProject ? (
-            <CreateProject
-              setShow={setShowCreateProject}
-            />
-          ) : (
-            ""
-          )}
-  <Row >
-  <Col>
-  <Projects
-  id={id} />
-  </Col>
-  </Row>
-  <Row>
-  <Col>
-  </Col>
-  </Row>
-  <Row>
-  <Col>
-  </Col>
-  </Row>
+    <Row className="px-3">
+      <Col className="text-center">
+      <h3 className="mb-3" >PROJECTS</h3>
+      <Button
+          className={`${btnStyles.Button} ${btnStyles.Blue} mb-2`}
+          onClick={() => setShowCreateProject(showCreateProject => !showCreateProject)} >
+          Create Project
+      </Button>
+      </Col>
+    </Row>
+    {showCreateProject ? (
+              <CreateProject
+                setShow={setShowCreateProject}
+              />
+            ) : (
+              ""
+            )}
+    <Row >
+      <Col>
+        <Projects id={id} />
+      </Col>
+    </Row>
   </div>
   )
 }

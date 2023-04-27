@@ -1,3 +1,4 @@
+/* Page to sign the user up */
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import door from "../../assets/door.png";
@@ -12,13 +13,12 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Image from "react-bootstrap/Image";
 import Container from "react-bootstrap/Container";
-
 import TopBox from "../../components/TopBox";
 import axios from "axios";
 import { useRedirectSign } from "../../hooks/RedirectSign";
 
 const SignUpForm = () => { 
-  useRedirectSign("loggedIn");
+  useRedirectSign();
   const [signUpData, setSignUpData] = useState({
     username: "",
     password1: "",

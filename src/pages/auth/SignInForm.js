@@ -1,10 +1,12 @@
+/* Page to sign the user in
+ * Set the CurrentUser Context
+ * Set the TokenTimestamp */
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import door from "../../assets/door.png";
 import rightdoor from "../../assets/rightdoor.png";
 import styles from "../../styles/SignInUpForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
-
 import Form from "react-bootstrap/Form";
 import Alert from "react-bootstrap/Alert";
 import Button from "react-bootstrap/Button";
@@ -20,8 +22,8 @@ import { useRedirectSign } from "../../hooks/RedirectSign";
 import { setTokenTimestamp } from "../../utils/utils";
 
 const SignInForm = () => {
+  useRedirectSign();
   const setCurrentUser = useSetCurrentUser();
-  useRedirectSign("loggedIn");
 
   const [signInData, setSignInData] = useState({
     username: "",

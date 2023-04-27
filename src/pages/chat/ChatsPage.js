@@ -1,11 +1,14 @@
+/* Page to fetch all Chats data and render the cover info 
+ * Contains the Chat component to which it passes the data
+   for each Chat cover 
+ * Contains links to fetch all the liked chats and feed by 
+   followed profiles */
 import React, { useState } from "react";
-
 import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 import { fetchMoreData } from "../../utils/utils";
-
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
 import Button from "react-bootstrap/Button";
@@ -19,8 +22,10 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import ChatTop from "./ChatTop";
 import TopBox from "../../components/TopBox";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
+import useRedirect from "../../hooks/Redirect";
 
 function ChatsPage({message, filter=""} ) {
+  useRedirect();
   const [chat, setChat] = useState({ results: [] });
   const [hasLoaded, setHasLoaded] = useState(false);
   const { pathname } = useLocation();

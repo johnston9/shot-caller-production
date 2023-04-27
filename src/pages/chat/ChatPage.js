@@ -1,5 +1,7 @@
+/* Page to fetch the data for each Chat and it's Comments
+ * Contains the Chat Component to which it passes the data
+ * Note: The Chat to which a Comment is associated is actually called post */
 import React, { useEffect, useState } from "react";
-
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
@@ -15,16 +17,15 @@ import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Asset from "../../components/Asset";
 import { fetchMoreData } from "../../utils/utils";
-// import { useRedirect } from "../../hooks/Redirect";
+import useRedirect from "../../hooks/Redirect";
 
 function ChatPage() {
-  // useRedirect("loggedOut");
+  useRedirect();
   const { id } = useParams();
   const history = useHistory();
-  const [chat, setChat] = useState({ results: [] });
-
   const currentUser = useCurrentUser();
   const profile_image = currentUser?.profile_image;
+  const [chat, setChat] = useState({ results: [] });
   const [comments, setComments] = useState({ results: [] });
 
   useEffect(() => {

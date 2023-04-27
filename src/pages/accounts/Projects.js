@@ -1,28 +1,21 @@
+/* Component in the Account component to fetch a users Projects data
+ * Contains the Project component to which it passes the data for each project */
 import React, { useState } from "react";
-
 import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
-
-import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
-import Button from "react-bootstrap/Button";
 import styles from "../../styles/ChatsPage.module.css";
 import NoResults from "../../assets/no-results.png";
-import { useHistory } from 'react-router-dom';
 import { useEffect } from "react";
 import { axiosReq } from "../../api/axiosDefaults";
 import Asset from "../../components/Asset";
-import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import Project from "./Project";
 
 const Projects = ({id} ) => {
   const [hasLoaded, setHasLoaded] = useState(false);
   const [projects, setProjects] = useState({ results: [] });
-  const history = useHistory();
-  const currentUser = useCurrentUser();
-//   const profile_id = currentUser?.profile_id || '';
   // eslint-disable-next-line
   const [error, setErrors] = useState({});
   const [query, setQuery] = useState("");
@@ -48,7 +41,8 @@ const Projects = ({id} ) => {
       clearTimeout(timer);
     };
 
-  }, [query]);
+  }, [query,id]);
+
   return (
     <div className="px-3">
     <Row>

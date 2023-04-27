@@ -5,8 +5,6 @@ import styles from "../../styles/Home.module.css";
 import appStyles from "../../App.module.css";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import pic from "../../assets/fight.png";
-// eslint-disable-next-line 
 import calltop from "../../assets/calltop.png";
 import caltopmo from "../../assets/caltopmo.png";
 import callocdesk from "../../assets/callocdesk.png";
