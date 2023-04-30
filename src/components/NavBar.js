@@ -1,4 +1,7 @@
-/* NavBar Component */  
+/* NavBar Component
+ * Currently the activeClassName item is working but is throwing an
+   error in the console so is commented out on each link
+   Am looking for a way to resolve this issue */  
 import React from 'react';
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import logo from "../assets/logo1.png";
@@ -45,7 +48,7 @@ const NavBar = () => {
     }
     ref={refw}
     id="nav-dropdown1"
-    activeClassName={styles.Active}
+    // activeClassName={styles.Active}
     className={`mt-1 ${styles.NavLink} `}
     >
     <NavDropdown.Item >
@@ -103,7 +106,7 @@ const NavBar = () => {
     }
     ref={reff}
     id="nav-dropdown2"
-    activeClassName={styles.Active}
+    // activeClassName={styles.Active}
     className={`mt-1 ${styles.NavLink} `}
     >
     <NavDropdown.Item >

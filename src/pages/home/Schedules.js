@@ -7,7 +7,7 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 // eslint-disable-next-line 
 import shed1 from "../../assets/shed1.png";
-import schinfo from "../../assets/schinfo.png";
+import strip1 from "../../assets/strip1.png";
 import schedchar77 from "../../assets/schedchar77.png";
 import schadd from "../../assets/schadd.png";
 import btnStyles from "../../styles/Button.module.css";
@@ -37,8 +37,10 @@ const Schedules = () => {
       <Row className="mt-1 mt-md-3 pb-4 px-3 d-flex align-items-center justify-content-center">
       <Col xs={12} md={{span: 3, offset: 1 }} className="text-center px-1 px-md-3" >
       <p >
-      Create easy to read Stripboards in minutes and re-order them in a flash
-      </p>
+      Create easy to read Stripboards in minutes</p>
+      <p >
+      Edit them by the edit button 
+      and re-order then in a flash by the re-order button.</p>
       </Col>
       <Col xs={12} md={8}>
       <div className="text-center px-1 px-md-3">
@@ -59,8 +61,9 @@ const Schedules = () => {
       <Col xs={12} md={{span: 3, offset: 0 }}
       className="text-center px-1 px-md-3" >
       <p >
-      This is done in a flash by firstly selecting a scenes from the Act or 
-      Location menus to autogenerate Stripboard Scenes with the Scene Breakdown Info 
+      This is done by selecting scenes from the Act or 
+      Location menus to autogenerate Stripboard Scenes from
+      the Scene Breakdown, Character and BG Info and
       then adding the Shooting Info
       </p>
       </Col>
@@ -70,15 +73,12 @@ const Schedules = () => {
       <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
       <Col xs={12} md={{span: 3, offset: 1 }}
         className="text-center px-1 px-md-3" >
-      <p >
-      The Scene Shooting Info can be edited quickly by the edit button 
-      and the scene can be re-ordered even quicker by the re-order button.</p>
       <p> Open the Scene Info box for extra Info 
       </p>
       </Col>
       <Col xs={12} md={8}>
       <div className="text-center px-1 px-md-3">
-      <Image src={schinfo} alt="image" 
+      <Image src={strip1} alt="image" 
         className={` ${styles.FeatureImage}`} />
       </div>
       </Col>

@@ -5,10 +5,13 @@ import styles from "../../styles/Home.module.css";
 import appStyles from "../../App.module.css";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
+import email4 from "../../assets/email4.png";
+import top2 from "../../assets/top2.png";
 import calltop from "../../assets/calltop.png";
 import caltopmo from "../../assets/caltopmo.png";
 import callocdesk from "../../assets/callocdesk.png";
 import callocmo from "../../assets/callocmo.png";
+import shedcast5 from "../../assets/shedcast5.png";
 import calshed2 from "../../assets/calshed2.png";
 import calshedmo2 from "../../assets/calshedmo2.png";
 import adshed from "../../assets/adshed.png";
@@ -52,7 +55,7 @@ const Callsheets = () => {
       </Col>
       <Col xs={12} md={8}>
       <div className="text-center px-1 px-md-3">
-      <Image src={calltop} alt="image" 
+      <Image src={top2} alt="image" 
         className={` ${styles.FeatureImage}`} />
       </div>
       </Col>
@@ -233,7 +236,7 @@ const Callsheets = () => {
       <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
       <Col xs={12} md={8}>
       <div className="text-center px-1 px-md-3">
-      <Image src={call2} alt="image" 
+      <Image src={shedcast5} alt="image" 
         className={` ${styles.FeatureImage}`} />
       </div>
       </Col>
@@ -242,8 +245,26 @@ const Callsheets = () => {
       <p >
       View the Add Cast and Add BG / Stand-Ins forms beside the Schedule for 
       maximum efficiency. Open each Scene's "Cast" box to find 
-      which cast members to add.
+      which cast members and BG to add.
       </p>
+      </Col>
+      </Row>
+      {/* emails */}
+      <Row className="mt-1 mt-md-3 pb-4 px-3 d-flex align-items-center justify-content-center">
+      <Col xs={12} md={{span: 3, offset: 1 }} className="text-center px-1 px-md-1" >
+      <p >
+       Once a Callsheet is complete simply click the Send button to Send
+       a group email to all Crew members and the relevant Cast members</p>
+       <p>
+       This email automatically includes a link to the Callsheet url and
+       Shootday and Company info.
+      </p>
+      </Col>
+      <Col xs={12} md={8}>
+      <div className="text-center px-1 px-md-3">
+      <Image src={email4} alt="image" 
+        className={` ${styles.FeatureImage}`} />
+      </div>
       </Col>
       </Row>
       <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>

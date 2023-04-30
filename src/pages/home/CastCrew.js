@@ -5,7 +5,6 @@ import styles from "../../styles/Home.module.css";
 import appStyles from "../../App.module.css";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import pic from "../../assets/fight.png";
 // eslint-disable-next-line 
 import crewaddview from "../../assets/crewaddview.png";
 import calact from "../../assets/calact.png";
@@ -38,7 +37,10 @@ const CastCrew = () => {
       <p >
        Add the Crew easily with the Departments dropdown. Each Department 
        page contains that Department's main positions and five additional
-       positions. All Crew added it automatically display on the Callsheet 
+       positions. 
+       </p>
+       <p>
+       All Crew added are automatically displayed on the Callsheet 
        Create page, all you have to do is add the Calltime.
       </p>
       </Col>
@@ -61,43 +63,12 @@ const CastCrew = () => {
     <Col xs={12} md={{span: 3, offset: 0 }}
     className="text-center px-1 px-md-3" >
     <p >
-    Add the Cast to their Character page
+    Add the Cast member to their Character page along with their
+    personal details and pickup/commute info.
     </p>
     </Col>
     </Row>
     <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
-    {/* three  */}
-    <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
-    <Col xs={12} md={{span: 3, offset: 1 }}
-      className="text-center px-1 px-md-3" >
-    <p >
-    Use Requirements and Workspace Posts to 
-    collaborate on the Scene
-    </p>
-    </Col>
-    <Col xs={12} md={8}>
-    <div className="text-center px-1 px-md-3">
-    <Image src={pic} alt="image" 
-      className={` ${styles.FeatureImage}`} />
-    </div>
-    </Col>
-    </Row>
-    <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
-    {/* four */}
-    <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
-    <Col xs={12} md={8}>
-    <div className="text-center px-1 px-md-3">
-    <Image src={pic} alt="image" 
-      className={` ${styles.FeatureImage}`} />
-    </div>
-    </Col>
-    <Col xs={12} md={{span: 3, offset: 0 }}
-      className="text-center px-1 px-md-3" >
-    <p >
-    Upload Ideas and Images in Posts each with a Comments Section
-    </p>
-    </Col>
-    </Row>
     </div>
   )
 }
