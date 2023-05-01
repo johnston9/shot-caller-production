@@ -64,11 +64,11 @@ const Home = () => {
                 Breakdowns / Workspaces
                 </p>
                 </Col>
-                {/* Moodboards / Script */}
+                {/* Moodboards / Indexshots */}
                 <Col mx={6} >
                 <p className={`${styles.Depts}`}
                   onClick={() => history.push('/moodboards')}>
-                Moodboards / Script
+                Moodboards / Indexshots
                 </p>
                 </Col>
                 </Row>
@@ -77,7 +77,7 @@ const Home = () => {
                 <Col xs={6} >
                 <span className={`${styles.Depts}`}
                   onClick={() => history.push('/shotstory')} >
-                Shotlists / Storyboards
+                Storyboard / Shotlists / Script
                 </span>
                 </Col>
                 <Col mx={6}>
@@ -253,11 +253,11 @@ const Home = () => {
           className={`${styles.FeatureLink} d-flex align-items-center 
            justify-content-center`}>
         <Col xs={9} className="text-center" >
-        <h4>Moodboards and Script</h4>
+        <h4>Moodboards and Indexshots</h4>
         <p >
-        Use Moodboards to guide and design, interlinking Scenes,
-        Characters and Locations. Add the Scene Script
-        to each Scene Page.
+        Use Moodboards to guide and design Scenes,
+        Characters and Locations. Use Indexshots to design sequences
+        and previs visual style flow.
         </p>
         </Col>
         <Col xs={3} >
@@ -291,10 +291,10 @@ const Home = () => {
         </div>
         </Col>
         <Col xs={9} className="text-center" >
-        <h4>Shotlists and Storyboards</h4>
+        <h4>Storyboard, Shotlist and Script</h4>
         <p >
-        Create the Shotlists in the Scene Page and add the 
-        Storyboard.
+        Create the Shotlist in the Scene Page and add the 
+        Storyboard and the Scene Script.
         </p>
         </Col>
         </div>

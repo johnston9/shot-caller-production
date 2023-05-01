@@ -19,7 +19,7 @@ const CharsLocates = () => {
   return (
     <div className={`mt-0 ${styles.BlueBody}`}>
     <div className={`mt-0 ${styles.Overview}`}>
-    <h2 className={`pb-1 ${styles.OverviewText} ${appStyles.playfair}
+    <h2 className={`py-2 ${styles.OverviewText} ${appStyles.playfair}
      text-center`} >Characters and Locations</h2>
     </div>
     <Row className="mt-1 ml-2" >

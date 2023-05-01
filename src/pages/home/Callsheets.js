@@ -7,7 +7,6 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import email4 from "../../assets/email4.png";
 import top2 from "../../assets/top2.png";
-import calltop from "../../assets/calltop.png";
 import caltopmo from "../../assets/caltopmo.png";
 import callocdesk from "../../assets/callocdesk.png";
 import callocmo from "../../assets/callocmo.png";
@@ -18,7 +17,6 @@ import adshed from "../../assets/adshed.png";
 import caltal from "../../assets/caltal.png";
 import calcrew from "../../assets/calcrew.png";
 import calnotes from "../../assets/calnotes.png";
-import call2 from "../../assets/call2.png";
 import call3 from "../../assets/call3.png";
 import btnStyles from "../../styles/Button.module.css";
 import Button from "react-bootstrap/Button";
@@ -30,7 +28,7 @@ const Callsheets = () => {
     return (
       <div>
       <div className={`mt-0 ${styles.Overview}`}>
-      <h2 className={`pb-0 ${styles.OverviewText} ${appStyles.playfair}
+      <h2 className={`py-2 ${styles.OverviewText} ${appStyles.playfair}
        text-center`} >Callsheets</h2>
       </div>
       <Row className="mt-1 ml-2" >

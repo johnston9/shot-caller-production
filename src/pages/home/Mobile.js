@@ -19,7 +19,7 @@ const Mobile = () => {
     return (
       <div>
       <div className={`mt-0 ${styles.Overview}`}>
-      <h2 className={`pb-0 ${styles.OverviewText} ${appStyles.playfair}
+      <h2 className={`py-2 ${styles.OverviewText} ${appStyles.playfair}
        text-center`} >Moblile View and Quick Find</h2>
       </div>
       <Row className="mt-1 ml-2" >

@@ -5,7 +5,6 @@ import styles from "../../styles/Home.module.css";
 import appStyles from "../../App.module.css";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-// eslint-disable-next-line 
 import shed1 from "../../assets/shed1.png";
 import strip1 from "../../assets/strip1.png";
 import schedchar77 from "../../assets/schedchar77.png";
@@ -20,7 +19,7 @@ const Schedules = () => {
     return (
       <div>
       <div className={`mt-0 ${styles.Overview}`}>
-      <h2 className={`pb-0 ${styles.OverviewText} ${appStyles.playfair}
+      <h2 className={`py-2 ${styles.OverviewText} ${appStyles.playfair}
        text-center`} >Schedules and Stripboards</h2>
       </div>
       <Row className="mt-1 ml-2" >

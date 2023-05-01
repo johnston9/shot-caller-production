@@ -5,7 +5,6 @@ import styles from "../../styles/Home.module.css";
 import appStyles from "../../App.module.css";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import break2 from "../../assets/break2.png";
 import mood8 from "../../assets/mood8.png";
 import mood2 from "../../assets/mood2.png";
 import mood1a from "../../assets/mood1a.png";
@@ -19,8 +18,8 @@ const Moodboards = () => {
   return (
     <div className={`mt-0 ${styles.BlueBody}`}>
     <div className={`${styles.Overview}`}>
-    <h2 className={`pb-1 ${styles.OverviewText} ${appStyles.playfair}
-     text-center`} >Moodboards and Script</h2>
+    <h2 className={`py-2 ${styles.OverviewText} ${appStyles.playfair}
+     text-center`} >Moodboards and Indexshots</h2>
     </div>
     <Row className="mt-1 ml-2" >
         <Col xs={3}>
@@ -87,21 +86,22 @@ const Moodboards = () => {
     </Col>
     </Row>
     <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
-    {/* scipt */} 
+    {/* 2  */} 
     <Row className="px-3 mt-4 pb-4 d-flex align-items-center justify-content-center">
     <Col xs={12} md={{span: 3, offset: 1 }}
       className="text-center px-1 px-md-3" >
     <p >
-    Add the Scene script to the Scene page along with
-    changes details and notes.
+    Use Indexshots to pre-visualize sequences in terms of action, style,
+    colour or shots. 
     </p>
-    <p>
-      The whole Script can be added to the Scenes page.
+    <p> Use then to pre-visualize any aspect of the whole project
+    displaying in rows on desktop or as a single frame on mobile that can be
+    flipped along to create a mini moving sequence.
     </p>
     </Col>
     <Col xs={12} md={8}>
     <div className="text-center px-1 px-md-3">
-    <Image src={break2} alt="image" 
+    <Image src={mood8} alt="image" 
       className={` ${styles.FeatureImage}`} />
     </div>
     </Col>

@@ -5,7 +5,6 @@ import styles from "../../styles/Home.module.css";
 import appStyles from "../../App.module.css";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-// eslint-disable-next-line 
 import crewaddview from "../../assets/crewaddview.png";
 import calact from "../../assets/calact.png";
 import btnStyles from "../../styles/Button.module.css";
@@ -18,7 +17,7 @@ const CastCrew = () => {
   return (
     <div>
     <div className={`mt-0 ${styles.Overview}`}>
-    <h2 className={`pb-0 ${styles.OverviewText} ${appStyles.playfair}
+    <h2 className={`py-2 ${styles.OverviewText} ${appStyles.playfair}
      text-center`} >Cast and Crew</h2>
     </div>
     <Row className="mt-1 ml-2" >

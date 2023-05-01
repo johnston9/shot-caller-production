@@ -6,6 +6,7 @@ import styles from "../../styles/Home.module.css";
 import appStyles from "../../App.module.css";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
+import break2 from "../../assets/break2.png";
 import story1 from "../../assets/story1.png";
 import shot1 from "../../assets/shot1.png";
 import shot2 from "../../assets/shot2.png";
@@ -22,8 +23,8 @@ const ShotStory = () => {
   return (
     <div className={`mt-0 ${styles.BlueBody}`}>
     <div className={`mt-0 ${styles.Overview}`}>
-    <h2 className={`pb-1 ${styles.OverviewText} ${appStyles.playfair}
-     text-center`} >Shotlists and Storyboards</h2>
+    <h2 className={`py-2 ${styles.OverviewText} ${appStyles.playfair}
+     text-center`} >Storyboard, Shotlist and Script</h2>
     </div>
     <Row className="mt-1" >
         <Col xs={3}>
@@ -117,7 +118,7 @@ const ShotStory = () => {
     </Col>
     </Row>
     <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
-    {/* three  */}
+    {/* story/shotlist  */}
     <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
     <Col xs={12} md={{span: 3, offset: 1 }}
       className="text-center" >
@@ -134,6 +135,25 @@ const ShotStory = () => {
     </Col>
     </Row>
     <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
+    {/* scipt */} 
+    <Row className="px-3 mt-4 pb-4 d-flex align-items-center justify-content-center">
+    <Col xs={12} md={8}>
+    <div className="text-center px-1 px-md-3">
+    <Image src={break2} alt="image" 
+      className={` ${styles.FeatureImage}`} />
+    </div>
+    </Col>
+    <Col xs={12} md={{span: 3, offset: 0 }}
+      className="text-center px-1 px-md-3" >
+    <p >
+    Add the Scene script to the Scene page along with
+    changes details and notes.
+    </p>
+    <p>
+      The whole Script can be added to the Scenes page.
+    </p>
+    </Col>
+    </Row>
     </div>
   )
 }

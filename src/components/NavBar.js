@@ -68,7 +68,7 @@ const NavBar = () => {
     ref={refw1}
     to="/moodboards"
     >
-    <i className="navicon fas fa-play"></i>Moodboards / Script
+    <i className="navicon fas fa-play"></i>Moodboards / Indexshots
     </NavLink>
     </NavDropdown.Item>
     <NavDropdown.Item >
@@ -76,9 +76,9 @@ const NavBar = () => {
     className={`mt-2 ${styles.NavLink} `}
     activeClassName={styles.Active}
     ref={refw4}
-    to="shotstory"
+    to="shotstory" Indexshots
     >
-    <i className="navicon fas fa-play"></i>Shotlists / Storyboards 
+    <i className="navicon fas fa-play"></i>Storyboard / Shotlist / Script
     </NavLink>
     </NavDropdown.Item>
     <NavDropdown.Item >
@@ -221,7 +221,7 @@ const NavBar = () => {
   );
 
   return (
-    <Navbar expanded={expanded} className={styles.NavBar} 
+    <Navbar expanded={expanded} className={`${styles.NavBar} `} 
       expand="lg" fixed="top">
         <NavLink to="/landing">
           <Navbar.Brand>
