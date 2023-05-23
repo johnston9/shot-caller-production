@@ -2,3 +2,13 @@
     background-color: aqua;
     color: #fff;
 }
+
+.BudgetLink {
+    background-color: #33e6e0;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.Overview {   
+	background-color: #fff;
+}

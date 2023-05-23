@@ -1,13 +1,15 @@
-/* Component in the Projects Component to display a Project data */
+/* Component in the Projects Component to display a Project's data */
 import React from 'react';
 import Card from "react-bootstrap/Card";
+import btnStyles from "../../styles/Button.module.css";
+import Button from "react-bootstrap/Button";
 import styles from "../../styles/Account.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { axiosRes } from '../../api/axiosDefaults';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import { UniDropdown } from '../../components/UniDropDown';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 const Project = ({id, name, stripe_id, company, owner, owner_name, profile_id} ) => {
     const currentUser = useCurrentUser();
@@ -55,6 +57,21 @@ const Project = ({id, name, stripe_id, company, owner, owner_name, profile_id} )
                     {stripe_id && <Card.Text>Stripe Id: {stripe_id}</Card.Text>}
                     {owner_name && <Card.Text>Account Holder Name: {owner_name}</Card.Text>}
                     {profile_id && <Card.Text>Account Holder Id: {profile_id}</Card.Text>}
+                    <Row className="mt-1" >
+                    <Col xs={6}>
+                    <Link to={`/budgets/${id}`}>
+                    <div className={`px-1`}>
+                    <p className={ `${styles.BudgetLink} pl-3`}>Budget</p>
+                    </div>
+                    </Link>
+                    {/* <Button
+                      className={`${btnStyles.Button} ${btnStyles.Blue} mb-2`}
+                      onClick={() => history.goBack()}
+                    >
+                      Budget
+                    </Button> */}
+                    </Col>
+                    </Row>
                 </Card.Body>
                 <hr />
                 {/* <Row className='mb-2'>

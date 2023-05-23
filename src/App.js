@@ -26,6 +26,9 @@ import Schedules from "./pages/home/Schedules";
 import Callsheets from "./pages/home/Callsheets";
 import Mobile from "./pages/home/Mobile";
 import AccountPage from "./pages/accounts/AccountPage";
+import BudgetPage from "./pages/accounts/BudgetPage";
+import BudgetCreate from "./pages/accounts/BudgetCreate";
+import BudgetEdit from "./pages/accounts/BudgetEdit";
 
 function App() {
   const currentUser = useCurrentUser()
@@ -84,6 +87,10 @@ function App() {
           <Route exact path="/chat/:id" render={() => <ChatPage />} />
           {/* accounts */}
           <Route exact path="/accounts/:id" render={() => <AccountPage />} />
+          {/* budgets */}
+          <Route exact path="/budgets/:id" render={() => <BudgetPage />} />
+          <Route exact path="/budgets/create/:id" render={() => <BudgetCreate />} />
+          <Route exact path="/budgets/edit/:id" render={() => <BudgetEdit />} />
           {/* profiles */}
           <Route exact path="/profiles" render={() => <ProfilesPage /> } />
           <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
