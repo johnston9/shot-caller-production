@@ -48,13 +48,17 @@ function ChatPage() {
 
   return (
     <div>
+    <Row>
+    <Col>
     <Button
       className={`${btnStyles.Button} ${btnStyles.Blue} mb-2`}
       onClick={() => history.goBack()}
     >
       Back
     </Button>
-    <Row className="h-100">
+    </Col>
+    </Row>
+        <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" >
         <Chat {...chat.results[0]} setChat={setChat} postPage />
         <Container className={appStyles.Content}>

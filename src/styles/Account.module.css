@@ -1,6 +1,30 @@
-.ProTop {
-    background-color: aqua;
+.Top {
+    background-color: #1ea7ae;
     color: #fff;
+  }
+
+.TopCompany {
+    /* font-size: 1.25rem; */
+    color: #fff;
+}
+
+
+.TopName {
+    font-size: 1.25rem;
+    color: #fff;
+}
+
+.Top i {
+    color: #fff;
+}
+
+.ProTop {
+    background-color: #3b444b;
+    color: #fff;
+}
+
+.ProTop i {
+    color: #fff; 
 }
 
 .BudgetLink {

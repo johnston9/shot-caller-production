@@ -4,7 +4,6 @@ import { Route, Switch } from "react-router-dom";
 import "./api/axiosDefaults";
 import SignUpForm from "./pages/auth/SignUpForm";
 import SignInForm from "./pages/auth/SignInForm";
-import ChatCreateForm from "./pages/chat/ChatCreateForm";
 import ChatPage from "./pages/chat/ChatPage";
 import ChatsPage from "./pages/chat/ChatsPage";
 import { useCurrentUser } from "./contexts/CurrentUserContext";
@@ -29,6 +28,7 @@ import AccountPage from "./pages/accounts/AccountPage";
 import BudgetPage from "./pages/accounts/BudgetPage";
 import BudgetCreate from "./pages/accounts/BudgetCreate";
 import BudgetEdit from "./pages/accounts/BudgetEdit";
+import NeedToSignIn from "./pages/chat/NeedToSignIn";
 
 function App() {
   const currentUser = useCurrentUser()
@@ -53,8 +53,8 @@ function App() {
           <Route exact path="/schedule" render={() => <Schedules /> } />
           <Route exact path="/callsheets" render={() => <Callsheets /> } />
           <Route exact path="/mobile" render={() => <Mobile /> } />
-          {/* chat */}
-          <Route exact path="/chat/create" render={() => <ChatCreateForm />} />
+          {/* chat  */}
+          <Route exact path="/needtosignin" render={() => <NeedToSignIn />} />
           <Route exact path="/chat/edit/:id" render={() => <ChatEditForm />} />
           <Route 
             exact 

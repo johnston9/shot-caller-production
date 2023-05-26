@@ -18,7 +18,7 @@ import { axiosReq } from "../../api/axiosDefaults";
 import Asset from "../../components/Asset";
 import { useRedirect } from "../../hooks/Redirect";
 
-function ChatCreateForm() {
+function ChatCreateForm({setShow}) {
   useRedirect();
   const [errors, setErrors] = useState({});
 
@@ -89,11 +89,10 @@ function ChatCreateForm() {
   );
 
   const buttons = (
-    <div className="text-center mt-3">    
+    <div className="text-center my-3">    
       <Button
         className={`${btnStyles.Button} ${btnStyles.Blue} px-5 mr-3`}
-        onClick={() => history.goBack()}
-        // onClick={() => setShow(show => !show)} 
+        onClick={() => setShow(show => !show)} 
       >
         Cancel
       </Button>
@@ -125,7 +124,7 @@ function ChatCreateForm() {
   };
 
   return (
-    <div className={`${styles.Back} mt-3`} >
+    <div className={`${styles.Back} my-3`} >
        <h5 style={{ textTransform: 'uppercase'}} 
           className={`mt-1 mb-1 pl-3 py-1 ${styles.SubTitle } text-center`}>
           CREATE CHAT

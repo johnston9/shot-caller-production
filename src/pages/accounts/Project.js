@@ -34,7 +34,7 @@ const Project = ({id, name, stripe_id, company, owner, owner_name, profile_id} )
             <Row className="d-flex align-items-center">
                 <Col xs={2}></Col>
                 <Col className='text-center' xs={8} >
-                <h5 style={{ fontWeight: '700', textTransform: 'capitalize'}} 
+                <h5 style={{ fontWeight: '500', color: '#fff', textTransform: 'capitalize'}} 
                     className='ml-1 ml-md-3'> {name} </h5>         
                 </Col>                    
                 <Col xs={2} 

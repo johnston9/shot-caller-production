@@ -14,7 +14,7 @@ import { Link, useHistory } from 'react-router-dom';
 
 const Budget = ({budget, name, id} ) => {
   return (
-    <div>
+    <div >
     <div className={`${styles.Overview}`}>
     <h2 className={`py-2 ${styles.OverviewText} ${appStyles.playfair}
      text-center`} >{name} Budget </h2>

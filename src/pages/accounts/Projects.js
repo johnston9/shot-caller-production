@@ -6,7 +6,7 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 import appStyles from "../../App.module.css";
-import styles from "../../styles/ChatsPage.module.css";
+import styles from "../../styles/Account.module.css";
 import NoResults from "../../assets/no-results.png";
 import { useEffect } from "react";
 import { axiosReq } from "../../api/axiosDefaults";
@@ -61,7 +61,7 @@ const Projects = ({id} ) => {
             placeholder="Search"
           />
         </Form>
-        </Col>
+      </Col>
     </Row>
     {/* projects */}
     <Row className="px-5">
@@ -69,8 +69,8 @@ const Projects = ({id} ) => {
         <>
         {projects.results.length ? (
             projects.results.map((proj) => (
-            <Col xs={6} md={4} 
-            className="py-2 p-0 mx-0">
+            <Col xs={12} md={4} 
+            className="">
             <Project key={proj.id} {...proj} />
             </Col>
             ))) 

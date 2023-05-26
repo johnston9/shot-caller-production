@@ -22,12 +22,14 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import ChatTop from "./ChatTop";
 import TopBox from "../../components/TopBox";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import useRedirect from "../../hooks/Redirect";
+import useRedirectSign from "../../hooks/RedirectChat";
+import ChatCreateForm from "./ChatCreateForm";
 
 function ChatsPage({message, filter=""} ) {
-  useRedirect();
+  useRedirectSign();
   const [chat, setChat] = useState({ results: [] });
   const [hasLoaded, setHasLoaded] = useState(false);
+  const [show, setShow] = useState(false);
   const { pathname } = useLocation();
   const history = useHistory();
   const currentUser = useCurrentUser();
@@ -60,19 +62,9 @@ function ChatsPage({message, filter=""} ) {
   return (
     <div className="mx-md-5">
       <TopBox title="Chat"/>
-    {/* <Row>
-    <Col xs={3}>
-    <Button
-      className={`${btnStyles.Button} ${btnStyles.Blue} mb-2`}
-      onClick={() => history.goBack()}
-    >
-      Back
-    </Button>
-    </Col>
-    </Row> */}
     <div>
     <Row className="mt-3" >
-    <Col xs={3}>
+    <Col xs={3} >
     <Button
       className={`${btnStyles.Button} ${btnStyles.Blue} mb-2`}
       onClick={() => history.goBack()}
@@ -105,6 +97,23 @@ function ChatsPage({message, filter=""} ) {
     </Button>
     </Col>
     </Row>
+    {/* create */}
+    <Row className="px-3">
+      <Col className="text-center">
+      <Button
+          className={`${btnStyles.Button} ${btnStyles.Blue} mb-2`}
+          onClick={() => setShow(show => !show)} >
+          Add Chat
+      </Button>
+      </Col>
+    </Row>
+    {show ? (
+              <ChatCreateForm
+                setShow={setShow}
+              />
+            ) : (
+              ""
+            )}
     <Row>
       <Col className="py-2 p-0 p-lg-2" 
         xs={{span: 10, offset: 1}} md={{span: 6, offset: 3}} >

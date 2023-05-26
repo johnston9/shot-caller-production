@@ -41,7 +41,7 @@ const BudgetPage = () => {
   }, [id]);
 
   return (
-    <div>
+    <div className='mt-3'>
     <Row className="mt-1 ml-2" >
         <Col xs={3}>
         <Button

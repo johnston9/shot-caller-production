@@ -255,14 +255,6 @@ const NavBar = () => {
           >
             <i className="fas fa-play"></i>Chat
           </NavLink>
-          {/* add chat */}
-          <NavLink
-            className={`mt-2 pt-1 mx-2 ${styles.NavLink}`}
-            activeClassName={styles.Active}
-            to="/chat/create"
-          >
-            <i className="far fa-plus-square"></i>Chat Add
-          </NavLink>
             {currentUser ? loggedInIcons : loggedOutIcons}
           </Nav>
         </Navbar.Collapse>
