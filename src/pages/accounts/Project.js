@@ -58,10 +58,10 @@ const Project = ({id, name, stripe_id, company, owner, owner_name, profile_id} )
                     {owner_name && <Card.Text>Account Holder Name: {owner_name}</Card.Text>}
                     {profile_id && <Card.Text>Account Holder Id: {profile_id}</Card.Text>}
                     <Row className="mt-1" >
-                    <Col xs={6}>
+                    <Col >
                     <Link to={`/budgets/${id}`}>
                     <div className={`px-1`}>
-                    <p className={ `${styles.BudgetLink} pl-3`}>Budget</p>
+                    <p className={ `${styles.BudgetLink} px-md-5 mx-1`}>Budget</p>
                     </div>
                     </Link>
                     {/* <Button

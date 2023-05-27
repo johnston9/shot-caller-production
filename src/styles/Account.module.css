@@ -35,4 +35,9 @@
 
 .Overview {   
 	background-color: #fff;
+    font-weight: 700;
+}
+
+.Bold {
+    font-weight: 700;
 }
