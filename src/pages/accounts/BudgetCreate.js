@@ -29,6 +29,7 @@ function BudgetCreate() {
     shoot: "",
     wrap: "",
     post: "",
+    length_total: "",
     // above the line
     // rights
     story_rights: "",
@@ -40,13 +41,21 @@ function BudgetCreate() {
     // details
     title, series, prodco, format, location, dated, 
     // length
-    research, prep, shoot, wrap, post,
+    research, prep, shoot, wrap, post, length_total,
     // above the line
     // rights
     story_rights,
     miscellaneous,
     rights_total,
   } = postData;
+
+  const handleChangeLength = (event) => {
+    setPostData({
+      ...postData,
+      [event.target.name]: event.target.value,
+    });
+    // function to add all lengths on change here
+  };
 
   const handleChange = (event) => {
     setPostData({
@@ -239,7 +248,7 @@ function BudgetCreate() {
     {/* Prep */}
     <Row>
     <Col md={4}>
-    <p>prep</p>
+    <p>Prep</p>
     </Col>
     <Col md={4}>
     <Form.Group controlId="prep" 
@@ -249,7 +258,7 @@ function BudgetCreate() {
         className={styles.Input}
         name="prep"
         value={prep}
-        onChange={handleChange}
+        onChange={handleChangeLength}
             />
     </Form.Group>
     {errors?.prep?.map((message, idx) => (
@@ -331,6 +340,32 @@ function BudgetCreate() {
             />
     </Form.Group>
     {errors?.post?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={4}>
+    <p>Weeks</p>
+    </Col>
+    </Row>
+    {/* Length Total */}
+    <Row>
+    <Col md={4}>
+    <p>TOTAL</p>
+    </Col>
+    <Col md={4}>
+    <Form.Group controlId="length_total" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="length_total"
+        value={length_total}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.length_total?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
@@ -536,6 +571,7 @@ function BudgetCreate() {
     formData.append("shoot", shoot);
     formData.append("wrap", wrap);
     formData.append("post", post);
+    formData.append("length_total", length_total);
     // ABOVE THE LINE
     // rights miscellaneous
     formData.append("story_rights", story_rights);

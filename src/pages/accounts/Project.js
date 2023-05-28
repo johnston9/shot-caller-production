@@ -30,7 +30,7 @@ const Project = ({id, name, stripe_id, company, owner, owner_name, profile_id} )
   return (
     <div>
     <Card className='mb-3' >
-            <Card.Body className={`${styles.ProTop} py-3`} >
+            <Card.Body className={`${styles.ProTop} py-2`} >
             <Row className="d-flex align-items-center">
                 <Col xs={2}></Col>
                 <Col className='text-center' xs={8} >
@@ -49,19 +49,20 @@ const Project = ({id, name, stripe_id, company, owner, owner_name, profile_id} )
             </Row>
             </Card.Body>
                 {/* end new */}
-                <Card.Body className='py-1'  >
+                <Card.Body className='py-0'  >
                     {company && <p style={{ fontStyle: 'italic' }}
-                    className="mb-0 mt-4 pb-0 text-center">{company}</p>}
-                    <hr />
+                    className="mb-0 mt-2 pb-0 text-center">{company}</p>}
+                    <hr className='my-2' />
                     {id && <Card.Text>Project Id: {id}</Card.Text>}
                     {stripe_id && <Card.Text>Stripe Id: {stripe_id}</Card.Text>}
-                    {owner_name && <Card.Text>Account Holder Name: {owner_name}</Card.Text>}
-                    {profile_id && <Card.Text>Account Holder Id: {profile_id}</Card.Text>}
+                    {/* {owner_name && <Card.Text>Account Holder Name: {owner_name}</Card.Text>}
+                    {profile_id && <Card.Text>Account Holder Id: {profile_id}</Card.Text>} */}
+                    <Card.Text>URL: www.........</Card.Text>
                     <Row className="mt-1" >
                     <Col >
                     <Link to={`/budgets/${id}`}>
-                    <div className={`px-1`}>
-                    <p className={ `${styles.BudgetLink} px-md-5 mx-1`}>Budget</p>
+                    <div className={`text-center`}>
+                    <span className={ `${styles.BudgetLink} px-md-5 mx-1`}>Budget</span>
                     </div>
                     </Link>
                     {/* <Button
