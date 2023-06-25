@@ -18,6 +18,7 @@ const BudgetPage = () => {
   const [name, setName] = useState("");
   const { id } = useParams();
   const history = useHistory();
+  console.log(typeof id)
 
   useEffect(() => {
     const fetchBudget = async () => {

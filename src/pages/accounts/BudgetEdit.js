@@ -1,4 +1,4 @@
-/* Component in the Account component to create Projects */
+/* Component in the Account component to edit Budgets */
 import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";

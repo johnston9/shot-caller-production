@@ -1,5 +1,5 @@
-/* Component in the Account component to create Projects */
-import React, { useState } from "react";
+/* Component in the Account component to create Budgets */
+import React, { useEffect, useState } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
@@ -15,7 +15,9 @@ function BudgetCreate() {
   const history = useHistory();
   const { id } = useParams();
 
-  const [postData, setPostData] = useState({
+  // DETAILS -------------------------------
+  // Details postData 
+  const [postDataDetails, setPostDataDetails] = useState({
     // details
     title: "",
     series: "",
@@ -23,50 +25,62 @@ function BudgetCreate() {
     format: "",
     location: "",
     dated: "",
-    // length
-    research: "",
-    prep: "",
-    shoot: "",
-    wrap: "",
-    post: "",
-    length_total: "",
-    // above the line
-    // rights
-    story_rights: "",
-    miscellaneous: "",
-    rights_total: "",
   });
 
+  // Details postData values 
   const { 
-    // details
-    title, series, prodco, format, location, dated, 
-    // length
-    research, prep, shoot, wrap, post, length_total,
-    // above the line
-    // rights
-    story_rights,
-    miscellaneous,
-    rights_total,
-  } = postData;
+    title, series, prodco, format, location, dated,} = postDataDetails;
 
+  // Details handleChange
+  const handleChange_details = (event) => {
+    setPostDataDetails({
+      ...postDataDetails,
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  // LENGTH ------------------------
+  // Length postData
+  const [postDataLength, setPostDataLength] = useState({
+    research: 0,
+    prep: 0,
+    shoot: 0,
+    wrap: 0,
+    post: 0,});
+
+  // Length postData values
+  const { 
+    research, prep, shoot, wrap, post,} = postDataLength; 
+  
+  // Length Total postData 
+  const [postDataLengthTotal, setPostDataLengthTotal] = useState(0)
+
+  // Length handleChange
   const handleChangeLength = (event) => {
-    setPostData({
-      ...postData,
-      [event.target.name]: event.target.value,
+    setPostDataLength({
+      ...postDataLength,
+      [event.target.name]: parseFloat(event.target.value || 0 ),
     });
-    // function to add all lengths on change here
-  };
+  }; 
 
-  const handleChange = (event) => {
-    setPostData({
-      ...postData,
-      [event.target.name]: event.target.value,
-    });
-  };
+  // function to add all lengths on change
+  useEffect(() => {
+    const addLength = () => {
+      setPostDataLengthTotal(research + prep + shoot + wrap + post )
+    }
+    const timer = setTimeout(() => {
+      addLength();
+    }, 1000);
 
-  const details = (
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [research, prep, shoot, wrap, post ])
+
+  // Details Length Input Boxes
+  const detailslength = (
     <div>
-    {/*  */}
+    {/* Titles */}
     <Row>
     <Col md={6}>
     <p>Details</p>
@@ -76,7 +90,7 @@ function BudgetCreate() {
     </Col>
     </Row>
     <Row>
-    {/* TITLE COLUMN */}
+    {/* DETAILS COLUMN */}
     <Col md={6} >
     {/* title */}
     <Row>
@@ -91,7 +105,7 @@ function BudgetCreate() {
         className={styles.Input}
         name="title"
         value={title}
-        onChange={handleChange}
+        onChange={handleChange_details}
             />
     </Form.Group>
     {errors?.title?.map((message, idx) => (
@@ -114,7 +128,7 @@ function BudgetCreate() {
         className={styles.Input}
         name="series"
         value={series}
-        onChange={handleChange}
+        onChange={handleChange_details}
             />
     </Form.Group>
     {errors?.series?.map((message, idx) => (
@@ -137,7 +151,7 @@ function BudgetCreate() {
         className={styles.Input}
         name="prodco"
         value={prodco}
-        onChange={handleChange}
+        onChange={handleChange_details}
             />
     </Form.Group>
     {errors?.prodco?.map((message, idx) => (
@@ -160,7 +174,7 @@ function BudgetCreate() {
         className={styles.Input}
         name="format"
         value={format}
-        onChange={handleChange}
+        onChange={handleChange_details}
             />
     </Form.Group>
     {errors?.format?.map((message, idx) => (
@@ -183,7 +197,7 @@ function BudgetCreate() {
         className={styles.Input}
         name="location"
         value={location}
-        onChange={handleChange}
+        onChange={handleChange_details}
             />
     </Form.Group>
     {errors?.location?.map((message, idx) => (
@@ -206,7 +220,7 @@ function BudgetCreate() {
         className={styles.Input}
         name="dated"
         value={dated}
-        onChange={handleChange}
+        onChange={handleChange_details}
             />
     </Form.Group>
     {errors?.dated?.map((message, idx) => (
@@ -232,7 +246,7 @@ function BudgetCreate() {
         className={styles.Input}
         name="research"
         value={research}
-        onChange={handleChange}
+        onChange={handleChangeLength}
             />
     </Form.Group>
     {errors?.research?.map((message, idx) => (
@@ -284,7 +298,7 @@ function BudgetCreate() {
         className={styles.Input}
         name="shoot"
         value={shoot}
-        onChange={handleChange}
+        onChange={handleChangeLength}
             />
     </Form.Group>
     {errors?.shoot?.map((message, idx) => (
@@ -310,7 +324,7 @@ function BudgetCreate() {
         className={styles.Input}
         name="wrap"
         value={wrap}
-        onChange={handleChange}
+        onChange={handleChangeLength}
             />
     </Form.Group>
     {errors?.wrap?.map((message, idx) => (
@@ -336,7 +350,7 @@ function BudgetCreate() {
         className={styles.Input}
         name="post"
         value={post}
-        onChange={handleChange}
+        onChange={handleChangeLength}
             />
     </Form.Group>
     {errors?.post?.map((message, idx) => (
@@ -355,17 +369,16 @@ function BudgetCreate() {
     <p>TOTAL</p>
     </Col>
     <Col md={4}>
-    <Form.Group controlId="length_total" 
+    <Form.Group controlId="postDataLengthTotal" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="length_total"
-        value={length_total}
-        onChange={handleChange}
+        name="postDataLengthTotal"
+        value={postDataLengthTotal}
             />
     </Form.Group>
-    {errors?.length_total?.map((message, idx) => (
+    {errors?.postDataLengthTotal?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
@@ -380,30 +393,45 @@ function BudgetCreate() {
     </div>
   );
 
-  const aboveLine = (
+  // RIGHTS ----------------------------------------------------
+  
+  // Rights postData
+  const [postDataRights, setPostDataRights] = useState({
+    story_rights: 0,
+    miscel_rights: 0,
+  });
+
+  // Rights postData values
+  const {story_rights, miscel_rights} = postDataRights
+
+  // Rights Total postData 
+  const [postDataRightsTotal, setPostDataRightsTotal] = useState(0)
+
+  // Rights handleChange
+  const handleChangeRights = (event) => {
+    setPostDataRights({
+      ...postDataRights,
+      [event.target.name]: parseFloat(event.target.value || 0 ),
+    });
+  }; 
+
+  // function to add all rights on change
+  useEffect(() => {
+    const addRights = () => {
+      setPostDataRightsTotal(story_rights + miscel_rights )
+    }
+    const timer = setTimeout(() => {
+      addRights();
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [story_rights, miscel_rights ])
+
+  // Rights input boxes
+  const rights = (
     <div>
-    <Row className={ `${styles.Overview} pt-2`} >
-    <Col md={1} >
-    <p>AC</p>
-    </Col>
-    <Col md={6} >
-    {/* <p>STORY & OTHER RIGHTS</p> */}
-    <p>Description</p>
-    </Col>
-    <Col md={1} >
-    <p>#</p>
-    </Col>
-    <Col md={1} >
-    <p>Unit</p>
-    </Col>
-    <Col md={1} >
-    <p>Price</p>
-    </Col>
-    <Col md={2} >
-    <p>Total</p>
-    </Col>
-    </Row>
-    {/* Rights */}
     <Row className="mt-3" >
     <Col md={1} >
     <p>1000</p>
@@ -437,7 +465,7 @@ function BudgetCreate() {
         className={styles.Input}
         name="story_rights"
         value={story_rights}
-        onChange={handleChange}
+        onChange={handleChangeRights}
             />
     </Form.Group>
     {errors?.story_rights?.map((message, idx) => (
@@ -465,17 +493,17 @@ function BudgetCreate() {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="miscellaneous" 
+    <Form.Group controlId="miscel_rights" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="story_rights"
-        value={story_rights}
-        onChange={handleChange}
+        name="miscel_rights"
+        value={miscel_rights}
+        onChange={handleChangeRights}
             />
     </Form.Group>
-    {errors?.story_rights?.map((message, idx) => (
+    {errors?.miscel_rights?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
@@ -499,23 +527,24 @@ function BudgetCreate() {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="rights_total" 
+    <Form.Group controlId="postDataRightsTotal" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="rights_total"
-        value={rights_total}
-        onChange={handleChange}
+        name="postDataRightsTotal"
+        value={postDataRightsTotal}
             />
     </Form.Group>
-    {errors?.rights_total?.map((message, idx) => (
+    {errors?.postDataRightsTotal?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     </Row>
+  )
+    
     {/* director */}
     {/* <Row>
     <Col xs={6} md={3}>Director</Col>
@@ -541,6 +570,32 @@ function BudgetCreate() {
     </div>
   );
 
+  // OTHER --------------------------------------------------
+  const aboveLine = (
+    <div>
+    <Row className={ `${styles.Overview} pt-2`} >
+    <Col md={1} >
+    <p>AC</p>
+    </Col>
+    <Col md={6} >
+    {/* <p>STORY & OTHER RIGHTS</p> */}
+    <p>Description</p>
+    </Col>
+    <Col md={1} >
+    <p>#</p>
+    </Col>
+    <Col md={1} >
+    <p>Unit</p>
+    </Col>
+    <Col md={1} >
+    <p>Price</p>
+    </Col>
+    <Col md={2} >
+    <p>Total</p>
+    </Col>
+    </Row>
+    </div>)
+
   const buttons = (
     <div className="text-center mt-3">    
       <Button
@@ -558,6 +613,7 @@ function BudgetCreate() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData();
+    formData.append("project", id );
     // details
     formData.append("title", title);
     formData.append("series", series);
@@ -571,12 +627,12 @@ function BudgetCreate() {
     formData.append("shoot", shoot);
     formData.append("wrap", wrap);
     formData.append("post", post);
-    formData.append("length_total", length_total);
+    formData.append("length_total", postDataLengthTotal);
     // ABOVE THE LINE
     // rights miscellaneous
     formData.append("story_rights", story_rights);
-    formData.append("miscellaneous", miscellaneous);
-    formData.append("rights_total", rights_total);
+    formData.append("miscel_rights", miscel_rights);
+    formData.append("rights_total ", postDataRightsTotal);
 
     try {
       const { data } = await axiosReq.post("/budgets/", formData);
@@ -608,9 +664,10 @@ function BudgetCreate() {
         </Col>
     </Row>
     <Form className="mt-3 px-3" onSubmit={handleSubmit}>
-    {details}
+    {detailslength}
     <h4>Above the Line</h4>
     {aboveLine}
+    {rights}
       <Row>
       <Col>
         <div className= {`mt-1`} >{buttons} </div>
