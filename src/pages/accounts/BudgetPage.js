@@ -15,7 +15,6 @@ const BudgetPage = () => {
   useRedirect();
   const [hasLoaded, setHasLoaded] = useState(false);
   const [budget, setBudget] = useState({ results: [] });
-  const [name, setName] = useState("");
   const { id } = useParams();
   const history = useHistory();
   console.log(typeof id)
@@ -25,7 +24,6 @@ const BudgetPage = () => {
       try {
         const { data } = await axiosReq.get(`/budgets/?project=${id}`);
         setBudget(data.results[0]);
-        setName(data.results[0].name);
         console.log(data);
         setHasLoaded(true);
       } catch (err) {
@@ -50,7 +48,7 @@ const BudgetPage = () => {
         </Col>
     </Row>
     {/* Add /Edit Budget */}
-    {name ? (
+    {budget.length ? (
       <Row className='mt-0'>
       <Col className="text-center">
       <Link to={`/budgets/edit/${id}`}>
@@ -58,10 +56,6 @@ const BudgetPage = () => {
       <p className={ `${styles.BudgetLink} pl-3`}>Edit Budget</p>
       </div>
       </Link>
-      {/* <Button onClick={() => history.push('/budgets/edit/${id}')} 
-        className={`${btnStyles.Button} ${btnStyles.Wide2} ${btnStyles.Bright} `}>
-        Edit Budget
-      </Button> */}
       </Col>
       </Row>
     ) : (
@@ -73,10 +67,6 @@ const BudgetPage = () => {
       <p className={ `${styles.BudgetLink} pl-3`}>Create Budget</p>
       </div>
       </Link>
-      {/* <Button onClick={() => history.push('/budgets/create/${id}')} 
-        className={`${btnStyles.Button} ${btnStyles.Wide2} ${btnStyles.Bright} `}>
-        Create Budget
-      </Button> */}
       </Col>
     </Row>
     ) }
@@ -84,11 +74,12 @@ const BudgetPage = () => {
       <Col className="py-2 p-0 p-lg-2" >
           {hasLoaded ? (
             <>
+            {budget.results.length ? (
               <Budget
               budget={budget}
-              name={name}
               id={id}
                />
+            ) : ( "") }
             </>
           ) : (
             <h3 className="text-center mt-5">No Budget created yet</h3>

@@ -376,6 +376,7 @@ function BudgetCreate() {
         className={styles.Input}
         name="postDataLengthTotal"
         value={postDataLengthTotal}
+        readOnly
             />
     </Form.Group>
     {errors?.postDataLengthTotal?.map((message, idx) => (
@@ -534,6 +535,7 @@ function BudgetCreate() {
         className={styles.Input}
         name="postDataRightsTotal"
         value={postDataRightsTotal}
+        readOnly
             />
     </Form.Group>
     {errors?.postDataRightsTotal?.map((message, idx) => (
