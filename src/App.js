@@ -29,6 +29,7 @@ import BudgetPage from "./pages/accounts/BudgetPage";
 import BudgetCreate from "./pages/accounts/BudgetCreate";
 import BudgetEdit from "./pages/accounts/BudgetEdit";
 import NeedToSignIn from "./pages/chat/NeedToSignIn";
+import ProjectEdit from "./pages/accounts/ProjectEdit";
 
 function App() {
   const currentUser = useCurrentUser()
@@ -87,6 +88,8 @@ function App() {
           <Route exact path="/chat/:id" render={() => <ChatPage />} />
           {/* accounts */}
           <Route exact path="/accounts/:id" render={() => <AccountPage />} />
+          {/* projects */}
+          <Route exact path="/projects/edit/:id" render={() => <ProjectEdit />} />
           {/* budgets */}
           <Route exact path="/budgets/:id" render={() => <BudgetPage />} />
           <Route exact path="/budgets/create/:id" render={() => <BudgetCreate />} />
