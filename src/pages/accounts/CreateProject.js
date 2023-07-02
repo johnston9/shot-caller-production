@@ -15,8 +15,9 @@ function CreateProject({setShow} ) {
   const [postData, setPostData] = useState({
     name: "",
     stripe_id: "",
+    url: "",
   });
-  const { name, stripe_id } = postData;
+  const { name, stripe_id, url } = postData;
 
   const handleChange = (event) => {
     setPostData({
@@ -58,6 +59,23 @@ function CreateProject({setShow} ) {
         {message}
         </Alert>
     ))}
+    {/* url */}
+    <Form.Group controlId="url" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Label className={`${styles.Bold} `} >URL</Form.Label>
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="url"
+        value={url}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.url?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
     </div>
   );
 
@@ -80,6 +98,7 @@ function CreateProject({setShow} ) {
     const formData = new FormData();
     formData.append("name", name);
     formData.append("stripe_id", stripe_id);
+    formData.append("url", url);
 
     try {
       const { data } = await axiosReq.post("/projects/", formData);

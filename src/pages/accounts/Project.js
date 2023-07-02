@@ -1,8 +1,6 @@
 /* Component in the Projects Component to display a Project's data */
 import React from 'react';
 import Card from "react-bootstrap/Card";
-import btnStyles from "../../styles/Button.module.css";
-import Button from "react-bootstrap/Button";
 import styles from "../../styles/Account.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { axiosRes } from '../../api/axiosDefaults';
@@ -11,7 +9,7 @@ import Row from 'react-bootstrap/Row';
 import { UniDropdown } from '../../components/UniDropDown';
 import { Link, useHistory } from 'react-router-dom';
 
-const Project = ({id, name, stripe_id, company, owner, owner_name, profile_id} ) => {
+const Project = ({id, name, url, stripe_id, company, owner} ) => {
     const currentUser = useCurrentUser();
       const is_owner = currentUser?.username === owner;
       const history = useHistory();
@@ -53,11 +51,9 @@ const Project = ({id, name, stripe_id, company, owner, owner_name, profile_id} )
                     {company && <p style={{ fontStyle: 'italic' }}
                     className="mb-0 mt-2 pb-0 text-center">{company}</p>}
                     <hr className='my-2' />
-                    {id && <Card.Text>Project Id: {id}</Card.Text>}
-                    {stripe_id && <Card.Text>Stripe Id: {stripe_id}</Card.Text>}
-                    {/* {owner_name && <Card.Text>Account Holder Name: {owner_name}</Card.Text>}
-                    {profile_id && <Card.Text>Account Holder Id: {profile_id}</Card.Text>} */}
-                    <Card.Text>URL: www.........</Card.Text>
+                    <Card.Text>Project Id: {id}</Card.Text>
+                    <Card.Text>Stripe Id: {stripe_id}</Card.Text>
+                    <Card.Text>URL: {url} </Card.Text>
                     <Row className="mt-1" >
                     <Col >
                     <Link to={`/budgets/${id}`}>
@@ -65,25 +61,10 @@ const Project = ({id, name, stripe_id, company, owner, owner_name, profile_id} )
                     <span className={ `${styles.BudgetLink} px-md-5 mx-1`}>Budget</span>
                     </div>
                     </Link>
-                    {/* <Button
-                      className={`${btnStyles.Button} ${btnStyles.Blue} mb-2`}
-                      onClick={() => history.goBack()}
-                    >
-                      Budget
-                    </Button> */}
                     </Col>
                     </Row>
                 </Card.Body>
                 <hr />
-                {/* <Row className='mb-2'>
-                  <Col xs={12} md={{span: 6, offset: 3}} >
-                      {image && <> 
-                          <Card.Img src={image} alt="image"
-                           className={`px-3 ${styles.Image}`} />
-                          </>
-                          }
-                  </Col>  
-              </Row > */}
             </Card>
     </div>
   )

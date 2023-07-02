@@ -13,7 +13,7 @@ import Row from 'react-bootstrap/Row';
 // import { Link, useHistory } from 'react-router-dom';
 
 const Budget = (props) => {
-  const {budget, id} = props;
+  const {budget} = props;
   const {
     // details
     title, series, prodco, format, location, dated,
@@ -22,6 +22,7 @@ const Budget = (props) => {
     // rights
     story_rights, miscel_rights, rights_total,
   } = budget;
+
   return (
     <div >
     <div className={`${styles.Overview}`}>
