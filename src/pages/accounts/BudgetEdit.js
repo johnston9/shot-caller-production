@@ -669,7 +669,8 @@ function BudgetEdit() {
 
     try {
       const { data } = await axiosReq.put(`/budgets/${budgetId}/`, formData);
-      console.log(data)
+      console.log(data);
+      history.goBack();
     } catch (err) {
       console.log(err);
       if (err.response?.status !== 401) {

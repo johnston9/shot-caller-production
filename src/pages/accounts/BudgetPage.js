@@ -48,7 +48,9 @@ const BudgetPage = () => {
         </Col>
     </Row>
     {/* Add /Edit Budget */}
-    {budget.length ? (
+    {hasLoaded ? (
+      <>
+      {budget.results.length ? (
       <Row className='mt-0'>
       <Col className="text-center">
       <Link to={`/budgets/edit/${id}`}>
@@ -70,19 +72,27 @@ const BudgetPage = () => {
       </Col>
     </Row>
     ) }
+      </>
+    ) : (
+      ""
+    ) }
     <Row>
       <Col className="py-2 p-0 p-lg-2" >
           {hasLoaded ? (
             <>
             {budget.results.length ? (
               <Budget
-              budget={budget}
+              {...budget.results}
               id={id}
                />
-            ) : ( "") }
+            ) : (
+              <h3 className="text-center mt-5">
+              No Budget created yet</h3>
+            ) }
             </>
           ) : (
-            <h3 className="text-center mt-5">No Budget created yet</h3>
+            <h3 className="text-center mt-5">
+              No Budget created yet</h3>
           )}
       </Col>
     </Row>

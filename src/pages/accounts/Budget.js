@@ -13,7 +13,6 @@ import Row from 'react-bootstrap/Row';
 // import { Link, useHistory } from 'react-router-dom';
 
 const Budget = (props) => {
-  const {budget} = props;
   const {
     // details
     title, series, prodco, format, location, dated,
@@ -21,7 +20,7 @@ const Budget = (props) => {
     research, prep, shoot, wrap, post, length_total,
     // rights
     story_rights, miscel_rights, rights_total,
-  } = budget;
+  } = props;
 
   return (
     <div >
