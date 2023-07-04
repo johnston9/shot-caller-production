@@ -12,6 +12,9 @@ import { useEffect } from "react";
 import { axiosReq } from "../../api/axiosDefaults";
 import Asset from "../../components/Asset";
 import Project from "./Project";
+import CreateProject from "./CreateProject";
+import btnStyles from "../../styles/Button.module.css";
+import Button from "react-bootstrap/Button";
 
 const Projects = ({id} ) => {
   const [hasLoaded, setHasLoaded] = useState(false);
@@ -19,19 +22,20 @@ const Projects = ({id} ) => {
   // eslint-disable-next-line
   const [error, setErrors] = useState({});
   const [query, setQuery] = useState("");
+  const [showCreateProject, setShowCreateProject ] = useState(false);
+
+  const fetchProjects = async () => {
+    try {
+      const { data } = await axiosReq.get(`/projects/?owner__profile=${id}&search=${query}`);
+      setProjects(data);
+      console.log(data);
+      setHasLoaded(true);
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   useEffect(() => {
-    const fetchProjects = async () => {
-      try {
-        const { data } = await axiosReq.get(`/projects/?owner__profile=${id}&search=${query}`);
-        setProjects(data);
-        console.log(data);
-        setHasLoaded(true);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-
     setHasLoaded(false);
     const timer = setTimeout(() => {
         fetchProjects();
@@ -45,6 +49,25 @@ const Projects = ({id} ) => {
 
   return (
     <div className="px-3">
+    {/* create project */}
+    <Row>
+    <Col className="text-center">
+    <Button
+          className={`${btnStyles.Button} ${btnStyles.Blue} mb-2`}
+          onClick={() => setShowCreateProject(showCreateProject => !showCreateProject)} >
+          Create Project
+      </Button>
+      </Col>
+    </Row>
+    {showCreateProject ? (
+              <CreateProject
+                setShow={setShowCreateProject}
+                fetchProjects={fetchProjects}
+              />
+            ) : (
+              ""
+            )}
+    {/* search */}
     <Row>
       <Col className="py-2 p-0 p-lg-2" 
         xs={{span: 10, offset: 1}} md={{span: 6, offset: 3}} >

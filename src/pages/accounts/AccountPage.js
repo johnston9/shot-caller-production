@@ -23,26 +23,27 @@ function AccountPage() {
 
   const [profile] = profilePage.results;
 
+  const fetchData = async () => {
+    try {
+      const [{ data: profilePage }, { data: accountInfo }] = await Promise.all([
+          axiosReq.get(`/profiles/${id}/`),
+          axiosReq.get(`/accounts/?owner__profile=${id}`),
+        ]);
+      setProfileData((prevState) => ({
+        ...prevState,
+        profilePage: { results: [profilePage] },
+      }));
+      setAccount(accountInfo);
+      console.log(accountInfo);
+      console.log(profilePage);
+      setName(accountInfo.results[0].name)
+      setHasLoaded(true);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const [{ data: profilePage }, { data: accountInfo }] = await Promise.all([
-            axiosReq.get(`/profiles/${id}/`),
-            axiosReq.get(`/accounts/?owner__profile=${id}`),
-          ]);
-        setProfileData((prevState) => ({
-          ...prevState,
-          profilePage: { results: [profilePage] },
-        }));
-        setAccount(accountInfo);
-        console.log(accountInfo);
-        console.log(profilePage);
-        setName(accountInfo.results[0].name)
-        setHasLoaded(true);
-      } catch (err) {
-        console.log(err);
-      }
-    };
     fetchData();
   }, [id, setProfileData]);
 

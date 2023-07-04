@@ -399,11 +399,11 @@ function BudgetCreate() {
   // Rights postData
   const [postDataRights, setPostDataRights] = useState({
     story_rights: 0,
-    miscel_rights: 0,
+    miscellaneous: 0,
   });
 
   // Rights postData values
-  const {story_rights, miscel_rights} = postDataRights
+  const {story_rights, miscellaneous} = postDataRights
 
   // Rights Total postData 
   const [postDataRightsTotal, setPostDataRightsTotal] = useState(0)
@@ -419,7 +419,7 @@ function BudgetCreate() {
   // function to add all rights on change
   useEffect(() => {
     const addRights = () => {
-      setPostDataRightsTotal(story_rights + miscel_rights )
+      setPostDataRightsTotal(story_rights + miscellaneous )
     }
     const timer = setTimeout(() => {
       addRights();
@@ -428,7 +428,7 @@ function BudgetCreate() {
     return () => {
       clearTimeout(timer);
     };
-  }, [story_rights, miscel_rights ])
+  }, [story_rights, miscellaneous ])
 
   // Rights input boxes
   const rights = (
@@ -494,17 +494,17 @@ function BudgetCreate() {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="miscel_rights" 
+    <Form.Group controlId="miscellaneous" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="miscel_rights"
-        value={miscel_rights}
+        name="miscellaneous"
+        value={miscellaneous}
         onChange={handleChangeRights}
             />
     </Form.Group>
-    {errors?.miscel_rights?.map((message, idx) => (
+    {errors?.miscellaneous?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
@@ -633,7 +633,7 @@ function BudgetCreate() {
     // ABOVE THE LINE
     // rights miscellaneous
     formData.append("story_rights", story_rights);
-    formData.append("miscel_rights", miscel_rights);
+    formData.append("miscellaneous", miscellaneous);
     formData.append("rights_total ", postDataRightsTotal);
 
     try {

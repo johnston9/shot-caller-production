@@ -1,13 +1,10 @@
 /* Page to fetch the Project's Budget data
  * Contains the Budget Component to which it passes the data*/
 import React, { useEffect, useState } from "react";
-import { Link, useHistory, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import useRedirect from "../../hooks/Redirect";
-import styles from "../../styles/Account.module.css";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import btnStyles from "../../styles/Button.module.css";
-import Button from "react-bootstrap/Button";
 import { axiosReq } from "../../api/axiosDefaults";
 import Budget from "./Budget";
 
@@ -16,14 +13,12 @@ const BudgetPage = () => {
   const [hasLoaded, setHasLoaded] = useState(false);
   const [budget, setBudget] = useState({ results: [] });
   const { id } = useParams();
-  const history = useHistory();
-  console.log(typeof id)
 
   useEffect(() => {
     const fetchBudget = async () => {
       try {
         const { data } = await axiosReq.get(`/budgets/?project=${id}`);
-        setBudget(data.results[0]);
+        setBudget({ results: [data] });
         console.log(data);
         setHasLoaded(true);
       } catch (err) {
@@ -37,7 +32,7 @@ const BudgetPage = () => {
 
   return (
     <div className='mt-3'>
-    <Row className="mt-1 ml-2" >
+    {/* <Row className="mt-1 ml-2" >
         <Col xs={3}>
         <Button
           className={`${btnStyles.Button} ${btnStyles.Blue} mb-2`}
@@ -46,9 +41,9 @@ const BudgetPage = () => {
           Back
         </Button>
         </Col>
-    </Row>
+    </Row> */}
     {/* Add /Edit Budget */}
-    {hasLoaded ? (
+    {/* {hasLoaded ? (
       <>
       {budget.results.length ? (
       <Row className='mt-0'>
@@ -75,25 +70,19 @@ const BudgetPage = () => {
       </>
     ) : (
       ""
-    ) }
+    ) } */}
+    {/* budget */}
     <Row>
       <Col className="py-2 p-0 p-lg-2" >
           {hasLoaded ? (
-            <>
-            {budget.results.length ? (
               <Budget
-              {...budget.results}
-              id={id}
+              // {...budget.results[0]}
+              budget1={budget.results[0]} 
+              projectId={id}
                />
             ) : (
-              <h3 className="text-center mt-5">
-              No Budget created yet</h3>
+              ""
             ) }
-            </>
-          ) : (
-            <h3 className="text-center mt-5">
-              No Budget created yet</h3>
-          )}
       </Col>
     </Row>
     </div>

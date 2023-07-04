@@ -20,7 +20,8 @@ const Project = ({id, name, url, stripe_id, company, owner} ) => {
     
       const handleDelete = async () => {
         try {
-          await axiosRes.delete(`/projects/${id}/`);
+          await axiosRes.delete(`/projects/${id}`);
+          console.log("delete")
           history.goBack();
         } catch (err) {
         } 

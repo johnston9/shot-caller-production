@@ -68,7 +68,12 @@ function BudgetEdit() {
   // function to add all lengths on change
   useEffect(() => {
     const addLength = () => {
-      setPostDataLengthTotal(research + prep + shoot + wrap + post )
+      setPostDataLengthTotal(
+        parseFloat(research || 0) +
+        parseFloat(prep || 0) +
+        parseFloat(shoot || 0) +
+        parseFloat(wrap || 0) +
+        parseFloat(post || 0)  )
     }
     const timer = setTimeout(() => {
       addLength();
@@ -401,11 +406,11 @@ function BudgetEdit() {
   // Rights postData
   const [postDataRights, setPostDataRights] = useState({
     story_rights: 0,
-    miscel_rights: 0,
+    miscellaneous: 0,
   });
 
   // Rights postData values
-  const {story_rights, miscel_rights} = postDataRights
+  const {story_rights, miscellaneous} = postDataRights
 
   // Rights Total postData 
   const [postDataRightsTotal, setPostDataRightsTotal] = useState(0)
@@ -421,7 +426,7 @@ function BudgetEdit() {
   // function to add all rights on change
   useEffect(() => {
     const addRights = () => {
-      setPostDataRightsTotal(story_rights + miscel_rights )
+      setPostDataRightsTotal(parseFloat(story_rights || 0) + parseFloat(miscellaneous ||0) )
     }
     const timer = setTimeout(() => {
       addRights();
@@ -430,7 +435,7 @@ function BudgetEdit() {
     return () => {
       clearTimeout(timer);
     };
-  }, [story_rights, miscel_rights ])
+  }, [story_rights, miscellaneous ])
 
   // Rights input boxes
   const rights = (
@@ -496,17 +501,17 @@ function BudgetEdit() {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="miscel_rights" 
+    <Form.Group controlId="miscellaneous" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="miscel_rights"
-        value={miscel_rights}
+        name="miscellaneous"
+        value={miscellaneous}
         onChange={handleChangeRights}
             />
     </Form.Group>
-    {errors?.miscel_rights?.map((message, idx) => (
+    {errors?.miscellaneous?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
@@ -618,21 +623,20 @@ function BudgetEdit() {
   useEffect(() => {
     const handleMount = async () => {
       try {
-        const { data } = await axiosReq.get(`/budgets/?project=${id}/`);
-        // budget id
-        const {id} = data;
-        setBudgetId(id);
+        const { data } = await axiosReq.get(`/budgets/?project=${id}`);
+        console.log(data.results[0])
+        setBudgetId(data.results[0].id);
         // details
-        const { title, series, prodco, format, location, dated} = data;
+        const { title, series, prodco, format, location, dated} = data.results[0];
         setPostDataDetails({ title, series, prodco, format, location, dated });
         // length
-        const {research, prep, shoot, wrap, post, length_total} = data;
+        const {research, prep, shoot, wrap, post, length_total} = data.results[0];
         setPostDataLength({research, prep, shoot, wrap, post});
-        setPostDataLengthTotal({length_total});
+        // setPostDataLengthTotal({length_total});
         // rights
-        const {story_rights, miscel_rights, rights_total} = data;
-        setPostDataRights({story_rights, miscel_rights, rights_total});
-        setPostDataRightsTotal({rights_total});
+        const {story_rights, miscellaneous, rights_total} = data.results[0];
+        setPostDataRights({story_rights, miscellaneous, rights_total});
+        // setPostDataRightsTotal({rights_total});
 
 
       } catch (err) {
@@ -664,7 +668,7 @@ function BudgetEdit() {
     // ABOVE THE LINE
     // rights miscellaneous
     formData.append("story_rights", story_rights);
-    formData.append("miscel_rights", miscel_rights);
+    formData.append("miscellaneous", miscellaneous);
     formData.append("rights_total ", postDataRightsTotal); 
 
     try {

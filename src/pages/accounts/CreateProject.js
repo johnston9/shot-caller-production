@@ -9,7 +9,7 @@ import btnStyles from "../../styles/Button.module.css";
 import Alert from "react-bootstrap/Alert";
 import { axiosReq } from "../../api/axiosDefaults";
 
-function CreateProject({setShow} ) {
+function CreateProject({setShow, fetchProjects} ) {
   const [errors, setErrors] = useState({});
 
   const [postData, setPostData] = useState({
@@ -103,6 +103,7 @@ function CreateProject({setShow} ) {
     try {
       const { data } = await axiosReq.post("/projects/", formData);
       setShow(false);
+      fetchProjects();
       console.log(data)
     } catch (err) {
       console.log(err);

@@ -8,14 +8,11 @@ import Row from "react-bootstrap/Row";
 import styles from "../../styles/Account.module.css";
 import { Image } from "react-bootstrap";
 import { ProfileEditDropdown } from "../../components/UniDropDown";
-import { useState } from "react";
-import CreateProject from "./CreateProject";
 import Projects from "./Projects";
 import { useHistory } from 'react-router-dom';
 
 const Account = ({id, profile, account} ) => {
   const history = useHistory();
-  const [showCreateProject, setShowCreateProject ] = useState(false);
 
 const topProfile = (
     <div className={`px-3 py-1 ${styles.Top}`}>
@@ -100,20 +97,8 @@ return (
     <Row className="px-3">
       <Col className="text-center">
       <h3 className="my-3" >PROJECTS</h3>
-      <Button
-          className={`${btnStyles.Button} ${btnStyles.Blue} mb-2`}
-          onClick={() => setShowCreateProject(showCreateProject => !showCreateProject)} >
-          Create Project
-      </Button>
       </Col>
     </Row>
-    {showCreateProject ? (
-              <CreateProject
-                setShow={setShowCreateProject}
-              />
-            ) : (
-              ""
-            )}
     <Row >
       <Col>
         <Projects id={id} />
