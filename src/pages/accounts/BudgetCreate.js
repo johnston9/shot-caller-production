@@ -441,6 +441,27 @@ function BudgetCreate() {
     <h5 className={ `${styles.Bold}`}>RIGHTS</h5>
     </Col>
     </Row>
+    {/* TITLES */}
+    <Row className={ `${styles.Overview} pt-2`} >
+    <Col md={1} >
+    <p>ACCT</p>
+    </Col>
+    <Col md={6} >
+    <p>Description</p>
+    </Col>
+    <Col md={1} >
+    <p>#</p>
+    </Col>
+    <Col md={1} >
+    <p>Unit</p>
+    </Col>
+    <Col md={1} >
+    <p>Price</p>
+    </Col>
+    <Col md={2} >
+    <p>Total</p>
+    </Col>
+    </Row>
     {/* Story Rights */}
     <Row>
     <Col md={1} >
@@ -545,30 +566,403 @@ function BudgetCreate() {
     ))}
     </Col>
     </Row>
-  )
-    
-    {/* director */}
-    {/* <Row>
-    <Col xs={6} md={3}>Director</Col>
-    <Col xs={6} md={3}></Col>
-    <Col xs={6} md={3}></Col>
-    <Col xs={6} md={3}>
-    <Form.Group controlId="director" className={`${styles.Width95} text-center`} >
+    </div>
+  );
+
+  // PRE-PRODUCTION AND DEVELOPMENT --------------------------------------------
+  
+  // Development postData
+  const [postDatadevelopment, setPostDataDevelopment] = useState({
+    research_development: 0,
+    prelim_budget: 0,
+    consultant_expenses: 0,
+    office_expenses: 0,
+    staff: 0,
+    travel_expenses_development: 0,
+    living_expenses_development: 0,
+    other_development: 0,
+  });
+
+  // Development postData values
+  const {research_development, prelim_budget, consultant_expenses,
+    office_expenses, staff, travel_expenses_development,
+    living_expenses_development, other_development} = postDataRights
+
+  // Development Total postData 
+  const [developmentTotal, setDevelopmentTotal] = useState(0)
+
+  // Development handleChange
+  const handleChangeDevelopment = (event) => {
+    setPostDataDevelopment({
+      ...postDatadevelopment,
+      [event.target.name]: parseFloat(event.target.value || 0 ),
+    });
+  }; 
+
+  // function to add all development on change
+  useEffect(() => {
+    const addDevelopment = () => {
+      setDevelopmentTotal(research_development + prelim_budget + consultant_expenses
+        + office_expenses + staff + travel_expenses_development
+        + living_expenses_development + other_development)
+    }
+    const timer = setTimeout(() => {
+      addDevelopment();
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [research_development, prelim_budget, consultant_expenses,
+    office_expenses, staff, travel_expenses_development,
+    living_expenses_development, other_development ])
+
+  // Development input boxes
+  const development = (
+    <div>
+    <Row className="mt-3" >
+    <Col md={1} >
+    <p>2000</p>
+    </Col>
+    <Col md={6} >
+    <h5 className={ `${styles.Bold}`}>RESEARCH AND DEVELOPMENT</h5>
+    </Col>
+    </Row>
+    {/* TITLES */}
+    <Row className={ `${styles.Overview} pt-2`} >
+    <Col md={1} >
+    <p>ACCT</p>
+    </Col>
+    <Col md={6} >
+    <p>Description</p>
+    </Col>
+    <Col md={1} >
+    <p>#</p>
+    </Col>
+    <Col md={1} >
+    <p>Unit</p>
+    </Col>
+    <Col md={1} >
+    <p>Price</p>
+    </Col>
+    <Col md={2} >
+    <p>Total</p>
+    </Col>
+    </Row>
+    {/* Research and Development */}
+    <Row>
+    <Col md={1} >
+    <p>2010</p>
+    </Col>
+    <Col md={6} >
+    <p>Research</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="research_development" 
+        className={`${styles.Width95} text-center`} >
         <Form.Control 
-            className={styles.InputScene}
-            type="text"
-            name="director"
-            value={director}
-            onChange={handleChange}
+        type="text"
+        className={styles.Input}
+        name="research_development"
+        value={research_development}
+        onChange={handleChangeDevelopment}
             />
     </Form.Group>
-    {errors?.director?.map((message, idx) => (
+    {errors?.research_development?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
-    </Row> */}
+    </Row>
+    {/* Preliminary Breakdown/Budget */}
+    <Row>
+    <Col md={1} >
+    <p>2020</p>
+    </Col>
+    <Col md={6} >
+    <p>Preliminary Breakdown/Budget</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="prelim_budget" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="prelim_budget"
+        value={prelim_budget}
+        onChange={handleChangeDevelopment}
+            />
+    </Form.Group>
+    {errors?.prelim_budget?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Consultant Expenses */}
+    <Row>
+    <Col md={1} >
+    <p>3030</p>
+    </Col>
+    <Col md={6} >
+    <p>Consultant Expenses</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="consultant_expenses" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="consultant_expenses"
+        value={consultant_expenses}
+        onChange={handleChangeDevelopment}
+            />
+    </Form.Group>
+    {errors?.consultant_expenses?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Office Expenses */}
+    <Row>
+    <Col md={1} >
+    <p>3040</p>
+    </Col>
+    <Col md={6} >
+    <p>Office Expenses</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="office_expenses" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="office_expenses"
+        value={office_expenses}
+        onChange={handleChangeDevelopment}
+            />
+    </Form.Group>
+    {errors?.office_expenses?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Staff */}
+    <Row>
+    <Col md={1} >
+    <p>3050</p>
+    </Col>
+    <Col md={6} >
+    <p>Staff</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="staff" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="staff"
+        value={staff}
+        onChange={handleChangeDevelopment}
+            />
+    </Form.Group>
+    {errors?.staff?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Travel Expenses Development */}
+    <Row>
+    <Col md={1} >
+    <p>3060</p>
+    </Col>
+    <Col md={6} >
+    <p>Travel Expenses</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="travel_expenses_development" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="travel_expenses_development"
+        value={travel_expenses_development}
+        onChange={handleChangeDevelopment}
+            />
+    </Form.Group>
+    {errors?.travel_expenses_development?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Living Expenses Development */}
+    <Row>
+    <Col md={1} >
+    <p>3070</p>
+    </Col>
+    <Col md={6} >
+    <p>Living Expenses Development</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="living_expenses_development" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="living_expenses_development"
+        value={research_development}
+        onChange={handleChangeDevelopment}
+            />
+    </Form.Group>
+    {errors?.living_expenses_development?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Other Development */}
+    <Row>
+    <Col md={1} >
+    <p>3080</p>
+    </Col>
+    <Col md={6} >
+    <p>Other</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="other_development" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="other_development"
+        value={other_development}
+        onChange={handleChangeDevelopment}
+            />
+    </Form.Group>
+    {errors?.other_development?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Development Total */}
+    <Row>
+    <Col md={1} >
+    </Col>
+    <Col md={6} >
+    <h5 className={ `${styles.Bold}`}>TOTAL</h5>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="developmentTotal" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="developmentTotal"
+        value={developmentTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.developmentTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
     </div>
   );
 
@@ -577,10 +971,9 @@ function BudgetCreate() {
     <div>
     <Row className={ `${styles.Overview} pt-2`} >
     <Col md={1} >
-    <p>AC</p>
+    <p>ACCT</p>
     </Col>
     <Col md={6} >
-    {/* <p>STORY & OTHER RIGHTS</p> */}
     <p>Description</p>
     </Col>
     <Col md={1} >
@@ -631,10 +1024,20 @@ function BudgetCreate() {
     formData.append("post", post);
     formData.append("length_total", postDataLengthTotal);
     // ABOVE THE LINE
-    // rights miscellaneous
+    // rights 
     formData.append("story_rights", story_rights);
     formData.append("miscellaneous", miscellaneous);
     formData.append("rights_total ", postDataRightsTotal);
+    // development
+    formData.append("research_development", research_development);
+    formData.append("prelim_budget", prelim_budget);
+    formData.append("consultant_expenses", consultant_expenses);
+    formData.append("office_expenses", office_expenses);
+    formData.append("staff", staff);
+    formData.append("travel_expenses_development", travel_expenses_development);
+    formData.append("living_expenses_development", living_expenses_development);
+    formData.append("other_development", other_development);
+    formData.append("development_total ", developmentTotal);
 
     try {
       const { data } = await axiosReq.post("/budgets/", formData);
@@ -671,6 +1074,7 @@ function BudgetCreate() {
     <h4>Above the Line</h4>
     {aboveLine}
     {rights}
+    {development}
       <Row>
       <Col>
         <div className= {`mt-1`} >{buttons} </div>
