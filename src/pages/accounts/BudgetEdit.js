@@ -558,7 +558,7 @@ function BudgetEdit() {
   // PRE-PRODUCTION AND DEVELOPMENT --------------------------------------------
   
   // Development postData
-  const [postDatadevelopment, setPostDataDevelopment] = useState({
+  const [postDataDevelopment, setPostDataDevelopment] = useState({
     research_development: 0,
     prelim_budget: 0,
     consultant_expenses: 0,
@@ -572,7 +572,7 @@ function BudgetEdit() {
   // Development postData values
   const {research_development, prelim_budget, consultant_expenses,
     office_expenses, staff, travel_expenses_development,
-    living_expenses_development, other_development} = postDataRights
+    living_expenses_development, other_development} = postDataDevelopment
 
   // Development Total postData 
   const [developmentTotal, setDevelopmentTotal] = useState(0)
@@ -580,7 +580,7 @@ function BudgetEdit() {
   // Development handleChange
   const handleChangeDevelopment = (event) => {
     setPostDataDevelopment({
-      ...postDatadevelopment,
+      ...postDataDevelopment,
       [event.target.name]: parseFloat(event.target.value || 0 ),
     });
   }; 
@@ -708,7 +708,7 @@ function BudgetEdit() {
     {/* Consultant Expenses */}
     <Row>
     <Col md={1} >
-    <p>3030</p>
+    <p>2030</p>
     </Col>
     <Col md={6} >
     <p>Consultant Expenses</p>
@@ -743,7 +743,7 @@ function BudgetEdit() {
     {/* Office Expenses */}
     <Row>
     <Col md={1} >
-    <p>3040</p>
+    <p>2040</p>
     </Col>
     <Col md={6} >
     <p>Office Expenses</p>
@@ -778,7 +778,7 @@ function BudgetEdit() {
     {/* Staff */}
     <Row>
     <Col md={1} >
-    <p>3050</p>
+    <p>2050</p>
     </Col>
     <Col md={6} >
     <p>Staff</p>
@@ -813,7 +813,7 @@ function BudgetEdit() {
     {/* Travel Expenses Development */}
     <Row>
     <Col md={1} >
-    <p>3060</p>
+    <p>2060</p>
     </Col>
     <Col md={6} >
     <p>Travel Expenses</p>
@@ -848,7 +848,7 @@ function BudgetEdit() {
     {/* Living Expenses Development */}
     <Row>
     <Col md={1} >
-    <p>3070</p>
+    <p>2070</p>
     </Col>
     <Col md={6} >
     <p>Living Expenses Development</p>
@@ -883,7 +883,7 @@ function BudgetEdit() {
     {/* Other Development */}
     <Row>
     <Col md={1} >
-    <p>3080</p>
+    <p>2080</p>
     </Col>
     <Col md={6} >
     <p>Other</p>
@@ -952,6 +952,124 @@ function BudgetEdit() {
     </div>
   );
 
+  // ------------------------------------------------------
+  // SCENARIO --------------------------------------------
+  
+  // Scenario postData
+  const [postDataScenario, setPostDataScenario] = useState({
+    writers_units_number: 0,
+    writers_units_name: 0,
+    writers_quantity: 0,
+    writers_rate: 0,
+    consultants_units_number: 0,
+    consultants_units_name: 0,
+    consultants_quantity: 0,
+    consultants_rate: 0,
+    editors_units_number: 0,
+    editors_units_name: 0,
+    editors_quantity: 0,
+    editors_rate: 0,
+    office_expenses_scenario: 0,
+    admin_scenario: 0,
+    travel_expenses_scenario: 0,
+    living_expenses_scenario: 0,
+    other_scenario: 0,
+  });
+
+  // Scenario postData values
+  const {writers_units_number, writers_units_name,
+    writers_quantity, writers_rate,
+    consultants_units_number, consultants_units_name,
+    consultants_quantity, consultants_rate,
+    editors_units_number, editors_units_name,
+    editors_quantity, editors_rate,
+    office_expenses_scenario, admin_scenario, travel_expenses_scenario,
+    living_expenses_scenario, other_scenario} = postDataScenario
+
+  // Writers Total postData
+  const [writersTotal, setWritersTotal] = useState(0);
+  // Writers Total postData 
+  const [consultantsTotal, setConsultantsTotal] = useState(0);
+  // Writers Total postData 
+  const [editorsTotal, setEditorsTotal] = useState(0);
+
+  // function to calculate writers on change
+  useEffect(() => {
+    const addWriters = () => {
+      setWritersTotal(writers_units_number *
+        writers_quantity * writers_rate )
+    }
+    const timer = setTimeout(() => {
+      addWriters();
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [writers_units_number,
+    writers_quantity, writers_rate]);
+
+  // function to calculate consultants on change
+  useEffect(() => {
+    const addConsultants = () => {
+      setConsultantsTotal(consultants_units_number *
+        consultants_quantity * consultants_rate, )
+    }
+    const timer = setTimeout(() => {
+      addConsultants();
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [consultants_units_number,
+    consultants_quantity, consultants_rate, ])
+
+  // function to calculate editors on change
+  useEffect(() => {
+    const addEditors = () => {
+      setEditorsTotal(editors_units_number * editors_quantity * editors_rate )
+    }
+    const timer = setTimeout(() => {
+      addEditors();
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [editors_units_number, editors_quantity, editors_rate])
+
+  // Scenario Total postData 
+  const [scenarioTotal, setScenarioTotal] = useState(0);
+
+  // Development handleChange 
+  const handleChangeScenario = (event) => {
+    setPostDataScenario({
+      ...postDataScenario,
+      [event.target.name]: parseFloat(event.target.value || 0 ),
+    });
+  }; 
+
+  // function to add all scenario on change
+  useEffect(() => {
+    const addScenario = () => {
+      setScenarioTotal(writersTotal + consultantsTotal + editorsTotal +
+        office_expenses_scenario + admin_scenario + travel_expenses_scenario +
+    living_expenses_scenario + other_scenario )
+    }
+    const timer = setTimeout(() => {
+      addScenario();
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [writersTotal, consultantsTotal, editorsTotal,
+    office_expenses_scenario, admin_scenario, travel_expenses_scenario,
+    living_expenses_scenario, other_scenario ])
+
+  // --------------------------------------------------
+
   // OTHER --------------------------------------------------
   const aboveLine = (
     <div>
@@ -1012,7 +1130,7 @@ function BudgetEdit() {
         const {research_development, prelim_budget, consultant_expenses,
           office_expenses, staff, travel_expenses_development,
           living_expenses_development, other_development} = data.results[0];
-        setPostDataRights({research_development, prelim_budget, consultant_expenses,
+          setPostDataDevelopment({research_development, prelim_budget, consultant_expenses,
           office_expenses, staff, travel_expenses_development,
           living_expenses_development, other_development});
 
