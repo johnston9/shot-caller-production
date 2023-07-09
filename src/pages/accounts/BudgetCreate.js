@@ -1078,11 +1078,19 @@ function BudgetCreate() {
   // Scenario Total postData 
   const [scenarioTotal, setScenarioTotal] = useState(0);
 
-  // Development handleChange 
+  // Scenario handleChange 
   const handleChangeScenario = (event) => {
     setPostDataScenario({
       ...postDataScenario,
       [event.target.name]: parseFloat(event.target.value || 0 ),
+    });
+  }; 
+
+  // Scenario handleChange Text 
+  const handleChangeScenarioText = (event) => {
+    setPostDataScenario({
+      ...postDataScenario,
+      [event.target.name]: event.target.value,
     });
   }; 
 
@@ -1189,7 +1197,7 @@ function BudgetCreate() {
         className={styles.Input}
         name="writers_units_name"
         value={writers_units_name}
-        onChange={handleChangeScenario}
+        onChange={handleChangeScenarioText}
             />
     </Form.Group>
     {errors?.writers_units_name?.map((message, idx) => (
@@ -1283,7 +1291,7 @@ function BudgetCreate() {
         className={styles.Input}
         name="consultants_units_name"
         value={consultants_units_name}
-        onChange={handleChangeScenario}
+        onChange={handleChangeScenarioText}
             />
     </Form.Group>
     {errors?.consultants_units_name?.map((message, idx) => (
@@ -1377,7 +1385,7 @@ function BudgetCreate() {
         className={styles.Input}
         name="editors_units_name"
         value={editors_units_name}
-        onChange={handleChangeScenario}
+        onChange={handleChangeScenarioText}
             />
     </Form.Group>
     {errors?.editors_units_name?.map((message, idx) => (
@@ -1471,7 +1479,7 @@ function BudgetCreate() {
         className={styles.Input}
         name="admin_scenario_units_name"
         value={admin_scenario_units_name}
-        onChange={handleChangeScenario}
+        onChange={handleChangeScenarioText}
             />
     </Form.Group>
     {errors?.admin_scenario_units_name?.map((message, idx) => (
@@ -1824,6 +1832,7 @@ function BudgetCreate() {
     {aboveLine}
     {rights}
     {development}
+    {scenario}
       <Row>
       <Col>
         <div className= {`mt-1`} >{buttons} </div>
