@@ -588,9 +588,15 @@ function BudgetEdit() {
   // function to add all development on change
   useEffect(() => {
     const addDevelopment = () => {
-      setDevelopmentTotal(research_development + prelim_budget + consultant_expenses
-        + office_expenses + staff + travel_expenses_development
-        + living_expenses_development + other_development)
+      setDevelopmentTotal(
+      parseFloat(research_development || 0) +
+      parseFloat(prelim_budget || 0) +
+      parseFloat(consultant_expenses || 0) +
+      parseFloat(office_expenses || 0) +
+      parseFloat(staff || 0) +
+      parseFloat(travel_expenses_development || 0) +
+      parseFloat(living_expenses_development || 0) +
+      parseFloat(other_development || 0))
     }
     const timer = setTimeout(() => {
       addDevelopment();
@@ -869,7 +875,7 @@ function BudgetEdit() {
         type="text"
         className={styles.Input}
         name="living_expenses_development"
-        value={research_development}
+        value={living_expenses_development}
         onChange={handleChangeDevelopment}
             />
     </Form.Group>
@@ -958,19 +964,22 @@ function BudgetEdit() {
   // Scenario postData
   const [postDataScenario, setPostDataScenario] = useState({
     writers_units_number: 0,
-    writers_units_name: 0,
+    writers_units_name: "",
     writers_quantity: 0,
     writers_rate: 0,
     consultants_units_number: 0,
-    consultants_units_name: 0,
+    consultants_units_name: "",
     consultants_quantity: 0,
     consultants_rate: 0,
     editors_units_number: 0,
-    editors_units_name: 0,
+    editors_units_name: "",
     editors_quantity: 0,
     editors_rate: 0,
+    admin_scenario_units_number: 0,
+    admin_scenario_units_name: "",
+    admin_scenario_quantity: 0,
+    admin_scenario_rate: 0,
     office_expenses_scenario: 0,
-    admin_scenario: 0,
     travel_expenses_scenario: 0,
     living_expenses_scenario: 0,
     other_scenario: 0,
@@ -983,66 +992,84 @@ function BudgetEdit() {
     consultants_quantity, consultants_rate,
     editors_units_number, editors_units_name,
     editors_quantity, editors_rate,
-    office_expenses_scenario, admin_scenario, travel_expenses_scenario,
+    admin_scenario_units_number, admin_scenario_units_name,
+    admin_scenario_quantity, admin_scenario_rate,
+    office_expenses_scenario, travel_expenses_scenario,
     living_expenses_scenario, other_scenario} = postDataScenario
 
   // Writers Total postData
   const [writersTotal, setWritersTotal] = useState(0);
-  // Writers Total postData 
+  // Consultants Total postData 
   const [consultantsTotal, setConsultantsTotal] = useState(0);
-  // Writers Total postData 
+  // Editors Total postData
   const [editorsTotal, setEditorsTotal] = useState(0);
+  // Admin Total postData 
+  const [adminScenarioTotal, setAdminScenarioTotal] = useState(0);
 
   // function to calculate writers on change
   useEffect(() => {
     const addWriters = () => {
-      setWritersTotal(writers_units_number *
-        writers_quantity * writers_rate )
+      setWritersTotal(parseFloat(writers_units_number || 0) * parseFloat(writers_quantity || 0) * parseFloat(writers_rate || 0))
     }
     const timer = setTimeout(() => {
       addWriters();
-    }, 1000);
+    }, 2000);
 
     return () => {
       clearTimeout(timer);
     };
-  }, [writers_units_number,
-    writers_quantity, writers_rate]);
+  }, [writers_units_number, writers_quantity, writers_rate]);
 
   // function to calculate consultants on change
   useEffect(() => {
     const addConsultants = () => {
-      setConsultantsTotal(consultants_units_number *
-        consultants_quantity * consultants_rate, )
+      setConsultantsTotal(
+        parseFloat(consultants_units_number || 0) * parseFloat(consultants_quantity || 0) * parseFloat(consultants_rate || 0))
     }
     const timer = setTimeout(() => {
       addConsultants();
-    }, 1000);
+    }, 2000);
 
     return () => {
       clearTimeout(timer);
     };
-  }, [consultants_units_number,
-    consultants_quantity, consultants_rate, ])
+  }, [consultants_units_number, consultants_quantity, consultants_rate, ])
 
   // function to calculate editors on change
   useEffect(() => {
     const addEditors = () => {
-      setEditorsTotal(editors_units_number * editors_quantity * editors_rate )
+      setEditorsTotal(parseFloat(editors_units_number || 0) * parseFloat(editors_quantity || 0) * parseFloat(editors_rate || 0))
     }
     const timer = setTimeout(() => {
       addEditors();
-    }, 1000);
+    }, 2000);
 
     return () => {
       clearTimeout(timer);
     };
   }, [editors_units_number, editors_quantity, editors_rate])
 
+  // function to calculate admin on change
+  useEffect(() => {
+    const addAdminScenario = () => {
+      setAdminScenarioTotal(parseFloat(admin_scenario_units_number || 0) *
+      parseFloat(admin_scenario_quantity || 0) *
+      parseFloat(admin_scenario_rate || 0))
+    }
+    const timer = setTimeout(() => {
+      addAdminScenario();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [admin_scenario_units_number,
+    admin_scenario_quantity, admin_scenario_rate]);
+
   // Scenario Total postData 
   const [scenarioTotal, setScenarioTotal] = useState(0);
 
-  // Development handleChange 
+  // Scenario handleChange 
   const handleChangeScenario = (event) => {
     setPostDataScenario({
       ...postDataScenario,
@@ -1053,9 +1080,15 @@ function BudgetEdit() {
   // function to add all scenario on change
   useEffect(() => {
     const addScenario = () => {
-      setScenarioTotal(writersTotal + consultantsTotal + editorsTotal +
-        office_expenses_scenario + admin_scenario + travel_expenses_scenario +
-    living_expenses_scenario + other_scenario )
+      setScenarioTotal(
+        parseFloat(writersTotal || 0) +
+      parseFloat(consultantsTotal || 0) +
+      parseFloat(editorsTotal || 0) +
+      parseFloat(adminScenarioTotal || 0) +
+      parseFloat(travel_expenses_scenario || 0) +
+      parseFloat(office_expenses_scenario || 0) +
+      parseFloat(living_expenses_scenario || 0) +
+      parseFloat(other_scenario || 0) )
     }
     const timer = setTimeout(() => {
       addScenario();
@@ -1065,8 +1098,596 @@ function BudgetEdit() {
       clearTimeout(timer);
     };
   }, [writersTotal, consultantsTotal, editorsTotal,
-    office_expenses_scenario, admin_scenario, travel_expenses_scenario,
+    office_expenses_scenario, adminScenarioTotal, travel_expenses_scenario,
     living_expenses_scenario, other_scenario ])
+
+    // input boxes scenario
+    const scenario = (
+      <div>
+      <Row className="mt-3" >
+      <Col md={1} >
+      <p>3000</p>
+      </Col>
+      <Col md={6} >
+      <h5 className={ `${styles.Bold}`}>SCENARIO</h5>
+      </Col>
+      </Row>
+      {/* TITLES */}
+      <Row className={ `${styles.Overview} pt-2`} >
+      <Col md={1} >
+      <p>ACCT</p>
+      </Col>
+      <Col md={2} >
+      <p>Description</p>
+      </Col>
+      <Col md={1} >
+      <p>Quantity</p>
+      </Col>
+      <Col md={1} >
+      <p># Unit</p>
+      </Col>
+      <Col md={1} >
+      <p>Unit</p>
+      </Col>
+      <Col md={1} >
+      <p>Price</p>
+      </Col>
+      <Col md={2} >
+      <p>Total</p>
+      </Col>
+      </Row>
+      {/* Writers */}
+      <Row>
+      <Col md={1} >
+      <p>3010</p>
+      </Col>
+      <Col md={5} >
+      <p>Writers</p>
+      </Col>
+      <Col md={1} >
+      <Form.Group controlId="writers_quantity" 
+          className={`${styles.Width95} text-center`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="writers_quantity"
+          value={writers_quantity}
+          onChange={handleChangeScenario}
+              />
+      </Form.Group>
+      {errors?.writers_quantity?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+      </Col>
+      <Col md={1} >
+      <Form.Group controlId="writers_units_number" 
+          className={`${styles.Width95} text-center`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="writers_units_number"
+          value={writers_units_number}
+          onChange={handleChangeScenario}
+              />
+      </Form.Group>
+      {errors?.writers_units_number?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+      </Col>
+      <Col md={1} >
+      <Form.Group controlId="writers_units_name" 
+          className={`${styles.Width95} text-center`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="writers_units_name"
+          value={writers_units_name}
+          onChange={handleChangeScenario}
+              />
+      </Form.Group>
+      {errors?.writers_units_name?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+      </Col>
+      <Col md={1} >
+      <Form.Group controlId="writers_rate" 
+          className={`${styles.Width95} text-center`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="writers_rate"
+          value={writers_rate}
+          onChange={handleChangeScenario}
+              />
+      </Form.Group>
+      {errors?.writers_rate?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+      </Col>
+      <Col md={2} >
+      <Form.Group controlId="writersTotal" 
+          className={`${styles.Width95} text-center`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="writersTotal"
+          value={writersTotal}
+          readOnly
+              />
+      </Form.Group>
+      {errors?.writersTotal?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+      </Col>
+      </Row>
+      {/* Consultants */}
+      <Row>
+      <Col md={1} >
+      <p>3020</p>
+      </Col>
+      <Col md={5} >
+      <p>Consultants</p>
+      </Col>
+      <Col md={1} >
+      <Form.Group controlId="consultants_quantity" 
+          className={`${styles.Width95} text-center`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="consultants_quantity"
+          value={consultants_quantity}
+          onChange={handleChangeScenario}
+              />
+      </Form.Group>
+      {errors?.consultants_quantity?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+      </Col>
+      <Col md={1} >
+      <Form.Group controlId="consultants_units_number" 
+          className={`${styles.Width95} text-center`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="consultants_units_number"
+          value={consultants_units_number}
+          onChange={handleChangeScenario}
+              />
+      </Form.Group>
+      {errors?.consultants_units_number?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+      </Col>
+      <Col md={1} >
+      <Form.Group controlId="consultants_units_name" 
+          className={`${styles.Width95} text-center`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="consultants_units_name"
+          value={consultants_units_name}
+          onChange={handleChangeScenario}
+              />
+      </Form.Group>
+      {errors?.consultants_units_name?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+      </Col>
+      <Col md={1} >
+      <Form.Group controlId="consultants_rate" 
+          className={`${styles.Width95} text-center`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="consultants_rate"
+          value={consultants_rate}
+          onChange={handleChangeScenario}
+              />
+      </Form.Group>
+      {errors?.consultants_rate?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+      </Col>
+      <Col md={2} >
+      <Form.Group controlId="consultantsTotal" 
+          className={`${styles.Width95} text-center`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="consultantsTotal"
+          value={consultantsTotal}
+          onChange={handleChangeScenario}
+              />
+      </Form.Group>
+      {errors?.consultantsTotal?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+      </Col>
+      </Row>
+      {/* Editors */}
+      <Row>
+      <Col md={1} >
+      <p>3030</p>
+      </Col>
+      <Col md={5} >
+      <p>Editors</p>
+      </Col>
+      <Col md={1} >
+      <Form.Group controlId="editors_quantity" 
+          className={`${styles.Width95} text-center`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="editors_quantity"
+          value={editors_quantity}
+          onChange={handleChangeScenario}
+              />
+      </Form.Group>
+      {errors?.editors_quantity?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+      </Col>
+      <Col md={1} >
+      <Form.Group controlId="editors_units_number" 
+          className={`${styles.Width95} text-center`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="editors_units_number"
+          value={editors_units_number}
+          onChange={handleChangeScenario}
+              />
+      </Form.Group>
+      {errors?.editors_units_number?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+      </Col>
+      <Col md={1} >
+      <Form.Group controlId="editors_units_name" 
+          className={`${styles.Width95} text-center`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="editors_units_name"
+          value={editors_units_name}
+          onChange={handleChangeScenario}
+              />
+      </Form.Group>
+      {errors?.editors_units_name?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+      </Col>
+      <Col md={1} >
+      <Form.Group controlId="editors_rate" 
+          className={`${styles.Width95} text-center`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="editors_rate"
+          value={editors_rate}
+          onChange={handleChangeScenario}
+              />
+      </Form.Group>
+      {errors?.editors_rate?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+      </Col>
+      <Col md={2} >
+      <Form.Group controlId="editorsTotal" 
+          className={`${styles.Width95} text-center`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="editorsTotal"
+          value={editorsTotal}
+          onChange={handleChangeScenario}
+              />
+      </Form.Group>
+      {errors?.editorsTotal?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+      </Col>
+      </Row>
+      {/* Admin */}
+      <Row>
+      <Col md={1} >
+      <p>3040</p>
+      </Col>
+      <Col md={5} >
+      <p>Admin</p>
+      </Col>
+      <Col md={1} >
+      <Form.Group controlId="admin_scenario_quantity" 
+          className={`${styles.Width95} text-center`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="admin_scenario_quantity"
+          value={admin_scenario_quantity}
+          onChange={handleChangeScenario}
+              />
+      </Form.Group>
+      {errors?.admin_scenario_quantity?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+      </Col>
+      <Col md={1} >
+      <Form.Group controlId="admin_scenario_units_number" 
+          className={`${styles.Width95} text-center`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="admin_scenario_units_number"
+          value={admin_scenario_units_number}
+          onChange={handleChangeScenario}
+              />
+      </Form.Group>
+      {errors?.admin_scenario_units_number?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+      </Col>
+      <Col md={1} >
+      <Form.Group controlId="admin_scenario_units_name" 
+          className={`${styles.Width95} text-center`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="admin_scenario_units_name"
+          value={admin_scenario_units_name}
+          onChange={handleChangeScenario}
+              />
+      </Form.Group>
+      {errors?.admin_scenario_units_name?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+      </Col>
+      <Col md={1} >
+      <Form.Group controlId="admin_scenario_rate" 
+          className={`${styles.Width95} text-center`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="admin_scenario_rate"
+          value={admin_scenario_rate}
+          onChange={handleChangeScenario}
+              />
+      </Form.Group>
+      {errors?.admin_scenario_rate?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+      </Col>
+      <Col md={2} >
+      <Form.Group controlId="adminScenarioTotal" 
+          className={`${styles.Width95} text-center`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="adminScenarioTotal"
+          value={adminScenarioTotal}
+          onChange={handleChangeScenario}
+              />
+      </Form.Group>
+      {errors?.adminScenarioTotal?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+      </Col>
+      </Row>
+      {/* Office Cost/Expenses Scenario */}
+      <Row>
+      <Col md={1} >
+      <p>3050</p>
+      </Col>
+      <Col md={6} >
+      <p>Office Cost/Expenses Scenario</p>
+      </Col>
+      <Col md={1} >
+      <p></p>
+      </Col>
+      <Col md={1} >
+      <p></p>
+      </Col>
+      <Col md={1} >
+      <p></p>
+      </Col>
+      <Col md={2} >
+      <Form.Group controlId="office_expenses_scenario" 
+          className={`${styles.Width95} text-center`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="office_expenses_scenario"
+          value={office_expenses_scenario}
+          onChange={handleChangeScenario}
+              />
+      </Form.Group>
+      {errors?.office_expenses_scenario?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+      </Col>
+      </Row>
+      {/* Travel Expenses Scenario */}
+      <Row>
+      <Col md={1} >
+      <p>3060</p>
+      </Col>
+      <Col md={6} >
+      <p>Travel Expenses</p>
+      </Col>
+      <Col md={1} >
+      <p></p>
+      </Col>
+      <Col md={1} >
+      <p></p>
+      </Col>
+      <Col md={1} >
+      <p></p>
+      </Col>
+      <Col md={2} >
+      <Form.Group controlId="travel_expenses_scenario" 
+          className={`${styles.Width95} text-center`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="travel_expenses_scenario"
+          value={travel_expenses_scenario}
+          onChange={handleChangeScenario}
+              />
+      </Form.Group>
+      {errors?.travel_expenses_scenario?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+      </Col>
+      </Row>
+      {/* Office Expenses */}
+      <Row>
+      <Col md={1} >
+      <p>3070</p>
+      </Col>
+      <Col md={6} >
+      <p>Living Expenses</p>
+      </Col>
+      <Col md={1} >
+      <p></p>
+      </Col>
+      <Col md={1} >
+      <p></p>
+      </Col>
+      <Col md={1} >
+      <p></p>
+      </Col>
+      <Col md={2} >
+      <Form.Group controlId="living_expenses_scenario" 
+          className={`${styles.Width95} text-center`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="living_expenses_scenario"
+          value={living_expenses_scenario}
+          onChange={handleChangeScenario}
+              />
+      </Form.Group>
+      {errors?.living_expenses_scenario?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+      </Col>
+      </Row>
+      {/* Other */}
+      <Row>
+      <Col md={1} >
+      <p>3080</p>
+      </Col>
+      <Col md={6} >
+      <p>Other</p>
+      </Col>
+      <Col md={1} >
+      <p></p>
+      </Col>
+      <Col md={1} >
+      <p></p>
+      </Col>
+      <Col md={1} >
+      <p></p>
+      </Col>
+      <Col md={2} >
+      <Form.Group controlId="other_scenario" 
+          className={`${styles.Width95} text-center`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="other_scenario"
+          value={other_scenario}
+          onChange={handleChangeScenario}
+              />
+      </Form.Group>
+      {errors?.other_scenario?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+      </Col>
+      </Row>
+      {/* Scenario Total */}
+      <Row>
+      <Col md={1} >
+      </Col>
+      <Col md={6} >
+      <h5 className={ `${styles.Bold}`}>TOTAL</h5>
+      </Col>
+      <Col md={1} >
+      <p></p>
+      </Col>
+      <Col md={1} >
+      <p></p>
+      </Col>
+      <Col md={1} >
+      <p></p>
+      </Col>
+      <Col md={2} >
+      <Form.Group controlId="scenarioTotal" 
+          className={`${styles.Width95} text-center`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="scenarioTotal"
+          value={scenarioTotal}
+          readOnly
+              />
+      </Form.Group>
+      {errors?.scenarioTotal?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+      </Col>
+      </Row>
+      </div>
+    );
 
   // --------------------------------------------------
 
@@ -1110,7 +1731,7 @@ function BudgetEdit() {
     </div>
   );
 
-  // fetch budgetfor pre input ualues
+  // fetch budget for pre input ualues
   useEffect(() => {
     const handleMount = async () => {
       try {
@@ -1133,8 +1754,23 @@ function BudgetEdit() {
           setPostDataDevelopment({research_development, prelim_budget, consultant_expenses,
           office_expenses, staff, travel_expenses_development,
           living_expenses_development, other_development});
-
-
+        // scenario
+        const {writers_units_number, writers_units_name, writers_quantity, writers_rate,
+          consultants_units_number, consultants_units_name, consultants_quantity, consultants_rate,
+          editors_units_number, editors_units_name, editors_quantity, editors_rate,
+          admin_scenario_units_number, admin_scenario_units_name,
+          admin_scenario_quantity, admin_scenario_rate,
+          office_expenses_scenario, travel_expenses_scenario,
+          living_expenses_scenario, other_scenario} = data.results[0];
+          setPostDataScenario({
+            writers_units_number, writers_units_name, writers_quantity, writers_rate,
+          consultants_units_number, consultants_units_name, consultants_quantity, consultants_rate,
+          editors_units_number, editors_units_name, editors_quantity, editors_rate,
+          admin_scenario_units_number, admin_scenario_units_name,
+          admin_scenario_quantity, admin_scenario_rate,
+          office_expenses_scenario, travel_expenses_scenario,
+          living_expenses_scenario, other_scenario
+          });
       } catch (err) {
         console.log(err);
       }
@@ -1176,6 +1812,28 @@ function BudgetEdit() {
     formData.append("living_expenses_development", living_expenses_development);
     formData.append("other_development", other_development);
     formData.append("development_total ", developmentTotal);
+    // scenario
+    formData.append("writers_units_number", writers_units_number);
+    formData.append("writers_units_name", writers_units_name);
+    formData.append("writers_quantity", writers_quantity);
+    formData.append("writers_rate", writers_rate);
+    formData.append("consultants_units_number", consultants_units_number);
+    formData.append("consultants_units_name", consultants_units_name);
+    formData.append("consultants_quantity", consultants_quantity);
+    formData.append("consultants_rate", consultants_rate);
+    formData.append("editors_units_number ", editors_units_number);
+    formData.append("editors_units_name", editors_units_name);
+    formData.append("editors_quantity", editors_quantity);
+    formData.append("editors_rate", editors_rate);
+    formData.append("admin_scenario_units_number ", admin_scenario_units_number);
+    formData.append("admin_scenario_units_name", admin_scenario_units_name);
+    formData.append("admin_scenario_quantity", admin_scenario_quantity);
+    formData.append("admin_scenario_rate", admin_scenario_rate);
+    formData.append("office_expenses_scenario ", office_expenses_scenario);
+    formData.append("travel_expenses_scenario", travel_expenses_scenario);
+    formData.append("living_expenses_scenario", living_expenses_scenario);
+    formData.append("other_scenario", other_scenario);
+    formData.append("scenario_total", scenarioTotal);
 
     try {
       const { data } = await axiosReq.put(`/budgets/${budgetId}/`, formData);
@@ -1213,6 +1871,7 @@ function BudgetEdit() {
     {aboveLine}
     {rights}
     {development}
+    {scenario}
       <Row>
       <Col>
         <div className= {`mt-1`} >{buttons} </div>
