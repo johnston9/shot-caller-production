@@ -567,12 +567,14 @@ function BudgetEdit() {
     travel_expenses_development: 0,
     living_expenses_development: 0,
     other_development: 0,
+    fringes_taxes_development: 0,
   });
 
   // Development postData values
   const {research_development, prelim_budget, consultant_expenses,
     office_expenses, staff, travel_expenses_development,
-    living_expenses_development, other_development} = postDataDevelopment
+    living_expenses_development, other_development,
+    fringes_taxes_development,} = postDataDevelopment
 
   // Development Total postData 
   const [developmentTotal, setDevelopmentTotal] = useState(0)
@@ -596,7 +598,9 @@ function BudgetEdit() {
       parseFloat(staff || 0) +
       parseFloat(travel_expenses_development || 0) +
       parseFloat(living_expenses_development || 0) +
-      parseFloat(other_development || 0))
+      parseFloat(other_development || 0) +
+      parseFloat(fringes_taxes_development || 0)
+      )
     }
     const timer = setTimeout(() => {
       addDevelopment();
@@ -607,7 +611,8 @@ function BudgetEdit() {
     };
   }, [research_development, prelim_budget, consultant_expenses,
     office_expenses, staff, travel_expenses_development,
-    living_expenses_development, other_development ])
+    living_expenses_development, other_development,
+    fringes_taxes_development ])
 
   // Development input boxes
   const development = (
@@ -921,6 +926,41 @@ function BudgetEdit() {
     ))}
     </Col>
     </Row>
+    {/* Fringes and Taxes */}
+    <Row>
+    <Col md={1} >
+    <p>2090</p>
+    </Col>
+    <Col md={6} >
+    <p>Fringes and Taxes</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p>%</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="fringes_taxes_development" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="fringes_taxes_development"
+        value={fringes_taxes_development}
+        onChange={handleChangeDevelopment}
+            />
+    </Form.Group>
+    {errors?.fringes_taxes_development?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
     {/* Development Total */}
     <Row>
     <Col md={1} >
@@ -983,6 +1023,7 @@ function BudgetEdit() {
     travel_expenses_scenario: 0,
     living_expenses_scenario: 0,
     other_scenario: 0,
+    fringes_taxes_scenario: 0,
   });
 
   // Scenario postData values
@@ -995,7 +1036,8 @@ function BudgetEdit() {
     admin_scenario_units_number, admin_scenario_units_name,
     admin_scenario_quantity, admin_scenario_rate,
     office_expenses_scenario, travel_expenses_scenario,
-    living_expenses_scenario, other_scenario} = postDataScenario
+    living_expenses_scenario, other_scenario, 
+    fringes_taxes_scenario } = postDataScenario
 
   // Writers Total postData
   const [writersTotal, setWritersTotal] = useState(0);
@@ -1096,7 +1138,9 @@ function BudgetEdit() {
       parseFloat(travel_expenses_scenario || 0) +
       parseFloat(office_expenses_scenario || 0) +
       parseFloat(living_expenses_scenario || 0) +
-      parseFloat(other_scenario || 0) )
+      parseFloat(other_scenario || 0) +
+      parseFloat(fringes_taxes_scenario || 0) 
+      )
     }
     const timer = setTimeout(() => {
       addScenario();
@@ -1107,7 +1151,7 @@ function BudgetEdit() {
     };
   }, [writersTotal, consultantsTotal, editorsTotal,
     office_expenses_scenario, adminScenarioTotal, travel_expenses_scenario,
-    living_expenses_scenario, other_scenario ])
+    living_expenses_scenario, other_scenario, fringes_taxes_scenario ])
 
     // Scenario input boxes
   const scenario = (
@@ -1660,6 +1704,41 @@ function BudgetEdit() {
     ))}
     </Col>
     </Row>
+    {/* Fringes and Taxes */}
+    <Row>
+    <Col md={1} >
+    <p>3090</p>
+    </Col>
+    <Col md={6} >
+    <p>Fringes and Taxes</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p>%</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="fringes_taxes_scenario" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="fringes_taxes_scenario"
+        value={fringes_taxes_scenario}
+        onChange={handleChangeScenario}
+            />
+    </Form.Group>
+    {errors?.fringes_taxes_scenario?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
     {/* Scenario Total */}
     <Row>
     <Col md={1} >
@@ -1758,10 +1837,12 @@ function BudgetEdit() {
         // development
         const {research_development, prelim_budget, consultant_expenses,
           office_expenses, staff, travel_expenses_development,
-          living_expenses_development, other_development} = data.results[0];
+          living_expenses_development, other_development,
+          fringes_taxes_development} = data.results[0];
           setPostDataDevelopment({research_development, prelim_budget, consultant_expenses,
           office_expenses, staff, travel_expenses_development,
-          living_expenses_development, other_development});
+          living_expenses_development, other_development,
+          fringes_taxes_development});
         // scenario
         const {writers_units_number, writers_units_name, writers_quantity, writers_rate,
           consultants_units_number, consultants_units_name, consultants_quantity, consultants_rate,
@@ -1769,7 +1850,8 @@ function BudgetEdit() {
           admin_scenario_units_number, admin_scenario_units_name,
           admin_scenario_quantity, admin_scenario_rate,
           office_expenses_scenario, travel_expenses_scenario,
-          living_expenses_scenario, other_scenario} = data.results[0];
+          living_expenses_scenario, other_scenario,
+          fringes_taxes_scenario} = data.results[0];
           setPostDataScenario({
             writers_units_number, writers_units_name, writers_quantity, writers_rate,
           consultants_units_number, consultants_units_name, consultants_quantity, consultants_rate,
@@ -1777,7 +1859,7 @@ function BudgetEdit() {
           admin_scenario_units_number, admin_scenario_units_name,
           admin_scenario_quantity, admin_scenario_rate,
           office_expenses_scenario, travel_expenses_scenario,
-          living_expenses_scenario, other_scenario
+          living_expenses_scenario, other_scenario, fringes_taxes_scenario
           });
       } catch (err) {
         console.log(err);

@@ -581,12 +581,14 @@ function BudgetCreate() {
     travel_expenses_development: 0,
     living_expenses_development: 0,
     other_development: 0,
+    fringes_taxes_development: 0,
   });
 
   // Development postData values
   const {research_development, prelim_budget, consultant_expenses,
     office_expenses, staff, travel_expenses_development,
-    living_expenses_development, other_development} = postDataDevelopment
+    living_expenses_development, other_development,
+    fringes_taxes_development} = postDataDevelopment
 
   // Development Total postData 
   const [developmentTotal, setDevelopmentTotal] = useState(0)
@@ -604,7 +606,8 @@ function BudgetCreate() {
     const addDevelopment = () => {
       setDevelopmentTotal(research_development + prelim_budget + consultant_expenses
         + office_expenses + staff + travel_expenses_development
-        + living_expenses_development + other_development)
+        + living_expenses_development + other_development 
+        + fringes_taxes_development)
     }
     const timer = setTimeout(() => {
       addDevelopment();
@@ -615,7 +618,8 @@ function BudgetCreate() {
     };
   }, [research_development, prelim_budget, consultant_expenses,
     office_expenses, staff, travel_expenses_development,
-    living_expenses_development, other_development ])
+    living_expenses_development, other_development,
+    fringes_taxes_development ])
 
   // Development input boxes
   const development = (
@@ -637,13 +641,13 @@ function BudgetCreate() {
     <p>Description</p>
     </Col>
     <Col md={1} >
-    <p>#</p>
+    <p></p>
     </Col>
     <Col md={1} >
-    <p>Unit</p>
+    <p></p>
     </Col>
     <Col md={1} >
-    <p>Price</p>
+    <p></p>
     </Col>
     <Col md={2} >
     <p>Total</p>
@@ -929,6 +933,41 @@ function BudgetCreate() {
     ))}
     </Col>
     </Row>
+    {/* Fringes and Taxes */}
+    <Row>
+    <Col md={1} >
+    <p>2090</p>
+    </Col>
+    <Col md={6} >
+    <p>Fringes and Taxes</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p>%</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="fringes_taxes_development" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="fringes_taxes_development"
+        value={fringes_taxes_development}
+        onChange={handleChangeDevelopment}
+            />
+    </Form.Group>
+    {errors?.fringes_taxes_development?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
     {/* Development Total */}
     <Row>
     <Col md={1} >
@@ -990,6 +1029,7 @@ function BudgetCreate() {
     travel_expenses_scenario: 0,
     living_expenses_scenario: 0,
     other_scenario: 0,
+    fringes_taxes_scenario: 0,
   });
 
   // Scenario postData values
@@ -1002,7 +1042,8 @@ function BudgetCreate() {
     admin_scenario_units_number, admin_scenario_units_name,
     admin_scenario_quantity, admin_scenario_rate,
     office_expenses_scenario, travel_expenses_scenario,
-    living_expenses_scenario, other_scenario} = postDataScenario
+    living_expenses_scenario, other_scenario,
+    fringes_taxes_scenario} = postDataScenario
 
   // Writers Total postData
   const [writersTotal, setWritersTotal] = useState(0);
@@ -1099,7 +1140,7 @@ function BudgetCreate() {
     const addScenario = () => {
       setScenarioTotal(writersTotal + consultantsTotal + editorsTotal +
         office_expenses_scenario + adminScenarioTotal + travel_expenses_scenario +
-    living_expenses_scenario + other_scenario )
+    living_expenses_scenario + other_scenario + fringes_taxes_scenario)
     }
     const timer = setTimeout(() => {
       addScenario();
@@ -1110,7 +1151,7 @@ function BudgetCreate() {
     };
   }, [writersTotal, consultantsTotal, editorsTotal,
     office_expenses_scenario, adminScenarioTotal, travel_expenses_scenario,
-    living_expenses_scenario, other_scenario ])
+    living_expenses_scenario, other_scenario, fringes_taxes_scenario ])
 
   // Scenario input boxes
   const scenario = (
@@ -1128,7 +1169,7 @@ function BudgetCreate() {
     <Col md={1} >
     <p>ACCT</p>
     </Col>
-    <Col md={2} >
+    <Col md={5} >
     <p>Description</p>
     </Col>
     <Col md={1} >
@@ -1593,7 +1634,7 @@ function BudgetCreate() {
     ))}
     </Col>
     </Row>
-    {/* Office Expenses */}
+    {/* Living Expenses */}
     <Row>
     <Col md={1} >
     <p>3070</p>
@@ -1663,6 +1704,41 @@ function BudgetCreate() {
     ))}
     </Col>
     </Row>
+    {/* Fringes and Taxes */}
+    <Row>
+    <Col md={1} >
+    <p>3090</p>
+    </Col>
+    <Col md={6} >
+    <p>Fringes and Taxes</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p>%</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="fringes_taxes_scenario" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="fringes_taxes_scenario"
+        value={fringes_taxes_scenario}
+        onChange={handleChangeScenario}
+            />
+    </Form.Group>
+    {errors?.fringes_taxes_scenario?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
     {/* Scenario Total */}
     <Row>
     <Col md={1} >
@@ -1691,6 +1767,455 @@ function BudgetCreate() {
             />
     </Form.Group>
     {errors?.scenarioTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    </div>
+  );
+  // ------------------------------------------------------
+
+  // PRODUCERS DIRECTORS --------------------------------------------
+  
+  // producers postData
+  const [postDataProducersDirs, setPostDataProducersDirs] = useState({
+    executive_producers: 0,
+    producers: 0,
+    line_producers: 0,
+    co_producers: 0,
+    associate_producers: 0,
+    directors: 0,
+    unit2_directors: 0,
+    travel_expenses_producers_dirs: 0,
+    living_expenses_producers_dirs: 0,
+    other_producers_dirs: 0,
+    fringes_taxes_producers_dirs: 0,
+  });
+
+  // producers directors postData values
+  const {executive_producers,
+    producers,
+    line_producers,
+    co_producers,
+    associate_producers,
+    directors,
+    unit2_directors,
+    travel_expenses_producers_dirs,
+    living_expenses_producers_dirs,
+    other_producers_dirs,
+    fringes_taxes_producers_dirs,
+    } = postDataProducersDirs
+
+  // ProducersDirs Total postData 
+  const [producersDirsTotal, setProducersDirsTotal] = useState(0)
+
+  // Development handleChange
+  const handleChangeProducersDirs = (event) => {
+    setPostDataProducersDirs({
+      ...postDataProducersDirs,
+      [event.target.name]: parseFloat(event.target.value || 0 ),
+    });
+  }; 
+
+  // function to add all ProducersDirs on change
+  useEffect(() => {
+    const addProducersDirs = () => {
+      setProducersDirsTotal(executive_producers +
+        producers + line_producers + co_producers +
+        associate_producers + directors + unit2_directors +
+        travel_expenses_producers_dirs + living_expenses_producers_dirs +
+        other_producers_dirs + fringes_taxes_producers_dirs,)
+    }
+    const timer = setTimeout(() => {
+      addProducersDirs();
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [executive_producers,
+    producers, line_producers, co_producers,
+    associate_producers, directors, unit2_directors,
+    travel_expenses_producers_dirs, living_expenses_producers_dirs,
+    other_producers_dirs, fringes_taxes_producers_dirs, ])
+
+  // Development input boxes
+  const producersDirs = (
+    <div>
+    <Row className="mt-3" >
+    <Col md={1} >
+    <p>2000</p>
+    </Col>
+    <Col md={6} >
+    <h5 className={ `${styles.Bold}`}>RESEARCH AND DEVELOPMENT</h5>
+    </Col>
+    </Row>
+    {/* TITLES */}
+    <Row className={ `${styles.Overview} pt-2`} >
+    <Col md={1} >
+    <p>ACCT</p>
+    </Col>
+    <Col md={6} >
+    <p>Description</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <p>Total</p>
+    </Col>
+    </Row>
+    {/* Research and Development */}
+    <Row>
+    <Col md={1} >
+    <p>2010</p>
+    </Col>
+    <Col md={6} >
+    <p>Research</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="research_development" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="research_development"
+        value={research_development}
+        onChange={handleChangeDevelopment}
+            />
+    </Form.Group>
+    {errors?.research_development?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Preliminary Breakdown/Budget */}
+    <Row>
+    <Col md={1} >
+    <p>2020</p>
+    </Col>
+    <Col md={6} >
+    <p>Preliminary Breakdown/Budget</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="prelim_budget" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="prelim_budget"
+        value={prelim_budget}
+        onChange={handleChangeDevelopment}
+            />
+    </Form.Group>
+    {errors?.prelim_budget?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Consultant Expenses */}
+    <Row>
+    <Col md={1} >
+    <p>2030</p>
+    </Col>
+    <Col md={6} >
+    <p>Consultant Expenses</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="consultant_expenses" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="consultant_expenses"
+        value={consultant_expenses}
+        onChange={handleChangeDevelopment}
+            />
+    </Form.Group>
+    {errors?.consultant_expenses?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Office Expenses */}
+    <Row>
+    <Col md={1} >
+    <p>2040</p>
+    </Col>
+    <Col md={6} >
+    <p>Office Expenses</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="office_expenses" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="office_expenses"
+        value={office_expenses}
+        onChange={handleChangeDevelopment}
+            />
+    </Form.Group>
+    {errors?.office_expenses?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Staff */}
+    <Row>
+    <Col md={1} >
+    <p>2050</p>
+    </Col>
+    <Col md={6} >
+    <p>Staff</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="staff" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="staff"
+        value={staff}
+        onChange={handleChangeDevelopment}
+            />
+    </Form.Group>
+    {errors?.staff?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Travel Expenses Development */}
+    <Row>
+    <Col md={1} >
+    <p>2060</p>
+    </Col>
+    <Col md={6} >
+    <p>Travel Expenses</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="travel_expenses_development" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="travel_expenses_development"
+        value={travel_expenses_development}
+        onChange={handleChangeDevelopment}
+            />
+    </Form.Group>
+    {errors?.travel_expenses_development?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Living Expenses Development */}
+    <Row>
+    <Col md={1} >
+    <p>2070</p>
+    </Col>
+    <Col md={6} >
+    <p>Living Expenses Development</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="living_expenses_development" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="living_expenses_development"
+        value={living_expenses_development}
+        onChange={handleChangeDevelopment}
+            />
+    </Form.Group>
+    {errors?.living_expenses_development?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Other Development */}
+    <Row>
+    <Col md={1} >
+    <p>2080</p>
+    </Col>
+    <Col md={6} >
+    <p>Other</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="other_development" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="other_development"
+        value={other_development}
+        onChange={handleChangeDevelopment}
+            />
+    </Form.Group>
+    {errors?.other_development?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Fringes and Taxes */}
+    <Row>
+    <Col md={1} >
+    <p>2090</p>
+    </Col>
+    <Col md={6} >
+    <p>Fringes and Taxes</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p>%</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="fringes_taxes_development" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="fringes_taxes_development"
+        value={fringes_taxes_development}
+        onChange={handleChangeDevelopment}
+            />
+    </Form.Group>
+    {errors?.fringes_taxes_development?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Development Total */}
+    <Row>
+    <Col md={1} >
+    </Col>
+    <Col md={6} >
+    <h5 className={ `${styles.Bold}`}>TOTAL</h5>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="developmentTotal" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="developmentTotal"
+        value={developmentTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.developmentTotal?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
