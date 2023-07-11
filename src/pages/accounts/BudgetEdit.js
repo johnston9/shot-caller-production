@@ -1169,13 +1169,13 @@ function BudgetEdit() {
     <Col md={1} >
     <p>ACCT</p>
     </Col>
-    <Col md={2} >
+    <Col md={5} >
     <p>Description</p>
     </Col>
     <Col md={1} >
-    <p>Quantity</p>
+    <p>#</p>
     </Col>
-    <Col md={1} >
+    <Col className="px-0 mx-0" md={1} >
     <p># Unit</p>
     </Col>
     <Col md={1} >
@@ -1196,9 +1196,9 @@ function BudgetEdit() {
     <Col md={5} >
     <p>Writers</p>
     </Col>
-    <Col md={1} >
+    <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="writers_quantity" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width100} text-center`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1213,7 +1213,7 @@ function BudgetEdit() {
         </Alert>
     ))}
     </Col>
-    <Col md={1} >
+    <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="writers_units_number" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -1230,7 +1230,7 @@ function BudgetEdit() {
         </Alert>
     ))}
     </Col>
-    <Col md={1} >
+    <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="writers_units_name" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -1247,7 +1247,7 @@ function BudgetEdit() {
         </Alert>
     ))}
     </Col>
-    <Col md={1} >
+    <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="writers_rate" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -1264,7 +1264,7 @@ function BudgetEdit() {
         </Alert>
     ))}
     </Col>
-    <Col md={2} >
+    <Col className="px-1 mx-0" md={2} >
     <Form.Group controlId="writersTotal" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -1290,7 +1290,7 @@ function BudgetEdit() {
     <Col md={5} >
     <p>Consultants</p>
     </Col>
-    <Col md={1} >
+    <Col className="px-1 mx-0"  md={1} >
     <Form.Group controlId="consultants_quantity" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -1307,7 +1307,7 @@ function BudgetEdit() {
         </Alert>
     ))}
     </Col>
-    <Col md={1} >
+    <Col className="px-1 mx-0"  md={1} >
     <Form.Group controlId="consultants_units_number" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -1324,7 +1324,7 @@ function BudgetEdit() {
         </Alert>
     ))}
     </Col>
-    <Col md={1} >
+    <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="consultants_units_name" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -1341,7 +1341,7 @@ function BudgetEdit() {
         </Alert>
     ))}
     </Col>
-    <Col md={1} >
+    <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="consultants_rate" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -1358,7 +1358,7 @@ function BudgetEdit() {
         </Alert>
     ))}
     </Col>
-    <Col md={2} >
+    <Col className="px-1 mx-0"  md={2} >
     <Form.Group controlId="consultantsTotal" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -1384,7 +1384,7 @@ function BudgetEdit() {
     <Col md={5} >
     <p>Editors</p>
     </Col>
-    <Col md={1} >
+    <Col className="px-1 mx-0"  md={1} >
     <Form.Group controlId="editors_quantity" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -1401,7 +1401,7 @@ function BudgetEdit() {
         </Alert>
     ))}
     </Col>
-    <Col md={1} >
+    <Col className="px-1 mx-0"  md={1} >
     <Form.Group controlId="editors_units_number" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -1418,7 +1418,7 @@ function BudgetEdit() {
         </Alert>
     ))}
     </Col>
-    <Col md={1} >
+    <Col className="px-1 mx-0"  md={1} >
     <Form.Group controlId="editors_units_name" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -1435,7 +1435,7 @@ function BudgetEdit() {
         </Alert>
     ))}
     </Col>
-    <Col md={1} >
+    <Col className="px-1 mx-0"  md={1} >
     <Form.Group controlId="editors_rate" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -1452,7 +1452,7 @@ function BudgetEdit() {
         </Alert>
     ))}
     </Col>
-    <Col md={2} >
+    <Col className="px-1 mx-0"  md={2} >
     <Form.Group controlId="editorsTotal" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -1478,7 +1478,7 @@ function BudgetEdit() {
     <Col md={5} >
     <p>Admin</p>
     </Col>
-    <Col md={1} >
+    <Col className="px-1 mx-0"  md={1} >
     <Form.Group controlId="admin_scenario_quantity" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -1495,7 +1495,7 @@ function BudgetEdit() {
         </Alert>
     ))}
     </Col>
-    <Col md={1} >
+    <Col className="px-1 mx-0"  md={1} >
     <Form.Group controlId="admin_scenario_units_number" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -1512,7 +1512,7 @@ function BudgetEdit() {
         </Alert>
     ))}
     </Col>
-    <Col md={1} >
+    <Col className="px-1 mx-0"  md={1} >
     <Form.Group controlId="admin_scenario_units_name" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -1529,7 +1529,7 @@ function BudgetEdit() {
         </Alert>
     ))}
     </Col>
-    <Col md={1} >
+    <Col className="px-1 mx-0"  md={1} >
     <Form.Group controlId="admin_scenario_rate" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -1546,7 +1546,7 @@ function BudgetEdit() {
         </Alert>
     ))}
     </Col>
-    <Col md={2} >
+    <Col className="px-1 mx-0"  md={2} >
     <Form.Group controlId="adminScenarioTotal" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -1581,7 +1581,7 @@ function BudgetEdit() {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col md={2} >
+    <Col className="px-1 mx-0"  md={2} >
     <Form.Group controlId="office_expenses_scenario" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -1616,7 +1616,7 @@ function BudgetEdit() {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col md={2} >
+    <Col className="px-1 mx-0"  md={2} >
     <Form.Group controlId="travel_expenses_scenario" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -1634,7 +1634,7 @@ function BudgetEdit() {
     ))}
     </Col>
     </Row>
-    {/* Office Expenses */}
+    {/* Living Expenses */}
     <Row>
     <Col md={1} >
     <p>3070</p>
@@ -1651,7 +1651,7 @@ function BudgetEdit() {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col md={2} >
+    <Col className="px-1 mx-0"  md={2} >
     <Form.Group controlId="living_expenses_scenario" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -1686,7 +1686,7 @@ function BudgetEdit() {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col md={2} >
+    <Col className="px-1 mx-0" md={2} >
     <Form.Group controlId="other_scenario" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -1721,7 +1721,7 @@ function BudgetEdit() {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col md={2} >
+    <Col className="px-1 mx-0" md={2} >
     <Form.Group controlId="fringes_taxes_scenario" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -1755,7 +1755,7 @@ function BudgetEdit() {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col md={2} >
+    <Col className="px-1 mx-0"  md={2} >
     <Form.Group controlId="scenarioTotal" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -1776,7 +1776,893 @@ function BudgetEdit() {
     </div>
   );
 
-  // --------------------------------------------------
+  // ------------------------------------------------------
+
+  // PRODUCERS DIRECTORS --------------------------------------------
+  
+  // producers postData
+  const [postDataProducersDirs, setPostDataProducersDirs] = useState({
+    executive_producers_rate: 0,
+    producers_rate: 0,
+    line_producers_rate: 0,
+    co_producers_rate: 0,
+    associate_producers_rate: 0,
+    directors_rate: 0,
+    unit2_directors_rate: 0,
+    executive_producers_quantity: 0,
+    producers_quantity: 0,
+    line_producers_quantity: 0,
+    co_producers_quantity: 0,
+    associate_producers_quantity: 0,
+    directors_quantity: 0,
+    unit2_directors_quantity: 0,
+    travel_expenses_producers_dirs: 0,
+    living_expenses_producers_dirs: 0,
+    other_producers_dirs: 0,
+    fringes_taxes_producers_dirs: 0,
+  });
+
+  // producers directors postData values
+  const {executive_producers_rate,
+    producers_rate,
+    line_producers_rate,
+    co_producers_rate,
+    associate_producers_rate,
+    directors_rate,
+    unit2_directors_rate,
+    executive_producers_quantity,
+    producers_quantity,
+    line_producers_quantity,
+    co_producers_quantity,
+    associate_producers_quantity,
+    directors_quantity,
+    unit2_directors_quantity,
+    travel_expenses_producers_dirs,
+    living_expenses_producers_dirs,
+    other_producers_dirs,
+    fringes_taxes_producers_dirs,
+    } = postDataProducersDirs;
+
+  // TOTALS
+  // Exec Producers Total postData
+  const [execProducersTotal, setExecProducersTotal] = useState(0);
+  // Producers Total postData
+  const [producersTotal, setProducersTotal] = useState(0);
+  // Line Producers Total postData
+  const [lineProducersTotal, setLineProducersTotal] = useState(0);
+  // Co Producers Total postData
+  const [coProducersTotal, setCoProducersTotal] = useState(0);
+  // Associate Producers Total postData
+  const [assocProducersTotal, setAssocProducersTotal] = useState(0);
+  // Directors Total postData
+  const [directorsTotal, setDirectorsTotal] = useState(0);
+  // 2nd Unit Directors Total postData
+  const [unit2DirectorsTotal, setUnit2DirectorsTotal] = useState(0);
+
+  // ProducersDirs Total postData 
+  const [producersDirsTotal, setProducersDirsTotal] = useState(0)
+
+  // CALCULATE FUNCTIONS
+  // function to calculate Exec Producers on change
+  useEffect(() => {
+    const addExecPros = () => {
+      setExecProducersTotal(parseFloat(executive_producers_quantity || 0) * 
+      parseFloat(executive_producers_rate || 0))
+    }
+    const timer = setTimeout(() => {
+      addExecPros();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [executive_producers_quantity, executive_producers_rate]);
+
+  // function to calculate Producers on change
+  useEffect(() => {
+    const addPros = () => {
+      setProducersTotal(parseFloat(producers_quantity || 0) * 
+      parseFloat(producers_rate || 0))
+    }
+    const timer = setTimeout(() => {
+      addPros();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [producers_quantity, producers_rate]);
+
+  // function to calculate Line Producers on change
+  useEffect(() => {
+    const addLinePros = () => {
+      setLineProducersTotal(parseFloat(line_producers_quantity || 0) * 
+      parseFloat(line_producers_rate || 0))
+    }
+    const timer = setTimeout(() => {
+      addLinePros();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [line_producers_quantity, line_producers_rate]);
+
+  // function to calculate  Co Producers on change
+  useEffect(() => {
+    const addCoPros = () => {
+      setCoProducersTotal(parseFloat(co_producers_quantity || 0) * 
+      parseFloat(co_producers_rate || 0))
+    }
+    const timer = setTimeout(() => {
+      addCoPros();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [co_producers_quantity, co_producers_rate]);
+
+  // function to calculate  Assoc Producers on change
+  useEffect(() => {
+    const addAssocPros = () => {
+      setAssocProducersTotal(parseFloat(associate_producers_quantity || 0) * 
+      parseFloat(associate_producers_rate || 0))
+    }
+    const timer = setTimeout(() => {
+      addAssocPros();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [associate_producers_quantity, associate_producers_rate]);
+
+  // function to calculate Directors on change
+  useEffect(() => {
+    const addDirectors = () => {
+      setDirectorsTotal(parseFloat(directors_quantity || 0) * 
+      parseFloat(directors_rate || 0))
+    }
+    const timer = setTimeout(() => {
+      addDirectors();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [directors_quantity, directors_rate]);
+
+  // function to calculate 2nd Unit Directors on change
+  useEffect(() => {
+    const addUnit2Dirs = () => {
+      setUnit2DirectorsTotal(parseFloat(unit2_directors_quantity || 0) * 
+      parseFloat(unit2_directors_rate || 0))
+    }
+    const timer = setTimeout(() => {
+      addUnit2Dirs();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [unit2_directors_quantity, unit2_directors_rate]);
+
+  // end calculate functions
+
+  // function to add all ProducersDirs on change
+  useEffect(() => {
+    const addProducersDirs = () => {
+      setProducersDirsTotal(
+        parseFloat(execProducersTotal || 0) +
+        parseFloat(producersTotal || 0) +
+        parseFloat(lineProducersTotal || 0) +
+        parseFloat(coProducersTotal || 0) +
+        parseFloat(assocProducersTotal || 0) +
+        parseFloat(directorsTotal || 0) +
+        parseFloat(unit2DirectorsTotal || 0) +
+        parseFloat(travel_expenses_producers_dirs || 0) +
+        parseFloat(living_expenses_producers_dirs || 0) +
+        parseFloat(other_producers_dirs || 0) +
+        parseFloat(fringes_taxes_producers_dirs || 0) )
+    }
+    const timer = setTimeout(() => {
+      addProducersDirs();
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [execProducersTotal, producersTotal, lineProducersTotal, coProducersTotal,
+    assocProducersTotal, directorsTotal, unit2DirectorsTotal,
+    travel_expenses_producers_dirs, living_expenses_producers_dirs,
+    other_producers_dirs, fringes_taxes_producers_dirs, ]);
+
+  // ProducersDirs handleChange
+  const handleChangeProducersDirs = (event) => {
+    setPostDataProducersDirs({
+      ...postDataProducersDirs,
+      [event.target.name]: parseFloat(event.target.value || 0 ),
+    });
+  }; 
+
+  // Producers Dirs input boxes
+  const producersDirs = (
+    <div>
+    <Row className="mt-3" >
+    <Col md={1} >
+    <p>4000</p>
+    </Col>
+    <Col md={6} >
+    <h5 className={ `${styles.Bold}`}>PRODUCERS AND DIRECTORS</h5>
+    </Col>
+    </Row>
+    {/* TITLES */}
+    <Row className={ `${styles.Overview} pt-2`} >
+    <Col md={1} >
+    <p>ACCT</p>
+    </Col>
+    <Col md={6} >
+    <p>Description</p>
+    </Col>
+    <Col md={1} >
+    <p>#</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p>Price</p>
+    </Col>
+    <Col md={2} >
+    <p>Total</p>
+    </Col>
+    </Row>
+    {/* Executive Producers */}
+    <Row>
+    <Col md={1} >
+    <p>4010</p>
+    </Col>
+    <Col md={6} >
+    <p>Executive Producers</p>
+    </Col>
+    {/* Quantity */}
+    <Col md={1} >
+    <Form.Group controlId="executive_producers_quantity" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="executive_producers_quantity"
+        value={executive_producers_quantity}
+        onChange={handleChangeProducersDirs}
+            />
+    </Form.Group>
+    {errors?.executive_producers_quantity?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    {/* blank */}
+    <Col md={1} >
+    <p></p>
+    </Col>
+    {/* Price */}
+    <Col md={1} >
+    <Form.Group controlId="executive_producers_rate" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="executive_producers_rate"
+        value={executive_producers_rate}
+        onChange={handleChangeProducersDirs}
+            />
+    </Form.Group>
+    {errors?.executive_producers_rate?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    {/* total */}
+    <Col md={2} >
+    <Form.Group controlId="execProducersTotal" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="execProducersTotal"
+        value={execProducersTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.execProducersTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Producers */}
+    <Row>
+    <Col md={1} >
+    <p>4020</p>
+    </Col>
+    <Col md={6} >
+    <p>Producers</p>
+    </Col>
+    {/* Quantity */}
+    <Col md={1} >
+    <Form.Group controlId="producers_quantity" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="producers_quantity"
+        value={producers_quantity}
+        onChange={handleChangeProducersDirs}
+            />
+    </Form.Group>
+    {errors?.producers_quantity?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    {/* blank */}
+    <Col md={1} >
+    <p></p>
+    </Col>
+    {/* Price */}
+    <Col md={1} >
+    <Form.Group controlId="producers_rate" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="producers_rate"
+        value={producers_rate}
+        onChange={handleChangeProducersDirs}
+            />
+    </Form.Group>
+    {errors?.producers_rate?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    {/* total */}
+    <Col md={2} >
+    <Form.Group controlId="producersTotal" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="producersTotal"
+        value={producersTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.producersTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Line Producers */}
+    <Row>
+    <Col md={1} >
+    <p>4030</p>
+    </Col>
+    <Col md={6} >
+    <p>Line Producers</p>
+    </Col>
+    {/* Quantity */}
+    <Col md={1} >
+    <Form.Group controlId="line_producers_quantity" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="line_producers_quantity"
+        value={line_producers_quantity}
+        onChange={handleChangeProducersDirs}
+            />
+    </Form.Group>
+    {errors?.line_producers_quantity?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    {/* blank */}
+    <Col md={1} >
+    <p></p>
+    </Col>
+    {/* Price */}
+    <Col md={1} >
+    <Form.Group controlId="line_producers_rate" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="line_producers_rate"
+        value={line_producers_rate}
+        onChange={handleChangeProducersDirs}
+            />
+    </Form.Group>
+    {errors?.line_producers_rate?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    {/* total */}
+    <Col md={2} >
+    <Form.Group controlId="lineProducersTotal" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="lineProducersTotal"
+        value={lineProducersTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.lineProducersTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Co Producers */}
+    <Row>
+    <Col md={1} >
+    <p>4040</p>
+    </Col>
+    <Col md={6} >
+    <p>Co-Producers</p>
+    </Col>
+    {/* Quantity */}
+    <Col md={1} >
+    <Form.Group controlId="co_producers_quantity" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="co_producers_quantity"
+        value={co_producers_quantity}
+        onChange={handleChangeProducersDirs}
+            />
+    </Form.Group>
+    {errors?.co_producers_quantity?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    {/* blank */}
+    <Col md={1} >
+    <p></p>
+    </Col>
+    {/* Price */}
+    <Col md={1} >
+    <Form.Group controlId="co_producers_rate" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="co_producers_rate"
+        value={co_producers_rate}
+        onChange={handleChangeProducersDirs}
+            />
+    </Form.Group>
+    {errors?.co_producers_rate?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    {/* total */}
+    <Col md={2} >
+    <Form.Group controlId="coProducersTotal" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="coProducersTotal"
+        value={coProducersTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.coProducersTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Associate Producers */}
+    <Row>
+    <Col md={1} >
+    <p>4050</p>
+    </Col>
+    <Col md={6} >
+    <p>Associate Producers</p>
+    </Col>
+    {/* Quantity */}
+    <Col md={1} >
+    <Form.Group controlId="associate_producers_quantity" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="associate_producers_quantity"
+        value={associate_producers_quantity}
+        onChange={handleChangeProducersDirs}
+            />
+    </Form.Group>
+    {errors?.associate_producers_quantity?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    {/* blank */}
+    <Col md={1} >
+    <p></p>
+    </Col>
+    {/* Price */}
+    <Col md={1} >
+    <Form.Group controlId="associate_producers_rate" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="associate_producers_rate"
+        value={associate_producers_rate}
+        onChange={handleChangeProducersDirs}
+            />
+    </Form.Group>
+    {errors?.associate_producers_rate?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    {/* total */}
+    <Col md={2} >
+    <Form.Group controlId="assocProducersTotal" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="assocProducersTotal"
+        value={assocProducersTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.assocProducersTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Directors */}
+    <Row>
+    <Col md={1} >
+    <p>4060</p>
+    </Col>
+    <Col md={6} >
+    <p>Directors</p>
+    </Col>
+    {/* Quantity */}
+    <Col md={1} >
+    <Form.Group controlId="directors_quantity" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="directors_quantity"
+        value={directors_quantity}
+        onChange={handleChangeProducersDirs}
+            />
+    </Form.Group>
+    {errors?.directors_quantity?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    {/* blank */}
+    <Col md={1} >
+    <p></p>
+    </Col>
+    {/* Price */}
+    <Col md={1} >
+    <Form.Group controlId="directors_rate" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="directors_rate"
+        value={directors_rate}
+        onChange={handleChangeProducersDirs}
+            />
+    </Form.Group>
+    {errors?.directors_rate?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    {/* total */}
+    <Col md={2} >
+    <Form.Group controlId="directorsTotal" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="directorsTotal"
+        value={directorsTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.directorsTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* 2nd Unit Directors */}
+    <Row>
+    <Col md={1} >
+    <p>4070</p>
+    </Col>
+    <Col md={6} >
+    <p>2nd Unit Directors</p>
+    </Col>
+    {/* Quantity */}
+    <Col md={1} >
+    <Form.Group controlId="unit2_directors_quantity" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="unit2_directors_quantity"
+        value={unit2_directors_quantity}
+        onChange={handleChangeProducersDirs}
+            />
+    </Form.Group>
+    {errors?.unit2_directors_quantity?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    {/* blank */}
+    <Col md={1} >
+    <p></p>
+    </Col>
+    {/* Price */}
+    <Col md={1} >
+    <Form.Group controlId="unit2_directors_rate" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="unit2_directors_rate"
+        value={unit2_directors_rate}
+        onChange={handleChangeProducersDirs}
+            />
+    </Form.Group>
+    {errors?.unit2_directors_rate?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    {/* total */}
+    <Col md={2} >
+    <Form.Group controlId="unit2DirectorsTotal" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="unit2DirectorsTotal"
+        value={unit2DirectorsTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.unit2DirectorsTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Travel Expenses */}
+    <Row>
+    <Col md={1} >
+    <p>4080</p>
+    </Col>
+    <Col md={6} >
+    <p>Travel Expenses</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="travel_expenses_producers_dirs" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="travel_expenses_producers_dirs"
+        value={travel_expenses_producers_dirs}
+        onChange={handleChangeProducersDirs}
+            />
+    </Form.Group>
+    {errors?.travel_expenses_producers_dirs?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Living Expenses */}
+    <Row>
+    <Col md={1} >
+    <p>4090</p>
+    </Col>
+    <Col md={6} >
+    <p>Living Expenses</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="living_expenses_producers_dirs" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="living_expenses_producers_dirs"
+        value={living_expenses_producers_dirs}
+        onChange={handleChangeProducersDirs}
+            />
+    </Form.Group>
+    {errors?.living_expenses_producers_dirs?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Other */}
+    <Row>
+    <Col md={1} >
+    <p>4100</p>
+    </Col>
+    <Col md={6} >
+    <p>Other</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="other_producers_dirs" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="other_producers_dirs"
+        value={other_producers_dirs}
+        onChange={handleChangeProducersDirs}
+            />
+    </Form.Group>
+    {errors?.other_producers_dirs?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Fringes and Taxes */}
+    <Row>
+    <Col md={1} >
+    <p>4110</p>
+    </Col>
+    <Col md={6} >
+    <p>Fringes and Taxes</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="fringes_taxes_producers_dirs" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="fringes_taxes_producers_dirs"
+        value={fringes_taxes_producers_dirs}
+        onChange={handleChangeProducersDirs}
+            />
+    </Form.Group>
+    {errors?.fringes_taxes_producers_dirs?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Producers Dirs Total */}
+    <Row>
+    <Col md={1} >
+    </Col>
+    <Col md={6} >
+    <h5 className={ `${styles.Bold}`}>TOTAL</h5>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="producersDirsTotal" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="producersDirsTotal"
+        value={producersDirsTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.producersDirsTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    </div>
+  );
 
   // OTHER --------------------------------------------------
   const aboveLine = (
@@ -1818,7 +2704,8 @@ function BudgetEdit() {
     </div>
   );
 
-  // fetch budget for pre input ualues
+  // USEEFFECT EDIT
+  // Fetch budget for pre input ualues
   useEffect(() => {
     const handleMount = async () => {
       try {
@@ -1860,6 +2747,28 @@ function BudgetEdit() {
           admin_scenario_quantity, admin_scenario_rate,
           office_expenses_scenario, travel_expenses_scenario,
           living_expenses_scenario, other_scenario, fringes_taxes_scenario
+          });
+        // producers-directors setPostDataProducersDirs
+        const {executive_producers_rate, producers_rate,
+          line_producers_rate, co_producers_rate,
+          associate_producers_rate, directors_rate,
+          unit2_directors_rate, executive_producers_quantity,
+          producers_quantity, line_producers_quantity,
+          co_producers_quantity, associate_producers_quantity,
+          directors_quantity, unit2_directors_quantity,
+          travel_expenses_producers_dirs, living_expenses_producers_dirs,
+          other_producers_dirs, fringes_taxes_producers_dirs,
+          } = data.results[0];
+          setPostDataProducersDirs({
+            executive_producers_rate, producers_rate,
+          line_producers_rate, co_producers_rate,
+          associate_producers_rate, directors_rate,
+          unit2_directors_rate, executive_producers_quantity,
+          producers_quantity, line_producers_quantity,
+          co_producers_quantity, associate_producers_quantity,
+          directors_quantity, unit2_directors_quantity,
+          travel_expenses_producers_dirs, living_expenses_producers_dirs,
+          other_producers_dirs, fringes_taxes_producers_dirs,
           });
       } catch (err) {
         console.log(err);
@@ -1907,23 +2816,54 @@ function BudgetEdit() {
     formData.append("writers_units_name", writers_units_name);
     formData.append("writers_quantity", writers_quantity);
     formData.append("writers_rate", writers_rate);
+    formData.append("writers_total", writersTotal);
     formData.append("consultants_units_number", consultants_units_number);
     formData.append("consultants_units_name", consultants_units_name);
     formData.append("consultants_quantity", consultants_quantity);
     formData.append("consultants_rate", consultants_rate);
+    formData.append("consultants_total", consultantsTotal);
     formData.append("editors_units_number ", editors_units_number);
     formData.append("editors_units_name", editors_units_name);
     formData.append("editors_quantity", editors_quantity);
     formData.append("editors_rate", editors_rate);
+    formData.append("editors_total", editorsTotal);
     formData.append("admin_scenario_units_number ", admin_scenario_units_number);
     formData.append("admin_scenario_units_name", admin_scenario_units_name);
     formData.append("admin_scenario_quantity", admin_scenario_quantity);
     formData.append("admin_scenario_rate", admin_scenario_rate);
+    formData.append("admin_total", adminScenarioTotal);
     formData.append("office_expenses_scenario ", office_expenses_scenario);
     formData.append("travel_expenses_scenario", travel_expenses_scenario);
     formData.append("living_expenses_scenario", living_expenses_scenario);
     formData.append("other_scenario", other_scenario);
     formData.append("scenario_total", scenarioTotal);
+    // producers-directors
+    formData.append("executive_producers_rate", executive_producers_rate);
+    formData.append("producers_rate", producers_rate);
+    formData.append("line_producers_rate", line_producers_rate);
+    formData.append("co_producers_rate", co_producers_rate);
+    formData.append("associate_producers_rate", associate_producers_rate);
+    formData.append("directors_rate", directors_rate);
+    formData.append("unit2_directors_rate", unit2_directors_rate);
+    formData.append("executive_producers_quantity", executive_producers_quantity);
+    formData.append("producers_quantity", producers_quantity);
+    formData.append("line_producers_quantity", line_producers_quantity);
+    formData.append("co_producers_quantity", co_producers_quantity);
+    formData.append("associate_producers_quantity", associate_producers_quantity);
+    formData.append("directors_quantity", directors_quantity);
+    formData.append("unit2_directors_quantity", unit2_directors_quantity);
+    formData.append("travel_expenses_producers_dirs", travel_expenses_producers_dirs);
+    formData.append("living_expenses_producers_dirs", living_expenses_producers_dirs);
+    formData.append("other_producers_dirs", other_producers_dirs);
+    formData.append("fringes_taxes_producers_dirs", fringes_taxes_producers_dirs);
+    formData.append("executive_producers_total", execProducersTotal);
+    formData.append("producers_total", producersTotal);
+    formData.append("line_producers_total", lineProducersTotal);
+    formData.append("co_producers_total", coProducersTotal);
+    formData.append("associate_producers_total", assocProducersTotal);
+    formData.append("directors_total", directorsTotal);
+    formData.append("unit2_directors_total", unit2DirectorsTotal);
+    formData.append("producers_dirs_total", producersDirsTotal);
 
     try {
       const { data } = await axiosReq.put(`/budgets/${budgetId}/`, formData);
@@ -1962,6 +2902,7 @@ function BudgetEdit() {
     {rights}
     {development}
     {scenario}
+    {producersDirs}
       <Row>
       <Col>
         <div className= {`mt-1`} >{buttons} </div>
