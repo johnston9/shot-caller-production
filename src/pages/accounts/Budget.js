@@ -9,14 +9,6 @@ import btnStyles from "../../styles/Button.module.css";
 import Button from "react-bootstrap/Button";
 
 const Budget = (props) => {
-  // const {
-  //   // details
-  //   title, series, prodco, format, location, dated,
-  //   // length
-  //   research, prep, shoot, wrap, post, length_total,
-  //   // rights
-  //   story_rights, miscel_rights, rights_total, budget, projectId,
-  // } = props;
 
   const {
     budget1, projectId,

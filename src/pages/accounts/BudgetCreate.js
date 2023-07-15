@@ -81,12 +81,12 @@ function BudgetCreate() {
   const detailslength = (
     <div>
     {/* Titles */}
-    <Row>
+    <Row className={ `${styles.Overview} mb-2 py-1`}>
     <Col md={6}>
-    <p>Details</p>
+    <p className={ `${styles.Bold} pt-2`}>DETAILS</p>
     </Col>
     <Col md={6}>
-    <p>Length</p>
+    <p className={ `${styles.Bold} pt-2`}>LENGTH</p>
     </Col>
     </Row>
     <Row>
@@ -432,34 +432,34 @@ function BudgetCreate() {
 
   // Rights input boxes
   const rights = (
-    <div>
+    <div className="">
     <Row className="mt-3" >
     <Col md={1} >
-    <p>1000</p>
+    <p className="mb-0">1000</p>
     </Col>
     <Col md={6} >
-    <h5 className={ `${styles.Bold}`}>RIGHTS</h5>
+    <p className={ `${styles.BoldBlack}`}>RIGHTS</p>
     </Col>
     </Row>
     {/* TITLES */}
-    <Row className={ `${styles.Overview} pt-2`} >
+    <Row className={ `${styles.Overview} mb-2 py-1`} >
     <Col md={1} >
-    <p>ACCT</p>
+    <p className="mb-0">ACCT</p>
     </Col>
     <Col md={6} >
-    <p>Description</p>
+    <p className="mb-0">Description</p>
     </Col>
     <Col md={1} >
-    <p>#</p>
+    <p className="mb-0">#</p>
     </Col>
     <Col md={1} >
-    <p>Unit</p>
+    <p className="mb-0">Unit</p>
     </Col>
     <Col md={1} >
-    <p>Price</p>
+    <p className="mb-0">Price</p>
     </Col>
     <Col md={2} >
-    <p>Total</p>
+    <p className="mb-0">Total</p>
     </Col>
     </Row>
     {/* Story Rights */}
@@ -479,7 +479,7 @@ function BudgetCreate() {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col className="px-0 mx-0" md={2} >
+    <Col md={2} >
     <Form.Group controlId="story_rights" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -514,7 +514,7 @@ function BudgetCreate() {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col className="px-0 mx-0" md={2} >
+    <Col md={2} >
     <Form.Group controlId="miscellaneous" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -533,14 +533,11 @@ function BudgetCreate() {
     </Col>
     </Row>
     {/* Rights Total */}
-    <Row>
+    <Row className="mb-0 pb-0">
     <Col md={1} >
     </Col>
-    <Col md={6} >
-    <h5 className={ `${styles.Bold}`}>TOTAL</h5>
-    </Col>
-    <Col md={1} >
-    <p></p>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -548,7 +545,10 @@ function BudgetCreate() {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col className="px-0 mx-0" md={2} >
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
     <Form.Group controlId="postDataRightsTotal" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -623,37 +623,37 @@ function BudgetCreate() {
 
   // Development input boxes
   const development = (
-    <div>
-    <Row className="mt-3" >
+    <div className="mt-5">
+    <Row >
     <Col md={1} >
     <p>2000</p>
     </Col>
     <Col md={6} >
-    <h5 className={ `${styles.Bold}`}>RESEARCH AND DEVELOPMENT</h5>
+    <p className={ `${styles.BoldBlack}`}>RESEARCH AND DEVELOPMENT</p>
     </Col>
     </Row>
     {/* TITLES */}
-    <Row className={ `${styles.Overview} pt-2`} >
+    <Row className={ `${styles.Overview} mb-2 py-1`} >
     <Col md={1} >
-    <p>ACCT</p>
+    <p className="mb-0">ACCT</p>
     </Col>
     <Col md={6} >
-    <p>Description</p>
+    <p className="mb-0">Description</p>
     </Col>
     <Col md={1} >
-    <p>#</p>
+    <p className="mb-0">#</p>
     </Col>
     <Col md={1} >
-    <p>Unit</p>
+    <p className="mb-0">Unit</p>
     </Col>
     <Col md={1} >
-    <p>Price</p>
+    <p className="mb-0">Price</p>
     </Col>
     <Col md={2} >
-    <p>Total</p>
+    <p className="mb-0">Total</p>
     </Col>
     </Row>
-    {/* Research and Development */}
+    {/* Research */}
     <Row>
     <Col md={1} >
     <p>2010</p>
@@ -670,7 +670,7 @@ function BudgetCreate() {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col className="px-0 mx-0" md={2} >
+    <Col md={2} >
     <Form.Group controlId="research_development" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -705,7 +705,7 @@ function BudgetCreate() {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col className="px-0 mx-0" md={2} >
+    <Col md={2} >
     <Form.Group controlId="prelim_budget" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -740,7 +740,7 @@ function BudgetCreate() {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col className="px-0 mx-0" md={2} >
+    <Col md={2} >
     <Form.Group controlId="consultant_expenses" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -775,7 +775,7 @@ function BudgetCreate() {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col className="px-0 mx-0" md={2} >
+    <Col md={2} >
     <Form.Group controlId="office_expenses" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -810,7 +810,7 @@ function BudgetCreate() {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col className="px-0 mx-0" md={2} >
+    <Col md={2} >
     <Form.Group controlId="staff" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -845,7 +845,7 @@ function BudgetCreate() {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col className="px-0 mx-0" md={2} >
+    <Col md={2} >
     <Form.Group controlId="travel_expenses_development" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -880,7 +880,7 @@ function BudgetCreate() {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col className="px-0 mx-0" md={2} >
+    <Col md={2} >
     <Form.Group controlId="living_expenses_development" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -915,7 +915,7 @@ function BudgetCreate() {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col className="px-0 mx-0" md={2} >
+    <Col md={2} >
     <Form.Group controlId="other_development" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -950,7 +950,7 @@ function BudgetCreate() {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col className="px-0 mx-0" md={2} >
+    <Col md={2} >
     <Form.Group controlId="fringes_taxes_development" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -972,8 +972,8 @@ function BudgetCreate() {
     <Row>
     <Col md={1} >
     </Col>
-    <Col md={6} >
-    <h5 className={ `${styles.Bold}`}>TOTAL</h5>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -984,7 +984,7 @@ function BudgetCreate() {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col className="px-0 mx-0" md={2} >
+    <Col md={2} >
     <Form.Group controlId="developmentTotal" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -1004,6 +1004,7 @@ function BudgetCreate() {
     </Row>
     </div>
   );
+
   // end development -------------------------------------
   // SCENARIO --------------------------------------------
   
@@ -3239,33 +3240,7 @@ function BudgetCreate() {
     </Row>
     </div>
   );
-
-
-  // OTHER --------------------------------------------------
-  const aboveLine = (
-    <div>
-    <Row className={ `${styles.Overview} pt-2`} >
-    <Col md={1} >
-    <p>ACCT</p>
-    </Col>
-    <Col md={6} >
-    <p>Description</p>
-    </Col>
-    <Col md={1} >
-    <p>#</p>
-    </Col>
-    <Col md={1} >
-    <p>Unit</p>
-    </Col>
-    <Col md={1} >
-    <p>Price</p>
-    </Col>
-    <Col md={2} >
-    <p>Total</p>
-    </Col>
-    </Row>
-    </div>)
-
+    
   const buttons = (
     <div className="text-center mt-3">    
       <Button
@@ -3395,14 +3370,15 @@ function BudgetCreate() {
   };
 
   return (
-    <div className="mt-2">
+    <div className="mt-3">
     <Row >
     <Col className={`${styles.Back}`}>
     <h5 style={{ textTransform: 'uppercase'}} 
         className={`mt-1 mb-1 pl-3 py-1 ${styles.SubTitle } text-center`}>
         CREATE BUDGET - Project ID: {id}
     </h5>
-    <Row className="mt-1 ml-2" >
+    {/* className={ `${styles.SubTitle} pt-2`} */}
+    <Row className="mt-3 ml-0" >
         <Col xs={3}>
         <Button
           className={`${btnStyles.Button} ${btnStyles.Blue} mb-2`}
@@ -3414,17 +3390,20 @@ function BudgetCreate() {
     </Row>
     <Form className="mt-3 px-3" onSubmit={handleSubmit}>
     {detailslength}
-    <h4>Above the Line</h4>
-    {aboveLine}
+    <h4 className={ `${styles.SubTitleAbove} ml-1 mt-5 mb-5 text-center`}>
+      ABOVE THE LINE</h4>
     {rights}
     {development}
     {scenario}
+    <hr className={ `${styles.Break}`}></hr>
     {producersDirs}
     {starsmusic}
-      <Row>
-      <Col>
-        <div className= {`mt-1`} >{buttons} </div>
-      </Col>
+    <hr className={ `${styles.Break}`}></hr>
+    {/* buttons */}
+    <Row>
+    <Col>
+      <div className= {`mt-1`} >{buttons} </div>
+    </Col>
     </Row>
     </Form>
         </Col>

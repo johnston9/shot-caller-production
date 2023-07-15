@@ -34,14 +34,72 @@
     cursor: pointer;
 }
 
-.Overview {   
-	background-color: #fff;
+/* .Overview {   
+    background-color: #3b3f40;
     font-weight: 700;
+}
+
+.Overview p {
+    color: #fff;
+} */
+
+.Overview {   
+    background-color: #e8f0f1;
+}
+
+.Overview p {
+    color: #000;
+    font-weight: 700;
+    margin-bottom: 0px;
 }
 
 .Bold {
     font-weight: 700;
 }
+
+.Input {
+    background: #ffffff;
+    border: 1px solid #f0f1f9;
+    box-sizing: border-box;
+    border-radius: 2px;
+    color: #7177a1;
+    padding: 0px 10px;
+    height: 30px !important;
+    text-align: center;
+}
+
+.SubTitle {
+    background-color: #e8f0f1;
+    font-weight: 700;
+  }
+  
+  .SubTitle2   {
+    background-color: #d6fcff;
+    font-weight: 700;
+  }
+  
+  .SubTitle3 {
+    background-color: #e4f2f4;
+    font-weight: 700;
+  }
+
+  .SubTitleAbove {
+    background-color: #e4f2f4;
+    font-weight: 700;
+  }
+
+  .BoldBlack {
+    font-weight: 700;
+    color: #000;
+  }
+
+  .Break {
+    border-top: 10px solid #d0d9db;
+  }
+
+  .BreakAbove {
+    border-top: 15px solid #d0d9db;
+  }
 
 /* .Width100 {
 
