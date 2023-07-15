@@ -34,19 +34,39 @@ const Budget = (props) => {
     research_development, prelim_budget, consultant_expenses,
     office_expenses, staff, travel_expenses_development,
     living_expenses_development, other_development, 
-    fringes_taxes_development, developmentTotal,
+    fringes_taxes_development, development_total,
     // scenario
     writers_units_number, writers_units_name,
-    writers_quantity, writers_rate, writersTotal,
+    writers_quantity, writers_rate, writers_total,
     consultants_units_number, consultants_units_name,
-    consultants_quantity, consultants_rate, consultantsTotal,
+    consultants_quantity, consultants_rate, consultants_total,
     editors_units_number, editors_units_name,
-    editors_quantity, editors_rate, editorsTotal,
+    editors_quantity, editors_rate, editors_scenario_total,
     admin_scenario_units_number, admin_scenario_units_name,
-    admin_scenario_quantity, admin_scenario_rate, adminScenarioTotal,
+    admin_scenario_quantity, admin_scenario_rate, admin_scenario_total,
     office_expenses_scenario, travel_expenses_scenario,
     living_expenses_scenario, other_scenario, fringes_taxes_scenario,
-    scenarioTotal,} = budget;
+    scenario_total,
+    // producers-dirs
+    executive_producers_rate, producers_rate,
+    line_producers_rate, co_producers_rate,
+    associate_producers_rate, directors_rate,
+    unit2_directors_rate, executive_producers_quantity,
+    producers_quantity, line_producers_quantity,
+    co_producers_quantity, associate_producers_quantity,
+    directors_quantity, unit2_directors_quantity,
+    travel_expenses_producers_dirs, living_expenses_producers_dirs,
+    other_producers_dirs, fringes_taxes_producers_dirs,
+    executive_producers_total, producers_total, line_producers_total,
+    co_producers_total, associate_producers_total, directors_total,
+    unit2_directors_total, producers_dirs_total,
+    // stars music
+    stars, stars_rights_payments, travel_expenses_stars,
+    living_expenses_stars, other_stars, fringes_taxes_stars,
+    music, music_supervisor, travel_expenses_music, living_expenses_music,
+    music_rights_addl_songs, other_music, fringes_taxes_music,
+    stars_music_total,
+    } = budget;
 
   console.log(props);
   console.log(budget);
@@ -248,7 +268,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{living_expenses_development || 0} </p>
     <p className={`${styles.Underline}`}>{other_development || 0 } </p>
     <p className={`${styles.Underline}`}>{fringes_taxes_development || 0 } </p>
-    <p >{developmentTotal || 0 } </p>
+    <p >{development_total || 0 } </p>
     </Col>
     </Row> 
     </Col>
@@ -355,16 +375,173 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{writersTotal || 0}</p>
-    <p className={`${styles.Underline}`}>{consultantsTotal || 0}</p>
-    <p className={`${styles.Underline}`}>{editorsTotal || 0}</p>
-    <p className={`${styles.Underline}`}>{adminScenarioTotal || 0}</p>
+    <p className={`${styles.Underline}`}>{writers_total || 0}</p>
+    <p className={`${styles.Underline}`}>{consultants_total || 0}</p>
+    <p className={`${styles.Underline}`}>{editors_scenario_total || 0}</p>
+    <p className={`${styles.Underline}`}>{admin_scenario_total || 0}</p>
     <p className={`${styles.Underline}`}>{office_expenses_scenario || 0}</p>
     <p className={`${styles.Underline}`}>{travel_expenses_scenario || 0}</p>
     <p className={`${styles.Underline}`}>{living_expenses_scenario || 0}</p>
     <p className={`${styles.Underline}`}>{other_scenario || 0}</p>
     <p className={`${styles.Underline}`}>{fringes_taxes_scenario || 0}</p>
-    <p >{scenarioTotal}</p>
+    <p >{scenario_total}</p>
+    </Col>
+    </Row>
+    </div>
+    {/* Producers and Directors */}
+    <div>
+    <Row>
+    <Col xs={1}>
+    <p>4000</p>
+    </Col>
+    <Col xs={10}>
+    <h5>Producers and Directors</h5>
+    </Col>
+    </Row>
+    {/* TITLES */}
+    <Row className={ `${styles.Overview} pt-2`} >
+    <Col md={1} >
+    <p>ACCT</p>
+    </Col>
+    <Col md={6} >
+    <p>Description</p>
+    </Col>
+    <Col md={1} >
+    <p>#</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p>Price</p>
+    </Col>
+    <Col md={2} >
+    <p>Total</p>
+    </Col>
+    </Row>
+    {/* Values */}
+    <Row className={ `${styles.Overview} pt-2`} >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>4010</p>
+    <p className={`${styles.Underline}`}>4020</p>
+    <p className={`${styles.Underline}`}>4030</p>
+    <p className={`${styles.Underline}`}>4040</p>
+    <p className={`${styles.Underline}`}>4050</p>
+    <p className={`${styles.Underline}`}>4060</p>
+    <p className={`${styles.Underline}`}>4070</p>
+    <p className={`${styles.Underline}`}>4080</p>
+    <p className={`${styles.Underline}`}>4090</p>
+    <p className={`${styles.Underline}`}>4100</p>
+    <p className={`${styles.Underline}`}>4110</p>
+    <p></p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Executive Producers</p>
+    <p className={`${styles.Underline}`}>Producers</p>
+    <p className={`${styles.Underline}`}>Line Producers</p>
+    <p className={`${styles.Underline}`}>Co-Producers</p>
+    <p className={`${styles.Underline}`}>Associate Producers</p>
+    <p className={`${styles.Underline}`}>Directors</p>
+    <p className={`${styles.Underline}`}>2nd Unit Directors</p>
+    <p className={`${styles.Underline}`}>Travel Expenses</p>
+    <p className={`${styles.Underline}`}>Living Expenses</p>
+    <p className={`${styles.Underline}`}>Other</p>
+    <p className={`${styles.Underline}`}>Fringes and Taxes</p>
+    <p>Total</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{executive_producers_quantity || 0}</p>
+    <p className={`${styles.Underline}`}>{producers_quantity || 0}</p>
+    <p className={`${styles.Underline}`}>{line_producers_quantity || 0}</p>
+    <p className={`${styles.Underline}`}>{co_producers_quantity || 0}</p>
+    <p className={`${styles.Underline}`}>{associate_producers_quantity || 0}</p>
+    <p className={`${styles.Underline}`}>{directors_quantity || 0}</p>
+    <p className={`${styles.Underline}`}>{unit2_directors_quantity || 0}</p>
+    <p className={`${styles.Underline}`}></p>
+    <p className={`${styles.Underline}`}></p>
+    <p className={`${styles.Underline}`}></p>
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    <p className={`${styles.Underline}`}></p>
+    <p className={`${styles.Underline}`}></p>
+    <p className={`${styles.Underline}`}></p>
+    <p className={`${styles.Underline}`}></p>
+    <p className={`${styles.Underline}`}></p>
+    <p className={`${styles.Underline}`}></p>
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{executive_producers_rate || 0}</p>
+    <p className={`${styles.Underline}`}>{producers_rate || 0}</p>
+    <p className={`${styles.Underline}`}>{line_producers_rate || 0}</p>
+    <p className={`${styles.Underline}`}>{co_producers_rate || 0}</p>
+    <p className={`${styles.Underline}`}>{associate_producers_rate || 0}</p>
+    <p className={`${styles.Underline}`}>{directors_rate || 0}</p>
+    <p className={`${styles.Underline}`}>{unit2_directors_rate || 0}</p>
+    <p className={`${styles.Underline}`}></p>
+    <p className={`${styles.Underline}`}></p>
+    <p className={`${styles.Underline}`}></p>
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{executive_producers_total || 0}</p>
+    <p className={`${styles.Underline}`}>{producers_total || 0}</p>
+    <p className={`${styles.Underline}`}>{line_producers_total || 0}</p>
+    <p className={`${styles.Underline}`}>{co_producers_total || 0}</p>
+    <p className={`${styles.Underline}`}>{associate_producers_total || 0}</p>
+    <p className={`${styles.Underline}`}>{directors_total || 0}</p>
+    <p className={`${styles.Underline}`}>{unit2_directors_total || 0}</p>
+    <p className={`${styles.Underline}`}>{travel_expenses_producers_dirs || 0}</p>
+    <p className={`${styles.Underline}`}>{living_expenses_producers_dirs || 0}</p>
+    <p className={`${styles.Underline}`}>{other_producers_dirs || 0}</p>
+    <p className={`${styles.Underline}`}>{fringes_taxes_producers_dirs || 0}</p>
+    <p >{producers_dirs_total}</p>
+    </Col>
+    </Row>
+    </div>
+    {/* Stars / Music */}
+    <div>
+    <Row>
+    <Col xs={1}>
+    <p>5000</p>
+    </Col>
+    <Col xs={10}>
+    <h5>Stars / Music</h5>
+    </Col>
+    </Row>
+    <Row>
+    <Col xs={1}>
+    <p className={`${styles.Underline}`}>5010</p>
+    <p className={`${styles.Underline}`}>5020</p>
+    <p className={`${styles.Underline}`}>5030</p>
+    <p className={`${styles.Underline}`}>5040</p>
+    <p className={`${styles.Underline}`}>5050</p>
+    <p className={`${styles.Underline}`}>5060</p>
+    <p className={`${styles.Underline}`}>5070</p>
+    <p className={`${styles.Underline}`}>5080</p>
+    <p className={`${styles.Underline}`}>5090</p>
+    <p className={`${styles.Underline}`}>5100</p>
+    <p className={`${styles.Underline}`}>5110</p>
+    <p className={`${styles.Underline}`}>5120</p>
+    <p className={`${styles.Underline}`}>5130</p>
+    <p className={`${styles.Underline}`}></p>
+    <p ></p>
+    </Col>
+    <Col xs={5}>
+    <p className={`${styles.Underline}`}>Story Rights</p>
+    <p className={`${styles.Underline}`}>Miscellaneous</p>
+    <p>Rights Total</p>
+    </Col>
+    <Col xs={6}>
+    <Row>
+    <Col xs={{span: 4, offset: 8 }}>
+    <p className={`${styles.Underline}`}>{story_rights || 0} </p>
+    <p className={`${styles.Underline}`}>{miscellaneous || 0 } </p>
+    <p >{rights_total } </p>
+    </Col>
+    </Row> 
     </Col>
     </Row>
     </div>

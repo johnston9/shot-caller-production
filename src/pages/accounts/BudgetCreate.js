@@ -479,7 +479,7 @@ function BudgetCreate() {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col md={2} >
+    <Col className="px-0 mx-0" md={2} >
     <Form.Group controlId="story_rights" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -514,7 +514,7 @@ function BudgetCreate() {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col md={2} >
+    <Col className="px-0 mx-0" md={2} >
     <Form.Group controlId="miscellaneous" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -548,7 +548,7 @@ function BudgetCreate() {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col md={2} >
+    <Col className="px-0 mx-0" md={2} >
     <Form.Group controlId="postDataRightsTotal" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -641,13 +641,13 @@ function BudgetCreate() {
     <p>Description</p>
     </Col>
     <Col md={1} >
-    <p></p>
+    <p>#</p>
     </Col>
     <Col md={1} >
-    <p></p>
+    <p>Unit</p>
     </Col>
     <Col md={1} >
-    <p></p>
+    <p>Price</p>
     </Col>
     <Col md={2} >
     <p>Total</p>
@@ -670,7 +670,7 @@ function BudgetCreate() {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col md={2} >
+    <Col className="px-0 mx-0" md={2} >
     <Form.Group controlId="research_development" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -705,7 +705,7 @@ function BudgetCreate() {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col md={2} >
+    <Col className="px-0 mx-0" md={2} >
     <Form.Group controlId="prelim_budget" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -740,7 +740,7 @@ function BudgetCreate() {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col md={2} >
+    <Col className="px-0 mx-0" md={2} >
     <Form.Group controlId="consultant_expenses" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -775,7 +775,7 @@ function BudgetCreate() {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col md={2} >
+    <Col className="px-0 mx-0" md={2} >
     <Form.Group controlId="office_expenses" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -810,7 +810,7 @@ function BudgetCreate() {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col md={2} >
+    <Col className="px-0 mx-0" md={2} >
     <Form.Group controlId="staff" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -845,7 +845,7 @@ function BudgetCreate() {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col md={2} >
+    <Col className="px-0 mx-0" md={2} >
     <Form.Group controlId="travel_expenses_development" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -880,7 +880,7 @@ function BudgetCreate() {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col md={2} >
+    <Col className="px-0 mx-0" md={2} >
     <Form.Group controlId="living_expenses_development" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -915,7 +915,7 @@ function BudgetCreate() {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col md={2} >
+    <Col className="px-0 mx-0" md={2} >
     <Form.Group controlId="other_development" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -950,7 +950,7 @@ function BudgetCreate() {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col md={2} >
+    <Col className="px-0 mx-0" md={2} >
     <Form.Group controlId="fringes_taxes_development" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -984,7 +984,7 @@ function BudgetCreate() {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col md={2} >
+    <Col className="px-0 mx-0" md={2} >
     <Form.Group controlId="developmentTotal" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -1004,7 +1004,7 @@ function BudgetCreate() {
     </Row>
     </div>
   );
-  // ------------------------------------------------------
+  // end development -------------------------------------
   // SCENARIO --------------------------------------------
   
   // Scenario postData
@@ -1153,629 +1153,628 @@ function BudgetCreate() {
     office_expenses_scenario, adminScenarioTotal, travel_expenses_scenario,
     living_expenses_scenario, other_scenario, fringes_taxes_scenario ])
 
-  // Scenario input boxes
-  const scenario = (
-    <div>
-    <Row className="mt-3" >
-    <Col md={1} >
-    <p>3000</p>
-    </Col>
-    <Col md={6} >
-    <h5 className={ `${styles.Bold}`}>SCENARIO</h5>
-    </Col>
-    </Row>
-    {/* TITLES */}
-    <Row className={ `${styles.Overview} pt-2`} >
-    <Col md={1} >
-    <p>ACCT</p>
-    </Col>
-    <Col md={5} >
-    <p>Description</p>
-    </Col>
-    <Col md={1} >
-    <p>Quantity</p>
-    </Col>
-    <Col md={1} >
-    <p># Unit</p>
-    </Col>
-    <Col md={1} >
-    <p>Unit</p>
-    </Col>
-    <Col md={1} >
-    <p>Price</p>
-    </Col>
-    <Col md={2} >
-    <p>Total</p>
-    </Col>
-    </Row>
-    {/* Writers */}
-    <Row>
-    <Col md={1} >
-    <p>3010</p>
-    </Col>
-    <Col md={5} >
-    <p>Writers</p>
-    </Col>
-    <Col md={1} >
-    <Form.Group controlId="writers_quantity" 
-        className={`${styles.Width95} text-center`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="writers_quantity"
-        value={writers_quantity}
-        onChange={handleChangeScenario}
-            />
-    </Form.Group>
-    {errors?.writers_quantity?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    <Col md={1} >
-    <Form.Group controlId="writers_units_number" 
-        className={`${styles.Width95} text-center`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="writers_units_number"
-        value={writers_units_number}
-        onChange={handleChangeScenario}
-            />
-    </Form.Group>
-    {errors?.writers_units_number?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    <Col md={1} >
-    <Form.Group controlId="writers_units_name" 
-        className={`${styles.Width95} text-center`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="writers_units_name"
-        value={writers_units_name}
-        onChange={handleChangeScenarioText}
-            />
-    </Form.Group>
-    {errors?.writers_units_name?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    <Col md={1} >
-    <Form.Group controlId="writers_rate" 
-        className={`${styles.Width95} text-center`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="writers_rate"
-        value={writers_rate}
-        onChange={handleChangeScenario}
-            />
-    </Form.Group>
-    {errors?.writers_rate?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    <Col md={2} >
-    <Form.Group controlId="writersTotal" 
-        className={`${styles.Width95} text-center`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="writersTotal"
-        value={writersTotal}
-        readOnly
-            />
-    </Form.Group>
-    {errors?.writersTotal?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    </Row>
-    {/* Consultants */}
-    <Row>
-    <Col md={1} >
-    <p>3020</p>
-    </Col>
-    <Col md={5} >
-    <p>Consultants</p>
-    </Col>
-    <Col md={1} >
-    <Form.Group controlId="consultants_quantity" 
-        className={`${styles.Width95} text-center`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="consultants_quantity"
-        value={consultants_quantity}
-        onChange={handleChangeScenario}
-            />
-    </Form.Group>
-    {errors?.consultants_quantity?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    <Col md={1} >
-    <Form.Group controlId="consultants_units_number" 
-        className={`${styles.Width95} text-center`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="consultants_units_number"
-        value={consultants_units_number}
-        onChange={handleChangeScenario}
-            />
-    </Form.Group>
-    {errors?.consultants_units_number?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    <Col md={1} >
-    <Form.Group controlId="consultants_units_name" 
-        className={`${styles.Width95} text-center`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="consultants_units_name"
-        value={consultants_units_name}
-        onChange={handleChangeScenarioText}
-            />
-    </Form.Group>
-    {errors?.consultants_units_name?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    <Col md={1} >
-    <Form.Group controlId="consultants_rate" 
-        className={`${styles.Width95} text-center`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="consultants_rate"
-        value={consultants_rate}
-        onChange={handleChangeScenario}
-            />
-    </Form.Group>
-    {errors?.consultants_rate?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    <Col md={2} >
-    <Form.Group controlId="consultantsTotal" 
-        className={`${styles.Width95} text-center`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="consultantsTotal"
-        value={consultantsTotal}
-        onChange={handleChangeScenario}
-            />
-    </Form.Group>
-    {errors?.consultantsTotal?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    </Row>
-    {/* Editors */}
-    <Row>
-    <Col md={1} >
-    <p>3030</p>
-    </Col>
-    <Col md={5} >
-    <p>Editors</p>
-    </Col>
-    <Col md={1} >
-    <Form.Group controlId="editors_quantity" 
-        className={`${styles.Width95} text-center`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="editors_quantity"
-        value={editors_quantity}
-        onChange={handleChangeScenario}
-            />
-    </Form.Group>
-    {errors?.editors_quantity?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    <Col md={1} >
-    <Form.Group controlId="editors_units_number" 
-        className={`${styles.Width95} text-center`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="editors_units_number"
-        value={editors_units_number}
-        onChange={handleChangeScenario}
-            />
-    </Form.Group>
-    {errors?.editors_units_number?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    <Col md={1} >
-    <Form.Group controlId="editors_units_name" 
-        className={`${styles.Width95} text-center`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="editors_units_name"
-        value={editors_units_name}
-        onChange={handleChangeScenarioText}
-            />
-    </Form.Group>
-    {errors?.editors_units_name?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    <Col md={1} >
-    <Form.Group controlId="editors_rate" 
-        className={`${styles.Width95} text-center`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="editors_rate"
-        value={editors_rate}
-        onChange={handleChangeScenario}
-            />
-    </Form.Group>
-    {errors?.editors_rate?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    <Col md={2} >
-    <Form.Group controlId="editorsTotal" 
-        className={`${styles.Width95} text-center`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="editorsTotal"
-        value={editorsTotal}
-        onChange={handleChangeScenario}
-            />
-    </Form.Group>
-    {errors?.editorsTotal?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    </Row>
-    {/* Admin */}
-    <Row>
-    <Col md={1} >
-    <p>3040</p>
-    </Col>
-    <Col md={5} >
-    <p>Admin</p>
-    </Col>
-    <Col md={1} >
-    <Form.Group controlId="admin_scenario_quantity" 
-        className={`${styles.Width95} text-center`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="admin_scenario_quantity"
-        value={admin_scenario_quantity}
-        onChange={handleChangeScenario}
-            />
-    </Form.Group>
-    {errors?.admin_scenario_quantity?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    <Col md={1} >
-    <Form.Group controlId="admin_scenario_units_number" 
-        className={`${styles.Width95} text-center`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="admin_scenario_units_number"
-        value={admin_scenario_units_number}
-        onChange={handleChangeScenario}
-            />
-    </Form.Group>
-    {errors?.admin_scenario_units_number?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    <Col md={1} >
-    <Form.Group controlId="admin_scenario_units_name" 
-        className={`${styles.Width95} text-center`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="admin_scenario_units_name"
-        value={admin_scenario_units_name}
-        onChange={handleChangeScenarioText}
-            />
-    </Form.Group>
-    {errors?.admin_scenario_units_name?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    <Col md={1} >
-    <Form.Group controlId="admin_scenario_rate" 
-        className={`${styles.Width95} text-center`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="admin_scenario_rate"
-        value={admin_scenario_rate}
-        onChange={handleChangeScenario}
-            />
-    </Form.Group>
-    {errors?.admin_scenario_rate?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    <Col md={2} >
-    <Form.Group controlId="adminScenarioTotal" 
-        className={`${styles.Width95} text-center`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="adminScenarioTotal"
-        value={adminScenarioTotal}
-        onChange={handleChangeScenario}
-            />
-    </Form.Group>
-    {errors?.adminScenarioTotal?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    </Row>
-    {/* Office Cost/Expenses Scenario */}
-    <Row>
-    <Col md={1} >
-    <p>3050</p>
-    </Col>
-    <Col md={6} >
-    <p>Office Cost/Expenses Scenario</p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={2} >
-    <Form.Group controlId="office_expenses_scenario" 
-        className={`${styles.Width95} text-center`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="office_expenses_scenario"
-        value={office_expenses_scenario}
-        onChange={handleChangeScenario}
-            />
-    </Form.Group>
-    {errors?.office_expenses_scenario?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    </Row>
-    {/* Travel Expenses Scenario */}
-    <Row>
-    <Col md={1} >
-    <p>3060</p>
-    </Col>
-    <Col md={6} >
-    <p>Travel Expenses</p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={2} >
-    <Form.Group controlId="travel_expenses_scenario" 
-        className={`${styles.Width95} text-center`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="travel_expenses_scenario"
-        value={travel_expenses_scenario}
-        onChange={handleChangeScenario}
-            />
-    </Form.Group>
-    {errors?.travel_expenses_scenario?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    </Row>
-    {/* Living Expenses */}
-    <Row>
-    <Col md={1} >
-    <p>3070</p>
-    </Col>
-    <Col md={6} >
-    <p>Living Expenses</p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={2} >
-    <Form.Group controlId="living_expenses_scenario" 
-        className={`${styles.Width95} text-center`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="living_expenses_scenario"
-        value={living_expenses_scenario}
-        onChange={handleChangeScenario}
-            />
-    </Form.Group>
-    {errors?.living_expenses_scenario?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    </Row>
-    {/* Other */}
-    <Row>
-    <Col md={1} >
-    <p>3080</p>
-    </Col>
-    <Col md={6} >
-    <p>Other</p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={2} >
-    <Form.Group controlId="other_scenario" 
-        className={`${styles.Width95} text-center`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="other_scenario"
-        value={other_scenario}
-        onChange={handleChangeScenario}
-            />
-    </Form.Group>
-    {errors?.other_scenario?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    </Row>
-    {/* Fringes and Taxes */}
-    <Row>
-    <Col md={1} >
-    <p>3090</p>
-    </Col>
-    <Col md={6} >
-    <p>Fringes and Taxes</p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={1} >
-    <p>%</p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={2} >
-    <Form.Group controlId="fringes_taxes_scenario" 
-        className={`${styles.Width95} text-center`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="fringes_taxes_scenario"
-        value={fringes_taxes_scenario}
-        onChange={handleChangeScenario}
-            />
-    </Form.Group>
-    {errors?.fringes_taxes_scenario?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    </Row>
-    {/* Scenario Total */}
-    <Row>
-    <Col md={1} >
-    </Col>
-    <Col md={6} >
-    <h5 className={ `${styles.Bold}`}>TOTAL</h5>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={2} >
-    <Form.Group controlId="scenarioTotal" 
-        className={`${styles.Width95} text-center`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="scenarioTotal"
-        value={scenarioTotal}
-        readOnly
-            />
-    </Form.Group>
-    {errors?.scenarioTotal?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    </Row>
-    </div>
-  );
-  // ------------------------------------------------------
+    const scenario = (
+      <div>
+      <Row className="mt-3" >
+      <Col md={1} >
+      <p>3000</p>
+      </Col>
+      <Col md={6} >
+      <h5 className={ `${styles.Bold}`}>SCENARIO</h5>
+      </Col>
+      </Row>
+      {/* TITLES */}
+      <Row className={ `${styles.Overview} pt-2`} >
+      <Col md={1} >
+      <p>ACCT</p>
+      </Col>
+      <Col md={5} >
+      <p>Description</p>
+      </Col>
+      <Col md={1} >
+      <p>#</p>
+      </Col>
+      <Col className="px-0 mx-0" md={1} >
+      <p># Unit</p>
+      </Col>
+      <Col md={1} >
+      <p>Unit</p>
+      </Col>
+      <Col md={1} >
+      <p>Price</p>
+      </Col>
+      <Col md={2} >
+      <p>Total</p>
+      </Col>
+      </Row>
+      {/* Writers */}
+      <Row>
+      <Col md={1} >
+      <p>3010</p>
+      </Col>
+      <Col md={5} >
+      <p>Writers</p>
+      </Col>
+      <Col className="px-1 mx-0" md={1} >
+      <Form.Group controlId="writers_quantity" 
+          className={`${styles.Width100} text-center`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="writers_quantity"
+          value={writers_quantity}
+          onChange={handleChangeScenario}
+              />
+      </Form.Group>
+      {errors?.writers_quantity?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+      </Col>
+      <Col className="px-1 mx-0" md={1} >
+      <Form.Group controlId="writers_units_number" 
+          className={`${styles.Width95} text-center`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="writers_units_number"
+          value={writers_units_number}
+          onChange={handleChangeScenario}
+              />
+      </Form.Group>
+      {errors?.writers_units_number?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+      </Col>
+      <Col className="px-1 mx-0" md={1} >
+      <Form.Group controlId="writers_units_name" 
+          className={`${styles.Width95} text-center`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="writers_units_name"
+          value={writers_units_name}
+          onChange={handleChangeScenarioText}
+              />
+      </Form.Group>
+      {errors?.writers_units_name?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+      </Col>
+      <Col className="px-1 mx-0" md={1} >
+      <Form.Group controlId="writers_rate" 
+          className={`${styles.Width95} text-center`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="writers_rate"
+          value={writers_rate}
+          onChange={handleChangeScenario}
+              />
+      </Form.Group>
+      {errors?.writers_rate?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+      </Col>
+      <Col className="px-1 mx-0" md={2} >
+      <Form.Group controlId="writersTotal" 
+          className={`${styles.Width95} text-center`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="writersTotal"
+          value={writersTotal}
+          readOnly
+              />
+      </Form.Group>
+      {errors?.writersTotal?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+      </Col>
+      </Row>
+      {/* Consultants */}
+      <Row>
+      <Col md={1} >
+      <p>3020</p>
+      </Col>
+      <Col md={5} >
+      <p>Consultants</p>
+      </Col>
+      <Col className="px-1 mx-0"  md={1} >
+      <Form.Group controlId="consultants_quantity" 
+          className={`${styles.Width95} text-center`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="consultants_quantity"
+          value={consultants_quantity}
+          onChange={handleChangeScenario}
+              />
+      </Form.Group>
+      {errors?.consultants_quantity?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+      </Col>
+      <Col className="px-1 mx-0"  md={1} >
+      <Form.Group controlId="consultants_units_number" 
+          className={`${styles.Width95} text-center`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="consultants_units_number"
+          value={consultants_units_number}
+          onChange={handleChangeScenario}
+              />
+      </Form.Group>
+      {errors?.consultants_units_number?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+      </Col>
+      <Col className="px-1 mx-0" md={1} >
+      <Form.Group controlId="consultants_units_name" 
+          className={`${styles.Width95} text-center`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="consultants_units_name"
+          value={consultants_units_name}
+          onChange={handleChangeScenarioText}
+              />
+      </Form.Group>
+      {errors?.consultants_units_name?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+      </Col>
+      <Col className="px-1 mx-0" md={1} >
+      <Form.Group controlId="consultants_rate" 
+          className={`${styles.Width95} text-center`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="consultants_rate"
+          value={consultants_rate}
+          onChange={handleChangeScenario}
+              />
+      </Form.Group>
+      {errors?.consultants_rate?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+      </Col>
+      <Col className="px-1 mx-0"  md={2} >
+      <Form.Group controlId="consultantsTotal" 
+          className={`${styles.Width95} text-center`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="consultantsTotal"
+          value={consultantsTotal}
+          onChange={handleChangeScenario}
+              />
+      </Form.Group>
+      {errors?.consultantsTotal?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+      </Col>
+      </Row>
+      {/* Editors */}
+      <Row>
+      <Col md={1} >
+      <p>3030</p>
+      </Col>
+      <Col md={5} >
+      <p>Editors</p>
+      </Col>
+      <Col className="px-1 mx-0"  md={1} >
+      <Form.Group controlId="editors_quantity" 
+          className={`${styles.Width95} text-center`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="editors_quantity"
+          value={editors_quantity}
+          onChange={handleChangeScenario}
+              />
+      </Form.Group>
+      {errors?.editors_quantity?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+      </Col>
+      <Col className="px-1 mx-0"  md={1} >
+      <Form.Group controlId="editors_units_number" 
+          className={`${styles.Width95} text-center`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="editors_units_number"
+          value={editors_units_number}
+          onChange={handleChangeScenario}
+              />
+      </Form.Group>
+      {errors?.editors_units_number?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+      </Col>
+      <Col className="px-1 mx-0"  md={1} >
+      <Form.Group controlId="editors_units_name" 
+          className={`${styles.Width95} text-center`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="editors_units_name"
+          value={editors_units_name}
+          onChange={handleChangeScenarioText}
+              />
+      </Form.Group>
+      {errors?.editors_units_name?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+      </Col>
+      <Col className="px-1 mx-0"  md={1} >
+      <Form.Group controlId="editors_rate" 
+          className={`${styles.Width95} text-center`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="editors_rate"
+          value={editors_rate}
+          onChange={handleChangeScenario}
+              />
+      </Form.Group>
+      {errors?.editors_rate?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+      </Col>
+      <Col className="px-1 mx-0"  md={2} >
+      <Form.Group controlId="editorsTotal" 
+          className={`${styles.Width95} text-center`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="editorsTotal"
+          value={editorsTotal}
+          onChange={handleChangeScenario}
+              />
+      </Form.Group>
+      {errors?.editorsTotal?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+      </Col>
+      </Row>
+      {/* Admin */}
+      <Row>
+      <Col md={1} >
+      <p>3040</p>
+      </Col>
+      <Col md={5} >
+      <p>Admin</p>
+      </Col>
+      <Col className="px-1 mx-0"  md={1} >
+      <Form.Group controlId="admin_scenario_quantity" 
+          className={`${styles.Width95} text-center`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="admin_scenario_quantity"
+          value={admin_scenario_quantity}
+          onChange={handleChangeScenario}
+              />
+      </Form.Group>
+      {errors?.admin_scenario_quantity?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+      </Col>
+      <Col className="px-1 mx-0"  md={1} >
+      <Form.Group controlId="admin_scenario_units_number" 
+          className={`${styles.Width95} text-center`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="admin_scenario_units_number"
+          value={admin_scenario_units_number}
+          onChange={handleChangeScenario}
+              />
+      </Form.Group>
+      {errors?.admin_scenario_units_number?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+      </Col>
+      <Col className="px-1 mx-0"  md={1} >
+      <Form.Group controlId="admin_scenario_units_name" 
+          className={`${styles.Width95} text-center`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="admin_scenario_units_name"
+          value={admin_scenario_units_name}
+          onChange={handleChangeScenarioText}
+              />
+      </Form.Group>
+      {errors?.admin_scenario_units_name?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+      </Col>
+      <Col className="px-1 mx-0"  md={1} >
+      <Form.Group controlId="admin_scenario_rate" 
+          className={`${styles.Width95} text-center`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="admin_scenario_rate"
+          value={admin_scenario_rate}
+          onChange={handleChangeScenario}
+              />
+      </Form.Group>
+      {errors?.admin_scenario_rate?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+      </Col>
+      <Col className="px-1 mx-0"  md={2} >
+      <Form.Group controlId="adminScenarioTotal" 
+          className={`${styles.Width95} text-center`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="adminScenarioTotal"
+          value={adminScenarioTotal}
+          onChange={handleChangeScenario}
+              />
+      </Form.Group>
+      {errors?.adminScenarioTotal?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+      </Col>
+      </Row>
+      {/* Office Cost/Expenses Scenario */}
+      <Row>
+      <Col md={1} >
+      <p>3050</p>
+      </Col>
+      <Col md={6} >
+      <p>Office Cost/Expenses Scenario</p>
+      </Col>
+      <Col md={1} >
+      <p></p>
+      </Col>
+      <Col md={1} >
+      <p></p>
+      </Col>
+      <Col md={1} >
+      <p></p>
+      </Col>
+      <Col className="px-1 mx-0"  md={2} >
+      <Form.Group controlId="office_expenses_scenario" 
+          className={`${styles.Width95} text-center`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="office_expenses_scenario"
+          value={office_expenses_scenario}
+          onChange={handleChangeScenario}
+              />
+      </Form.Group>
+      {errors?.office_expenses_scenario?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+      </Col>
+      </Row>
+      {/* Travel Expenses Scenario */}
+      <Row>
+      <Col md={1} >
+      <p>3060</p>
+      </Col>
+      <Col md={6} >
+      <p>Travel Expenses</p>
+      </Col>
+      <Col md={1} >
+      <p></p>
+      </Col>
+      <Col md={1} >
+      <p></p>
+      </Col>
+      <Col md={1} >
+      <p></p>
+      </Col>
+      <Col className="px-1 mx-0"  md={2} >
+      <Form.Group controlId="travel_expenses_scenario" 
+          className={`${styles.Width95} text-center`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="travel_expenses_scenario"
+          value={travel_expenses_scenario}
+          onChange={handleChangeScenario}
+              />
+      </Form.Group>
+      {errors?.travel_expenses_scenario?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+      </Col>
+      </Row>
+      {/* Living Expenses */}
+      <Row>
+      <Col md={1} >
+      <p>3070</p>
+      </Col>
+      <Col md={6} >
+      <p>Living Expenses</p>
+      </Col>
+      <Col md={1} >
+      <p></p>
+      </Col>
+      <Col md={1} >
+      <p></p>
+      </Col>
+      <Col md={1} >
+      <p></p>
+      </Col>
+      <Col className="px-1 mx-0"  md={2} >
+      <Form.Group controlId="living_expenses_scenario" 
+          className={`${styles.Width95} text-center`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="living_expenses_scenario"
+          value={living_expenses_scenario}
+          onChange={handleChangeScenario}
+              />
+      </Form.Group>
+      {errors?.living_expenses_scenario?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+      </Col>
+      </Row>
+      {/* Other */}
+      <Row>
+      <Col md={1} >
+      <p>3080</p>
+      </Col>
+      <Col md={6} >
+      <p>Other</p>
+      </Col>
+      <Col md={1} >
+      <p></p>
+      </Col>
+      <Col md={1} >
+      <p></p>
+      </Col>
+      <Col md={1} >
+      <p></p>
+      </Col>
+      <Col className="px-1 mx-0" md={2} >
+      <Form.Group controlId="other_scenario" 
+          className={`${styles.Width95} text-center`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="other_scenario"
+          value={other_scenario}
+          onChange={handleChangeScenario}
+              />
+      </Form.Group>
+      {errors?.other_scenario?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+      </Col>
+      </Row>
+      {/* Fringes and Taxes */}
+      <Row>
+      <Col md={1} >
+      <p>3090</p>
+      </Col>
+      <Col md={6} >
+      <p>Fringes and Taxes</p>
+      </Col>
+      <Col md={1} >
+      <p></p>
+      </Col>
+      <Col md={1} >
+      <p>%</p>
+      </Col>
+      <Col md={1} >
+      <p></p>
+      </Col>
+      <Col className="px-1 mx-0" md={2} >
+      <Form.Group controlId="fringes_taxes_scenario" 
+          className={`${styles.Width95} text-center`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="fringes_taxes_scenario"
+          value={fringes_taxes_scenario}
+          onChange={handleChangeScenario}
+              />
+      </Form.Group>
+      {errors?.fringes_taxes_scenario?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+      </Col>
+      </Row>
+      {/* Scenario Total */}
+      <Row>
+      <Col md={1} >
+      </Col>
+      <Col md={6} >
+      <h5 className={ `${styles.Bold}`}>TOTAL</h5>
+      </Col>
+      <Col md={1} >
+      <p></p>
+      </Col>
+      <Col md={1} >
+      <p></p>
+      </Col>
+      <Col md={1} >
+      <p></p>
+      </Col>
+      <Col className="px-1 mx-0"  md={2} >
+      <Form.Group controlId="scenarioTotal" 
+          className={`${styles.Width95} text-center`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="scenarioTotal"
+          value={scenarioTotal}
+          readOnly
+              />
+      </Form.Group>
+      {errors?.scenarioTotal?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+      </Col>
+      </Row>
+      </div>
+    );
+  // end scenario ------------------------------------------------
 
   // PRODUCERS DIRECTORS --------------------------------------------
   
@@ -2654,7 +2653,593 @@ function BudgetCreate() {
     </Row>
     </div>
   );
-  // ------------------------------------------------------
+  // end producers-directors -------------------------------
+
+  // STARS / MUSIC ------------------------------------------
+  // Rights postData
+  const [postDataStarsMusic, setPostDataStarsMusic] = useState({
+    stars: 0,
+    stars_rights_payments: 0,
+    travel_expenses_stars: 0,
+    living_expenses_stars: 0,
+    other_stars: 0,
+    fringes_taxes_stars: 0,
+    music: 0,
+    music_supervisor: 0,
+    travel_expenses_music: 0,
+    living_expenses_music: 0,
+    music_rights_addl_songs: 0,
+    other_music: 0,
+    fringes_taxes_music: 0,
+    });
+
+  // postDataStarsMusic postData values
+  const {
+    stars, stars_rights_payments, travel_expenses_stars,
+    living_expenses_stars, other_stars, fringes_taxes_stars,
+    music, music_supervisor, travel_expenses_music, living_expenses_music,
+    music_rights_addl_songs, other_music, fringes_taxes_music,
+  } = postDataStarsMusic;
+
+  // StarsMusic Total postData 
+  const [starsMusicTotal, setStarsMusicTotal] = useState(0);
+
+  // StarsMusic handleChange
+  const handleChangeStarsMusic = (event) => {
+    setPostDataStarsMusic({
+      ...postDataStarsMusic,
+      [event.target.name]: parseFloat(event.target.value || 0 ),
+    });
+  }; 
+
+  // function to add all StarsMusic on change
+  useEffect(() => {
+    const addStarsMusic = () => {
+      setStarsMusicTotal(
+    stars, stars_rights_payments + travel_expenses_stars +
+    living_expenses_stars + other_stars + fringes_taxes_stars +
+    music + music_supervisor + travel_expenses_music +
+    living_expenses_music + music_rights_addl_songs +
+    other_music + fringes_taxes_music
+       )
+    }
+    const timer = setTimeout(() => {
+      addStarsMusic();
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [stars, stars_rights_payments, travel_expenses_stars,
+    living_expenses_stars, other_stars, fringes_taxes_stars,
+    music, music_supervisor, travel_expenses_music, living_expenses_music,
+    music_rights_addl_songs, other_music, fringes_taxes_music]);
+
+  // StarsMusic input boxes
+  const starsmusic = (
+    <div>
+    <Row className="mt-3" >
+    <Col md={1} >
+    <p>5000</p>
+    </Col>
+    <Col md={6} >
+    <h5 className={ `${styles.Bold}`}>STARS / MUSIC</h5>
+    </Col>
+    </Row>
+    {/* TITLES */}
+    <Row className={ `${styles.Overview} pt-2`} >
+    <Col md={1} >
+    <p>ACCT</p>
+    </Col>
+    <Col md={6} >
+    <p>Description</p>
+    </Col>
+    <Col md={1} >
+    <p>#</p>
+    </Col>
+    <Col md={1} >
+    <p>Unit</p>
+    </Col>
+    <Col md={1} >
+    <p>Price</p>
+    </Col>
+    <Col md={2} >
+    <p>Total</p>
+    </Col>
+    </Row>
+    {/* Stars */}
+    <Row>
+    <Col md={1} >
+    <p>5010</p>
+    </Col>
+    <Col md={6} >
+    <p>Stars</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col className="px-0 mx-0" md={2} >
+    <Form.Group controlId="stars" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="stars"
+        value={stars}
+        onChange={handleChangeStarsMusic}
+            />
+    </Form.Group>
+    {errors?.stars?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Rights */}
+    <Row>
+    <Col md={1} >
+    <p>5020</p>
+    </Col>
+    <Col md={6} >
+    <p>Stars Rights Payments</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col className="px-0 mx-0" md={2} >
+    <Form.Group controlId="stars_rights_payments" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="stars_rights_payments"
+        value={stars_rights_payments}
+        onChange={handleChangeStarsMusic}
+            />
+    </Form.Group>
+    {errors?.stars_rights_payments?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Travel Expenses Stars */}
+    <Row>
+    <Col md={1} >
+    <p>5030</p>
+    </Col>
+    <Col md={6} >
+    <p>Travel Expenses Stars</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col className="px-0 mx-0" md={2} >
+    <Form.Group controlId="travel_expenses_stars" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="travel_expenses_stars"
+        value={travel_expenses_stars}
+        onChange={handleChangeStarsMusic}
+            />
+    </Form.Group>
+    {errors?.travel_expenses_stars?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Living Expenses Stars */}
+    <Row>
+    <Col md={1} >
+    <p>5020</p>
+    </Col>
+    <Col md={6} >
+    <p>Living Expenses Stars</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col className="px-0 mx-0" md={2} >
+    <Form.Group controlId="living_expenses_stars" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="living_expenses_stars"
+        value={living_expenses_stars}
+        onChange={handleChangeStarsMusic}
+            />
+    </Form.Group>
+    {errors?.living_expenses_stars?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Other */}
+    <Row>
+    <Col md={1} >
+    <p>5050</p>
+    </Col>
+    <Col md={6} >
+    <p>Stars Other </p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col className="px-0 mx-0" md={2} >
+    <Form.Group controlId="other_stars" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="other_stars"
+        value={other_stars}
+        onChange={handleChangeStarsMusic}
+            />
+    </Form.Group>
+    {errors?.other_stars?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Fringes Taxes Stars */}
+    <Row>
+    <Col md={1} >
+    <p>5060</p>
+    </Col>
+    <Col md={6} >
+    <p>Stars Fringes Taxes</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col className="px-0 mx-0" md={2} >
+    <Form.Group controlId="fringes_taxes_stars" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="fringes_taxes_stars"
+        value={fringes_taxes_stars}
+        onChange={handleChangeStarsMusic}
+            />
+    </Form.Group>
+    {errors?.fringes_taxes_stars?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Music */}
+    <Row className="mt-3">
+    <Col md={1} >
+    <p>5070</p>
+    </Col>
+    <Col md={6} >
+    <p>Music: all-in package includes Composer, musicians, 
+      score, and recording session</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col className="px-0 mx-0" md={2} >
+    <Form.Group controlId="music" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="music"
+        value={music}
+        onChange={handleChangeStarsMusic}
+            />
+    </Form.Group>
+    {errors?.music?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Music Supervisor */}
+    <Row>
+    <Col md={1} >
+    <p>5080</p>
+    </Col>
+    <Col md={6} >
+    <p>Music Supervisor </p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col className="px-0 mx-0" md={2} >
+    <Form.Group controlId="music_supervisor" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="music_supervisor"
+        value={music_supervisor}
+        onChange={handleChangeStarsMusic}
+            />
+    </Form.Group>
+    {errors?.music_supervisor?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Travel Expenses */}
+    <Row>
+    <Col md={1} >
+    <p>5090</p>
+    </Col>
+    <Col md={6} >
+    <p>Travel Expenses - Music </p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col className="px-0 mx-0" md={2} >
+    <Form.Group controlId="travel_expenses_music" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="travel_expenses_music"
+        value={travel_expenses_music}
+        onChange={handleChangeStarsMusic}
+            />
+    </Form.Group>
+    {errors?.travel_expenses_music?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Living Expenses */}
+    <Row>
+    <Col md={1} >
+    <p>5100</p>
+    </Col>
+    <Col md={6} >
+    <p>Living Expenses - Music </p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col className="px-0 mx-0" md={2} >
+    <Form.Group controlId="living_expenses_music" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="living_expenses_music"
+        value={living_expenses_music}
+        onChange={handleChangeStarsMusic}
+            />
+    </Form.Group>
+    {errors?.living_expenses_music?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Add'l Music Rights (Songs, etc.) */}
+    <Row>
+    <Col md={1} >
+    <p>5110</p>
+    </Col>
+    <Col md={6} >
+    <p>Add'l Music Rights - Songs, etc. </p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col className="px-0 mx-0" md={2} >
+    <Form.Group controlId="music_rights_addl_songs" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="music_rights_addl_songs"
+        value={music_rights_addl_songs}
+        onChange={handleChangeStarsMusic}
+            />
+    </Form.Group>
+    {errors?.music_rights_addl_songs?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Music Other */}
+    <Row>
+    <Col md={1} >
+    <p>5120</p>
+    </Col>
+    <Col md={6} >
+    <p>Music Other </p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col className="px-0 mx-0" md={2} >
+    <Form.Group controlId="other_music" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="other_music"
+        value={other_music}
+        onChange={handleChangeStarsMusic}
+            />
+    </Form.Group>
+    {errors?.other_music?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Fringes and Taxes - Music */}
+    <Row>
+    <Col md={1} >
+    <p>5130</p>
+    </Col>
+    <Col md={6} >
+    <p>Fringes and Taxes - Music </p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col className="px-0 mx-0" md={2} >
+    <Form.Group controlId="fringes_taxes_music" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="fringes_taxes_music"
+        value={fringes_taxes_music}
+        onChange={handleChangeStarsMusic}
+            />
+    </Form.Group>
+    {errors?.fringes_taxes_music?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Stars / Music Total */}
+    <Row>
+    <Col md={1} >
+    </Col>
+    <Col md={6} >
+    <h5 className={ `${styles.Bold}`}>TOTAL</h5>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col className="px-0 mx-0" md={2} >
+    <Form.Group controlId="starsMusicTotal" 
+        className={`${styles.Width95} text-center`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="starsMusicTotal"
+        value={starsMusicTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.starsMusicTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    </div>
+  );
+
 
   // OTHER --------------------------------------------------
   const aboveLine = (
@@ -2781,6 +3366,21 @@ function BudgetCreate() {
     formData.append("directors_total", directorsTotal);
     formData.append("unit2_directors_total", unit2DirectorsTotal);
     formData.append("producers_dirs_total", producersDirsTotal);
+    // Stars Music
+    formData.append("stars", stars);
+    formData.append("stars_rights_payments", stars_rights_payments);
+    formData.append("travel_expenses_stars", travel_expenses_stars);
+    formData.append("living_expenses_stars", living_expenses_stars);
+    formData.append("other_stars", other_stars);
+    formData.append("fringes_taxes_stars", fringes_taxes_stars);
+    formData.append("music", music);
+    formData.append("music_supervisor", music_supervisor);
+    formData.append("travel_expenses_music", travel_expenses_music);
+    formData.append("living_expenses_music", living_expenses_music);
+    formData.append("music_rights_addl_songs", music_rights_addl_songs);
+    formData.append("other_music", other_music);
+    formData.append("fringes_taxes_music", fringes_taxes_music);
+    formData.append("stars_music_total", starsMusicTotal);
 
     try {
       const { data } = await axiosReq.post("/budgets/", formData);
@@ -2820,6 +3420,7 @@ function BudgetCreate() {
     {development}
     {scenario}
     {producersDirs}
+    {starsmusic}
       <Row>
       <Col>
         <div className= {`mt-1`} >{buttons} </div>
