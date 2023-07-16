@@ -1181,36 +1181,36 @@ function BudgetEdit() {
   // Scenario input boxes
   const scenario = (
     <div>
-    <Row className="mt-3" >
+    <Row className="mt-5" >
     <Col md={1} >
     <p>3000</p>
     </Col>
     <Col md={6} >
-    <h5 className={ `${styles.Bold}`}>SCENARIO</h5>
+    <p className={ `${styles.BoldBlack}`}>SCENARIO</p>
     </Col>
     </Row>
     {/* TITLES */}
-    <Row className={ `${styles.Overview} pt-2`} >
+    <Row className={ `${styles.Overview} mb-2 py-1`} >
     <Col md={1} >
-    <p>ACCT</p>
+    <p className="mb-0">ACCT</p>
     </Col>
     <Col md={5} >
-    <p>Description</p>
+    <p className="mb-0">Description</p>
     </Col>
     <Col md={1} >
-    <p>#</p>
+    <p className="mb-0">#</p>
     </Col>
     <Col className="px-0 mx-0" md={1} >
     <p># Unit</p>
     </Col>
     <Col md={1} >
-    <p>Unit</p>
+    <p className="mb-0">Unit</p>
     </Col>
     <Col md={1} >
-    <p>Price</p>
+    <p className="mb-0">Price</p>
     </Col>
     <Col md={2} >
-    <p>Total</p>
+    <p className="mb-0">Total</p>
     </Col>
     </Row>
     {/* Writers */}
@@ -1768,8 +1768,8 @@ function BudgetEdit() {
     <Row>
     <Col md={1} >
     </Col>
-    <Col md={6} >
-    <h5 className={ `${styles.Bold}`}>TOTAL</h5>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -2014,16 +2014,17 @@ function BudgetEdit() {
   // Producers Dirs input boxes
   const producersDirs = (
     <div>
-    <Row className="mt-3" >
+    <Row className="mt-5" >
     <Col md={1} >
     <p>4000</p>
     </Col>
     <Col md={6} >
-    <h5 className={ `${styles.Bold}`}>PRODUCERS AND DIRECTORS</h5>
+    <p className={ `${styles.BoldBlack}`}>
+      PRODUCERS AND DIRECTORS</p>
     </Col>
     </Row>
     {/* TITLES */}
-    <Row className={ `${styles.Overview} pt-2`} >
+    <Row className={ `${styles.Overview} mb-2 py-1`} >
     <Col md={1} >
     <p>ACCT</p>
     </Col>
@@ -2656,8 +2657,8 @@ function BudgetEdit() {
     <Row>
     <Col md={1} >
     </Col>
-    <Col md={6} >
-    <h5 className={ `${styles.Bold}`}>TOTAL</h5>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL</p>
     </Col>
     <Col md={1} >
     <p></p>
