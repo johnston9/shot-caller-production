@@ -11,7 +11,8 @@ function TopBox2(props) {
     const {title, scene, title2, title3, title4, work} = props; 
     return (
         <div className={styles.RegBox}>
-        <Row className={`${appStyles.playfair}`}>
+        <Row className={`d-flex align-items-center mt-2
+                 justify-content-center ${styles.Alignme} ${appStyles.playfair}`} >
         {/* <Col xs={{ span: 1, offset: 1 }} lg={{ span: 1, offset: 3 }}
             md={{ span: 1, offset: 2 }}
             className={`text-center ${styles.Longboxl}`}>    
@@ -28,10 +29,11 @@ function TopBox2(props) {
                         className={`float-right ${styles.SmallPanel}`}
                         src={door}
                         alt="door"
-                        height="100"
+                        height="80"
                     />
                 </Col>
-                <Col xs={8} className={`d-flex align-items-center justify-content-center ${styles.Alignme}`} >
+                <Col xs={8} className={`d-flex align-items-center
+                 justify-content-center ${styles.Alignme}`} >
                     <div >
                     {work && <h2 className={` text-center ${styles.Title}`}>{work} </h2>}
                     {title && <h2 className={` text-center ${styles.Title2}`}>{title} </h2>}

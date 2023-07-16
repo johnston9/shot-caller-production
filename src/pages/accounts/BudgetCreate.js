@@ -81,19 +81,16 @@ function BudgetCreate() {
   const detailslength = (
     <div>
     {/* Titles */}
-    <Row className={ `${styles.Overview} mb-2 py-1`}>
-    <Col md={6}>
-    <p className={ `${styles.Bold} pt-2`}>DETAILS</p>
-    </Col>
-    <Col md={6}>
-    <p className={ `${styles.Bold} pt-2`}>LENGTH</p>
+    <Row className={ `${styles.OverviewBlue} mx-1 mb-2 py-1 text-center`}>
+    <Col md={12}>
+    <h5 className={ `${styles.BoldBlack}`}>DETAILS</h5>
     </Col>
     </Row>
-    <Row>
+    <Row className="mt-3">
     {/* DETAILS COLUMN */}
     <Col md={6} >
     {/* title */}
-    <Row>
+    <Row >
     <Col md={6}>
     <p>Title</p>
     </Col>
@@ -1152,7 +1149,8 @@ function BudgetCreate() {
     };
   }, [writersTotal, consultantsTotal, editorsTotal,
     office_expenses_scenario, adminScenarioTotal, travel_expenses_scenario,
-    living_expenses_scenario, other_scenario, fringes_taxes_scenario ])
+    living_expenses_scenario, other_scenario, fringes_taxes_scenario
+  ]);
 
   // Scenario input boxes
   const scenario = (
@@ -1265,7 +1263,7 @@ function BudgetCreate() {
         </Alert>
     ))}
     </Col>
-    <Col className="px-1 mx-0" md={2} >
+    <Col md={2} >
     <Form.Group controlId="writersTotal" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -1359,7 +1357,7 @@ function BudgetCreate() {
         </Alert>
     ))}
     </Col>
-    <Col className="px-1 mx-0"  md={2} >
+    <Col md={2} >
     <Form.Group controlId="consultantsTotal" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -1453,7 +1451,7 @@ function BudgetCreate() {
         </Alert>
     ))}
     </Col>
-    <Col className="px-1 mx-0"  md={2} >
+    <Col  md={2} >
     <Form.Group controlId="editorsTotal" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -1547,7 +1545,7 @@ function BudgetCreate() {
         </Alert>
     ))}
     </Col>
-    <Col className="px-1 mx-0"  md={2} >
+    <Col md={2} >
     <Form.Group controlId="adminScenarioTotal" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -1582,7 +1580,7 @@ function BudgetCreate() {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col className="px-1 mx-0"  md={2} >
+    <Col md={2} >
     <Form.Group controlId="office_expenses_scenario" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -1617,7 +1615,7 @@ function BudgetCreate() {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col className="px-1 mx-0"  md={2} >
+    <Col md={2} >
     <Form.Group controlId="travel_expenses_scenario" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -1652,7 +1650,7 @@ function BudgetCreate() {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col className="px-1 mx-0"  md={2} >
+    <Col md={2} >
     <Form.Group controlId="living_expenses_scenario" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -1687,7 +1685,7 @@ function BudgetCreate() {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col className="px-1 mx-0" md={2} >
+    <Col md={2} >
     <Form.Group controlId="other_scenario" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -1722,7 +1720,7 @@ function BudgetCreate() {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col className="px-1 mx-0" md={2} >
+    <Col md={2} >
     <Form.Group controlId="fringes_taxes_scenario" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -1756,7 +1754,7 @@ function BudgetCreate() {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col className="px-1 mx-0"  md={2} >
+    <Col md={2} >
     <Form.Group controlId="scenarioTotal" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -2020,7 +2018,7 @@ function BudgetCreate() {
     <p>Executive Producers</p>
     </Col>
     {/* Quantity */}
-    <Col md={1} >
+    <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="executive_producers_quantity" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -2042,7 +2040,7 @@ function BudgetCreate() {
     <p></p>
     </Col>
     {/* Price */}
-    <Col md={1} >
+    <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="executive_producers_rate" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -2087,7 +2085,7 @@ function BudgetCreate() {
     <p>Producers</p>
     </Col>
     {/* Quantity */}
-    <Col md={1} >
+    <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="producers_quantity" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -2109,7 +2107,7 @@ function BudgetCreate() {
     <p></p>
     </Col>
     {/* Price */}
-    <Col md={1} >
+    <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="producers_rate" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -2154,7 +2152,7 @@ function BudgetCreate() {
     <p>Line Producers</p>
     </Col>
     {/* Quantity */}
-    <Col md={1} >
+    <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="line_producers_quantity" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -2176,7 +2174,7 @@ function BudgetCreate() {
     <p></p>
     </Col>
     {/* Price */}
-    <Col md={1} >
+    <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="line_producers_rate" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -2221,7 +2219,7 @@ function BudgetCreate() {
     <p>Co-Producers</p>
     </Col>
     {/* Quantity */}
-    <Col md={1} >
+    <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="co_producers_quantity" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -2243,7 +2241,7 @@ function BudgetCreate() {
     <p></p>
     </Col>
     {/* Price */}
-    <Col md={1} >
+    <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="co_producers_rate" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -2288,7 +2286,7 @@ function BudgetCreate() {
     <p>Associate Producers</p>
     </Col>
     {/* Quantity */}
-    <Col md={1} >
+    <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="associate_producers_quantity" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -2310,7 +2308,7 @@ function BudgetCreate() {
     <p></p>
     </Col>
     {/* Price */}
-    <Col md={1} >
+    <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="associate_producers_rate" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -2355,7 +2353,7 @@ function BudgetCreate() {
     <p>Directors</p>
     </Col>
     {/* Quantity */}
-    <Col md={1} >
+    <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="directors_quantity" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -2377,7 +2375,7 @@ function BudgetCreate() {
     <p></p>
     </Col>
     {/* Price */}
-    <Col md={1} >
+    <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="directors_rate" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -2422,7 +2420,7 @@ function BudgetCreate() {
     <p>2nd Unit Directors</p>
     </Col>
     {/* Quantity */}
-    <Col md={1} >
+    <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="unit2_directors_quantity" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -2444,7 +2442,7 @@ function BudgetCreate() {
     <p></p>
     </Col>
     {/* Price */}
-    <Col md={1} >
+    <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="unit2_directors_rate" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -2656,7 +2654,6 @@ function BudgetCreate() {
     </Row>
     </div>
   );
-
   // end producers-directors -------------------------------
 
   // STARS / MUSIC ------------------------------------------
@@ -2722,16 +2719,16 @@ function BudgetCreate() {
   // StarsMusic input boxes
   const starsmusic = (
     <div>
-    <Row className="mt-3" >
+    <Row className="mt-5" >
     <Col md={1} >
     <p>5000</p>
     </Col>
     <Col md={6} >
-    <h5 className={ `${styles.Bold}`}>STARS / MUSIC</h5>
+    <p className={ `${styles.BoldBlack}`}>STARS / MUSIC</p>
     </Col>
     </Row>
     {/* TITLES */}
-    <Row className={ `${styles.Overview} pt-2`} >
+    <Row className={ `${styles.Overview} mb-2 py-1`} >
     <Col md={1} >
     <p>ACCT</p>
     </Col>
@@ -2742,7 +2739,7 @@ function BudgetCreate() {
     <p>#</p>
     </Col>
     <Col md={1} >
-    <p>Unit</p>
+    <p></p>
     </Col>
     <Col md={1} >
     <p>Price</p>
@@ -2768,7 +2765,7 @@ function BudgetCreate() {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col className="px-0 mx-0" md={2} >
+    <Col md={2} >
     <Form.Group controlId="stars" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -2803,7 +2800,7 @@ function BudgetCreate() {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col className="px-0 mx-0" md={2} >
+    <Col md={2} >
     <Form.Group controlId="stars_rights_payments" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -2838,7 +2835,7 @@ function BudgetCreate() {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col className="px-0 mx-0" md={2} >
+    <Col md={2} >
     <Form.Group controlId="travel_expenses_stars" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -2873,7 +2870,7 @@ function BudgetCreate() {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col className="px-0 mx-0" md={2} >
+    <Col md={2} >
     <Form.Group controlId="living_expenses_stars" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -2908,7 +2905,7 @@ function BudgetCreate() {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col className="px-0 mx-0" md={2} >
+    <Col md={2} >
     <Form.Group controlId="other_stars" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -2943,7 +2940,7 @@ function BudgetCreate() {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col className="px-0 mx-0" md={2} >
+    <Col md={2} >
     <Form.Group controlId="fringes_taxes_stars" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -2962,13 +2959,13 @@ function BudgetCreate() {
     </Col>
     </Row>
     {/* Music */}
-    <Row className="mt-3">
+    <Row >
     <Col md={1} >
     <p>5070</p>
     </Col>
     <Col md={6} >
-    <p>Music: all-in package includes Composer, musicians, 
-      score, and recording session</p>
+    <p>Music: all-in package includes Composer, Musicians, 
+      Score, and Recording Session</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -2979,7 +2976,7 @@ function BudgetCreate() {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col className="px-0 mx-0" md={2} >
+    <Col md={2} >
     <Form.Group controlId="music" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -3014,7 +3011,7 @@ function BudgetCreate() {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col className="px-0 mx-0" md={2} >
+    <Col md={2} >
     <Form.Group controlId="music_supervisor" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -3049,7 +3046,7 @@ function BudgetCreate() {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col className="px-0 mx-0" md={2} >
+    <Col md={2} >
     <Form.Group controlId="travel_expenses_music" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -3084,7 +3081,7 @@ function BudgetCreate() {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col className="px-0 mx-0" md={2} >
+    <Col md={2} >
     <Form.Group controlId="living_expenses_music" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -3119,7 +3116,7 @@ function BudgetCreate() {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col className="px-0 mx-0" md={2} >
+    <Col md={2} >
     <Form.Group controlId="music_rights_addl_songs" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -3154,7 +3151,7 @@ function BudgetCreate() {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col className="px-0 mx-0" md={2} >
+    <Col md={2} >
     <Form.Group controlId="other_music" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -3189,7 +3186,7 @@ function BudgetCreate() {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col className="px-0 mx-0" md={2} >
+    <Col md={2} >
     <Form.Group controlId="fringes_taxes_music" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -3211,8 +3208,8 @@ function BudgetCreate() {
     <Row>
     <Col md={1} >
     </Col>
-    <Col md={6} >
-    <h5 className={ `${styles.Bold}`}>TOTAL</h5>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -3223,7 +3220,7 @@ function BudgetCreate() {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col className="px-0 mx-0" md={2} >
+    <Col md={2} >
     <Form.Group controlId="starsMusicTotal" 
         className={`${styles.Width95} text-center`} >
         <Form.Control 
@@ -3243,6 +3240,66 @@ function BudgetCreate() {
     </Row>
     </div>
   );
+  // end stars music
+
+  // Above the line total
+
+  // Above the line Total postData 
+  const [aboveTheLineTotal, setAboveTheLineTotal] = useState(0);
+  // function to add all Above the line totals on change
+  useEffect(() => {
+    const addAboveTheLine = () => {
+      setAboveTheLineTotal(
+        parseFloat(postDataRightsTotal || 0) +
+        parseFloat(developmentTotal || 0) +
+        parseFloat(scenarioTotal || 0) +
+        parseFloat(producersDirsTotal || 0) +
+        parseFloat(starsMusicTotal || 0))
+      }
+    const timer = setTimeout(() => {
+      addAboveTheLine();
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [postDataRightsTotal, developmentTotal, scenarioTotal,
+    producersDirsTotal, starsMusicTotal]);
+
+  // Above the line input box
+  const abovetheline = (
+    <div className="my-5">
+    <Row >
+    <Col md={1} >
+    <p></p>
+    </Col>
+    {/* <Col md={9} >
+    <p className={ `${styles.BoldBlack}`}>ABOVE THE LINE TOTAL</p>
+    </Col> */}
+    <Col className={ `${styles.Overview} my-0 py-0`} md={9} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>ABOVE THE LINE TOTAL</p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="aboveTheLineTotal" 
+          className={`${styles.Width95} text-center`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="aboveTheLineTotal"
+          value={aboveTheLineTotal}
+          readOnly
+              />
+      </Form.Group>
+      {errors?.aboveTheLineTotal?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+    </Col>
+    </Row>
+    </div>
+  );
+
     
   const buttons = (
     <div className="text-center mt-3">    
@@ -3359,6 +3416,7 @@ function BudgetCreate() {
     formData.append("other_music", other_music);
     formData.append("fringes_taxes_music", fringes_taxes_music);
     formData.append("stars_music_total", starsMusicTotal);
+    formData.append("aboveTheLineTotal", aboveTheLineTotal);
 
     try {
       const { data } = await axiosReq.post("/budgets/", formData);
@@ -3376,12 +3434,12 @@ function BudgetCreate() {
     <div className="mt-3">
     <Row >
     <Col className={`${styles.Back}`}>
-    <h5 style={{ textTransform: 'uppercase'}} 
-        className={`mt-1 mb-1 pl-3 py-1 ${styles.SubTitle } text-center`}>
-        CREATE BUDGET - Project ID: {id}
-    </h5>
-    {/* className={ `${styles.SubTitle} pt-2`} */}
-    <Row className="mt-3 ml-0" >
+    <Row className={ `${styles.OverviewBlue} mx-1 mb-1 py-3 text-center`}>
+    <Col md={12}>
+    <h5 className={ `${styles.BoldBlack}`}>CREATE BUDGET - Project ID: {id}</h5>
+    </Col>
+    </Row>
+    <Row className="mt-1 ml-0" >
         <Col xs={3}>
         <Button
           className={`${btnStyles.Button} ${btnStyles.Blue} mb-2`}
@@ -3393,15 +3451,17 @@ function BudgetCreate() {
     </Row>
     <Form className="mt-3 px-3" onSubmit={handleSubmit}>
     {detailslength}
-    <h4 className={ `${styles.SubTitleAbove} ml-1 mt-5 mb-5 text-center`}>
-      ABOVE THE LINE</h4>
+    <Row className={ `${styles.OverviewBlue} mx-1 my-5 py-1 text-center`}>
+    <Col md={12}>
+    <h5 className={ `${styles.BoldBlack}`}>ABOVE THE LINE</h5>
+    </Col>
+    </Row>
     {rights}
     {development}
     {scenario}
-    <hr className={ `${styles.Break}`}></hr>
     {producersDirs}
     {starsmusic}
-    <hr className={ `${styles.Break}`}></hr>
+    {abovetheline}
     {/* buttons */}
     <Row>
     <Col>

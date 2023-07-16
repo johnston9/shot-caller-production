@@ -29,7 +29,7 @@ const Home = () => {
 
   return (
       <div >
-        <TopBox2 title="SHOT CALLER PRODUCTION" />
+        <TopBox2 title="SHOT CALLER PRODUCTION" className="mt-5" />
         {/* Section 1 - the temporary background image city1
             and The Creative and Production feature information links */}
         <div className={styles.HomeBox} 
