@@ -440,8 +440,8 @@ function BudgetEdit() {
 
   // Rights input boxes
   const rights = (
-    <div className="">
-    <Row className="mt-3" >
+    <div className="mt-3">
+    <Row >
     <Col md={1} >
     <p className="mb-0">1000</p>
     </Col>
@@ -544,8 +544,8 @@ function BudgetEdit() {
     <Row className="mb-0 pb-0">
     <Col md={1} >
     </Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
-    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL</p>
+    <Col className={ `${styles.Overview} mb-0 py-0`} md={6} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL RIGHTS</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -558,7 +558,7 @@ function BudgetEdit() {
     </Col>
     <Col md={2} >
     <Form.Group controlId="postDataRightsTotal" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -988,7 +988,7 @@ function BudgetEdit() {
     <Col md={1} >
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
-    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL</p>
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL PRE-PRODUCTION AND DEVELOPMENT</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -1001,7 +1001,7 @@ function BudgetEdit() {
     </Col>
     <Col md={2} >
     <Form.Group controlId="developmentTotal" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1766,7 +1766,7 @@ function BudgetEdit() {
     <Col md={1} >
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
-    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL</p>
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL SCENARIO</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -1779,7 +1779,7 @@ function BudgetEdit() {
     </Col>
     <Col md={2} >
     <Form.Group controlId="scenarioTotal" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2655,7 +2655,7 @@ function BudgetEdit() {
     <Col md={1} >
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
-    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL</p>
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL PRODUCERS / DIRECTORS </p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -2668,7 +2668,7 @@ function BudgetEdit() {
     </Col>
     <Col md={2} >
     <Form.Group controlId="producersDirsTotal" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2929,13 +2929,13 @@ function BudgetEdit() {
     ))}
     </Col>
     </Row>
-    {/* Other */}
+    {/* Stars - Other */}
     <Row>
     <Col md={1} >
     <p>5050</p>
     </Col>
     <Col md={6} >
-    <p>Stars Other </p>
+    <p>Stars - Other </p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -2964,13 +2964,13 @@ function BudgetEdit() {
     ))}
     </Col>
     </Row>
-    {/* Fringes Taxes Stars */}
+    {/* Stars - Fringes Taxes */}
     <Row>
     <Col md={1} >
     <p>5060</p>
     </Col>
     <Col md={6} >
-    <p>Stars Fringes Taxes</p>
+    <p>Stars - Fringes Taxes</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -3076,7 +3076,7 @@ function BudgetEdit() {
     <p>5090</p>
     </Col>
     <Col md={6} >
-    <p>Travel Expenses - Music </p>
+    <p>Music - Travel Expenses </p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -3111,7 +3111,7 @@ function BudgetEdit() {
     <p>5100</p>
     </Col>
     <Col md={6} >
-    <p>Living Expenses - Music </p>
+    <p>Music - Living Expenses </p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -3181,7 +3181,7 @@ function BudgetEdit() {
     <p>5120</p>
     </Col>
     <Col md={6} >
-    <p>Music Other </p>
+    <p>Music - Other </p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -3210,13 +3210,13 @@ function BudgetEdit() {
     ))}
     </Col>
     </Row>
-    {/* Fringes and Taxes - Music */}
+    {/* Music - Fringes and Taxes */}
     <Row>
     <Col md={1} >
     <p>5130</p>
     </Col>
     <Col md={6} >
-    <p>Fringes and Taxes - Music </p>
+    <p>Music - Fringes and Taxes</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -3250,7 +3250,7 @@ function BudgetEdit() {
     <Col md={1} >
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
-    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL</p>
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL STARS / MUSIC</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -3263,7 +3263,7 @@ function BudgetEdit() {
     </Col>
     <Col md={2} >
     <Form.Group controlId="starsMusicTotal" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -3309,20 +3309,14 @@ function BudgetEdit() {
 
   // Above the line input box
   const abovetheline = (
-    <div className="my-5">
+    <div className="my-5 pl-3">
     <Row>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    {/* <Col md={9} >
-    <p className={ `${styles.BoldBlack}`}>ABOVE THE LINE TOTAL</p>
-    </Col> */}
-    <Col className={ `${styles.Overview} my-0 py-0`} md={9} >
-    <p className={ `${styles.Bold} pb-0 mb-0`}>ABOVE THE LINE TOTAL</p>
+    <Col className={ `${styles.Overview}  my-0 py-2`} md={10} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL ABOVE THE LINE</p>
     </Col>
     <Col md={2} >
     <Form.Group controlId="aboveTheLineTotal" 
-          className={`${styles.Width95} text-center`} >
+          className={`${styles.Width95} text-center pt-1 mb-0`} >
           <Form.Control 
           type="text"
           className={styles.Input}
@@ -3590,6 +3584,11 @@ function BudgetEdit() {
     {producersDirs}
     {starsmusic}
     {abovetheline}
+    <Row className={ `${styles.OverviewBlue} mx-1 my-5 py-1 text-center`}>
+    <Col md={12}>
+    <h5 className={ `${styles.BoldBlack}`}>BELOW THE LINE</h5>
+    </Col>
+    </Row>
     {/* buttons <hr className={ `${styles.Break}`}></hr> */}
     <Row>
     <Col>
