@@ -1070,6 +1070,7 @@ function BudgetEdit() {
   // Admin Total postData 
   const [adminScenarioTotal, setAdminScenarioTotal] = useState(0);
 
+  // Calculate Functions
   // function to calculate writers on change
   useEffect(() => {
     const addWriters = () => {
@@ -1173,7 +1174,7 @@ function BudgetEdit() {
     };
   }, [writersTotal, consultantsTotal, editorsTotal,
     office_expenses_scenario, adminScenarioTotal, travel_expenses_scenario,
-    living_expenses_scenario, other_scenario, fringes_taxes_scenario ])
+    living_expenses_scenario, other_scenario, fringes_taxes_scenario ]);
 
   // Scenario input boxes
   const scenario = (
@@ -3335,6 +3336,220 @@ function BudgetEdit() {
     </div>
   );
 
+  // BELOW THE LINE - "B" PRODUCTION
+
+  // CAST ----  ----------------------------------------
+  
+  // Cast postData
+  const [postDataCast, setPostDataCast] = useState({
+    principals_quantity: 0,
+    principals_units_number: 0,
+    principals_units_name: "",
+    principals_rate: 0,
+    actors_quantity: 0,
+    actors_units_number: 0,
+    actors_units_name: "",
+    actors_rate: 0,
+    stuntcoordinators_quantity: 0,
+    stuntcoordinators_units_number: 0,
+    stuntcoordinators_units_name: "",
+    stuntcoordinators_rate: 0,
+    stuntperformers_quantity: 0,
+    stuntperformers_units_number: 0,
+    stuntperformers_units_name: "",
+    stuntperformers_rate: 0,
+    otherperformers_quantity: 0,
+    otherperformers_units_number: 0,
+    otherperformers_units_name: "",
+    otherperformers_rate: 0,
+    extras_quantity: 0,
+    extras_units_number: 0,
+    extras_units_name: "",
+    extras_rate: 0,
+    casting_director: 0,
+    extras_casting: 0,
+    other_cast: 0,
+    fringes_taxes_cast: 0,
+    rights_payments_cast: 0,
+  });
+
+  // Cast postData values
+  const {
+    principals_quantity, principals_units_number,
+    principals_units_name, principals_rate,
+    actors_quantity, actors_units_number, 
+    actors_units_name, actors_rate,
+    stuntcoordinators_quantity, stuntcoordinators_units_number,
+    stuntcoordinators_units_name, stuntcoordinators_rate,
+    stuntperformers_quantity, stuntperformers_units_number,
+    stuntperformers_units_name, stuntperformers_rate,
+    otherperformers_quantity, otherperformers_units_number,
+    otherperformers_units_name, otherperformers_rate,
+    extras_quantity, extras_units_number,
+    extras_units_name, extras_rate,
+    casting_director, extras_casting,
+    other_cast, fringes_taxes_cast, rights_payments_cast,
+  } = postDataCast;
+
+  // Principals Total postData
+  const [principalsTotal, setPrincipalsTotal] = useState(0);
+  // Actors Total postData 
+  const [actorsTotal, setActorsTotal] = useState(0);
+  // Editors Total postData
+  const [stuntcoordinatorsTotal, setStuntcoordinatorsTotal] = useState(0);
+  // Admin Total postData
+  const [stuntperformersTotal, setStuntperformersTotal] = useState(0);
+  // Admin Total postData
+  const [otherperformersTotal, setOtherperformersTotal] = useState(0);
+  // Extras Total postData
+  const [extrasTotal, setExtrasTotal] = useState(0);
+
+  // Calculate Functions
+  // function to calculate principals on change
+  useEffect(() => {
+    const addPrincipals = () => {
+      setPrincipalsTotal(parseFloat(principals_units_number || 0) * 
+      parseFloat(principals_quantity || 0) * 
+      parseFloat(principals_rate || 0))
+    }
+    const timer = setTimeout(() => {
+      addPrincipals();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [principals_units_number, principals_quantity, principals_rate]);
+
+  // function to calculate actors on change
+  useEffect(() => {
+    const addActors = () => {
+      setActorsTotal(parseFloat(actors_units_number || 0) * 
+      parseFloat(actors_quantity || 0) * 
+      parseFloat(actors_rate || 0))
+    }
+    const timer = setTimeout(() => {
+      addActors();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [actors_units_number, actors_quantity, actors_rate]);
+
+  // function to calculate stuntcoordinators on change
+  useEffect(() => {
+    const addStuntcoordinators = () => {
+      setStuntcoordinatorsTotal(parseFloat(stuntcoordinators_units_number || 0) * 
+      parseFloat(stuntcoordinators_quantity || 0) * 
+      parseFloat(stuntcoordinators_rate || 0))
+    }
+    const timer = setTimeout(() => {
+      addStuntcoordinators();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [stuntcoordinators_units_number, stuntcoordinators_quantity, stuntcoordinators_rate]);
+
+  // function to calculate stuntperformers on change
+  useEffect(() => {
+    const addStuntperformers = () => {
+      setStuntperformersTotal(parseFloat(stuntperformers_units_number || 0) * 
+      parseFloat(stuntperformers_quantity || 0) * 
+      parseFloat(stuntperformers_rate || 0))
+    }
+    const timer = setTimeout(() => {
+      addStuntperformers();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [stuntperformers_units_number, stuntperformers_quantity, stuntperformers_rate]);
+
+  // function to calculate otherperformers on change
+  useEffect(() => {
+    const addOtherperformers = () => {
+      setOtherperformersTotal(parseFloat(otherperformers_units_number || 0) * 
+      parseFloat(otherperformers_quantity || 0) * 
+      parseFloat(otherperformers_rate || 0))
+    }
+    const timer = setTimeout(() => {
+      addOtherperformers();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [otherperformers_units_number, otherperformers_quantity, otherperformers_rate]);
+
+  // function to calculate extras on change
+  useEffect(() => {
+    const addExtras = () => {
+      setExtrasTotal(parseFloat(extras_units_number || 0) * 
+      parseFloat(extras_quantity || 0) * 
+      parseFloat(extras_rate || 0))
+    }
+    const timer = setTimeout(() => {
+      addExtras();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [extras_units_number, extras_quantity, extras_rate]);
+
+  // Cast Total postData 
+  const [castTotal, setCastTotal] = useState(0);
+
+  // Cast handleChange 
+  const handleChangeCast = (event) => {
+    setPostDataCast({
+      ...postDataCast,
+      [event.target.name]: parseFloat(event.target.value || 0 ),
+    });
+  }; 
+
+  // Cast handleChange Text 
+  const handleChangeCastText = (event) => {
+    setPostDataCast({
+      ...postDataCast,
+      [event.target.name]: event.target.value,
+    });
+  }; 
+
+  // function to add all cast on change
+  useEffect(() => {
+    const addCast = () => {
+      setCastTotal(
+      parseFloat(principalsTotal || 0) +
+      parseFloat(actorsTotal || 0) +
+      parseFloat(stuntcoordinatorsTotal || 0) +
+      parseFloat(stuntperformersTotal || 0) +
+      parseFloat(otherperformersTotal || 0) +
+      parseFloat(extrasTotal || 0) +
+      parseFloat(casting_director || 0) +
+      parseFloat(extras_casting || 0) +
+      parseFloat(other_cast || 0) +
+      parseFloat(rights_payments_cast || 0) +
+      parseFloat(fringes_taxes_cast || 0) 
+      )
+    }
+    const timer = setTimeout(() => {
+      addCast();
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [principalsTotal, actorsTotal, stuntcoordinatorsTotal,
+    stuntperformersTotal, otherperformersTotal, extrasTotal,
+    casting_director, extras_casting, other_cast,
+    rights_payments_cast, fringes_taxes_cast ]);
+
+
   // <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
   //   <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL</p>
   // </Col>
@@ -3430,6 +3645,36 @@ function BudgetEdit() {
           music, music_supervisor, travel_expenses_music, living_expenses_music,
           music_rights_addl_songs, other_music, 
           fringes_taxes_music});
+        // cast
+        const {principals_quantity, principals_units_number,
+          principals_units_name, principals_rate,
+          actors_quantity, actors_units_number, 
+          actors_units_name, actors_rate,
+          stuntcoordinators_quantity, stuntcoordinators_units_number,
+          stuntcoordinators_units_name, stuntcoordinators_rate,
+          stuntperformers_quantity, stuntperformers_units_number,
+          stuntperformers_units_name, stuntperformers_rate,
+          otherperformers_quantity, otherperformers_units_number,
+          otherperformers_units_name, otherperformers_rate,
+          extras_quantity, extras_units_number,
+          extras_units_name, extras_rate,
+          casting_director, extras_casting,
+          other_cast, fringes_taxes_cast, rights_payments_cast,} = data.results[0];
+          setPostDataCast({principals_quantity, principals_units_number,
+          principals_units_name, principals_rate,
+          actors_quantity, actors_units_number, 
+          actors_units_name, actors_rate,
+          stuntcoordinators_quantity, stuntcoordinators_units_number,
+          stuntcoordinators_units_name, stuntcoordinators_rate,
+          stuntperformers_quantity, stuntperformers_units_number,
+          stuntperformers_units_name, stuntperformers_rate,
+          otherperformers_quantity, otherperformers_units_number,
+          otherperformers_units_name, otherperformers_rate,
+          extras_quantity, extras_units_number,
+          extras_units_name, extras_rate,
+          casting_director, extras_casting,
+          other_cast, fringes_taxes_cast, rights_payments_cast,});
+
       } catch (err) {
         console.log(err);
       }
@@ -3540,6 +3785,44 @@ function BudgetEdit() {
     formData.append("fringes_taxes_music", fringes_taxes_music);
     formData.append("stars_music_total", starsMusicTotal);
     formData.append("aboveTheLineTotal", aboveTheLineTotal);
+    // Cast
+    formData.append("principals_quantity", principals_quantity);
+    formData.append("principals_units_number", principals_units_number);
+    formData.append("principals_units_name", principals_units_name);
+    formData.append("principals_rate", principals_rate);
+    formData.append("actors_quantity", actors_quantity);
+    formData.append("actors_units_number", actors_units_number);
+    formData.append("actors_units_name", actors_units_name);
+    formData.append("actors_rate", actors_rate);
+    formData.append("stuntcoordinators_quantity", stuntcoordinators_quantity);
+    formData.append("stuntcoordinators_units_number", stuntcoordinators_units_number);
+    formData.append("stuntcoordinators_units_name", stuntcoordinators_units_name);
+    formData.append("stuntcoordinators_rate", stuntcoordinators_rate);
+    formData.append("stuntperformers_quantity", stuntperformers_quantity);
+    formData.append("stuntperformers_units_number", stuntperformers_units_number);
+    formData.append("stuntperformers_units_name", stuntperformers_units_name);
+    formData.append("stuntperformers_rate", stuntperformers_rate);
+    formData.append("otherperformers_quantity", otherperformers_quantity);
+    formData.append("otherperformers_units_number", otherperformers_units_number);
+    formData.append("otherperformers_units_name", otherperformers_units_name);
+    formData.append("otherperformers_rate", otherperformers_rate);
+    formData.append("extras_quantity", extras_quantity);
+    formData.append("extras_units_number", extras_units_number);
+    formData.append("extras_units_name", extras_units_name);
+    formData.append("extras_rate", extras_rate);
+    formData.append("casting_director", casting_director);
+    formData.append("extras_casting", extras_casting);
+    formData.append("other_cast", other_cast);
+    formData.append("fringes_taxes_cast", fringes_taxes_cast);
+    formData.append("rights_payments_cast", rights_payments_cast);
+    formData.append("principals_total", principalsTotal);
+    formData.append("actors_total", actorsTotal);
+    formData.append("stuntcoordinators_total", stuntcoordinatorsTotal);
+    formData.append("stuntperformers_total", stuntperformersTotal);
+    formData.append("otherperformers_total", otherperformersTotal);
+    formData.append("extras_total", extrasTotal);
+    formData.append("cast_total", castTotal);
+
     try {
       const { data } = await axiosReq.put(`/budgets/${budgetId}/`, formData);
       console.log(data);
