@@ -2,6 +2,11 @@
   margin-bottom: 0;
 }
 
+.Close {
+  cursor: pointer;
+  color: #33e6e0;
+}
+
 .Top {
     background-color: #1ea7ae;
     color: #fff;
@@ -36,6 +41,13 @@
     color: #fff;
     border-radius: 4px;
     cursor: pointer;
+}
+
+.Edit {
+  background-color: #000;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 /* .Overview {   

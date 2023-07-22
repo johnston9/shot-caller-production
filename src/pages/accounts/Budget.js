@@ -1,5 +1,5 @@
 /* Component in the BudgetPage Component to display the budget data */
-import React from 'react';
+import React, { useState } from 'react';
 import styles from "../../styles/Account.module.css";
 import appStyles from "../../App.module.css";
 import Col from 'react-bootstrap/Col';
@@ -7,6 +7,8 @@ import Row from 'react-bootstrap/Row';
 import { Link, useHistory } from 'react-router-dom';
 import btnStyles from "../../styles/Button.module.css";
 import Button from "react-bootstrap/Button";
+import Budgetcover from './BudgetCover';
+import BudgetTop from './BudgetTop';
 
 const Budget = (props) => {
 
@@ -79,6 +81,8 @@ const Budget = (props) => {
   console.log(budget);
 
   const history = useHistory();
+  const [showCover, setShowCover] = useState(false);
+  const [showTop, setShowTop] = useState(false);
 
   return (
     <div >
@@ -103,7 +107,7 @@ const Budget = (props) => {
       <Col className="text-center">
       <Link to={`/budgets/edit/${projectId}`}>
       <div className={`px-1`}>
-      <span className={ `${styles.BudgetLink} py-1 px-3`}>Edit Budget</span>
+      <span className={ `${styles.Edit} py-1 px-5`}>Edit Budget</span>
       </div>
       </Link>
       </Col>
@@ -114,11 +118,45 @@ const Budget = (props) => {
        md={{span: 4, offset: 4 }} >
       <Link to={`/budgets/create/${projectId}`}>
       <div className={`px-1`}>
-      <spam className={ `${styles.BudgetLink} py-1 px-3`}>Create Budget</spam>
+      <spam className={ `${styles.Edit} py-1 px-5`}>Create Budget</spam>
       </div>
       </Link>
       </Col>
     </Row>
+    ) }
+    {/* Cover and Top sheets buttons */}
+    <Row className="mt-1 ml-2" >
+        <Col xs={6} className='text-center'>
+        <Button
+          className={`${btnStyles.Button} ${btnStyles.Shed} mb-2`}
+          onClick={() => setShowCover(showCover => !showCover)}
+        >
+          Budget Cover Page
+        </Button>
+        </Col>
+        <Col xs={6} className='text-center'>
+        <Button
+          className={`${btnStyles.Button} ${btnStyles.Shed} mb-2`}
+          onClick={() => setShowTop(showTop => !showTop)}
+        >
+          Budget Top Sheet
+        </Button>
+        </Col>
+    </Row>
+    {/* Cover and Top sheets */}
+    {!showCover ? (
+      ""
+    ) : (
+      <Budgetcover 
+      setShowCover={setShowCover}
+      budget={budget} /> 
+    ) }
+    {!showTop ? (
+      ""
+    ) : (
+      <BudgetTop 
+      setShowTop={setShowTop}
+      budget={budget} /> 
     ) }
     {/* BUDGET ALL */}
     <div className='px-3'>
@@ -146,12 +184,12 @@ const Budget = (props) => {
     <Col xs={4}>   
     </Col>
     <Col xs={4}>
-    <p className={`${styles.Underline}`}>{title || ""}</p>
-    <p className={`${styles.Underline}`}>{series || ""}</p>
-    <p className={`${styles.Underline}`}>{prodco || ""}</p>
-    <p className={`${styles.Underline}`}>{format || ""}</p>
-    <p className={`${styles.Underline}`}>{location || ""}</p>
-    <p className={`${styles.Underline}`}>{dated || ""}</p>
+    <p className={`${styles.Underline}`}>{title || "-"}</p>
+    <p className={`${styles.Underline}`}>{series || "-"}</p>
+    <p className={`${styles.Underline}`}>{prodco || "-"}</p>
+    <p className={`${styles.Underline}`}>{format || "-"}</p>
+    <p className={`${styles.Underline}`}>{location || "-"}</p>
+    <p className={`${styles.Underline}`}>{dated || "-"}</p>
     </Col>
     </Row>  
     </Col>

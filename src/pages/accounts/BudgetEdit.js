@@ -31,11 +31,18 @@ function BudgetEdit() {
     format: "",
     location: "",
     dated: "",
+    writer: "",
+    prelimfin: "",
+    preparedby: "",
+    approvedby: "",
+    approvedbyco: "",
   });
 
   // Details postData values 
   const { 
-    title, series, prodco, format, location, dated,} = postDataDetails;
+    title, series, prodco, format, location, dated,
+    prelimfin, preparedby, approvedby, approvedbyco,
+    writer} = postDataDetails;
 
   // Details handleChange
   const handleChange_details = (event) => {
@@ -86,11 +93,116 @@ function BudgetEdit() {
     return () => {
       clearTimeout(timer);
     };
-  }, [research, prep, shoot, wrap, post ])
+  }, [research, prep, shoot, wrap, post ]);
+
+  // prepared by input boxes
+  const prepare = (
+    <div>
+    <Row className="mt-3">
+    <Col md={6} >
+    {/* prelimfin */}
+    <Row >
+    <Col md={6}>
+    <p className={`${styles.Underline}`}>Preliminary or Final</p>
+    </Col>
+    <Col md={6}>
+    <Form.Group controlId="prelimfin" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="prelimfin"
+        value={prelimfin}
+        onChange={handleChange_details}
+            />
+    </Form.Group>
+    {errors?.prelimfin?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* preparedby */}
+    <Row>
+    <Col md={6}>
+    <p className={`${styles.Underline}`}>Budget Prepared By</p>
+    </Col>
+    <Col md={6}>
+    <Form.Group controlId="preparedby" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="preparedby"
+        value={preparedby}
+        onChange={handleChange_details}
+            />
+    </Form.Group>
+    {errors?.preparedby?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    </Col>
+    {/* Approved COLUMN */}
+    <Col md={6} >
+    {/* Approved By */}
+    <Row>
+    <Col md={6}>
+    <p className={`${styles.Underline}`}>Approved By - Name</p>
+    </Col>
+    <Col md={6}>
+    <Form.Group controlId="approvedby" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="approvedby"
+        value={approvedby}
+        onChange={handleChange_details}
+            />
+    </Form.Group>
+    {errors?.approvedby?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Approved By */}
+    <Row>
+    <Col md={6}>
+    <p className={`${styles.Underline}`}>Approved By - Company</p>
+    </Col>
+    <Col md={6}>
+    <Form.Group controlId="approvedbyco" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="approvedbyco"
+        value={approvedbyco}
+        onChange={handleChange_details}
+            />
+    </Form.Group>
+    {errors?.approvedbyco?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    </Col>
+    </Row>
+    </div>
+  )
 
   // Details Length Input Boxes
   const detailslength = (
-    <div>
+    <div className="mt-3">
     {/* Titles */}
     <Row className={ `${styles.OverviewBlue} mx-1 mb-2 py-1 text-center`}>
     <Col md={12}>
@@ -103,11 +215,11 @@ function BudgetEdit() {
     {/* title */}
     <Row >
     <Col md={6}>
-    <p>Title</p>
+    <p className={`${styles.Underline}`}>Title</p>
     </Col>
     <Col md={6}>
     <Form.Group controlId="title" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -126,11 +238,11 @@ function BudgetEdit() {
     {/* Series */}
     <Row>
     <Col md={6}>
-    <p>Series</p>
+    <p className={`${styles.Underline}`}>Series</p>
     </Col>
     <Col md={6}>
     <Form.Group controlId="series" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -149,11 +261,11 @@ function BudgetEdit() {
     {/* Prodco */}
     <Row>
     <Col md={6}>
-    <p>Prodco</p>
+    <p className={`${styles.Underline}`}>Prodco</p>
     </Col>
     <Col md={6}>
     <Form.Group controlId="prodco" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -169,14 +281,37 @@ function BudgetEdit() {
     ))}
     </Col>
     </Row>
+    {/* Writers */}
+    <Row>
+    <Col md={6}>
+    <p className={`${styles.Underline}`}>Writers</p>
+    </Col>
+    <Col md={6}>
+    <Form.Group controlId="writer" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="writer"
+        value={writer}
+        onChange={handleChange_details}
+            />
+    </Form.Group>
+    {errors?.writer?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
     {/* Format */}
     <Row>
     <Col md={6}>
-    <p>Format</p>
+    <p className={`${styles.Underline}`}>Format</p>
     </Col>
     <Col md={6}>
     <Form.Group controlId="format" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -195,11 +330,11 @@ function BudgetEdit() {
     {/* Location */}
     <Row>
     <Col md={6}>
-    <p>Location</p>
+    <p className={`${styles.Underline}`}>Location</p>
     </Col>
     <Col md={6}>
     <Form.Group controlId="location" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -218,11 +353,11 @@ function BudgetEdit() {
     {/* Budget Date */}
     <Row>
     <Col md={6}>
-    <p>Budget Date</p>
+    <p className={`${styles.Underline}`}>Budget Date</p>
     </Col>
     <Col md={6}>
     <Form.Group controlId="dated" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -244,11 +379,11 @@ function BudgetEdit() {
     {/* Research */}
     <Row>
     <Col md={4}>
-    <p>Research</p>
+    <p className={`${styles.Underline}`}>Development</p>
     </Col>
     <Col md={4}>
     <Form.Group controlId="research" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -264,17 +399,17 @@ function BudgetEdit() {
     ))}
     </Col>
     <Col md={4}>
-    <p>Weeks</p>
+    <p className={`${styles.Underline}`}>Weeks</p>
     </Col>
     </Row>
     {/* Prep */}
     <Row>
     <Col md={4}>
-    <p>Prep</p>
+    <p className={`${styles.Underline}`}>Pre-production</p>
     </Col>
     <Col md={4}>
     <Form.Group controlId="prep" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -290,17 +425,17 @@ function BudgetEdit() {
     ))}
     </Col>
     <Col md={4}>
-    <p>Weeks</p>
+    <p className={`${styles.Underline}`}>Weeks</p>
     </Col>
     </Row>
     {/* Shoot */}
     <Row>
     <Col md={4}>
-    <p>Shoot</p>
+    <p className={`${styles.Underline}`}>Shoot</p>
     </Col>
     <Col md={4}>
     <Form.Group controlId="shoot" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -316,17 +451,17 @@ function BudgetEdit() {
     ))}
     </Col>
     <Col md={4}>
-    <p>Weeks</p>
+    <p className={`${styles.Underline}`}>Weeks</p>
     </Col>
     </Row>
     {/* Wrap */}
     <Row>
     <Col md={4}>
-    <p>Wrap</p>
+    <p className={`${styles.Underline}`}>Wrap</p>
     </Col>
     <Col md={4}>
     <Form.Group controlId="wrap" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -342,17 +477,17 @@ function BudgetEdit() {
     ))}
     </Col>
     <Col md={4}>
-    <p>Weeks</p>
+    <p className={`${styles.Underline}`}>Weeks</p>
     </Col>
     </Row>
     {/* Post */}
     <Row>
     <Col md={4}>
-    <p>Post</p>
+    <p>Post Production</p>
     </Col>
     <Col md={4}>
     <Form.Group controlId="post" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -368,17 +503,17 @@ function BudgetEdit() {
     ))}
     </Col>
     <Col md={4}>
-    <p>Weeks</p>
+    <p className={`${styles.Underline}`}>Weeks</p>
     </Col>
     </Row>
     {/* Length Total */}
     <Row>
     <Col md={4}>
-    <p>TOTAL</p>
+    <p className={`${styles.Underline}`}>TOTAL</p>
     </Col>
     <Col md={4}>
     <Form.Group controlId="postDataLengthTotal" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -394,7 +529,7 @@ function BudgetEdit() {
     ))}
     </Col>
     <Col md={4}>
-    <p>Weeks</p>
+    <p className={`${styles.Underline}`}>Weeks</p>
     </Col>
     </Row>
     </Col>
@@ -4388,8 +4523,10 @@ function BudgetEdit() {
         console.log(data.results[0])
         setBudgetId(data.results[0].id);
         // details
-        const { title, series, prodco, format, location, dated} = data.results[0];
-        setPostDataDetails({ title, series, prodco, format, location, dated });
+        const { title, series, prodco, format, location, dated, writer,
+          prelimfin, preparedby, approvedby, approvedbyco} = data.results[0];
+        setPostDataDetails({ title, series, prodco, format, location, dated,
+          writer, prelimfin, preparedby, approvedby, approvedbyco });
         // length
         const {research, prep, shoot, wrap, post} = data.results[0];
         setPostDataLength({research, prep, shoot, wrap, post});
@@ -4498,10 +4635,16 @@ function BudgetEdit() {
     event.preventDefault();
     const formData = new FormData();
     formData.append("project", id );
+    // prepared by
+    formData.append("prelimfin", prelimfin);
+    formData.append("preparedby", preparedby);
+    formData.append("approvedby", approvedby);
+    formData.append("approvedbyco", approvedbyco);
     // details
     formData.append("title", title);
     formData.append("series", series);
     formData.append("prodco", prodco);
+    formData.append("writer", writer);
     formData.append("format", format);
     formData.append("location", location);
     formData.append("dated", dated);
@@ -4666,6 +4809,7 @@ function BudgetEdit() {
         </Col>
     </Row>
     <Form className="mt-1 px-3" onSubmit={handleSubmit}>
+    {prepare}
     {detailslength}
     <Row className={ `${styles.OverviewBlue} mx-1 my-5 py-1 text-center`}>
     <Col md={12}>
