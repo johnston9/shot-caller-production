@@ -446,7 +446,7 @@ function BudgetEdit() {
     <p className="mb-0">1000</p>
     </Col>
     <Col md={6} >
-    <p className={ `${styles.BoldBlack}`}>RIGHTS</p>
+    <p className={ `${styles.BoldBlack} mb-2`}>RIGHTS</p>
     </Col>
     </Row>
     {/* TITLES */}
@@ -489,7 +489,7 @@ function BudgetEdit() {
     </Col>
     <Col className="mb-0 pb-0" md={2} >
     <Form.Group controlId="story_rights" 
-        className={`${styles.Width95} text-center pb-0`} >
+        className={`${styles.Width95} text-center mb-1 pb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -641,10 +641,10 @@ function BudgetEdit() {
     <div className="mt-5">
     <Row >
     <Col md={1} >
-    <p>2000</p>
+    <p className="mb-2">2000</p>
     </Col>
     <Col md={6} >
-    <p className={ `${styles.BoldBlack}`}>RESEARCH AND DEVELOPMENT</p>
+    <p className={ `${styles.BoldBlack} mb-2`}>PRE-PRODUCTION AND DEVELOPMENT</p>
     </Col>
     </Row>
     {/* TITLES */}
@@ -671,10 +671,10 @@ function BudgetEdit() {
     {/* Research */}
     <Row>
     <Col md={1} >
-    <p>2010</p>
+    <p className={`${styles.Underline}`}>2010</p>
     </Col>
     <Col md={6} >
-    <p>Research</p>
+    <p className={`${styles.Underline}`}>Research</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -687,7 +687,7 @@ function BudgetEdit() {
     </Col>
     <Col md={2} >
     <Form.Group controlId="research_development" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -706,10 +706,10 @@ function BudgetEdit() {
     {/* Preliminary Breakdown/Budget */}
     <Row>
     <Col md={1} >
-    <p>2020</p>
+    <p className={`${styles.Underline}`}>2020</p>
     </Col>
     <Col md={6} >
-    <p>Preliminary Breakdown/Budget</p>
+    <p className={`${styles.Underline}`}>Preliminary Breakdown/Budget</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -722,7 +722,7 @@ function BudgetEdit() {
     </Col>
     <Col md={2} >
     <Form.Group controlId="prelim_budget" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -741,10 +741,10 @@ function BudgetEdit() {
     {/* Consultant Expenses */}
     <Row>
     <Col md={1} >
-    <p>2030</p>
+    <p className={`${styles.Underline}`}>2030</p>
     </Col>
     <Col md={6} >
-    <p>Consultant Expenses</p>
+    <p className={`${styles.Underline}`}>Consultant Expenses</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -757,7 +757,7 @@ function BudgetEdit() {
     </Col>
     <Col md={2} >
     <Form.Group controlId="consultant_expenses" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -776,10 +776,10 @@ function BudgetEdit() {
     {/* Office Expenses */}
     <Row>
     <Col md={1} >
-    <p>2040</p>
+    <p className={`${styles.Underline}`}>2040</p>
     </Col>
     <Col md={6} >
-    <p>Office Expenses</p>
+    <p className={`${styles.Underline}`}>Office Expenses</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -792,7 +792,7 @@ function BudgetEdit() {
     </Col>
     <Col md={2} >
     <Form.Group controlId="office_expenses" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -811,10 +811,10 @@ function BudgetEdit() {
     {/* Staff */}
     <Row>
     <Col md={1} >
-    <p>2050</p>
+    <p className={`${styles.Underline}`}>2050</p>
     </Col>
     <Col md={6} >
-    <p>Staff</p>
+    <p className={`${styles.Underline}`}>Staff</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -827,7 +827,7 @@ function BudgetEdit() {
     </Col>
     <Col md={2} >
     <Form.Group controlId="staff" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -846,10 +846,10 @@ function BudgetEdit() {
     {/* Travel Expenses Development */}
     <Row>
     <Col md={1} >
-    <p>2060</p>
+    <p className={`${styles.Underline}`}>2060</p>
     </Col>
     <Col md={6} >
-    <p>Travel Expenses</p>
+    <p className={`${styles.Underline}`}>Travel Expenses</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -862,7 +862,7 @@ function BudgetEdit() {
     </Col>
     <Col md={2} >
     <Form.Group controlId="travel_expenses_development" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -881,10 +881,10 @@ function BudgetEdit() {
     {/* Living Expenses Development */}
     <Row>
     <Col md={1} >
-    <p>2070</p>
+    <p className={`${styles.Underline}`}>2070</p>
     </Col>
     <Col md={6} >
-    <p>Living Expenses Development</p>
+    <p className={`${styles.Underline}`}>Living Expenses Development</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -897,7 +897,7 @@ function BudgetEdit() {
     </Col>
     <Col md={2} >
     <Form.Group controlId="living_expenses_development" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -916,10 +916,10 @@ function BudgetEdit() {
     {/* Other Development */}
     <Row>
     <Col md={1} >
-    <p>2080</p>
+    <p className={`${styles.Underline}`}>2080</p>
     </Col>
     <Col md={6} >
-    <p>Other</p>
+    <p className={`${styles.Underline}`}>Other</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -932,7 +932,7 @@ function BudgetEdit() {
     </Col>
     <Col md={2} >
     <Form.Group controlId="other_development" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -951,23 +951,23 @@ function BudgetEdit() {
     {/* Fringes and Taxes */}
     <Row>
     <Col md={1} >
-    <p>2090</p>
+    <p className={`${styles.Underline}`}>2090</p>
     </Col>
     <Col md={6} >
-    <p>Fringes and Taxes</p>
+    <p className={`${styles.Underline}`}>Fringes and Taxes</p>
     </Col>
     <Col md={1} >
     <p></p>
     </Col>
     <Col md={1} >
-    <p>%</p>
+    <p className={`${styles.Underline}`}>%</p>
     </Col>
     <Col md={1} >
     <p></p>
     </Col>
     <Col md={2} >
     <Form.Group controlId="fringes_taxes_development" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -984,7 +984,7 @@ function BudgetEdit() {
     </Col>
     </Row>
     {/* Development Total */}
-    <Row>
+    <Row className="mt-3">
     <Col md={1} >
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
@@ -1178,13 +1178,13 @@ function BudgetEdit() {
 
   // Scenario input boxes
   const scenario = (
-    <div>
-    <Row className="mt-5" >
+    <div className="mt-5">
+    <Row >
     <Col md={1} >
-    <p>3000</p>
+    <p className="mb-2">3000</p>
     </Col>
     <Col md={6} >
-    <p className={ `${styles.BoldBlack}`}>SCENARIO</p>
+    <p className={ `${styles.BoldBlack} mb-2`}>SCENARIO</p>
     </Col>
     </Row>
     {/* TITLES */}
@@ -1214,14 +1214,14 @@ function BudgetEdit() {
     {/* Writers */}
     <Row>
     <Col md={1} >
-    <p>3010</p>
+    <p className={`${styles.Underline}`}>3010</p>
     </Col>
     <Col md={5} >
-    <p>Writers</p>
+    <p className={`${styles.Underline}`}>Writers</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="writers_quantity" 
-        className={`${styles.Width100} text-center`} >
+        className={`${styles.Width100} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1238,7 +1238,7 @@ function BudgetEdit() {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="writers_units_number" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1255,7 +1255,7 @@ function BudgetEdit() {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="writers_units_name" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1272,7 +1272,7 @@ function BudgetEdit() {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="writers_rate" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1289,7 +1289,7 @@ function BudgetEdit() {
     </Col>
     <Col md={2} >
     <Form.Group controlId="writersTotal" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1308,14 +1308,14 @@ function BudgetEdit() {
     {/* Consultants */}
     <Row>
     <Col md={1} >
-    <p>3020</p>
+    <p className={`${styles.Underline}`}>3020</p>
     </Col>
     <Col md={5} >
-    <p>Consultants</p>
+    <p className={`${styles.Underline}`}>Consultants</p>
     </Col>
     <Col className="px-1 mx-0"  md={1} >
     <Form.Group controlId="consultants_quantity" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1332,7 +1332,7 @@ function BudgetEdit() {
     </Col>
     <Col className="px-1 mx-0"  md={1} >
     <Form.Group controlId="consultants_units_number" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1349,7 +1349,7 @@ function BudgetEdit() {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="consultants_units_name" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1366,7 +1366,7 @@ function BudgetEdit() {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="consultants_rate" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1383,7 +1383,7 @@ function BudgetEdit() {
     </Col>
     <Col md={2} >
     <Form.Group controlId="consultantsTotal" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1402,14 +1402,14 @@ function BudgetEdit() {
     {/* Editors */}
     <Row>
     <Col md={1} >
-    <p>3030</p>
+    <p className={`${styles.Underline}`}>3030</p>
     </Col>
     <Col md={5} >
-    <p>Editors</p>
+    <p className={`${styles.Underline}`}>Editors</p>
     </Col>
     <Col className="px-1 mx-0"  md={1} >
     <Form.Group controlId="editors_quantity" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1426,7 +1426,7 @@ function BudgetEdit() {
     </Col>
     <Col className="px-1 mx-0"  md={1} >
     <Form.Group controlId="editors_units_number" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1443,7 +1443,7 @@ function BudgetEdit() {
     </Col>
     <Col className="px-1 mx-0"  md={1} >
     <Form.Group controlId="editors_units_name" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1460,7 +1460,7 @@ function BudgetEdit() {
     </Col>
     <Col className="px-1 mx-0"  md={1} >
     <Form.Group controlId="editors_rate" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1477,7 +1477,7 @@ function BudgetEdit() {
     </Col>
     <Col  md={2} >
     <Form.Group controlId="editorsTotal" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1496,14 +1496,14 @@ function BudgetEdit() {
     {/* Admin */}
     <Row>
     <Col md={1} >
-    <p>3040</p>
+    <p className={`${styles.Underline}`}>3040</p>
     </Col>
     <Col md={5} >
-    <p>Admin</p>
+    <p className={`${styles.Underline}`}>Admin</p>
     </Col>
     <Col className="px-1 mx-0"  md={1} >
     <Form.Group controlId="admin_scenario_quantity" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1520,7 +1520,7 @@ function BudgetEdit() {
     </Col>
     <Col className="px-1 mx-0"  md={1} >
     <Form.Group controlId="admin_scenario_units_number" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1537,7 +1537,7 @@ function BudgetEdit() {
     </Col>
     <Col className="px-1 mx-0"  md={1} >
     <Form.Group controlId="admin_scenario_units_name" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1554,7 +1554,7 @@ function BudgetEdit() {
     </Col>
     <Col className="px-1 mx-0"  md={1} >
     <Form.Group controlId="admin_scenario_rate" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1571,7 +1571,7 @@ function BudgetEdit() {
     </Col>
     <Col md={2} >
     <Form.Group controlId="adminScenarioTotal" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1590,10 +1590,10 @@ function BudgetEdit() {
     {/* Office Cost/Expenses Scenario */}
     <Row>
     <Col md={1} >
-    <p>3050</p>
+    <p className={`${styles.Underline}`}>3050</p>
     </Col>
     <Col md={6} >
-    <p>Office Cost/Expenses Scenario</p>
+    <p className={`${styles.Underline}`}>Office Cost/Expenses Scenario</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -1606,7 +1606,7 @@ function BudgetEdit() {
     </Col>
     <Col md={2} >
     <Form.Group controlId="office_expenses_scenario" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1625,10 +1625,10 @@ function BudgetEdit() {
     {/* Travel Expenses Scenario */}
     <Row>
     <Col md={1} >
-    <p>3060</p>
+    <p className={`${styles.Underline}`}>3060</p>
     </Col>
     <Col md={6} >
-    <p>Travel Expenses</p>
+    <p className={`${styles.Underline}`}>Travel Expenses</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -1641,7 +1641,7 @@ function BudgetEdit() {
     </Col>
     <Col md={2} >
     <Form.Group controlId="travel_expenses_scenario" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1660,10 +1660,10 @@ function BudgetEdit() {
     {/* Living Expenses */}
     <Row>
     <Col md={1} >
-    <p>3070</p>
+    <p className={`${styles.Underline}`}>3070</p>
     </Col>
     <Col md={6} >
-    <p>Living Expenses</p>
+    <p className={`${styles.Underline}`}>Living Expenses</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -1676,7 +1676,7 @@ function BudgetEdit() {
     </Col>
     <Col md={2} >
     <Form.Group controlId="living_expenses_scenario" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1695,10 +1695,10 @@ function BudgetEdit() {
     {/* Other */}
     <Row>
     <Col md={1} >
-    <p>3080</p>
+    <p className={`${styles.Underline}`}>3080</p>
     </Col>
     <Col md={6} >
-    <p>Other</p>
+    <p className={`${styles.Underline}`}>Other</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -1711,7 +1711,7 @@ function BudgetEdit() {
     </Col>
     <Col md={2} >
     <Form.Group controlId="other_scenario" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1730,23 +1730,23 @@ function BudgetEdit() {
     {/* Fringes and Taxes */}
     <Row>
     <Col md={1} >
-    <p>3090</p>
+    <p className={`${styles.Underline}`}>3090</p>
     </Col>
     <Col md={6} >
-    <p>Fringes and Taxes</p>
+    <p className={`${styles.Underline}`}>Fringes and Taxes</p>
     </Col>
     <Col md={1} >
     <p></p>
     </Col>
     <Col md={1} >
-    <p>%</p>
+    <p className={`${styles.Underline}`}>%</p>
     </Col>
     <Col md={1} >
     <p></p>
     </Col>
     <Col md={2} >
     <Form.Group controlId="fringes_taxes_scenario" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1763,7 +1763,7 @@ function BudgetEdit() {
     </Col>
     </Row>
     {/* Scenario Total */}
-    <Row>
+    <Row className="mt-3">
     <Col md={1} >
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
@@ -2014,10 +2014,10 @@ function BudgetEdit() {
     <div>
     <Row className="mt-5" >
     <Col md={1} >
-    <p>4000</p>
+    <p className="mb-2">4000</p>
     </Col>
     <Col md={6} >
-    <p className={ `${styles.BoldBlack}`}>
+    <p className={ `${styles.BoldBlack} mb-2`}>
       PRODUCERS AND DIRECTORS</p>
     </Col>
     </Row>
@@ -2045,15 +2045,15 @@ function BudgetEdit() {
     {/* Executive Producers */}
     <Row>
     <Col md={1} >
-    <p>4010</p>
+    <p className={`${styles.Underline}`}>4010</p>
     </Col>
     <Col md={6} >
-    <p>Executive Producers</p>
+    <p className={`${styles.Underline}`}>Executive Producers</p>
     </Col>
     {/* Quantity */}
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="executive_producers_quantity" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2075,7 +2075,7 @@ function BudgetEdit() {
     {/* Price */}
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="executive_producers_rate" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2093,7 +2093,7 @@ function BudgetEdit() {
     {/* total */}
     <Col md={2} >
     <Form.Group controlId="execProducersTotal" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2112,15 +2112,15 @@ function BudgetEdit() {
     {/* Producers */}
     <Row>
     <Col md={1} >
-    <p>4020</p>
+    <p className={`${styles.Underline}`}>4020</p>
     </Col>
     <Col md={6} >
-    <p>Producers</p>
+    <p className={`${styles.Underline}`}>Producers</p>
     </Col>
     {/* Quantity */}
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="producers_quantity" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2142,7 +2142,7 @@ function BudgetEdit() {
     {/* Price */}
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="producers_rate" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2160,7 +2160,7 @@ function BudgetEdit() {
     {/* total */}
     <Col md={2} >
     <Form.Group controlId="producersTotal" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2179,15 +2179,15 @@ function BudgetEdit() {
     {/* Line Producers */}
     <Row>
     <Col md={1} >
-    <p>4030</p>
+    <p className={`${styles.Underline}`}>4030</p>
     </Col>
     <Col md={6} >
-    <p>Line Producers</p>
+    <p className={`${styles.Underline}`}>Line Producers</p>
     </Col>
     {/* Quantity */}
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="line_producers_quantity" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2209,7 +2209,7 @@ function BudgetEdit() {
     {/* Price */}
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="line_producers_rate" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2227,7 +2227,7 @@ function BudgetEdit() {
     {/* total */}
     <Col md={2} >
     <Form.Group controlId="lineProducersTotal" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2246,15 +2246,15 @@ function BudgetEdit() {
     {/* Co Producers */}
     <Row>
     <Col md={1} >
-    <p>4040</p>
+    <p className={`${styles.Underline}`}>4040</p>
     </Col>
     <Col md={6} >
-    <p>Co-Producers</p>
+    <p className={`${styles.Underline}`}>Co-Producers</p>
     </Col>
     {/* Quantity */}
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="co_producers_quantity" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2276,7 +2276,7 @@ function BudgetEdit() {
     {/* Price */}
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="co_producers_rate" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2294,7 +2294,7 @@ function BudgetEdit() {
     {/* total */}
     <Col md={2} >
     <Form.Group controlId="coProducersTotal" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2313,15 +2313,15 @@ function BudgetEdit() {
     {/* Associate Producers */}
     <Row>
     <Col md={1} >
-    <p>4050</p>
+    <p className={`${styles.Underline}`}>4050</p>
     </Col>
     <Col md={6} >
-    <p>Associate Producers</p>
+    <p className={`${styles.Underline}`}>Associate Producers</p>
     </Col>
     {/* Quantity */}
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="associate_producers_quantity" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2343,7 +2343,7 @@ function BudgetEdit() {
     {/* Price */}
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="associate_producers_rate" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2361,7 +2361,7 @@ function BudgetEdit() {
     {/* total */}
     <Col md={2} >
     <Form.Group controlId="assocProducersTotal" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2380,15 +2380,15 @@ function BudgetEdit() {
     {/* Directors */}
     <Row>
     <Col md={1} >
-    <p>4060</p>
+    <p className={`${styles.Underline}`}>4060</p>
     </Col>
     <Col md={6} >
-    <p>Directors</p>
+    <p className={`${styles.Underline}`}>Directors</p>
     </Col>
     {/* Quantity */}
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="directors_quantity" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2410,7 +2410,7 @@ function BudgetEdit() {
     {/* Price */}
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="directors_rate" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2428,7 +2428,7 @@ function BudgetEdit() {
     {/* total */}
     <Col md={2} >
     <Form.Group controlId="directorsTotal" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2447,15 +2447,15 @@ function BudgetEdit() {
     {/* 2nd Unit Directors */}
     <Row>
     <Col md={1} >
-    <p>4070</p>
+    <p className={`${styles.Underline}`}>4070</p>
     </Col>
     <Col md={6} >
-    <p>2nd Unit Directors</p>
+    <p className={`${styles.Underline}`}>2nd Unit Directors</p>
     </Col>
     {/* Quantity */}
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="unit2_directors_quantity" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2477,7 +2477,7 @@ function BudgetEdit() {
     {/* Price */}
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="unit2_directors_rate" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2495,7 +2495,7 @@ function BudgetEdit() {
     {/* total */}
     <Col md={2} >
     <Form.Group controlId="unit2DirectorsTotal" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2514,10 +2514,10 @@ function BudgetEdit() {
     {/* Travel Expenses */}
     <Row>
     <Col md={1} >
-    <p>4080</p>
+    <p className={`${styles.Underline}`}>4080</p>
     </Col>
     <Col md={6} >
-    <p>Travel Expenses</p>
+    <p className={`${styles.Underline}`}>Travel Expenses</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -2530,7 +2530,7 @@ function BudgetEdit() {
     </Col>
     <Col md={2} >
     <Form.Group controlId="travel_expenses_producers_dirs" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2549,10 +2549,10 @@ function BudgetEdit() {
     {/* Living Expenses */}
     <Row>
     <Col md={1} >
-    <p>4090</p>
+    <p className={`${styles.Underline}`}>4090</p>
     </Col>
     <Col md={6} >
-    <p>Living Expenses</p>
+    <p className={`${styles.Underline}`}>Living Expenses</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -2565,7 +2565,7 @@ function BudgetEdit() {
     </Col>
     <Col md={2} >
     <Form.Group controlId="living_expenses_producers_dirs" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2584,10 +2584,10 @@ function BudgetEdit() {
     {/* Other */}
     <Row>
     <Col md={1} >
-    <p>4100</p>
+    <p className={`${styles.Underline}`}>4100</p>
     </Col>
     <Col md={6} >
-    <p>Other</p>
+    <p className={`${styles.Underline}`}>Other</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -2600,7 +2600,7 @@ function BudgetEdit() {
     </Col>
     <Col md={2} >
     <Form.Group controlId="other_producers_dirs" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2619,10 +2619,10 @@ function BudgetEdit() {
     {/* Fringes and Taxes */}
     <Row>
     <Col md={1} >
-    <p>4110</p>
+    <p className={`${styles.Underline}`}>4110</p>
     </Col>
     <Col md={6} >
-    <p>Fringes and Taxes</p>
+    <p className={`${styles.Underline}`}>Fringes and Taxes</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -2635,7 +2635,7 @@ function BudgetEdit() {
     </Col>
     <Col md={2} >
     <Form.Group controlId="fringes_taxes_producers_dirs" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2652,7 +2652,7 @@ function BudgetEdit() {
     </Col>
     </Row>
     {/* Producers Dirs Total */}
-    <Row>
+    <Row className="mt-3">
     <Col md={1} >
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
@@ -2763,10 +2763,10 @@ function BudgetEdit() {
     <div>
     <Row className="mt-5" >
     <Col md={1} >
-    <p>5000</p>
+    <p className="mb-2">5000</p>
     </Col>
     <Col md={6} >
-    <p className={ `${styles.BoldBlack}`}>STARS / MUSIC</p>
+    <p className={ `${styles.BoldBlack} mb-2`}>STARS / MUSIC</p>
     </Col>
     </Row>
     {/* TITLES */}
@@ -2793,10 +2793,10 @@ function BudgetEdit() {
     {/* Stars */}
     <Row>
     <Col md={1} >
-    <p>5010</p>
+    <p className={`${styles.Underline}`}>5010</p>
     </Col>
     <Col md={6} >
-    <p>Stars</p>
+    <p className={`${styles.Underline}`}>Stars</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -2809,7 +2809,7 @@ function BudgetEdit() {
     </Col>
     <Col md={2} >
     <Form.Group controlId="stars" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2828,10 +2828,10 @@ function BudgetEdit() {
     {/* Rights */}
     <Row>
     <Col md={1} >
-    <p>5020</p>
+    <p className={`${styles.Underline}`}>5020</p>
     </Col>
     <Col md={6} >
-    <p>Stars Rights Payments</p>
+    <p className={`${styles.Underline}`}>Stars Rights Payments</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -2844,7 +2844,7 @@ function BudgetEdit() {
     </Col>
     <Col md={2} >
     <Form.Group controlId="stars_rights_payments" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2863,10 +2863,10 @@ function BudgetEdit() {
     {/* Travel Expenses Stars */}
     <Row>
     <Col md={1} >
-    <p>5030</p>
+    <p className={`${styles.Underline}`}>5030</p>
     </Col>
     <Col md={6} >
-    <p>Travel Expenses Stars</p>
+    <p className={`${styles.Underline}`}>Travel Expenses Stars</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -2879,7 +2879,7 @@ function BudgetEdit() {
     </Col>
     <Col md={2} >
     <Form.Group controlId="travel_expenses_stars" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2898,10 +2898,10 @@ function BudgetEdit() {
     {/* Living Expenses Stars */}
     <Row>
     <Col md={1} >
-    <p>5020</p>
+    <p className={`${styles.Underline}`}>5020</p>
     </Col>
     <Col md={6} >
-    <p>Living Expenses Stars</p>
+    <p className={`${styles.Underline}`}>Living Expenses Stars</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -2914,7 +2914,7 @@ function BudgetEdit() {
     </Col>
     <Col md={2} >
     <Form.Group controlId="living_expenses_stars" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2933,10 +2933,10 @@ function BudgetEdit() {
     {/* Stars - Other */}
     <Row>
     <Col md={1} >
-    <p>5050</p>
+    <p className={`${styles.Underline}`}>5050</p>
     </Col>
     <Col md={6} >
-    <p>Stars - Other </p>
+    <p className={`${styles.Underline}`}>Stars - Other </p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -2949,7 +2949,7 @@ function BudgetEdit() {
     </Col>
     <Col md={2} >
     <Form.Group controlId="other_stars" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2968,10 +2968,10 @@ function BudgetEdit() {
     {/* Stars - Fringes Taxes */}
     <Row>
     <Col md={1} >
-    <p>5060</p>
+    <p className={`${styles.Underline}`}>5060</p>
     </Col>
     <Col md={6} >
-    <p>Stars - Fringes Taxes</p>
+    <p className={`${styles.Underline}`}>Stars - Fringes Taxes</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -2984,7 +2984,7 @@ function BudgetEdit() {
     </Col>
     <Col md={2} >
     <Form.Group controlId="fringes_taxes_stars" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -3003,10 +3003,10 @@ function BudgetEdit() {
     {/* Music */}
     <Row >
     <Col md={1} >
-    <p>5070</p>
+    <p className={`${styles.Underline}`}>5070</p>
     </Col>
     <Col md={6} >
-    <p>Music: all-in package includes Composer, Musicians, 
+    <p className={`${styles.Underline}`}>Music: all-in package includes Composer, Musicians, 
       Score, and Recording Session</p>
     </Col>
     <Col md={1} >
@@ -3020,7 +3020,7 @@ function BudgetEdit() {
     </Col>
     <Col md={2} >
     <Form.Group controlId="music" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -3039,10 +3039,10 @@ function BudgetEdit() {
     {/* Music Supervisor */}
     <Row>
     <Col md={1} >
-    <p>5080</p>
+    <p className={`${styles.Underline}`}>5080</p>
     </Col>
     <Col md={6} >
-    <p>Music Supervisor </p>
+    <p className={`${styles.Underline}`}>Music Supervisor </p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -3055,7 +3055,7 @@ function BudgetEdit() {
     </Col>
     <Col md={2} >
     <Form.Group controlId="music_supervisor" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -3074,10 +3074,10 @@ function BudgetEdit() {
     {/* Travel Expenses */}
     <Row>
     <Col md={1} >
-    <p>5090</p>
+    <p className={`${styles.Underline}`}>5090</p>
     </Col>
     <Col md={6} >
-    <p>Music - Travel Expenses </p>
+    <p className={`${styles.Underline}`}>Music - Travel Expenses </p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -3090,7 +3090,7 @@ function BudgetEdit() {
     </Col>
     <Col md={2} >
     <Form.Group controlId="travel_expenses_music" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -3109,10 +3109,10 @@ function BudgetEdit() {
     {/* Living Expenses */}
     <Row>
     <Col md={1} >
-    <p>5100</p>
+    <p className={`${styles.Underline}`}>5100</p>
     </Col>
     <Col md={6} >
-    <p>Music - Living Expenses </p>
+    <p className={`${styles.Underline}`}>Music - Living Expenses </p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -3125,7 +3125,7 @@ function BudgetEdit() {
     </Col>
     <Col md={2} >
     <Form.Group controlId="living_expenses_music" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -3144,10 +3144,10 @@ function BudgetEdit() {
     {/* Add'l Music Rights (Songs, etc.) */}
     <Row>
     <Col md={1} >
-    <p>5110</p>
+    <p className={`${styles.Underline}`}>5110</p>
     </Col>
     <Col md={6} >
-    <p>Add'l Music Rights - Songs, etc. </p>
+    <p className={`${styles.Underline}`}>Add'l Music Rights - Songs, etc. </p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -3160,7 +3160,7 @@ function BudgetEdit() {
     </Col>
     <Col md={2} >
     <Form.Group controlId="music_rights_addl_songs" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -3179,10 +3179,10 @@ function BudgetEdit() {
     {/* Music Other */}
     <Row>
     <Col md={1} >
-    <p>5120</p>
+    <p className={`${styles.Underline}`}>5120</p>
     </Col>
     <Col md={6} >
-    <p>Music - Other </p>
+    <p className={`${styles.Underline}`}>Music - Other </p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -3195,7 +3195,7 @@ function BudgetEdit() {
     </Col>
     <Col md={2} >
     <Form.Group controlId="other_music" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -3214,10 +3214,10 @@ function BudgetEdit() {
     {/* Music - Fringes and Taxes */}
     <Row>
     <Col md={1} >
-    <p>5130</p>
+    <p className={`${styles.Underline}`}>5130</p>
     </Col>
     <Col md={6} >
-    <p>Music - Fringes and Taxes</p>
+    <p className={`${styles.Underline}`}>Music - Fringes and Taxes</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -3230,7 +3230,7 @@ function BudgetEdit() {
     </Col>
     <Col md={2} >
     <Form.Group controlId="fringes_taxes_music" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -3247,7 +3247,7 @@ function BudgetEdit() {
     </Col>
     </Row>
     {/* Stars / Music Total */}
-    <Row>
+    <Row className="mt-3">
     <Col md={1} >
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
@@ -3548,6 +3548,817 @@ function BudgetEdit() {
     stuntperformersTotal, otherperformersTotal, extrasTotal,
     casting_director, extras_casting, other_cast,
     rights_payments_cast, fringes_taxes_cast ]);
+
+  // Cast input boxes
+  const cast = (
+    <div className="mt-5">
+    <Row >
+    <Col md={1} >
+    <p className="mb-2">6000</p>
+    </Col>
+    <Col md={6} >
+    <p className={ `${styles.BoldBlack} mb-2`}>CAST</p>
+    </Col>
+    </Row>
+    {/* TITLES */}
+    <Row className={ `${styles.Overview} mb-2 py-1`} >
+    <Col md={1} >
+    <p className="mb-0">ACCT</p>
+    </Col>
+    <Col md={5} >
+    <p className="mb-0">Description</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">#</p>
+    </Col>
+    <Col className="px-0 mx-0" md={1} >
+    <p># Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Price</p>
+    </Col>
+    <Col md={2} >
+    <p className="mb-0">Total</p>
+    </Col>
+    </Row>
+    {/* Principals */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>6010</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Principals</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="principals_quantity" 
+        className={`${styles.Width100} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="principals_quantity"
+        value={principals_quantity}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.principals_quantity?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="principals_units_number" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="principals_units_number"
+        value={principals_units_number}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.principals_units_number?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="principals_units_name" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="principals_units_name"
+        value={principals_units_name}
+        onChange={handleChangeCastText}
+            />
+    </Form.Group>
+    {errors?.principals_units_name?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="principals_rate" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="principals_rate"
+        value={principals_rate}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.principals_rate?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="principalsTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="principalsTotal"
+        value={principalsTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.principalsTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Actors */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>6020</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Actors</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="actors_quantity" 
+        className={`${styles.Width100} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="actors_quantity"
+        value={actors_quantity}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.actors_quantity?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="actors_units_number" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="actors_units_number"
+        value={actors_units_number}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.actors_units_number?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="actors_units_name" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="actors_units_name"
+        value={actors_units_name}
+        onChange={handleChangeCastText}
+            />
+    </Form.Group>
+    {errors?.actors_units_name?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="actors_rate" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="actors_rate"
+        value={actors_rate}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.actors_rate?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="actorsTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="actorsTotal"
+        value={actorsTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.actorsTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Stunt Coordinators */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>6030</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Stunt Coordinators</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="stuntcoordinators_quantity" 
+        className={`${styles.Width100} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="stuntcoordinators_quantity"
+        value={stuntcoordinators_quantity}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.stuntcoordinators_quantity?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="stuntcoordinators_units_number" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="stuntcoordinators_units_number"
+        value={stuntcoordinators_units_number}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.stuntcoordinators_units_number?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="stuntcoordinators_units_name" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="stuntcoordinators_units_name"
+        value={stuntcoordinators_units_name}
+        onChange={handleChangeCastText}
+            />
+    </Form.Group>
+    {errors?.stuntcoordinators_units_name?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="stuntcoordinators_rate" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="stuntcoordinators_rate"
+        value={stuntcoordinators_rate}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.stuntcoordinators_rate?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="stuntcoordinatorsTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="stuntcoordinatorsTotal"
+        value={stuntcoordinatorsTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.stuntcoordinatorsTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Stunt Performers */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>6040</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Stunt Performers</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="stuntperformers_quantity" 
+        className={`${styles.Width100} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="stuntperformers_quantity"
+        value={stuntperformers_quantity}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.stuntperformers_quantity?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="stuntperformers_units_number" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="stuntperformers_units_number"
+        value={stuntperformers_units_number}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.stuntperformers_units_number?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="stuntperformers_units_name" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="stuntperformers_units_name"
+        value={stuntperformers_units_name}
+        onChange={handleChangeCastText}
+            />
+    </Form.Group>
+    {errors?.stuntperformers_units_name?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="stuntperformers_rate" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="stuntperformers_rate"
+        value={stuntperformers_rate}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.stuntperformers_rate?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="stuntperformersTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="stuntperformersTotal"
+        value={stuntperformersTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.stuntperformersTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Other Performers */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>6050</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Other Performers</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="otherperformers_quantity" 
+        className={`${styles.Width100} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="otherperformers_quantity"
+        value={otherperformers_quantity}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.otherperformers_quantity?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="otherperformers_units_number" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="otherperformers_units_number"
+        value={otherperformers_units_number}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.otherperformers_units_number?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="otherperformers_units_name" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="otherperformers_units_name"
+        value={otherperformers_units_name}
+        onChange={handleChangeCastText}
+            />
+    </Form.Group>
+    {errors?.otherperformers_units_name?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="otherperformers_rate" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="otherperformers_rate"
+        value={otherperformers_rate}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.otherperformers_rate?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="otherperformersTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="otherperformersTotal"
+        value={otherperformersTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.otherperformersTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Extras */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>6060</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Extras</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="extras_quantity" 
+        className={`${styles.Width100} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="extras_quantity"
+        value={extras_quantity}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.extras_quantity?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="extras_units_number" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="extras_units_number"
+        value={extras_units_number}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.extras_units_number?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="extras_units_name" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="extras_units_name"
+        value={extras_units_name}
+        onChange={handleChangeCastText}
+            />
+    </Form.Group>
+    {errors?.extras_units_name?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="extras_rate" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="extras_rate"
+        value={extras_rate}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.extras_rate?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="extrasTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="extrasTotal"
+        value={extrasTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.extrasTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Casting Director */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>6070</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Casting Director</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="casting_director" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="casting_director"
+        value={casting_director}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.casting_director?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Extras Casting */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>6080</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Extras Casting</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="extras_casting" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="extras_casting"
+        value={extras_casting}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.extras_casting?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Other */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>6090</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Other - Cast</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="other_cast" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="other_cast"
+        value={other_cast}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.other_cast?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Fringes Taxes - Cast */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>6100</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Fringes Taxes - Cast</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="fringes_taxes_cast" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="fringes_taxes_cast"
+        value={fringes_taxes_cast}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.fringes_taxes_cast?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Rights Payments - Cast */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>6110</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Rights Payments - Cast</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="rights_payments_cast" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="rights_payments_cast"
+        value={rights_payments_cast}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.rights_payments_cast?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Cast Total */}
+    <Row className="mt-3">
+    <Col md={1} >
+    </Col>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL CAST</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="castTotal" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="castTotal"
+        value={castTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.castTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    </div>
+  )
 
 
   // <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
@@ -3869,9 +4680,10 @@ function BudgetEdit() {
     {abovetheline}
     <Row className={ `${styles.OverviewBlue} mx-1 my-5 py-1 text-center`}>
     <Col md={12}>
-    <h5 className={ `${styles.BoldBlack}`}>BELOW THE LINE</h5>
+    <h5 className={ `${styles.BoldBlack}`}>BELOW THE LINE - "B" PRODUCTION</h5>
     </Col>
     </Row>
+    {cast}
     {/* buttons <hr className={ `${styles.Break}`}></hr> */}
     <Row>
     <Col>

@@ -58,6 +58,21 @@ const Budget = (props) => {
     music, music_supervisor, travel_expenses_music, living_expenses_music,
     music_rights_addl_songs, other_music, fringes_taxes_music,
     stars_music_total,
+    // cast
+    principals_quantity, principals_units_number,
+    principals_units_name, principals_rate, principals_total,
+    actors_quantity, actors_units_number, 
+    actors_units_name, actors_rate, actors_total,
+    stuntcoordinators_quantity, stuntcoordinators_units_number,
+    stuntcoordinators_units_name, stuntcoordinators_rate, stuntcoordinators_total,
+    stuntperformers_quantity, stuntperformers_units_number,
+    stuntperformers_units_name, stuntperformers_rate, stuntperformers_total,
+    otherperformers_quantity, otherperformers_units_number,
+    otherperformers_units_name, otherperformers_rate, otherperformers_total,
+    extras_quantity, extras_units_number,
+    extras_units_name, extras_rate, extras_total,
+    casting_director, extras_casting,
+    other_cast, fringes_taxes_cast, rights_payments_cast, cast_total,
     } = budget;
 
   console.log(props);
@@ -187,7 +202,7 @@ const Budget = (props) => {
     <div>
     <Row>
     <Col md={1}>
-    <p>1000</p>
+    <p className="mb-2">1000</p>
     </Col>
     <Col md={8} >
     <p className={ `${styles.BoldBlack} pb-0 mb-0`}>RIGHTS</p>
@@ -239,7 +254,7 @@ const Budget = (props) => {
     </Col>
     </Row>
     {/* total */}
-    <Row>
+    <Row className='mt-3'>
     <Col md={1}>
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
@@ -255,10 +270,10 @@ const Budget = (props) => {
     <div className='mt-5'>
     <Row>
     <Col md={1}>
-    <p>2000</p>
+    <p className="mb-2">2000</p>
     </Col>
     <Col md={10}>
-    <p className={ `${styles.BoldBlack}`}>RESEARCH AND DEVELOPMENT</p>
+    <p className={ `${styles.BoldBlack}`}>PRE-PRODUCTION AND DEVELOPMENT</p>
     </Col>
     </Row>
     {/* TITLES */}
@@ -382,7 +397,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{fringes_taxes_development || 0 } </p>
     </Col>
     </Row>
-    <Row>
+    <Row className='mt-3'>
     <Col md={1}>
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
@@ -398,10 +413,10 @@ const Budget = (props) => {
     <div className='mt-5'>
     <Row>
     <Col xs={1}>
-    <p>3000</p>
+    <p className='mb-2'>3000</p>
     </Col>
     <Col xs={10}>
-    <h5 className={ `${styles.BoldBlack}`}>Scenario</h5>
+    <p className={ `${styles.BoldBlack} mb-2`}>SCENARIO</p>
     </Col>
     </Row>
     {/* Titles */}
@@ -525,10 +540,10 @@ const Budget = (props) => {
     <div className='mt-5'>
     <Row>
     <Col xs={1}>
-    <p>4000</p>
+    <p className='mb-2'>4000</p>
     </Col>
     <Col xs={10}>
-    <h5 className={ `${styles.BoldBlack}`}>Producers and Directors</h5>
+    <p className={ `${styles.BoldBlack} MB-2`}>PRODUCERS AND DIRECTORS</p>
     </Col>
     </Row>
     {/* TITLES */}
@@ -631,7 +646,7 @@ const Budget = (props) => {
     </Col>
     </Row>
     {/* total */}
-    <Row >
+    <Row className='mt-3'>
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     <p></p>
@@ -650,10 +665,10 @@ const Budget = (props) => {
     <div className='mt-5'>
     <Row>
     <Col xs={1}>
-    <p>5000</p>
+    <p className='mb-2'>5000</p>
     </Col>
     <Col xs={10}>
-    <h5 className={ `${styles.BoldBlack}`}>Stars / Music</h5>
+    <p className={ `${styles.BoldBlack} mb-2`}>STARS / MUSIC</p>
     </Col>
     </Row>
     {/* TITLES */}
@@ -837,7 +852,7 @@ const Budget = (props) => {
     </Col>
     </Row>
     {/* Stars / Music Total */}
-    <Row >
+    <Row className='mt-3' >
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     <p></p>
@@ -866,8 +881,267 @@ const Budget = (props) => {
 
     </div>
     {/* BELOW THE LINE */}
-    <div>
-
+    <div className='px-3'>
+    <Row className={ `${styles.OverviewBlue} mx-1 my-5 py-1 text-center`}>
+    <Col md={12}>
+    <h5 className={ `${styles.BoldBlack}`}>BELOW THE LINE - "B" PRODUCTION </h5>
+    </Col>
+    </Row>
+    {/* Cast */}
+    <div className='mt-5'>
+    <Row>
+    <Col xs={1}>
+    <p className='mb-2'>6000</p>
+    </Col>
+    <Col xs={10}>
+    <p className={ `${styles.BoldBlack} mb-2`}>CAST</p>
+    </Col>
+    </Row>
+    {/* Titles */}
+    <Row className={ `${styles.Overview} mb-2 py-1`} >
+    <Col md={1} >
+    <p className="mb-0">ACCT</p>
+    </Col>
+    <Col md={5} >
+    <p className="mb-0">Description</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">#</p>
+    </Col>
+    <Col className="px-0 mx-0" md={1} >
+    <p># Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Price</p>
+    </Col>
+    <Col md={2} >
+    <p className="mb-0">Total</p>
+    </Col>
+    </Row>
+    {/* Values */}
+    {/* Principals */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>6010</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Principals</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{principals_quantity || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{principals_units_number || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{principals_units_name || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{principals_rate || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{principals_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Actors */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>6020</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Actors</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{actors_quantity || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{actors_units_number || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{actors_units_name || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{actors_rate || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{actors_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Stunt Coordinators */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>6030</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Stunt Coordinators</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{stuntcoordinators_quantity || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{stuntcoordinators_units_number || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{stuntcoordinators_units_name || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{stuntcoordinators_rate || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{stuntcoordinators_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Stunt Performers */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>6040</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Stunt Performers</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{stuntperformers_quantity || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{stuntperformers_units_number || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{stuntperformers_units_name || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{stuntperformers_rate || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{stuntperformers_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Other Performers */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>6050</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Other Performers</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{otherperformers_quantity || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{otherperformers_units_number || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{otherperformers_units_name || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{otherperformers_rate || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{otherperformers_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Extras */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>6060</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Extras</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{extras_quantity || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{extras_units_number || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{extras_units_name || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{extras_rate || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{extras_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Casting Director */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>6070</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Casting Director</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{casting_director || 0} </p>
+    </Col>
+    </Row>
+    {/* Extras Casting */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>6080</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Extras Casting</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{extras_casting || 0} </p>
+    </Col>
+    </Row>
+    {/* Other - Cast */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>6090</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Other - Cast</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{other_cast || 0} </p>
+    </Col>
+    </Row>
+    {/* Fringes Taxes - Cast */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>6100</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Fringes and Taxes - Cast</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{fringes_taxes_cast || 0} </p>
+    </Col>
+    </Row>
+    {/* Rights Payments - Cast */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>6010</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Rights Payments - Cast</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{rights_payments_cast || 0} </p>
+    </Col>
+    </Row>
+    {/* Cast Total */}
+    <Row className='mt-3' >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    <p></p>
+    </Col>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL CAST </p>
+    </Col>
+    <Col md={3} >
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline} mb-0`}>{cast_total || 0}</p>
+    </Col>
+    </Row>
+    </div>
     </div>
     </div>
     </div>
