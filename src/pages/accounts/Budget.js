@@ -59,7 +59,7 @@ const Budget = (props) => {
     living_expenses_stars, other_stars, fringes_taxes_stars,
     music, music_supervisor, travel_expenses_music, living_expenses_music,
     music_rights_addl_songs, other_music, fringes_taxes_music,
-    stars_music_total,
+    stars_music_total, above_the_line_total,
     // cast
     principals_quantity, principals_units_number,
     principals_units_name, principals_rate, principals_total,
@@ -911,7 +911,7 @@ const Budget = (props) => {
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL ABOVE THE LINE</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline} pt-2 mb-0`}>{stars_music_total || 0}</p>
+    <p className={`${styles.Underline} pt-2 mb-0`}>{above_the_line_total || 0}</p>
     </Col>
     </Row>
     </div>

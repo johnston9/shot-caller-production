@@ -4648,6 +4648,10 @@ function BudgetEdit() {
     formData.append("format", format);
     formData.append("location", location);
     formData.append("dated", dated);
+    formData.append("prelimfin", prelimfin);
+    formData.append("preparedby", preparedby);
+    formData.append("approvedby", approvedby);
+    formData.append("approvedbyco", approvedbyco);
     // length
     formData.append("research", research);
     formData.append("prep", prep);
@@ -4671,24 +4675,24 @@ function BudgetEdit() {
     formData.append("other_development", other_development);
     formData.append("development_total ", developmentTotal);
     // scenario
+    formData.append("writers_quantity", writers_quantity);
     formData.append("writers_units_number", writers_units_number);
     formData.append("writers_units_name", writers_units_name);
-    formData.append("writers_quantity", writers_quantity);
     formData.append("writers_rate", writers_rate);
     formData.append("writers_total", writersTotal);
+    formData.append("consultants_quantity", consultants_quantity);
     formData.append("consultants_units_number", consultants_units_number);
     formData.append("consultants_units_name", consultants_units_name);
-    formData.append("consultants_quantity", consultants_quantity);
     formData.append("consultants_rate", consultants_rate);
     formData.append("consultants_total", consultantsTotal);
+    formData.append("editors_scenario_quantity", editors_quantity);
     formData.append("editors_scenario_units_number ", editors_units_number);
     formData.append("editors_scenario_units_name", editors_units_name);
-    formData.append("editors_scenario_quantity", editors_quantity);
     formData.append("editors_scenario_rate", editors_rate);
     formData.append("editors_scenario_total", editorsTotal);
+    formData.append("admin_scenario_quantity", admin_scenario_quantity);
     formData.append("admin_scenario_units_number ", admin_scenario_units_number);
     formData.append("admin_scenario_units_name", admin_scenario_units_name);
-    formData.append("admin_scenario_quantity", admin_scenario_quantity);
     formData.append("admin_scenario_rate", admin_scenario_rate);
     formData.append("admin_scenario_total", adminScenarioTotal);
     formData.append("office_expenses_scenario ", office_expenses_scenario);
@@ -4697,13 +4701,6 @@ function BudgetEdit() {
     formData.append("other_scenario", other_scenario);
     formData.append("scenario_total", scenarioTotal);
     // producers-directors
-    formData.append("executive_producers_rate", executive_producers_rate);
-    formData.append("producers_rate", producers_rate);
-    formData.append("line_producers_rate", line_producers_rate);
-    formData.append("co_producers_rate", co_producers_rate);
-    formData.append("associate_producers_rate", associate_producers_rate);
-    formData.append("directors_rate", directors_rate);
-    formData.append("unit2_directors_rate", unit2_directors_rate);
     formData.append("executive_producers_quantity", executive_producers_quantity);
     formData.append("producers_quantity", producers_quantity);
     formData.append("line_producers_quantity", line_producers_quantity);
@@ -4711,10 +4708,13 @@ function BudgetEdit() {
     formData.append("associate_producers_quantity", associate_producers_quantity);
     formData.append("directors_quantity", directors_quantity);
     formData.append("unit2_directors_quantity", unit2_directors_quantity);
-    formData.append("travel_expenses_producers_dirs", travel_expenses_producers_dirs);
-    formData.append("living_expenses_producers_dirs", living_expenses_producers_dirs);
-    formData.append("other_producers_dirs", other_producers_dirs);
-    formData.append("fringes_taxes_producers_dirs", fringes_taxes_producers_dirs);
+    formData.append("executive_producers_rate", executive_producers_rate);
+    formData.append("producers_rate", producers_rate);
+    formData.append("line_producers_rate", line_producers_rate);
+    formData.append("co_producers_rate", co_producers_rate);
+    formData.append("associate_producers_rate", associate_producers_rate);
+    formData.append("directors_rate", directors_rate);
+    formData.append("unit2_directors_rate", unit2_directors_rate);
     formData.append("executive_producers_total", execProducersTotal);
     formData.append("producers_total", producersTotal);
     formData.append("line_producers_total", lineProducersTotal);
@@ -4722,6 +4722,10 @@ function BudgetEdit() {
     formData.append("associate_producers_total", assocProducersTotal);
     formData.append("directors_total", directorsTotal);
     formData.append("unit2_directors_total", unit2DirectorsTotal);
+    formData.append("travel_expenses_producers_dirs", travel_expenses_producers_dirs);
+    formData.append("living_expenses_producers_dirs", living_expenses_producers_dirs);
+    formData.append("other_producers_dirs", other_producers_dirs);
+    formData.append("fringes_taxes_producers_dirs", fringes_taxes_producers_dirs);
     formData.append("producers_dirs_total", producersDirsTotal);
     // Stars Music
     formData.append("stars", stars);
@@ -4738,7 +4742,7 @@ function BudgetEdit() {
     formData.append("other_music", other_music);
     formData.append("fringes_taxes_music", fringes_taxes_music);
     formData.append("stars_music_total", starsMusicTotal);
-    formData.append("aboveTheLineTotal", aboveTheLineTotal);
+    formData.append("above_the_line_total", aboveTheLineTotal);
     // Cast
     formData.append("principals_quantity", principals_quantity);
     formData.append("principals_units_number", principals_units_number);
@@ -4764,17 +4768,17 @@ function BudgetEdit() {
     formData.append("extras_units_number", extras_units_number);
     formData.append("extras_units_name", extras_units_name);
     formData.append("extras_rate", extras_rate);
-    formData.append("casting_director", casting_director);
-    formData.append("extras_casting", extras_casting);
-    formData.append("other_cast", other_cast);
-    formData.append("fringes_taxes_cast", fringes_taxes_cast);
-    formData.append("rights_payments_cast", rights_payments_cast);
     formData.append("principals_total", principalsTotal);
     formData.append("actors_total", actorsTotal);
     formData.append("stuntcoordinators_total", stuntcoordinatorsTotal);
     formData.append("stuntperformers_total", stuntperformersTotal);
     formData.append("otherperformers_total", otherperformersTotal);
     formData.append("extras_total", extrasTotal);
+    formData.append("casting_director", casting_director);
+    formData.append("extras_casting", extras_casting);
+    formData.append("other_cast", other_cast);
+    formData.append("fringes_taxes_cast", fringes_taxes_cast);
+    formData.append("rights_payments_cast", rights_payments_cast);
     formData.append("cast_total", castTotal);
 
     try {
