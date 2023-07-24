@@ -165,11 +165,11 @@ const Budget = (props) => {
     {/* Titles */}
     <Row className={ `${styles.OverviewBlue} mx-1 mb-2 py-1 text-center`}>
     <Col md={12}>
-    <h5 className={ `${styles.BoldBlack}`}>DETAILS</h5>
+    <h5 className={ `${styles.BoldBlack}`}>BUDGET DETAIL PAGE</h5>
     </Col>
     </Row>
     {/* details length */}
-    <Row className='px-3'>
+    <Row className='px-5 mt-3'>
     {/* details */}
     <Col xs={12} md={6} >
     <Row>

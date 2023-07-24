@@ -98,7 +98,7 @@ function BudgetEdit() {
   // prepared by input boxes
   const prepare = (
     <div>
-    <Row className="mt-3">
+    <Row>
     <Col md={6} >
     {/* prelimfin */}
     <Row >
@@ -195,6 +195,29 @@ function BudgetEdit() {
     ))}
     </Col>
     </Row>
+    {/* date */}
+    <Row>
+    <Col md={6}>
+      <p className={`${styles.Underline}`}>Budget Date</p>
+      </Col>
+      <Col md={6}>
+      <Form.Group controlId="dated" 
+          className={`${styles.Width95} text-center mb-1`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="dated"
+          value={dated}
+          onChange={handleChange_details}
+              />
+      </Form.Group>
+      {errors?.dated?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+      </Col>
+    </Row>
     </Col>
     </Row>
     </div>
@@ -202,11 +225,11 @@ function BudgetEdit() {
 
   // Details Length Input Boxes
   const detailslength = (
-    <div className="mt-3">
+    <div className="mt-4">
     {/* Titles */}
     <Row className={ `${styles.OverviewBlue} mx-1 mb-2 py-1 text-center`}>
     <Col md={12}>
-    <h5 className={ `${styles.BoldBlack}`}>DETAILS</h5>
+    <h5 className={ `${styles.BoldBlack}`}>PRODUCTION INFO / LENGTH</h5>
     </Col>
     </Row>
     <Row className="mt-3">
@@ -344,29 +367,6 @@ function BudgetEdit() {
             />
     </Form.Group>
     {errors?.location?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    </Row>
-    {/* Budget Date */}
-    <Row>
-    <Col md={6}>
-    <p className={`${styles.Underline}`}>Budget Date</p>
-    </Col>
-    <Col md={6}>
-    <Form.Group controlId="dated" 
-        className={`${styles.Width95} text-center mb-1`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="dated"
-        value={dated}
-        onChange={handleChange_details}
-            />
-    </Form.Group>
-    {errors?.dated?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
@@ -4494,6 +4494,195 @@ function BudgetEdit() {
     </Row>
     </div>
   )
+
+  // Production postData
+  const [postDataProduction, setPostDataProduction] = useState({
+    production_manager_quantity: 0,
+    production_manager_units_number: 0,
+    production_manager_units_name: "",
+    production_manager_rate: 0,
+    production_supervisor_quantity: 0,
+    production_supervisor_units_number: 0,
+    production_supervisor_units_name: "",
+    production_supervisor_rate: 0,
+    production_coordinator_quantity: 0,
+    production_coordinator_units_number: 0,
+    production_coordinator_units_name: "",
+    production_coordinator_rate: 0,
+    unit_manager_quantity: 0,
+    unit_manager_units_number: 0,
+    unit_manager_units_name: "",
+    unit_manager_rate: 0,
+    location_manager_quantity: 0,
+    location_manager_units_number: 0,
+    location_manager_units_name: "",
+    location_manager_rate: 0,
+    location_manager_assistant_quantity: 0,
+    location_manager_assistant_units_number: 0,
+    location_manager_assistant_units_name: "",
+    location_manager_assistant_rate: 0,
+    production_assistants_quantity: 0,
+    production_assistants_units_number: 0,
+    production_assistants_units_name: "",
+    production_assistants_rate: 0,
+    production_secretary_quantity: 0,
+    production_secretary_units_number: 0,
+    production_secretary_units_name: "",
+    production_secretary_rate: 0,
+    production_accountant_quantity: 0,
+    production_accountant_units_number: 0,
+    production_accountant_units_name: "",
+    production_accountant_rate: 0,
+    production_accountant_assistant_quantity: 0,
+    production_accountant_assistant_units_number: 0,
+    production_accountant_assistant_units_name: "",
+    production_accountant_assistant_rate: 0,
+    scriptsupervisor_continuity_quantity: 0,
+    scriptsupervisor_continuity_units_number: 0,
+    scriptsupervisor_continuity_units_name: "",
+    scriptsupervisor_continuity_rate: 0,
+    payroll_quantity: 0,
+    payroll_units_number: 0,
+    payroll_units_name: "",
+    payroll_rate: 0,
+    other_production_quantity: 0,
+    other_production_units_number: 0,
+    other_production_units_name: "",
+    other_production_rate: 0,
+    directors_assistant_quantity: 0,
+    directors_assistant_units_number: 0,
+    directors_assistant_units_name: "",
+    directors_assistant_rate: 0,
+    assistant_director_1st_quantity: 0,
+    assistant_director_1st_units_number: 0,
+    assistant_director_1st_units_name: "",
+    assistant_director_1st_rate: 0,
+    assistant_director_2nd_quantity: 0,
+    assistant_director_2nd_units_number: 0,
+    assistant_director_2nd_units_name: "",
+    assistant_director_2nd_rate: 0,
+    assistant_director_3rd_quantity: 0,
+    assistant_director_3rd_units_number: 0,
+    assistant_director_3rd_units_name: "",
+    assistant_director_3rd_rate: 0,
+    craft_services_quantity: 0,
+    craft_services_units_number: 0,
+    craft_services_units_name: "",
+    craft_services_rate: 0,
+  });
+
+  // Production postData values
+  const {
+    production_manager_quantity,
+    production_manager_units_number,
+    production_manager_units_name,
+    production_manager_rate,
+    production_supervisor_quantity,
+    production_supervisor_units_number,
+    production_supervisor_units_name,
+    production_supervisor_rate,
+    production_coordinator_quantity,
+    production_coordinator_units_number,
+    production_coordinator_units_name,
+    production_coordinator_rate,
+    unit_manager_quantity,
+    unit_manager_units_number,
+    unit_manager_units_name,
+    unit_manager_rate,
+    location_manager_quantity,
+    location_manager_units_number,
+    location_manager_units_name,
+    location_manager_rate,
+    location_manager_assistant_quantity,
+    location_manager_assistant_units_number,
+    location_manager_assistant_units_name,
+    location_manager_assistant_rate,
+    production_assistants_quantity,
+    production_assistants_units_number,
+    production_assistants_units_name,
+    production_assistants_rate,
+    production_secretary_quantity,
+    production_secretary_units_number,
+    production_secretary_units_name,
+    production_secretary_rate,
+    production_accountant_quantity,
+    production_accountant_units_number,
+    production_accountant_units_name,
+    production_accountant_rate,
+    production_accountant_assistant_quantity,
+    production_accountant_assistant_units_number,
+    production_accountant_assistant_units_name,
+    production_accountant_assistant_rate,
+    scriptsupervisor_continuity_quantity,
+    scriptsupervisor_continuity_units_number,
+    scriptsupervisor_continuity_units_name,
+    scriptsupervisor_continuity_rate,
+    payroll_quantity,
+    payroll_units_number,
+    payroll_units_name,
+    payroll_rate,
+    other_production_quantity,
+    other_production_units_number,
+    other_production_units_name,
+    other_production_rate,
+    directors_assistant_quantity,
+    directors_assistant_units_number,
+    directors_assistant_units_name,
+    directors_assistant_rate,
+    assistant_director_1st_quantity,
+    assistant_director_1st_units_number,
+    assistant_director_1st_units_name,
+    assistant_director_1st_rate,
+    assistant_director_2nd_quantity,
+    assistant_director_2nd_units_number,
+    assistant_director_2nd_units_name,
+    assistant_director_2nd_rate,
+    assistant_director_3rd_quantity,
+    assistant_director_3rd_units_number,
+    assistant_director_3rd_units_name,
+    assistant_director_3rd_rate,
+    craft_services_quantity,
+    craft_services_units_number,
+    craft_services_units_name,
+    craft_services_rate,
+  } = postDataProduction;
+
+  // production manager Total postData
+  const [productionmanagerTotal, setProductionmanagerTotal] = useState(0);
+  // production supervisor Total postData
+  const [productionsupervisorTotal, setProductionsupervisorTotal] = useState(0);
+  // production coordinator Total postData
+  const [productioncoordinatorTotal, setProductioncoordinatorTotal] = useState(0);
+  // unit manager Total postData
+  const [unitmanagerTotal, setUnitmanagerTotal] = useState(0);
+  // location manager Total postData
+  const [locationmanagerTotal, setLocationmanagerTotal] = useState(0);
+  // location manager assistant Total postData
+  const [locationmanagerassistantTotal, setLocationmanagerassistantTotal] = useState(0);
+  // production assistants Total postData
+  const [productionassistantsTotal, setProductionassistantsTotal] = useState(0);
+  // production secretary Total postData
+  const [productionsecretaryTotal, setProductionsecretaryTotal] = useState(0);
+  // production accountant Total postData
+  const [productionaccountantTotal, setProductionaccountantTotal] = useState(0);
+  // production accountant assistant Total postData
+  const [productionaccountantassistantTotal, setProductionaccountantassistantTotal] = useState(0);
+  // scriptsupervisor continuity Total postData
+  const [scriptsupervisorcontinuityTotal, setScriptsupervisor_continuityTotal] = useState(0);
+  // payroll Total postData
+  const [payrollTotal, setPayrollTotal] = useState(0);
+  // other production Total postData
+  const [otherproductionTotal, setOtherproductionTotal] = useState(0);
+  // directors assistant Total postData
+  const [directorsassistantTotal, setDirectorsassistantTotal] = useState(0);
+  // assistant director 1st Total postData
+  const [assistantdirector1stTotal, setAssistantdirector1stTotal] = useState(0);
+  // assistant director 2nd Total postData
+  const [assistantdirector2ndTotal, setAssistantdirector2ndTotal] = useState(0);
+  // assistant director 3rd Total postData
+  const [assistantdirector3rdTotal, setAssistantdirector3rdTotal] = useState(0);
+  // craft services Total postData
+  const [craftservicesTotal, setCraftservicesTotal] = useState(0);
 
 
   // <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
