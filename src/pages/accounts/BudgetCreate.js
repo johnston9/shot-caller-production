@@ -4643,6 +4643,109 @@ function BudgetCreate() {
   // craft services Total postData
   const [craftservicesTotal, setCraftservicesTotal] = useState(0);
 
+  // Calculate Functions
+  // function to calculate production manager on change
+  useEffect(() => {
+    const addproman = () => {
+      setProductionmanagerTotal(parseFloat(production_manager_quantity || 0) * 
+      parseFloat(production_manager_units_number || 0) * 
+      parseFloat(production_manager_rate || 0))
+    }
+    const timer = setTimeout(() => {
+      addproman();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [production_manager_quantity, production_manager_units_number, 
+    production_manager_rate]);
+
+  // function to calculate production supervisor on change
+  useEffect(() => {
+    const addprosup = () => {
+      setProductionsupervisorTotal(parseFloat(production_supervisor_quantity || 0) * 
+      parseFloat(production_supervisor_units_number || 0) * 
+      parseFloat(production_supervisor_rate || 0))
+    }
+    const timer = setTimeout(() => {
+      addprosup();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [production_supervisor_quantity, production_supervisor_units_number, 
+    production_supervisor_rate]);
+
+  // function to calculate production coordinator on change
+  useEffect(() => {
+    const addprocoor = () => {
+      setProductioncoordinatorTotal(parseFloat(production_coordinator_quantity || 0) * 
+      parseFloat(production_coordinator_units_number || 0) * 
+      parseFloat(production_coordinator_rate || 0))
+    }
+    const timer = setTimeout(() => {
+      addprocoor();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [production_coordinator_quantity, production_coordinator_units_number, 
+    production_coordinator_rate]);
+
+  // function to calculate unit manager on change
+  useEffect(() => {
+    const addunitman = () => {
+      setUnitmanagerTotal(parseFloat(unit_manager_quantity || 0) * 
+      parseFloat(unit_manager_units_number || 0) * 
+      parseFloat(unit_manager_rate || 0))
+    }
+    const timer = setTimeout(() => {
+      addunitman();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [unit_manager_quantity, unit_manager_units_number, 
+    unit_manager_rate]);
+  
+  // function to calculate location manager on change
+  useEffect(() => {
+    const addlocman = () => {
+      setLocationmanagerTotal(parseFloat(location_manager_quantity || 0) * 
+      parseFloat(location_manager_units_number || 0) * 
+      parseFloat(location_manager_rate || 0))
+    }
+    const timer = setTimeout(() => {
+      addlocman();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [location_manager_quantity, location_manager_units_number, 
+    location_manager_rate]);
+  
+  // function to calculate location manager assistant on change
+  useEffect(() => {
+    const addlocmanass = () => {
+      setLocationmanagerassistantTotal(parseFloat(location_manager_assistant_quantity || 0) * 
+      parseFloat(location_manager_assistant_units_number || 0) * 
+      parseFloat(location_manager_assistant_rate || 0))
+    }
+    const timer = setTimeout(() => {
+      addlocmanass();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [location_manager_assistant_quantity, location_manager_assistant_units_number, 
+    location_manager_assistant_rate]);
+
   // ..............
   // Buttons
   const buttons = (
@@ -4881,23 +4984,24 @@ function BudgetCreate() {
     formData.append("craft_services_units_number", craft_services_units_number);
     formData.append("craft_services_units_name", craft_services_units_name);
     formData.append("craft_services_rate", craft_services_rate);
-    formData.append("music", music);
-    formData.append("music", music);
-    formData.append("music", music);
-    formData.append("music", music);
-    formData.append("music", music);
-    formData.append("music", music);
-    formData.append("music", music);
-    formData.append("music", music);
-    formData.append("music", music);
-    formData.append("music", music);
-    formData.append("music", music);
-    formData.append("music", music);
-    formData.append("music", music);
-    formData.append("music", music);
-    formData.append("music", music);
-    formData.append("music", music);
-    formData.append("music", music);
+    formData.append("productionmanager_total", productionmanagerTotal);
+    formData.append("productionsupervisor_total", productionsupervisorTotal);
+    formData.append("productioncoordinator_total", productioncoordinatorTotal);
+    formData.append("unitmanager_total", unitmanagerTotal);
+    formData.append("locationmanager_total", locationmanagerTotal);
+    formData.append("locationmanagerassistant_total", locationmanagerassistantTotal);
+    formData.append("productionassistants_total", productionassistantsTotal);
+    formData.append("productionsecretary_total", productionsecretaryTotal);
+    formData.append("productionaccountant_total", productionaccountantTotal);
+    formData.append("productionaccountantassistant_total", productionaccountantassistantTotal);
+    formData.append("scriptsupervisorcontinuity_total", scriptsupervisorcontinuityTotal);
+    formData.append("payroll_total", payrollTotal);
+    formData.append("otherproduction_total", otherproductionTotal);
+    formData.append("directorsassistant_total", directorsassistantTotal);
+    formData.append("assistantdirector1st_total", assistantdirector1stTotal);
+    formData.append("assistantdirector2nd_total", assistantdirector2ndTotal);
+    formData.append("assistantdirector3rd_total", assistantdirector3rdTotal);
+    formData.append("craftservices_total", craftservicesTotal);
     formData.append("music", music);
 
     try {

@@ -4495,6 +4495,8 @@ function BudgetEdit() {
     </div>
   )
 
+  // PRODUCTION STAFF ------------------------------------------
+
   // Production postData
   const [postDataProduction, setPostDataProduction] = useState({
     production_manager_quantity: 0,
@@ -4969,6 +4971,98 @@ function BudgetEdit() {
     formData.append("fringes_taxes_cast", fringes_taxes_cast);
     formData.append("rights_payments_cast", rights_payments_cast);
     formData.append("cast_total", castTotal);
+    // production staff
+    formData.append("production_manager_quantity", production_manager_quantity);
+    formData.append("production_manager_units_number", production_manager_units_number);
+    formData.append("production_manager_units_name", production_manager_units_name);
+    formData.append("production_manager_rate", production_manager_rate);
+    formData.append("production_supervisor_quantity", production_supervisor_quantity);
+    formData.append("production_supervisor_units_number", production_supervisor_units_number);
+    formData.append("production_supervisor_units_name", production_supervisor_units_name);
+    formData.append("production_supervisor_rate", production_supervisor_rate);
+    formData.append("production_coordinator_quantity", production_coordinator_quantity);
+    formData.append("production_coordinator_units_number", production_coordinator_units_number);
+    formData.append("production_coordinator_units_name", production_coordinator_units_name);
+    formData.append("production_coordinator_rate", production_coordinator_rate);
+    formData.append("unit_manager_quantity", unit_manager_quantity);
+    formData.append("unit_manager_units_number", unit_manager_units_number);
+    formData.append("unit_manager_units_name", unit_manager_units_name);
+    formData.append("unit_manager_rate", unit_manager_rate);
+    formData.append("location_manager_quantity", location_manager_quantity);
+    formData.append("location_manager_units_number", location_manager_units_number);
+    formData.append("location_manager_units_name", location_manager_units_name);
+    formData.append("location_manager_rate", location_manager_rate);
+    formData.append("location_manager_assistant_quantity", location_manager_assistant_quantity);
+    formData.append("location_manager_assistant_units_number", location_manager_assistant_units_number);
+    formData.append("location_manager_assistant_units_name", location_manager_assistant_units_name);
+    formData.append("location_manager_assistant_rate", location_manager_assistant_rate);
+    formData.append("production_assistants_quantity", production_assistants_quantity);
+    formData.append("production_assistants_units_number", production_assistants_units_number);
+    formData.append("production_assistants_units_name", production_assistants_units_name);
+    formData.append("production_assistants_rate", production_assistants_rate);
+    formData.append("production_secretary_quantity", production_secretary_quantity);
+    formData.append("production_secretary_units_number", production_secretary_units_number);
+    formData.append("production_secretary_units_name", production_secretary_units_name);
+    formData.append("production_secretary_rate", production_secretary_rate);
+    formData.append("production_accountant_quantity", production_accountant_quantity);
+    formData.append("production_accountant_units_number", production_accountant_units_number);
+    formData.append("production_accountant_units_name", production_accountant_units_name);
+    formData.append("production_accountant_rate", production_accountant_rate);
+    formData.append("production_accountant_assistant_quantity", production_accountant_assistant_quantity);
+    formData.append("production_accountant_assistant_units_number", production_accountant_assistant_units_number);
+    formData.append("production_accountant_assistant_units_name", production_accountant_assistant_units_name);
+    formData.append("production_accountant_assistant_rate", production_accountant_assistant_rate);
+    formData.append("scriptsupervisor_continuity_quantity", scriptsupervisor_continuity_quantity);
+    formData.append("scriptsupervisor_continuity_units_number", scriptsupervisor_continuity_units_number);
+    formData.append("scriptsupervisor_continuity_units_name", scriptsupervisor_continuity_units_name);
+    formData.append("scriptsupervisor_continuity_rate", scriptsupervisor_continuity_rate);
+    formData.append("payroll_quantity", payroll_quantity);
+    formData.append("payroll_units_number", payroll_units_number);
+    formData.append("payroll_units_name", payroll_units_name);
+    formData.append("payroll_rate", payroll_rate);
+    formData.append("other_production_quantity", other_production_quantity);
+    formData.append("other_production_units_number", other_production_units_number);
+    formData.append("other_production_units_name", other_production_units_name);
+    formData.append("other_production_rate", other_production_rate);
+    formData.append("directors_assistant_quantity", directors_assistant_quantity);
+    formData.append("directors_assistant_units_number", directors_assistant_units_number);
+    formData.append("directors_assistant_units_name", directors_assistant_units_name);
+    formData.append("directors_assistant_rate", directors_assistant_rate);
+    formData.append("assistant_director_1st_quantity", assistant_director_1st_quantity);
+    formData.append("assistant_director_1st_units_number", assistant_director_1st_units_number);
+    formData.append("assistant_director_1st_units_name", assistant_director_1st_units_name);
+    formData.append("assistant_director_1st_rate", assistant_director_1st_rate);
+    formData.append("assistant_director_2nd_quantity", assistant_director_2nd_quantity);
+    formData.append("assistant_director_2nd_units_number", assistant_director_2nd_units_number);
+    formData.append("assistant_director_2nd_units_name", assistant_director_2nd_units_name);
+    formData.append("assistant_director_2nd_rate", assistant_director_2nd_rate);
+    formData.append("assistant_director_3rd_quantity", assistant_director_3rd_quantity);
+    formData.append("assistant_director_3rd_units_number", assistant_director_3rd_units_number);
+    formData.append("assistant_director_3rd_units_name", assistant_director_3rd_units_name);
+    formData.append("assistant_director_3rd_rate", assistant_director_3rd_rate);
+    formData.append("craft_services_quantity", craft_services_quantity);
+    formData.append("craft_services_units_number", craft_services_units_number);
+    formData.append("craft_services_units_name", craft_services_units_name);
+    formData.append("craft_services_rate", craft_services_rate);
+    formData.append("productionmanager_total", productionmanagerTotal);
+    formData.append("productionsupervisor_total", productionsupervisorTotal);
+    formData.append("productioncoordinator_total", productioncoordinatorTotal);
+    formData.append("unitmanager_total", unitmanagerTotal);
+    formData.append("locationmanager_total", locationmanagerTotal);
+    formData.append("locationmanagerassistant_total", locationmanagerassistantTotal);
+    formData.append("productionassistants_total", productionassistantsTotal);
+    formData.append("productionsecretary_total", productionsecretaryTotal);
+    formData.append("productionaccountant_total", productionaccountantTotal);
+    formData.append("productionaccountantassistant_total", productionaccountantassistantTotal);
+    formData.append("scriptsupervisorcontinuity_total", scriptsupervisorcontinuityTotal);
+    formData.append("payroll_total", payrollTotal);
+    formData.append("otherproduction_total", otherproductionTotal);
+    formData.append("directorsassistant_total", directorsassistantTotal);
+    formData.append("assistantdirector1st_total", assistantdirector1stTotal);
+    formData.append("assistantdirector2nd_total", assistantdirector2ndTotal);
+    formData.append("assistantdirector3rd_total", assistantdirector3rdTotal);
+    formData.append("craftservices_total", craftservicesTotal);
+    formData.append("music", music);
 
     try {
       const { data } = await axiosReq.put(`/budgets/${budgetId}/`, formData);
