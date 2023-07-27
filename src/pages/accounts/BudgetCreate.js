@@ -4627,7 +4627,7 @@ function BudgetCreate() {
   // production accountant assistant Total postData
   const [productionaccountantassistantTotal, setProductionaccountantassistantTotal] = useState(0);
   // scriptsupervisor continuity Total postData
-  const [scriptsupervisorcontinuityTotal, setScriptsupervisor_continuityTotal] = useState(0);
+  const [scriptsupervisorcontinuityTotal, setScriptsupervisorcontinuityTotal] = useState(0);
   // payroll Total postData
   const [payrollTotal, setPayrollTotal] = useState(0);
   // other production Total postData
@@ -4745,6 +4745,401 @@ function BudgetCreate() {
     };
   }, [location_manager_assistant_quantity, location_manager_assistant_units_number, 
     location_manager_assistant_rate]);
+  
+  // function to calculate production assistants on change
+  useEffect(() => {
+    const addproass = () => {
+      setProductionassistantsTotal(parseFloat(production_assistants_quantity || 0) * 
+      parseFloat(production_assistants_units_number || 0) * 
+      parseFloat(production_assistants_rate || 0))
+    }
+    const timer = setTimeout(() => {
+      addproass();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [production_assistants_quantity, production_assistants_units_number, 
+    production_assistants_rate]);
+
+  // function to calculate production secretary on change
+  useEffect(() => {
+    const addprosec = () => {
+      setProductionsecretaryTotal(parseFloat(production_secretary_quantity || 0) * 
+      parseFloat(production_secretary_units_number || 0) * 
+      parseFloat(production_secretary_rate || 0))
+    }
+    const timer = setTimeout(() => {
+      addprosec();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [production_secretary_quantity, production_secretary_units_number, 
+    production_secretary_rate]);
+
+  // function to calculate production accountant on change
+  useEffect(() => {
+    const addproacc = () => {
+      setProductionaccountantTotal(parseFloat(production_accountant_quantity || 0) * 
+      parseFloat(production_accountant_units_number || 0) * 
+      parseFloat(production_accountant_rate || 0))
+    }
+    const timer = setTimeout(() => {
+      addproacc();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [production_accountant_quantity, production_accountant_units_number, 
+    production_accountant_rate]);
+  
+  // function to calculate production accountant on change
+  useEffect(() => {
+    const addproacc = () => {
+      setProductionaccountantTotal(parseFloat(production_accountant_quantity || 0) * 
+      parseFloat(production_accountant_units_number || 0) * 
+      parseFloat(production_accountant_rate || 0))
+    }
+    const timer = setTimeout(() => {
+      addproacc();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [production_accountant_quantity, production_accountant_units_number, 
+    production_accountant_rate]);
+
+  // function to calculate scriptsupervisor continuity on change
+  useEffect(() => {
+    const addsupcon = () => {
+      setScriptsupervisorcontinuityTotal(parseFloat(scriptsupervisor_continuity_quantity || 0) * 
+      parseFloat(scriptsupervisor_continuity_units_number || 0) * 
+      parseFloat(scriptsupervisor_continuity_rate || 0))
+    }
+    const timer = setTimeout(() => {
+      addsupcon();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [scriptsupervisor_continuity_quantity, scriptsupervisor_continuity_units_number, 
+    scriptsupervisor_continuity_rate]);
+  
+  // function to calculate unit manager on change
+  useEffect(() => {
+    const addpayrol = () => {
+      setPayrollTotal(parseFloat(payroll_quantity || 0) * 
+      parseFloat(payroll_units_number || 0) * 
+      parseFloat(payroll_rate || 0))
+    }
+    const timer = setTimeout(() => {
+      addpayrol();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [payroll_quantity, payroll_units_number, 
+    payroll_rate]);
+
+  // function to calculate other production on change
+  useEffect(() => {
+    const addothpro = () => {
+      setOtherproductionTotal(parseFloat(other_production_quantity || 0) * 
+      parseFloat(other_production_units_number || 0) * 
+      parseFloat(other_production_rate || 0))
+    }
+    const timer = setTimeout(() => {
+      addothpro();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [other_production_quantity, other_production_units_number, 
+    other_production_rate]);
+
+  // function to calculate directors assistant on change
+  useEffect(() => {
+    const adddirass = () => {
+      setDirectorsassistantTotal(parseFloat(directors_assistant_quantity || 0) * 
+      parseFloat(directors_assistant_units_number || 0) * 
+      parseFloat(directors_assistant_rate || 0))
+    }
+    const timer = setTimeout(() => {
+      adddirass();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [directors_assistant_quantity, directors_assistant_units_number, 
+    directors_assistant_rate]);
+
+  // function to calculate 1st assistant director on change
+  useEffect(() => {
+    const addasdir1 = () => {
+      setAssistantdirector1stTotal(parseFloat(assistant_director_1st_quantity || 0) * 
+      parseFloat(assistant_director_1st_units_number || 0) * 
+      parseFloat(assistant_director_1st_rate || 0))
+    }
+    const timer = setTimeout(() => {
+      addasdir1();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [assistant_director_1st_quantity, assistant_director_1st_units_number, 
+    assistant_director_1st_rate]);
+
+  // function to calculate 2nd assistant director on change
+  useEffect(() => {
+    const addasdir2 = () => {
+      setAssistantdirector2ndTotal(parseFloat(assistant_director_2nd_quantity || 0) * 
+      parseFloat(assistant_director_2nd_units_number || 0) * 
+      parseFloat(assistant_director_2nd_rate || 0))
+    }
+    const timer = setTimeout(() => {
+      addasdir2();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [assistant_director_2nd_quantity, assistant_director_2nd_units_number, 
+    assistant_director_2nd_rate]);
+
+  // function to calculate 3rd assistant director on change
+  useEffect(() => {
+    const addasdir3 = () => {
+      setAssistantdirector3rdTotal(parseFloat(assistant_director_3rd_quantity || 0) * 
+      parseFloat(assistant_director_3rd_units_number || 0) * 
+      parseFloat(assistant_director_3rd_rate || 0))
+    }
+    const timer = setTimeout(() => {
+      addasdir3();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [assistant_director_3rd_quantity, assistant_director_3rd_units_number, 
+    assistant_director_3rd_rate]);
+
+  // function to calculate craft services on change
+  useEffect(() => {
+    const addcraser = () => {
+      setCraftservicesTotal(parseFloat(craft_services_quantity || 0) * 
+      parseFloat(craft_services_units_number || 0) * 
+      parseFloat(craft_services_rate || 0))
+    }
+    const timer = setTimeout(() => {
+      addcraser();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [craft_services_quantity, craft_services_units_number, 
+    craft_services_rate]);
+
+  // Production Total postData 
+  const [productionTotal, setProductionTotal] = useState(0);
+
+  // Production handleChange 
+  const handleChangePro = (event) => {
+    setPostDataProduction({
+      ...postDataProduction,
+      [event.target.name]: parseFloat(event.target.value || 0 ),
+    });
+  }; 
+
+  // Production handleChange Text 
+  const handleChangeProText = (event) => {
+    setPostDataProduction({
+      ...postDataProduction,
+      [event.target.name]: event.target.value,
+    });
+  }; 
+
+  // function to add all production on change
+  useEffect(() => {
+    const addPro = () => {
+      setProductionTotal(
+      parseFloat(productionmanagerTotal || 0) +
+      parseFloat(productionsupervisorTotal || 0) +
+      parseFloat(productioncoordinatorTotal || 0) +
+      parseFloat(unitmanagerTotal || 0) +
+      parseFloat(locationmanagerTotal || 0) +
+      parseFloat(locationmanagerassistantTotal || 0) +
+      parseFloat(productionassistantsTotal || 0) +
+      parseFloat(productionsecretaryTotal || 0) +
+      parseFloat(productionaccountantTotal || 0) +
+      parseFloat(productionaccountantassistantTotal || 0) +
+      parseFloat(scriptsupervisorcontinuityTotal || 0) +
+      parseFloat(payrollTotal || 0) +
+      parseFloat(otherproductionTotal || 0) +
+      parseFloat(directorsassistantTotal || 0) +
+      parseFloat(assistantdirector1stTotal || 0) +
+      parseFloat(assistantdirector2ndTotal || 0) +
+      parseFloat(assistantdirector3rdTotal || 0) +
+      parseFloat(craftservicesTotal || 0)
+      )
+    }
+    const timer = setTimeout(() => {
+      addPro();
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [productionmanagerTotal, productionsupervisorTotal, productioncoordinatorTotal,
+    unitmanagerTotal, locationmanagerTotal, locationmanagerassistantTotal,
+    productionassistantsTotal, productionsecretaryTotal, productionaccountantTotal,
+    productionaccountantassistantTotal, scriptsupervisorcontinuityTotal,
+    payrollTotal, otherproductionTotal, directorsassistantTotal,
+    assistantdirector1stTotal, assistantdirector2ndTotal,
+    assistantdirector3rdTotal, craftservicesTotal,
+    ]);
+
+  // production input boxes
+  const production = (
+    <div className="mt-5">
+    <Row >
+    <Col md={1} >
+    <p className="mb-2">7000</p>
+    </Col>
+    <Col md={6} >
+    <p className={ `${styles.BoldBlack} mb-2`}>PRODUCTION STAFF</p>
+    </Col>
+    </Row>
+    {/* TITLES */}
+    <Row className={ `${styles.Overview} mb-2 py-1`} >
+    <Col md={1} >
+    <p className="mb-0">ACCT</p>
+    </Col>
+    <Col md={5} >
+    <p className="mb-0">Description</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">#</p>
+    </Col>
+    <Col className="px-0 mx-0" md={1} >
+    <p># Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Price</p>
+    </Col>
+    <Col md={2} >
+    <p className="mb-0">Total</p>
+    </Col>
+    </Row>
+    {/* Production Manager */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>7010</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Production Manager</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="production_manager_quantity" 
+        className={`${styles.Width100} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="production_manager_quantity"
+        value={production_manager_quantity}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.production_manager_quantity?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="production_manager_units_number" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="production_manager_units_number"
+        value={production_manager_units_number}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.production_manager_units_number?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="production_manager_units_name" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="production_manager_units_name"
+        value={production_manager_units_name}
+        onChange={handleChangeProText}
+            />
+    </Form.Group>
+    {errors?.production_manager_units_name?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="production_manager_rate" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="production_manager_rate"
+        value={actorsproduction_manager_rate_rate}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.production_manager_rate?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="productionmanagerTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="productionmanagerTotal"
+        value={productionmanagerTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.productionmanagerTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    </div>
+  )
 
   // ..............
   // Buttons
@@ -5002,7 +5397,7 @@ function BudgetCreate() {
     formData.append("assistantdirector2nd_total", assistantdirector2ndTotal);
     formData.append("assistantdirector3rd_total", assistantdirector3rdTotal);
     formData.append("craftservices_total", craftservicesTotal);
-    formData.append("music", music);
+    formData.append("production_total", productionTotal);
 
     try {
       const { data } = await axiosReq.post("/budgets/", formData);

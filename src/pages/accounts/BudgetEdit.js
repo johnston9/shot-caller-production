@@ -4670,7 +4670,7 @@ function BudgetEdit() {
   // production accountant assistant Total postData
   const [productionaccountantassistantTotal, setProductionaccountantassistantTotal] = useState(0);
   // scriptsupervisor continuity Total postData
-  const [scriptsupervisorcontinuityTotal, setScriptsupervisor_continuityTotal] = useState(0);
+  const [scriptsupervisorcontinuityTotal, setScriptsupervisorcontinuityTotal] = useState(0);
   // payroll Total postData
   const [payrollTotal, setPayrollTotal] = useState(0);
   // other production Total postData
@@ -4685,6 +4685,372 @@ function BudgetEdit() {
   const [assistantdirector3rdTotal, setAssistantdirector3rdTotal] = useState(0);
   // craft services Total postData
   const [craftservicesTotal, setCraftservicesTotal] = useState(0);
+
+  // Calculate Functions
+  // function to calculate production manager on change
+  useEffect(() => {
+    const addproman = () => {
+      setProductionmanagerTotal(parseFloat(production_manager_quantity || 0) * 
+      parseFloat(production_manager_units_number || 0) * 
+      parseFloat(production_manager_rate || 0))
+    }
+    const timer = setTimeout(() => {
+      addproman();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [production_manager_quantity, production_manager_units_number, 
+    production_manager_rate]);
+
+  // function to calculate production supervisor on change
+  useEffect(() => {
+    const addprosup = () => {
+      setProductionsupervisorTotal(parseFloat(production_supervisor_quantity || 0) * 
+      parseFloat(production_supervisor_units_number || 0) * 
+      parseFloat(production_supervisor_rate || 0))
+    }
+    const timer = setTimeout(() => {
+      addprosup();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [production_supervisor_quantity, production_supervisor_units_number, 
+    production_supervisor_rate]);
+
+  // function to calculate production coordinator on change
+  useEffect(() => {
+    const addprocoor = () => {
+      setProductioncoordinatorTotal(parseFloat(production_coordinator_quantity || 0) * 
+      parseFloat(production_coordinator_units_number || 0) * 
+      parseFloat(production_coordinator_rate || 0))
+    }
+    const timer = setTimeout(() => {
+      addprocoor();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [production_coordinator_quantity, production_coordinator_units_number, 
+    production_coordinator_rate]);
+
+  // function to calculate unit manager on change
+  useEffect(() => {
+    const addunitman = () => {
+      setUnitmanagerTotal(parseFloat(unit_manager_quantity || 0) * 
+      parseFloat(unit_manager_units_number || 0) * 
+      parseFloat(unit_manager_rate || 0))
+    }
+    const timer = setTimeout(() => {
+      addunitman();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [unit_manager_quantity, unit_manager_units_number, 
+    unit_manager_rate]);
+  
+  // function to calculate location manager on change
+  useEffect(() => {
+    const addlocman = () => {
+      setLocationmanagerTotal(parseFloat(location_manager_quantity || 0) * 
+      parseFloat(location_manager_units_number || 0) * 
+      parseFloat(location_manager_rate || 0))
+    }
+    const timer = setTimeout(() => {
+      addlocman();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [location_manager_quantity, location_manager_units_number, 
+    location_manager_rate]);
+  
+  // function to calculate location manager assistant on change
+  useEffect(() => {
+    const addlocmanass = () => {
+      setLocationmanagerassistantTotal(parseFloat(location_manager_assistant_quantity || 0) * 
+      parseFloat(location_manager_assistant_units_number || 0) * 
+      parseFloat(location_manager_assistant_rate || 0))
+    }
+    const timer = setTimeout(() => {
+      addlocmanass();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [location_manager_assistant_quantity, location_manager_assistant_units_number, 
+    location_manager_assistant_rate]);
+  
+  // function to calculate production assistants on change
+  useEffect(() => {
+    const addproass = () => {
+      setProductionassistantsTotal(parseFloat(production_assistants_quantity || 0) * 
+      parseFloat(production_assistants_units_number || 0) * 
+      parseFloat(production_assistants_rate || 0))
+    }
+    const timer = setTimeout(() => {
+      addproass();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [production_assistants_quantity, production_assistants_units_number, 
+    production_assistants_rate]);
+
+  // function to calculate production secretary on change
+  useEffect(() => {
+    const addprosec = () => {
+      setProductionsecretaryTotal(parseFloat(production_secretary_quantity || 0) * 
+      parseFloat(production_secretary_units_number || 0) * 
+      parseFloat(production_secretary_rate || 0))
+    }
+    const timer = setTimeout(() => {
+      addprosec();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [production_secretary_quantity, production_secretary_units_number, 
+    production_secretary_rate]);
+
+  // function to calculate production accountant on change
+  useEffect(() => {
+    const addproacc = () => {
+      setProductionaccountantTotal(parseFloat(production_accountant_quantity || 0) * 
+      parseFloat(production_accountant_units_number || 0) * 
+      parseFloat(production_accountant_rate || 0))
+    }
+    const timer = setTimeout(() => {
+      addproacc();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [production_accountant_quantity, production_accountant_units_number, 
+    production_accountant_rate]);
+  
+  // function to calculate production accountant on change
+  useEffect(() => {
+    const addproacc = () => {
+      setProductionaccountantTotal(parseFloat(production_accountant_quantity || 0) * 
+      parseFloat(production_accountant_units_number || 0) * 
+      parseFloat(production_accountant_rate || 0))
+    }
+    const timer = setTimeout(() => {
+      addproacc();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [production_accountant_quantity, production_accountant_units_number, 
+    production_accountant_rate]);
+
+  // function to calculate scriptsupervisor continuity on change
+  useEffect(() => {
+    const addsupcon = () => {
+      setScriptsupervisorcontinuityTotal(parseFloat(scriptsupervisor_continuity_quantity || 0) * 
+      parseFloat(scriptsupervisor_continuity_units_number || 0) * 
+      parseFloat(scriptsupervisor_continuity_rate || 0))
+    }
+    const timer = setTimeout(() => {
+      addsupcon();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [scriptsupervisor_continuity_quantity, scriptsupervisor_continuity_units_number, 
+    scriptsupervisor_continuity_rate]);
+  
+  // function to calculate unit manager on change
+  useEffect(() => {
+    const addpayrol = () => {
+      setPayrollTotal(parseFloat(payroll_quantity || 0) * 
+      parseFloat(payroll_units_number || 0) * 
+      parseFloat(payroll_rate || 0))
+    }
+    const timer = setTimeout(() => {
+      addpayrol();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [payroll_quantity, payroll_units_number, 
+    payroll_rate]);
+
+  // function to calculate other production on change
+  useEffect(() => {
+    const addothpro = () => {
+      setOtherproductionTotal(parseFloat(other_production_quantity || 0) * 
+      parseFloat(other_production_units_number || 0) * 
+      parseFloat(other_production_rate || 0))
+    }
+    const timer = setTimeout(() => {
+      addothpro();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [other_production_quantity, other_production_units_number, 
+    other_production_rate]);
+
+  // function to calculate directors assistant on change
+  useEffect(() => {
+    const adddirass = () => {
+      setDirectorsassistantTotal(parseFloat(directors_assistant_quantity || 0) * 
+      parseFloat(directors_assistant_units_number || 0) * 
+      parseFloat(directors_assistant_rate || 0))
+    }
+    const timer = setTimeout(() => {
+      adddirass();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [directors_assistant_quantity, directors_assistant_units_number, 
+    directors_assistant_rate]);
+
+  // function to calculate 1st assistant director on change
+  useEffect(() => {
+    const addasdir1 = () => {
+      setAssistantdirector1stTotal(parseFloat(assistant_director_1st_quantity || 0) * 
+      parseFloat(assistant_director_1st_units_number || 0) * 
+      parseFloat(assistant_director_1st_rate || 0))
+    }
+    const timer = setTimeout(() => {
+      addasdir1();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [assistant_director_1st_quantity, assistant_director_1st_units_number, 
+    assistant_director_1st_rate]);
+
+  // function to calculate 2nd assistant director on change
+  useEffect(() => {
+    const addasdir2 = () => {
+      setAssistantdirector2ndTotal(parseFloat(assistant_director_2nd_quantity || 0) * 
+      parseFloat(assistant_director_2nd_units_number || 0) * 
+      parseFloat(assistant_director_2nd_rate || 0))
+    }
+    const timer = setTimeout(() => {
+      addasdir2();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [assistant_director_2nd_quantity, assistant_director_2nd_units_number, 
+    assistant_director_2nd_rate]);
+
+  // function to calculate 3rd assistant director on change
+  useEffect(() => {
+    const addasdir3 = () => {
+      setAssistantdirector3rdTotal(parseFloat(assistant_director_3rd_quantity || 0) * 
+      parseFloat(assistant_director_3rd_units_number || 0) * 
+      parseFloat(assistant_director_3rd_rate || 0))
+    }
+    const timer = setTimeout(() => {
+      addasdir3();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [assistant_director_3rd_quantity, assistant_director_3rd_units_number, 
+    assistant_director_3rd_rate]);
+
+  // function to calculate craft services on change
+  useEffect(() => {
+    const addcraser = () => {
+      setCraftservicesTotal(parseFloat(craft_services_quantity || 0) * 
+      parseFloat(craft_services_units_number || 0) * 
+      parseFloat(craft_services_rate || 0))
+    }
+    const timer = setTimeout(() => {
+      addcraser();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [craft_services_quantity, craft_services_units_number, 
+    craft_services_rate]);
+
+  // Production Total postData 
+  const [productionTotal, setProductionTotal] = useState(0);
+
+  // Production handleChange 
+  const handleChangePro = (event) => {
+    setPostDataProduction({
+      ...postDataProduction,
+      [event.target.name]: parseFloat(event.target.value || 0 ),
+    });
+  }; 
+
+  // Production handleChange Text 
+  const handleChangeProText = (event) => {
+    setPostDataProduction({
+      ...postDataProduction,
+      [event.target.name]: event.target.value,
+    });
+  }; 
+
+  // function to add all production on change
+  useEffect(() => {
+    const addPro = () => {
+      setProductionTotal(
+      parseFloat(productionmanagerTotal || 0) +
+      parseFloat(productionsupervisorTotal || 0) +
+      parseFloat(productioncoordinatorTotal || 0) +
+      parseFloat(unitmanagerTotal || 0) +
+      parseFloat(locationmanagerTotal || 0) +
+      parseFloat(locationmanagerassistantTotal || 0) +
+      parseFloat(productionassistantsTotal || 0) +
+      parseFloat(productionsecretaryTotal || 0) +
+      parseFloat(productionaccountantTotal || 0) +
+      parseFloat(productionaccountantassistantTotal || 0) +
+      parseFloat(scriptsupervisorcontinuityTotal || 0) +
+      parseFloat(payrollTotal || 0) +
+      parseFloat(otherproductionTotal || 0) +
+      parseFloat(directorsassistantTotal || 0) +
+      parseFloat(assistantdirector1stTotal || 0) +
+      parseFloat(assistantdirector2ndTotal || 0) +
+      parseFloat(assistantdirector3rdTotal || 0) +
+      parseFloat(craftservicesTotal || 0)
+      )
+    }
+    const timer = setTimeout(() => {
+      addPro();
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [productionmanagerTotal, productionsupervisorTotal, productioncoordinatorTotal,
+    unitmanagerTotal, locationmanagerTotal, locationmanagerassistantTotal,
+    productionassistantsTotal, productionsecretaryTotal, productionaccountantTotal,
+    productionaccountantassistantTotal, scriptsupervisorcontinuityTotal,
+    payrollTotal, otherproductionTotal, directorsassistantTotal,
+    assistantdirector1stTotal, assistantdirector2ndTotal,
+    assistantdirector3rdTotal, craftservicesTotal,
+    ]);
 
 
   // <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
@@ -4813,6 +5179,151 @@ function BudgetEdit() {
           extras_units_name, extras_rate,
           casting_director, extras_casting,
           other_cast, fringes_taxes_cast, rights_payments_cast,});
+        // production
+        const {production_manager_quantity,
+          production_manager_units_number,
+          production_manager_units_name,
+          production_manager_rate,
+          production_supervisor_quantity,
+          production_supervisor_units_number,
+          production_supervisor_units_name,
+          production_supervisor_rate,
+          production_coordinator_quantity,
+          production_coordinator_units_number,
+          production_coordinator_units_name,
+          production_coordinator_rate,
+          unit_manager_quantity,
+          unit_manager_units_number,
+          unit_manager_units_name,
+          unit_manager_rate,
+          location_manager_quantity,
+          location_manager_units_number,
+          location_manager_units_name,
+          location_manager_rate,
+          location_manager_assistant_quantity,
+          location_manager_assistant_units_number,
+          location_manager_assistant_units_name,
+          location_manager_assistant_rate,
+          production_assistants_quantity,
+          production_assistants_units_number,
+          production_assistants_units_name,
+          production_assistants_rate,
+          production_secretary_quantity,
+          production_secretary_units_number,
+          production_secretary_units_name,
+          production_secretary_rate,
+          production_accountant_quantity,
+          production_accountant_units_number,
+          production_accountant_units_name,
+          production_accountant_rate,
+          production_accountant_assistant_quantity,
+          production_accountant_assistant_units_number,
+          production_accountant_assistant_units_name,
+          production_accountant_assistant_rate,
+          scriptsupervisor_continuity_quantity,
+          scriptsupervisor_continuity_units_number,
+          scriptsupervisor_continuity_units_name,
+          scriptsupervisor_continuity_rate,
+          payroll_quantity,
+          payroll_units_number,
+          payroll_units_name,
+          payroll_rate,
+          other_production_quantity,
+          other_production_units_number,
+          other_production_units_name,
+          other_production_rate,
+          directors_assistant_quantity,
+          directors_assistant_units_number,
+          directors_assistant_units_name,
+          directors_assistant_rate,
+          assistant_director_1st_quantity,
+          assistant_director_1st_units_number,
+          assistant_director_1st_units_name,
+          assistant_director_1st_rate,
+          assistant_director_2nd_quantity,
+          assistant_director_2nd_units_number,
+          assistant_director_2nd_units_name,
+          assistant_director_2nd_rate,
+          assistant_director_3rd_quantity,
+          assistant_director_3rd_units_number,
+          assistant_director_3rd_units_name,
+          assistant_director_3rd_rate,
+          craft_services_quantity,
+          craft_services_units_number,
+          craft_services_units_name,
+          craft_services_rate} = data.results[0];
+          setPostDataCast({production_manager_quantity,
+            production_manager_units_number,
+            production_manager_units_name,
+            production_manager_rate,
+            production_supervisor_quantity,
+            production_supervisor_units_number,
+            production_supervisor_units_name,
+            production_supervisor_rate,
+            production_coordinator_quantity,
+            production_coordinator_units_number,
+            production_coordinator_units_name,
+            production_coordinator_rate,
+            unit_manager_quantity,
+            unit_manager_units_number,
+            unit_manager_units_name,
+            unit_manager_rate,
+            location_manager_quantity,
+            location_manager_units_number,
+            location_manager_units_name,
+            location_manager_rate,
+            location_manager_assistant_quantity,
+            location_manager_assistant_units_number,
+            location_manager_assistant_units_name,
+            location_manager_assistant_rate,
+            production_assistants_quantity,
+            production_assistants_units_number,
+            production_assistants_units_name,
+            production_assistants_rate,
+            production_secretary_quantity,
+            production_secretary_units_number,
+            production_secretary_units_name,
+            production_secretary_rate,
+            production_accountant_quantity,
+            production_accountant_units_number,
+            production_accountant_units_name,
+            production_accountant_rate,
+            production_accountant_assistant_quantity,
+            production_accountant_assistant_units_number,
+            production_accountant_assistant_units_name,
+            production_accountant_assistant_rate,
+            scriptsupervisor_continuity_quantity,
+            scriptsupervisor_continuity_units_number,
+            scriptsupervisor_continuity_units_name,
+            scriptsupervisor_continuity_rate,
+            payroll_quantity,
+            payroll_units_number,
+            payroll_units_name,
+            payroll_rate,
+            other_production_quantity,
+            other_production_units_number,
+            other_production_units_name,
+            other_production_rate,
+            directors_assistant_quantity,
+            directors_assistant_units_number,
+            directors_assistant_units_name,
+            directors_assistant_rate,
+            assistant_director_1st_quantity,
+            assistant_director_1st_units_number,
+            assistant_director_1st_units_name,
+            assistant_director_1st_rate,
+            assistant_director_2nd_quantity,
+            assistant_director_2nd_units_number,
+            assistant_director_2nd_units_name,
+            assistant_director_2nd_rate,
+            assistant_director_3rd_quantity,
+            assistant_director_3rd_units_number,
+            assistant_director_3rd_units_name,
+            assistant_director_3rd_rate,
+            craft_services_quantity,
+            craft_services_units_number,
+            craft_services_units_name,
+            craft_services_rate});
 
       } catch (err) {
         console.log(err);
@@ -5062,7 +5573,7 @@ function BudgetEdit() {
     formData.append("assistantdirector2nd_total", assistantdirector2ndTotal);
     formData.append("assistantdirector3rd_total", assistantdirector3rdTotal);
     formData.append("craftservices_total", craftservicesTotal);
-    formData.append("music", music);
+    formData.append("production_total", productionTotal);
 
     try {
       const { data } = await axiosReq.put(`/budgets/${budgetId}/`, formData);
