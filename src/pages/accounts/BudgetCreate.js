@@ -5110,7 +5110,7 @@ function BudgetCreate() {
         type="text"
         className={styles.Input}
         name="production_manager_rate"
-        value={actorsproduction_manager_rate_rate}
+        value={production_manager_rate}
         onChange={handleChangePro}
             />
     </Form.Group>
@@ -5132,6 +5132,664 @@ function BudgetCreate() {
             />
     </Form.Group>
     {errors?.productionmanagerTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Production Supervisor */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>7020</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Production Supervisor</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="production_supervisor_quantity" 
+        className={`${styles.Width100} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="production_supervisor_quantity"
+        value={production_supervisor_quantity}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.production_supervisor_quantity?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="production_supervisor_units_number" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="production_supervisor_units_number"
+        value={production_supervisor_units_number}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.production_supervisor_units_number?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="production_supervisor_units_name" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="production_supervisor_units_name"
+        value={production_supervisor_units_name}
+        onChange={handleChangeProText}
+            />
+    </Form.Group>
+    {errors?.production_supervisor_units_name?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="production_supervisor_rate" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="production_supervisor_rate"
+        value={production_supervisor_rate}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.production_supervisor_rate?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="productionsupervisorTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="productionsupervisorTotal"
+        value={productionsupervisorTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.productionsupervisorTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Production Coordinator */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>7030</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Production Coordinator</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="production_coordinator_quantity" 
+        className={`${styles.Width100} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="production_coordinator_quantity"
+        value={production_coordinator_quantity}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.production_coordinator_quantity?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="production_coordinator_units_number" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="production_coordinator_units_number"
+        value={production_coordinator_units_number}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.production_coordinator_units_number?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="production_coordinator_units_name" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="production_coordinator_units_name"
+        value={production_coordinator_units_name}
+        onChange={handleChangeProText}
+            />
+    </Form.Group>
+    {errors?.production_coordinator_units_name?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="production_coordinator_rate" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="production_coordinator_rate"
+        value={production_coordinator_rate}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.production_coordinator_rate?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="productioncoordinatorTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="productioncoordinatorTotal"
+        value={productioncoordinatorTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.productioncoordinatorTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Unit Manager */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>7040</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Unit Manager</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="unit_manager_quantity" 
+        className={`${styles.Width100} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="unit_manager_quantity"
+        value={unit_manager_quantity}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.unit_manager_quantity?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="unit_manager_units_number" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="unit_manager_units_number"
+        value={unit_manager_units_number}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.unit_manager_units_number?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="unit_manager_units_name" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="unit_manager_units_name"
+        value={unit_manager_units_name}
+        onChange={handleChangeProText}
+            />
+    </Form.Group>
+    {errors?.unit_manager_units_name?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="unit_manager_rate" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="unit_manager_rate"
+        value={unit_manager_rate}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.unit_manager_rate?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="unitmanagerTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="unitmanagerTotal"
+        value={unitmanagerTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.unitmanagerTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Location Manager */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>7050</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Location Manager</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="location_manager_quantity" 
+        className={`${styles.Width100} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="location_manager_quantity"
+        value={location_manager_quantity}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.location_manager_quantity?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="location_manager_units_number" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="location_manager_units_number"
+        value={location_manager_units_number}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.location_manager_units_number?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="location_manager_units_name" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="location_manager_units_name"
+        value={location_manager_units_name}
+        onChange={handleChangeProText}
+            />
+    </Form.Group>
+    {errors?.location_manager_units_name?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="location_manager_rate" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="location_manager_rate"
+        value={location_manager_rate}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.location_manager_rate?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="locationmanagerTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="locationmanagerTotal"
+        value={locationmanagerTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.locationmanagerTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Location Manager Assistant */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>7060</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Location Manager Assistant</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="location_manager_assistant_quantity" 
+        className={`${styles.Width100} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="location_manager_assistant_quantity"
+        value={location_manager_assistant_quantity}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.location_manager_assistant_quantity?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="location_manager_assistant_units_number" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="location_manager_assistant_units_number"
+        value={location_manager_assistant_units_number}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.location_manager_assistant_units_number?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="location_manager_assistant_units_name" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="location_manager_assistant_units_name"
+        value={location_manager_assistant_units_name}
+        onChange={handleChangeProText}
+            />
+    </Form.Group>
+    {errors?.location_manager_assistant_units_name?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="location_manager_assistant_rate" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="location_manager_assistant_rate"
+        value={location_manager_assistant_rate}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.location_manager_assistant_rate?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="locationmanagerassistantTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="locationmanagerassistantTotal"
+        value={locationmanagerassistantTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.locationmanagerassistantTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Production Assistants */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>7070</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Production Assistants</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="production_assistants_quantity" 
+        className={`${styles.Width100} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="production_assistants_quantity"
+        value={production_assistants_quantity}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.production_assistants_quantity?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="production_assistants_units_number" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="production_assistants_units_number"
+        value={production_assistants_units_number}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.production_assistants_units_number?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="production_assistants_units_name" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="production_assistants_units_name"
+        value={production_assistants_units_name}
+        onChange={handleChangeProText}
+            />
+    </Form.Group>
+    {errors?.production_assistants_units_name?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="production_assistants_rate" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="production_assistants_rate"
+        value={production_assistants_rate}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.production_assistants_rate?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="productionassistantsTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="productionassistantsTotal"
+        value={productionassistantsTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.productionassistantsTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Production Secretary */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>7080</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Production Secretary</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="production_secretary_quantity" 
+        className={`${styles.Width100} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="production_secretary_quantity"
+        value={production_secretary_quantity}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.production_secretary_quantity?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="production_secretary_units_number" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="production_secretary_units_number"
+        value={production_secretary_units_number}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.production_secretary_units_number?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="production_secretary_units_name" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="production_secretary_units_name"
+        value={production_secretary_units_name}
+        onChange={handleChangeProText}
+            />
+    </Form.Group>
+    {errors?.production_secretary_units_name?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="production_secretary_rate" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="production_secretary_rate"
+        value={production_secretary_rate}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.production_secretary_rate?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="productionsecretaryTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="productionsecretaryTotal"
+        value={productionsecretaryTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.productionsecretaryTotal?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
