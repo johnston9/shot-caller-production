@@ -16,7 +16,7 @@ function BudgetCreate() {
   const { id } = useParams();
 
   // DETAILS -------------------------------
-
+  // Details postData 
   const [postDataDetails, setPostDataDetails] = useState({
     // details
     title: "",
@@ -34,8 +34,9 @@ function BudgetCreate() {
 
   // Details postData values 
   const { 
-    title, series, prodco, format, location, dated, writer,
-    prelimfin, preparedby, approvedby, approvedbyco} = postDataDetails;
+    title, series, prodco, format, location, dated,
+    prelimfin, preparedby, approvedby, approvedbyco,
+    writer} = postDataDetails;
 
   // Details handleChange
   const handleChange_details = (event) => {
@@ -48,11 +49,11 @@ function BudgetCreate() {
   // LENGTH ------------------------
   // Length postData
   const [postDataLength, setPostDataLength] = useState({
-    research: 0,
-    prep: 0,
-    shoot: 0,
-    wrap: 0,
-    post: 0,});
+    research: "",
+    prep: "",
+    shoot: "",
+    wrap: "",
+    post: "",});
 
   // Length postData values
   const { 
@@ -65,14 +66,19 @@ function BudgetCreate() {
   const handleChangeLength = (event) => {
     setPostDataLength({
       ...postDataLength,
-      [event.target.name]: parseFloat(event.target.value || 0 ),
+      [event.target.name]: event.target.value,
     });
   }; 
 
   // function to add all lengths on change
   useEffect(() => {
     const addLength = () => {
-      setPostDataLengthTotal(research + prep + shoot + wrap + post )
+      setPostDataLengthTotal(
+        parseFloat(research || 0) +
+        parseFloat(prep || 0) +
+        parseFloat(shoot || 0) +
+        parseFloat(wrap || 0) +
+        parseFloat(post || 0)  )
     }
     const timer = setTimeout(() => {
       addLength();
@@ -86,7 +92,7 @@ function BudgetCreate() {
   // prepared by input boxes
   const prepare = (
     <div>
-    <Row className="mt-3">
+    <Row>
     <Col md={6} >
     {/* prelimfin */}
     <Row >
@@ -213,7 +219,7 @@ function BudgetCreate() {
 
   // Details Length Input Boxes
   const detailslength = (
-    <div>
+    <div className="mt-4">
     {/* Titles */}
     <Row className={ `${styles.OverviewBlue} mx-1 mb-2 py-1 text-center`}>
     <Col md={12}>
@@ -524,13 +530,13 @@ function BudgetCreate() {
     </Row>
     </div>
   );
-  
+
   // RIGHTS ----------------------------------------------------
   
   // Rights postData
   const [postDataRights, setPostDataRights] = useState({
-    story_rights: 0,
-    miscellaneous: 0,
+    story_rights: "",
+    miscellaneous: "",
   });
 
   // Rights postData values
@@ -550,7 +556,7 @@ function BudgetCreate() {
   // function to add all rights on change
   useEffect(() => {
     const addRights = () => {
-      setPostDataRightsTotal(story_rights + miscellaneous )
+      setPostDataRightsTotal(parseFloat(story_rights || 0) + parseFloat(miscellaneous ||0) )
     }
     const timer = setTimeout(() => {
       addRights();
@@ -569,7 +575,7 @@ function BudgetCreate() {
     <p className="mb-0">1000</p>
     </Col>
     <Col md={6} >
-    <p className={ `${styles.BoldBlack}`}>RIGHTS</p>
+    <p className={ `${styles.BoldBlack} mb-2`}>RIGHTS</p>
     </Col>
     </Row>
     {/* TITLES */}
@@ -612,7 +618,7 @@ function BudgetCreate() {
     </Col>
     <Col className="mb-0 pb-0" md={2} >
     <Form.Group controlId="story_rights" 
-        className={`${styles.Width95} text-center mb-0 pb-0`} >
+        className={`${styles.Width95} text-center mb-1 pb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -719,7 +725,7 @@ function BudgetCreate() {
   const {research_development, prelim_budget, consultant_expenses,
     office_expenses, staff, travel_expenses_development,
     living_expenses_development, other_development,
-    fringes_taxes_development} = postDataDevelopment
+    fringes_taxes_development,} = postDataDevelopment
 
   // Development Total postData 
   const [developmentTotal, setDevelopmentTotal] = useState(0)
@@ -735,10 +741,17 @@ function BudgetCreate() {
   // function to add all development on change
   useEffect(() => {
     const addDevelopment = () => {
-      setDevelopmentTotal(research_development + prelim_budget + consultant_expenses
-        + office_expenses + staff + travel_expenses_development
-        + living_expenses_development + other_development 
-        + fringes_taxes_development)
+      setDevelopmentTotal(
+      parseFloat(research_development || 0) +
+      parseFloat(prelim_budget || 0) +
+      parseFloat(consultant_expenses || 0) +
+      parseFloat(office_expenses || 0) +
+      parseFloat(staff || 0) +
+      parseFloat(travel_expenses_development || 0) +
+      parseFloat(living_expenses_development || 0) +
+      parseFloat(other_development || 0) +
+      parseFloat(fringes_taxes_development || 0)
+      )
     }
     const timer = setTimeout(() => {
       addDevelopment();
@@ -1136,32 +1149,32 @@ function BudgetCreate() {
     </div>
   );
 
-  // end development -------------------------------------
+  // ------------------------------------------------------
   // SCENARIO --------------------------------------------
   
   // Scenario postData
   const [postDataScenario, setPostDataScenario] = useState({
-    writers_units_number: 0,
+    writers_units_number: "",
     writers_units_name: "",
-    writers_quantity: 0,
-    writers_rate: 0,
-    consultants_units_number: 0,
+    writers_quantity: "",
+    writers_rate: "",
+    consultants_units_number: "",
     consultants_units_name: "",
-    consultants_quantity: 0,
-    consultants_rate: 0,
-    editors_units_number: 0,
+    consultants_quantity: "",
+    consultants_rate: "",
+    editors_units_number: "",
     editors_units_name: "",
-    editors_quantity: 0,
-    editors_rate: 0,
-    admin_scenario_units_number: 0,
+    editors_quantity: "",
+    editors_rate: "",
+    admin_scenario_units_number: "",
     admin_scenario_units_name: "",
-    admin_scenario_quantity: 0,
-    admin_scenario_rate: 0,
-    office_expenses_scenario: 0,
-    travel_expenses_scenario: 0,
-    living_expenses_scenario: 0,
-    other_scenario: 0,
-    fringes_taxes_scenario: 0,
+    admin_scenario_quantity: "",
+    admin_scenario_rate: "",
+    office_expenses_scenario: "",
+    travel_expenses_scenario: "",
+    living_expenses_scenario: "",
+    other_scenario: "",
+    fringes_taxes_scenario: "",
   });
 
   // Scenario postData values
@@ -1174,58 +1187,56 @@ function BudgetCreate() {
     admin_scenario_units_number, admin_scenario_units_name,
     admin_scenario_quantity, admin_scenario_rate,
     office_expenses_scenario, travel_expenses_scenario,
-    living_expenses_scenario, other_scenario,
-    fringes_taxes_scenario} = postDataScenario
+    living_expenses_scenario, other_scenario, 
+    fringes_taxes_scenario } = postDataScenario
 
   // Writers Total postData
   const [writersTotal, setWritersTotal] = useState(0);
-  // Writers Total postData 
+  // Consultants Total postData 
   const [consultantsTotal, setConsultantsTotal] = useState(0);
-  // Writers Total postData 
+  // Editors Total postData
   const [editorsTotal, setEditorsTotal] = useState(0);
   // Admin Total postData 
   const [adminScenarioTotal, setAdminScenarioTotal] = useState(0);
 
+  // Calculate Functions
   // function to calculate writers on change
   useEffect(() => {
     const addWriters = () => {
-      setWritersTotal(writers_units_number *
-        writers_quantity * writers_rate )
+      setWritersTotal(parseFloat(writers_units_number || 0) * parseFloat(writers_quantity || 0) * parseFloat(writers_rate || 0))
     }
     const timer = setTimeout(() => {
       addWriters();
-    }, 1000);
+    }, 2000);
 
     return () => {
       clearTimeout(timer);
     };
-  }, [writers_units_number,
-    writers_quantity, writers_rate]);
+  }, [writers_units_number, writers_quantity, writers_rate]);
 
   // function to calculate consultants on change
   useEffect(() => {
     const addConsultants = () => {
-      setConsultantsTotal(consultants_units_number *
-        consultants_quantity * consultants_rate, )
+      setConsultantsTotal(
+        parseFloat(consultants_units_number || 0) * parseFloat(consultants_quantity || 0) * parseFloat(consultants_rate || 0))
     }
     const timer = setTimeout(() => {
       addConsultants();
-    }, 1000);
+    }, 2000);
 
     return () => {
       clearTimeout(timer);
     };
-  }, [consultants_units_number,
-    consultants_quantity, consultants_rate, ])
+  }, [consultants_units_number, consultants_quantity, consultants_rate, ])
 
   // function to calculate editors on change
   useEffect(() => {
     const addEditors = () => {
-      setEditorsTotal(editors_units_number * editors_quantity * editors_rate )
+      setEditorsTotal(parseFloat(editors_units_number || 0) * parseFloat(editors_quantity || 0) * parseFloat(editors_rate || 0))
     }
     const timer = setTimeout(() => {
       addEditors();
-    }, 1000);
+    }, 2000);
 
     return () => {
       clearTimeout(timer);
@@ -1235,8 +1246,9 @@ function BudgetCreate() {
   // function to calculate admin on change
   useEffect(() => {
     const addAdminScenario = () => {
-      setAdminScenarioTotal(admin_scenario_units_number *
-        admin_scenario_quantity * admin_scenario_rate )
+      setAdminScenarioTotal(parseFloat(admin_scenario_units_number || 0) *
+      parseFloat(admin_scenario_quantity || 0) *
+      parseFloat(admin_scenario_rate || 0))
     }
     const timer = setTimeout(() => {
       addAdminScenario();
@@ -1255,7 +1267,7 @@ function BudgetCreate() {
   const handleChangeScenario = (event) => {
     setPostDataScenario({
       ...postDataScenario,
-      [event.target.name]: parseFloat(event.target.value || 0 ),
+      [event.target.name]: event.target.value,
     });
   }; 
 
@@ -1270,9 +1282,17 @@ function BudgetCreate() {
   // function to add all scenario on change
   useEffect(() => {
     const addScenario = () => {
-      setScenarioTotal(writersTotal + consultantsTotal + editorsTotal +
-        office_expenses_scenario + adminScenarioTotal + travel_expenses_scenario +
-    living_expenses_scenario + other_scenario + fringes_taxes_scenario)
+      setScenarioTotal(
+        parseFloat(writersTotal || 0) +
+      parseFloat(consultantsTotal || 0) +
+      parseFloat(editorsTotal || 0) +
+      parseFloat(adminScenarioTotal || 0) +
+      parseFloat(travel_expenses_scenario || 0) +
+      parseFloat(office_expenses_scenario || 0) +
+      parseFloat(living_expenses_scenario || 0) +
+      parseFloat(other_scenario || 0) +
+      parseFloat(fringes_taxes_scenario || 0) 
+      )
     }
     const timer = setTimeout(() => {
       addScenario();
@@ -1283,8 +1303,7 @@ function BudgetCreate() {
     };
   }, [writersTotal, consultantsTotal, editorsTotal,
     office_expenses_scenario, adminScenarioTotal, travel_expenses_scenario,
-    living_expenses_scenario, other_scenario, fringes_taxes_scenario
-  ]);
+    living_expenses_scenario, other_scenario, fringes_taxes_scenario ]);
 
   // Scenario input boxes
   const scenario = (
@@ -1908,7 +1927,8 @@ function BudgetCreate() {
     </Row>
     </div>
   );
-  // end scenario ------------------------------------------------
+
+  // end Scenario -----------------------------------------
 
   // PRODUCERS DIRECTORS --------------------------------------------
   
@@ -1953,11 +1973,11 @@ function BudgetCreate() {
     living_expenses_producers_dirs,
     other_producers_dirs,
     fringes_taxes_producers_dirs,
-    } = postDataProducersDirs
+    } = postDataProducersDirs;
 
   // TOTALS
   // Exec Producers Total postData
-  const [execProducersTotal, setExecProducersTotal] = useState(0);
+  const [execProducersTotal, setExecProducersTotal] = useState("");
   // Producers Total postData
   const [producersTotal, setProducersTotal] = useState(0);
   // Line Producers Total postData
@@ -1970,8 +1990,9 @@ function BudgetCreate() {
   const [directorsTotal, setDirectorsTotal] = useState(0);
   // 2nd Unit Directors Total postData
   const [unit2DirectorsTotal, setUnit2DirectorsTotal] = useState(0);
+
   // ProducersDirs Total postData 
-  const [producersDirsTotal, setProducersDirsTotal] = useState(0);
+  const [producersDirsTotal, setProducersDirsTotal] = useState(0)
 
   // CALCULATE FUNCTIONS
   // function to calculate Exec Producers on change
@@ -2084,11 +2105,18 @@ function BudgetCreate() {
   // function to add all ProducersDirs on change
   useEffect(() => {
     const addProducersDirs = () => {
-      setProducersDirsTotal(execProducersTotal +
-        producersTotal + lineProducersTotal + coProducersTotal +
-        assocProducersTotal + directorsTotal + unit2DirectorsTotal +
-        travel_expenses_producers_dirs + living_expenses_producers_dirs +
-        other_producers_dirs + fringes_taxes_producers_dirs,)
+      setProducersDirsTotal(
+        parseFloat(execProducersTotal || 0) +
+        parseFloat(producersTotal || 0) +
+        parseFloat(lineProducersTotal || 0) +
+        parseFloat(coProducersTotal || 0) +
+        parseFloat(assocProducersTotal || 0) +
+        parseFloat(directorsTotal || 0) +
+        parseFloat(unit2DirectorsTotal || 0) +
+        parseFloat(travel_expenses_producers_dirs || 0) +
+        parseFloat(living_expenses_producers_dirs || 0) +
+        parseFloat(other_producers_dirs || 0) +
+        parseFloat(fringes_taxes_producers_dirs || 0) )
     }
     const timer = setTimeout(() => {
       addProducersDirs();
@@ -2106,7 +2134,7 @@ function BudgetCreate() {
   const handleChangeProducersDirs = (event) => {
     setPostDataProducersDirs({
       ...postDataProducersDirs,
-      [event.target.name]: parseFloat(event.target.value || 0 ),
+      [event.target.name]: event.target.value,
     });
   }; 
 
@@ -2788,7 +2816,7 @@ function BudgetCreate() {
     </Row>
     </div>
   );
-  // end producers-directors -------------------------------
+  // end producers-directors
 
   // STARS / MUSIC ------------------------------------------
   // Rights postData
@@ -2817,13 +2845,13 @@ function BudgetCreate() {
   } = postDataStarsMusic;
 
   // StarsMusic Total postData 
-  const [starsMusicTotal, setStarsMusicTotal] = useState(0);
+  const [starsMusicTotal, setStarsMusicTotal] = useState("")
 
   // StarsMusic handleChange
   const handleChangeStarsMusic = (event) => {
     setPostDataStarsMusic({
       ...postDataStarsMusic,
-      [event.target.name]: parseFloat(event.target.value || 0 ),
+      [event.target.name]: event.target.value,
     });
   }; 
 
@@ -2831,11 +2859,19 @@ function BudgetCreate() {
   useEffect(() => {
     const addStarsMusic = () => {
       setStarsMusicTotal(
-    stars, stars_rights_payments + travel_expenses_stars +
-    living_expenses_stars + other_stars + fringes_taxes_stars +
-    music + music_supervisor + travel_expenses_music +
-    living_expenses_music + music_rights_addl_songs +
-    other_music + fringes_taxes_music
+        parseFloat(stars || 0) +
+        parseFloat(stars_rights_payments || 0) +
+        parseFloat(travel_expenses_stars || 0) +
+        parseFloat(living_expenses_stars || 0) +
+        parseFloat(other_stars || 0) +
+        parseFloat(fringes_taxes_stars || 0) +
+        parseFloat(music || 0) +
+        parseFloat(music_supervisor || 0) +
+        parseFloat(travel_expenses_music || 0) +
+        parseFloat(living_expenses_music || 0) +
+        parseFloat(music_rights_addl_songs || 0) +
+        parseFloat(other_music || 0) +
+        parseFloat(fringes_taxes_music || 0)
        )
     }
     const timer = setTimeout(() => {
@@ -2848,7 +2884,8 @@ function BudgetCreate() {
   }, [stars, stars_rights_payments, travel_expenses_stars,
     living_expenses_stars, other_stars, fringes_taxes_stars,
     music, music_supervisor, travel_expenses_music, living_expenses_music,
-    music_rights_addl_songs, other_music, fringes_taxes_music]);
+    music_rights_addl_songs, other_music, fringes_taxes_music
+  ]);
 
   // StarsMusic input boxes
   const starsmusic = (
@@ -3374,59 +3411,7 @@ function BudgetCreate() {
     </Row>
     </div>
   );
-  // end stars music
-
-  // Above the line total
-
-  // Above the line Total postData 
-  const [aboveTheLineTotal, setAboveTheLineTotal] = useState(0);
-  // function to add all Above the line totals on change
-  useEffect(() => {
-    const addAboveTheLine = () => {
-      setAboveTheLineTotal(
-        parseFloat(postDataRightsTotal || 0) +
-        parseFloat(developmentTotal || 0) +
-        parseFloat(scenarioTotal || 0) +
-        parseFloat(producersDirsTotal || 0) +
-        parseFloat(starsMusicTotal || 0))
-      }
-    const timer = setTimeout(() => {
-      addAboveTheLine();
-    }, 1000);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [postDataRightsTotal, developmentTotal, scenarioTotal,
-    producersDirsTotal, starsMusicTotal]);
-
-  // Above the line input box
-  const abovetheline = (
-    <div className="my-5 pl-3">
-    <Row>
-    <Col className={ `${styles.Overview}  my-0 py-2`} md={10} >
-    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL ABOVE THE LINE</p>
-    </Col>
-    <Col md={2} >
-    <Form.Group controlId="aboveTheLineTotal" 
-          className={`${styles.Width95} text-center pt-1 mb-0`} >
-          <Form.Control 
-          type="text"
-          className={styles.Input}
-          name="aboveTheLineTotal"
-          value={aboveTheLineTotal}
-          readOnly
-              />
-      </Form.Group>
-      {errors?.aboveTheLineTotal?.map((message, idx) => (
-          <Alert variant="warning" key={idx}>
-          {message}
-          </Alert>
-      ))}
-    </Col>
-    </Row>
-    </div>
-  );
+  // end stars music---------------------------
 
   // BELOW THE LINE - "B" PRODUCTION
 
@@ -3593,14 +3578,14 @@ function BudgetCreate() {
     };
   }, [extras_units_number, extras_quantity, extras_rate]);
 
-  // Cast Total postData
+  // Cast Total postData 
   const [castTotal, setCastTotal] = useState(0);
 
   // Cast handleChange 
   const handleChangeCast = (event) => {
     setPostDataCast({
       ...postDataCast,
-      [event.target.name]: parseFloat(event.target.value || 0 ),
+      [event.target.name]: event.target.value,
     });
   }; 
 
@@ -4452,82 +4437,82 @@ function BudgetCreate() {
     </div>
   )
 
-  // PRODUCTION STAFF -----------------------------------
+  // PRODUCTION STAFF ------------------------------------------
 
   // Production postData
   const [postDataProduction, setPostDataProduction] = useState({
-    production_manager_quantity: 0,
-    production_manager_units_number: 0,
+    production_manager_quantity: "",
+    production_manager_units_number: "",
     production_manager_units_name: "",
-    production_manager_rate: 0,
-    production_supervisor_quantity: 0,
-    production_supervisor_units_number: 0,
+    production_manager_rate: "",
+    production_supervisor_quantity: "",
+    production_supervisor_units_number: "",
     production_supervisor_units_name: "",
-    production_supervisor_rate: 0,
-    production_coordinator_quantity: 0,
-    production_coordinator_units_number: 0,
+    production_supervisor_rate: "",
+    production_coordinator_quantity: "",
+    production_coordinator_units_number: "",
     production_coordinator_units_name: "",
-    production_coordinator_rate: 0,
-    unit_manager_quantity: 0,
-    unit_manager_units_number: 0,
+    production_coordinator_rate: "",
+    unit_manager_quantity: "",
+    unit_manager_units_number: "",
     unit_manager_units_name: "",
-    unit_manager_rate: 0,
-    location_manager_quantity: 0,
-    location_manager_units_number: 0,
+    unit_manager_rate: "",
+    location_manager_quantity: "",
+    location_manager_units_number: "",
     location_manager_units_name: "",
-    location_manager_rate: 0,
-    location_manager_assistant_quantity: 0,
-    location_manager_assistant_units_number: 0,
+    location_manager_rate: "",
+    location_manager_assistant_quantity: "",
+    location_manager_assistant_units_number: "",
     location_manager_assistant_units_name: "",
-    location_manager_assistant_rate: 0,
-    production_assistants_quantity: 0,
-    production_assistants_units_number: 0,
+    location_manager_assistant_rate: "",
+    production_assistants_quantity: "",
+    production_assistants_units_number: "",
     production_assistants_units_name: "",
-    production_assistants_rate: 0,
-    production_secretary_quantity: 0,
-    production_secretary_units_number: 0,
+    production_assistants_rate: "",
+    production_secretary_quantity: "",
+    production_secretary_units_number: "",
     production_secretary_units_name: "",
-    production_secretary_rate: 0,
-    production_accountant_quantity: 0,
-    production_accountant_units_number: 0,
+    production_secretary_rate: "",
+    production_accountant_quantity: "",
+    production_accountant_units_number: "",
     production_accountant_units_name: "",
-    production_accountant_rate: 0,
-    production_accountant_assistant_quantity: 0,
-    production_accountant_assistant_units_number: 0,
+    production_accountant_rate: "",
+    production_accountant_assistant_quantity: "",
+    production_accountant_assistant_units_number: "",
     production_accountant_assistant_units_name: "",
-    production_accountant_assistant_rate: 0,
-    scriptsupervisor_continuity_quantity: 0,
-    scriptsupervisor_continuity_units_number: 0,
+    production_accountant_assistant_rate: "",
+    scriptsupervisor_continuity_quantity: "",
+    scriptsupervisor_continuity_units_number: "",
     scriptsupervisor_continuity_units_name: "",
-    scriptsupervisor_continuity_rate: 0,
-    payroll_quantity: 0,
-    payroll_units_number: 0,
+    scriptsupervisor_continuity_rate: "",
+    payroll_quantity: "",
+    payroll_units_number: "",
     payroll_units_name: "",
-    payroll_rate: 0,
-    other_production_quantity: 0,
-    other_production_units_number: 0,
+    payroll_rate: "",
+    other_production_quantity: "",
+    other_production_units_number: "",
     other_production_units_name: "",
-    other_production_rate: 0,
-    directors_assistant_quantity: 0,
-    directors_assistant_units_number: 0,
+    other_production_rate: "",
+    directors_assistant_quantity: "",
+    directors_assistant_units_number: "",
     directors_assistant_units_name: "",
-    directors_assistant_rate: 0,
-    assistant_director_1st_quantity: 0,
-    assistant_director_1st_units_number: 0,
+    directors_assistant_rate: "",
+    assistant_director_1st_quantity: "",
+    assistant_director_1st_units_number: "",
     assistant_director_1st_units_name: "",
-    assistant_director_1st_rate: 0,
-    assistant_director_2nd_quantity: 0,
-    assistant_director_2nd_units_number: 0,
+    assistant_director_1st_rate: "",
+    assistant_director_2nd_quantity: "",
+    assistant_director_2nd_units_number: "",
     assistant_director_2nd_units_name: "",
-    assistant_director_2nd_rate: 0,
-    assistant_director_3rd_quantity: 0,
-    assistant_director_3rd_units_number: 0,
+    assistant_director_2nd_rate: "",
+    assistant_director_3rd_quantity: "",
+    assistant_director_3rd_units_number: "",
     assistant_director_3rd_units_name: "",
-    assistant_director_3rd_rate: 0,
-    craft_services_quantity: 0,
-    craft_services_units_number: 0,
+    assistant_director_3rd_rate: "",
+    craft_services_quantity: "",
+    craft_services_units_number: "",
     craft_services_units_name: "",
-    craft_services_rate: 0,
+    craft_services_rate: "",
   });
 
   // Production postData values
@@ -4951,13 +4936,13 @@ function BudgetCreate() {
     craft_services_rate]);
 
   // Production Total postData 
-  const [productionTotal, setProductionTotal] = useState(0);
+  const [productionstaffTotal, setProductionstaffTotal] = useState(0);
 
   // Production handleChange 
   const handleChangePro = (event) => {
     setPostDataProduction({
       ...postDataProduction,
-      [event.target.name]: parseFloat(event.target.value || 0 ),
+      [event.target.name]: event.target.value,
     });
   }; 
 
@@ -4972,7 +4957,7 @@ function BudgetCreate() {
   // function to add all production on change
   useEffect(() => {
     const addPro = () => {
-      setProductionTotal(
+      setProductionstaffTotal(
       parseFloat(productionmanagerTotal || 0) +
       parseFloat(productionsupervisorTotal || 0) +
       parseFloat(productioncoordinatorTotal || 0) +
@@ -5008,7 +4993,7 @@ function BudgetCreate() {
     assistantdirector1stTotal, assistantdirector2ndTotal,
     assistantdirector3rdTotal, craftservicesTotal,
     ]);
-
+  
   // production input boxes
   const production = (
     <div className="mt-5">
@@ -5796,10 +5781,1141 @@ function BudgetCreate() {
     ))}
     </Col>
     </Row>
+    {/* Production Accountant */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>7090</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Production Accountant</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="production_accountant_quantity" 
+        className={`${styles.Width100} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="production_accountant_quantity"
+        value={production_secretary_quantity}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.production_accountant_quantity?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="production_accountant_units_number" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="production_accountant_units_number"
+        value={production_accountant_units_number}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.production_accountant_units_number?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="production_accountant_units_name" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="production_accountant_units_name"
+        value={production_accountant_units_name}
+        onChange={handleChangeProText}
+            />
+    </Form.Group>
+    {errors?.production_accountant_units_name?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="production_accountant_rate" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="production_accountant_rate"
+        value={production_accountant_rate}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.production_accountant_rate?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="productionaccountantTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="productionaccountantTotal"
+        value={productionaccountantTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.productionaccountantTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Production Accountant Assistant */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>7100</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Production Accountant Assistant</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="production_accountant_assistant_quantity" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="production_accountant_assistant_quantity"
+        value={production_accountant_assistant_quantity}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.production_accountant_assistant_quantity?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="production_accountant_assistant_units_number" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="production_accountant_assistant_units_number"
+        value={production_accountant_assistant_units_number}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.production_accountant_assistant_units_number?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="production_accountant_assistant_units_name" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="production_accountant_assistant_units_name"
+        value={production_accountant_assistant_units_name}
+        onChange={handleChangeProText}
+            />
+    </Form.Group>
+    {errors?.production_accountant_assistant_units_name?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="production_accountant_assistant_rate" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="production_accountant_assistant_rate"
+        value={production_accountant_assistant_rate}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.production_accountant_assistant_rate?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="productionaccountantassistantTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="productionaccountantassistantTotal"
+        value={productionaccountantassistantTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.productionaccountantassistantTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Script Supervisor / Continuity */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>7110</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Production Accountant Assistant</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="scriptsupervisor_continuity_quantity" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="scriptsupervisor_continuity_quantity"
+        value={scriptsupervisor_continuity_quantity}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.scriptsupervisor_continuity_quantity?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="scriptsupervisor_continuity_units_number" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="scriptsupervisor_continuity_units_number"
+        value={scriptsupervisor_continuity_units_number}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.scriptsupervisor_continuity_units_number?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="scriptsupervisor_continuity_units_name" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="scriptsupervisor_continuity_units_name"
+        value={scriptsupervisor_continuity_units_name}
+        onChange={handleChangeProText}
+            />
+    </Form.Group>
+    {errors?.scriptsupervisor_continuity_units_name?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="scriptsupervisor_continuity_rate" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="scriptsupervisor_continuity_rate"
+        value={scriptsupervisor_continuity_rate}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.scriptsupervisor_continuity_rate?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="scriptsupervisorcontinuityTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="scriptsupervisorcontinuityTotal"
+        value={scriptsupervisorcontinuityTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.scriptsupervisorcontinuityTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Payroll */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>7120</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Payroll</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="payroll_quantity" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="payroll_quantity"
+        value={payroll_quantity}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.payroll_quantity?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="payroll_units_number" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="payroll_units_number"
+        value={payroll_units_number}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.payroll_units_number?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="payroll_units_name" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="payroll_units_name"
+        value={payroll_units_name}
+        onChange={handleChangeProText}
+            />
+    </Form.Group>
+    {errors?.payroll_units_name?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="payroll_rate" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="payroll_rate"
+        value={payroll_rate}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.payroll_rate?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="payrollTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="payrollTotal"
+        value={payrollTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.payrollTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Other Production */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>7130</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Other Production</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="other_production_quantity" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="other_production_quantity"
+        value={other_production_quantity}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.other_production_quantity?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="other_production_units_number" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="other_production_units_number"
+        value={other_production_units_number}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.other_production_units_number?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="other_production_units_name" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="other_production_units_name"
+        value={other_production_units_name}
+        onChange={handleChangeProText}
+            />
+    </Form.Group>
+    {errors?.other_production_units_name?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="other_production_rate" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="other_production_rate"
+        value={other_production_rate}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.other_production_rate?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="otherproductionTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="otherproductionTotal"
+        value={otherproductionTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.otherproductionTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Directors Assistant */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>7140</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Director's Assistant</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="directors_assistant_quantity" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="directors_assistant_quantity"
+        value={directors_assistant_quantity}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.directors_assistant_quantity?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="directors_assistant_units_number" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="directors_assistant_units_number"
+        value={directors_assistant_units_number}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.directors_assistant_units_number?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="directors_assistant_units_name" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="directors_assistant_units_name"
+        value={directors_assistant_units_name}
+        onChange={handleChangeProText}
+            />
+    </Form.Group>
+    {errors?.directors_assistant_units_name?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="directors_assistant_rate" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="directors_assistant_rate"
+        value={directors_assistant_rate}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.directors_assistant_rate?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="directorsassistantTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="directorsassistantTotal"
+        value={directorsassistantTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.directorsassistantTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* 1st Assistant Director */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>7150</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>1st Assistant Director</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="assistant_director_1st_quantity" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="assistant_director_1st_quantity"
+        value={assistant_director_1st_quantity}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.assistant_director_1st_quantity?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="assistant_director_1st_units_number" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="assistant_director_1st_units_number"
+        value={assistant_director_1st_units_number}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.assistant_director_1st_units_number?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="assistant_director_1st_units_name" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="assistant_director_1st_units_name"
+        value={assistant_director_1st_units_name}
+        onChange={handleChangeProText}
+            />
+    </Form.Group>
+    {errors?.assistant_director_1st_units_name?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="assistant_director_1st_rate" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="assistant_director_1st_rate"
+        value={assistant_director_1st_rate}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.assistant_director_1st_rate?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="assistantdirector1stTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="assistantdirector1stTotal"
+        value={assistantdirector1stTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.assistantdirector1stTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* 2nd Assistant Director */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>7160</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>2nd Assistant Director</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="assistant_director_2nd_quantity" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="assistant_director_2nd_quantity"
+        value={assistant_director_2nd_quantity}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.assistant_director_2nd_quantity?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="assistant_director_2nd_units_number" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="assistant_director_2nd_units_number"
+        value={assistant_director_2nd_units_number}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.assistant_director_2nd_units_number?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="assistant_director_2nd_units_name" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="assistant_director_2nd_units_name"
+        value={assistant_director_2nd_units_name}
+        onChange={handleChangeProText}
+            />
+    </Form.Group>
+    {errors?.assistant_director_2nd_units_name?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="assistant_director_2nd_rate" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="assistant_director_2nd_rate"
+        value={assistant_director_2nd_rate}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.assistant_director_2nd_rate?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="assistantdirector2ndTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="assistantdirector2ndTotal"
+        value={assistantdirector2ndTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.assistantdirector2ndTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* 3rd Assistant Director */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>7170</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>3rd Assistant Director</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="assistant_director_3rd_quantity" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="assistant_director_3rd_quantity"
+        value={assistant_director_3rd_quantity}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.assistant_director_3rd_quantity?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="assistant_director_3rd_units_number" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="assistant_director_3rd_units_number"
+        value={assistant_director_3rd_units_number}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.assistant_director_3rd_units_number?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="assistant_director_3rd_units_name" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="assistant_director_3rd_units_name"
+        value={assistant_director_3rd_units_name}
+        onChange={handleChangeProText}
+            />
+    </Form.Group>
+    {errors?.assistant_director_3rd_units_name?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="assistant_director_3rd_rate" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="assistant_director_3rd_rate"
+        value={assistant_director_3rd_rate}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.assistant_director_3rd_rate?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="assistantdirector3rdTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="assistantdirector3rdTotal"
+        value={assistantdirector3rdTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.assistantdirector3rdTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Craft Services */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>7180</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Craft Services</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="craft_services_quantity" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="craft_services_quantity"
+        value={craft_services_quantity}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.craft_services_quantity?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="craft_services_units_number" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="craft_services_units_number"
+        value={craft_services_units_number}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.craft_services_units_number?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="craft_services_units_name" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="craft_services_units_name"
+        value={craft_services_units_name}
+        onChange={handleChangeProText}
+            />
+    </Form.Group>
+    {errors?.craft_services_units_name?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="craft_services_rate" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="craft_services_rate"
+        value={craft_services_rate}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.craft_services_rate?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="craftservicesTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="craftservicesTotal"
+        value={craftservicesTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.craftservicesTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Production Staff Total */}
+    <Row className="mt-3">
+    <Col md={1} >
+    </Col>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL PRODUCTION STAFF</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="productionstaffTotal" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="productionstaffTotal"
+        value={productionstaffTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.productionstaffTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
     </div>
   )
 
-  // ..............
+  //TOTALS--------------------------
+
+  // Above the line total --------------------------
+
+  // Above the line Total postData 
+  const [aboveTheLineTotal, setAboveTheLineTotal] = useState(0);
+  // function to add all Above the line totals on change
+
+  useEffect(() => {
+    const addAboveTheLine = () => {
+      setAboveTheLineTotal(
+        parseFloat(postDataRightsTotal || 0) +
+        parseFloat(developmentTotal || 0) +
+        parseFloat(scenarioTotal || 0) +
+        parseFloat(producersDirsTotal || 0) +
+        parseFloat(starsMusicTotal || 0))
+      }
+    const timer = setTimeout(() => {
+      addAboveTheLine();
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [postDataRightsTotal, developmentTotal, scenarioTotal,
+    producersDirsTotal, starsMusicTotal]);
+
+  // Above the line input box
+  const abovethelinetotal = (
+    <div className="my-5 pl-3">
+    <Row>
+    <Col className={ `${styles.Overview}  my-0 py-2`} md={10} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL ABOVE THE LINE</p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="aboveTheLineTotal" 
+          className={`${styles.Width95} text-center pt-1 mb-0`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="aboveTheLineTotal"
+          value={aboveTheLineTotal}
+          readOnly
+              />
+      </Form.Group>
+      {errors?.aboveTheLineTotal?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+    </Col>
+    </Row>
+    </div>
+  );
+
+  // Below the line B total
+
+  // Below the line B Total postData 
+  const [belowTheLineBTotal, setBelowTheLineBTotal] = useState(0);
+
+  // function to add all Below the line totals on change
+  useEffect(() => {
+    const addbelowB = () => {
+      setBelowTheLineBTotal(
+        parseFloat(castTotal || 0) +
+        parseFloat(productionstaffTotal || 0) 
+        )
+      }
+    const timer = setTimeout(() => {
+      addbelowB();
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [castTotal, productionstaffTotal, 
+  ]);
+
+  // Below the line input box
+  const belowthelineBtotal = (
+    <div className="my-5 pl-3">
+    <Row>
+    <Col className={ `${styles.Overview}  my-0 py-2`} md={10} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL BELOW THE LINE - "B" PRODUCTION</p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="belowTheLineBTotal" 
+          className={`${styles.Width95} text-center pt-1 mb-0`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="belowTheLineBTotal"
+          value={belowTheLineBTotal}
+          readOnly
+              />
+      </Form.Group>
+      {errors?.belowTheLineBTotal?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+    </Col>
+    </Row>
+    </div>
+  );
+
+  // Grand total---------------------------
+
+  // Grand Total postData 
+  const [grandTotal, setGrandTotal] = useState(0);
+
+  // function to add all totals on change
+  useEffect(() => {
+    const addGrand = () => {
+      setGrandTotal(
+        parseFloat(aboveTheLineTotal || 0) +
+        parseFloat(belowTheLineBTotal || 0) 
+        )
+      }
+    const timer = setTimeout(() => {
+      addGrand();
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [aboveTheLineTotal, belowTheLineBTotal,]);
+
+  // Grand input box
+  const grandtotal = (
+    <div className="my-5 pl-3">
+    <Row>
+    <Col className={ `${styles.Overview}  my-0 py-2`} md={10} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>GRAND TOTAL</p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="grandTotal" 
+          className={`${styles.Width95} text-center pt-1 mb-0`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="grandTotal"
+          value={grandTotal}
+          readOnly
+              />
+      </Form.Group>
+      {errors?.grandTotal?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+    </Col>
+    </Row>
+    </div>
+  );
+
+  // end totals-------------------------
+
   // Buttons
   const buttons = (
     <div className="text-center mt-3">    
@@ -5819,6 +6935,10 @@ function BudgetCreate() {
     event.preventDefault();
     const formData = new FormData();
     formData.append("project", id );
+    // totals
+    formData.append("above_the_line_total", aboveTheLineTotal);
+    formData.append("below_the_lineB_total", belowTheLineBTotal);
+    formData.append("grand_total", grandTotal);
     // prepared by
     formData.append("prelimfin", prelimfin);
     formData.append("preparedby", preparedby);
@@ -5926,7 +7046,6 @@ function BudgetCreate() {
     formData.append("other_music", other_music);
     formData.append("fringes_taxes_music", fringes_taxes_music);
     formData.append("stars_music_total", starsMusicTotal);
-    formData.append("above_the_line_total", aboveTheLineTotal);
     // Cast
     formData.append("principals_quantity", principals_quantity);
     formData.append("principals_units_number", principals_units_number);
@@ -6055,7 +7174,7 @@ function BudgetCreate() {
     formData.append("assistantdirector2nd_total", assistantdirector2ndTotal);
     formData.append("assistantdirector3rd_total", assistantdirector3rdTotal);
     formData.append("craftservices_total", craftservicesTotal);
-    formData.append("production_total", productionTotal);
+    formData.append("productionstaff_total", productionstaffTotal);
 
     try {
       const { data } = await axiosReq.post("/budgets/", formData);
@@ -6101,13 +7220,16 @@ function BudgetCreate() {
     {scenario}
     {producersDirs}
     {starsmusic}
-    {abovetheline}
+    {abovethelinetotal}
     <Row className={ `${styles.OverviewBlue} mx-1 my-5 py-1 text-center`}>
     <Col md={12}>
     <h5 className={ `${styles.BoldBlack}`}>BELOW THE LINE - "B" PRODUCTION</h5>
     </Col>
     </Row>
     {cast}
+    {production}
+    {belowthelineBtotal}
+    {grandtotal}
     {/* buttons */}
     <Row>
     <Col>
