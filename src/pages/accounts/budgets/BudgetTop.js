@@ -11,7 +11,8 @@
 const BudgetTop = (props) => {
 const {setShowTop, budget} = props;
 
-const {dated,prelimfin,
+const {above_the_line_total,
+  dated,prelimfin,
   title, series, prodco, writer, format, location,
   research, prep, shoot, wrap, post, length_total,
   preparedby, approvedby, approvedbyco,

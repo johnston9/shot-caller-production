@@ -2,10 +2,31 @@
   margin-bottom: 0;
 }
 
+.ButtonLine {
+  background-color: #fff;
+  border-top: 3px solid #fff;
+}
+
+.Button {
+  color: aqua;
+  cursor: pointer;
+}
+
+.Button:hover {
+  color: rgb(34, 153, 153);
+}
+
 .Close {
   cursor: pointer;
   color: #33e6e0;
 }
+
+/* .Close {
+  color: rgb(32, 201, 201);
+  padding-right: 5px;
+  cursor: pointer;
+  font-size: .75rem;
+} */
 
 .Top {
     background-color: #1ea7ae;

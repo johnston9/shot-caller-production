@@ -15,6 +15,8 @@ function BudgetCreate() {
   const history = useHistory();
   const { id } = useParams();
 
+  const [showInfoLen, setShowInfoLen] = useState(false);
+
   // DETAILS -------------------------------
   // Details postData 
   const [postDataDetails, setPostDataDetails] = useState({
@@ -540,7 +542,7 @@ function BudgetCreate() {
   });
 
   // Rights postData values
-  const {story_rights, miscellaneous} = postDataRights
+  const {story_rights, miscellaneous} = postDataRights;
 
   // Rights Total postData 
   const [postDataRightsTotal, setPostDataRightsTotal] = useState(0)
