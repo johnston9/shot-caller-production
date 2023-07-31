@@ -1,11 +1,11 @@
 /* Component in the BudgetPage Component to display the budget data */
 import React, { useState } from 'react';
-import styles from "../../styles/Account.module.css";
-import appStyles from "../../App.module.css";
+import styles from "../../../styles/Account.module.css";
+import appStyles from "../../../App.module.css";
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import { Link, useHistory } from 'react-router-dom';
-import btnStyles from "../../styles/Button.module.css";
+import btnStyles from "../../../styles/Button.module.css";
 import Button from "react-bootstrap/Button";
 import Budgetcover from './BudgetCover';
 import BudgetTop from './BudgetTop';

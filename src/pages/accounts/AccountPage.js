@@ -45,6 +45,7 @@ function AccountPage() {
 
   useEffect(() => {
     fetchData();
+    // eslint-disable-next-line
   }, [id, setProfileData]);
 
   return (

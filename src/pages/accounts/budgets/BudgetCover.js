@@ -1,7 +1,7 @@
 /* Component in the Budget Component to display 
    the Budget Cover page  */
 import React from 'react';
-import styles from "../../styles/Account.module.css";
+import styles from "../../../styles/Account.module.css";
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 

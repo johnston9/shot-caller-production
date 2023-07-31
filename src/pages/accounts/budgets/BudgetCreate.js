@@ -1,26 +1,20 @@
-/* Component in the Budget component to edit Budgets
-<Col className={ `${styles.Overview} my-0 py-0`} md={6} >
-    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL</p>
-    </Col>
-*/
+/* Component in the Account component to create Budgets */
 import React, { useEffect, useState } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import styles from "../../styles/Account.module.css";
-import btnStyles from "../../styles/Button.module.css";
+import styles from "../../../styles/Account.module.css";
+import btnStyles from "../../../styles/Button.module.css";
 import Alert from "react-bootstrap/Alert";
-import { axiosReq } from "../../api/axiosDefaults";
+import { axiosReq } from "../../../api/axiosDefaults";
 import { useHistory, useParams } from 'react-router-dom';
 
-function BudgetEdit() {
+function BudgetCreate() {
   const [errors, setErrors] = useState({});
   const history = useHistory();
   const { id } = useParams();
 
-  // budget id
-  const [budgetId, setBudgetId] = useState("");
   // DETAILS -------------------------------
   // Details postData 
   const [postDataDetails, setPostDataDetails] = useState({
@@ -55,11 +49,11 @@ function BudgetEdit() {
   // LENGTH ------------------------
   // Length postData
   const [postDataLength, setPostDataLength] = useState({
-    research: "",
-    prep: "",
-    shoot: "",
-    wrap: "",
-    post: "",});
+    research: 0,
+    prep: 0,
+    shoot: 0,
+    wrap: 0,
+    post: 0,});
 
   // Length postData values
   const { 
@@ -72,7 +66,7 @@ function BudgetEdit() {
   const handleChangeLength = (event) => {
     setPostDataLength({
       ...postDataLength,
-      [event.target.name]: event.target.value,
+      [event.target.name]: parseFloat(event.target.value || 0 ),
     });
   }; 
 
@@ -541,8 +535,8 @@ function BudgetEdit() {
   
   // Rights postData
   const [postDataRights, setPostDataRights] = useState({
-    story_rights: "",
-    miscellaneous: "",
+    story_rights: 0,
+    miscellaneous: 0,
   });
 
   // Rights postData values
@@ -562,7 +556,8 @@ function BudgetEdit() {
   // function to add all rights on change
   useEffect(() => {
     const addRights = () => {
-      setPostDataRightsTotal(parseFloat(story_rights || 0) + parseFloat(miscellaneous ||0) )
+      setPostDataRightsTotal(parseFloat(story_rights || 0) + 
+      parseFloat(miscellaneous ||0) )
     }
     const timer = setTimeout(() => {
       addRights();
@@ -1160,27 +1155,27 @@ function BudgetEdit() {
   
   // Scenario postData
   const [postDataScenario, setPostDataScenario] = useState({
-    writers_units_number: "",
+    writers_units_number: 0,
     writers_units_name: "",
-    writers_quantity: "",
-    writers_rate: "",
-    consultants_units_number: "",
+    writers_quantity: 0,
+    writers_rate: 0,
+    consultants_units_number: 0,
     consultants_units_name: "",
-    consultants_quantity: "",
-    consultants_rate: "",
-    editors_units_number: "",
-    editors_units_name: "",
-    editors_quantity: "",
-    editors_rate: "",
-    admin_scenario_units_number: "",
+    consultants_quantity: 0,
+    consultants_rate: 0,
+    editors_scenario_units_number: 0,
+    editors_scenario_units_name: "",
+    editors_scenario_quantity: 0,
+    editors_scenario_rate: 0,
+    admin_scenario_units_number: 0,
     admin_scenario_units_name: "",
-    admin_scenario_quantity: "",
-    admin_scenario_rate: "",
-    office_expenses_scenario: "",
-    travel_expenses_scenario: "",
-    living_expenses_scenario: "",
-    other_scenario: "",
-    fringes_taxes_scenario: "",
+    admin_scenario_quantity: 0,
+    admin_scenario_rate: 0,
+    office_expenses_scenario: 0,
+    travel_expenses_scenario: 0,
+    living_expenses_scenario: 0,
+    other_scenario: 0,
+    fringes_taxes_scenario: 0,
   });
 
   // Scenario postData values
@@ -1188,20 +1183,36 @@ function BudgetEdit() {
     writers_quantity, writers_rate,
     consultants_units_number, consultants_units_name,
     consultants_quantity, consultants_rate,
-    editors_units_number, editors_units_name,
-    editors_quantity, editors_rate,
+    editors_scenario_units_number, editors_scenario_units_name,
+    editors_scenario_quantity, editors_scenario_rate,
     admin_scenario_units_number, admin_scenario_units_name,
     admin_scenario_quantity, admin_scenario_rate,
     office_expenses_scenario, travel_expenses_scenario,
     living_expenses_scenario, other_scenario, 
-    fringes_taxes_scenario } = postDataScenario
+    fringes_taxes_scenario } = postDataScenario;
+  
+  // Scenario handleChange 
+  const handleChangeScenario = (event) => {
+    setPostDataScenario({
+      ...postDataScenario,
+      [event.target.name]: parseFloat(event.target.value || 0 ),
+    });
+  }; 
+
+  // Scenario handleChange Text 
+  const handleChangeScenarioText = (event) => {
+    setPostDataScenario({
+      ...postDataScenario,
+      [event.target.name]: event.target.value,
+    });
+  }; 
 
   // Writers Total postData
   const [writersTotal, setWritersTotal] = useState(0);
   // Consultants Total postData 
   const [consultantsTotal, setConsultantsTotal] = useState(0);
   // Editors Total postData
-  const [editorsTotal, setEditorsTotal] = useState(0);
+  const [editorsscenarioTotal, setEditorsscenarioTotal] = useState(0);
   // Admin Total postData 
   const [adminScenarioTotal, setAdminScenarioTotal] = useState(0);
 
@@ -1238,7 +1249,9 @@ function BudgetEdit() {
   // function to calculate editors on change
   useEffect(() => {
     const addEditors = () => {
-      setEditorsTotal(parseFloat(editors_units_number || 0) * parseFloat(editors_quantity || 0) * parseFloat(editors_rate || 0))
+      setEditorsscenarioTotal(parseFloat(editors_scenario_units_number || 0) * 
+      parseFloat(editors_scenario_quantity || 0) * 
+      parseFloat(editors_scenario_rate || 0))
     }
     const timer = setTimeout(() => {
       addEditors();
@@ -1247,7 +1260,8 @@ function BudgetEdit() {
     return () => {
       clearTimeout(timer);
     };
-  }, [editors_units_number, editors_quantity, editors_rate])
+  }, [editors_scenario_units_number, 
+    editors_scenario_quantity, editors_scenario_rate]);
 
   // function to calculate admin on change
   useEffect(() => {
@@ -1269,29 +1283,13 @@ function BudgetEdit() {
   // Scenario Total postData 
   const [scenarioTotal, setScenarioTotal] = useState(0);
 
-  // Scenario handleChange 
-  const handleChangeScenario = (event) => {
-    setPostDataScenario({
-      ...postDataScenario,
-      [event.target.name]: event.target.value,
-    });
-  }; 
-
-  // Scenario handleChange Text 
-  const handleChangeScenarioText = (event) => {
-    setPostDataScenario({
-      ...postDataScenario,
-      [event.target.name]: event.target.value,
-    });
-  }; 
-
   // function to add all scenario on change
   useEffect(() => {
     const addScenario = () => {
       setScenarioTotal(
-        parseFloat(writersTotal || 0) +
+      parseFloat(writersTotal || 0) +
       parseFloat(consultantsTotal || 0) +
-      parseFloat(editorsTotal || 0) +
+      parseFloat(editorsscenarioTotal || 0) +
       parseFloat(adminScenarioTotal || 0) +
       parseFloat(travel_expenses_scenario || 0) +
       parseFloat(office_expenses_scenario || 0) +
@@ -1307,9 +1305,10 @@ function BudgetEdit() {
     return () => {
       clearTimeout(timer);
     };
-  }, [writersTotal, consultantsTotal, editorsTotal,
+  }, [writersTotal, consultantsTotal, editorsscenarioTotal,
     office_expenses_scenario, adminScenarioTotal, travel_expenses_scenario,
-    living_expenses_scenario, other_scenario, fringes_taxes_scenario ]);
+    living_expenses_scenario, other_scenario, 
+    fringes_taxes_scenario ]);
 
   // Scenario input boxes
   const scenario = (
@@ -1543,85 +1542,85 @@ function BudgetEdit() {
     <p className={`${styles.Underline}`}>Editors</p>
     </Col>
     <Col className="px-1 mx-0"  md={1} >
-    <Form.Group controlId="editors_quantity" 
+    <Form.Group controlId="editors_scenario_quantity" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="editors_quantity"
-        value={editors_quantity}
+        name="editors_scenario_quantity"
+        value={editors_scenario_quantity}
         onChange={handleChangeScenario}
             />
     </Form.Group>
-    {errors?.editors_quantity?.map((message, idx) => (
+    {errors?.editors_scenario_quantity?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     <Col className="px-1 mx-0"  md={1} >
-    <Form.Group controlId="editors_units_number" 
+    <Form.Group controlId="editors_scenario_units_number" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="editors_units_number"
-        value={editors_units_number}
+        name="editors_scenario_units_number"
+        value={editors_scenario_units_number}
         onChange={handleChangeScenario}
             />
     </Form.Group>
-    {errors?.editors_units_number?.map((message, idx) => (
+    {errors?.editors_scenario_units_number?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     <Col className="px-1 mx-0"  md={1} >
-    <Form.Group controlId="editors_units_name" 
+    <Form.Group controlId="editors_scenario_units_name" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="editors_units_name"
-        value={editors_units_name}
+        name="editors_scenario_units_name"
+        value={editors_scenario_units_name}
         onChange={handleChangeScenarioText}
             />
     </Form.Group>
-    {errors?.editors_units_name?.map((message, idx) => (
+    {errors?.editors_scenario_units_name?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     <Col className="px-1 mx-0"  md={1} >
-    <Form.Group controlId="editors_rate" 
+    <Form.Group controlId="editors_scenario_rate" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="editors_rate"
-        value={editors_rate}
+        name="editors_scenario_rate"
+        value={editors_scenario_rate}
         onChange={handleChangeScenario}
             />
     </Form.Group>
-    {errors?.editors_rate?.map((message, idx) => (
+    {errors?.editors_scenario_rate?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     <Col  md={2} >
-    <Form.Group controlId="editorsTotal" 
+    <Form.Group controlId="editorsscenarioTotal" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="editorsTotal"
-        value={editorsTotal}
+        name="editorsscenarioTotal"
+        value={editorsscenarioTotal}
         onChange={handleChangeScenario}
             />
     </Form.Group>
-    {errors?.editorsTotal?.map((message, idx) => (
+    {errors?.editorsscenarioTotal?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
@@ -1981,9 +1980,17 @@ function BudgetEdit() {
     fringes_taxes_producers_dirs,
     } = postDataProducersDirs;
 
+  // ProducersDirs handleChange
+  const handleChangeProducersDirs = (event) => {
+    setPostDataProducersDirs({
+      ...postDataProducersDirs,
+      [event.target.name]: parseFloat(event.target.value || 0 ),
+    });
+  };
+
   // TOTALS
   // Exec Producers Total postData
-  const [execProducersTotal, setExecProducersTotal] = useState("");
+  const [execProducersTotal, setExecProducersTotal] = useState(0);
   // Producers Total postData
   const [producersTotal, setProducersTotal] = useState(0);
   // Line Producers Total postData
@@ -2135,14 +2142,6 @@ function BudgetEdit() {
     assocProducersTotal, directorsTotal, unit2DirectorsTotal,
     travel_expenses_producers_dirs, living_expenses_producers_dirs,
     other_producers_dirs, fringes_taxes_producers_dirs, ]);
-
-  // ProducersDirs handleChange
-  const handleChangeProducersDirs = (event) => {
-    setPostDataProducersDirs({
-      ...postDataProducersDirs,
-      [event.target.name]: event.target.value,
-    });
-  }; 
 
   // Producers Dirs input boxes
   const producersDirs = (
@@ -2851,7 +2850,7 @@ function BudgetEdit() {
   } = postDataStarsMusic;
 
   // StarsMusic Total postData 
-  const [starsMusicTotal, setStarsMusicTotal] = useState("")
+  const [starsMusicTotal, setStarsMusicTotal] = useState(0)
 
   // StarsMusic handleChange
   const handleChangeStarsMusic = (event) => {
@@ -3474,6 +3473,22 @@ function BudgetEdit() {
     other_cast, fringes_taxes_cast, rights_payments_cast,
   } = postDataCast;
 
+  // Cast handleChange 
+  const handleChangeCast = (event) => {
+    setPostDataCast({
+      ...postDataCast,
+      [event.target.name]: parseFloat(event.target.value || 0 ),
+    });
+  }; 
+
+  // Cast handleChange Text 
+  const handleChangeCastText = (event) => {
+    setPostDataCast({
+      ...postDataCast,
+      [event.target.name]: event.target.value,
+    });
+  }; 
+
   // Principals Total postData
   const [principalsTotal, setPrincipalsTotal] = useState(0);
   // Actors Total postData 
@@ -3586,22 +3601,6 @@ function BudgetEdit() {
 
   // Cast Total postData 
   const [castTotal, setCastTotal] = useState(0);
-
-  // Cast handleChange 
-  const handleChangeCast = (event) => {
-    setPostDataCast({
-      ...postDataCast,
-      [event.target.name]: event.target.value,
-    });
-  }; 
-
-  // Cast handleChange Text 
-  const handleChangeCastText = (event) => {
-    setPostDataCast({
-      ...postDataCast,
-      [event.target.name]: event.target.value,
-    });
-  }; 
 
   // function to add all cast on change
   useEffect(() => {
@@ -4447,78 +4446,78 @@ function BudgetEdit() {
 
   // Production postData
   const [postDataProduction, setPostDataProduction] = useState({
-    production_manager_quantity: "",
-    production_manager_units_number: "",
+    production_manager_quantity: 0,
+    production_manager_units_number: 0,
     production_manager_units_name: "",
-    production_manager_rate: "",
-    production_supervisor_quantity: "",
-    production_supervisor_units_number: "",
+    production_manager_rate: 0,
+    production_supervisor_quantity: 0,
+    production_supervisor_units_number: 0,
     production_supervisor_units_name: "",
-    production_supervisor_rate: "",
-    production_coordinator_quantity: "",
-    production_coordinator_units_number: "",
+    production_supervisor_rate: 0,
+    production_coordinator_quantity: 0,
+    production_coordinator_units_number: 0,
     production_coordinator_units_name: "",
-    production_coordinator_rate: "",
-    unit_manager_quantity: "",
-    unit_manager_units_number: "",
+    production_coordinator_rate: 0,
+    unit_manager_quantity: 0,
+    unit_manager_units_number: 0,
     unit_manager_units_name: "",
-    unit_manager_rate: "",
-    location_manager_quantity: "",
-    location_manager_units_number: "",
+    unit_manager_rate: 0,
+    location_manager_quantity: 0,
+    location_manager_units_number: 0,
     location_manager_units_name: "",
-    location_manager_rate: "",
-    location_manager_assistant_quantity: "",
-    location_manager_assistant_units_number: "",
+    location_manager_rate: 0,
+    location_manager_assistant_quantity: 0,
+    location_manager_assistant_units_number: 0,
     location_manager_assistant_units_name: "",
-    location_manager_assistant_rate: "",
-    production_assistants_quantity: "",
-    production_assistants_units_number: "",
+    location_manager_assistant_rate: 0,
+    production_assistants_quantity: 0,
+    production_assistants_units_number: 0,
     production_assistants_units_name: "",
-    production_assistants_rate: "",
-    production_secretary_quantity: "",
-    production_secretary_units_number: "",
+    production_assistants_rate: 0,
+    production_secretary_quantity: 0,
+    production_secretary_units_number: 0,
     production_secretary_units_name: "",
-    production_secretary_rate: "",
-    production_accountant_quantity: "",
-    production_accountant_units_number: "",
+    production_secretary_rate: 0,
+    production_accountant_quantity: 0,
+    production_accountant_units_number: 0,
     production_accountant_units_name: "",
-    production_accountant_rate: "",
-    production_accountant_assistant_quantity: "",
-    production_accountant_assistant_units_number: "",
+    production_accountant_rate: 0,
+    production_accountant_assistant_quantity: 0,
+    production_accountant_assistant_units_number: 0,
     production_accountant_assistant_units_name: "",
-    production_accountant_assistant_rate: "",
-    scriptsupervisor_continuity_quantity: "",
-    scriptsupervisor_continuity_units_number: "",
+    production_accountant_assistant_rate: 0,
+    scriptsupervisor_continuity_quantity: 0,
+    scriptsupervisor_continuity_units_number: 0,
     scriptsupervisor_continuity_units_name: "",
-    scriptsupervisor_continuity_rate: "",
-    payroll_quantity: "",
-    payroll_units_number: "",
+    scriptsupervisor_continuity_rate: 0,
+    payroll_quantity: 0,
+    payroll_units_number: 0,
     payroll_units_name: "",
-    payroll_rate: "",
-    other_production_quantity: "",
-    other_production_units_number: "",
+    payroll_rate: 0,
+    other_production_quantity: 0,
+    other_production_units_number: 0,
     other_production_units_name: "",
-    other_production_rate: "",
-    directors_assistant_quantity: "",
-    directors_assistant_units_number: "",
+    other_production_rate: 0,
+    directors_assistant_quantity: 0,
+    directors_assistant_units_number: 0,
     directors_assistant_units_name: "",
-    directors_assistant_rate: "",
-    assistant_director_1st_quantity: "",
-    assistant_director_1st_units_number: "",
+    directors_assistant_rate: 0,
+    assistant_director_1st_quantity: 0,
+    assistant_director_1st_units_number: 0,
     assistant_director_1st_units_name: "",
-    assistant_director_1st_rate: "",
-    assistant_director_2nd_quantity: "",
-    assistant_director_2nd_units_number: "",
+    assistant_director_1st_rate: 0,
+    assistant_director_2nd_quantity: 0,
+    assistant_director_2nd_units_number: 0,
     assistant_director_2nd_units_name: "",
-    assistant_director_2nd_rate: "",
-    assistant_director_3rd_quantity: "",
-    assistant_director_3rd_units_number: "",
+    assistant_director_2nd_rate: 0,
+    assistant_director_3rd_quantity: 0,
+    assistant_director_3rd_units_number: 0,
     assistant_director_3rd_units_name: "",
-    assistant_director_3rd_rate: "",
-    craft_services_quantity: "",
-    craft_services_units_number: "",
+    assistant_director_3rd_rate: 0,
+    craft_services_quantity: 0,
+    craft_services_units_number: 0,
     craft_services_units_name: "",
-    craft_services_rate: "",
+    craft_services_rate: 0,
   });
 
   // Production postData values
@@ -4596,6 +4595,22 @@ function BudgetEdit() {
     craft_services_units_name,
     craft_services_rate,
   } = postDataProduction;
+
+  // Production handleChange 
+  const handleChangePro = (event) => {
+    setPostDataProduction({
+      ...postDataProduction,
+      [event.target.name]: parseFloat(event.target.value || 0 ),
+    });
+  }; 
+
+  // Production handleChange Text 
+  const handleChangeProText = (event) => {
+    setPostDataProduction({
+      ...postDataProduction,
+      [event.target.name]: event.target.value,
+    });
+  }; 
 
   // production manager Total postData
   const [productionmanagerTotal, setProductionmanagerTotal] = useState(0);
@@ -4788,22 +4803,22 @@ function BudgetEdit() {
   }, [production_accountant_quantity, production_accountant_units_number, 
     production_accountant_rate]);
   
-  // function to calculate production accountant on change
+  // function to calculate production accountant assistant on change
   useEffect(() => {
-    const addproacc = () => {
-      setProductionaccountantTotal(parseFloat(production_accountant_quantity || 0) * 
-      parseFloat(production_accountant_units_number || 0) * 
-      parseFloat(production_accountant_rate || 0))
+    const addaccass = () => {
+      setProductionaccountantassistantTotal(parseFloat(production_accountant_assistant_quantity || 0) * 
+      parseFloat(production_accountant_assistant_units_number || 0) * 
+      parseFloat(production_accountant_assistant_rate || 0))
     }
     const timer = setTimeout(() => {
-      addproacc();
+      addaccass();
     }, 2000);
 
     return () => {
       clearTimeout(timer);
     };
-  }, [production_accountant_quantity, production_accountant_units_number, 
-    production_accountant_rate]);
+  }, [production_accountant_assistant_quantity, production_accountant_assistant_units_number, 
+    production_accountant_assistant_rate]);
 
   // function to calculate scriptsupervisor continuity on change
   useEffect(() => {
@@ -4943,22 +4958,6 @@ function BudgetEdit() {
 
   // Production Total postData 
   const [productionstaffTotal, setProductionstaffTotal] = useState(0);
-
-  // Production handleChange 
-  const handleChangePro = (event) => {
-    setPostDataProduction({
-      ...postDataProduction,
-      [event.target.name]: event.target.value,
-    });
-  }; 
-
-  // Production handleChange Text 
-  const handleChangeProText = (event) => {
-    setPostDataProduction({
-      ...postDataProduction,
-      [event.target.name]: event.target.value,
-    });
-  }; 
 
   // function to add all production on change
   useEffect(() => {
@@ -6922,10 +6921,7 @@ function BudgetEdit() {
 
   // end totals-------------------------
 
-  // <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
-  //   <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL</p>
-  // </Col>
-
+  // Buttons
   const buttons = (
     <div className="text-center mt-3">    
       <Button
@@ -6939,268 +6935,6 @@ function BudgetEdit() {
       </Button>
     </div>
   );
-
-  // USE EFFECT EDIT
-  // Fetch budget for pre input values
-  useEffect(() => {
-    const handleMount = async () => {
-      try {
-        const { data } = await axiosReq.get(`/budgets/?project=${id}`);
-        console.log(data.results[0])
-        setBudgetId(data.results[0].id);
-        // details
-        const { title, series, prodco, format, location, dated, writer,
-          prelimfin, preparedby, approvedby, approvedbyco} = data.results[0];
-        setPostDataDetails({ title, series, prodco, format, location, dated,
-          writer, prelimfin, preparedby, approvedby, approvedbyco });
-        // length
-        const {research, prep, shoot, wrap, post} = data.results[0];
-        setPostDataLength({research, prep, shoot, wrap, post});
-        // rights
-        const {story_rights, miscellaneous} = data.results[0];
-        setPostDataRights({story_rights, miscellaneous});
-        // development
-        const {research_development, prelim_budget, consultant_expenses,
-          office_expenses, staff, travel_expenses_development,
-          living_expenses_development, other_development,
-          fringes_taxes_development} = data.results[0];
-          setPostDataDevelopment({research_development, prelim_budget, consultant_expenses,
-          office_expenses, staff, travel_expenses_development,
-          living_expenses_development, other_development,
-          fringes_taxes_development});
-        // scenario
-        const {writers_units_number, writers_units_name, writers_quantity, writers_rate,
-          consultants_units_number, consultants_units_name, consultants_quantity, consultants_rate,
-          editors_units_number, editors_units_name, editors_quantity, editors_rate,
-          admin_scenario_units_number, admin_scenario_units_name,
-          admin_scenario_quantity, admin_scenario_rate,
-          office_expenses_scenario, travel_expenses_scenario,
-          living_expenses_scenario, other_scenario,
-          fringes_taxes_scenario} = data.results[0];
-          setPostDataScenario({
-            writers_units_number, writers_units_name, writers_quantity, writers_rate,
-          consultants_units_number, consultants_units_name, consultants_quantity, consultants_rate,
-          editors_units_number, editors_units_name, editors_quantity, editors_rate,
-          admin_scenario_units_number, admin_scenario_units_name,
-          admin_scenario_quantity, admin_scenario_rate,
-          office_expenses_scenario, travel_expenses_scenario,
-          living_expenses_scenario, other_scenario, fringes_taxes_scenario
-          });
-        // producers-directors
-        const {executive_producers_rate, producers_rate,
-          line_producers_rate, co_producers_rate,
-          associate_producers_rate, directors_rate,
-          unit2_directors_rate, executive_producers_quantity,
-          producers_quantity, line_producers_quantity,
-          co_producers_quantity, associate_producers_quantity,
-          directors_quantity, unit2_directors_quantity,
-          travel_expenses_producers_dirs, living_expenses_producers_dirs,
-          other_producers_dirs, fringes_taxes_producers_dirs,
-          } = data.results[0];
-          setPostDataProducersDirs({
-            executive_producers_rate, producers_rate,
-          line_producers_rate, co_producers_rate,
-          associate_producers_rate, directors_rate,
-          unit2_directors_rate, executive_producers_quantity,
-          producers_quantity, line_producers_quantity,
-          co_producers_quantity, associate_producers_quantity,
-          directors_quantity, unit2_directors_quantity,
-          travel_expenses_producers_dirs, living_expenses_producers_dirs,
-          other_producers_dirs, fringes_taxes_producers_dirs,
-        });
-        // stars music
-        const {stars, stars_rights_payments, travel_expenses_stars,
-          living_expenses_stars, other_stars, fringes_taxes_stars,
-          music, music_supervisor, travel_expenses_music, living_expenses_music,
-          music_rights_addl_songs, other_music, 
-          fringes_taxes_music} = data.results[0];
-        setPostDataStarsMusic({stars, stars_rights_payments, travel_expenses_stars,
-          living_expenses_stars, other_stars, fringes_taxes_stars,
-          music, music_supervisor, travel_expenses_music, living_expenses_music,
-          music_rights_addl_songs, other_music, 
-          fringes_taxes_music});
-        // cast
-        const {principals_quantity, principals_units_number,
-          principals_units_name, principals_rate,
-          actors_quantity, actors_units_number, 
-          actors_units_name, actors_rate,
-          stuntcoordinators_quantity, stuntcoordinators_units_number,
-          stuntcoordinators_units_name, stuntcoordinators_rate,
-          stuntperformers_quantity, stuntperformers_units_number,
-          stuntperformers_units_name, stuntperformers_rate,
-          otherperformers_quantity, otherperformers_units_number,
-          otherperformers_units_name, otherperformers_rate,
-          extras_quantity, extras_units_number,
-          extras_units_name, extras_rate,
-          casting_director, extras_casting,
-          other_cast, fringes_taxes_cast, rights_payments_cast,} = data.results[0];
-          setPostDataCast({principals_quantity, principals_units_number,
-          principals_units_name, principals_rate,
-          actors_quantity, actors_units_number, 
-          actors_units_name, actors_rate,
-          stuntcoordinators_quantity, stuntcoordinators_units_number,
-          stuntcoordinators_units_name, stuntcoordinators_rate,
-          stuntperformers_quantity, stuntperformers_units_number,
-          stuntperformers_units_name, stuntperformers_rate,
-          otherperformers_quantity, otherperformers_units_number,
-          otherperformers_units_name, otherperformers_rate,
-          extras_quantity, extras_units_number,
-          extras_units_name, extras_rate,
-          casting_director, extras_casting,
-          other_cast, fringes_taxes_cast, rights_payments_cast,});
-        // production
-        const {production_manager_quantity,
-          production_manager_units_number,
-          production_manager_units_name,
-          production_manager_rate,
-          production_supervisor_quantity,
-          production_supervisor_units_number,
-          production_supervisor_units_name,
-          production_supervisor_rate,
-          production_coordinator_quantity,
-          production_coordinator_units_number,
-          production_coordinator_units_name,
-          production_coordinator_rate,
-          unit_manager_quantity,
-          unit_manager_units_number,
-          unit_manager_units_name,
-          unit_manager_rate,
-          location_manager_quantity,
-          location_manager_units_number,
-          location_manager_units_name,
-          location_manager_rate,
-          location_manager_assistant_quantity,
-          location_manager_assistant_units_number,
-          location_manager_assistant_units_name,
-          location_manager_assistant_rate,
-          production_assistants_quantity,
-          production_assistants_units_number,
-          production_assistants_units_name,
-          production_assistants_rate,
-          production_secretary_quantity,
-          production_secretary_units_number,
-          production_secretary_units_name,
-          production_secretary_rate,
-          production_accountant_quantity,
-          production_accountant_units_number,
-          production_accountant_units_name,
-          production_accountant_rate,
-          production_accountant_assistant_quantity,
-          production_accountant_assistant_units_number,
-          production_accountant_assistant_units_name,
-          production_accountant_assistant_rate,
-          scriptsupervisor_continuity_quantity,
-          scriptsupervisor_continuity_units_number,
-          scriptsupervisor_continuity_units_name,
-          scriptsupervisor_continuity_rate,
-          payroll_quantity,
-          payroll_units_number,
-          payroll_units_name,
-          payroll_rate,
-          other_production_quantity,
-          other_production_units_number,
-          other_production_units_name,
-          other_production_rate,
-          directors_assistant_quantity,
-          directors_assistant_units_number,
-          directors_assistant_units_name,
-          directors_assistant_rate,
-          assistant_director_1st_quantity,
-          assistant_director_1st_units_number,
-          assistant_director_1st_units_name,
-          assistant_director_1st_rate,
-          assistant_director_2nd_quantity,
-          assistant_director_2nd_units_number,
-          assistant_director_2nd_units_name,
-          assistant_director_2nd_rate,
-          assistant_director_3rd_quantity,
-          assistant_director_3rd_units_number,
-          assistant_director_3rd_units_name,
-          assistant_director_3rd_rate,
-          craft_services_quantity,
-          craft_services_units_number,
-          craft_services_units_name,
-          craft_services_rate} = data.results[0];
-          setPostDataCast({production_manager_quantity,
-            production_manager_units_number,
-            production_manager_units_name,
-            production_manager_rate,
-            production_supervisor_quantity,
-            production_supervisor_units_number,
-            production_supervisor_units_name,
-            production_supervisor_rate,
-            production_coordinator_quantity,
-            production_coordinator_units_number,
-            production_coordinator_units_name,
-            production_coordinator_rate,
-            unit_manager_quantity,
-            unit_manager_units_number,
-            unit_manager_units_name,
-            unit_manager_rate,
-            location_manager_quantity,
-            location_manager_units_number,
-            location_manager_units_name,
-            location_manager_rate,
-            location_manager_assistant_quantity,
-            location_manager_assistant_units_number,
-            location_manager_assistant_units_name,
-            location_manager_assistant_rate,
-            production_assistants_quantity,
-            production_assistants_units_number,
-            production_assistants_units_name,
-            production_assistants_rate,
-            production_secretary_quantity,
-            production_secretary_units_number,
-            production_secretary_units_name,
-            production_secretary_rate,
-            production_accountant_quantity,
-            production_accountant_units_number,
-            production_accountant_units_name,
-            production_accountant_rate,
-            production_accountant_assistant_quantity,
-            production_accountant_assistant_units_number,
-            production_accountant_assistant_units_name,
-            production_accountant_assistant_rate,
-            scriptsupervisor_continuity_quantity,
-            scriptsupervisor_continuity_units_number,
-            scriptsupervisor_continuity_units_name,
-            scriptsupervisor_continuity_rate,
-            payroll_quantity,
-            payroll_units_number,
-            payroll_units_name,
-            payroll_rate,
-            other_production_quantity,
-            other_production_units_number,
-            other_production_units_name,
-            other_production_rate,
-            directors_assistant_quantity,
-            directors_assistant_units_number,
-            directors_assistant_units_name,
-            directors_assistant_rate,
-            assistant_director_1st_quantity,
-            assistant_director_1st_units_number,
-            assistant_director_1st_units_name,
-            assistant_director_1st_rate,
-            assistant_director_2nd_quantity,
-            assistant_director_2nd_units_number,
-            assistant_director_2nd_units_name,
-            assistant_director_2nd_rate,
-            assistant_director_3rd_quantity,
-            assistant_director_3rd_units_number,
-            assistant_director_3rd_units_name,
-            assistant_director_3rd_rate,
-            craft_services_quantity,
-            craft_services_units_number,
-            craft_services_units_name,
-            craft_services_rate});
-
-      } catch (err) {
-        console.log(err);
-      }
-    };
-
-    handleMount();
-  }, [history, id]);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -7235,10 +6969,10 @@ function BudgetEdit() {
     formData.append("post", post);
     formData.append("length_total", postDataLengthTotal);
     // ABOVE THE LINE
-    // rights miscellaneous
+    // rights 
     formData.append("story_rights", story_rights);
     formData.append("miscellaneous", miscellaneous);
-    formData.append("rights_total ", postDataRightsTotal); 
+    formData.append("rights_total ", postDataRightsTotal);
     // development
     formData.append("research_development", research_development);
     formData.append("prelim_budget", prelim_budget);
@@ -7248,6 +6982,7 @@ function BudgetEdit() {
     formData.append("travel_expenses_development", travel_expenses_development);
     formData.append("living_expenses_development", living_expenses_development);
     formData.append("other_development", other_development);
+    formData.append("fringes_taxes_development", fringes_taxes_development);
     formData.append("development_total ", developmentTotal);
     // scenario
     formData.append("writers_quantity", writers_quantity);
@@ -7260,11 +6995,11 @@ function BudgetEdit() {
     formData.append("consultants_units_name", consultants_units_name);
     formData.append("consultants_rate", consultants_rate);
     formData.append("consultants_total", consultantsTotal);
-    formData.append("editors_scenario_quantity", editors_quantity);
-    formData.append("editors_scenario_units_number ", editors_units_number);
-    formData.append("editors_scenario_units_name", editors_units_name);
-    formData.append("editors_scenario_rate", editors_rate);
-    formData.append("editors_scenario_total", editorsTotal);
+    formData.append("editors_scenario_quantity", editors_scenario_quantity);
+    formData.append("editors_scenario_units_number ", editors_scenario_units_number);
+    formData.append("editors_scenario_units_name", editors_scenario_units_name);
+    formData.append("editors_scenario_rate", editors_scenario_rate);
+    formData.append("editors_scenario_total", editorsscenarioTotal);
     formData.append("admin_scenario_quantity", admin_scenario_quantity);
     formData.append("admin_scenario_units_number ", admin_scenario_units_number);
     formData.append("admin_scenario_units_name", admin_scenario_units_name);
@@ -7274,6 +7009,7 @@ function BudgetEdit() {
     formData.append("travel_expenses_scenario", travel_expenses_scenario);
     formData.append("living_expenses_scenario", living_expenses_scenario);
     formData.append("other_scenario", other_scenario);
+    formData.append("fringes_taxes_scenario", fringes_taxes_scenario);
     formData.append("scenario_total", scenarioTotal);
     // producers-directors
     formData.append("executive_producers_quantity", executive_producers_quantity);
@@ -7448,7 +7184,7 @@ function BudgetEdit() {
     formData.append("productionstaff_total", productionstaffTotal);
 
     try {
-      const { data } = await axiosReq.put(`/budgets/${budgetId}/`, formData);
+      const { data } = await axiosReq.post("/budgets/", formData);
       console.log(data);
       history.goBack();
     } catch (err) {
@@ -7460,12 +7196,12 @@ function BudgetEdit() {
   };
 
   return (
-    <div className="mt-3 ">
+    <div className="mt-3">
     <Row >
     <Col className={`${styles.Back}`}>
     <Row className={ `${styles.OverviewBlue} mx-1 mb-1 py-3 text-center`}>
     <Col md={12}>
-    <h5 className={ `${styles.BoldBlack}`}>EDIT BUDGET - Project ID: {id}</h5>
+    <h5 className={ `${styles.BoldBlack}`}>CREATE BUDGET - Project ID: {id}</h5>
     </Col>
     </Row>
     <Row className="mt-1 ml-0" >
@@ -7478,7 +7214,7 @@ function BudgetEdit() {
         </Button>
         </Col>
     </Row>
-    <Form className="mt-1 px-3" onSubmit={handleSubmit}>
+    <Form className="mt-3 px-3" onSubmit={handleSubmit}>
     {prepare}
     {detailslength}
     <Row className={ `${styles.OverviewBlue} mx-1 my-5 py-1 text-center`}>
@@ -7501,7 +7237,7 @@ function BudgetEdit() {
     {production}
     {belowthelineBtotal}
     {grandtotal}
-    {/* buttons <hr className={ `${styles.Break}`}></hr> */}
+    {/* buttons */}
     <Row>
     <Col>
       <div className= {`mt-1`} >{buttons} </div>
@@ -7514,4 +7250,4 @@ function BudgetEdit() {
   );
 }
 
-export default BudgetEdit
+export default BudgetCreate

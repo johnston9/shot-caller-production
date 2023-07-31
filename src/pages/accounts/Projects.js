@@ -44,7 +44,7 @@ const Projects = ({id} ) => {
     return () => {
       clearTimeout(timer);
     };
-
+     // eslint-disable-next-line
   }, [query,id]);
 
   return (

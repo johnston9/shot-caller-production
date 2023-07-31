@@ -25,9 +25,9 @@ import Schedules from "./pages/home/Schedules";
 import Callsheets from "./pages/home/Callsheets";
 import Mobile from "./pages/home/Mobile";
 import AccountPage from "./pages/accounts/AccountPage";
-import BudgetPage from "./pages/accounts/BudgetPage";
-import BudgetCreate from "./pages/accounts/BudgetCreate";
-import BudgetEdit from "./pages/accounts/BudgetEdit";
+import BudgetPage from "./pages/accounts/budgets/BudgetPage";
+import BudgetCreate from "./pages/accounts/budgets/BudgetCreate";
+import BudgetEdit from "./pages/accounts/budgets/BudgetEdit";
 import NeedToSignIn from "./pages/chat/NeedToSignIn";
 import ProjectEdit from "./pages/accounts/ProjectEdit";
 

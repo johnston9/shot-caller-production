@@ -2,10 +2,10 @@
  * Contains the Budget Component to which it passes the data*/
 import React, { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
-import useRedirect from "../../hooks/Redirect";
+import useRedirect from "../../../hooks/Redirect";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import { axiosReq } from "../../api/axiosDefaults";
+import { axiosReq } from "../../../api/axiosDefaults";
 import Budget from "./Budget";
 
 const BudgetPage = () => {
