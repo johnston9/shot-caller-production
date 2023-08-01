@@ -9,16 +9,19 @@ import btnStyles from "../../../styles/Button.module.css";
 import Alert from "react-bootstrap/Alert";
 import { axiosReq } from "../../../api/axiosDefaults";
 import { useHistory, useParams } from 'react-router-dom';
+import Rights from "./budgetsections/Rights";
+import Info from "./budgetsections/Info";
 
 function BudgetCreate() {
   const [errors, setErrors] = useState({});
   const history = useHistory();
   const { id } = useParams();
 
-  const [showInfoLen, setShowInfoLen] = useState(false);
+  const [showInfo, setShowInfo] = useState(false);
+  const [showRights, setShowRights] = useState(false);
 
-  // DETAILS -------------------------------
-  // Details postData 
+  // INFO / LENGTH -------------------------
+  // Info postData 
   const [postDataDetails, setPostDataDetails] = useState({
     // details
     title: "",
@@ -34,21 +37,12 @@ function BudgetCreate() {
     approvedbyco: "",
   });
 
-  // Details postData values 
+  // Info postData values 
   const { 
     title, series, prodco, format, location, dated,
     prelimfin, preparedby, approvedby, approvedbyco,
     writer} = postDataDetails;
 
-  // Details handleChange
-  const handleChange_details = (event) => {
-    setPostDataDetails({
-      ...postDataDetails,
-      [event.target.name]: event.target.value,
-    });
-  };
-
-  // LENGTH ------------------------
   // Length postData
   const [postDataLength, setPostDataLength] = useState({
     research: 0,
@@ -58,24 +52,23 @@ function BudgetCreate() {
     post: 0,});
 
   // Length postData values
-  const { 
-    research, prep, shoot, wrap, post,} = postDataLength; 
+  const { research, prep, shoot, wrap, post,} = postDataLength; 
   
   // Length Total postData 
-  const [postDataLengthTotal, setPostDataLengthTotal] = useState(0)
+  const [postDataLengthTotal, setPostDataLengthTotal] = useState(0);
 
-  // Length handleChange
-  const handleChangeLength = (event) => {
-    setPostDataLength({
-      ...postDataLength,
-      [event.target.name]: parseFloat(event.target.value || 0 ),
+  // Info handleChange
+  const handleChange_details = (event) => {
+    setPostDataDetails({
+    ...postDataDetails,
+    [event.target.name]: event.target.value,
     });
-  }; 
+  };
 
   // function to add all lengths on change
   useEffect(() => {
     const addLength = () => {
-      setPostDataLengthTotal(
+    setPostDataLengthTotal(
         parseFloat(research || 0) +
         parseFloat(prep || 0) +
         parseFloat(shoot || 0) +
@@ -83,13 +76,13 @@ function BudgetCreate() {
         parseFloat(post || 0)  )
     }
     const timer = setTimeout(() => {
-      addLength();
+    addLength();
     }, 1000);
 
     return () => {
-      clearTimeout(timer);
+    clearTimeout(timer);
     };
-  }, [research, prep, shoot, wrap, post ]);
+}, [research, prep, shoot, wrap, post ]);
 
   // prepared by input boxes
   const prepare = (
@@ -219,320 +212,6 @@ function BudgetCreate() {
     </div>
   )
 
-  // Details Length Input Boxes
-  const detailslength = (
-    <div className="mt-4">
-    {/* Titles */}
-    <Row className={ `${styles.OverviewBlue} mx-1 mb-2 py-1 text-center`}>
-    <Col md={12}>
-    <h5 className={ `${styles.BoldBlack}`}>PRODUCTION INFO / LENGTH</h5>
-    </Col>
-    </Row>
-    <Row className="mt-3">
-    {/* DETAILS COLUMN */}
-    <Col md={6} >
-    {/* title */}
-    <Row >
-    <Col md={6}>
-    <p className={`${styles.Underline}`}>Title</p>
-    </Col>
-    <Col md={6}>
-    <Form.Group controlId="title" 
-        className={`${styles.Width95} text-center mb-1`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="title"
-        value={title}
-        onChange={handleChange_details}
-            />
-    </Form.Group>
-    {errors?.title?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    </Row>
-    {/* Series */}
-    <Row>
-    <Col md={6}>
-    <p className={`${styles.Underline}`}>Series</p>
-    </Col>
-    <Col md={6}>
-    <Form.Group controlId="series" 
-        className={`${styles.Width95} text-center mb-1`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="series"
-        value={series}
-        onChange={handleChange_details}
-            />
-    </Form.Group>
-    {errors?.series?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    </Row>
-    {/* Prodco */}
-    <Row>
-    <Col md={6}>
-    <p className={`${styles.Underline}`}>Prodco</p>
-    </Col>
-    <Col md={6}>
-    <Form.Group controlId="prodco" 
-        className={`${styles.Width95} text-center mb-1`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="prodco"
-        value={prodco}
-        onChange={handleChange_details}
-            />
-    </Form.Group>
-    {errors?.prodco?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    </Row>
-    {/* Writers */}
-    <Row>
-    <Col md={6}>
-    <p className={`${styles.Underline}`}>Writers</p>
-    </Col>
-    <Col md={6}>
-    <Form.Group controlId="writer" 
-        className={`${styles.Width95} text-center mb-1`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="writer"
-        value={writer}
-        onChange={handleChange_details}
-            />
-    </Form.Group>
-    {errors?.writer?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    </Row>
-    {/* Format */}
-    <Row>
-    <Col md={6}>
-    <p className={`${styles.Underline}`}>Format</p>
-    </Col>
-    <Col md={6}>
-    <Form.Group controlId="format" 
-        className={`${styles.Width95} text-center mb-1`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="format"
-        value={format}
-        onChange={handleChange_details}
-            />
-    </Form.Group>
-    {errors?.format?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    </Row>
-    {/* Location */}
-    <Row>
-    <Col md={6}>
-    <p className={`${styles.Underline}`}>Location</p>
-    </Col>
-    <Col md={6}>
-    <Form.Group controlId="location" 
-        className={`${styles.Width95} text-center mb-1`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="location"
-        value={location}
-        onChange={handleChange_details}
-            />
-    </Form.Group>
-    {errors?.location?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    </Row>
-    </Col>
-    {/* LENGTH COLUMN */}
-    <Col md={6} >
-    {/* Research */}
-    <Row>
-    <Col md={4}>
-    <p className={`${styles.Underline}`}>Development</p>
-    </Col>
-    <Col md={4}>
-    <Form.Group controlId="research" 
-        className={`${styles.Width95} text-center mb-1`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="research"
-        value={research}
-        onChange={handleChangeLength}
-            />
-    </Form.Group>
-    {errors?.research?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    <Col md={4}>
-    <p className={`${styles.Underline}`}>Weeks</p>
-    </Col>
-    </Row>
-    {/* Prep */}
-    <Row>
-    <Col md={4}>
-    <p className={`${styles.Underline}`}>Pre-production</p>
-    </Col>
-    <Col md={4}>
-    <Form.Group controlId="prep" 
-        className={`${styles.Width95} text-center mb-1`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="prep"
-        value={prep}
-        onChange={handleChangeLength}
-            />
-    </Form.Group>
-    {errors?.prep?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    <Col md={4}>
-    <p className={`${styles.Underline}`}>Weeks</p>
-    </Col>
-    </Row>
-    {/* Shoot */}
-    <Row>
-    <Col md={4}>
-    <p className={`${styles.Underline}`}>Shoot</p>
-    </Col>
-    <Col md={4}>
-    <Form.Group controlId="shoot" 
-        className={`${styles.Width95} text-center mb-1`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="shoot"
-        value={shoot}
-        onChange={handleChangeLength}
-            />
-    </Form.Group>
-    {errors?.shoot?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    <Col md={4}>
-    <p className={`${styles.Underline}`}>Weeks</p>
-    </Col>
-    </Row>
-    {/* Wrap */}
-    <Row>
-    <Col md={4}>
-    <p className={`${styles.Underline}`}>Wrap</p>
-    </Col>
-    <Col md={4}>
-    <Form.Group controlId="wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="wrap"
-        value={wrap}
-        onChange={handleChangeLength}
-            />
-    </Form.Group>
-    {errors?.wrap?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    <Col md={4}>
-    <p className={`${styles.Underline}`}>Weeks</p>
-    </Col>
-    </Row>
-    {/* Post */}
-    <Row>
-    <Col md={4}>
-    <p>Post Production</p>
-    </Col>
-    <Col md={4}>
-    <Form.Group controlId="post" 
-        className={`${styles.Width95} text-center mb-1`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="post"
-        value={post}
-        onChange={handleChangeLength}
-            />
-    </Form.Group>
-    {errors?.post?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    <Col md={4}>
-    <p className={`${styles.Underline}`}>Weeks</p>
-    </Col>
-    </Row>
-    {/* Length Total */}
-    <Row>
-    <Col md={4}>
-    <p className={`${styles.Underline}`}>TOTAL</p>
-    </Col>
-    <Col md={4}>
-    <Form.Group controlId="postDataLengthTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="postDataLengthTotal"
-        value={postDataLengthTotal}
-        readOnly
-            />
-    </Form.Group>
-    {errors?.postDataLengthTotal?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    <Col md={4}>
-    <p className={`${styles.Underline}`}>Weeks</p>
-    </Col>
-    </Row>
-    </Col>
-    </Row>
-    </div>
-  );
-
   // RIGHTS ----------------------------------------------------
   
   // Rights postData
@@ -545,15 +224,7 @@ function BudgetCreate() {
   const {story_rights, miscellaneous} = postDataRights;
 
   // Rights Total postData 
-  const [postDataRightsTotal, setPostDataRightsTotal] = useState(0)
-
-  // Rights handleChange
-  const handleChangeRights = (event) => {
-    setPostDataRights({
-      ...postDataRights,
-      [event.target.name]: parseFloat(event.target.value || 0 ),
-    });
-  }; 
+  const [postDataRightsTotal, setPostDataRightsTotal] = useState(0);
 
   // function to add all rights on change
   useEffect(() => {
@@ -568,146 +239,7 @@ function BudgetCreate() {
     return () => {
       clearTimeout(timer);
     };
-  }, [story_rights, miscellaneous ])
-
-  // Rights input boxes
-  const rights = (
-    <div className="mt-3">
-    <Row >
-    <Col md={1} >
-    <p className="mb-0">1000</p>
-    </Col>
-    <Col md={6} >
-    <p className={ `${styles.BoldBlack} mb-2`}>RIGHTS</p>
-    </Col>
-    </Row>
-    {/* TITLES */}
-    <Row className={ `${styles.Overview} mb-2 py-1`} >
-    <Col md={1} >
-    <p className="mb-0">ACCT</p>
-    </Col>
-    <Col md={6} >
-    <p className="mb-0">Description</p>
-    </Col>
-    <Col md={1} >
-    <p className="mb-0">#</p>
-    </Col>
-    <Col md={1} >
-    <p className="mb-0">Unit</p>
-    </Col>
-    <Col md={1} >
-    <p className="mb-0">Price</p>
-    </Col>
-    <Col md={2} >
-    <p className="mb-0">Total</p>
-    </Col>
-    </Row>
-    {/* Story Rights */}
-    <Row className="mb-0 pb-0">
-    <Col className="mb-0 pb-0" md={1} >
-    <p className="mb-0 pb-0">1010</p>
-    </Col>
-    <Col className="mb-0 pb-0" md={6} >
-    <p className="mb-0 pb-0">Story Rights</p>
-    </Col>
-    <Col className="mb-0 pb-0" md={1} >
-    <p className="mb-0 pb-0"></p>
-    </Col>
-    <Col className="mb-0 pb-0" md={1} >
-    <p className="mb-0 pb-0"></p>
-    </Col>
-    <Col className="mb-0 pb-0" md={1} >
-    <p className="mb-0 pb-0"></p>
-    </Col>
-    <Col className="mb-0 pb-0" md={2} >
-    <Form.Group controlId="story_rights" 
-        className={`${styles.Width95} text-center mb-1 pb-0`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="story_rights"
-        value={story_rights}
-        onChange={handleChangeRights}
-            />
-    </Form.Group>
-    {errors?.story_rights?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    </Row>
-    {/* Miscellaneous */}
-    <Row>
-    <Col md={1} >
-    <p>1020</p>
-    </Col>
-    <Col md={6} >
-    <p>Miscellaneous</p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={2} >
-    <Form.Group controlId="miscellaneous" 
-        className={`${styles.Width95} text-center`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="miscellaneous"
-        value={miscellaneous}
-        onChange={handleChangeRights}
-            />
-    </Form.Group>
-    {errors?.miscellaneous?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    </Row>
-    {/* Rights Total */}
-    <Row className="mb-0 pb-0">
-    <Col md={1} >
-    </Col>
-    <Col className={ `${styles.Overview} mb-0 py-0`} md={6} >
-    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL RIGHTS</p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={2} >
-    <Form.Group controlId="postDataRightsTotal" 
-        className={`${styles.Width95} text-center mb-0`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="postDataRightsTotal"
-        value={postDataRightsTotal}
-        readOnly
-            />
-    </Form.Group>
-    {errors?.postDataRightsTotal?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    </Row>
-    </div>
-  );
+  }, [story_rights, miscellaneous ]);
 
   // PRE-PRODUCTION AND DEVELOPMENT --------------------------------------------
   
@@ -7218,13 +6750,63 @@ function BudgetCreate() {
     </Row>
     <Form className="mt-3 px-3" onSubmit={handleSubmit}>
     {prepare}
-    {detailslength}
-    <Row className={ `${styles.OverviewBlue} mx-1 my-5 py-1 text-center`}>
-    <Col md={12}>
-    <h5 className={ `${styles.BoldBlack}`}>ABOVE THE LINE</h5>
+    <Row className={ `${styles.OverviewBlue} mx-1 mt-5 py-1`}>
+    <Col md={10}>
+    <h5 className={ `ml-3 ${styles.BoldBlack}`}>ABOVE THE LINE</h5>
+    </Col>
+    <Col md={2}><p className="mb-0">{aboveTheLineTotal} </p></Col>
+    </Row>
+    {/* buttons */}
+    <Row className={`${styles.ButtonLine} mx-1`}>
+    <Col md={2} className='text-center'>
+    <Row>
+    <Col md={7}>
+    <p className={`py-0 mb-0 ${styles.Button}`}
+          onClick={() => setShowInfo(showInfo => !showInfo)} > Info
+        </p>
+    </Col>
+    <Col className={`py-0 mb-0 ${styles.BorderRight}`} md={5}>
+    <p className="mb-0">{postDataLengthTotal} </p>
     </Col>
     </Row>
-    {rights}
+    </Col>
+    <Col md={2} className='text-center'>
+    <Row>
+    <Col md={7}>
+    <p className={`py-0 mb-0 ${styles.Button}`}
+          onClick={() => setShowRights(showRights => !showRights)} > Rights
+    </p>
+    </Col>
+    <Col className={`py-0 mb-0 ${styles.BorderRight}`} md={5}>
+    <p className="mb-0">{postDataRightsTotal} </p>
+    </Col>
+    </Row>
+    </Col>
+    </Row> 
+    {/* info */}
+    {!showInfo ? (
+      ""
+    ) : (
+      <Info
+      postDataDetails={postDataDetails}
+      setPostDataDetails={setPostDataDetails}
+      postDataLength={postDataLength}
+      setPostDataLength={setPostDataLength}
+      postDataLengthTotal={postDataLengthTotal}
+      setPostDataLengthTotal={setPostDataLengthTotal}
+      setShow={setShowInfo}  /> 
+    ) } 
+    {/* rights */}
+    {!showRights ? (
+      ""
+    ) : (
+      <Rights
+      postDataRights={postDataRights}
+      setPostDataRights={setPostDataRights}
+      postDataRightsTotal={postDataRightsTotal}
+      setPostDataRightsTotal={setPostDataRightsTotal}
+      setShow={setShowRights}  /> 
+    ) }
     {development}
     {scenario}
     {producersDirs}

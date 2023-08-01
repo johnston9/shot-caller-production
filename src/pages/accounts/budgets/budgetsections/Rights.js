@@ -1,19 +1,14 @@
-/* Component in the Budget Edit component to edit Rights
-*/
+/* Component in the Budget Edit component to edit Rights */
 import React, { useEffect, useState } from "react";
 import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import styles from "../../../../styles/Account.module.css";
-import btnStyles from "../../../../styles/Button.module.css";
 import Alert from "react-bootstrap/Alert";
-import { axiosReq } from "../../../../api/axiosDefaults";
-import { useHistory, useParams } from 'react-router-dom';
 
 const Rights = (props) => {
     const [errors, setErrors] = useState({});
-    const {postDataRights, setPostDataRights,
+    const {postDataRights, setPostDataRights, setShow,
         postDataRightsTotal, setPostDataRightsTotal} = props;
 
     // Rights postData values
@@ -43,13 +38,17 @@ const Rights = (props) => {
   }, [story_rights, miscellaneous ]);
 
   return (
-    <div className="mt-3">
+    <div className="mt-5">
     <Row >
     <Col md={1} >
     <p className="mb-0">1000</p>
     </Col>
-    <Col md={6} >
+    <Col md={9} >
     <p className={ `${styles.BoldBlack} mb-2`}>RIGHTS</p>
+    </Col>
+    <Col md={2}>
+    <span className={`${styles.Close }`} 
+    onClick={() => setShow(false) } >Close</span>
     </Col>
     </Row>
     {/* TITLES */}

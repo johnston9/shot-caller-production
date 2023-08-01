@@ -31,17 +31,7 @@ const BudgetPage = () => {
   }, [id]);
 
   return (
-    <div className='mt-3'>
-    {/* <Row className="mt-1 ml-2" >
-        <Col xs={3}>
-        <Button
-          className={`${btnStyles.Button} ${btnStyles.Blue} mb-2`}
-          onClick={() => history.goBack()}
-        >
-          Back
-        </Button>
-        </Col>
-    </Row> */}
+    <div>
     {/* Add /Edit Budget */}
     {/* {hasLoaded ? (
       <>
@@ -76,7 +66,6 @@ const BudgetPage = () => {
       <Col className="py-2 p-0 p-lg-2" >
           {hasLoaded ? (
               <Budget
-              // {...budget.results[0]}
               budget1={budget.results[0]} 
               projectId={id}
                />

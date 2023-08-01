@@ -25,46 +25,43 @@ const topProfile = (
             roundedCircle
             src={profile?.image}
           />
-        <span className={`${styles.TopName} pl-2`}>{profile?.owner}</span>
+        <span className={`${styles.TopName} pl-2`}>
+          {profile?.name}</span>
         </Col>
-        <Col md={8} className="text-center" >
-          <h3 className={` ${styles.TopCompany}`}>{profile?.company} 
-          <span className={`pl-5 ${styles.TopName}`}>{profile?.name}</span>
+        <Col md={6} className="text-center" >
+          <h3 className={`${styles.TopCompany}`}>{profile?.company} 
           </h3>
         </Col>
-        <Col md={1} >
+        <Col md={3} >
         {profile?.is_owner && <ProfileEditDropdown id={profile?.id} />}
         </Col>
       </Row>
     </div>
   );
 
-  const topProfileMo = (
-    <div className={`px-3 py-1 ${styles.Top}`}>
-      <Row className="mx-2 mt-2 ">
-        <Col xs={{span: 8, offset: 2}} className="text-center" >
-        <Image
-            className={styles.ProfileImage}
-            height={40}
-            width={40}
-            roundedCircle
-            src={profile?.image}
-          />
-        <span className={`${styles.TopName} pl-2`}>{profile?.owner}</span>
-        </Col>
-        <Col xs={2}>
-        {profile?.is_owner && <ProfileEditDropdown id={profile?.id} />}
-        </Col>
-        <Col xs={12} className="text-center" >
-          <h3 className={`pl-5 ${styles.TopCompany}`}>{profile?.company} 
-          </h3>
-        </Col>
-        <Col xs={12} className="text-center" >
-          <span className={`pl-5 ${styles.TopName}`}>{profile?.name}</span>
-        </Col>
-      </Row>
-    </div>
-  );
+const topProfileMo = (
+  <div className={`px-3 py-1 ${styles.Top}`}>
+    <Row className="mx-2 mt-2 ">
+      <Col xs={{span: 8, offset: 2}} className="text-center" >
+      <Image
+          className={styles.ProfileImage}
+          height={40}
+          width={40}
+          roundedCircle
+          src={profile?.image}
+        />
+      <span className={`${styles.TopName} pl-2`}>{profile?.name}</span>
+      </Col>
+      <Col xs={2}>
+      {profile?.is_owner && <ProfileEditDropdown id={profile?.id} />}
+      </Col>
+      <Col xs={12} className="text-center" >
+        <h3 className={`pl-5 ${styles.TopCompany}`}>{profile?.company} 
+        </h3>
+      </Col>
+    </Row>
+  </div>
+);
 
 const accountInfo = (
   <div className="px-3">
@@ -82,7 +79,10 @@ const accountInfo = (
 )
 return (
   <div >
-    <Row className="mt-3" >
+    <div className="d-none d-md-block">{topProfile}</div>
+    <div className="d-block d-md-none">{topProfileMo}</div> 
+    {/* back */}
+    <Row className="mt-2" >
     <Col >
     <Button
       className={`${btnStyles.Button} ${btnStyles.Blue} ml-2 mb-2`}
@@ -92,11 +92,9 @@ return (
     </Button>
     </Col>
     </Row>
-    <div className="d-none d-md-block">{topProfile}</div>
-    <div className="d-block d-md-none">{topProfileMo}</div> 
     <Row className="px-3">
       <Col className="text-center">
-      <h3 className="my-3" >PROJECTS</h3>
+      <h3 className="mb-3" >PROJECTS</h3>
       </Col>
     </Row>
     <Row >
