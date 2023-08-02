@@ -1,4 +1,4 @@
-/* Component in the Budget Edit component to edit Rights */
+/* Component in the Budget component to edit Info/Length */
 import React, { useEffect, useState } from "react";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
