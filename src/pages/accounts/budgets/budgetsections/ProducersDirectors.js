@@ -15,7 +15,7 @@ const ProducersDirectors = (props) => {
          lineProducersTotal, setLineProducersTotal,
          coProducersTotal, setCoProducersTotal,
          assocProducersTotal, setAssocProducersTotal,
-         directorsTotal, setDirectorsTotal,
+         directorsTotal, setDirectorsTotal, setShow,
          unit2DirectorsTotal, setUnit2DirectorsTotal,
          producersDirsTotal, setProducersDirsTotal} = props;
   
@@ -190,9 +190,13 @@ const ProducersDirectors = (props) => {
     <Col md={1} >
     <p className="mb-2">4000</p>
     </Col>
-    <Col md={6} >
+    <Col md={9} >
     <p className={ `${styles.BoldBlack} mb-2`}>
       PRODUCERS AND DIRECTORS</p>
+    </Col>
+    <Col md={2}>
+    <span className={`${styles.Close }`} 
+    onClick={() => setShow(false) } >Close</span>
     </Col>
     </Row>
     {/* TITLES */}

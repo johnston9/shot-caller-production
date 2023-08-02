@@ -475,8 +475,12 @@ const ProductionStaff = (props) => {
     <Col md={1} >
     <p className="mb-2">7000</p>
     </Col>
-    <Col md={6} >
+    <Col md={9} >
     <p className={ `${styles.BoldBlack} mb-2`}>PRODUCTION STAFF</p>
+    </Col>
+    <Col md={2}>
+    <span className={`${styles.Close }`} 
+    onClick={() => setShow(false) } >Close</span>
     </Col>
     </Row>
     {/* TITLES */}

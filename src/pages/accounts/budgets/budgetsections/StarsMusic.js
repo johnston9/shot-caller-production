@@ -67,8 +67,12 @@ const StarsMusic = (props) => {
     <Col md={1} >
     <p className="mb-2">5000</p>
     </Col>
-    <Col md={6} >
+    <Col md={9} >
     <p className={ `${styles.BoldBlack} mb-2`}>STARS / MUSIC</p>
+    </Col>
+    <Col md={2}>
+    <span className={`${styles.Close }`} 
+    onClick={() => setShow(false) } >Close</span>
     </Col>
     </Row>
     {/* TITLES */}

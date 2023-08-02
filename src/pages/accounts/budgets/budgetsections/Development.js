@@ -57,8 +57,12 @@ const Development = (props) => {
     <Col md={1} >
     <p className="mb-2">2000</p>
     </Col>
-    <Col md={6} >
+    <Col md={9} >
     <p className={ `${styles.BoldBlack} mb-2`}>PRE-PRODUCTION AND DEVELOPMENT</p>
+    </Col>
+    <Col md={2}>
+    <span className={`${styles.Close }`} 
+    onClick={() => setShow(false) } >Close</span>
     </Col>
     </Row>
     {/* TITLES */}
@@ -87,7 +91,7 @@ const Development = (props) => {
     <Col md={1} >
     <p className={`${styles.Underline}`}>2010</p>
     </Col>
-    <Col md={6} >
+    <Col md={5} >
     <p className={`${styles.Underline}`}>Research</p>
     </Col>
     <Col md={1} >

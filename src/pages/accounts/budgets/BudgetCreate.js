@@ -1906,111 +1906,142 @@ function BudgetCreate() {
     </Row>
     <Form className="mt-3 px-3" onSubmit={handleSubmit}>
     {prepare}
+    {/* above total */}
     <Row className={ `${styles.OverviewBlue} mx-1 mt-5 py-1`}>
     <Col md={10}>
     <h5 className={ `ml-3 ${styles.BoldBlack}`}>ABOVE THE LINE</h5>
     </Col>
     <Col md={2}><p className="mb-0">{aboveTheLineTotal} </p></Col>
     </Row>
-    {/* sections click buttons */}
+    {/* sections above click buttons */}
     <Row className={`${styles.ButtonLine} mx-1`}>
-    <Col md={2} className='text-center'>
+    <Col md={4} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
     <Row>
-    <Col md={7}>
-    <p className={`py-0 mb-0 ${styles.Button}`}
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
           onClick={() => setShowInfo(showInfo => !showInfo)} > Info
         </p>
     </Col>
-    <Col className={`py-0 mb-0 ${styles.BorderRight}`} md={5}>
+    <Col md={4}>
     <p className="mb-0">{postDataLengthTotal} </p>
     </Col>
     </Row>
+    </div>
     </Col>
-    <Col md={2} className='text-center'>
+    <Col md={4} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRight}`}>
     <Row>
-    <Col md={7}>
-    <p className={`py-0 mb-0 ${styles.Button}`}
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
           onClick={() => setShowRights(showRights => !showRights)} > Rights
     </p>
     </Col>
-    <Col className={`py-0 mb-0 ${styles.BorderRight}`} md={5}>
+    <Col md={4}>
     <p className="mb-0">{postDataRightsTotal} </p>
     </Col>
     </Row>
+    </div>
     </Col>
-    <Col md={2} className='text-center'>
+    <Col md={4} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRight}`}>
     <Row>
-    <Col md={7}>
-    <p className={`py-0 mb-0 ${styles.Button}`}
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
     onClick={() => setShowDevelopment(showDevelopment => !showDevelopment)} > Development
     </p>
     </Col>
-    <Col className={`py-0 mb-0 ${styles.BorderRight}`} md={5}>
+    <Col md={4}>
     <p className="mb-0">{developmentTotal} </p>
     </Col>
     </Row>
+    </div>
     </Col>
-    <Col md={2} className='text-center'>
+    <Col md={4} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
     <Row>
-    <Col md={7}>
-    <p className={`py-0 mb-0 ${styles.Button}`}
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
           onClick={() => setShowScenario(showScenario => !showScenario)} > Scenario
     </p>
     </Col>
-    <Col className={`py-0 mb-0 ${styles.BorderRight}`} md={5}>
+    <Col md={4}>
     <p className="mb-0">{scenarioTotal} </p>
     </Col>
     </Row>
+    </div>
     </Col>
-    <Col md={2} className='text-center'>
+    <Col md={4} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRight}`}>
     <Row>
-    <Col md={7}>
-    <p className={`py-0 mb-0 ${styles.Button}`}
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
           onClick={() => setShowProDirs(showProDirs => !showProDirs)} > Producers/Directors
     </p>
     </Col>
-    <Col className={`py-0 mb-0 ${styles.BorderRight}`} md={5}>
+    <Col md={4}>
     <p className="mb-0">{producersDirsTotal} </p>
     </Col>
     </Row>
+    </div>
     </Col>
-    <Col md={2} className='text-center'>
+    <Col md={4} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRight}`}>
     <Row>
-    <Col md={7}>
-    <p className={`py-0 mb-0 ${styles.Button}`}
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
           onClick={() => setShowStarsMus(showStarsMus => !showStarsMus)} > Stars/Music
     </p>
     </Col>
-    <Col className={`py-0 mb-0 ${styles.BorderRight}`} md={5}>
+    <Col md={4}>
     <p className="mb-0">{starsMusicTotal} </p>
     </Col>
     </Row>
+    </div>
     </Col>
-    <Col md={2} className='text-center'>
+    </Row>  
+    {abovethelinetotal}
+    {/* below B total */}
+    <Row className={ `${styles.OverviewBlue} mx-1 mb-2 mt-5 py-1`}>
+    <Col md={10}>
+    <p className={ `mb-0 ml-3 ${styles.BoldBlack}`}>
+      BELOW THE LINE "B" PRODUCTION</p>
+    </Col>
+    <Col md={2}><p className="mb-0">{belowTheLineBTotal} </p></Col>
+    </Row>
+    {/* sections below B click buttons */}
+    <Row className={`${styles.ButtonLine} mx-1`}>
+    <Col md={3} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
     <Row>
-    <Col md={7}>
-    <p className={`py-0 mb-0 ${styles.Button}`}
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
           onClick={() => setShowCast(showCast => !showCast)} >Cast
     </p>
     </Col>
-    <Col className={`py-0 mb-0 ${styles.BorderRight}`} md={5}>
+    <Col md={4}>
     <p className="mb-0">{castTotal} </p>
     </Col>
     </Row>
+    </div>
     </Col>
-    <Col md={2} className='text-center'>
+    <Col md={3} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRight}`}>
     <Row>
-    <Col md={7}>
-    <p className={`py-0 mb-0 ${styles.Button}`}
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
           onClick={() => setShowProStaff(showProStaff => !showProStaff)} > Production Staff
     </p>
     </Col>
-    <Col className={`py-0 mb-0 ${styles.BorderRight}`} md={5}>
+    <Col md={4}>
     <p className="mb-0">{productionstaffTotal} </p>
     </Col>
     </Row>
+    </div>
     </Col>
-    </Row>  
+    </Row> 
+    {belowthelineBtotal}
+    {grandtotal}
     {/* info */}
     {!showInfo ? (
       ""
@@ -2061,6 +2092,8 @@ function BudgetCreate() {
       setEditorsscenarioTotal={setEditorsscenarioTotal}
       adminScenarioTotal={adminScenarioTotal}
       setAdminScenarioTotal={setAdminScenarioTotal}
+      scenarioTotal={scenarioTotal}
+      setScenarioTotal={setScenarioTotal}
       setShow={setShowScenario}  /> 
     ) }
     {/* producersDirs */}

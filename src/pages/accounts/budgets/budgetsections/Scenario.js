@@ -13,7 +13,8 @@ const Scenario = (props) => {
          writersTotal, setWritersTotal,
          consultantsTotal, setConsultantsTotal,
          editorsscenarioTotal, setEditorsscenarioTotal,
-         adminScenarioTotal, setAdminScenarioTotal} = props;
+         adminScenarioTotal, setAdminScenarioTotal,
+         scenarioTotal, setScenarioTotal} = props;
   
   // Scenario postData values
   const {writers_units_number, writers_units_name,
@@ -108,9 +109,6 @@ const Scenario = (props) => {
   }, [admin_scenario_units_number,
     admin_scenario_quantity, admin_scenario_rate]);
 
-  // Scenario Total postData 
-  const [scenarioTotal, setScenarioTotal] = useState(0);
-
   // function to add all scenario on change
   useEffect(() => {
     const addScenario = () => {
@@ -144,8 +142,12 @@ const Scenario = (props) => {
     <Col md={1} >
     <p className="mb-2">3000</p>
     </Col>
-    <Col md={6} >
+    <Col md={9} >
     <p className={ `${styles.BoldBlack} mb-2`}>SCENARIO</p>
+    </Col>
+    <Col md={2}>
+    <span className={`${styles.Close }`} 
+    onClick={() => setShow(false) } >Close</span>
     </Col>
     </Row>
     {/* TITLES */}
