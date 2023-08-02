@@ -1810,7 +1810,7 @@ function BudgetEdit() {
           craft_services_units_number,
           craft_services_units_name,
           craft_services_rate} = data.results[0];
-          setPostDataCast({production_manager_quantity,
+          setPostDataProduction({production_manager_quantity,
             production_manager_units_number,
             production_manager_units_name,
             production_manager_rate,
