@@ -17,6 +17,7 @@ import ProducersDirectors from "./budgetsections/ProducersDirectors";
 import StarsMusic from "./budgetsections/StarsMusic";
 import Cast from "./budgetsections/Cast";
 import ProductionStaff from "./budgetsections/ProductionStaff";
+import DesignLabour from "./budgetsections/DesignLabour";
 
 function BudgetCreate() {
   const [errors, setErrors] = useState({});
@@ -31,6 +32,7 @@ function BudgetCreate() {
   const [showStarsMus, setShowStarsMus] = useState(false);
   const [showCast, setShowCast] = useState(false);
   const [showProStaff, setShowProStaff] = useState(false);
+  const [showDesign, setShowDesign] = useState(false);
 
   // INFO / LENGTH -------------------------
   // Info postData 
@@ -76,25 +78,6 @@ function BudgetCreate() {
     [event.target.name]: event.target.value,
     });
   };
-
-  // function to add all lengths on change
-  useEffect(() => {
-    const addLength = () => {
-    setPostDataLengthTotal(
-        parseFloat(research || 0) +
-        parseFloat(prep || 0) +
-        parseFloat(shoot || 0) +
-        parseFloat(wrap || 0) +
-        parseFloat(post || 0)  )
-    }
-    const timer = setTimeout(() => {
-    addLength();
-    }, 1000);
-
-    return () => {
-    clearTimeout(timer);
-    };
-}, [research, prep, shoot, wrap, post ]);
 
   // prepared by input boxes
   const prepare = (
@@ -238,21 +221,6 @@ function BudgetCreate() {
   // Rights Total postData 
   const [postDataRightsTotal, setPostDataRightsTotal] = useState(0);
 
-  // function to add all rights on change
-  useEffect(() => {
-    const addRights = () => {
-      setPostDataRightsTotal(parseFloat(story_rights || 0) + 
-      parseFloat(miscellaneous ||0) )
-    }
-    const timer = setTimeout(() => {
-      addRights();
-    }, 1000);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [story_rights, miscellaneous ]);
-
   // PRE-PRODUCTION AND DEVELOPMENT --------------------------------------------
   
   // Development postData
@@ -277,34 +245,6 @@ function BudgetCreate() {
   // Development Total postData 
   const [developmentTotal, setDevelopmentTotal] = useState(0);
 
-  // function to add all development on change
-  useEffect(() => {
-    const addDevelopment = () => {
-      setDevelopmentTotal(
-      parseFloat(research_development || 0) +
-      parseFloat(prelim_budget || 0) +
-      parseFloat(consultant_expenses || 0) +
-      parseFloat(office_expenses || 0) +
-      parseFloat(staff || 0) +
-      parseFloat(travel_expenses_development || 0) +
-      parseFloat(living_expenses_development || 0) +
-      parseFloat(other_development || 0) +
-      parseFloat(fringes_taxes_development || 0)
-      )
-    }
-    const timer = setTimeout(() => {
-      addDevelopment();
-    }, 1000);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [research_development, prelim_budget, consultant_expenses,
-    office_expenses, staff, travel_expenses_development,
-    living_expenses_development, other_development,
-    fringes_taxes_development ]);
-
-  // ------------------------------------------------------
   // SCENARIO --------------------------------------------
   
   // Scenario postData
@@ -354,105 +294,12 @@ function BudgetCreate() {
   // Admin Total postData 
   const [adminScenarioTotal, setAdminScenarioTotal] = useState(0);
 
-  // Calculate Functions
-  // function to calculate writers on change
-  useEffect(() => {
-    const addWriters = () => {
-      setWritersTotal(parseFloat(writers_units_number || 0) * parseFloat(writers_quantity || 0) * parseFloat(writers_rate || 0))
-    }
-    const timer = setTimeout(() => {
-      addWriters();
-    }, 2000);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [writers_units_number, writers_quantity, writers_rate]);
-
-  // function to calculate consultants on change
-  useEffect(() => {
-    const addConsultants = () => {
-      setConsultantsTotal(
-        parseFloat(consultants_units_number || 0) * parseFloat(consultants_quantity || 0) * parseFloat(consultants_rate || 0))
-    }
-    const timer = setTimeout(() => {
-      addConsultants();
-    }, 2000);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [consultants_units_number, consultants_quantity, consultants_rate, ])
-
-  // function to calculate editors on change
-  useEffect(() => {
-    const addEditors = () => {
-      setEditorsscenarioTotal(parseFloat(editors_scenario_units_number || 0) * 
-      parseFloat(editors_scenario_quantity || 0) * 
-      parseFloat(editors_scenario_rate || 0))
-    }
-    const timer = setTimeout(() => {
-      addEditors();
-    }, 2000);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [editors_scenario_units_number, 
-    editors_scenario_quantity, editors_scenario_rate]);
-
-  // function to calculate admin on change
-  useEffect(() => {
-    const addAdminScenario = () => {
-      setAdminScenarioTotal(parseFloat(admin_scenario_units_number || 0) *
-      parseFloat(admin_scenario_quantity || 0) *
-      parseFloat(admin_scenario_rate || 0))
-    }
-    const timer = setTimeout(() => {
-      addAdminScenario();
-    }, 2000);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [admin_scenario_units_number,
-    admin_scenario_quantity, admin_scenario_rate]);
-
   // Scenario Total postData 
   const [scenarioTotal, setScenarioTotal] = useState(0);
 
-  // function to add all scenario on change
-  useEffect(() => {
-    const addScenario = () => {
-      setScenarioTotal(
-      parseFloat(writersTotal || 0) +
-      parseFloat(consultantsTotal || 0) +
-      parseFloat(editorsscenarioTotal || 0) +
-      parseFloat(adminScenarioTotal || 0) +
-      parseFloat(travel_expenses_scenario || 0) +
-      parseFloat(office_expenses_scenario || 0) +
-      parseFloat(living_expenses_scenario || 0) +
-      parseFloat(other_scenario || 0) +
-      parseFloat(fringes_taxes_scenario || 0) 
-      )
-    }
-    const timer = setTimeout(() => {
-      addScenario();
-    }, 1000);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [writersTotal, consultantsTotal, editorsscenarioTotal,
-    office_expenses_scenario, adminScenarioTotal, travel_expenses_scenario,
-    living_expenses_scenario, other_scenario, 
-    fringes_taxes_scenario ]);
-
-  // end Scenario -----------------------------------------
-
   // PRODUCERS DIRECTORS --------------------------------------------
   
-  // producers postData
+  // producers/directors postData
   const [postDataProducersDirs, setPostDataProducersDirs] = useState({
     executive_producers_rate: 0,
     producers_rate: 0,
@@ -514,144 +361,6 @@ function BudgetCreate() {
   // ProducersDirs Total postData 
   const [producersDirsTotal, setProducersDirsTotal] = useState(0)
 
-  // CALCULATE FUNCTIONS
-  // function to calculate Exec Producers on change
-  useEffect(() => {
-    const addExecPros = () => {
-      setExecProducersTotal(parseFloat(executive_producers_quantity || 0) * 
-      parseFloat(executive_producers_rate || 0))
-    }
-    const timer = setTimeout(() => {
-      addExecPros();
-    }, 2000);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [executive_producers_quantity, executive_producers_rate]);
-
-  // function to calculate Producers on change
-  useEffect(() => {
-    const addPros = () => {
-      setProducersTotal(parseFloat(producers_quantity || 0) * 
-      parseFloat(producers_rate || 0))
-    }
-    const timer = setTimeout(() => {
-      addPros();
-    }, 2000);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [producers_quantity, producers_rate]);
-
-  // function to calculate Line Producers on change
-  useEffect(() => {
-    const addLinePros = () => {
-      setLineProducersTotal(parseFloat(line_producers_quantity || 0) * 
-      parseFloat(line_producers_rate || 0))
-    }
-    const timer = setTimeout(() => {
-      addLinePros();
-    }, 2000);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [line_producers_quantity, line_producers_rate]);
-
-  // function to calculate  Co Producers on change
-  useEffect(() => {
-    const addCoPros = () => {
-      setCoProducersTotal(parseFloat(co_producers_quantity || 0) * 
-      parseFloat(co_producers_rate || 0))
-    }
-    const timer = setTimeout(() => {
-      addCoPros();
-    }, 2000);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [co_producers_quantity, co_producers_rate]);
-
-  // function to calculate  Assoc Producers on change
-  useEffect(() => {
-    const addAssocPros = () => {
-      setAssocProducersTotal(parseFloat(associate_producers_quantity || 0) * 
-      parseFloat(associate_producers_rate || 0))
-    }
-    const timer = setTimeout(() => {
-      addAssocPros();
-    }, 2000);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [associate_producers_quantity, associate_producers_rate]);
-
-  // function to calculate Directors on change
-  useEffect(() => {
-    const addDirectors = () => {
-      setDirectorsTotal(parseFloat(directors_quantity || 0) * 
-      parseFloat(directors_rate || 0))
-    }
-    const timer = setTimeout(() => {
-      addDirectors();
-    }, 2000);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [directors_quantity, directors_rate]);
-
-  // function to calculate 2nd Unit Directors on change
-  useEffect(() => {
-    const addUnit2Dirs = () => {
-      setUnit2DirectorsTotal(parseFloat(unit2_directors_quantity || 0) * 
-      parseFloat(unit2_directors_rate || 0))
-    }
-    const timer = setTimeout(() => {
-      addUnit2Dirs();
-    }, 2000);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [unit2_directors_quantity, unit2_directors_rate]);
-
-  // end calculate functions
-
-  // function to add all ProducersDirs on change
-  useEffect(() => {
-    const addProducersDirs = () => {
-      setProducersDirsTotal(
-        parseFloat(execProducersTotal || 0) +
-        parseFloat(producersTotal || 0) +
-        parseFloat(lineProducersTotal || 0) +
-        parseFloat(coProducersTotal || 0) +
-        parseFloat(assocProducersTotal || 0) +
-        parseFloat(directorsTotal || 0) +
-        parseFloat(unit2DirectorsTotal || 0) +
-        parseFloat(travel_expenses_producers_dirs || 0) +
-        parseFloat(living_expenses_producers_dirs || 0) +
-        parseFloat(other_producers_dirs || 0) +
-        parseFloat(fringes_taxes_producers_dirs || 0) )
-    }
-    const timer = setTimeout(() => {
-      addProducersDirs();
-    }, 1000);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [execProducersTotal, producersTotal, lineProducersTotal, coProducersTotal,
-    assocProducersTotal, directorsTotal, unit2DirectorsTotal,
-    travel_expenses_producers_dirs, living_expenses_producers_dirs,
-    other_producers_dirs, fringes_taxes_producers_dirs, ]);
-
-  // end producers-directors
-
   // STARS / MUSIC ------------------------------------------
   // Stars Music postData
   const [postDataStarsMusic, setPostDataStarsMusic] = useState({
@@ -679,41 +388,7 @@ function BudgetCreate() {
   } = postDataStarsMusic;
 
   // StarsMusic Total postData 
-  const [starsMusicTotal, setStarsMusicTotal] = useState(0)
-
-  // function to add all StarsMusic on change
-  useEffect(() => {
-    const addStarsMusic = () => {
-      setStarsMusicTotal(
-        parseFloat(stars || 0) +
-        parseFloat(stars_rights_payments || 0) +
-        parseFloat(travel_expenses_stars || 0) +
-        parseFloat(living_expenses_stars || 0) +
-        parseFloat(other_stars || 0) +
-        parseFloat(fringes_taxes_stars || 0) +
-        parseFloat(music || 0) +
-        parseFloat(music_supervisor || 0) +
-        parseFloat(travel_expenses_music || 0) +
-        parseFloat(living_expenses_music || 0) +
-        parseFloat(music_rights_addl_songs || 0) +
-        parseFloat(other_music || 0) +
-        parseFloat(fringes_taxes_music || 0)
-       )
-    }
-    const timer = setTimeout(() => {
-      addStarsMusic();
-    }, 1000);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [stars, stars_rights_payments, travel_expenses_stars,
-    living_expenses_stars, other_stars, fringes_taxes_stars,
-    music, music_supervisor, travel_expenses_music, living_expenses_music,
-    music_rights_addl_songs, other_music, fringes_taxes_music
-  ]);
-
-  // end stars music---------------------------
+  const [starsMusicTotal, setStarsMusicTotal] = useState(0);
 
   // BELOW THE LINE - "B" PRODUCTION
 
@@ -783,134 +458,8 @@ function BudgetCreate() {
   // Extras Total postData
   const [extrasTotal, setExtrasTotal] = useState(0);
 
-  // Calculate Functions
-  // function to calculate principals on change
-  useEffect(() => {
-    const addPrincipals = () => {
-      setPrincipalsTotal(parseFloat(principals_units_number || 0) * 
-      parseFloat(principals_quantity || 0) * 
-      parseFloat(principals_rate || 0))
-    }
-    const timer = setTimeout(() => {
-      addPrincipals();
-    }, 2000);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [principals_units_number, principals_quantity, principals_rate]);
-
-  // function to calculate actors on change
-  useEffect(() => {
-    const addActors = () => {
-      setActorsTotal(parseFloat(actors_units_number || 0) * 
-      parseFloat(actors_quantity || 0) * 
-      parseFloat(actors_rate || 0))
-    }
-    const timer = setTimeout(() => {
-      addActors();
-    }, 2000);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [actors_units_number, actors_quantity, actors_rate]);
-
-  // function to calculate stuntcoordinators on change
-  useEffect(() => {
-    const addStuntcoordinators = () => {
-      setStuntcoordinatorsTotal(parseFloat(stuntcoordinators_units_number || 0) * 
-      parseFloat(stuntcoordinators_quantity || 0) * 
-      parseFloat(stuntcoordinators_rate || 0))
-    }
-    const timer = setTimeout(() => {
-      addStuntcoordinators();
-    }, 2000);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [stuntcoordinators_units_number, stuntcoordinators_quantity, stuntcoordinators_rate]);
-
-  // function to calculate stuntperformers on change
-  useEffect(() => {
-    const addStuntperformers = () => {
-      setStuntperformersTotal(parseFloat(stuntperformers_units_number || 0) * 
-      parseFloat(stuntperformers_quantity || 0) * 
-      parseFloat(stuntperformers_rate || 0))
-    }
-    const timer = setTimeout(() => {
-      addStuntperformers();
-    }, 2000);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [stuntperformers_units_number, stuntperformers_quantity, stuntperformers_rate]);
-
-  // function to calculate otherperformers on change
-  useEffect(() => {
-    const addOtherperformers = () => {
-      setOtherperformersTotal(parseFloat(otherperformers_units_number || 0) * 
-      parseFloat(otherperformers_quantity || 0) * 
-      parseFloat(otherperformers_rate || 0))
-    }
-    const timer = setTimeout(() => {
-      addOtherperformers();
-    }, 2000);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [otherperformers_units_number, otherperformers_quantity, otherperformers_rate]);
-
-  // function to calculate extras on change
-  useEffect(() => {
-    const addExtras = () => {
-      setExtrasTotal(parseFloat(extras_units_number || 0) * 
-      parseFloat(extras_quantity || 0) * 
-      parseFloat(extras_rate || 0))
-    }
-    const timer = setTimeout(() => {
-      addExtras();
-    }, 2000);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [extras_units_number, extras_quantity, extras_rate]);
-
   // Cast Total postData 
   const [castTotal, setCastTotal] = useState(0);
-
-  // function to add all cast on change
-  useEffect(() => {
-    const addCast = () => {
-      setCastTotal(
-      parseFloat(principalsTotal || 0) +
-      parseFloat(actorsTotal || 0) +
-      parseFloat(stuntcoordinatorsTotal || 0) +
-      parseFloat(stuntperformersTotal || 0) +
-      parseFloat(otherperformersTotal || 0) +
-      parseFloat(extrasTotal || 0) +
-      parseFloat(casting_director || 0) +
-      parseFloat(extras_casting || 0) +
-      parseFloat(other_cast || 0) +
-      parseFloat(rights_payments_cast || 0) +
-      parseFloat(fringes_taxes_cast || 0) 
-      )
-    }
-    const timer = setTimeout(() => {
-      addCast();
-    }, 1000);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [principalsTotal, actorsTotal, stuntcoordinatorsTotal,
-    stuntperformersTotal, otherperformersTotal, extrasTotal,
-    casting_director, extras_casting, other_cast,
-    rights_payments_cast, fringes_taxes_cast ]);
 
   // PRODUCTION STAFF ------------------------------------------
 
@@ -1103,355 +652,62 @@ function BudgetCreate() {
   // craft services Total postData
   const [craftservicesTotal, setCraftservicesTotal] = useState(0);
 
-  // Calculate Functions
-  // function to calculate production manager on change
-  useEffect(() => {
-    const addproman = () => {
-      setProductionmanagerTotal(parseFloat(production_manager_quantity || 0) * 
-      parseFloat(production_manager_units_number || 0) * 
-      parseFloat(production_manager_rate || 0))
-    }
-    const timer = setTimeout(() => {
-      addproman();
-    }, 2000);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [production_manager_quantity, production_manager_units_number, 
-    production_manager_rate]);
-
-  // function to calculate production supervisor on change
-  useEffect(() => {
-    const addprosup = () => {
-      setProductionsupervisorTotal(parseFloat(production_supervisor_quantity || 0) * 
-      parseFloat(production_supervisor_units_number || 0) * 
-      parseFloat(production_supervisor_rate || 0))
-    }
-    const timer = setTimeout(() => {
-      addprosup();
-    }, 2000);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [production_supervisor_quantity, production_supervisor_units_number, 
-    production_supervisor_rate]);
-
-  // function to calculate production coordinator on change
-  useEffect(() => {
-    const addprocoor = () => {
-      setProductioncoordinatorTotal(parseFloat(production_coordinator_quantity || 0) * 
-      parseFloat(production_coordinator_units_number || 0) * 
-      parseFloat(production_coordinator_rate || 0))
-    }
-    const timer = setTimeout(() => {
-      addprocoor();
-    }, 2000);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [production_coordinator_quantity, production_coordinator_units_number, 
-    production_coordinator_rate]);
-
-  // function to calculate unit manager on change
-  useEffect(() => {
-    const addunitman = () => {
-      setUnitmanagerTotal(parseFloat(unit_manager_quantity || 0) * 
-      parseFloat(unit_manager_units_number || 0) * 
-      parseFloat(unit_manager_rate || 0))
-    }
-    const timer = setTimeout(() => {
-      addunitman();
-    }, 2000);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [unit_manager_quantity, unit_manager_units_number, 
-    unit_manager_rate]);
-  
-  // function to calculate location manager on change
-  useEffect(() => {
-    const addlocman = () => {
-      setLocationmanagerTotal(parseFloat(location_manager_quantity || 0) * 
-      parseFloat(location_manager_units_number || 0) * 
-      parseFloat(location_manager_rate || 0))
-    }
-    const timer = setTimeout(() => {
-      addlocman();
-    }, 2000);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [location_manager_quantity, location_manager_units_number, 
-    location_manager_rate]);
-  
-  // function to calculate location manager assistant on change
-  useEffect(() => {
-    const addlocmanass = () => {
-      setLocationmanagerassistantTotal(parseFloat(location_manager_assistant_quantity || 0) * 
-      parseFloat(location_manager_assistant_units_number || 0) * 
-      parseFloat(location_manager_assistant_rate || 0))
-    }
-    const timer = setTimeout(() => {
-      addlocmanass();
-    }, 2000);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [location_manager_assistant_quantity, location_manager_assistant_units_number, 
-    location_manager_assistant_rate]);
-  
-  // function to calculate production assistants on change
-  useEffect(() => {
-    const addproass = () => {
-      setProductionassistantsTotal(parseFloat(production_assistants_quantity || 0) * 
-      parseFloat(production_assistants_units_number || 0) * 
-      parseFloat(production_assistants_rate || 0))
-    }
-    const timer = setTimeout(() => {
-      addproass();
-    }, 2000);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [production_assistants_quantity, production_assistants_units_number, 
-    production_assistants_rate]);
-
-  // function to calculate production secretary on change
-  useEffect(() => {
-    const addprosec = () => {
-      setProductionsecretaryTotal(parseFloat(production_secretary_quantity || 0) * 
-      parseFloat(production_secretary_units_number || 0) * 
-      parseFloat(production_secretary_rate || 0))
-    }
-    const timer = setTimeout(() => {
-      addprosec();
-    }, 2000);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [production_secretary_quantity, production_secretary_units_number, 
-    production_secretary_rate]);
-
-  // function to calculate production accountant on change
-  useEffect(() => {
-    const addproacc = () => {
-      setProductionaccountantTotal(parseFloat(production_accountant_quantity || 0) * 
-      parseFloat(production_accountant_units_number || 0) * 
-      parseFloat(production_accountant_rate || 0))
-    }
-    const timer = setTimeout(() => {
-      addproacc();
-    }, 2000);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [production_accountant_quantity, production_accountant_units_number, 
-    production_accountant_rate]);
-  
-  // function to calculate production accountant assistant on change
-  useEffect(() => {
-    const addaccass = () => {
-      setProductionaccountantassistantTotal(parseFloat(production_accountant_assistant_quantity || 0) * 
-      parseFloat(production_accountant_assistant_units_number || 0) * 
-      parseFloat(production_accountant_assistant_rate || 0))
-    }
-    const timer = setTimeout(() => {
-      addaccass();
-    }, 2000);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [production_accountant_assistant_quantity, production_accountant_assistant_units_number, 
-    production_accountant_assistant_rate]);
-
-  // function to calculate scriptsupervisor continuity on change
-  useEffect(() => {
-    const addsupcon = () => {
-      setScriptsupervisorcontinuityTotal(parseFloat(scriptsupervisor_continuity_quantity || 0) * 
-      parseFloat(scriptsupervisor_continuity_units_number || 0) * 
-      parseFloat(scriptsupervisor_continuity_rate || 0))
-    }
-    const timer = setTimeout(() => {
-      addsupcon();
-    }, 2000);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [scriptsupervisor_continuity_quantity, scriptsupervisor_continuity_units_number, 
-    scriptsupervisor_continuity_rate]);
-  
-  // function to calculate unit manager on change
-  useEffect(() => {
-    const addpayrol = () => {
-      setPayrollTotal(parseFloat(payroll_quantity || 0) * 
-      parseFloat(payroll_units_number || 0) * 
-      parseFloat(payroll_rate || 0))
-    }
-    const timer = setTimeout(() => {
-      addpayrol();
-    }, 2000);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [payroll_quantity, payroll_units_number, 
-    payroll_rate]);
-
-  // function to calculate other production on change
-  useEffect(() => {
-    const addothpro = () => {
-      setOtherproductionTotal(parseFloat(other_production_quantity || 0) * 
-      parseFloat(other_production_units_number || 0) * 
-      parseFloat(other_production_rate || 0))
-    }
-    const timer = setTimeout(() => {
-      addothpro();
-    }, 2000);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [other_production_quantity, other_production_units_number, 
-    other_production_rate]);
-
-  // function to calculate directors assistant on change
-  useEffect(() => {
-    const adddirass = () => {
-      setDirectorsassistantTotal(parseFloat(directors_assistant_quantity || 0) * 
-      parseFloat(directors_assistant_units_number || 0) * 
-      parseFloat(directors_assistant_rate || 0))
-    }
-    const timer = setTimeout(() => {
-      adddirass();
-    }, 2000);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [directors_assistant_quantity, directors_assistant_units_number, 
-    directors_assistant_rate]);
-
-  // function to calculate 1st assistant director on change
-  useEffect(() => {
-    const addasdir1 = () => {
-      setAssistantdirector1stTotal(parseFloat(assistant_director_1st_quantity || 0) * 
-      parseFloat(assistant_director_1st_units_number || 0) * 
-      parseFloat(assistant_director_1st_rate || 0))
-    }
-    const timer = setTimeout(() => {
-      addasdir1();
-    }, 2000);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [assistant_director_1st_quantity, assistant_director_1st_units_number, 
-    assistant_director_1st_rate]);
-
-  // function to calculate 2nd assistant director on change
-  useEffect(() => {
-    const addasdir2 = () => {
-      setAssistantdirector2ndTotal(parseFloat(assistant_director_2nd_quantity || 0) * 
-      parseFloat(assistant_director_2nd_units_number || 0) * 
-      parseFloat(assistant_director_2nd_rate || 0))
-    }
-    const timer = setTimeout(() => {
-      addasdir2();
-    }, 2000);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [assistant_director_2nd_quantity, assistant_director_2nd_units_number, 
-    assistant_director_2nd_rate]);
-
-  // function to calculate 3rd assistant director on change
-  useEffect(() => {
-    const addasdir3 = () => {
-      setAssistantdirector3rdTotal(parseFloat(assistant_director_3rd_quantity || 0) * 
-      parseFloat(assistant_director_3rd_units_number || 0) * 
-      parseFloat(assistant_director_3rd_rate || 0))
-    }
-    const timer = setTimeout(() => {
-      addasdir3();
-    }, 2000);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [assistant_director_3rd_quantity, assistant_director_3rd_units_number, 
-    assistant_director_3rd_rate]);
-
-  // function to calculate craft services on change
-  useEffect(() => {
-    const addcraser = () => {
-      setCraftservicesTotal(parseFloat(craft_services_quantity || 0) * 
-      parseFloat(craft_services_units_number || 0) * 
-      parseFloat(craft_services_rate || 0))
-    }
-    const timer = setTimeout(() => {
-      addcraser();
-    }, 2000);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [craft_services_quantity, craft_services_units_number, 
-    craft_services_rate]);
-
   // Production Total postData 
   const [productionstaffTotal, setProductionstaffTotal] = useState(0);
 
-  // function to add all production on change
-  useEffect(() => {
-    const addPro = () => {
-      setProductionstaffTotal(
-      parseFloat(productionmanagerTotal || 0) +
-      parseFloat(productionsupervisorTotal || 0) +
-      parseFloat(productioncoordinatorTotal || 0) +
-      parseFloat(unitmanagerTotal || 0) +
-      parseFloat(locationmanagerTotal || 0) +
-      parseFloat(locationmanagerassistantTotal || 0) +
-      parseFloat(productionassistantsTotal || 0) +
-      parseFloat(productionsecretaryTotal || 0) +
-      parseFloat(productionaccountantTotal || 0) +
-      parseFloat(productionaccountantassistantTotal || 0) +
-      parseFloat(scriptsupervisorcontinuityTotal || 0) +
-      parseFloat(payrollTotal || 0) +
-      parseFloat(otherproductionTotal || 0) +
-      parseFloat(directorsassistantTotal || 0) +
-      parseFloat(assistantdirector1stTotal || 0) +
-      parseFloat(assistantdirector2ndTotal || 0) +
-      parseFloat(assistantdirector3rdTotal || 0) +
-      parseFloat(craftservicesTotal || 0)
-      )
-    }
-    const timer = setTimeout(() => {
-      addPro();
-    }, 1000);
+  // DESIGN LABOUR ------------------------------------------
 
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [productionmanagerTotal, productionsupervisorTotal, productioncoordinatorTotal,
-    unitmanagerTotal, locationmanagerTotal, locationmanagerassistantTotal,
-    productionassistantsTotal, productionsecretaryTotal, productionaccountantTotal,
-    productionaccountantassistantTotal, scriptsupervisorcontinuityTotal,
-    payrollTotal, otherproductionTotal, directorsassistantTotal,
-    assistantdirector1stTotal, assistantdirector2ndTotal,
-    assistantdirector3rdTotal, craftservicesTotal,
-    ]);
+  // Design Labour postData
+  const [postDataDesign, setPostDataDesign] = useState({
+    production_designer_quantity: 0,
+    production_designer_units_number: 0,
+    production_designer_units_name: "",
+    production_designer_rate: 0,
+    art_director_quantity: 0,
+    art_director_units_number: 0,
+    art_director_units_name: "",
+    art_director_rate: 0,
+    art_assistants_quantity: 0,
+    art_assistants_units_number: 0,
+    art_assistants_units_name: "",
+    art_assistants_rate: 0,
+    production_assistants_trainees_quantity: 0,
+    production_assistants_trainees_units_number: 0,
+    production_assistants_trainees_units_name: "",
+    production_assistants_trainees_rate: 0,
+    graphic_artists_quantity: 0,
+    graphic_artists_units_number: 0,
+    graphic_artists_units_name: "",
+    graphic_artists_rate: 0,
+    other_design: 0,
+  });
+
+  // Design Labour values
+  const {production_designer_quantity, production_designer_units_number,
+    production_designer_units_name, production_designer_rate,
+    art_director_quantity, art_director_units_number,
+    art_director_units_name, art_director_rate,
+    art_assistants_quantity, art_assistants_units_number,
+    art_assistants_units_name, art_assistants_rate,
+    production_assistants_trainees_quantity, production_assistants_trainees_units_number,
+    production_assistants_trainees_units_name, production_assistants_trainees_rate,
+    graphic_artists_quantity, graphic_artists_units_number,
+    graphic_artists_units_name, graphic_artists_rate, other_design,
+        } = postDataDesign;
+
+  // production designer Total postData
+  const [productiondesignerTotal, setProductiondesignerTotal] = useState(0);
+  // art director Total postData
+  const [artdirectorTotal, setArtdirectorTotal] = useState(0);
+  // art assistants Total postData
+  const [artassistantsTotal, setArtassistantsTotal] = useState(0);
+  // production assistants / trainees Total postData
+  const [productionassistantstraineesTotal, setProductionassistantstraineesTotal] = useState(0);
+  // graphic artists Total postData
+  const [graphicartistsTotal, setGraphicartistsTotal] = useState(0);
+
+  // Design Labour Total postData 
+  const [designlabourTotal, setDesignlabourTotal] = useState(0);
 
   //TOTALS--------------------------
 
@@ -1482,7 +738,7 @@ function BudgetCreate() {
 
   // Above the line input box
   const abovethelinetotal = (
-    <div className="my-5 pl-3">
+    <div className="my-0 pl-3">
     <Row>
     <Col className={ `${styles.Overview}  my-0 py-2`} md={10} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL ABOVE THE LINE</p>
@@ -1533,7 +789,7 @@ function BudgetCreate() {
 
   // Below the line input box
   const belowthelineBtotal = (
-    <div className="my-5 pl-3">
+    <div className="my-0 pl-3">
     <Row>
     <Col className={ `${styles.Overview}  my-0 py-2`} md={10} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL BELOW THE LINE - "B" PRODUCTION</p>
@@ -1583,7 +839,7 @@ function BudgetCreate() {
 
   // Grand input box
   const grandtotal = (
-    <div className="my-5 pl-3">
+    <div className="mt-3 pl-3">
     <Row>
     <Col className={ `${styles.Overview}  my-0 py-2`} md={10} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>GRAND TOTAL</p>
@@ -1626,6 +882,7 @@ function BudgetCreate() {
     </div>
   );
 
+  // Submit
   const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData();
@@ -1872,6 +1129,29 @@ function BudgetCreate() {
     formData.append("assistantdirector3rd_total", assistantdirector3rdTotal);
     formData.append("craftservices_total", craftservicesTotal);
     formData.append("productionstaff_total", productionstaffTotal);
+    // design
+    formData.append("production_designer_quantity", production_designer_quantity);
+    formData.append("production_designer_units_number", production_designer_units_number);
+    formData.append("production_designer_units_name", production_designer_units_name);
+    formData.append("production_designer_rate", production_designer_rate);
+    formData.append("art_director_quantity", art_director_quantity);
+    formData.append("art_director_units_number", art_director_units_number);
+    formData.append("art_director_units_name", art_director_units_name);
+    formData.append("art_director_rate", art_director_rate);
+    formData.append("art_assistants_quantity", art_assistants_quantity);
+    formData.append("art_assistants_units_number", art_assistants_units_number);
+    formData.append("art_assistants_units_name", art_assistants_units_name);
+    formData.append("art_assistants_rate", art_assistants_rate);
+    formData.append("production_assistants_trainees_quantity", production_assistants_trainees_quantity);
+    formData.append("production_assistants_trainees_units_number", production_assistants_trainees_units_number);
+    formData.append("production_assistants_trainees_units_name", production_assistants_trainees_units_name);
+    formData.append("production_assistants_trainees_rate", production_assistants_trainees_rate);
+    formData.append("graphic_artists_quantity", graphic_artists_quantity);
+    formData.append("graphic_artists_units_number", graphic_artists_units_number);
+    formData.append("graphic_artists_units_name", graphic_artists_units_name);
+    formData.append("graphic_artists_rate", graphic_artists_rate);
+    formData.append("other_design", other_design);
+    formData.append("designlabour_total", designlabourTotal);
 
     try {
       const { data } = await axiosReq.post("/budgets/", formData);
@@ -1920,7 +1200,7 @@ function BudgetCreate() {
     <Row>
     <Col md={8}>
     <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
-          onClick={() => setShowInfo(showInfo => !showInfo)} > Info
+          onClick={() => setShowInfo(showInfo => !showInfo)} > Info / Length
         </p>
     </Col>
     <Col md={4}>
@@ -2000,9 +1280,9 @@ function BudgetCreate() {
     </div>
     </Col>
     </Row>  
-    {abovethelinetotal}
-    {/* below B total */}
-    <Row className={ `${styles.OverviewBlue} mx-1 mb-2 mt-5 py-1`}>
+    {/* {abovethelinetotal} */}
+    {/* below B */}
+    <Row className={ `${styles.OverviewBlue} mx-1 mb-2 mt-2 py-1`}>
     <Col md={10}>
     <p className={ `mb-0 ml-3 ${styles.BoldBlack}`}>
       BELOW THE LINE "B" PRODUCTION</p>
@@ -2039,8 +1319,22 @@ function BudgetCreate() {
     </Row>
     </div>
     </Col>
+    <Col md={3} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRight}`}>
+    <Row>
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
+          onClick={() => setShowDesign(showDesign => !showDesign)} > Design Labour
+    </p>
+    </Col>
+    <Col md={4}>
+    <p className="mb-0">{designlabourTotal} </p>
+    </Col>
+    </Row>
+    </div>
+    </Col>
     </Row> 
-    {belowthelineBtotal}
+    {/* {belowthelineBtotal} */}
     {grandtotal}
     {/* info */}
     {!showInfo ? (
@@ -2132,18 +1426,6 @@ function BudgetCreate() {
       setStarsMusicTotal={setStarsMusicTotal}
       setShow={setShowStarsMus}  /> 
     ) }
-    {abovethelinetotal}
-    <Row className={ `${styles.OverviewBlue} mx-1 my-5 py-1 text-center`}>
-    <Col md={12}>
-    <h5 className={ `${styles.BoldBlack}`}>BELOW THE LINE - "B" PRODUCTION</h5>
-    </Col>
-    </Row>
-    <Row className={ `${styles.OverviewBlue} mx-1 mt-5 py-1`}>
-    <Col md={10}>
-    <h5 className={ `ml-3 ${styles.BoldBlack}`}>BELOW THE LINE "B" PRODUCTION</h5>
-    </Col>
-    <Col md={2}><p className="mb-0">{belowTheLineBTotal} </p></Col>
-    </Row>
     {/* cast */}
     {!showCast ? (
       ""
@@ -2214,8 +1496,27 @@ function BudgetCreate() {
       setProductionstaffTotal={setProductionstaffTotal}
       setShow={setShowProStaff}  /> 
     ) }
-    {belowthelineBtotal}
-    {grandtotal}
+    {/* design */}
+    {!showDesign ? (
+      ""
+    ) : (
+      <DesignLabour
+      postDataDesign={postDataDesign}
+      setPostDataDesign={setPostDataDesign}
+      productiondesignerTotal={productiondesignerTotal}
+      setProductiondesignerTotal={setProductiondesignerTotal}
+      artdirectorTotal={artdirectorTotal}
+      setArtdirectorTotal={setArtdirectorTotal}
+      artassistantsTotal={artassistantsTotal}
+      setArtassistantsTotal={setArtassistantsTotal}
+      productionassistantstraineesTotal={productionassistantstraineesTotal}
+      setProductionassistantstraineesTotal={setProductionassistantstraineesTotal}
+      graphicartistsTotal={graphicartistsTotal}
+      setGraphicartistsTotal={setGraphicartistsTotal}
+      designlabourTotal={designlabourTotal}
+      setDesignlabourTotal={setDesignlabourTotal}
+      setShow={setShowDesign}  /> 
+    ) }
     {/* buttons */}
     <Row>
     <Col>

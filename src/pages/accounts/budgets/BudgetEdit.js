@@ -18,6 +18,7 @@ import ProducersDirectors from "./budgetsections/ProducersDirectors";
 import StarsMusic from "./budgetsections/StarsMusic";
 import Cast from "./budgetsections/Cast";
 import ProductionStaff from "./budgetsections/ProductionStaff";
+import DesignLabour from "./budgetsections/DesignLabour";
 
 function BudgetEdit() {
   const [errors, setErrors] = useState({});
@@ -32,6 +33,7 @@ function BudgetEdit() {
   const [showStarsMus, setShowStarsMus] = useState(false);
   const [showCast, setShowCast] = useState(false);
   const [showProStaff, setShowProStaff] = useState(false);
+  const [showDesign, setShowDesign] = useState(false);
 
   // budget id
   const [budgetId, setBudgetId] = useState("");
@@ -81,7 +83,7 @@ function BudgetEdit() {
     });
   };
 
-  // prepared by input boxes
+  // prepared by input boxes to display on the Edit page on top
   const prepare = (
     <div>
     <Row>
@@ -298,8 +300,6 @@ function BudgetEdit() {
 
   // Scenario Total postData 
   const [scenarioTotal, setScenarioTotal] = useState(0);
-
-  // end Scenario -----------------------------------------
 
   // PRODUCERS DIRECTORS --------------------------------------------
   
@@ -658,6 +658,60 @@ function BudgetEdit() {
 
   // Production Total postData 
   const [productionstaffTotal, setProductionstaffTotal] = useState(0);
+
+  // DESIGN LABOUR ------------------------------------------
+
+  // Design Labour postData
+  const [postDataDesign, setPostDataDesign] = useState({
+    production_designer_quantity: 0,
+    production_designer_units_number: 0,
+    production_designer_units_name: "",
+    production_designer_rate: 0,
+    art_director_quantity: 0,
+    art_director_units_number: 0,
+    art_director_units_name: "",
+    art_director_rate: 0,
+    art_assistants_quantity: 0,
+    art_assistants_units_number: 0,
+    art_assistants_units_name: "",
+    art_assistants_rate: 0,
+    production_assistants_trainees_quantity: 0,
+    production_assistants_trainees_units_number: 0,
+    production_assistants_trainees_units_name: "",
+    production_assistants_trainees_rate: 0,
+    graphic_artists_quantity: 0,
+    graphic_artists_units_number: 0,
+    graphic_artists_units_name: "",
+    graphic_artists_rate: 0,
+    other_design: 0,
+  });
+
+  // Design Labour values
+  const {production_designer_quantity, production_designer_units_number,
+    production_designer_units_name, production_designer_rate,
+    art_director_quantity, art_director_units_number,
+    art_director_units_name, art_director_rate,
+    art_assistants_quantity, art_assistants_units_number,
+    art_assistants_units_name, art_assistants_rate,
+    production_assistants_trainees_quantity, production_assistants_trainees_units_number,
+    production_assistants_trainees_units_name, production_assistants_trainees_rate,
+    graphic_artists_quantity, graphic_artists_units_number,
+    graphic_artists_units_name, graphic_artists_rate, other_design,
+        } = postDataDesign;
+
+  // production designer Total postData
+  const [productiondesignerTotal, setProductiondesignerTotal] = useState(0);
+  // art director Total postData
+  const [artdirectorTotal, setArtdirectorTotal] = useState(0);
+  // art assistants Total postData
+  const [artassistantsTotal, setArtassistantsTotal] = useState(0);
+  // production assistants / trainees Total postData
+  const [productionassistantstraineesTotal, setProductionassistantstraineesTotal] = useState(0);
+  // graphic artists Total postData
+  const [graphicartistsTotal, setGraphicartistsTotal] = useState(0);
+
+  // Design Labour Total postData 
+  const [designlabourTotal, setDesignlabourTotal] = useState(0);
 
   //TOTALS--------------------------
 
@@ -1093,6 +1147,30 @@ function BudgetEdit() {
             craft_services_units_name,
             craft_services_rate});
           setProductionstaffTotal(productionstaff_total);
+        // design
+        const {production_designer_quantity, production_designer_units_number,
+          production_designer_units_name, production_designer_rate,
+          art_director_quantity, art_director_units_number,
+          art_director_units_name, art_director_rate,
+          art_assistants_quantity, art_assistants_units_number,
+          art_assistants_units_name, art_assistants_rate,
+          production_assistants_trainees_quantity, production_assistants_trainees_units_number,
+          production_assistants_trainees_units_name, production_assistants_trainees_rate,
+          graphic_artists_quantity, graphic_artists_units_number,
+          graphic_artists_units_name, graphic_artists_rate, other_design,
+          designlabour_total} = data.results[0];
+        setPostDataDesign({production_designer_quantity, production_designer_units_number,
+          production_designer_units_name, production_designer_rate,
+          art_director_quantity, art_director_units_number,
+          art_director_units_name, art_director_rate,
+          art_assistants_quantity, art_assistants_units_number,
+          art_assistants_units_name, art_assistants_rate,
+          production_assistants_trainees_quantity, production_assistants_trainees_units_number,
+          production_assistants_trainees_units_name, production_assistants_trainees_rate,
+          graphic_artists_quantity, graphic_artists_units_number,
+          graphic_artists_units_name, graphic_artists_rate, other_design,
+        });
+        setDesignlabourTotal(designlabour_total);
 
       } catch (err) {
         console.log(err);
@@ -1102,6 +1180,7 @@ function BudgetEdit() {
     handleMount();
   }, [history, id]);
 
+  // Submit
   const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData();
@@ -1348,6 +1427,29 @@ function BudgetEdit() {
     formData.append("assistantdirector3rd_total", assistantdirector3rdTotal);
     formData.append("craftservices_total", craftservicesTotal);
     formData.append("productionstaff_total", productionstaffTotal);
+    // design
+    formData.append("production_designer_quantity", production_designer_quantity);
+    formData.append("production_designer_units_number", production_designer_units_number);
+    formData.append("production_designer_units_name", production_designer_units_name);
+    formData.append("production_designer_rate", production_designer_rate);
+    formData.append("art_director_quantity", art_director_quantity);
+    formData.append("art_director_units_number", art_director_units_number);
+    formData.append("art_director_units_name", art_director_units_name);
+    formData.append("art_director_rate", art_director_rate);
+    formData.append("art_assistants_quantity", art_assistants_quantity);
+    formData.append("art_assistants_units_number", art_assistants_units_number);
+    formData.append("art_assistants_units_name", art_assistants_units_name);
+    formData.append("art_assistants_rate", art_assistants_rate);
+    formData.append("production_assistants_trainees_quantity", production_assistants_trainees_quantity);
+    formData.append("production_assistants_trainees_units_number", production_assistants_trainees_units_number);
+    formData.append("production_assistants_trainees_units_name", production_assistants_trainees_units_name);
+    formData.append("production_assistants_trainees_rate", production_assistants_trainees_rate);
+    formData.append("graphic_artists_quantity", graphic_artists_quantity);
+    formData.append("graphic_artists_units_number", graphic_artists_units_number);
+    formData.append("graphic_artists_units_name", graphic_artists_units_name);
+    formData.append("graphic_artists_rate", graphic_artists_rate);
+    formData.append("other_design", other_design);
+    formData.append("designlabour_total", designlabourTotal);
 
     try {
       const { data } = await axiosReq.put(`/budgets/${budgetId}/`, formData);
@@ -1515,6 +1617,20 @@ function BudgetEdit() {
     </Row>
     </div>
     </Col>
+    <Col md={3} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRight}`}>
+    <Row>
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
+          onClick={() => setShowDesign(showDesign => !showDesign)} > Design Labour
+    </p>
+    </Col>
+    <Col md={4}>
+    <p className="mb-0">{designlabourTotal} </p>
+    </Col>
+    </Row>
+    </div>
+    </Col>
     </Row> 
     {belowthelineBtotal}
     {grandtotal}
@@ -1677,6 +1793,27 @@ function BudgetEdit() {
       productionstaffTotal={productionstaffTotal}
       setProductionstaffTotal={setProductionstaffTotal}
       setShow={setShowProStaff}  /> 
+    ) }
+    {/* design */}
+    {!showDesign ? (
+      ""
+    ) : (
+      <DesignLabour
+      postDataDesign={postDataDesign}
+      setPostDataDesign={setPostDataDesign}
+      productiondesignerTotal={productiondesignerTotal}
+      setProductiondesignerTotal={setProductiondesignerTotal}
+      artdirectorTotal={artdirectorTotal}
+      setArtdirectorTotal={setArtdirectorTotal}
+      artassistantsTotal={artassistantsTotal}
+      setArtassistantsTotal={setArtassistantsTotal}
+      productionassistantstraineesTotal={productionassistantstraineesTotal}
+      setProductionassistantstraineesTotal={setProductionassistantstraineesTotal}
+      graphicartistsTotal={graphicartistsTotal}
+      setGraphicartistsTotal={setGraphicartistsTotal}
+      designlabourTotal={designlabourTotal}
+      setDesignlabourTotal={setDesignlabourTotal}
+      setShow={setShowDesign}  /> 
     ) }
     {/* buttons */}
     <Row>
