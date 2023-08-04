@@ -857,7 +857,7 @@ const Cast = (props) => {
     <p className={`${styles.Underline}`}>6090</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Other - Cast</p>
+    <p className={`${styles.Underline}`}>Other / Cast</p>
     </Col>
     <Col md={1} >
     <p></p>

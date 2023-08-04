@@ -119,6 +119,19 @@ const Budget = (props) => {
     payroll_total, otherproduction_total, directorsassistant_total,
     assistantdirector1st_total, assistantdirector2nd_total,
     assistantdirector3rd_total, craftservices_total, productionstaff_total,
+    // design
+    production_designer_quantity, production_designer_units_number,
+    production_designer_units_name, production_designer_rate,
+    art_director_quantity, art_director_units_number,
+    art_director_units_name, art_director_rate,
+    art_assistants_quantity, art_assistants_units_number,
+    art_assistants_units_name, art_assistants_rate,
+    production_assistants_trainees_quantity, production_assistants_trainees_units_number,
+    production_assistants_trainees_units_name, production_assistants_trainees_rate,
+    graphic_artists_quantity, graphic_artists_units_number,
+    graphic_artists_units_name, graphic_artists_rate, other_design,
+    productiondesigner_total, artdirector_total, artassistants_total,
+    productionassistantstrainees_total, graphicartists_total, designlabour_total,
     } = budget;
 
   console.log(props);
@@ -1752,6 +1765,188 @@ const Budget = (props) => {
     </Col>
     <Col md={2} >
     <p className={`${styles.Underline} mb-0`}>{productionstaff_total || 0}</p>
+    </Col>
+    </Row>
+    </div>
+    {/* Design Labour */}
+    <div className='mt-5'>
+    <Row>
+    <Col xs={1}>
+    <p className='mb-2'>7000</p>
+    </Col>
+    <Col xs={10}>
+    <p className={ `${styles.BoldBlack} mb-2`}>DESIGN LABOUR</p>
+    </Col>
+    </Row>
+    {/* Titles */}
+    <Row className={ `${styles.Overview} mb-2 py-1`} >
+    <Col md={1} >
+    <p className="mb-0">ACCT</p>
+    </Col>
+    <Col md={5} >
+    <p className="mb-0">Description</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">#</p>
+    </Col>
+    <Col className="px-0 mx-0" md={1} >
+    <p># Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Price</p>
+    </Col>
+    <Col md={2} >
+    <p className="mb-0">Total</p>
+    </Col>
+    </Row>
+    {/* Production Designer */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>7010</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Production Designer</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_designer_quantity || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_designer_units_number || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_designer_units_name || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_designer_rate || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{productiondesigner_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Art Director */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>7020</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Art Director</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{art_director_quantity || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{art_director_units_number || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{art_director_units_name || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{art_director_rate || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{artdirector_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Art Assistants */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>7030</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Art Assistants</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{art_assistants_quantity || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{art_assistants_units_number || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{art_assistants_units_name || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{art_assistants_rate || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{artassistants_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Production Assistants/Trainees */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>7040</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Production Assistants / Trainees</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_assistants_trainees_quantity || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_assistants_trainees_units_number || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_assistants_trainees_units_name || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_assistants_trainees_rate || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{productionassistantstrainees_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Graphic Artists */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>7050</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Graphic Artists</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{graphic_artists_quantity || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{graphic_artists_units_number || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{graphic_artists_units_name || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{graphic_artists_rate || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{graphicartists_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Other - Design */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>7060</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>OTHER - DESIGN</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{other_design || 0} </p>
+    </Col>
+    </Row>
+    {/* Design Total */}
+    <Row className='mt-3' >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    <p></p>
+    </Col>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL DESIGN LABOUR </p>
+    </Col>
+    <Col md={3} >
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline} mb-0`}>{designlabour_total || 0}</p>
     </Col>
     </Row>
     </div>

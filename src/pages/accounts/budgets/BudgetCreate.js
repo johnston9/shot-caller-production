@@ -709,6 +709,84 @@ function BudgetCreate() {
   // Design Labour Total postData 
   const [designlabourTotal, setDesignlabourTotal] = useState(0);
 
+  // CONSTRUCTION LABOUR ----------------------------------
+
+  // Construction Labour postData
+  const [postDataConstruction, setPostDataConstruction] = useState({
+    constructioncoordinator_quantity: 0,
+    constructioncoordinator_units_number: 0,
+    constructioncoordinator_units_name: "",
+    constructioncoordinator_rate: 0,
+    headcarpenter_quantity: 0,
+    headcarpenter_units_number: 0,
+    headcarpenter_units_name: "",
+    headcarpenter_rate: 0,
+    carpenters_quantity: 0,
+    carpenters_units_number: 0,
+    carpenters_units_name: "",
+    carpenters_rate: 0,
+    scenicpainters_quantity: 0,
+    scenicpainters_units_number: 0,
+    scenicpainters_units_name: "",
+    scenicpainters_rate: 0,
+    headpainter_quantity: 0,
+    headpainter_units_number: 0,
+    headpainter_units_name: "",
+    headpainter_rate: 0,
+    painters_quantity: 0,
+    painters_units_number: 0,
+    painters_units_name: "",
+    painters_rate: 0,
+    labourers_quantity: 0,
+    labourers_units_number: 0,
+    labourers_units_name: "",
+    labourers_rate: 0,
+    other_construction: 0,
+  });
+
+  // Construction Labour values
+  const {
+    constructioncoordinator_quantity, constructioncoordinator_units_number,
+    constructioncoordinator_units_name, constructioncoordinator_rate,
+    headcarpenter_quantity, headcarpenter_units_number,
+    headcarpenter_units_name, headcarpenter_rate,
+    carpenters_quantity, carpenters_units_number,
+    carpenters_units_name, carpenters_rate,
+    scenicpainters_quantity, scenicpainters_units_number,
+    scenicpainters_units_name, scenicpainters_rate,
+    headpainter_quantity, headpainter_units_number,
+    headpainter_units_name, headpainter_rate,
+    painters_quantity, painters_units_number, 
+    painters_units_name, painters_rate,
+    labourers_quantity, labourers_units_number, 
+    labourers_units_name, labourers_rate, other_construction,
+  } = postDataConstruction;
+
+  // Totals
+  // construction coordinator Total postData
+  const [constructioncoordinatorTotal, setConstructioncoordinatorTotal] = useState(0);
+
+  // head carpenter Total postData
+  const [headcarpenterTotal, setHeadcarpenterTotal] = useState(0);
+
+  // carpenters Total postData
+  const [carpentersTotal, setCarpentersTotal] = useState(0);
+
+  // scenic painters Total postData
+  const [scenicpaintersTotal, setScenicpaintersTotal] = useState(0);
+
+  // head painter Total postData
+  const [headpainterTotal, setHeadpainterTotal] = useState(0);
+
+  // painters Total postData
+  const [paintersTotal, setPaintersTotal] = useState(0);
+
+  // labourers Total postData
+  const [labourersTotal, setLabourersTotal] = useState(0);
+
+  // construction Labour Total postData 
+  const [constructionlabourTotal, setConstructionlabourTotal] = useState(0);
+
   //TOTALS--------------------------
 
   // Above the line total --------------------------
@@ -1150,6 +1228,11 @@ function BudgetCreate() {
     formData.append("graphic_artists_units_number", graphic_artists_units_number);
     formData.append("graphic_artists_units_name", graphic_artists_units_name);
     formData.append("graphic_artists_rate", graphic_artists_rate);
+    formData.append("productiondesigner_total", productiondesignerTotal);
+    formData.append("artdirector_total", artdirectorTotal);
+    formData.append("artassistants_total", artassistantsTotal);
+    formData.append("productionassistantstrainees_total", productionassistantstraineesTotal);
+    formData.append("graphicartists_total", graphicartistsTotal);
     formData.append("other_design", other_design);
     formData.append("designlabour_total", designlabourTotal);
 
