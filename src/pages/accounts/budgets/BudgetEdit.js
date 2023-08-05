@@ -34,6 +34,7 @@ function BudgetEdit() {
   const [showCast, setShowCast] = useState(false);
   const [showProStaff, setShowProStaff] = useState(false);
   const [showDesign, setShowDesign] = useState(false);
+  const [showCon, setShowCon] = useState(false);
 
   // budget id
   const [budgetId, setBudgetId] = useState("");
@@ -1249,6 +1250,38 @@ function BudgetEdit() {
           graphic_artists_units_name, graphic_artists_rate, other_design,
         });
         setDesignlabourTotal(designlabour_total);
+        // construction
+        const {constructioncoordinator_quantity, constructioncoordinator_units_number,
+          constructioncoordinator_units_name, constructioncoordinator_rate,
+          headcarpenter_quantity, headcarpenter_units_number,
+          headcarpenter_units_name, headcarpenter_rate,
+          carpenters_quantity, carpenters_units_number,
+          carpenters_units_name, carpenters_rate,
+          scenicpainters_quantity, scenicpainters_units_number,
+          scenicpainters_units_name, scenicpainters_rate,
+          headpainter_quantity, headpainter_units_number,
+          headpainter_units_name, headpainter_rate,
+          painters_quantity, painters_units_number, 
+          painters_units_name, painters_rate,
+          labourers_quantity, labourers_units_number, 
+          labourers_units_name, labourers_rate, other_construction,
+          constructionlabour_total} = data.results[0];
+        setPostDataConstruction = {constructioncoordinator_quantity, constructioncoordinator_units_number,
+          constructioncoordinator_units_name, constructioncoordinator_rate,
+          headcarpenter_quantity, headcarpenter_units_number,
+          headcarpenter_units_name, headcarpenter_rate,
+          carpenters_quantity, carpenters_units_number,
+          carpenters_units_name, carpenters_rate,
+          scenicpainters_quantity, scenicpainters_units_number,
+          scenicpainters_units_name, scenicpainters_rate,
+          headpainter_quantity, headpainter_units_number,
+          headpainter_units_name, headpainter_rate,
+          painters_quantity, painters_units_number, 
+          painters_units_name, painters_rate,
+          labourers_quantity, labourers_units_number, 
+          labourers_units_name, labourers_rate, other_construction,
+          };
+        setConstructionlabourTotal(constructionlabour_total);
 
       } catch (err) {
         console.log(err);
@@ -1533,6 +1566,44 @@ function BudgetEdit() {
     formData.append("graphicartists_total", graphicartistsTotal);
     formData.append("other_design", other_design);
     formData.append("designlabour_total", designlabourTotal);
+    // construction
+    formData.append("constructioncoordinator_quantity", constructioncoordinator_quantity);
+    formData.append("constructioncoordinator_units_number", constructioncoordinator_units_number);
+    formData.append("constructioncoordinator_units_name", constructioncoordinator_units_name);
+    formData.append("constructioncoordinator_rate", constructioncoordinator_rate);
+    formData.append("headcarpenter_quantity", headcarpenter_quantity);
+    formData.append("headcarpenter_units_number", headcarpenter_units_number);
+    formData.append("headcarpenter_units_name", headcarpenter_units_name);
+    formData.append("headcarpenter_rate", headcarpenter_rate);
+    formData.append("carpenters_quantity", carpenters_quantity);
+    formData.append("carpenters_units_number", carpenters_units_number);
+    formData.append("carpenters_units_name", carpenters_units_name);
+    formData.append("carpenters_rate", carpenters_rate);
+    formData.append("scenicpainters_quantity", scenicpainters_quantity);
+    formData.append("scenicpainters_units_number", scenicpainters_units_number);
+    formData.append("scenicpainters_units_name", scenicpainters_units_name);
+    formData.append("scenicpainters_rate", scenicpainters_rate);
+    formData.append("headpainter_quantity", headpainter_quantity);
+    formData.append("headpainter_units_number", headpainter_units_number);
+    formData.append("headpainter_units_name", headpainter_units_name);
+    formData.append("headpainter_rate", headpainter_rate);
+    formData.append("painters_quantity", painters_quantity);
+    formData.append("painters_units_number", painters_units_number);
+    formData.append("painters_units_name", painters_units_name);
+    formData.append("painters_rate", painters_rate);
+    formData.append("labourers_quantity", labourers_quantity);
+    formData.append("labourers_units_number", labourers_units_number);
+    formData.append("labourers_units_name", labourers_units_name);
+    formData.append("labourers_rate", labourers_rate);
+    formData.append("other_construction", other_construction);
+    formData.append("constructioncoordinator_total", constructioncoordinatorTotal);
+    formData.append("headcarpenter_total", headcarpenterTotal);
+    formData.append("carpentersTotal", carpentersTotal);
+    formData.append("scenicpainters_total", scenicpaintersTotal);
+    formData.append("headpainter_total", headpainterTotal);
+    formData.append("painters_total", paintersTotal);
+    formData.append("labourers_total", labourersTotal);
+    formData.append("constructionlabour_total", constructionlabourTotal);
 
     try {
       const { data } = await axiosReq.put(`/budgets/${budgetId}/`, formData);
@@ -1710,6 +1781,20 @@ function BudgetEdit() {
     </Col>
     <Col md={4}>
     <p className="mb-0">{designlabourTotal} </p>
+    </Col>
+    </Row>
+    </div>
+    </Col>
+    <Col md={3} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
+    <Row>
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
+          onClick={() => setShowCon(showCon => !showCon)} >Construction Labour
+    </p>
+    </Col>
+    <Col md={4}>
+    <p className="mb-0">{constructionlabourTotal} </p>
     </Col>
     </Row>
     </div>
@@ -1897,6 +1982,31 @@ function BudgetEdit() {
       designlabourTotal={designlabourTotal}
       setDesignlabourTotal={setDesignlabourTotal}
       setShow={setShowDesign}  /> 
+    ) }
+    {/* construction */}
+    {!showCon ? (
+      ""
+    ) : (
+      <Construction
+      postDataConstruction={postDataConstruction}
+      setPostDataConstruction={setPostDataConstruction}
+      constructioncoordinatorTotal={constructioncoordinatorTotal}
+      setConstructioncoordinatorTotal={setConstructioncoordinatorTotal}
+      headcarpenterTotal={headcarpenterTotal}
+      setHeadcarpenterTotal={setHeadcarpenterTotal}
+      carpentersTotal={carpentersTotal}
+      setCarpentersTotal={setCarpentersTotal}
+      scenicpaintersTotal={scenicpaintersTotal}
+      setScenicpaintersTotal={setScenicpaintersTotal}
+      headpainterTotal={headpainterTotal}
+      setHeadpainterTotal={setHeadpainterTotal}
+      paintersTotal={paintersTotal}
+      setPaintersTotal={setPaintersTotal}
+      labourersTotal={labourersTotal}
+      setLabourersTotal={setLabourersTotal}
+      constructionlabourTotal={constructionlabourTotal}
+      setConstructionlabourTotal={setConstructionlabourTotal}
+      setShow={setShowCon}  /> 
     ) }
     {/* buttons */}
     <Row>
