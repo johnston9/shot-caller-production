@@ -683,7 +683,7 @@ useEffect(() => {
         className={styles.Input}
         name="other_design"
         value={other_design}
-        readOnly
+        onChange={handleChangeDesign}
             />
     </Form.Group>
     {errors?.other_design?.map((message, idx) => (

@@ -19,6 +19,7 @@ import StarsMusic from "./budgetsections/StarsMusic";
 import Cast from "./budgetsections/Cast";
 import ProductionStaff from "./budgetsections/ProductionStaff";
 import DesignLabour from "./budgetsections/DesignLabour";
+import SetDressingLabour from "./budgetsections/SetDressingLabour";
 
 function BudgetEdit() {
   const [errors, setErrors] = useState({});
@@ -35,6 +36,7 @@ function BudgetEdit() {
   const [showProStaff, setShowProStaff] = useState(false);
   const [showDesign, setShowDesign] = useState(false);
   const [showCon, setShowCon] = useState(false);
+  const [showDress, setShowDress] = useState(false);
 
   // budget id
   const [budgetId, setBudgetId] = useState("");
@@ -791,8 +793,76 @@ function BudgetEdit() {
 
   // construction Labour Total postData 
   const [constructionlabourTotal, setConstructionlabourTotal] = useState(0);
+  
+  // SET DRESSING LABOUR ----------------------------------
 
-  //TOTALS--------------------------
+  // Set Dressing Labour postData 
+  const [postDataSetDressing, setPostDataSetDressing] = useState({
+    set_decorator_quantity: 0,
+    set_decorator_units_number: 0,
+    set_decorator_units_name: "",
+    set_decorator_rate: 0,
+    assist_set_decorator_quantity: 0,
+    assist_set_decorator_units_number: 0,
+    assist_set_decorator_units_name: "",
+    assist_set_decorator_rate: 0,
+    lead_man_quantity: 0,
+    lead_man_units_number: 0,
+    lead_man_units_name: "",
+    lead_man_rate: 0,
+    set_dressers_quantity: 0,
+    set_dressers_units_number: 0,
+    set_dressers_units_name: "",
+    set_dressers_rate: 0,
+    swing_gang_quantity: 0,
+    swing_gang_units_number: 0,
+    swing_gang_units_name: "",
+    swing_gang_rate: 0,
+    set_dressing_buyer_quantity: 0,
+    set_dressing_buyer_units_number: 0,
+    set_dressing_buyer_units_name: "",
+    set_dressing_buyer_rate: 0,
+    other_set_dressing: 0,
+  });
+
+  // Set Dressing Labour values
+  const {set_decorator_quantity, set_decorator_units_number,
+    set_decorator_units_name, set_decorator_rate,
+    assist_set_decorator_quantity, assist_set_decorator_units_number,
+    assist_set_decorator_units_name, assist_set_decorator_rate,
+    lead_man_quantity, lead_man_units_number,
+    lead_man_units_name, lead_man_rate,
+    set_dressers_quantity, set_dressers_units_number,
+    set_dressers_units_name, set_dressers_rate,
+    swing_gang_quantity, swing_gang_units_number,
+    swing_gang_units_name, swing_gang_rate,
+    set_dressing_buyer_quantity, set_dressing_buyer_units_number,
+    set_dressing_buyer_units_name, set_dressing_buyer_rate, other_set_dressing,
+  } = postDataSetDressing;
+
+  // Totals
+  // set decorator Total postData
+  const [decoratorsetTotal, setDecoratorsetTotal] = useState(0);
+
+  // assist set decorator Total postData
+  const [assistdecoratorsetTotal, setAssistdecoratorsetTotal] = useState(0);
+
+  // lead man Total postData
+  const [leadmanTotal, setLeadmanTotal] = useState(0);
+
+  // dressers Total postData
+  const [dressersTotal, setDressersTotal] = useState(0);
+
+  // swing gang Total postData
+  const [swinggangTotal, setSwinggangTotal] = useState(0);
+
+  // set dressing buyer Total postData
+  const [dressingbuyerTotal, setDressingbuyerTotal] = useState(0);
+
+  // set dressing Labour Total postData 
+  const [dressinglabourTotal, setDressinglabourTotal] = useState(0);
+
+  //TOTALS ABOVE / BELOW / GRAND --------------------------------
 
   // Above the line total --------------------------
 
@@ -1266,7 +1336,7 @@ function BudgetEdit() {
           labourers_quantity, labourers_units_number, 
           labourers_units_name, labourers_rate, other_construction,
           constructionlabour_total} = data.results[0];
-        setPostDataConstruction = {constructioncoordinator_quantity, constructioncoordinator_units_number,
+        setPostDataConstruction({constructioncoordinator_quantity, constructioncoordinator_units_number,
           constructioncoordinator_units_name, constructioncoordinator_rate,
           headcarpenter_quantity, headcarpenter_units_number,
           headcarpenter_units_name, headcarpenter_rate,
@@ -1279,9 +1349,36 @@ function BudgetEdit() {
           painters_quantity, painters_units_number, 
           painters_units_name, painters_rate,
           labourers_quantity, labourers_units_number, 
-          labourers_units_name, labourers_rate, other_construction,
-          };
+          labourers_units_name, labourers_rate, other_construction,}) ;
         setConstructionlabourTotal(constructionlabour_total);
+        //dressing
+        const {set_decorator_quantity, set_decorator_units_number,
+          set_decorator_units_name, set_decorator_rate,
+          assist_set_decorator_quantity, assist_set_decorator_units_number,
+          assist_set_decorator_units_name, assist_set_decorator_rate,
+          lead_man_quantity, lead_man_units_number,
+          lead_man_units_name, lead_man_rate,
+          set_dressers_quantity, set_dressers_units_number,
+          set_dressers_units_name, set_dressers_rate,
+          swing_gang_quantity, swing_gang_units_number,
+          swing_gang_units_name, swing_gang_rate,
+          set_dressing_buyer_quantity, set_dressing_buyer_units_number,
+          set_dressing_buyer_units_name, set_dressing_buyer_rate, 
+          other_set_dressing, dressinglabour_total} = data.results[0];
+        setPostDataSetDressing({set_decorator_quantity, set_decorator_units_number,
+            set_decorator_units_name, set_decorator_rate,
+            assist_set_decorator_quantity, assist_set_decorator_units_number,
+            assist_set_decorator_units_name, assist_set_decorator_rate,
+            lead_man_quantity, lead_man_units_number,
+            lead_man_units_name, lead_man_rate,
+            set_dressers_quantity, set_dressers_units_number,
+            set_dressers_units_name, set_dressers_rate,
+            swing_gang_quantity, swing_gang_units_number,
+            swing_gang_units_name, swing_gang_rate,
+            set_dressing_buyer_quantity, set_dressing_buyer_units_number,
+            set_dressing_buyer_units_name, set_dressing_buyer_rate, 
+            other_set_dressing,});
+        setDressinglabourTotal(dressinglabour_total);
 
       } catch (err) {
         console.log(err);
@@ -1598,12 +1695,45 @@ function BudgetEdit() {
     formData.append("other_construction", other_construction);
     formData.append("constructioncoordinator_total", constructioncoordinatorTotal);
     formData.append("headcarpenter_total", headcarpenterTotal);
-    formData.append("carpentersTotal", carpentersTotal);
+    formData.append("carpenters_total", carpentersTotal);
     formData.append("scenicpainters_total", scenicpaintersTotal);
     formData.append("headpainter_total", headpainterTotal);
     formData.append("painters_total", paintersTotal);
     formData.append("labourers_total", labourersTotal);
     formData.append("constructionlabour_total", constructionlabourTotal);
+    // dressing
+    formData.append("set_decorator_quantity", set_decorator_quantity);
+    formData.append("set_decorator_units_number", set_decorator_units_number);
+    formData.append("set_decorator_units_name", set_decorator_units_name);
+    formData.append("set_decorator_rate", set_decorator_rate);
+    formData.append("assist_set_decorator_quantity", assist_set_decorator_quantity);
+    formData.append("assist_set_decorator_units_number", assist_set_decorator_units_number);
+    formData.append("assist_set_decorator_units_name", assist_set_decorator_units_name);
+    formData.append("assist_set_decorator_rate", assist_set_decorator_rate);
+    formData.append("lead_man_quantity", lead_man_quantity);
+    formData.append("lead_man_units_number", lead_man_units_number);
+    formData.append("lead_man_units_name", lead_man_units_name);
+    formData.append("lead_man_rate", lead_man_rate);
+    formData.append("set_dressers_quantity", set_dressers_quantity);
+    formData.append("set_dressers_units_number", set_dressers_units_number);
+    formData.append("set_dressers_units_name", set_dressers_units_name);
+    formData.append("set_dressers_rate", set_dressers_rate);
+    formData.append("swing_gang_quantity", swing_gang_quantity);
+    formData.append("swing_gang_units_number", swing_gang_units_number);
+    formData.append("swing_gang_units_name", swing_gang_units_name);
+    formData.append("swing_gang_rate", swing_gang_rate);
+    formData.append("set_dressing_buyer_quantity", set_dressing_buyer_quantity);
+    formData.append("set_dressing_buyer_units_number", set_dressing_buyer_units_number);
+    formData.append("set_dressing_buyer_units_name", set_dressing_buyer_units_name);
+    formData.append("set_dressing_buyer_rate", set_dressing_buyer_rate);
+    formData.append("other_set_dressing", other_set_dressing);
+    formData.append("decoratorset_total", decoratorsetTotal);
+    formData.append("assistdecoratorset_total", assistdecoratorsetTotal);
+    formData.append("leadman_total", leadmanTotal);
+    formData.append("dressers_total", dressersTotal);
+    formData.append("swinggang_total", swinggangTotal);
+    formData.append("dressingbuyer_total", dressingbuyerTotal);
+    formData.append("dressinglabour_total", dressinglabourTotal);
 
     try {
       const { data } = await axiosReq.put(`/budgets/${budgetId}/`, formData);
@@ -1795,6 +1925,20 @@ function BudgetEdit() {
     </Col>
     <Col md={4}>
     <p className="mb-0">{constructionlabourTotal} </p>
+    </Col>
+    </Row>
+    </div>
+    </Col>
+    <Col md={3} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
+    <Row>
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
+          onClick={() => setShowDress(showDress => !showDress)} >Set Dressing Labour
+    </p>
+    </Col>
+    <Col md={4}>
+    <p className="mb-0">{dressinglabourTotal} </p>
     </Col>
     </Row>
     </div>
@@ -2007,6 +2151,29 @@ function BudgetEdit() {
       constructionlabourTotal={constructionlabourTotal}
       setConstructionlabourTotal={setConstructionlabourTotal}
       setShow={setShowCon}  /> 
+    ) }
+    {/* set dressing */}
+    {!showDress ? (
+      ""
+    ) : (
+      <SetDressingLabour
+      postDataSetDressing={postDataSetDressing}
+      setPostDataSetDressing={setPostDataSetDressing}
+      decoratorsetTotal={decoratorsetTotal}
+      setDecoratorsetTotal={setDecoratorsetTotal}
+      assistdecoratorsetTotal={assistdecoratorsetTotal}
+      setAssistdecoratorsetTotal={setAssistdecoratorsetTotal}
+      leadmanTotal={leadmanTotal}
+      setLeadmanTotal={setLeadmanTotal}
+      dressersTotal={dressersTotal}
+      setDressersTotal={setDressersTotal}
+      swinggangTotal={swinggangTotal}
+      setSwinggangTotal={setSwinggangTotal}
+      dressingbuyerTotal={dressingbuyerTotal}
+      setDressingbuyerTotal={setDressingbuyerTotal}
+      dressinglabourTotal={dressinglabourTotal}
+      setDressinglabourTotal={setDressinglabourTotal}
+      setShow={setShowDress}  /> 
     ) }
     {/* buttons */}
     <Row>

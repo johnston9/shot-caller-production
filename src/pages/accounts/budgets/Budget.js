@@ -132,6 +132,25 @@ const Budget = (props) => {
     graphic_artists_units_name, graphic_artists_rate, other_design,
     productiondesigner_total, artdirector_total, artassistants_total,
     productionassistantstrainees_total, graphicartists_total, designlabour_total,
+    // construction
+    constructioncoordinator_quantity, constructioncoordinator_units_number,
+        constructioncoordinator_units_name, constructioncoordinator_rate,
+        headcarpenter_quantity, headcarpenter_units_number,
+        headcarpenter_units_name, headcarpenter_rate,
+        carpenters_quantity, carpenters_units_number,
+        carpenters_units_name, carpenters_rate,
+        scenicpainters_quantity, scenicpainters_units_number,
+        scenicpainters_units_name, scenicpainters_rate,
+        headpainter_quantity, headpainter_units_number,
+        headpainter_units_name, headpainter_rate,
+        painters_quantity, painters_units_number, 
+        painters_units_name, painters_rate,
+        labourers_quantity, labourers_units_number, 
+        labourers_units_name, labourers_rate, 
+        other_construction, constructioncoordinator_total,
+        headcarpenter_total, carpenters_total, scenicpainters_total,
+        headpainter_total, painters_total, labourers_total,
+        constructionlabour_total,
     } = budget;
 
   console.log(props);
@@ -1614,7 +1633,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>7130</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Payroll</p>
+    <p className={`${styles.Underline}`}>Other - Production</p>
     </Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>{other_production_quantity || 0}</p>
@@ -1950,7 +1969,238 @@ const Budget = (props) => {
     </Col>
     </Row>
     </div>
+    {/* Construction Labour */}
+    <div className='mt-5'>
+    <Row>
+    <Col xs={1}>
+    <p className='mb-2'>8000</p>
+    </Col>
+    <Col xs={10}>
+    <p className={ `${styles.BoldBlack} mb-2`}>CONSTRUCTION LABOUR</p>
+    </Col>
+    </Row>
+    {/* Titles */}
+    <Row className={ `${styles.Overview} mb-2 py-1`} >
+    <Col md={1} >
+    <p className="mb-0">ACCT</p>
+    </Col>
+    <Col md={5} >
+    <p className="mb-0">Description</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">#</p>
+    </Col>
+    <Col className="px-0 mx-0" md={1} >
+    <p># Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Price</p>
+    </Col>
+    <Col md={2} >
+    <p className="mb-0">Total</p>
+    </Col>
+    </Row>
+    {/* Construction Coordinator */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>8010</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Construction Coordinator</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{constructioncoordinator_quantity || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{constructioncoordinator_units_number || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{constructioncoordinator_units_name || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{constructioncoordinator_rate || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{constructioncoordinator_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Head Carpenter */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>8020</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Head Carpenter</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{headcarpenter_quantity || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{headcarpenter_units_number || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{headcarpenter_units_name || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{headcarpenter_rate || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{headcarpenter_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Carpenters */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>8030</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Carpenters</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{carpenters_quantity || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{carpenters_units_number || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{carpenters_units_name || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{carpenters_rate || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{carpenters_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Scenic Painters */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>8040</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Scenic Painters</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{scenicpainters_quantity || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{scenicpainters_units_number || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{scenicpainters_units_name || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{scenicpainters_rate || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{scenicpainters_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Head Painter */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>8050</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Head Painter</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{headpainter_quantity || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{headpainter_units_number || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{headpainter_units_name || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{headpainter_rate || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{headpainter_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Painters */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>8060</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Painters</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{painters_quantity || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{painters_units_number || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{painters_units_name || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{painters_rate || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{painters_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Labourers */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>8070</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Labourers</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{labourers_quantity || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{labourers_units_number || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{labourers_units_name || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{labourers_rate || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{labourers_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Other - Construction */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>7060</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>OTHER - CONSTRUCTION</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{other_construction || 0} </p>
+    </Col>
+    </Row>
+    {/* Construction Total */}
+    <Row className='mt-3' >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    <p></p>
+    </Col>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL CONSTRUCTION LABOUR </p>
+    </Col>
+    <Col md={3} >
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline} mb-0`}>{constructionlabour_total || 0}</p>
+    </Col>
+    </Row>
+    </div>
 
+    {/* end PRODUCTION B */}
     </div>
     </div>
     </div>
