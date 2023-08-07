@@ -2415,6 +2415,223 @@ const Budget = (props) => {
     </Col>
     </Row>
     </div>
+    {/* Property Labour */}
+    <div className='mt-5'>
+    <Row>
+    <Col xs={1}>
+    <p className='mb-2'>11.00</p>
+    </Col>
+    <Col xs={10}>
+    <p className={ `${styles.BoldBlack} mb-2`}>PROPERTY LABOUR</p>
+    </Col>
+    </Row>
+    {/* Titles */}
+    <Row className={ `${styles.Overview} mb-2 py-1`} >
+    <Col md={1} >
+    <p className="mb-0">ACCT</p>
+    </Col>
+    <Col md={5} >
+    <p className="mb-0">Description</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">#</p>
+    </Col>
+    <Col className="px-0 mx-0" md={1} >
+    <p># Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Price</p>
+    </Col>
+    <Col md={2} >
+    <p className="mb-0">Total</p>
+    </Col>
+    </Row>
+    {/* Property Master */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>11.10</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Property Master</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{property_master_quantity || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{property_master_units_number || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{property_master_units_name || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{property_master_rate || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{propertymaster_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Assistant Property Master */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>11.20</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Assistant Property Master</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{assist_property_master_quantity || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{assist_property_master_units_number || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{assist_property_master_units_name || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{assist_property_master_rate || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{assistpropertymaster_total || 0}</p>
+    </Col>
+    </Row>
+    {/* On Set Props Person */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>11.30</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>On Set Props Person</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{on_set_props_person_quantity || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{on_set_props_person_units_number || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{on_set_props_person_units_name || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{on_set_props_person_rate || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{onsetpropsperson_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Property Buyer */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>11.40</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Property Buyer</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{property_buyer_quantity || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{property_buyer_units_number || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{property_buyer_units_name || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{property_buyer_rate || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{propertybuyer_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Armorer */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>11.50</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Armorer</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{armorer_quantity || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{armorer_units_number || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{armorer_units_name || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{armorer_rate || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{armorer_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Other - Property */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>11.60</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>OTHER - PROPERTY</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{other_property || 0} </p>
+    </Col>
+    </Row>
+    {/* Property Total */}
+    <Row className='mt-3' >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    <p></p>
+    </Col>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL PROPERTY LABOUR </p>
+    </Col>
+    <Col md={3} >
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline} mb-0`}>{propertylabour_total || 0}</p>
+    </Col>
+    </Row>
+    </div>
+    {/* Wrangling */}
+    <div className='mt-5'>
+    <Row>
+    <Col xs={1}>
+    <p className='mb-2'>12.00</p>
+    </Col>
+    <Col xs={10}>
+    <p className={ `${styles.BoldBlack} mb-2`}>WRANGLING LABOUR</p>
+    </Col>
+    </Row>
+    {/* Titles */}
+    <Row className={ `${styles.Overview} mb-2 py-1`} >
+    <Col md={1} >
+    <p className="mb-0">ACCT</p>
+    </Col>
+    <Col md={5} >
+    <p className="mb-0">Description</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">#</p>
+    </Col>
+    <Col className="px-0 mx-0" md={1} >
+    <p># Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Price</p>
+    </Col>
+    <Col md={2} >
+    <p className="mb-0">Total</p>
+    </Col>
+    </Row>
+    </div>
 
     {/* end PRODUCTION B */}
     </div>

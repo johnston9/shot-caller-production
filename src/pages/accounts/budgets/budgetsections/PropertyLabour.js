@@ -287,6 +287,448 @@ const PropertyLabour = (props) => {
     ))}
     </Col>
     </Row>
+    {/* Assistant Property Master */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>11.20</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Assistant Property Master</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="assist_property_master_quantity" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="assist_property_master_quantity"
+        value={assist_property_master_quantity}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.assist_property_master_quantity?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="assist_property_master_units_number" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="assist_property_master_units_number"
+        value={assist_property_master_units_number}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.assist_property_master_units_number?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="assist_property_master_units_name" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="assist_property_master_units_name"
+        value={assist_property_master_units_name}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.assist_property_master_units_name?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="assist_property_master_rate" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="assist_property_master_rate"
+        value={assist_property_master_rate}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.assist_property_master_rate?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="assistpropertymasterTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="assistpropertymasterTotal"
+        value={assistpropertymasterTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.assistpropertymasterTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* On Set Props Person */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>11.30</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>On-Set Props Person</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="on_set_props_person_quantity" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="on_set_props_person_quantity"
+        value={on_set_props_person_quantity}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.on_set_props_person_quantity?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="on_set_props_person_units_number" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="on_set_props_person_units_number"
+        value={on_set_props_person_units_number}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.on_set_props_person_units_number?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="on_set_props_person_units_name" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="on_set_props_person_units_name"
+        value={on_set_props_person_units_name}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.on_set_props_person_units_name?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="on_set_props_person_rate" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="on_set_props_person_rate"
+        value={on_set_props_person_rate}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.on_set_props_person_rate?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="onsetpropspersonTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="onsetpropspersonTotal"
+        value={onsetpropspersonTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.onsetpropspersonTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Property Buyer */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>11.40</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Property Buyer</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="property_buyer_quantity" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="property_buyer_quantity"
+        value={property_buyer_quantity}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.property_buyer_quantity?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="property_buyer_units_number" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="property_buyer_units_number"
+        value={property_buyer_units_number}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.property_buyer_units_number?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="property_buyer_units_name" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="property_buyer_units_name"
+        value={property_buyer_units_name}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.property_buyer_units_name?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="property_buyer_rate" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="property_buyer_rate"
+        value={property_buyer_rate}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.property_buyer_rate?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="propertybuyerTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="propertybuyerTotal"
+        value={propertybuyerTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.propertybuyerTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Armorer */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>11.50</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Armorer</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="armorer_quantity" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="armorer_quantity"
+        value={armorer_quantity}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.armorer_quantity?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="armorer_units_number" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="armorer_units_number"
+        value={armorer_units_number}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.armorer_units_number?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="armorer_units_name" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="armorer_units_name"
+        value={armorer_units_name}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.armorer_units_name?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="armorer_rate" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="armorer_rate"
+        value={armorer_rate}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.armorer_rate?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="armorerTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="armorerTotal"
+        value={armorerTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.armorerTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Other Property*/}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>11.60</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Other - Property</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="other_property" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="other_property"
+        value={other_property}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.other_property?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Property Total */}
+    <Row className="mt-3">
+    <Col md={1} >
+    </Col>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL PROPERTY</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="propertylabourTotal" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="propertylabourTotal"
+        value={propertylabourTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.propertylabourTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
     </div>
   )
 }

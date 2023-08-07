@@ -920,6 +920,38 @@ function BudgetCreate() {
   // Property Labour Total postData 
   const [propertylabourTotal, setPropertylabourTotal] = useState(0);
 
+  // WRANGLING LABOUR ----------------------------------
+
+  // Wrangling Labour postData 
+  const [postDataWrangling, setPostDataWrangling] = useState({
+    head_wrangler_quantity: 0,
+    head_wrangler_units_number: 0,
+    head_wrangler_units_name: "",
+    head_wrangler_rate: 0,
+    other_wrangling_labour_quantity: 0,
+    other_wrangling_labour_units_number: 0,
+    other_wrangling_labour_units_name: "",
+    other_wrangling_labour_rate: 0,
+  });
+
+  // Wrangling Labour values
+  const {head_wrangler_quantity, head_wrangler_units_number,
+    head_wrangler_units_name, head_wrangler_rate,
+    other_wrangling_labour_quantity, other_wrangling_labour_units_number,
+    other_wrangling_labour_units_name, other_wrangling_labour_rate,
+  } = postDataWrangling;
+
+  // Totals
+  // head wrangler Total postData
+  const [headwranglerTotal, setHeadwranglerTotal] = useState(0);
+
+  // other wrangling labour Total postData
+  const [otherwranglinglabourTotal, setOtherwranglinglabourTotal] = useState(0);
+
+  // Wrangling Labour Total postData 
+  const [wranglerlabourTotal, setWranglerlabourTotal] = useState(0);
+
+
    // end below B
 
   // TOTALS ABOVE / BELOW / GRAND -----------------------------
@@ -1464,11 +1496,11 @@ function BudgetCreate() {
     formData.append("armorer_units_name", armorer_units_name);
     formData.append("armorer_rate", armorer_rate);
     formData.append("other_property", other_property);
-    formData.append("propertymasterTotal", propertymasterTotal);
-    formData.append("assistpropertymasterTotal", assistpropertymasterTotal);
-    formData.append("onsetpropspersonTotal", onsetpropspersonTotal);
-    formData.append("propertybuyerTotal", propertybuyerTotal);
-    formData.append("armorerTotal", armorerTotal);
+    formData.append("propertymaster_total", propertymasterTotal);
+    formData.append("assistpropertymaster_total", assistpropertymasterTotal);
+    formData.append("onsetpropsperson_total", onsetpropspersonTotal);
+    formData.append("propertybuyer_total", propertybuyerTotal);
+    formData.append("armorer_total", armorerTotal);
     formData.append("propertylabour_total", propertylabourTotal);
     // formData.append("stars", stars);
 
