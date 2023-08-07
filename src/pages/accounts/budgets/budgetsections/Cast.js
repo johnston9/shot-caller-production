@@ -183,7 +183,7 @@ const Cast = (props) => {
     <div className="mt-5">
     <Row >
     <Col md={1} >
-    <p className="mb-2">6000</p>
+    <p className="mb-2">06.00</p>
     </Col>
     <Col md={9} >
     <p className={ `${styles.BoldBlack} mb-2`}>CAST</p>
@@ -220,7 +220,7 @@ const Cast = (props) => {
     {/* Principals */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>6010</p>
+    <p className={`${styles.Underline}`}>06.10</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>Principals</p>
@@ -314,7 +314,7 @@ const Cast = (props) => {
     {/* Actors */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>6020</p>
+    <p className={`${styles.Underline}`}>06.20</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>Actors</p>
@@ -408,7 +408,7 @@ const Cast = (props) => {
     {/* Stunt Coordinators */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>6030</p>
+    <p className={`${styles.Underline}`}>06.30</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>Stunt Coordinators</p>
@@ -502,7 +502,7 @@ const Cast = (props) => {
     {/* Stunt Performers */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>6040</p>
+    <p className={`${styles.Underline}`}>06.40</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>Stunt Performers</p>
@@ -596,7 +596,7 @@ const Cast = (props) => {
     {/* Other Performers */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>6050</p>
+    <p className={`${styles.Underline}`}>06.50</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>Other Performers</p>
@@ -690,7 +690,7 @@ const Cast = (props) => {
     {/* Extras */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>6060</p>
+    <p className={`${styles.Underline}`}>06.60</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>Extras</p>
@@ -784,7 +784,7 @@ const Cast = (props) => {
     {/* Casting Director */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>6070</p>
+    <p className={`${styles.Underline}`}>06.70</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Casting Director</p>
@@ -819,7 +819,7 @@ const Cast = (props) => {
     {/* Extras Casting */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>6080</p>
+    <p className={`${styles.Underline}`}>06.80</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Extras Casting</p>
@@ -854,7 +854,7 @@ const Cast = (props) => {
     {/* Other */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>6090</p>
+    <p className={`${styles.Underline}`}>06.90</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Other / Cast</p>
@@ -889,7 +889,7 @@ const Cast = (props) => {
     {/* Fringes Taxes - Cast */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>6100</p>
+    <p className={`${styles.Underline}`}>06.91</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Fringes Taxes - Cast</p>
@@ -924,7 +924,7 @@ const Cast = (props) => {
     {/* Rights Payments - Cast */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>6110</p>
+    <p className={`${styles.Underline}`}>06.92</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Rights Payments - Cast</p>

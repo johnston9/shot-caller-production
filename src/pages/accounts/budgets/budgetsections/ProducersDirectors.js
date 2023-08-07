@@ -188,7 +188,7 @@ const ProducersDirectors = (props) => {
     <div>
     <Row className="mt-5" >
     <Col md={1} >
-    <p className="mb-2">4000</p>
+    <p className="mb-2">04.00</p>
     </Col>
     <Col md={9} >
     <p className={ `${styles.BoldBlack} mb-2`}>
@@ -223,7 +223,7 @@ const ProducersDirectors = (props) => {
     {/* Executive Producers */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>4010</p>
+    <p className={`${styles.Underline}`}>04.10</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Executive Producers</p>
@@ -290,7 +290,7 @@ const ProducersDirectors = (props) => {
     {/* Producers */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>4020</p>
+    <p className={`${styles.Underline}`}>04.20</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Producers</p>
@@ -357,7 +357,7 @@ const ProducersDirectors = (props) => {
     {/* Line Producers */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>4030</p>
+    <p className={`${styles.Underline}`}>04.30</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Line Producers</p>
@@ -424,7 +424,7 @@ const ProducersDirectors = (props) => {
     {/* Co Producers */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>4040</p>
+    <p className={`${styles.Underline}`}>04.40</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Co-Producers</p>
@@ -491,7 +491,7 @@ const ProducersDirectors = (props) => {
     {/* Associate Producers */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>4050</p>
+    <p className={`${styles.Underline}`}>04.50</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Associate Producers</p>
@@ -558,7 +558,7 @@ const ProducersDirectors = (props) => {
     {/* Directors */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>4060</p>
+    <p className={`${styles.Underline}`}>04.60</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Directors</p>
@@ -625,7 +625,7 @@ const ProducersDirectors = (props) => {
     {/* 2nd Unit Directors */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>4070</p>
+    <p className={`${styles.Underline}`}>04.70</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>2nd Unit Directors</p>
@@ -692,7 +692,7 @@ const ProducersDirectors = (props) => {
     {/* Travel Expenses */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>4080</p>
+    <p className={`${styles.Underline}`}>04.80</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Travel Expenses</p>
@@ -727,7 +727,7 @@ const ProducersDirectors = (props) => {
     {/* Living Expenses */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>4090</p>
+    <p className={`${styles.Underline}`}>04.90</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Living Expenses</p>
@@ -762,7 +762,7 @@ const ProducersDirectors = (props) => {
     {/* Other */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>4100</p>
+    <p className={`${styles.Underline}`}>04.91</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Other</p>
@@ -797,7 +797,7 @@ const ProducersDirectors = (props) => {
     {/* Fringes and Taxes */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>4110</p>
+    <p className={`${styles.Underline}`}>04.92</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Fringes and Taxes</p>

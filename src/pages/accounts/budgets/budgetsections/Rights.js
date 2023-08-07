@@ -41,7 +41,7 @@ const Rights = (props) => {
     <div className="mt-5">
     <Row >
     <Col md={1} >
-    <p className="mb-0">1000</p>
+    <p className="mb-0">01.00</p>
     </Col>
     <Col md={9} >
     <p className={ `${styles.BoldBlack} mb-2`}>RIGHTS</p>
@@ -75,7 +75,7 @@ const Rights = (props) => {
     {/* Story Rights */}
     <Row className="mb-0 pb-0">
     <Col className="mb-0 pb-0" md={1} >
-    <p className="mb-0 pb-0">1010</p>
+    <p className="mb-0 pb-0">01.10</p>
     </Col>
     <Col className="mb-0 pb-0" md={6} >
     <p className="mb-0 pb-0">Story Rights</p>
@@ -110,7 +110,7 @@ const Rights = (props) => {
     {/* Miscellaneous */}
     <Row>
     <Col md={1} >
-    <p>1020</p>
+    <p>01.20</p>
     </Col>
     <Col md={6} >
     <p>Miscellaneous</p>

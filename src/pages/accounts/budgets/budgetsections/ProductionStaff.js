@@ -473,7 +473,7 @@ const ProductionStaff = (props) => {
     <div className="mt-5">
     <Row >
     <Col md={1} >
-    <p className="mb-2">7000</p>
+    <p className="mb-2">07.00</p>
     </Col>
     <Col md={9} >
     <p className={ `${styles.BoldBlack} mb-2`}>PRODUCTION STAFF</p>
@@ -510,7 +510,7 @@ const ProductionStaff = (props) => {
     {/* Production Manager */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>7010</p>
+    <p className={`${styles.Underline}`}>07.10</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>Production Manager</p>
@@ -604,7 +604,7 @@ const ProductionStaff = (props) => {
     {/* Production Supervisor */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>7020</p>
+    <p className={`${styles.Underline}`}>07.20</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>Production Supervisor</p>
@@ -698,7 +698,7 @@ const ProductionStaff = (props) => {
     {/* Production Coordinator */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>7030</p>
+    <p className={`${styles.Underline}`}>07.30</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>Production Coordinator</p>
@@ -792,7 +792,7 @@ const ProductionStaff = (props) => {
     {/* Unit Manager */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>7040</p>
+    <p className={`${styles.Underline}`}>07.40</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>Unit Manager</p>
@@ -886,7 +886,7 @@ const ProductionStaff = (props) => {
     {/* Location Manager */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>7050</p>
+    <p className={`${styles.Underline}`}>07.50</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>Location Manager</p>
@@ -980,7 +980,7 @@ const ProductionStaff = (props) => {
     {/* Location Manager Assistant */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>7060</p>
+    <p className={`${styles.Underline}`}>07.60</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>Location Manager Assistant</p>
@@ -1074,7 +1074,7 @@ const ProductionStaff = (props) => {
     {/* Production Assistants */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>7070</p>
+    <p className={`${styles.Underline}`}>07.70</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>Production Assistants</p>
@@ -1168,7 +1168,7 @@ const ProductionStaff = (props) => {
     {/* Production Secretary */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>7080</p>
+    <p className={`${styles.Underline}`}>07.80</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>Production Secretary</p>
@@ -1262,7 +1262,7 @@ const ProductionStaff = (props) => {
     {/* Production Accountant */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>7090</p>
+    <p className={`${styles.Underline}`}>07.90</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>Production Accountant</p>
@@ -1356,7 +1356,7 @@ const ProductionStaff = (props) => {
     {/* Production Accountant Assistant */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>7100</p>
+    <p className={`${styles.Underline}`}>07.91</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>Production Accountant Assistant</p>
@@ -1450,7 +1450,7 @@ const ProductionStaff = (props) => {
     {/* Script Supervisor / Continuity */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>7110</p>
+    <p className={`${styles.Underline}`}>07.92</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>Production Accountant Assistant</p>
@@ -1544,7 +1544,7 @@ const ProductionStaff = (props) => {
     {/* Payroll */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>7120</p>
+    <p className={`${styles.Underline}`}>07.93</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>Payroll</p>
@@ -1638,7 +1638,7 @@ const ProductionStaff = (props) => {
     {/* Other Production */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>7130</p>
+    <p className={`${styles.Underline}`}>07.94</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>Other Production</p>
@@ -1732,7 +1732,7 @@ const ProductionStaff = (props) => {
     {/* Directors Assistant */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>7140</p>
+    <p className={`${styles.Underline}`}>07.95</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>Director's Assistant</p>
@@ -1826,7 +1826,7 @@ const ProductionStaff = (props) => {
     {/* 1st Assistant Director */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>7150</p>
+    <p className={`${styles.Underline}`}>07.96</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>1st Assistant Director</p>
@@ -1920,7 +1920,7 @@ const ProductionStaff = (props) => {
     {/* 2nd Assistant Director */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>7160</p>
+    <p className={`${styles.Underline}`}>07.97</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>2nd Assistant Director</p>
@@ -2014,7 +2014,7 @@ const ProductionStaff = (props) => {
     {/* 3rd Assistant Director */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>7170</p>
+    <p className={`${styles.Underline}`}>07.98</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>3rd Assistant Director</p>
@@ -2108,7 +2108,7 @@ const ProductionStaff = (props) => {
     {/* Craft Services */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>7180</p>
+    <p className={`${styles.Underline}`}>07.99</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>Craft Services</p>

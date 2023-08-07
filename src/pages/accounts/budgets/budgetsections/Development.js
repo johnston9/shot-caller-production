@@ -55,7 +55,7 @@ const Development = (props) => {
     <div className="mt-5">
     <Row >
     <Col md={1} >
-    <p className="mb-2">2000</p>
+    <p className="mb-2">02.00</p>
     </Col>
     <Col md={9} >
     <p className={ `${styles.BoldBlack} mb-2`}>PRE-PRODUCTION AND DEVELOPMENT</p>
@@ -89,7 +89,7 @@ const Development = (props) => {
     {/* Research */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>2010</p>
+    <p className={`${styles.Underline}`}>02.10</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>Research</p>
@@ -124,7 +124,7 @@ const Development = (props) => {
     {/* Preliminary Breakdown/Budget */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>2020</p>
+    <p className={`${styles.Underline}`}>02.20</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Preliminary Breakdown/Budget</p>
@@ -159,7 +159,7 @@ const Development = (props) => {
     {/* Consultant Expenses */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>2030</p>
+    <p className={`${styles.Underline}`}>02.30</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Consultant Expenses</p>
@@ -194,7 +194,7 @@ const Development = (props) => {
     {/* Office Expenses */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>2040</p>
+    <p className={`${styles.Underline}`}>02.40</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Office Expenses</p>
@@ -229,7 +229,7 @@ const Development = (props) => {
     {/* Staff */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>2050</p>
+    <p className={`${styles.Underline}`}>02.50</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Staff</p>
@@ -264,7 +264,7 @@ const Development = (props) => {
     {/* Travel Expenses Development */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>2060</p>
+    <p className={`${styles.Underline}`}>02.60</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Travel Expenses</p>
@@ -299,7 +299,7 @@ const Development = (props) => {
     {/* Living Expenses Development */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>2070</p>
+    <p className={`${styles.Underline}`}>02.70</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Living Expenses Development</p>
@@ -334,7 +334,7 @@ const Development = (props) => {
     {/* Other Development */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>2080</p>
+    <p className={`${styles.Underline}`}>02.80</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Other</p>
@@ -369,7 +369,7 @@ const Development = (props) => {
     {/* Fringes and Taxes */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>2090</p>
+    <p className={`${styles.Underline}`}>02.90</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Fringes and Taxes</p>

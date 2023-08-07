@@ -1,4 +1,4 @@
-/* Component in the Budget component to edit Cast */
+/* Component in the Budget component to edit Set Dressing */
 import React, { useEffect, useState } from "react";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
@@ -53,138 +53,138 @@ const SetDressingLabour = (props) => {
     };
 
     // Calculate Functions
-  // function to calculate set decorator on change
-  useEffect(() => {
-    const addSetdec = () => {
-      setDecoratorsetTotal(parseFloat(set_decorator_quantity || 0) * 
-      parseFloat(set_decorator_units_number || 0) * 
-      parseFloat(set_decorator_rate || 0))
-    }
-    const timer = setTimeout(() => {
-        addSetdec();
-    }, 2000);
+    // function to calculate set decorator on change
+    useEffect(() => {
+        const addSetdec = () => {
+        setDecoratorsetTotal(parseFloat(set_decorator_quantity || 0) * 
+        parseFloat(set_decorator_units_number || 0) * 
+        parseFloat(set_decorator_rate || 0))
+        }
+        const timer = setTimeout(() => {
+            addSetdec();
+        }, 2000);
 
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [set_decorator_quantity, set_decorator_units_number,
-    set_decorator_rate]);
+        return () => {
+        clearTimeout(timer);
+        };
+    }, [set_decorator_quantity, set_decorator_units_number,
+        set_decorator_rate]);
 
-  // function to calculate assistant set decorator on change
-  useEffect(() => {
-    const addAssdec = () => {
-      setAssistdecoratorsetTotal(parseFloat(assist_set_decorator_quantity || 0) * 
-      parseFloat(assist_set_decorator_units_number || 0) * 
-      parseFloat(assist_set_decorator_rate || 0))
-    }
-    const timer = setTimeout(() => {
-        addAssdec();
-    }, 2000);
+    // function to calculate assistant set decorator on change
+    useEffect(() => {
+        const addAssdec = () => {
+        setAssistdecoratorsetTotal(parseFloat(assist_set_decorator_quantity || 0) * 
+        parseFloat(assist_set_decorator_units_number || 0) * 
+        parseFloat(assist_set_decorator_rate || 0))
+        }
+        const timer = setTimeout(() => {
+            addAssdec();
+        }, 2000);
 
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [assist_set_decorator_quantity, assist_set_decorator_units_number,
-    assist_set_decorator_rate]);
+        return () => {
+        clearTimeout(timer);
+        };
+    }, [assist_set_decorator_quantity, assist_set_decorator_units_number,
+        assist_set_decorator_rate]);
 
-  // function to calculate lead man on change
-  useEffect(() => {
-    const addLeaman = () => {
-      setLeadmanTotal(parseFloat(lead_man_quantity || 0) * 
-      parseFloat(lead_man_units_number || 0) * 
-      parseFloat(lead_man_rate || 0))
-    }
-    const timer = setTimeout(() => {
-        addLeaman();
-    }, 2000);
+    // function to calculate lead man on change
+    useEffect(() => {
+        const addLeaman = () => {
+        setLeadmanTotal(parseFloat(lead_man_quantity || 0) * 
+        parseFloat(lead_man_units_number || 0) * 
+        parseFloat(lead_man_rate || 0))
+        }
+        const timer = setTimeout(() => {
+            addLeaman();
+        }, 2000);
 
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [lead_man_quantity, lead_man_units_number,
-    lead_man_rate]);
+        return () => {
+        clearTimeout(timer);
+        };
+    }, [lead_man_quantity, lead_man_units_number,
+        lead_man_rate]);
 
-  // function to calculate set dressers on change
-  useEffect(() => {
-    const addDresse = () => {
-      setDressersTotal(parseFloat(set_dressers_quantity || 0) * 
-      parseFloat(set_dressers_units_number || 0) * 
-      parseFloat(set_dressers_rate || 0))
-    }
-    const timer = setTimeout(() => {
-        addDresse();
-    }, 2000);
+    // function to calculate set dressers on change
+    useEffect(() => {
+        const addDresse = () => {
+        setDressersTotal(parseFloat(set_dressers_quantity || 0) * 
+        parseFloat(set_dressers_units_number || 0) * 
+        parseFloat(set_dressers_rate || 0))
+        }
+        const timer = setTimeout(() => {
+            addDresse();
+        }, 2000);
 
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [set_dressers_quantity, set_dressers_units_number,
-    set_dressers_rate]);
+        return () => {
+        clearTimeout(timer);
+        };
+    }, [set_dressers_quantity, set_dressers_units_number,
+        set_dressers_rate]);
 
-  // function to calculate swing gang on change
-  useEffect(() => {
-    const addSwiGan = () => {
-      setSwinggangTotal(parseFloat(swing_gang_quantity || 0) * 
-      parseFloat(swing_gang_units_number || 0) * 
-      parseFloat(swing_gang_rate || 0))
-    }
-    const timer = setTimeout(() => {
-        addSwiGan();
-    }, 2000);
+    // function to calculate swing gang on change
+    useEffect(() => {
+        const addSwiGan = () => {
+        setSwinggangTotal(parseFloat(swing_gang_quantity || 0) * 
+        parseFloat(swing_gang_units_number || 0) * 
+        parseFloat(swing_gang_rate || 0))
+        }
+        const timer = setTimeout(() => {
+            addSwiGan();
+        }, 2000);
 
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [swing_gang_quantity, swing_gang_units_number,
-    swing_gang_rate]);
+        return () => {
+        clearTimeout(timer);
+        };
+    }, [swing_gang_quantity, swing_gang_units_number,
+        swing_gang_rate]);
 
-  // function to calculate set dressing buyer on change
-  useEffect(() => {
-    const addDrebuy = () => {
-      setDressingbuyerTotal(parseFloat(set_dressing_buyer_quantity || 0) * 
-      parseFloat(set_dressing_buyer_units_number || 0) * 
-      parseFloat(set_dressing_buyer_rate || 0))
-    }
-    const timer = setTimeout(() => {
-        addDrebuy();
-    }, 2000);
+    // function to calculate set dressing buyer on change
+    useEffect(() => {
+        const addDrebuy = () => {
+        setDressingbuyerTotal(parseFloat(set_dressing_buyer_quantity || 0) * 
+        parseFloat(set_dressing_buyer_units_number || 0) * 
+        parseFloat(set_dressing_buyer_rate || 0))
+        }
+        const timer = setTimeout(() => {
+            addDrebuy();
+        }, 2000);
 
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [set_dressing_buyer_quantity, set_dressing_buyer_units_number,
-    set_dressing_buyer_rate]);
- 
-  // function to add all Set Dressing Labour on change
-  useEffect(() => {
-    const addDreLab = () => {
-      setDressinglabourTotal(
-      parseFloat(decoratorsetTotal || 0) +
-      parseFloat(assistdecoratorsetTotal || 0) +
-      parseFloat(leadmanTotal || 0) +
-      parseFloat(dressersTotal || 0) +
-      parseFloat(swinggangTotal || 0) +
-      parseFloat(dressingbuyerTotal || 0) +
-      parseFloat(other_set_dressing || 0) 
-      )
-    }
-    const timer = setTimeout(() => {
-        addDreLab();
-    }, 1000);
+        return () => {
+        clearTimeout(timer);
+        };
+    }, [set_dressing_buyer_quantity, set_dressing_buyer_units_number,
+        set_dressing_buyer_rate]);
+    
+    // function to add all Set Dressing Labour on change
+    useEffect(() => {
+        const addDreLab = () => {
+        setDressinglabourTotal(
+        parseFloat(decoratorsetTotal || 0) +
+        parseFloat(assistdecoratorsetTotal || 0) +
+        parseFloat(leadmanTotal || 0) +
+        parseFloat(dressersTotal || 0) +
+        parseFloat(swinggangTotal || 0) +
+        parseFloat(dressingbuyerTotal || 0) +
+        parseFloat(other_set_dressing || 0) 
+        )
+        }
+        const timer = setTimeout(() => {
+            addDreLab();
+        }, 1000);
 
-    return () => {
-      clearTimeout(timer);
-    };
+        return () => {
+        clearTimeout(timer);
+        };
 
-    }, [decoratorsetTotal, assistdecoratorsetTotal, leadmanTotal,
-        dressersTotal, swinggangTotal, dressingbuyerTotal,
-        other_set_dressing]);
+        }, [decoratorsetTotal, assistdecoratorsetTotal, leadmanTotal,
+            dressersTotal, swinggangTotal, dressingbuyerTotal,
+            other_set_dressing]);
 
   return (
     <div className="mt-5">
     <Row >
     <Col md={1} >
-    <p className="mb-2">9000</p>
+    <p className="mb-2">10.00</p>
     </Col>
     <Col md={9} >
     <p className={ `${styles.BoldBlack} mb-2`}>Set Dressing Labour</p>
@@ -221,7 +221,7 @@ const SetDressingLabour = (props) => {
     {/* Set Decorator */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>9010</p>
+    <p className={`${styles.Underline}`}>10.10</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>Set Decorator</p>
@@ -315,7 +315,7 @@ const SetDressingLabour = (props) => {
     {/* Assistant Set Decorator */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>9020</p>
+    <p className={`${styles.Underline}`}>10.20</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>Assistant Set Decorator</p>
@@ -409,7 +409,7 @@ const SetDressingLabour = (props) => {
     {/* Lead Man */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>9030</p>
+    <p className={`${styles.Underline}`}>10.30</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>Lead Man</p>
@@ -503,7 +503,7 @@ const SetDressingLabour = (props) => {
     {/* Set Dressers */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>9040</p>
+    <p className={`${styles.Underline}`}>10.40</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>Set Dressers</p>
@@ -597,7 +597,7 @@ const SetDressingLabour = (props) => {
     {/* Swing Gang */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>9050</p>
+    <p className={`${styles.Underline}`}>10.50</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>Swing Gang</p>
@@ -691,7 +691,7 @@ const SetDressingLabour = (props) => {
     {/* Set Dressing Buyer */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>9060</p>
+    <p className={`${styles.Underline}`}>10.60</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>Swing Gang</p>
@@ -785,7 +785,7 @@ const SetDressingLabour = (props) => {
     {/* Other Dressing*/}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>9070</p>
+    <p className={`${styles.Underline}`}>10.70</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Other</p>

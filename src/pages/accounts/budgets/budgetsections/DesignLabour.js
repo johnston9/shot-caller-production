@@ -1,4 +1,4 @@
-/* Component in the Budget component to edit Cast */
+/* Component in the Budget component to edit Design */
 import React, { useEffect, useState } from "react";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
@@ -157,7 +157,7 @@ useEffect(() => {
     <div className="mt-5">
     <Row >
     <Col md={1} >
-    <p className="mb-2">7000</p>
+    <p className="mb-2">08.00</p>
     </Col>
     <Col md={9} >
     <p className={ `${styles.BoldBlack} mb-2`}>Design Labour</p>
@@ -194,7 +194,7 @@ useEffect(() => {
     {/* Production Designer */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>7010</p>
+    <p className={`${styles.Underline}`}>08.10</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>Production Designer</p>
@@ -288,7 +288,7 @@ useEffect(() => {
     {/* Art Director */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>7020</p>
+    <p className={`${styles.Underline}`}>08.20</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>Art Director</p>
@@ -382,7 +382,7 @@ useEffect(() => {
     {/* Art Assistants */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>7030</p>
+    <p className={`${styles.Underline}`}>08.30</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>Art Assistants</p>
@@ -476,7 +476,7 @@ useEffect(() => {
     {/* Production Assistants/Trainees */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>7040</p>
+    <p className={`${styles.Underline}`}>08.40</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>Production Assistants / Trainees</p>
@@ -570,7 +570,7 @@ useEffect(() => {
     {/* Graphic Artists */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>7050</p>
+    <p className={`${styles.Underline}`}>08.85</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>Graphic Artists</p>
@@ -664,7 +664,7 @@ useEffect(() => {
     {/* Other */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>7060</p>
+    <p className={`${styles.Underline}`}>08.60</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Other</p>

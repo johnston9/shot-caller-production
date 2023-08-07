@@ -1,4 +1,4 @@
-/* Component in the Budget component to edit Cast */
+/* Component in the Budget component to edit Construction */
 import React, { useEffect, useState } from "react";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
@@ -202,7 +202,7 @@ const Construction = (props) => {
     <div className="mt-5">
     <Row >
     <Col md={1} >
-    <p className="mb-2">8000</p>
+    <p className="mb-2">09.00</p>
     </Col>
     <Col md={9} >
     <p className={ `${styles.BoldBlack} mb-2`}>Construction Labour</p>
@@ -239,7 +239,7 @@ const Construction = (props) => {
     {/* Construction Coordinator */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>8010</p>
+    <p className={`${styles.Underline}`}>09.10</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>Construction Coordinator</p>
@@ -333,7 +333,7 @@ const Construction = (props) => {
     {/* Head Carpenter */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>8020</p>
+    <p className={`${styles.Underline}`}>09.20</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>Head Carpenter</p>
@@ -427,7 +427,7 @@ const Construction = (props) => {
     {/* Carpenters */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>8030</p>
+    <p className={`${styles.Underline}`}>09.30</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>Carpenters</p>
@@ -521,7 +521,7 @@ const Construction = (props) => {
     {/* Scenic Painters */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>8040</p>
+    <p className={`${styles.Underline}`}>09.40</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>Scenic Painters</p>
@@ -615,7 +615,7 @@ const Construction = (props) => {
     {/* Head Painter */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>8050</p>
+    <p className={`${styles.Underline}`}>09.50</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>Head Painter</p>
@@ -709,7 +709,7 @@ const Construction = (props) => {
     {/* Painters */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>8060</p>
+    <p className={`${styles.Underline}`}>09.60</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>Painters</p>
@@ -803,7 +803,7 @@ const Construction = (props) => {
     {/* Labourers */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>8070</p>
+    <p className={`${styles.Underline}`}>09.70</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>Labourers</p>
@@ -897,7 +897,7 @@ const Construction = (props) => {
     {/* Other */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>8080</p>
+    <p className={`${styles.Underline}`}>09.80</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Other</p>

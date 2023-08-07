@@ -20,6 +20,7 @@ import ProductionStaff from "./budgetsections/ProductionStaff";
 import DesignLabour from "./budgetsections/DesignLabour";
 import Construction from "./budgetsections/Construction";
 import SetDressingLabour from "./budgetsections/SetDressingLabour";
+import PropertyLabour from "./budgetsections/PropertyLabour";
 
 function BudgetCreate() {
   const [errors, setErrors] = useState({});
@@ -37,6 +38,7 @@ function BudgetCreate() {
   const [showDesign, setShowDesign] = useState(false);
   const [showCon, setShowCon] = useState(false);
   const [showDress, setShowDress] = useState(false);
+  const [showProps, setShowProps] = useState(false);
 
   // INFO / LENGTH -------------------------
   // Info postData 
@@ -860,6 +862,66 @@ function BudgetCreate() {
   // set dressing Labour Total postData 
   const [dressinglabourTotal, setDressinglabourTotal] = useState(0);
 
+  // PROPERTY LABOUR ----------------------------------
+
+  // Property Labour postData 
+  const [postDataProperty, setPostDataProperty] = useState({
+    property_master_quantity: 0,
+    property_master_units_number: 0,
+    property_master_units_name: "",
+    property_master_rate: 0,
+    assist_property_master_quantity: 0,
+    assist_property_master_units_number: 0,
+    assist_property_master_units_name: "",
+    assist_property_master_rate: 0,
+    on_set_props_person_quantity: 0,
+    on_set_props_person_units_number: 0,
+    on_set_props_person_units_name: "",
+    on_set_props_person_rate: 0,
+    property_buyer_quantity: 0,
+    property_buyer_units_number: 0,
+    property_buyer_units_name: "",
+    property_buyer_rate: 0,
+    armorer_quantity: 0,
+    armorer_units_number: 0,
+    armorer_units_name: "",
+    armorer_rate: 0,
+    other_property: 0,
+  });
+
+  const {property_master_quantity, property_master_units_number,
+    property_master_units_name, property_master_rate,
+    assist_property_master_quantity, assist_property_master_units_number,
+    assist_property_master_units_name, assist_property_master_rate,
+    on_set_props_person_quantity, on_set_props_person_units_number,
+    on_set_props_person_units_name, on_set_props_person_rate,
+    property_buyer_quantity, property_buyer_units_number,
+    property_buyer_units_name, property_buyer_rate,
+    armorer_quantity, armorer_units_number,
+    armorer_units_name, armorer_rate,
+    other_property,} = postDataProperty;
+
+  // Totals
+  // property master Total postData
+  const [propertymasterTotal, setPropertymasterTotal] = useState(0);
+
+  // assist property master Total postData
+  const [assistpropertymasterTotal, setAssistpropertymasterTotal] = useState(0);
+
+  // on set props person Total postData
+  const [onsetpropspersonTotal, setOnsetpropspersonTotal] = useState(0);
+
+  // property buyer Total postData
+  const [propertybuyerTotal, setPropertybuyerTotal] = useState(0);
+
+  // armorer Total postData
+  const [armorerTotal, setArmorerTotal] = useState(0);
+
+  // Property Labour Total postData 
+  const [propertylabourTotal, setPropertylabourTotal] = useState(0);
+
+   // end below B
+
   // TOTALS ABOVE / BELOW / GRAND -----------------------------
   // ----------------------------
 
@@ -1380,6 +1442,34 @@ function BudgetCreate() {
     formData.append("swinggang_total", swinggangTotal);
     formData.append("dressingbuyer_total", dressingbuyerTotal);
     formData.append("dressinglabour_total", dressinglabourTotal);
+    // property
+    formData.append("property_master_quantity", property_master_quantity);
+    formData.append("property_master_units_number", property_master_units_number);
+    formData.append("property_master_units_name", property_master_units_name);
+    formData.append("property_master_rate", property_master_rate);
+    formData.append("assist_property_master_quantity", assist_property_master_quantity);
+    formData.append("assist_property_master_units_number", assist_property_master_units_number);
+    formData.append("assist_property_master_units_name", assist_property_master_units_name);
+    formData.append("assist_property_master_rate", assist_property_master_rate);
+    formData.append("on_set_props_person_quantity", on_set_props_person_quantity);
+    formData.append("on_set_props_person_units_number", on_set_props_person_units_number);
+    formData.append("on_set_props_person_units_name", on_set_props_person_units_name);
+    formData.append("on_set_props_person_rate", on_set_props_person_rate);
+    formData.append("property_buyer_quantity", property_buyer_quantity);
+    formData.append("property_buyer_units_number", property_buyer_units_number);
+    formData.append("property_buyer_units_name", property_buyer_units_name);
+    formData.append("property_buyer_rate", property_buyer_rate);
+    formData.append("armorer_quantity", armorer_quantity);
+    formData.append("armorer_units_number", armorer_units_number);
+    formData.append("armorer_units_name", armorer_units_name);
+    formData.append("armorer_rate", armorer_rate);
+    formData.append("other_property", other_property);
+    formData.append("propertymasterTotal", propertymasterTotal);
+    formData.append("assistpropertymasterTotal", assistpropertymasterTotal);
+    formData.append("onsetpropspersonTotal", onsetpropspersonTotal);
+    formData.append("propertybuyerTotal", propertybuyerTotal);
+    formData.append("armorerTotal", armorerTotal);
+    formData.append("propertylabour_total", propertylabourTotal);
     // formData.append("stars", stars);
 
     try {
@@ -1586,6 +1676,21 @@ function BudgetCreate() {
     </Col>
     <Col md={4}>
     <p className="mb-0">{dressinglabourTotal} </p>
+    </Col>
+    </Row>
+    </div>
+    </Col>
+    {/* property */}
+    <Col md={3} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
+    <Row>
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
+          onClick={() => setShowProps(showProps => !showProps)} >Property Labour
+    </p>
+    </Col>
+    <Col md={4}>
+    <p className="mb-0">{propertylabourTotal} </p>
     </Col>
     </Row>
     </div>
@@ -1821,6 +1926,27 @@ function BudgetCreate() {
       dressinglabourTotal={dressinglabourTotal}
       setDressinglabourTotal={setDressinglabourTotal}
       setShow={setShowDress}  /> 
+    ) }
+    {/* property */}
+    {!showProps ? (
+      ""
+    ) : (
+      <PropertyLabour
+      postDataProperty={postDataProperty}
+      setPostDataProperty={setPostDataProperty}
+      propertymasterTotal={propertymasterTotal}
+      setPropertymasterTotal={setPropertymasterTotal}
+      assistpropertymasterTotal={assistpropertymasterTotal}
+      setAssistpropertymasterTotal={setAssistpropertymasterTotal}
+      onsetpropspersonTotal={onsetpropspersonTotal}
+      setOnsetpropspersonTotal={setOnsetpropspersonTotal}
+      propertybuyerTotal={propertybuyerTotal}
+      setPropertybuyerTotal={setPropertybuyerTotal}
+      armorerTotal={armorerTotal}
+      setArmorerTotal={setArmorerTotal}
+      propertylabourTotal={propertylabourTotal}
+      setPropertylabourTotal={setPropertylabourTotal}
+      setShow={setShowProps}  /> 
     ) }
     {/* buttons */}
     <Row>

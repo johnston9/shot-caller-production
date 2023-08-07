@@ -140,7 +140,7 @@ const Scenario = (props) => {
     <div className="mt-5">
     <Row >
     <Col md={1} >
-    <p className="mb-2">3000</p>
+    <p className="mb-2">03.00</p>
     </Col>
     <Col md={9} >
     <p className={ `${styles.BoldBlack} mb-2`}>SCENARIO</p>
@@ -177,7 +177,7 @@ const Scenario = (props) => {
     {/* Writers */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>3010</p>
+    <p className={`${styles.Underline}`}>03.10</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>Writers</p>
@@ -271,7 +271,7 @@ const Scenario = (props) => {
     {/* Consultants */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>3020</p>
+    <p className={`${styles.Underline}`}>03.20</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>Consultants</p>
@@ -365,7 +365,7 @@ const Scenario = (props) => {
     {/* Editors */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>3030</p>
+    <p className={`${styles.Underline}`}>03.30</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>Editors</p>
@@ -459,7 +459,7 @@ const Scenario = (props) => {
     {/* Admin */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>3040</p>
+    <p className={`${styles.Underline}`}>03.40</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>Admin</p>
@@ -553,7 +553,7 @@ const Scenario = (props) => {
     {/* Office Cost/Expenses Scenario */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>3050</p>
+    <p className={`${styles.Underline}`}>03.50</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Office Cost/Expenses Scenario</p>
@@ -588,7 +588,7 @@ const Scenario = (props) => {
     {/* Travel Expenses Scenario */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>3060</p>
+    <p className={`${styles.Underline}`}>03.60</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Travel Expenses</p>
@@ -623,7 +623,7 @@ const Scenario = (props) => {
     {/* Living Expenses */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>3070</p>
+    <p className={`${styles.Underline}`}>03.70</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Living Expenses</p>
@@ -658,7 +658,7 @@ const Scenario = (props) => {
     {/* Other */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>3080</p>
+    <p className={`${styles.Underline}`}>03.80</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Other</p>
@@ -693,7 +693,7 @@ const Scenario = (props) => {
     {/* Fringes and Taxes */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>3090</p>
+    <p className={`${styles.Underline}`}>03.90</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Fringes and Taxes</p>

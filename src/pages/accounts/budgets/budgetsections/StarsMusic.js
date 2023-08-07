@@ -65,7 +65,7 @@ const StarsMusic = (props) => {
     <div>
     <Row className="mt-5" >
     <Col md={1} >
-    <p className="mb-2">5000</p>
+    <p className="mb-2">05.00</p>
     </Col>
     <Col md={9} >
     <p className={ `${styles.BoldBlack} mb-2`}>STARS / MUSIC</p>
@@ -99,7 +99,7 @@ const StarsMusic = (props) => {
     {/* Stars */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>5010</p>
+    <p className={`${styles.Underline}`}>05.10</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Stars</p>
@@ -134,7 +134,7 @@ const StarsMusic = (props) => {
     {/* Rights */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>5020</p>
+    <p className={`${styles.Underline}`}>05.20</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Stars Rights Payments</p>
@@ -169,7 +169,7 @@ const StarsMusic = (props) => {
     {/* Travel Expenses Stars */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>5030</p>
+    <p className={`${styles.Underline}`}>05.30</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Travel Expenses Stars</p>
@@ -204,7 +204,7 @@ const StarsMusic = (props) => {
     {/* Living Expenses Stars */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>5020</p>
+    <p className={`${styles.Underline}`}>05.40</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Living Expenses Stars</p>
@@ -239,7 +239,7 @@ const StarsMusic = (props) => {
     {/* Stars - Other */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>5050</p>
+    <p className={`${styles.Underline}`}>05.50</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Stars - Other </p>
@@ -274,7 +274,7 @@ const StarsMusic = (props) => {
     {/* Stars - Fringes Taxes */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>5060</p>
+    <p className={`${styles.Underline}`}>05.60</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Stars - Fringes Taxes</p>
@@ -309,7 +309,7 @@ const StarsMusic = (props) => {
     {/* Music */}
     <Row >
     <Col md={1} >
-    <p className={`${styles.Underline}`}>5070</p>
+    <p className={`${styles.Underline}`}>05.70</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Music: all-in package includes Composer, Musicians, 
@@ -345,7 +345,7 @@ const StarsMusic = (props) => {
     {/* Music Supervisor */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>5080</p>
+    <p className={`${styles.Underline}`}>05.80</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Music Supervisor </p>
@@ -380,7 +380,7 @@ const StarsMusic = (props) => {
     {/* Travel Expenses */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>5090</p>
+    <p className={`${styles.Underline}`}>05.90</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Music - Travel Expenses </p>
@@ -415,7 +415,7 @@ const StarsMusic = (props) => {
     {/* Living Expenses */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>5100</p>
+    <p className={`${styles.Underline}`}>05.91</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Music - Living Expenses </p>
@@ -450,7 +450,7 @@ const StarsMusic = (props) => {
     {/* Add'l Music Rights (Songs, etc.) */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>5110</p>
+    <p className={`${styles.Underline}`}>05.92</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Add'l Music Rights - Songs, etc. </p>
@@ -485,7 +485,7 @@ const StarsMusic = (props) => {
     {/* Music Other */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>5120</p>
+    <p className={`${styles.Underline}`}>05.93</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Music - Other </p>
@@ -520,7 +520,7 @@ const StarsMusic = (props) => {
     {/* Music - Fringes and Taxes */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>5130</p>
+    <p className={`${styles.Underline}`}>05.94</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Music - Fringes and Taxes</p>
