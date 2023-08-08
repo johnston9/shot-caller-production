@@ -21,6 +21,7 @@ import DesignLabour from "./budgetsections/DesignLabour";
 import Construction from "./budgetsections/Construction";
 import SetDressingLabour from "./budgetsections/SetDressingLabour";
 import PropertyLabour from "./budgetsections/PropertyLabour";
+import Wrangling from "./budgetsections/Wrangling";
 
 function BudgetCreate() {
   const [errors, setErrors] = useState({});
@@ -39,6 +40,7 @@ function BudgetCreate() {
   const [showCon, setShowCon] = useState(false);
   const [showDress, setShowDress] = useState(false);
   const [showProps, setShowProps] = useState(false);
+  const [showWrang, setShowWrang] = useState(false);
 
   // INFO / LENGTH -------------------------
   // Info postData 
@@ -983,6 +985,7 @@ function BudgetCreate() {
     producersDirsTotal, starsMusicTotal]);
 
   // Above the line input box
+  // eslint-disable-next-line
   const abovethelinetotal = (
     <div className="my-0 pl-3">
     <Row>
@@ -1034,6 +1037,7 @@ function BudgetCreate() {
   ]);
 
   // Below the line input box
+  // eslint-disable-next-line
   const belowthelineBtotal = (
     <div className="my-0 pl-3">
     <Row>
@@ -1502,6 +1506,18 @@ function BudgetCreate() {
     formData.append("propertybuyer_total", propertybuyerTotal);
     formData.append("armorer_total", armorerTotal);
     formData.append("propertylabour_total", propertylabourTotal);
+    // wrangling 
+    formData.append("head_wrangler_quantity", head_wrangler_quantity);
+    formData.append("head_wrangler_units_number", head_wrangler_units_number);
+    formData.append("head_wrangler_units_name", head_wrangler_units_name);
+    formData.append("head_wrangler_rate", head_wrangler_rate);
+    formData.append("other_wrangling_labour_quantity", other_wrangling_labour_quantity);
+    formData.append("other_wrangling_labour_units_number", other_wrangling_labour_units_number);
+    formData.append("other_wrangling_labour_units_name", other_wrangling_labour_units_name);
+    formData.append("other_wrangling_labour_rate", other_wrangling_labour_rate);
+    formData.append("headwrangler_total", headwranglerTotal);
+    formData.append("otherwranglinglabour_total", otherwranglinglabourTotal);
+    formData.append("wranglerlabour_total", wranglerlabourTotal);
     // formData.append("stars", stars);
 
     try {
@@ -1723,6 +1739,20 @@ function BudgetCreate() {
     </Col>
     <Col md={4}>
     <p className="mb-0">{propertylabourTotal} </p>
+    </Col>
+    </Row>
+    </div>
+    </Col>
+    <Col md={3} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
+    <Row>
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
+          onClick={() => setShowWrang(showWrang => !showWrang)} >Wrangling Labour
+    </p>
+    </Col>
+    <Col md={4}>
+    <p className="mb-0">{wranglerlabourTotal} </p>
     </Col>
     </Row>
     </div>
@@ -1979,6 +2009,21 @@ function BudgetCreate() {
       propertylabourTotal={propertylabourTotal}
       setPropertylabourTotal={setPropertylabourTotal}
       setShow={setShowProps}  /> 
+    ) }
+    {/* wrangling */}
+    {!showWrang ? (
+      ""
+    ) : (
+      <Wrangling
+      postDataWrangling={postDataWrangling}
+      setPostDataWrangling={setPostDataWrangling}
+      headwranglerTotal={headwranglerTotal}
+      setHeadwranglerTotal={setHeadwranglerTotal}
+      otherwranglinglabourTotal={otherwranglinglabourTotal}
+      setOtherwranglinglabourTotal={setOtherwranglinglabourTotal}
+      wranglerlabourTotal={wranglerlabourTotal}
+      setWranglerlabourTotal={setWranglerlabourTotal}
+      setShow={setShowWrang}  /> 
     ) }
     {/* buttons */}
     <Row>

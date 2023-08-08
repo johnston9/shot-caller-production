@@ -7,6 +7,7 @@ import styles from "../../../../styles/Account.module.css";
 import Alert from "react-bootstrap/Alert";
 
 const DesignLabour = (props) => {
+    // eslint-disable-next-line
     const [errors, setErrors] = useState({});
 
     const {postDataDesign, setPostDataDesign, setShow,

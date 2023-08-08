@@ -167,6 +167,26 @@ const Budget = (props) => {
     other_set_dressing, decoratorset_total, assistdecoratorset_total,
     leadman_total, dressers_total, swinggang_total,
     dressingbuyer_total, dressinglabour_total,
+    property_master_quantity, property_master_units_number,
+    property_master_units_name, property_master_rate,
+    assist_property_master_quantity, assist_property_master_units_number,
+    assist_property_master_units_name, assist_property_master_rate,
+    on_set_props_person_quantity, on_set_props_person_units_number,
+    on_set_props_person_units_name, on_set_props_person_rate,
+    property_buyer_quantity, property_buyer_units_number,
+    property_buyer_units_name, property_buyer_rate,
+    armorer_quantity, armorer_units_number,
+    armorer_units_name, armorer_rate, armorer_total,
+    other_property, propertymaster_total, assistpropertymaster_total,
+    onsetpropsperson_total, propertybuyer_total, propertylabour_total,
+    // wranglers
+    head_wrangler_quantity, head_wrangler_units_number,
+    head_wrangler_units_name, head_wrangler_rate,
+    other_wrangling_labour_quantity, other_wrangling_labour_units_number,
+    other_wrangling_labour_units_name, other_wrangling_labour_rate,
+    headwrangler_total, otherwranglinglabour_total,
+    wranglerlabour_total,
+
     } = budget;
 
   console.log(props);
@@ -2631,9 +2651,72 @@ const Budget = (props) => {
     <p className="mb-0">Total</p>
     </Col>
     </Row>
+    {/* Head Wrangler */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>12.10</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Head Wrangler</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{head_wrangler_quantity || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{head_wrangler_units_number || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{head_wrangler_units_name || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{head_wrangler_rate || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{headwrangler_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Other Wrangling Labour */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>12.20</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Other Wrangling Labour</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{other_wrangling_labour_quantity || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{other_wrangling_labour_units_number || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{other_wrangling_labour_units_name || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{other_wrangling_labour_rate || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{otherwranglinglabour_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Wrangling Total */}
+    <Row className='mt-3' >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    <p></p>
+    </Col>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL WRANGLING LABOUR </p>
+    </Col>
+    <Col md={3} >
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline} mb-0`}>{wranglerlabour_total || 0}</p>
+    </Col>
+    </Row>
     </div>
 
-    {/* end PRODUCTION B */}
+    {/* END PRODUCTION B */}
     </div>
     </div>
     </div>

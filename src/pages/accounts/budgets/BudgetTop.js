@@ -108,7 +108,7 @@ const {above_the_line_total,
     <div className='px-3'>
     <Row className={ `${styles.OverviewBlue} mx-1 my-2 py-1 text-center`}>
     <Col md={12}>
-    <h5 className={ `${styles.BoldBlack}`}>ABOVE THE LINE</h5>
+    <h5 className={ `${styles.BoldBlack}`}>ABOVE THE LINE {above_the_line_total} </h5>
     </Col>
     </Row>
     </div>

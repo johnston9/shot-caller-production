@@ -7,6 +7,7 @@ import styles from "../../../../styles/Account.module.css";
 import Alert from "react-bootstrap/Alert";
 
 const Cast = (props) => {
+  // eslint-disable-next-line
   const [errors, setErrors] = useState({});
 
   const {postDataCast, setPostDataCast, setShow,
@@ -68,6 +69,7 @@ const Cast = (props) => {
     return () => {
       clearTimeout(timer);
     };
+    // eslint-disable-next-line
   }, [principals_units_number, principals_quantity, principals_rate]);
 
   // function to calculate actors on change
@@ -84,6 +86,7 @@ const Cast = (props) => {
     return () => {
       clearTimeout(timer);
     };
+    // eslint-disable-next-line
   }, [actors_units_number, actors_quantity, actors_rate]);
 
   // function to calculate stuntcoordinators on change
@@ -100,6 +103,7 @@ const Cast = (props) => {
     return () => {
       clearTimeout(timer);
     };
+    // eslint-disable-next-line
   }, [stuntcoordinators_units_number, stuntcoordinators_quantity, stuntcoordinators_rate]);
 
   // function to calculate stuntperformers on change
@@ -116,6 +120,7 @@ const Cast = (props) => {
     return () => {
       clearTimeout(timer);
     };
+    // eslint-disable-next-line
   }, [stuntperformers_units_number, stuntperformers_quantity, stuntperformers_rate]);
 
   // function to calculate otherperformers on change
@@ -132,6 +137,7 @@ const Cast = (props) => {
     return () => {
       clearTimeout(timer);
     };
+    // eslint-disable-next-line
   }, [otherperformers_units_number, otherperformers_quantity, otherperformers_rate]);
 
   // function to calculate extras on change
@@ -148,6 +154,7 @@ const Cast = (props) => {
     return () => {
       clearTimeout(timer);
     };
+    // eslint-disable-next-line
   }, [extras_units_number, extras_quantity, extras_rate]);
 
   // function to add all cast on change
@@ -174,6 +181,7 @@ const Cast = (props) => {
     return () => {
       clearTimeout(timer);
     };
+    // eslint-disable-next-line
   }, [principalsTotal, actorsTotal, stuntcoordinatorsTotal,
     stuntperformersTotal, otherperformersTotal, extrasTotal,
     casting_director, extras_casting, other_cast,
