@@ -1275,7 +1275,7 @@ const ProductionStaff = (props) => {
         type="text"
         className={styles.Input}
         name="production_accountant_quantity"
-        value={production_secretary_quantity}
+        value={production_accountant_quantity}
         onChange={handleChangePro}
             />
     </Form.Group>

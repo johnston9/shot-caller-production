@@ -1,4 +1,4 @@
-/* Component in the Budget component to edit Cast */
+/* Component in the Budget component to edit Wrangling */
 import React, { useEffect, useState } from "react";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
@@ -19,7 +19,8 @@ const Wrangling = (props) => {
     const {head_wrangler_quantity, head_wrangler_units_number,
         head_wrangler_units_name, head_wrangler_rate,
         other_wrangling_labour_quantity, other_wrangling_labour_units_number,
-        other_wrangling_labour_units_name, other_wrangling_labour_rate,} = postDataWrangling;
+        other_wrangling_labour_units_name, 
+        other_wrangling_labour_rate,} = postDataWrangling;
 
     // handleChange 
     const handleChange = (event) => {

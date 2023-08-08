@@ -22,6 +22,7 @@ import Construction from "./budgetsections/Construction";
 import SetDressingLabour from "./budgetsections/SetDressingLabour";
 import PropertyLabour from "./budgetsections/PropertyLabour";
 import Wrangling from "./budgetsections/Wrangling";
+import SpecialEffects from "./budgetsections/SpecialEffects";
 
 function BudgetCreate() {
   const [errors, setErrors] = useState({});
@@ -41,6 +42,7 @@ function BudgetCreate() {
   const [showDress, setShowDress] = useState(false);
   const [showProps, setShowProps] = useState(false);
   const [showWrang, setShowWrang] = useState(false);
+  const [showFx, setShowFx] = useState(false);
 
   // INFO / LENGTH -------------------------
   // Info postData 
@@ -953,6 +955,46 @@ function BudgetCreate() {
   // Wrangling Labour Total postData 
   const [wranglerlabourTotal, setWranglerlabourTotal] = useState(0);
 
+  // SPECIAL EFFECTS LABOUR ----------------------------------
+
+  // Special Effects Labour postData
+  const [postDataSpecialEffects, setPostDataSpecialEffects] = useState({
+    fx_supervisor_quantity: 0,
+    fx_supervisor_units_number: 0,
+    fx_supervisor_units_name: "",
+    fx_supervisor_rate: 0,
+    assist_fx_quantity: 0,
+    assist_fx_units_number: 0,
+    assist_fx_units_name: "",
+    assist_fx_rate: 0,
+    other_fx_labour_quantity: 0,
+    other_fx_labour_units_number: 0,
+    other_fx_labour_units_name: "",
+    other_fx_labour_rate: 0,
+  });
+
+  // Special Effects Labour values
+  const {fx_supervisor_quantity, fx_supervisor_units_number,
+    fx_supervisor_units_name, fx_supervisor_rate,
+    assist_fx_quantity, assist_fx_units_number,
+    assist_fx_units_name, assist_fx_rate,
+    other_fx_labour_quantity, other_fx_labour_units_number,
+    other_fx_labour_units_name, other_fx_labour_rate,
+  } = postDataSpecialEffects;
+
+  // Totals
+  // fx supervisor Total postData 
+  const [fxsupervisorTotal, setFxsupervisorTotal] = useState(0);
+
+  // assistant fx Total postData
+  const [assistfxTotal, setAssistfxTotal] = useState(0);
+
+  // other wrangling labour Total postData
+  const [otherfxlabourTotal, setOtherfxlabourTotal] = useState(0);
+
+  // Wrangling Labour Total postData 
+  const [fxlabourTotal, setFxlabourTotal] = useState(0);
+
 
    // end below B
 
@@ -1518,6 +1560,23 @@ function BudgetCreate() {
     formData.append("headwrangler_total", headwranglerTotal);
     formData.append("otherwranglinglabour_total", otherwranglinglabourTotal);
     formData.append("wranglerlabour_total", wranglerlabourTotal);
+    // fx
+    formData.append("fx_supervisor_quantity", fx_supervisor_quantity);
+    formData.append("fx_supervisor_units_number", fx_supervisor_units_number);
+    formData.append("fx_supervisor_units_name", fx_supervisor_units_name);
+    formData.append("fx_supervisor_rate", fx_supervisor_rate);
+    formData.append("assist_fx_quantity", assist_fx_quantity);
+    formData.append("assist_fx_units_number", assist_fx_units_number);
+    formData.append("assist_fx_units_name", assist_fx_units_name);
+    formData.append("assist_fx_rate", assist_fx_rate);
+    formData.append("other_fx_labour_quantity", other_fx_labour_quantity);
+    formData.append("other_fx_labour_units_number", other_fx_labour_units_number);
+    formData.append("other_fx_labour_units_name", other_fx_labour_units_name);
+    formData.append("other_fx_labour_rate", other_fx_labour_rate);
+    formData.append("fxsupervisorTotal", fxsupervisorTotal);
+    formData.append("assistfxTotal", assistfxTotal);
+    formData.append("otherfxlabourTotal", otherfxlabourTotal);
+    formData.append("fxlabour_total", fxlabourTotal);
     // formData.append("stars", stars);
 
     try {
@@ -1701,7 +1760,7 @@ function BudgetCreate() {
     </div>
     </Col>
     <Col md={3} className='px-0 mx-0'>
-    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
+    <div className={`p-0 m-0 ${styles.BorderRight}`}>
     <Row>
     <Col md={8}>
     <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
@@ -1730,7 +1789,7 @@ function BudgetCreate() {
     </Col>
     {/* property */}
     <Col md={3} className='px-0 mx-0'>
-    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
+    <div className={`p-0 m-0 ${styles.BorderRight}`}>
     <Row>
     <Col md={8}>
     <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
@@ -1744,7 +1803,7 @@ function BudgetCreate() {
     </div>
     </Col>
     <Col md={3} className='px-0 mx-0'>
-    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
+    <div className={`p-0 m-0 ${styles.BorderRight}`}>
     <Row>
     <Col md={8}>
     <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
@@ -1753,6 +1812,20 @@ function BudgetCreate() {
     </Col>
     <Col md={4}>
     <p className="mb-0">{wranglerlabourTotal} </p>
+    </Col>
+    </Row>
+    </div>
+    </Col>
+    <Col md={3} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
+    <Row>
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
+          onClick={() => setShowFx(showFx => !showFx)} >FX Labour
+    </p>
+    </Col>
+    <Col md={4}>
+    <p className="mb-0">{fxlabourTotal} </p>
     </Col>
     </Row>
     </div>
@@ -2024,6 +2097,23 @@ function BudgetCreate() {
       wranglerlabourTotal={wranglerlabourTotal}
       setWranglerlabourTotal={setWranglerlabourTotal}
       setShow={setShowWrang}  /> 
+    ) }
+    {/* fx */}
+    {!showFx ? (
+      ""
+    ) : (
+      <SpecialEffects
+      postDataSpecialEffects={postDataSpecialEffects}
+      setPostDataSpecialEffects={setPostDataSpecialEffects}
+      fxsupervisorTotal={fxsupervisorTotal}
+      setFxsupervisorTotal={setFxsupervisorTotal}
+      assistfxTotal={assistfxTotal}
+      setAssistfxTotal={setAssistfxTotal}
+      otherfxlabourTotal={otherfxlabourTotal}
+      setOtherfxlabourTotal={setOtherfxlabourTotal}
+      fxlabourTotal={fxlabourTotal}
+      setFxlabourTotal={setFxlabourTotal}
+      setShow={setShowFx}  /> 
     ) }
     {/* buttons */}
     <Row>
