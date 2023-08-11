@@ -23,6 +23,7 @@ import SetDressingLabour from "./budgetsections/SetDressingLabour";
 import PropertyLabour from "./budgetsections/PropertyLabour";
 import Wrangling from "./budgetsections/Wrangling";
 import SpecialEffects from "./budgetsections/SpecialEffects";
+import Wardrobe from "./budgetsections/Wardrobe";
 
 function BudgetCreate() {
   const [errors, setErrors] = useState({});
@@ -43,6 +44,7 @@ function BudgetCreate() {
   const [showProps, setShowProps] = useState(false);
   const [showWrang, setShowWrang] = useState(false);
   const [showFx, setShowFx] = useState(false);
+  const [showWardrobe, setShowWardrobe] = useState(false);
 
   // INFO / LENGTH -------------------------
   // Info postData 
@@ -995,11 +997,77 @@ function BudgetCreate() {
   // Wrangling Labour Total postData 
   const [fxlabourTotal, setFxlabourTotal] = useState(0);
 
+  // WARDROBE LABOUR ----------------------------------
+
+  // Wardrobe Labour postData
+  const [postDataWardrobe, setPostDataWardrobe] = useState({
+    costume_designer_quantity: 0,
+    costume_designer_units_number: 0,
+    costume_designer_units_name: "",
+    costume_designer_rate: 0,
+    assist_costume_designer_quantity: 0,
+    assist_costume_designer_units_number: 0,
+    assist_costume_designer_units_name: "",
+    assist_costume_designer_rate: 0,
+    head_wardrobe_quantity: 0,
+    head_wardrobe_units_number: 0,
+    head_wardrobe_units_name: "",
+    head_wardrobe_rate: 0,
+    wardrobe_assist_quantity: 0,
+    wardrobe_assist_units_number: 0,
+    wardrobe_assist_units_name: "",
+    wardrobe_assist_rate: 0,
+    truck_costumer_quantity: 0,
+    truck_costumer_units_number: 0,
+    truck_costumer_units_name: "",
+    truck_costumer_rate: 0,
+    other_wardrobe_labour_quantity: 0,
+    other_wardrobe_labour_units_number: 0,
+    other_wardrobe_labour_units_name: "",
+    other_wardrobe_labour_rate: 0,
+  });
+
+  // Wardrobe Labour postData values
+  const {costume_designer_quantity, costume_designer_units_number,
+    costume_designer_units_name, costume_designer_rate,
+    assist_costume_designer_quantity, assist_costume_designer_units_number,
+    assist_costume_designer_units_name, assist_costume_designer_rate,
+    head_wardrobe_quantity, head_wardrobe_units_number,
+    head_wardrobe_units_name, head_wardrobe_rate,
+    wardrobe_assist_quantity, wardrobe_assist_units_number,
+    wardrobe_assist_units_name, wardrobe_assist_rate,
+    truck_costumer_quantity, truck_costumer_units_number,
+    truck_costumer_units_name, truck_costumer_rate,
+    other_wardrobe_labour_quantity, other_wardrobe_labour_units_number,
+    other_wardrobe_labour_units_name, other_wardrobe_labour_rate,
+  } = postDataWardrobe;
+
+  // Totals
+  // costume designer Total postData 
+  const [costumedesignerTotal, setCostumedesignerTotal] = useState(0);
+
+  // assistant costume designer Total postData 
+  const [assistcosdesignerTotal, setAssistcosdesignerTotal] = useState(0);
+
+  // head wardrobe Total postData 
+  const [headwardrobeTotal, setHeadwardrobeTotal] = useState(0);
+
+  // wardrobe assist Total postData 
+  const [wardrobeassistTotal, setWardrobeassistTotal] = useState(0);
+
+  // truck costumer Total postData 
+  const [truckcostumerTotal, setTruckcostumerTotal] = useState(0);
+
+  // other wardrobe labour Total postData 
+  const [otherwardrobeTotal, setOtherwardrobeTotal] = useState(0);
+
+  // Wardrobe Labour Total postData 
+  const [wardrobelabourTotal, setWardrobelabourTotal] = useState(0);
+
 
    // end below B
 
   // TOTALS ABOVE / BELOW / GRAND -----------------------------
-  // ----------------------------
 
   // Above the line total --------------------------
 
@@ -1573,10 +1641,42 @@ function BudgetCreate() {
     formData.append("other_fx_labour_units_number", other_fx_labour_units_number);
     formData.append("other_fx_labour_units_name", other_fx_labour_units_name);
     formData.append("other_fx_labour_rate", other_fx_labour_rate);
-    formData.append("fxsupervisorTotal", fxsupervisorTotal);
-    formData.append("assistfxTotal", assistfxTotal);
-    formData.append("otherfxlabourTotal", otherfxlabourTotal);
+    formData.append("fxsupervisor_total", fxsupervisorTotal);
+    formData.append("assistfx_total", assistfxTotal);
+    formData.append("otherfxlabour_total", otherfxlabourTotal);
     formData.append("fxlabour_total", fxlabourTotal);
+    // wardrobe
+    formData.append("costume_designer_quantity", costume_designer_quantity); 
+    formData.append("costume_designer_units_number", costume_designer_units_number); 
+    formData.append("costume_designer_units_name", costume_designer_units_name); 
+    formData.append("costume_designer_rate", costume_designer_rate); 
+    formData.append("assist_costume_designer_quantity", assist_costume_designer_quantity);
+    formData.append("assist_costume_designer_units_number", assist_costume_designer_units_number); 
+    formData.append("assist_costume_designer_units_name", assist_costume_designer_units_name); 
+    formData.append("assist_costume_designer_rate", assist_costume_designer_rate); 
+    formData.append("head_wardrobe_quantity", head_wardrobe_quantity); 
+    formData.append("head_wardrobe_units_number", head_wardrobe_units_number); 
+    formData.append("head_wardrobe_units_name", head_wardrobe_units_name); 
+    formData.append("head_wardrobe_rate", head_wardrobe_rate); 
+    formData.append("wardrobe_assist_quantity", wardrobe_assist_quantity); 
+    formData.append("wardrobe_assist_units_number", wardrobe_assist_units_number); 
+    formData.append("wardrobe_assist_units_name", wardrobe_assist_units_name); 
+    formData.append("wardrobe_assist_rate", wardrobe_assist_rate); 
+    formData.append("truck_costumer_quantity", truck_costumer_quantity); 
+    formData.append("truck_costumer_units_number", truck_costumer_units_number); 
+    formData.append("truck_costumer_units_name", truck_costumer_units_name); 
+    formData.append("truck_costumer_rate", truck_costumer_rate); 
+    formData.append("other_wardrobe_labour_quantity", other_wardrobe_labour_quantity); 
+    formData.append("other_wardrobe_labour_units_number", other_wardrobe_labour_units_number); 
+    formData.append("other_wardrobe_labour_units_name", other_wardrobe_labour_units_name); 
+    formData.append("other_wardrobe_labour_rate", other_wardrobe_labour_rate); 
+    formData.append("costumedesigner_total", costumedesignerTotal); 
+    formData.append("assistcosdesigner_total", assistcosdesignerTotal); 
+    formData.append("headwardrobe_total", headwardrobeTotal); 
+    formData.append("wardrobeassist_total", wardrobeassistTotal); 
+    formData.append("truckcostumer_total", truckcostumerTotal); 
+    formData.append("otherwardrobe_total", otherwardrobeTotal); 
+    formData.append("wardrobelabour_total", wardrobelabourTotal);
     // formData.append("stars", stars);
 
     try {
@@ -1826,6 +1926,21 @@ function BudgetCreate() {
     </Col>
     <Col md={4}>
     <p className="mb-0">{fxlabourTotal} </p>
+    </Col>
+    </Row>
+    </div>
+    </Col>
+    {/* wardrobe */}
+    <Col md={3} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
+    <Row>
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
+          onClick={() => setShowWardrobe(showWardrobe => !showWardrobe)} >Wardrobe Labour
+    </p>
+    </Col>
+    <Col md={4}>
+    <p className="mb-0">{wardrobelabourTotal} </p>
     </Col>
     </Row>
     </div>
@@ -2114,6 +2229,29 @@ function BudgetCreate() {
       fxlabourTotal={fxlabourTotal}
       setFxlabourTotal={setFxlabourTotal}
       setShow={setShowFx}  /> 
+    ) }
+    {/* wardrobe */}
+    {!showWardrobe ? (
+      ""
+    ) : (
+      <Wardrobe
+      postDataWardrobe={postDataWardrobe}
+      setPostDataWardrobe={setPostDataWardrobe}
+      costumedesignerTotal={costumedesignerTotal}
+      setCostumedesignerTotal={setCostumedesignerTotal}
+      assistcosdesignerTotal={assistcosdesignerTotal}
+      setAssistcosdesignerTotal={setAssistcosdesignerTotal}
+      headwardrobeTotal={headwardrobeTotal}
+      setHeadwardrobeTotal={setHeadwardrobeTotal}
+      wardrobeassistTotal={wardrobeassistTotal}
+      setWardrobeassistTotal={setWardrobeassistTotal}
+      truckcostumerTotal={truckcostumerTotal}
+      setTruckcostumerTotal={setTruckcostumerTotal}
+      otherwardrobeTotal={otherwardrobeTotal}
+      setOtherwardrobeTotal={setOtherwardrobeTotal}
+      wardrobelabourTotal={wardrobelabourTotal}
+      setWardrobelabourTotal={setWardrobelabourTotal}
+      setShow={setShowWardrobe}  /> 
     ) }
     {/* buttons */}
     <Row>

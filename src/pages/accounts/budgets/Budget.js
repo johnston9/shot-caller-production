@@ -179,13 +179,22 @@ const Budget = (props) => {
     armorer_units_name, armorer_rate, armorer_total,
     other_property, propertymaster_total, assistpropertymaster_total,
     onsetpropsperson_total, propertybuyer_total, propertylabour_total,
-    // wranglers
+    // wrangling
     head_wrangler_quantity, head_wrangler_units_number,
     head_wrangler_units_name, head_wrangler_rate,
     other_wrangling_labour_quantity, other_wrangling_labour_units_number,
     other_wrangling_labour_units_name, other_wrangling_labour_rate,
     headwrangler_total, otherwranglinglabour_total,
     wranglerlabour_total,
+    // FX
+    fx_supervisor_quantity, fx_supervisor_units_number,
+    fx_supervisor_units_name, fx_supervisor_rate,
+    assist_fx_quantity, assist_fx_units_number,
+    assist_fx_units_name, assist_fx_rate,
+    other_fx_labour_quantity, other_fx_labour_units_number,
+    other_fx_labour_units_name, other_fx_labour_rate,
+    fxsupervisorTotal, assistfxTotal,
+    otherfxlabourTotal, fxlabourTotal,
 
     } = budget;
 
@@ -2712,6 +2721,128 @@ const Budget = (props) => {
     </Col>
     <Col md={2} >
     <p className={`${styles.Underline} mb-0`}>{wranglerlabour_total || 0}</p>
+    </Col>
+    </Row>
+    </div>
+    {/* FX */}
+    <div className='mt-5'>
+    <Row>
+    <Col xs={1}>
+    <p className='mb-2'>13.00</p>
+    </Col>
+    <Col xs={10}>
+    <p className={ `${styles.BoldBlack} mb-2`}>FX LABOUR</p>
+    </Col>
+    </Row>
+    {/* Titles */}
+    <Row className={ `${styles.Overview} mb-2 py-1`} >
+    <Col md={1} >
+    <p className="mb-0">ACCT</p>
+    </Col>
+    <Col md={5} >
+    <p className="mb-0">Description</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">#</p>
+    </Col>
+    <Col className="px-0 mx-0" md={1} >
+    <p># Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Price</p>
+    </Col>
+    <Col md={2} >
+    <p className="mb-0">Total</p>
+    </Col>
+    </Row>
+    {/* FX Supervisor */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>13.10</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>FX Supervisor</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{fx_supervisor_quantity || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{fx_supervisor_units_number || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{fx_supervisor_units_name || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{fx_supervisor_rate || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{fxsupervisorTotal || 0}</p>
+    </Col>
+    </Row>
+    {/* FX Assistant */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>13.20</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>FX Assistant</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{assist_fx_quantity || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{assist_fx_units_number || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{assist_fx_units_name || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{assist_fx_rate || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{assistfxTotal || 0}</p>
+    </Col>
+    </Row>
+    {/* Other FX Labour */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>13.30</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Other FX Labour</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{other_fx_labour_quantity || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{other_fx_labour_units_number || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{other_fx_labour_units_name || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{other_fx_labour_rate || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{otherfxlabourTotal || 0}</p>
+    </Col>
+    </Row>
+    {/* FX Total */}
+    <Row className='mt-3' >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    <p></p>
+    </Col>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL FX LABOUR </p>
+    </Col>
+    <Col md={3} >
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline} mb-0`}>{fxlabourTotal || 0}</p>
     </Col>
     </Row>
     </div>
