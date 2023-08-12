@@ -2846,6 +2846,200 @@ const Budget = (props) => {
     </Col>
     </Row>
     </div>
+    {/* Wardrobe */}
+    <div className='mt-5'>
+    <Row>
+    <Col xs={1}>
+    <p className='mb-2'>14.00</p>
+    </Col>
+    <Col xs={10}>
+    <p className={ `${styles.BoldBlack} mb-2`}>WARDROBE LABOUR</p>
+    </Col>
+    </Row>
+    {/* Titles */}
+    <Row className={ `${styles.Overview} mb-2 py-1`} >
+    <Col md={1} >
+    <p className="mb-0">ACCT</p>
+    </Col>
+    <Col md={5} >
+    <p className="mb-0">Description</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">#</p>
+    </Col>
+    <Col className="px-0 mx-0" md={1} >
+    <p># Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Price</p>
+    </Col>
+    <Col md={2} >
+    <p className="mb-0">Total</p>
+    </Col>
+    </Row>
+    {/* Costume Designer */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>14.10</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Costume Designer</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{costume_designer_quantity || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{costume_designer_units_number || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{costume_designer_units_name || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{costume_designer_rate || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{costumedesignerTotal || 0}</p>
+    </Col>
+    </Row>
+    {/* Assistant Costume Designer */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>14.20</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Assistant Costume Designer</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{assist_costume_designer_quantity || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{assist_costume_designer_units_number || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{assist_costume_designer_units_name || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{assist_costume_designer_rate || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{assistcosdesignerTotal || 0}</p>
+    </Col>
+    </Row>
+    {/* Head Wardrobe */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>14.30</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Head Wardrobe</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{head_wardrobe_quantity || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{head_wardrobe_units_number || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{head_wardrobe_units_name || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{head_wardrobe_rate || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{headwardrobeTotal || 0}</p>
+    </Col>
+    </Row>
+    {/* Wardrobe Assistant */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>14.40</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Wardrobe Assistant</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{wardrobe_assist_quantity || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{wardrobe_assist_units_number || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{wardrobe_assist_units_name || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{wardrobe_assist_rate || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{wardrobeassistTotal || 0}</p>
+    </Col>
+    </Row>
+    {/* Truck Costumer */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>14.50</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Truck Costumer</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{truck_costumer_quantity || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{truck_costumer_units_number || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{truck_costumer_units_name || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{truck_costumer_rate || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{truckcostumerTotal || 0}</p>
+    </Col>
+    </Row>
+    {/* Other Wardrobe Labour */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>14.60</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Other Wardrobe Labour</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{other_wardrobe_labour_quantity || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{other_wardrobe_labour_units_number || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{other_wardrobe_labour_units_name || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{other_wardrobe_labour_rate || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{otherwardrobeTotal || 0}</p>
+    </Col>
+    </Row>
+    {/* Wardrobe Total */}
+    <Row className='mt-3' >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    <p></p>
+    </Col>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL WARDROBE LABOUR </p>
+    </Col>
+    <Col md={3} >
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline} mb-0`}>{wardrobelabourTotal || 0}</p>
+    </Col>
+    </Row>
+    </div>
 
     {/* END PRODUCTION B */}
     </div>
