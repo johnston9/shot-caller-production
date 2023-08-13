@@ -25,6 +25,7 @@ import PropertyLabour from "./budgetsections/PropertyLabour";
 import Wrangling from "./budgetsections/Wrangling";
 import SpecialEffects from "./budgetsections/SpecialEffects";
 import Wardrobe from "./budgetsections/Wardrobe";
+import Makeup from "./budgetsections/Makeup";
 
 function BudgetEdit() {
   const [errors, setErrors] = useState({});
@@ -46,6 +47,7 @@ function BudgetEdit() {
   const [showWrang, setShowWrang] = useState(false);
   const [showFx, setShowFx] = useState(false);
   const [showWardrobe, setShowWardrobe] = useState(false);
+  const [showMake, setShowMake] = useState(false);
 
   // budget id
   const [budgetId, setBudgetId] = useState("");
@@ -1068,6 +1070,106 @@ function BudgetEdit() {
   // Wardrobe Labour Total postData 
   const [wardrobelabourTotal, setWardrobelabourTotal] = useState(0);
 
+  // MAKEUP LABOUR ----------------------------------
+
+  // Makeup Labour postData
+  const [postDataMakeup, setPostDataMakeup] = useState({
+    makeup_dept_head_quantity: 0,
+    makeup_dept_head_units_number: 0,
+    makeup_dept_head_units_name: "",
+    makeup_dept_head_rate: 0,
+    key_makeup_quantity: 0,
+    key_makeup_units_number: 0,
+    key_makeup_units_name: "",
+    key_makeup_rate: 0,
+    makeup_artist_quantity: 0,
+    makeup_artist_units_number: 0,
+    makeup_artist_units_name: "",
+    makeup_artist_rate: 0,
+    key_hairstylist_quantity: 0,
+    key_hairstylist_units_number: 0,
+    key_hairstylist_units_name: "",
+    key_hairstylist_rate: 0,
+    hairdresser_quantity: 0,
+    hairdresser_units_number: 0,
+    hairdresser_units_name: "",
+    hairdresser_rate: 0,
+    hair_makeup_dailies_quantity: 0,
+    hair_makeup_dailies_units_number: 0,
+    hair_makeup_dailies_units_name: "",
+    hair_makeup_dailies_rate: 0,
+    other_makeup_labour_quantity: 0,
+    other_makeup_labour_units_number: 0,
+    other_makeup_labour_units_name: "",
+    other_makeup_labour_rate: 0,
+    sfx_makeup_quantity: 0,
+    sfx_makeup_units_number: 0,
+    sfx_makeup_units_name: "",
+    sfx_makeup_rate: 0,
+  });
+
+  const {makeup_dept_head_quantity,
+    makeup_dept_head_units_number,
+    makeup_dept_head_units_name,
+    makeup_dept_head_rate,
+    key_makeup_quantity,
+    key_makeup_units_number,
+    key_makeup_units_name,
+    key_makeup_rate,
+    makeup_artist_quantity,
+    makeup_artist_units_number,
+    makeup_artist_units_name,
+    makeup_artist_rate,
+    key_hairstylist_quantity,
+    key_hairstylist_units_number,
+    key_hairstylist_units_name,
+    key_hairstylist_rate,
+    hairdresser_quantity,
+    hairdresser_units_number,
+    hairdresser_units_name,
+    hairdresser_rate,
+    hair_makeup_dailies_quantity,
+    hair_makeup_dailies_units_number,
+    hair_makeup_dailies_units_name,
+    hair_makeup_dailies_rate,
+    other_makeup_labour_quantity,
+    other_makeup_labour_units_number,
+    other_makeup_labour_units_name,
+    other_makeup_labour_rate,
+    sfx_makeup_quantity,
+    sfx_makeup_units_number,
+    sfx_makeup_units_name,
+    sfx_makeup_rate,} = postDataMakeup;
+  
+  // Totals
+  // head makeup Total postData 
+  const [headmakeupTotal, setHeadmakeupTotal] = useState(0);
+
+  // key makeup Total postData 
+  const [keymakeupTotal, setKeymakeupTotal] = useState(0);
+
+  // makeup artist Total postData 
+  const [makeupartistTotal, setMakeupartistTotal] = useState(0);
+
+  // key hairstylist Total postData 
+  const [keyhairstylistTotal, setKeyhairstylistTotal] = useState(0);
+
+  // hairdresser Total postData 
+  const [hairdresserTotal, setHairdresserTotal] = useState(0);
+
+  // hair makeup dailies Total postData 
+  const [hairmakeupdailiesTotal, setHairmakeupdailiesTotal] = useState(0);
+
+  // other makeup labour Total postData 
+  const [othermakeuplabourTotal, setOthermakeuplabourTotal] = useState(0);
+
+  // sfxmakeup labour Total postData 
+  const [sfxmakeupTotal, setSfxmakeupTotal] = useState(0);
+
+  // Makeup Labour Total postData 
+  const [makeuplabourTotal, setMakeuplabourTotal] = useState(0);
+
+
   // end below B
 
   //TOTALS ABOVE / BELOW / GRAND --------------------------------
@@ -1243,7 +1345,7 @@ function BudgetEdit() {
   );
 
   // USE EFFECT EDIT
-  // Fetch budget for edit pre input values
+  // Fetch budget for edit pre filled values
   useEffect(() => {
     const handleMount = async () => {
       try {
@@ -1664,6 +1766,41 @@ function BudgetEdit() {
           other_wardrobe_labour_quantity, other_wardrobe_labour_units_number,
           other_wardrobe_labour_units_name, other_wardrobe_labour_rate,});
         setWardrobelabourTotal(wardrobelabour_total);
+        // makeup
+        const {makeup_dept_head_quantity, makeup_dept_head_units_number,
+          makeup_dept_head_units_name, makeup_dept_head_rate,
+          key_makeup_quantity, key_makeup_units_number,
+          key_makeup_units_name, key_makeup_rate,
+          makeup_artist_quantity, makeup_artist_units_number,
+          makeup_artist_units_name, makeup_artist_rate,
+          key_hairstylist_quantity, key_hairstylist_units_number,
+          key_hairstylist_units_name, key_hairstylist_rate,
+          hairdresser_quantity, hairdresser_units_number,
+          hairdresser_units_name, hairdresser_rate,
+          hair_makeup_dailies_quantity, hair_makeup_dailies_units_number,
+          hair_makeup_dailies_units_name, hair_makeup_dailies_rate,
+          other_makeup_labour_quantity, other_makeup_labour_units_number,
+          other_makeup_labour_units_name, other_makeup_labour_rate,
+          sfx_makeup_quantity, sfx_makeup_units_number,
+          sfx_makeup_units_name, sfx_makeup_rate,
+          makeuplabour_total} = data.results[0];
+        setPostDataMakeup({makeup_dept_head_quantity, makeup_dept_head_units_number,
+            makeup_dept_head_units_name, makeup_dept_head_rate,
+            key_makeup_quantity, key_makeup_units_number,
+            key_makeup_units_name, key_makeup_rate,
+            makeup_artist_quantity, makeup_artist_units_number,
+            makeup_artist_units_name, makeup_artist_rate,
+            key_hairstylist_quantity, key_hairstylist_units_number,
+            key_hairstylist_units_name, key_hairstylist_rate,
+            hairdresser_quantity, hairdresser_units_number,
+            hairdresser_units_name, hairdresser_rate,
+            hair_makeup_dailies_quantity, hair_makeup_dailies_units_number,
+            hair_makeup_dailies_units_name, hair_makeup_dailies_rate,
+            other_makeup_labour_quantity, other_makeup_labour_units_number,
+            other_makeup_labour_units_name, other_makeup_labour_rate,
+            sfx_makeup_quantity, sfx_makeup_units_number,
+            sfx_makeup_units_name, sfx_makeup_rate,});
+        setMakeuplabourTotal(makeuplabour_total);
 
       } catch (err) {
         console.log(err);
@@ -2108,6 +2245,48 @@ function BudgetEdit() {
     formData.append("truckcostumer_total", truckcostumerTotal); 
     formData.append("otherwardrobe_total", otherwardrobeTotal); 
     formData.append("wardrobelabour_total", wardrobelabourTotal);
+    // makeup
+    formData.append("makeup_dept_head_quantity", makeup_dept_head_quantity);
+    formData.append("makeup_dept_head_units_number", makeup_dept_head_units_number);
+    formData.append("makeup_dept_head_units_name", makeup_dept_head_units_name);
+    formData.append("makeup_dept_head_rate", makeup_dept_head_rate);
+    formData.append("key_makeup_quantity", key_makeup_quantity);
+    formData.append("key_makeup_units_number", key_makeup_units_number);
+    formData.append("key_makeup_units_name", key_makeup_units_name);
+    formData.append("key_makeup_rate", key_makeup_rate);
+    formData.append("makeup_artist_quantity", makeup_artist_quantity);
+    formData.append("makeup_artist_units_number", makeup_artist_units_number);
+    formData.append("makeup_artist_units_name", makeup_artist_units_name);
+    formData.append("makeup_artist_rate", makeup_artist_rate);
+    formData.append("key_hairstylist_quantity", key_hairstylist_quantity);
+    formData.append("key_hairstylist_units_number", key_hairstylist_units_number);
+    formData.append("key_hairstylist_units_name", key_hairstylist_units_name);
+    formData.append("key_hairstylist_rate", key_hairstylist_rate);
+    formData.append("hairdresser_quantity", hairdresser_quantity);
+    formData.append("hairdresser_units_number", hairdresser_units_number);
+    formData.append("hairdresser_units_name", hairdresser_units_name);
+    formData.append("hairdresser_rate", hairdresser_rate);
+    formData.append("hair_makeup_dailies_quantity", hair_makeup_dailies_quantity);
+    formData.append("hair_makeup_dailies_units_number", hair_makeup_dailies_units_number);
+    formData.append("hair_makeup_dailies_units_name", hair_makeup_dailies_units_name);
+    formData.append("hair_makeup_dailies_rate", hair_makeup_dailies_rate);
+    formData.append("other_makeup_labour_quantity", other_makeup_labour_quantity);
+    formData.append("other_makeup_labour_units_number", other_makeup_labour_units_number);
+    formData.append("other_makeup_labour_units_name", other_makeup_labour_units_name);
+    formData.append("other_makeup_labour_rate", other_makeup_labour_rate);
+    formData.append("sfx_makeup_quantity", sfx_makeup_quantity);
+    formData.append("sfx_makeup_units_number", sfx_makeup_units_number);
+    formData.append("sfx_makeup_units_name", sfx_makeup_units_name);
+    formData.append("sfx_makeup_rate", sfx_makeup_rate);
+    formData.append("headmakeup_total", headmakeupTotal);
+    formData.append("keymakeup_total", keymakeupTotal);
+    formData.append("makeupartist_total", makeupartistTotal);
+    formData.append("keyhairstylist_total", keyhairstylistTotal);
+    formData.append("hairdresser_total", hairdresserTotal);
+    formData.append("hairmakeupdailies_total", hairmakeupdailiesTotal);
+    formData.append("othermakeuplabour_total", othermakeuplabourTotal);
+    formData.append("sfxmakeup_total", sfxmakeupTotal);
+    formData.append("makeuplabour_total", makeuplabourTotal);
     // formData.append("stars", stars);
 
     try {
@@ -2386,6 +2565,20 @@ function BudgetEdit() {
     </Col>
     <Col md={4}>
     <p className="mb-0">{wardrobelabourTotal} </p>
+    </Col>
+    </Row>
+    </div>
+    </Col>
+    <Col md={3} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
+    <Row>
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
+          onClick={() => setShowMake(showMake => !showMake)} >Makeup Labour
+    </p>
+    </Col>
+    <Col md={4}>
+    <p className="mb-0">{makeuplabour_total} </p>
     </Col>
     </Row>
     </div>
@@ -2697,6 +2890,33 @@ function BudgetEdit() {
       wardrobelabourTotal={wardrobelabourTotal}
       setWardrobelabourTotal={setWardrobelabourTotal}
       setShow={setShowWardrobe}  /> 
+    ) }
+    {/* makeup */}
+    {!showMake ? (
+      ""
+    ) : (
+      <Makeup 
+      postDataMakeup={postDataMakeup}
+      setPostDataMakeup={setPostDataMakeup}
+      headmakeupTotal={headmakeupTotal}
+      setHeadmakeupTotal={setHeadmakeupTotal}
+      keymakeupTotal={keymakeupTotal}
+      setKeymakeupTotal={setKeymakeupTotal}
+      makeupartistTotal={makeupartistTotal}
+      setMakeupartistTotal={setMakeupartistTotal}
+      keyhairstylistTotal={keyhairstylistTotal}
+      setKeyhairstylistTotal={setKeyhairstylistTotal}
+      hairdresserTotal={hairdresserTotal}
+      setHairdresserTotal={setHairdresserTotal}
+      hairmakeupdailiesTotal={hairmakeupdailiesTotal}
+      setHairmakeupdailiesTotal={setHairmakeupdailiesTotal}
+      othermakeuplabourTotal={othermakeuplabourTotal}
+      setOthermakeuplabourTotal={setOthermakeuplabourTotal}
+      sfxmakeupTotal={sfxmakeupTotal}
+      setSfxmakeupTotal={setSfxmakeupTotal}
+      makeuplabourTotal={makeuplabourTotal}
+      setMakeuplabourTotal={setMakeuplabourTotal}
+      setShow={setShowMake}  /> 
     ) }
     {/* buttons */}
     <Row>
