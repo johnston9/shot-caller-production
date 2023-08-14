@@ -3040,6 +3040,248 @@ const Budget = (props) => {
     </Col>
     </Row>
     </div>
+    {/* Makeup */}
+    <div className='mt-5'>
+    <Row>
+    <Col xs={1}>
+    <p className='mb-2'>15.00</p>
+    </Col>
+    <Col xs={10}>
+    <p className={ `${styles.BoldBlack} mb-2`}>MAKEUP LABOUR</p>
+    </Col>
+    </Row>
+    {/* Titles */}
+    <Row className={ `${styles.Overview} mb-2 py-1`} >
+    <Col md={1} >
+    <p className="mb-0">ACCT</p>
+    </Col>
+    <Col md={5} >
+    <p className="mb-0">Description</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">#</p>
+    </Col>
+    <Col className="px-0 mx-0" md={1} >
+    <p># Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Price</p>
+    </Col>
+    <Col md={2} >
+    <p className="mb-0">Total</p>
+    </Col>
+    </Row>
+    {/* Makeup Dept Head */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>15.10</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Makeup Dept Head</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{makeup_dept_head_quantity || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{makeup_dept_head_units_number || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{makeup_dept_head_units_name || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{makeup_dept_head_rate || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{headmakeupTotal || 0}</p>
+    </Col>
+    </Row>
+    {/* Key Makeup */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>15.20</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Key Makeup</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{key_makeup_quantity || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{key_makeup_units_number || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{key_makeup_units_name || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{key_makeup_rate || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{keymakeupTotal || 0}</p>
+    </Col>
+    </Row>
+    {/* Makeup Artist */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>15.30</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Makeup Artist</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{makeup_artist_quantity || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{makeup_artist_units_number || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{makeup_artist_units_name || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{makeup_artist_rate || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{makeupartistTotal || 0}</p>
+    </Col>
+    </Row>
+    {/* Key Hairstylist */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>15.40</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Key Hairstylist</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{key_hairstylist_quantity || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{key_hairstylist_units_number || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{key_hairstylist_units_name || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{key_hairstylist_rate || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{keyhairstylistTotal || 0}</p>
+    </Col>
+    </Row>
+    {/* Hairdresser */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>15.50</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Hairdresser</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{hairdresser_quantity || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{hairdresser_units_number || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{hairdresser_units_name || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{hairdresser_rate || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{hairdresserTotal || 0}</p>
+    </Col>
+    </Row>
+    {/* Hair Makeup Dailies */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>15.60</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Hair Makeup Dailies</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{hair_makeup_dailies_quantity || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{hair_makeup_dailies_units_number || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{hair_makeup_dailies_units_name || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{hair_makeup_dailies_rate || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{hairmakeupdailiesTotal || 0}</p>
+    </Col>
+    </Row>
+    {/* Other Makeup Labour */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>15.70</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Other Makeup Labour</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{other_makeup_labour_quantity || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{other_makeup_labour_units_number || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{other_makeup_labour_units_name || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{other_makeup_labour_rate || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{othermakeuplabourTotal || 0}</p>
+    </Col>
+    </Row>
+    {/* SFX Makeup */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>15.80</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>SFX Makeup</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{sfx_makeup_quantity || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{sfx_makeup_units_number || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{sfx_makeup_units_name || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{sfx_makeup_rate || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{sfxmakeupTotal || 0}</p>
+    </Col>
+    </Row>
+    {/* Makeup Total */}
+    <Row className='mt-3' >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    <p></p>
+    </Col>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL MAKEUP LABOUR </p>
+    </Col>
+    <Col md={3} >
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline} mb-0`}>{makeuplabourTotal || 0}</p>
+    </Col>
+    </Row>
+    </div>
 
     {/* END PRODUCTION B */}
     </div>

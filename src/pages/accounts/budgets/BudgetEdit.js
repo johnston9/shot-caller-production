@@ -26,6 +26,7 @@ import Wrangling from "./budgetsections/Wrangling";
 import SpecialEffects from "./budgetsections/SpecialEffects";
 import Wardrobe from "./budgetsections/Wardrobe";
 import Makeup from "./budgetsections/Makeup";
+import Camera from "./budgetsections/Camera";
 
 function BudgetEdit() {
   const [errors, setErrors] = useState({});
@@ -48,6 +49,7 @@ function BudgetEdit() {
   const [showFx, setShowFx] = useState(false);
   const [showWardrobe, setShowWardrobe] = useState(false);
   const [showMake, setShowMake] = useState(false);
+  const [showCam, setShowCam] = useState(false);
 
   // budget id
   const [budgetId, setBudgetId] = useState("");
@@ -1163,11 +1165,96 @@ function BudgetEdit() {
   // other makeup labour Total postData 
   const [othermakeuplabourTotal, setOthermakeuplabourTotal] = useState(0);
 
-  // sfxmakeup labour Total postData 
+  // sfx makeup labour Total postData 
   const [sfxmakeupTotal, setSfxmakeupTotal] = useState(0);
 
   // Makeup Labour Total postData 
   const [makeuplabourTotal, setMakeuplabourTotal] = useState(0);
+
+  // CAMERA LABOUR ----------------------------------
+
+  // Camera Labour postData
+  const [postDataCamera, setPostDataCamera] = useState({
+    dop_qty: 0,
+    dop_uno: 0,
+    dop_una: "",
+    dop_rt: 0,
+    camera_op_qty: 0,
+    camera_op_uno: 0,
+    camera_op_una: "",
+    camera_op_rt: 0,
+    cam_ac1_qty: 0,
+    cam_ac1_uno: 0,
+    cam_ac1_una: "",
+    cam_ac1_rt: 0,
+    cam_ac2_qty: 0,
+    cam_ac2_uno: 0,
+    cam_ac2_una: "",
+    cam_ac2_rt: 0,
+    dit_qty: 0,
+    dit_uno: 0,
+    dit_una: "",
+    dit_rt: 0,
+    steadicam_qty: 0,
+    steadicam_uno: 0,
+    steadicam_una: "",
+    steadicam_rt: 0,
+    cam_pa_qty: 0,
+    cam_pa_uno: 0,
+    cam_pa_una: "",
+    cam_pa_rt: 0,
+    drone_pilot_qty: 0,
+    drone_pilot_uno: 0,
+    drone_pilot_una: "",
+    drone_pilot_rt: 0,
+    other_cam_qty: 0,
+    other_cam_uno: 0,
+    other_cam_una: "",
+    other_cam_rt: 0,
+  });
+
+  // Camera Labour postData values
+  const {dop_qty, dop_uno, dop_una, dop_rt,
+    camera_op_qty, camera_op_uno, camera_op_una, camera_op_rt,
+    cam_ac1_qty, cam_ac1_uno, cam_ac1_una, cam_ac1_rt,
+    cam_ac2_qty, cam_ac2_uno, cam_ac2_una, cam_ac2_rt,
+    dit_qty, dit_uno, dit_una, dit_rt,
+    steadicam_qty, steadicam_uno, steadicam_una, steadicam_rt,
+    cam_pa_qty, cam_pa_uno, cam_pa_una, cam_pa_rt, 
+    drone_pilot_qty, drone_pilot_uno, drone_pilot_una, drone_pilot_rt,
+    other_cam_qty, other_cam_uno, other_cam_una, other_cam_rt,
+  } = postDataCamera;
+
+  // Totals
+  // dop Total postData 
+  const [dopTotal, setDopTotal] = useState(0);
+
+  // Camera Operator Total postData 
+  const [cameraopTotal, setCameraopTotal] = useState(0);
+
+  // 1st Assistant Camera Total postData 
+  const [camac1Total, setCamac1Total] = useState(0);
+
+  // 2nd Assistant Camera Total postData 
+  const [camac2Total, setCamac2Total] = useState(0);
+
+  // DIT Total postData 
+  const [ditTotal, setDitTotal] = useState(0);
+
+  // Steadicam Total postData 
+  const [steadicamTotal, setSteadicamTotal] = useState(0);
+
+  // Camera PA Total postData 
+  const [campaTotal, setCampaTotal] = useState(0);
+
+  // Drone Pilot Total postData 
+  const [dronepilotTotal, setDronepilotTotal] = useState(0);
+
+  // othercam Total postData 
+  const [othercamTotal, setOthercamTotal] = useState(0);
+
+  // Camera Labour Total postData 
+  const [cameralabourTotal, setCameralabourTotal] = useState(0);
 
 
   // end below B
@@ -1345,7 +1432,7 @@ function BudgetEdit() {
   );
 
   // USE EFFECT EDIT
-  // Fetch budget for edit pre filled values
+  // Fetch budget for edit pre-filled values
   useEffect(() => {
     const handleMount = async () => {
       try {
@@ -1801,6 +1888,28 @@ function BudgetEdit() {
             sfx_makeup_quantity, sfx_makeup_units_number,
             sfx_makeup_units_name, sfx_makeup_rate,});
         setMakeuplabourTotal(makeuplabour_total);
+        // camera
+        const {dop_qty, dop_uno, dop_una, dop_rt,
+          camera_op_qty, camera_op_uno, camera_op_una, camera_op_rt,
+          cam_ac1_qty, cam_ac1_uno, cam_ac1_una, cam_ac1_rt,
+          cam_ac2_qty, cam_ac2_uno, cam_ac2_una, cam_ac2_rt,
+          dit_qty, dit_uno, dit_una, dit_rt,
+          steadicam_qty, steadicam_uno, steadicam_una, steadicam_rt,
+          cam_pa_qty, cam_pa_uno, cam_pa_una, cam_pa_rt, 
+          drone_pilot_qty, drone_pilot_uno, drone_pilot_una, drone_pilot_rt,
+          other_cam_qty, other_cam_uno, cameralabour_total,
+          other_cam_una, other_cam_rt,} = data.results[0];
+        setPostDataCamera({dop_qty, dop_uno, dop_una, dop_rt,
+          camera_op_qty, camera_op_uno, camera_op_una, camera_op_rt,
+          cam_ac1_qty, cam_ac1_uno, cam_ac1_una, cam_ac1_rt,
+          cam_ac2_qty, cam_ac2_uno, cam_ac2_una, cam_ac2_rt,
+          dit_qty, dit_uno, dit_una, dit_rt,
+          steadicam_qty, steadicam_uno, steadicam_una, steadicam_rt,
+          cam_pa_qty, cam_pa_uno, cam_pa_una, cam_pa_rt, 
+          drone_pilot_qty, drone_pilot_uno, drone_pilot_una, drone_pilot_rt,
+          other_cam_qty, other_cam_uno, 
+          other_cam_una, other_cam_rt,});
+        setCameralabourTotal(cameralabour_total);
 
       } catch (err) {
         console.log(err);
@@ -2287,6 +2396,53 @@ function BudgetEdit() {
     formData.append("othermakeuplabour_total", othermakeuplabourTotal);
     formData.append("sfxmakeup_total", sfxmakeupTotal);
     formData.append("makeuplabour_total", makeuplabourTotal);
+    // camera
+    formData.append("dop_qty", dop_qty);
+    formData.append("dop_uno", dop_uno);
+    formData.append("dop_una", dop_una);
+    formData.append("dop_rt", dop_rt);
+    formData.append("camera_op_qty", camera_op_qty);
+    formData.append("camera_op_uno", camera_op_uno);
+    formData.append("camera_op_una", camera_op_una);
+    formData.append("camera_op_rt", camera_op_rt);
+    formData.append("cam_ac1_qty", cam_ac1_qty);
+    formData.append("cam_ac1_uno", cam_ac1_uno);
+    formData.append("cam_ac1_una", cam_ac1_una);
+    formData.append("cam_ac1_rt", cam_ac1_rt);
+    formData.append("cam_ac2_qty", cam_ac2_qty);
+    formData.append("cam_ac2_uno", cam_ac2_uno);
+    formData.append("cam_ac2_una", cam_ac2_una);
+    formData.append("cam_ac2_rt", cam_ac2_rt);
+    formData.append("dit_qty", dit_qty);
+    formData.append("dit_uno", dit_uno);
+    formData.append("dit_una", dit_una);
+    formData.append("dit_rt", dit_rt);
+    formData.append("steadicam_qty", steadicam_qty);
+    formData.append("steadicam_uno", steadicam_uno);
+    formData.append("steadicam_una", steadicam_una);
+    formData.append("steadicam_rt", steadicam_rt);
+    formData.append("cam_pa_qty", cam_pa_qty);
+    formData.append("cam_pa_uno", cam_pa_uno);
+    formData.append("cam_pa_una", cam_pa_una);
+    formData.append("cam_pa_rt", cam_pa_rt);
+    formData.append("drone_pilot_qty", drone_pilot_qty);
+    formData.append("drone_pilot_uno", drone_pilot_uno);
+    formData.append("drone_pilot_una", drone_pilot_una);
+    formData.append("drone_pilot_rt", drone_pilot_rt);
+    formData.append("other_cam_qty", other_cam_qty);
+    formData.append("other_cam_uno", other_cam_uno);
+    formData.append("other_cam_una", other_cam_una);
+    formData.append("other_cam_rt", other_cam_rt);
+    formData.append("dop_total", dopTotal);
+    formData.append("cameraop_total", cameraopTotal);
+    formData.append("camac1_total", camac1Total);
+    formData.append("camac2_total", camac2Total);
+    formData.append("dit_total", ditTotal);
+    formData.append("steadicam_total", steadicamTotal);
+    formData.append("campa_total", campaTotal);
+    formData.append("dronepilot_total", dronepilotTotal);
+    formData.append("othercam_total", othercamTotal);
+    formData.append("cameralabour_total", cameralabourTotal);
     // formData.append("stars", stars);
 
     try {
@@ -2442,7 +2598,7 @@ function BudgetEdit() {
     </div>
     </Col>
     <Col md={3} className='px-0 mx-0'>
-    <div className={`p-0 m-0 ${styles.BorderRight}`}>
+    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
     <Row>
     <Col md={8}>
     <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
@@ -2456,7 +2612,7 @@ function BudgetEdit() {
     </div>
     </Col>
     <Col md={3} className='px-0 mx-0'>
-    <div className={`p-0 m-0 ${styles.BorderRight}`}>
+    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
     <Row>
     <Col md={8}>
     <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
@@ -2579,6 +2735,20 @@ function BudgetEdit() {
     </Col>
     <Col md={4}>
     <p className="mb-0">{makeuplabour_total} </p>
+    </Col>
+    </Row>
+    </div>
+    </Col>
+    <Col md={3} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
+    <Row>
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
+          onClick={() => setShowCam(showCam => !showCam)} >Camera Labour
+    </p>
+    </Col>
+    <Col md={4}>
+    <p className="mb-0">{cameralabourTotal} </p>
     </Col>
     </Row>
     </div>
@@ -2917,6 +3087,35 @@ function BudgetEdit() {
       makeuplabourTotal={makeuplabourTotal}
       setMakeuplabourTotal={setMakeuplabourTotal}
       setShow={setShowMake}  /> 
+    ) }
+    {/* camera */}
+    {!showCam ? (
+      ""
+    ) : (
+      <Camera
+      postDataCamera={postDataCamera}
+      setPostDataCamera={setPostDataCamera}
+      dopTotal={dopTotal}
+      setDopTotal={setDopTotal}
+      cameraopTotal={cameraopTotal}
+      setCameraopTotal={setCameraopTotal}
+      camac1Total={camac1Total}
+      setCamac1Total={setCamac1Total}
+      camac2Total={camac2Total}
+      setCamac2Total={setCamac2Total}
+      ditTotal={ditTotal}
+      setDitTotal={setDitTotal}
+      steadicamTotal={steadicamTotal}
+      setSteadicamTotal={setSteadicamTotal}
+      campaTotal={campaTotal}
+      setCampaTotal={setCampaTotal}
+      dronepilotTotal={dronepilotTotal}
+      setDronepilotTotal={setDronepilotTotal}
+      othercamTotal={othercamTotal}
+      setOthercamTotal={setOthercamTotal}
+      cameralabourTotal={cameralabourTotal}
+      setCameralabourTotal={setCameralabourTotal}
+      setShow={setShowCam}  /> 
     ) }
     {/* buttons */}
     <Row>

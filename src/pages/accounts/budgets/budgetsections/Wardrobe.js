@@ -784,7 +784,7 @@ const Wardrobe = (props) => {
     <Col md={1} >
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
-    <p className={ `${styles.Bold} pb-0 mb-0`}>WARDROBE FX</p>
+    <p className={ `${styles.Bold} pb-0 mb-0`}>WARDROBE TOTAL</p>
     </Col>
     <Col md={1} >
     <p></p>
