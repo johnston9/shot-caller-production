@@ -49,6 +49,7 @@ function BudgetCreate() {
   const [showWardrobe, setShowWardrobe] = useState(false);
   const [showMake, setShowMake] = useState(false);
   const [showCam, setShowCam] = useState(false);
+  const [showElec, setShowElec] = useState(false);
 
   // INFO / LENGTH -------------------------
   // Info postData 
@@ -1192,6 +1193,10 @@ function BudgetCreate() {
     other_cam_uno: 0,
     other_cam_una: "",
     other_cam_rt: 0,
+    stills_qty: 0,
+    stills_uno: 0,
+    stills_una: "",
+    stills_rt: 0,
   });
 
   // Camera Labour postData values
@@ -1204,6 +1209,7 @@ function BudgetCreate() {
     cam_pa_qty, cam_pa_uno, cam_pa_una, cam_pa_rt, 
     drone_pilot_qty, drone_pilot_uno, drone_pilot_una, drone_pilot_rt,
     other_cam_qty, other_cam_uno, other_cam_una, other_cam_rt,
+    stills_qty, stills_uno, stills_una, stills_rt,
   } = postDataCamera;
 
   // Totals
@@ -1234,8 +1240,71 @@ function BudgetCreate() {
   // Other Camera Total postData 
   const [othercamTotal, setOthercamTotal] = useState(0);
 
+  // Stills Total postData 
+  const [stillsTotal, setStillsTotal] = useState(0);
+
   // Camera Labour Total postData 
   const [cameralabourTotal, setCameralabourTotal] = useState(0);
+
+  // ELECTRICAL LABOUR ----------------------------------
+
+  // Electrical Labour postData
+  const [postDataElectric, setPostDataElectric] = useState({
+    gaffer_qty: 0,
+    gaffer_uno: 0,
+    gaffer_una: "",
+    gaffer_rt: 0,
+    best_boy_qty: 0,
+    best_boy_uno: 0,
+    best_boy_una: "",
+    best_boy_rt: 0,
+    electrician_qty: 0,
+    electrician_uno: 0,
+    electrician_una: "",
+    electrician_rt: 0,
+    dailies_elec_qty: 0,
+    dailies_elec_uno: 0,
+    dailies_elec_una: "",
+    dailies_elec_rt: 0,
+    generator_op_qty: 0,
+    generator_op_uno: 0,
+    generator_op_una: "",
+    generator_op_rt: 0,
+    other_elec_qty: 0,
+    other_elec_uno: 0,
+    other_elec_una: "",
+    other_elec_rt: 0,
+  });
+
+  const {gaffer_qty, gaffer_uno, gaffer_una, gaffer_rt,
+    best_boy_qty, best_boy_uno, best_boy_una, best_boy_rt,
+    electrician_qty, electrician_uno, electrician_una, electrician_rt,
+    dailies_elec_qty, dailies_elec_uno, dailies_elec_una, dailies_elec_rt,
+    generator_op_qty, generator_op_uno, generator_op_una, generator_op_rt,
+    other_elec_qty, other_elec_uno, other_elec_una, other_elec_rt,
+    } = postDataElectric;
+
+  // Totals
+  // gaffer Total postData 
+  const [gafferTotal, setGafferTotal] = useState(0);
+
+  // best boy Total postData 
+  const [bestboyTotal, setBestboyTotal] = useState(0);
+
+  // electrician Total postData 
+  const [electricianTotal, setElectricianTotal] = useState(0);
+
+  // dailies electric Total postData 
+  const [dailieselecTotal, setDailieselecTotal] = useState(0);
+
+  // generator operator Total postData 
+  const [generatoropTotal, setGeneratoropTotal] = useState(0);
+
+  // other electric Total postData 
+  const [otherelectricTotal, setOtherelectricTotal] = useState(0);
+
+  // Electric Labour Total postData 
+  const [electriclabourTotal, setElectriclabourTotal] = useState(0);
 
 
    // end below B
@@ -1929,6 +1998,11 @@ function BudgetCreate() {
     formData.append("other_cam_uno", other_cam_uno);
     formData.append("other_cam_una", other_cam_una);
     formData.append("other_cam_rt", other_cam_rt);
+    formData.append("stills_qty", stills_qty);
+    formData.append("stills_uno", stills_uno);
+    formData.append("stills_una", stills_una);
+    formData.append("stills_rt", stills_rt);
+    formData.append("stills_total", stillsTotal);
     formData.append("dop_total", dopTotal);
     formData.append("cameraop_total", cameraopTotal);
     formData.append("camac1_total", camac1Total);
@@ -1939,6 +2013,38 @@ function BudgetCreate() {
     formData.append("dronepilot_total", dronepilotTotal);
     formData.append("othercam_total", othercamTotal);
     formData.append("cameralabour_total", cameralabourTotal);
+    // electric
+    formData.append("gaffer_qty", gaffer_qty);
+    formData.append("gaffer_uno", gaffer_uno);
+    formData.append("gaffer_una", gaffer_una);
+    formData.append("gaffer_rt", gaffer_rt);
+    formData.append("best_boy_qty", best_boy_qty);
+    formData.append("best_boy_uno", best_boy_uno);
+    formData.append("best_boy_una", best_boy_una);
+    formData.append("best_boy_rt", best_boy_rt);
+    formData.append("electrician_qty", electrician_qty);
+    formData.append("electrician_uno", electrician_uno);
+    formData.append("electrician_una", electrician_una);
+    formData.append("electrician_rt", electrician_rt);
+    formData.append("dailies_elec_qty", dailies_elec_qty);
+    formData.append("dailies_elec_uno", dailies_elec_uno);
+    formData.append("dailies_elec_una", dailies_elec_una);
+    formData.append("dailies_elec_rt", dailies_elec_rt);
+    formData.append("generator_op_qty", generator_op_qty);
+    formData.append("generator_op_uno", generator_op_uno);
+    formData.append("generator_op_una", generator_op_una);
+    formData.append("generator_op_rt", generator_op_rt);
+    formData.append("other_elec_qty", other_elec_qty);
+    formData.append("other_elec_uno", other_elec_uno);
+    formData.append("other_elec_una", other_elec_una);
+    formData.append("other_elec_rt", other_elec_rt);
+    formData.append("gaffer_total", gafferTotal);
+    formData.append("bestboy_total", bestboyTotal);
+    formData.append("electrician_total", electricianTotal);
+    formData.append("dailieselec_total", dailieselecTotal);
+    formData.append("generatorop_total", generatoropTotal);
+    formData.append("otherelectric_total", otherelectricTotal);
+    formData.append("electriclabour_total", electriclabourTotal);
     // formData.append("stars", stars);
 
     try {
@@ -2231,6 +2337,21 @@ function BudgetCreate() {
     </Col>
     <Col md={4}>
     <p className="mb-0">{cameralabourTotal} </p>
+    </Col>
+    </Row>
+    </div>
+    </Col>
+    {/* electric */}
+    <Col md={3} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
+    <Row>
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
+          onClick={() => setShowElec(showElec => !showElec)} >Electrical Labour
+    </p>
+    </Col>
+    <Col md={4}>
+    <p className="mb-0">{electriclabourTotal} </p>
     </Col>
     </Row>
     </div>
@@ -2595,6 +2716,8 @@ function BudgetCreate() {
       setDronepilotTotal={setDronepilotTotal}
       othercamTotal={othercamTotal}
       setOthercamTotal={setOthercamTotal}
+      stillsTotal={stillsTotal}
+      setStillsTotal={setStillsTotal}
       cameralabourTotal={cameralabourTotal}
       setCameralabourTotal={setCameralabourTotal}
       setShow={setShowCam}  /> 

@@ -337,9 +337,9 @@ const Budget = (props) => {
     <h5 className={ `${styles.BoldBlack}`}>BUDGET DETAIL PAGE</h5>
     </Col>
     </Row> */}
-    {/* details length */}
+    {/* DETAILS / LENGTH --------------------------------- */}
     <Row className='px-5 mt-3'>
-    {/* details */}
+    {/* details  */}
     <Col xs={12} md={6} >
     <Row>
     <Col xs={4}>
@@ -400,7 +400,7 @@ const Budget = (props) => {
     <h5 className={ `${styles.BoldBlack}`}>ABOVE THE LINE</h5>
     </Col>
     </Row>
-    {/* Rights */}
+    {/* RIGHTS ------------------------------------------- */}
     <div>
     <Row>
     <Col md={1}>
@@ -468,7 +468,7 @@ const Budget = (props) => {
     </Col>
     </Row>
     </div>
-    {/* Development */}
+    {/* DEVELOPMENT -------------------------------------- */}
     <div className='mt-5'>
     <Row>
     <Col md={1}>
@@ -611,7 +611,7 @@ const Budget = (props) => {
     </Col>
     </Row>
     </div>
-    {/* Scenario */}
+    {/* SCENARIO --------------------------------------------- */}
     <div className='mt-5'>
     <Row>
     <Col xs={1}>
@@ -738,7 +738,7 @@ const Budget = (props) => {
     </Col>
     </Row>
     </div>
-    {/* Producers and Directors */}
+    {/* RODUCERS AND DIRECTORS ------------------------------- */}
     <div className='mt-5'>
     <Row>
     <Col xs={1}>
@@ -863,7 +863,7 @@ const Budget = (props) => {
     </Col>
     </Row>
     </div>
-    {/* Stars / Music */}
+    {/* STARS / MUSIC ---------------------------------------- */}
     <div className='mt-5'>
     <Row>
     <Col xs={1}>
@@ -1081,14 +1081,14 @@ const Budget = (props) => {
     </div>
     </div>
     </div>
-    {/* BELOW THE LINE */}
+    {/* BELOW THE LINE ---------------------------------------*/}
     <div className='px-3'>
     <Row className={ `${styles.OverviewBlue} mx-1 my-5 py-1 text-center`}>
     <Col md={12}>
     <h5 className={ `${styles.BoldBlack}`}>BELOW THE LINE - "B" PRODUCTION </h5>
     </Col>
     </Row>
-    {/* Cast */}
+    {/* CAST ------------------------------------------------ */}
     <div className='mt-5'>
     <Row>
     <Col xs={1}>
@@ -1343,7 +1343,7 @@ const Budget = (props) => {
     </Col>
     </Row>
     </div>
-    {/* Production Staff */}
+    {/* PRODUCTION STAFF ------------------------------------ */}
     <div className='mt-5'>
     <Row>
     <Col xs={1}>
@@ -1826,7 +1826,7 @@ const Budget = (props) => {
     </Col>
     </Row>
     </div>
-    {/* Design Labour */}
+    {/* DESIGN LABOUR --------------------------------------- */}
     <div className='mt-5'>
     <Row>
     <Col xs={1}>
@@ -2008,7 +2008,7 @@ const Budget = (props) => {
     </Col>
     </Row>
     </div>
-    {/* Construction Labour */}
+    {/* CONSTRUCTION LABOUR ---------------------------------- */}
     <div className='mt-5'>
     <Row>
     <Col xs={1}>
@@ -2238,7 +2238,7 @@ const Budget = (props) => {
     </Col>
     </Row>
     </div>
-    {/* Set Dressing Labour */}
+    {/* SET DRESSING LABOUR ---------------------------------- */}
     <div className='mt-5'>
     <Row>
     <Col xs={1}>
@@ -2444,7 +2444,7 @@ const Budget = (props) => {
     </Col>
     </Row>
     </div>
-    {/* Property Labour */}
+    {/* PROPERTY LABOUR ------------------------------------- */}
     <div className='mt-5'>
     <Row>
     <Col xs={1}>
@@ -2626,7 +2626,7 @@ const Budget = (props) => {
     </Col>
     </Row>
     </div>
-    {/* Wrangling */}
+    {/* WRANGLING LABOUR ------------------------------------- */}
     <div className='mt-5'>
     <Row>
     <Col xs={1}>
@@ -2724,7 +2724,7 @@ const Budget = (props) => {
     </Col>
     </Row>
     </div>
-    {/* FX */}
+    {/* FX LABOUR ------------------------------------------- */}
     <div className='mt-5'>
     <Row>
     <Col xs={1}>
@@ -2846,7 +2846,7 @@ const Budget = (props) => {
     </Col>
     </Row>
     </div>
-    {/* Wardrobe */}
+    {/* WARDROBE LABOUR ------------------------------------- */}
     <div className='mt-5'>
     <Row>
     <Col xs={1}>
@@ -3040,7 +3040,7 @@ const Budget = (props) => {
     </Col>
     </Row>
     </div>
-    {/* Makeup */}
+    {/* MAKEUP LABOUR ------------------------------------- */}
     <div className='mt-5'>
     <Row>
     <Col xs={1}>
@@ -3279,6 +3279,296 @@ const Budget = (props) => {
     </Col>
     <Col md={2} >
     <p className={`${styles.Underline} mb-0`}>{makeuplabourTotal || 0}</p>
+    </Col>
+    </Row>
+    </div>
+    {/* CAMERA ----------------------------------------- */}
+    <div className='mt-5'>
+    <Row>
+    <Col xs={1}>
+    <p className='mb-2'>16.00</p>
+    </Col>
+    <Col xs={10}>
+    <p className={ `${styles.BoldBlack} mb-2`}>CAMERA LABOUR</p>
+    </Col>
+    </Row>
+    {/* Titles */}
+    <Row className={ `${styles.Overview} mb-2 py-1`} >
+    <Col md={1} >
+    <p className="mb-0">ACCT</p>
+    </Col>
+    <Col md={5} >
+    <p className="mb-0">Description</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">#</p>
+    </Col>
+    <Col className="px-0 mx-0" md={1} >
+    <p># Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Price</p>
+    </Col>
+    <Col md={2} >
+    <p className="mb-0">Total</p>
+    </Col>
+    </Row>
+    {/* DOP */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>16.10</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>DOP</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{dop_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{dop_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{dop_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{dop_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{dopTotal || 0}</p>
+    </Col>
+    </Row>
+    {/* Camera Operator */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>16.20</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Camera Operator</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{camera_op_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{camera_op_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{camera_op_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{camera_op_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{cameraopTotal || 0}</p>
+    </Col>
+    </Row>
+    {/* 1st Assistant Camera */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>16.30</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>1st Assistant Camera</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{cam_ac1_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{cam_ac1_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{cam_ac1_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{cam_ac1_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{camac1Total || 0}</p>
+    </Col>
+    </Row>
+    {/* 2nd Assistant Camera */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>16.40</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>2nd Assistant Camera</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{cam_ac2_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{cam_ac2_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{cam_ac2_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{cam_ac2_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{camac2Total || 0}</p>
+    </Col>
+    </Row>
+    {/* DIT */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>16.50</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>DIT</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{dit_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{dit_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{dit_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{dit_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{ditTotal || 0}</p>
+    </Col>
+    </Row>
+    {/* Steadicam */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>16.60</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Steadicam</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{steadicam_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{steadicam_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{steadicam_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{steadicam_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{steadicamTotal || 0}</p>
+    </Col>
+    </Row>
+    {/* Camera PA */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>16.70</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Camera PA</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{cam_pa_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{cam_pa_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{cam_pa_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{cam_pa_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{campaTotal || 0}</p>
+    </Col>
+    </Row>
+    {/* Drone Pilot */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>16.80</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Drone Pilot</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{drone_pilot_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{drone_pilot_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{drone_pilot_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{drone_pilot_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{dronepilotTotal || 0}</p>
+    </Col>
+    </Row>
+    {/* Stills Photographer */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>16.90</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Stills Photographer</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{stills_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{stills_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{stills_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{stills_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{stillsTotal || 0}</p>
+    </Col>
+    </Row>
+    {/* Other */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>16.91</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Other - Camera</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{other_cam_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{other_cam_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{other_cam_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{other_cam_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{othercamTotal || 0}</p>
+    </Col>
+    </Row>
+    {/* Camera Total */}
+    <Row className='mt-3' >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    <p></p>
+    </Col>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL CAMERA LABOUR </p>
+    </Col>
+    <Col md={3} >
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline} mb-0`}>{cameralabourTotal || 0}</p>
     </Col>
     </Row>
     </div>
