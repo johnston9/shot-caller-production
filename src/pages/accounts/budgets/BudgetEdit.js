@@ -27,6 +27,8 @@ import SpecialEffects from "./budgetsections/SpecialEffects";
 import Wardrobe from "./budgetsections/Wardrobe";
 import Makeup from "./budgetsections/Makeup";
 import Camera from "./budgetsections/Camera";
+import Electric from "./budgetsections/Electric";
+import Grip from "./budgetsections/Grip";
 
 function BudgetEdit() {
   const [errors, setErrors] = useState({});
@@ -51,6 +53,7 @@ function BudgetEdit() {
   const [showMake, setShowMake] = useState(false);
   const [showCam, setShowCam] = useState(false);
   const [showElec, setShowElec] = useState(false);
+  const [showGrip, setShowGrip] = useState(false);
 
   // budget id
   const [budgetId, setBudgetId] = useState("");
@@ -1349,7 +1352,7 @@ function BudgetEdit() {
     dolly_crane_grip_qty: 0,
     dolly_crane_grip_uno: 0,
     dolly_crane_grip_una: "",
-    dolly_crane_grip: 0,
+    dolly_crane_grip_rt: 0,
     swing_grips_qty: 0,
     swing_grips_uno: 0,
     swing_grips_una: "",
@@ -1364,10 +1367,35 @@ function BudgetEdit() {
     best_boy_grip_qty, best_boy_grip_uno, best_boy_grip_una, best_boy_grip_rt,
     grips_qty, grips_uno, grips_una, grips_rt,
     dailies_grip_qty, dailies_grip_uno, dailies_grip_una, dailies_grip_rt, 
-    dolly_crane_grip_qty, dolly_crane_grip_uno, dolly_crane_grip_una, dolly_crane_grip,
+    dolly_crane_grip_qty, dolly_crane_grip_uno, dolly_crane_grip_una, dolly_crane_grip_rt,
     swing_grips_qty, swing_grips_uno, swing_grips_una, swing_grips_rt,
     other_grip_labour_qty, other_grip_labour_uno, other_grip_labour_una, other_grip_labour_rt,
     } = postDataGrip;
+
+  // Totals
+  // key grip Total postData 
+  const [keygripTotal, setKeygripTotal] = useState(0);
+
+  // best boy grip Total postData 
+  const [bestboygripTotal, setBestboygripTotal] = useState(0);
+
+  // grips Total postData 
+  const [gripsTotal, setGripsTotal] = useState(0);
+
+  // dailies grip Total postData 
+  const [dailiesgripTotal, setDailiesgripTotal] = useState(0);
+
+  // dolly crane grip Total postData 
+  const [dollycranegripTotal, setDollycranegripTotal] = useState(0);
+
+  // swing grips Total postData 
+  const [swinggripsTotal, setSwinggripsTotal] = useState(0);
+
+  // other grip labour Total postData 
+  const [othergriplabourTotal, setOthergriplabourTotal] = useState(0);
+
+  // Grip Labour Total postData 
+  const [griplabourTotal, setGriplabourTotal] = useState(0);
 
 
   // end below B
@@ -2039,6 +2067,23 @@ function BudgetEdit() {
           generator_op_qty, generator_op_uno, generator_op_una, generator_op_rt,
           other_elec_qty, other_elec_uno, other_elec_una, other_elec_rt,})
         setElectriclabourTotal(electriclabour_total);
+        const {key_grip_qty, key_grip_uno, key_grip_una, key_grip_rt,
+          best_boy_grip_qty, best_boy_grip_uno, best_boy_grip_una, best_boy_grip_rt,
+          grips_qty, grips_uno, grips_una, grips_rt,
+          dailies_grip_qty, dailies_grip_uno, dailies_grip_una, dailies_grip_rt, 
+          dolly_crane_grip_qty, dolly_crane_grip_uno, dolly_crane_grip_una, dolly_crane_grip_rt,
+          swing_grips_qty, swing_grips_uno, swing_grips_una, swing_grips_rt,
+          other_grip_labour_qty, other_grip_labour_uno, griplabour_total,
+          other_grip_labour_una, other_grip_labour_rt,} = data.results[0];
+        setPostDataGrip({key_grip_qty, key_grip_uno, key_grip_una, key_grip_rt,
+          best_boy_grip_qty, best_boy_grip_uno, best_boy_grip_una, best_boy_grip_rt,
+          grips_qty, grips_uno, grips_una, grips_rt,
+          dailies_grip_qty, dailies_grip_uno, dailies_grip_una, dailies_grip_rt, 
+          dolly_crane_grip_qty, dolly_crane_grip_uno, dolly_crane_grip_una, dolly_crane_grip_rt,
+          swing_grips_qty, swing_grips_uno, swing_grips_una, swing_grips_rt,
+          other_grip_labour_qty, other_grip_labour_uno, 
+          other_grip_labour_una, other_grip_labour_rt,});
+        setGriplabourTotal(griplabour_total);
 
       } catch (err) {
         console.log(err);
@@ -2609,6 +2654,43 @@ function BudgetEdit() {
     formData.append("generatorop_total", generatoropTotal);
     formData.append("otherelectric_total", otherelectricTotal);
     formData.append("electriclabour_total", electriclabourTotal);
+    // grip 
+    formData.append("key_grip_qty", key_grip_qty);
+    formData.append("key_grip_uno", key_grip_uno);
+    formData.append("key_grip_una", key_grip_una);
+    formData.append("key_grip_rt", key_grip_rt);
+    formData.append("best_boy_grip_qty", best_boy_grip_qty);
+    formData.append("best_boy_grip_uno", best_boy_grip_uno);
+    formData.append("best_boy_grip_una", best_boy_grip_una);
+    formData.append("best_boy_grip_rt", best_boy_grip_rt);
+    formData.append("grips_qty", grips_qty);
+    formData.append("grips_uno", grips_uno);
+    formData.append("grips_una", grips_una);
+    formData.append("grips_rt", grips_rt);
+    formData.append("dailies_grip_qty", dailies_grip_qty);
+    formData.append("dailies_grip_uno", dailies_grip_uno);
+    formData.append("dailies_grip_una", dailies_grip_una);
+    formData.append("dailies_grip_rt", dailies_grip_rt);
+    formData.append("dolly_crane_grip_qty", dolly_crane_grip_qty);
+    formData.append("dolly_crane_grip_uno", dolly_crane_grip_uno);
+    formData.append("dolly_crane_grip_una", dolly_crane_grip_una);
+    formData.append("dolly_crane_grip_rt", dolly_crane_grip_rt);
+    formData.append("swing_grips_qty", swing_grips_qty);
+    formData.append("swing_grips_uno", swing_grips_uno);
+    formData.append("swing_grips_una", swing_grips_una);
+    formData.append("swing_grips_rt", swing_grips_rt);
+    formData.append("other_grip_labour_qty", other_grip_labour_qty);
+    formData.append("other_grip_labour_uno", other_grip_labour_uno);
+    formData.append("other_grip_labour_una", other_grip_labour_una);
+    formData.append("other_grip_labour_rt", other_grip_labour_rt);
+    formData.append("keygrip_total", keygripTotal);
+    formData.append("bestboygrip_total", bestboygripTotal);
+    formData.append("grips_total", gripsTotal);
+    formData.append("dailiesgrip_total", dailiesgripTotal);
+    formData.append("dollycranegrip_total", dollycranegripTotal);
+    formData.append("swinggripsTotal", swinggripsTotal);
+    formData.append("othergriplabour_total", othergriplabourTotal);
+    formData.append("griplabour_total", griplabourTotal);
     // formData.append("stars", stars);
 
     try {
@@ -2930,6 +3012,20 @@ function BudgetEdit() {
     </Col>
     <Col md={4}>
     <p className="mb-0">{electriclabourTotal} </p>
+    </Col>
+    </Row>
+    </div>
+    </Col>
+    <Col md={3} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
+    <Row>
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
+          onClick={() => setShowGrip(showGrip => !showGrip)} >Grip Labour
+    </p>
+    </Col>
+    <Col md={4}>
+    <p className="mb-0">{griplabourTotal} </p>
     </Col>
     </Row>
     </div>
