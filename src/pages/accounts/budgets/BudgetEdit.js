@@ -1295,6 +1295,7 @@ function BudgetEdit() {
     other_elec_rt: 0,
   });
 
+  // values
   const {gaffer_qty, gaffer_uno, gaffer_una, gaffer_rt,
     best_boy_qty, best_boy_uno, best_boy_una, best_boy_rt,
     electrician_qty, electrician_uno, electrician_una, electrician_rt,
@@ -1324,6 +1325,49 @@ function BudgetEdit() {
 
   // Electric Labour Total postData 
   const [electriclabourTotal, setElectriclabourTotal] = useState(0);
+
+  // GRIP LABOUR ----------------------------------
+
+  // Grip Labour postData
+  const [postDataGrip, setPostDataGrip] = useState({
+    key_grip_qty: 0,
+    key_grip_uno: 0,
+    key_grip_una: "",
+    key_grip_rt: 0,
+    best_boy_grip_qty: 0,
+    best_boy_grip_uno: 0,
+    best_boy_grip_una: "",
+    best_boy_grip_rt: 0,
+    grips_qty: 0,
+    grips_uno: 0,
+    grips_una: "",
+    grips_rt: 0,
+    dailies_grip_qty: 0,
+    dailies_grip_uno: 0,
+    dailies_grip_una: "",
+    dailies_grip_rt: 0,
+    dolly_crane_grip_qty: 0,
+    dolly_crane_grip_uno: 0,
+    dolly_crane_grip_una: "",
+    dolly_crane_grip: 0,
+    swing_grips_qty: 0,
+    swing_grips_uno: 0,
+    swing_grips_una: "",
+    swing_grips_rt: 0,
+    other_grip_labour_qty: 0,
+    other_grip_labour_uno: 0,
+    other_grip_labour_una: "",
+    other_grip_labour_rt: 0,
+  });
+
+  const {key_grip_qty, key_grip_uno, key_grip_una, key_grip_rt,
+    best_boy_grip_qty, best_boy_grip_uno, best_boy_grip_una, best_boy_grip_rt,
+    grips_qty, grips_uno, grips_una, grips_rt,
+    dailies_grip_qty, dailies_grip_uno, dailies_grip_una, dailies_grip_rt, 
+    dolly_crane_grip_qty, dolly_crane_grip_uno, dolly_crane_grip_una, dolly_crane_grip,
+    swing_grips_qty, swing_grips_uno, swing_grips_una, swing_grips_rt,
+    other_grip_labour_qty, other_grip_labour_uno, other_grip_labour_una, other_grip_labour_rt,
+    } = postDataGrip;
 
 
   // end below B
@@ -3255,6 +3299,29 @@ function BudgetEdit() {
       cameralabourTotal={cameralabourTotal}
       setCameralabourTotal={setCameralabourTotal}
       setShow={setShowCam}  /> 
+    ) }
+    {/* electric */}
+    {!showElec ? (
+      ""
+    ) : (
+      <Electric
+      postDataElectric={postDataElectric}
+      setPostDataElectric={setPostDataElectric}
+      gafferTotal={gafferTotal}
+      setGafferTotal={setGafferTotal}
+      bestboyTotal={bestboyTotal}
+      setBestboyTotal={setBestboyTotal}
+      electricianTotal={electricianTotal}
+      setElectricianTotal={setElectricianTotal}
+      dailieselecTotal={dailieselecTotal}
+      setDailieselecTotal={setDailieselecTotal}
+      generatoropTotal={generatoropTotal}
+      setGeneratoropTotal={setGeneratoropTotal}
+      otherelectricTotal={otherelectricTotal}
+      setOtherelectricTotal={setOtherelectricTotal}
+      electriclabourTotal={electriclabourTotal}
+      setElectriclabourTotal={setElectriclabourTotal}
+      setShow={setShowElec}  /> 
     ) }
     {/* buttons */}
     <Row>

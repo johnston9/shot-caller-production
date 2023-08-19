@@ -3282,7 +3282,7 @@ const Budget = (props) => {
     </Col>
     </Row>
     </div>
-    {/* CAMERA ----------------------------------------- */}
+    {/* CAMERA -------------------------------------------- */}
     <div className='mt-5'>
     <Row>
     <Col xs={1}>
@@ -3569,6 +3569,200 @@ const Budget = (props) => {
     </Col>
     <Col md={2} >
     <p className={`${styles.Underline} mb-0`}>{cameralabourTotal || 0}</p>
+    </Col>
+    </Row>
+    </div>
+    {/* ELECTRICAL ----------------------------------------- */}
+    <div className='mt-5'>
+    <Row>
+    <Col xs={1}>
+    <p className='mb-2'>17.00</p>
+    </Col>
+    <Col xs={10}>
+    <p className={ `${styles.BoldBlack} mb-2`}>ELECTRICAL LABOUR</p>
+    </Col>
+    </Row>
+    {/* Titles */}
+    <Row className={ `${styles.Overview} mb-2 py-1`} >
+    <Col md={1} >
+    <p className="mb-0">ACCT</p>
+    </Col>
+    <Col md={5} >
+    <p className="mb-0">Description</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">#</p>
+    </Col>
+    <Col className="px-0 mx-0" md={1} >
+    <p># Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Price</p>
+    </Col>
+    <Col md={2} >
+    <p className="mb-0">Total</p>
+    </Col>
+    </Row>
+    {/* Gaffer */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>17.10</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Gaffer</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{gaffer_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{gaffer_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{gaffer_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{gaffer_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{gafferTotal || 0}</p>
+    </Col>
+    </Row>
+    {/* Best Boy */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>17.20</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Best Boy</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{best_boy_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{best_boy_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{best_boy_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{best_boy_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{bestboyTotal || 0}</p>
+    </Col>
+    </Row>
+    {/* Electricians */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>17.30</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Electricians</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{electrician_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{electrician_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{electrician_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{electrician_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{electricianTotal || 0}</p>
+    </Col>
+    </Row>
+    {/* Dailies Electric */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>17.40</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Dailies Electric</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{dailies_elec_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{dailies_elec_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{dailies_elec_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{dailies_elec_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{dailieselecTotal || 0}</p>
+    </Col>
+    </Row>
+    {/* Generator Operator */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>17.50</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Generator Operator</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{generator_op_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{generator_op_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{generator_op_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{generator_op_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{generatoropTotal || 0}</p>
+    </Col>
+    </Row>
+    {/* Other Electrical */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>17.60</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Other Electrical</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{other_elec_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{other_elec_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{other_elec_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{other_elec_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{otherelectricTotal || 0}</p>
+    </Col>
+    </Row>
+    {/* Electric Total */}
+    <Row className='mt-3' >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    <p></p>
+    </Col>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL ELECTRICAL LABOUR </p>
+    </Col>
+    <Col md={3} >
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline} mb-0`}>{electriclabourTotal || 0}</p>
     </Col>
     </Row>
     </div>
