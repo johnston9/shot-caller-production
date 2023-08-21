@@ -3572,7 +3572,7 @@ const Budget = (props) => {
     </Col>
     </Row>
     </div>
-    {/* ELECTRICAL ----------------------------------------- */}
+    {/* ELECTRICAL ---------------------------------------- */}
     <div className='mt-5'>
     <Row>
     <Col xs={1}>
@@ -3763,6 +3763,224 @@ const Budget = (props) => {
     </Col>
     <Col md={2} >
     <p className={`${styles.Underline} mb-0`}>{electriclabourTotal || 0}</p>
+    </Col>
+    </Row>
+    </div>
+    {/* GRIP ---------------------------------------------- */}
+    <div className='mt-5'>
+    <Row>
+    <Col xs={1}>
+    <p className='mb-2'>18.00</p>
+    </Col>
+    <Col xs={10}>
+    <p className={ `${styles.BoldBlack} mb-2`}>GRIP LABOUR</p>
+    </Col>
+    </Row>
+    {/* Titles */}
+    <Row className={ `${styles.Overview} mb-2 py-1`} >
+    <Col md={1} >
+    <p className="mb-0">ACCT</p>
+    </Col>
+    <Col md={5} >
+    <p className="mb-0">Description</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">#</p>
+    </Col>
+    <Col className="px-0 mx-0" md={1} >
+    <p># Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Price</p>
+    </Col>
+    <Col md={2} >
+    <p className="mb-0">Total</p>
+    </Col>
+    </Row>
+    {/* Key Grip */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>18.10</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Key Grip</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{key_grip_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{key_grip_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{key_grip_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{key_grip_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{keygripTotal || 0}</p>
+    </Col>
+    </Row>
+    {/* Best Boy Grip */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>18.20</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Best Boy Grip</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{best_boy_grip_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{best_boy_grip_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{best_boy_grip_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{best_boy_grip_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{bestboygripTotal || 0}</p>
+    </Col>
+    </Row>
+    {/* Grips */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>18.30</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Grips</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{grips_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{grips_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{grips_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{grips_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{gripsTotal || 0}</p>
+    </Col>
+    </Row>
+    {/* Dailies - Grips */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>18.40</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Dailies - Grips</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{dailies_grip_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{dailies_grip_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{dailies_grip_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{dailies_grip_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{dailiesgripTotal || 0}</p>
+    </Col>
+    </Row>
+    {/* Dolly / Crane Grips */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>18.50</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Dolly / Crane Grips</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{dolly_crane_grip_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{dolly_crane_grip_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{dolly_crane_grip_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{dolly_crane_grip_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{dollycranegripTotal || 0}</p>
+    </Col>
+    </Row>
+    {/* Swing Grips G&E */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>18.60</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Swing Grips G&E</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{swing_grips_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{swing_grips_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{swing_grips_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{swing_grips_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{swinggripsTotal || 0}</p>
+    </Col>
+    </Row>
+    {/* Other Grip Labour */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>18.70</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Other Grip Labour</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{other_grip_labour_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{other_grip_labour_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{other_grip_labour_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{other_grip_labour_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{othergriplabourTotal || 0}</p>
+    </Col>
+    </Row>
+    {/* Grip Total */}
+    <Row className='mt-3' >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    <p></p>
+    </Col>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL GRIP LABOUR </p>
+    </Col>
+    <Col md={3} >
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline} mb-0`}>{griplabourTotal || 0}</p>
     </Col>
     </Row>
     </div>

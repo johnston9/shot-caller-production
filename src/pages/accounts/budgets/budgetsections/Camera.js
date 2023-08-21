@@ -1,4 +1,4 @@
-/* Component in the Budget component to edit Makeup */
+/* Component in the Budget component to edit Camera */
 import React, { useEffect, useState } from "react";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";

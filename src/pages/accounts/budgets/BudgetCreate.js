@@ -53,6 +53,7 @@ function BudgetCreate() {
   const [showCam, setShowCam] = useState(false);
   const [showElec, setShowElec] = useState(false);
   const [showGrip, setShowGrip] = useState(false);
+  const [showSound, setShowSound] = useState(false);
 
   // INFO / LENGTH -------------------------
   // Info postData 
@@ -1377,6 +1378,54 @@ function BudgetCreate() {
   // Grip Labour Total postData 
   const [griplabourTotal, setGriplabourTotal] = useState(0);
 
+  // PRODUCTION SOUND LABOUR ----------------------------------
+
+  // ProductionSound Labour postData
+  const [postDataSoundPro, setPostDataSoundPro] = useState({
+    sound_mixer_qty: 0,
+    sound_mixer_uno: 0,
+    sound_mixer_una: "",
+    sound_mixer_rt: 0,
+    boom_operator_qty: 0,
+    boom_operator_uno: 0,
+    boom_operator_una: "",
+    boom_operator_rt: 0,
+    cable_wrangler_qty: 0,
+    cable_wrangler_uno: 0,
+    cable_wrangler_una: "",
+    cable_wrangler_rt: 0,
+    other_sound_labour_qty: 0,
+    other_sound_labour_uno: 0,
+    other_sound_labour_una: "",
+    other_sound_labour_rt: 0,
+  });
+
+  const {sound_mixer_qty, sound_mixer_uno,
+    sound_mixer_una, sound_mixer_rt,
+    boom_operator_qty, boom_operator_uno,
+    boom_operator_una, boom_operator_rt,
+    cable_wrangler_qty, cable_wrangler_uno,
+    cable_wrangler_una, cable_wrangler_rt,
+    other_sound_labour_qty, other_sound_labour_uno,
+    other_sound_labour_una, other_sound_labour_rt,
+  } = postDataSoundPro;
+
+  // Totals
+  // sound mixer Total postData 
+  const [soundmixerTotal, setSoundmixerTotal] = useState(0);
+
+  // boom operator Total postData 
+  const [boomoperatorTotal, setBoomoperatorTotal] = useState(0);
+
+  // cable wrangler Total postData 
+  const [cablewranglerTotal, setCablewranglerTotal] = useState(0)
+
+  // other sound labour Total postData 
+  const [othersoundlabourTotal, setOthersoundlabourTotal] = useState(0);
+
+  // Sound Labour Total postData 
+  const [soundlabourTotal, setSoundlabourTotal] = useState(0);
+
    // end below B
 
   // TOTALS ABOVE / BELOW / GRAND -----------------------------
@@ -2149,9 +2198,31 @@ function BudgetCreate() {
     formData.append("grips_total", gripsTotal);
     formData.append("dailiesgrip_total", dailiesgripTotal);
     formData.append("dollycranegrip_total", dollycranegripTotal);
-    formData.append("swinggripsTotal", swinggripsTotal);
+    formData.append("swinggrips_total", swinggripsTotal);
     formData.append("othergriplabour_total", othergriplabourTotal);
     formData.append("griplabour_total", griplabourTotal);
+    // sound pro 
+    formData.append("sound_mixer_qty", sound_mixer_qty);
+    formData.append("sound_mixer_uno", sound_mixer_uno);
+    formData.append("sound_mixer_una", sound_mixer_una);
+    formData.append("sound_mixer_rt", sound_mixer_rt);
+    formData.append("boom_operator_qty", boom_operator_qty);
+    formData.append("boom_operator_uno", boom_operator_uno);
+    formData.append("boom_operator_una", boom_operator_una);
+    formData.append("boom_operator_rt", boom_operator_rt);
+    formData.append("cable_wrangler_qty", cable_wrangler_qty);
+    formData.append("cable_wrangler_uno", cable_wrangler_uno);
+    formData.append("cable_wrangler_una", cable_wrangler_una);
+    formData.append("cable_wrangler_rt", cable_wrangler_rt);
+    formData.append("other_sound_labour_qty", other_sound_labour_qty);
+    formData.append("other_sound_labour_uno", other_sound_labour_uno);
+    formData.append("other_sound_labour_una", other_sound_labour_una);
+    formData.append("other_sound_labour_rt", other_sound_labour_rt);
+    formData.append("soundmixer_total", soundmixerTotal);
+    formData.append("boomoperator_total", boomoperatorTotal);
+    formData.append("cablewrangler_total", cablewranglerTotal);
+    formData.append("othersoundlabour_total", othersoundlabourTotal);
+    formData.append("soundlabour_total", soundlabourTotal);
     // formData.append("stars", stars);
 
     try {
