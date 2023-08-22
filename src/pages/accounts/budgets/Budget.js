@@ -193,8 +193,88 @@ const Budget = (props) => {
     assist_fx_units_name, assist_fx_rate,
     other_fx_labour_quantity, other_fx_labour_units_number,
     other_fx_labour_units_name, other_fx_labour_rate,
-    fxsupervisorTotal, assistfxTotal,
-    otherfxlabourTotal, fxlabourTotal,
+    fxsupervisor_total, assistfx_total,
+    otherfxlabour_total, fxlabour_total,
+    // Wardrobe
+    costume_designer_quantity, costume_designer_units_number,
+    costume_designer_units_name, costume_designer_rate,
+    assist_costume_designer_quantity, assist_costume_designer_units_number,
+    assist_costume_designer_units_name, assist_costume_designer_rate,
+    head_wardrobe_quantity, head_wardrobe_units_number,
+    head_wardrobe_units_name, head_wardrobe_rate,
+    wardrobe_assist_quantity, wardrobe_assist_units_number,
+    wardrobe_assist_units_name, wardrobe_assist_rate,
+    truck_costumer_quantity, truck_costumer_units_number,
+    truck_costumer_units_name, truck_costumer_rate,
+    other_wardrobe_labour_quantity, other_wardrobe_labour_units_number,
+    other_wardrobe_labour_units_name, other_wardrobe_labour_rate,
+    costumedesigner_total, assistcosdesigner_total, headwardrobe_total,
+    wardrobeassist_total, truckcostumer_total, otherwardrobe_total,
+    wardrobelabour_total,
+    // Makeup
+    makeup_dept_head_quantity, makeup_dept_head_units_number,
+    makeup_dept_head_units_name, makeup_dept_head_rate,
+    key_makeup_quantity, key_makeup_units_number,
+    key_makeup_units_name, key_makeup_rate,
+    makeup_artist_quantity, makeup_artist_units_number,
+    makeup_artist_units_name, makeup_artist_rate,
+    key_hairstylist_quantity, key_hairstylist_units_number,
+    key_hairstylist_units_name, key_hairstylist_rate,
+    hairdresser_quantity, hairdresser_units_number,
+    hairdresser_units_name, hairdresser_rate,
+    hair_makeup_dailies_quantity, hair_makeup_dailies_units_number,
+    hair_makeup_dailies_units_name, hair_makeup_dailies_rate,
+    other_makeup_labour_quantity, other_makeup_labour_units_number,
+    other_makeup_labour_units_name, other_makeup_labour_rate,
+    sfx_makeup_quantity, sfx_makeup_units_number,
+    sfx_makeup_units_name, sfx_makeup_rate,
+    headmakeup_total, keymakeup_total, makeupartist_total,
+    keyhairstylist_total, hairdresser_total, hairmakeupdailies_total,
+    othermakeuplabour_total, sfxmakeup_total, makeuplabour_total,
+    // Camera
+    dop_qty, dop_uno, dop_una, dop_rt,
+    camera_op_qty, camera_op_uno, camera_op_una, camera_op_rt,
+    cam_ac1_qty, cam_ac1_uno, cam_ac1_una, cam_ac1_rt,
+    cam_ac2_qty, cam_ac2_uno, cam_ac2_una, cam_ac2_rt,
+    dit_qty, dit_uno, dit_una, dit_rt,
+    steadicam_qty, steadicam_uno, steadicam_una, steadicam_rt,
+    cam_pa_qty, cam_pa_uno, cam_pa_una, cam_pa_rt, 
+    drone_pilot_qty, drone_pilot_uno, drone_pilot_una, drone_pilot_rt,
+    other_cam_qty, other_cam_uno, other_cam_una, other_cam_rt,
+    stills_qty, stills_uno, stills_una, stills_rt,
+    stills_total, dop_total, cameraop_total, camac1_total, camac2_total,
+    dit_total, steadicam_total, campa_total, dronepilot_total,
+    othercam_total, cameralabour_total,
+    // electric
+    gaffer_qty, gaffer_uno, gaffer_una, gaffer_rt,
+    best_boy_qty, best_boy_uno, best_boy_una, best_boy_rt,
+    electrician_qty, electrician_uno, electrician_una, electrician_rt,
+    dailies_elec_qty, dailies_elec_uno, dailies_elec_una, dailies_elec_rt,
+    generator_op_qty, generator_op_uno, generator_op_una, generator_op_rt,
+    other_elec_qty, other_elec_uno, other_elec_una, other_elec_rt,
+    gaffer_total, bestboy_total, electrician_total, dailieselec_total,
+    generatorop_total, otherelectric_total, electriclabour_total,
+    // grip
+    key_grip_qty, key_grip_uno, key_grip_una, key_grip_rt,
+    best_boy_grip_qty, best_boy_grip_uno, best_boy_grip_una, best_boy_grip_rt,
+    grips_qty, grips_uno, grips_una, grips_rt,
+    dailies_grip_qty, dailies_grip_uno, dailies_grip_una, dailies_grip_rt, 
+    dolly_crane_grip_qty, dolly_crane_grip_uno, dolly_crane_grip_una, dolly_crane_grip_rt,
+    swing_grips_qty, swing_grips_uno, swing_grips_una, swing_grips_rt,
+    other_grip_labour_qty, other_grip_labour_uno, other_grip_labour_una, other_grip_labour_rt,
+    keygrip_total, bestboygrip_total, grips_total, dailiesgrip_total,
+    dollycranegrip_total, swinggrips_total, othergriplabour_total, griplabour_total,
+    // sound
+    sound_mixer_qty, sound_mixer_uno,
+    sound_mixer_una, sound_mixer_rt,
+    boom_operator_qty, boom_operator_uno,
+    boom_operator_una, boom_operator_rt,
+    cable_wrangler_qty, cable_wrangler_uno,
+    cable_wrangler_una, cable_wrangler_rt,
+    other_sound_labour_qty, other_sound_labour_uno,
+    other_sound_labour_una, other_sound_labour_rt,
+    soundmixer_total, boomoperator_total, cablewrangler_total,
+    othersoundlabour_total, soundlabour_total,
 
     } = budget;
 
@@ -2779,7 +2859,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{fx_supervisor_rate || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{fxsupervisorTotal || 0}</p>
+    <p className={`${styles.Underline}`}>{fxsupervisor_total || 0}</p>
     </Col>
     </Row>
     {/* FX Assistant */}
@@ -2803,7 +2883,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{assist_fx_rate || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{assistfxTotal || 0}</p>
+    <p className={`${styles.Underline}`}>{assistfx_total || 0}</p>
     </Col>
     </Row>
     {/* Other FX Labour */}
@@ -2827,7 +2907,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{other_fx_labour_rate || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{otherfxlabourTotal || 0}</p>
+    <p className={`${styles.Underline}`}>{otherfxlabour_total || 0}</p>
     </Col>
     </Row>
     {/* FX Total */}
@@ -2842,7 +2922,7 @@ const Budget = (props) => {
     <Col md={3} >
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline} mb-0`}>{fxlabourTotal || 0}</p>
+    <p className={`${styles.Underline} mb-0`}>{fxlabour_total || 0}</p>
     </Col>
     </Row>
     </div>
@@ -2901,7 +2981,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{costume_designer_rate || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{costumedesignerTotal || 0}</p>
+    <p className={`${styles.Underline}`}>{costumedesigner_total || 0}</p>
     </Col>
     </Row>
     {/* Assistant Costume Designer */}
@@ -2925,7 +3005,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{assist_costume_designer_rate || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{assistcosdesignerTotal || 0}</p>
+    <p className={`${styles.Underline}`}>{assistcosdesigner_total || 0}</p>
     </Col>
     </Row>
     {/* Head Wardrobe */}
@@ -2949,7 +3029,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{head_wardrobe_rate || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{headwardrobeTotal || 0}</p>
+    <p className={`${styles.Underline}`}>{headwardrobe_total || 0}</p>
     </Col>
     </Row>
     {/* Wardrobe Assistant */}
@@ -2973,7 +3053,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{wardrobe_assist_rate || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{wardrobeassistTotal || 0}</p>
+    <p className={`${styles.Underline}`}>{wardrobeassist_total || 0}</p>
     </Col>
     </Row>
     {/* Truck Costumer */}
@@ -2997,7 +3077,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{truck_costumer_rate || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{truckcostumerTotal || 0}</p>
+    <p className={`${styles.Underline}`}>{truckcostumer_total || 0}</p>
     </Col>
     </Row>
     {/* Other Wardrobe Labour */}
@@ -3021,7 +3101,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{other_wardrobe_labour_rate || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{otherwardrobeTotal || 0}</p>
+    <p className={`${styles.Underline}`}>{otherwardrobe_total || 0}</p>
     </Col>
     </Row>
     {/* Wardrobe Total */}
@@ -3036,7 +3116,7 @@ const Budget = (props) => {
     <Col md={3} >
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline} mb-0`}>{wardrobelabourTotal || 0}</p>
+    <p className={`${styles.Underline} mb-0`}>{wardrobelabour_total || 0}</p>
     </Col>
     </Row>
     </div>
@@ -3095,7 +3175,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{makeup_dept_head_rate || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{headmakeupTotal || 0}</p>
+    <p className={`${styles.Underline}`}>{headmakeup_total || 0}</p>
     </Col>
     </Row>
     {/* Key Makeup */}
@@ -3119,7 +3199,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{key_makeup_rate || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{keymakeupTotal || 0}</p>
+    <p className={`${styles.Underline}`}>{keymakeup_total || 0}</p>
     </Col>
     </Row>
     {/* Makeup Artist */}
@@ -3143,7 +3223,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{makeup_artist_rate || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{makeupartistTotal || 0}</p>
+    <p className={`${styles.Underline}`}>{makeupartist_total || 0}</p>
     </Col>
     </Row>
     {/* Key Hairstylist */}
@@ -3167,7 +3247,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{key_hairstylist_rate || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{keyhairstylistTotal || 0}</p>
+    <p className={`${styles.Underline}`}>{keyhairstylist_total || 0}</p>
     </Col>
     </Row>
     {/* Hairdresser */}
@@ -3191,7 +3271,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{hairdresser_rate || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{hairdresserTotal || 0}</p>
+    <p className={`${styles.Underline}`}>{hairdresser_total || 0}</p>
     </Col>
     </Row>
     {/* Hair Makeup Dailies */}
@@ -3215,7 +3295,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{hair_makeup_dailies_rate || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{hairmakeupdailiesTotal || 0}</p>
+    <p className={`${styles.Underline}`}>{hairmakeupdailies_total || 0}</p>
     </Col>
     </Row>
     {/* Other Makeup Labour */}
@@ -3239,7 +3319,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{other_makeup_labour_rate || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{othermakeuplabourTotal || 0}</p>
+    <p className={`${styles.Underline}`}>{othermakeuplabour_total || 0}</p>
     </Col>
     </Row>
     {/* SFX Makeup */}
@@ -3263,7 +3343,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{sfx_makeup_rate || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{sfxmakeupTotal || 0}</p>
+    <p className={`${styles.Underline}`}>{sfxmakeup_total || 0}</p>
     </Col>
     </Row>
     {/* Makeup Total */}
@@ -3278,7 +3358,7 @@ const Budget = (props) => {
     <Col md={3} >
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline} mb-0`}>{makeuplabourTotal || 0}</p>
+    <p className={`${styles.Underline} mb-0`}>{makeuplabour_total || 0}</p>
     </Col>
     </Row>
     </div>
@@ -3337,7 +3417,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{dop_rt || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{dopTotal || 0}</p>
+    <p className={`${styles.Underline}`}>{dop_total || 0}</p>
     </Col>
     </Row>
     {/* Camera Operator */}
@@ -3361,7 +3441,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{camera_op_rt || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{cameraopTotal || 0}</p>
+    <p className={`${styles.Underline}`}>{cameraop_total || 0}</p>
     </Col>
     </Row>
     {/* 1st Assistant Camera */}
@@ -3385,7 +3465,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{cam_ac1_rt || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{camac1Total || 0}</p>
+    <p className={`${styles.Underline}`}>{camac1_total || 0}</p>
     </Col>
     </Row>
     {/* 2nd Assistant Camera */}
@@ -3409,7 +3489,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{cam_ac2_rt || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{camac2Total || 0}</p>
+    <p className={`${styles.Underline}`}>{camac2_total || 0}</p>
     </Col>
     </Row>
     {/* DIT */}
@@ -3433,7 +3513,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{dit_rt || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{ditTotal || 0}</p>
+    <p className={`${styles.Underline}`}>{dit_total || 0}</p>
     </Col>
     </Row>
     {/* Steadicam */}
@@ -3457,7 +3537,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{steadicam_rt || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{steadicamTotal || 0}</p>
+    <p className={`${styles.Underline}`}>{steadicam_total || 0}</p>
     </Col>
     </Row>
     {/* Camera PA */}
@@ -3481,7 +3561,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{cam_pa_rt || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{campaTotal || 0}</p>
+    <p className={`${styles.Underline}`}>{campa_total || 0}</p>
     </Col>
     </Row>
     {/* Drone Pilot */}
@@ -3505,7 +3585,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{drone_pilot_rt || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{dronepilotTotal || 0}</p>
+    <p className={`${styles.Underline}`}>{dronepilot_total || 0}</p>
     </Col>
     </Row>
     {/* Stills Photographer */}
@@ -3529,7 +3609,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{stills_rt || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{stillsTotal || 0}</p>
+    <p className={`${styles.Underline}`}>{stills_total || 0}</p>
     </Col>
     </Row>
     {/* Other */}
@@ -3553,7 +3633,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{other_cam_rt || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{othercamTotal || 0}</p>
+    <p className={`${styles.Underline}`}>{othercam_total || 0}</p>
     </Col>
     </Row>
     {/* Camera Total */}
@@ -3568,7 +3648,7 @@ const Budget = (props) => {
     <Col md={3} >
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline} mb-0`}>{cameralabourTotal || 0}</p>
+    <p className={`${styles.Underline} mb-0`}>{cameralabour_total || 0}</p>
     </Col>
     </Row>
     </div>
@@ -3627,7 +3707,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{gaffer_rt || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{gafferTotal || 0}</p>
+    <p className={`${styles.Underline}`}>{gaffer_total || 0}</p>
     </Col>
     </Row>
     {/* Best Boy */}
@@ -3651,7 +3731,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{best_boy_rt || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{bestboyTotal || 0}</p>
+    <p className={`${styles.Underline}`}>{bestboy_total || 0}</p>
     </Col>
     </Row>
     {/* Electricians */}
@@ -3675,7 +3755,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{electrician_rt || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{electricianTotal || 0}</p>
+    <p className={`${styles.Underline}`}>{electrician_total || 0}</p>
     </Col>
     </Row>
     {/* Dailies Electric */}
@@ -3699,7 +3779,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{dailies_elec_rt || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{dailieselecTotal || 0}</p>
+    <p className={`${styles.Underline}`}>{dailieselec_total || 0}</p>
     </Col>
     </Row>
     {/* Generator Operator */}
@@ -3723,7 +3803,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{generator_op_rt || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{generatoropTotal || 0}</p>
+    <p className={`${styles.Underline}`}>{generatorop_total || 0}</p>
     </Col>
     </Row>
     {/* Other Electrical */}
@@ -3747,7 +3827,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{other_elec_rt || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{otherelectricTotal || 0}</p>
+    <p className={`${styles.Underline}`}>{otherelectric_total || 0}</p>
     </Col>
     </Row>
     {/* Electric Total */}
@@ -3762,7 +3842,7 @@ const Budget = (props) => {
     <Col md={3} >
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline} mb-0`}>{electriclabourTotal || 0}</p>
+    <p className={`${styles.Underline} mb-0`}>{electriclabour_total || 0}</p>
     </Col>
     </Row>
     </div>
@@ -3821,7 +3901,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{key_grip_rt || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{keygripTotal || 0}</p>
+    <p className={`${styles.Underline}`}>{keygrip_total || 0}</p>
     </Col>
     </Row>
     {/* Best Boy Grip */}
@@ -3845,7 +3925,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{best_boy_grip_rt || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{bestboygripTotal || 0}</p>
+    <p className={`${styles.Underline}`}>{bestboygrip_total || 0}</p>
     </Col>
     </Row>
     {/* Grips */}
@@ -3869,7 +3949,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{grips_rt || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{gripsTotal || 0}</p>
+    <p className={`${styles.Underline}`}>{grips_total || 0}</p>
     </Col>
     </Row>
     {/* Dailies - Grips */}
@@ -3893,7 +3973,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{dailies_grip_rt || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{dailiesgripTotal || 0}</p>
+    <p className={`${styles.Underline}`}>{dailiesgrip_total || 0}</p>
     </Col>
     </Row>
     {/* Dolly / Crane Grips */}
@@ -3917,7 +3997,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{dolly_crane_grip_rt || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{dollycranegripTotal || 0}</p>
+    <p className={`${styles.Underline}`}>{dollycranegrip_total || 0}</p>
     </Col>
     </Row>
     {/* Swing Grips G&E */}
@@ -3941,7 +4021,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{swing_grips_rt || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{swinggripsTotal || 0}</p>
+    <p className={`${styles.Underline}`}>{swinggrips_total || 0}</p>
     </Col>
     </Row>
     {/* Other Grip Labour */}
@@ -3965,7 +4045,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{other_grip_labour_rt || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{othergriplabourTotal || 0}</p>
+    <p className={`${styles.Underline}`}>{othergriplabour_total || 0}</p>
     </Col>
     </Row>
     {/* Grip Total */}
@@ -3980,7 +4060,153 @@ const Budget = (props) => {
     <Col md={3} >
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline} mb-0`}>{griplabourTotal || 0}</p>
+    <p className={`${styles.Underline} mb-0`}>{griplabour_total || 0}</p>
+    </Col>
+    </Row>
+    </div>
+    {/* SOUND --------------------------------------------- */}
+    <div className='mt-5'>
+    <Row>
+    <Col xs={1}>
+    <p className='mb-2'>19.00</p>
+    </Col>
+    <Col xs={10}>
+    <p className={ `${styles.BoldBlack} mb-2`}>PRODUCTION SOUND LABOUR</p>
+    </Col>
+    </Row>
+    {/* Titles */}
+    <Row className={ `${styles.Overview} mb-2 py-1`} >
+    <Col md={1} >
+    <p className="mb-0">ACCT</p>
+    </Col>
+    <Col md={5} >
+    <p className="mb-0">Description</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">#</p>
+    </Col>
+    <Col className="px-0 mx-0" md={1} >
+    <p># Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Price</p>
+    </Col>
+    <Col md={2} >
+    <p className="mb-0">Total</p>
+    </Col>
+    </Row>
+    {/* Sound Mixer */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>19.10</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Sound Mixer</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{sound_mixer_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{sound_mixer_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{sound_mixer_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{sound_mixer_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{soundmixer_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Boom Operator */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>19.20</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Boom Operator</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{boom_operator_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{boom_operator_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{boom_operator_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{boom_operator_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{boomoperator_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Cable Wrangler */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>19.30</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Cable Wrangler</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{cable_wrangler_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{cable_wrangler_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{cable_wrangler_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{cable_wrangler_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{cablewrangler_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Other Sound Labour */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>19.40</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Other Sound Labour</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{other_sound_labour_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{other_sound_labour_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{other_sound_labour_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{other_sound_labour_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{othersoundlabour_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Sound Total */}
+    <Row className='mt-3' >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    <p></p>
+    </Col>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL SOUND LABOUR </p>
+    </Col>
+    <Col md={3} >
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline} mb-0`}>{soundlabour_total || 0}</p>
     </Col>
     </Row>
     </div>

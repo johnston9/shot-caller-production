@@ -29,6 +29,7 @@ import Makeup from "./budgetsections/Makeup";
 import Camera from "./budgetsections/Camera";
 import Electric from "./budgetsections/Electric";
 import Grip from "./budgetsections/Grip";
+import Sound from "./budgetsections/Sound";
 
 function BudgetEdit() {
   const [errors, setErrors] = useState({});
@@ -1445,6 +1446,58 @@ function BudgetEdit() {
 
   // Sound Labour Total postData 
   const [soundlabourTotal, setSoundlabourTotal] = useState(0);
+
+  // TRANSPORTATION LABOUR ----------------------------------
+
+  // Transport Labour postData
+  const [postDataTransport, setPostDataTransport] = useState({
+    tp_co_ordinator_qty: 0,
+    tp_coordinator_uno: 0,
+    tp_coordinator_una: "",
+    tp_coordinator_rt: 0,
+    tp_captain_qty: 0,
+    tp_captain_uno: 0,
+    tp_captain_una: "",
+    tp_captain_rt: 0,
+    tp_manager_qty: 0,
+    tp_manager_uno: 0,
+    tp_manager_una: "",
+    tp_manager_rt: 0,
+    head_driver_qty: 0,
+    head_driver_uno: 0,
+    head_driver_una: "",
+    head_driver_rt: 0,
+    drivers_qty: 0,
+    drivers_uno: 0,
+    drivers_una: "",
+    drivers_rt: 0,
+  });
+
+  const {tp_coordinator_qty, tp_coordinator_uno, tp_coordinator_una, tp_coordinator_rt,
+    tp_captain_qty,tp_captain_uno, tp_captain_una, tp_captain_rt,
+    tp_manager_qty, tp_manager_uno, tp_manager_una, tp_manager_rt,
+    head_driver_qty, head_driver_uno, head_driver_una, head_driver_rt,
+    drivers_qty, drivers_uno, drivers_una, drivers_rt,
+  } = postDataTransport;
+
+  // Totals
+  // tp coordinator Total postData 
+  const [tpcoordinatorTotal, setTpcoordinatorTotal] = useState(0);
+
+  // tp captain Total postData 
+  const [tpcaptainTotal, setTpcaptainTotal] = useState(0);
+
+  // tp manager Total postData 
+  const [tpmanagerTotal, setTpmanagerTotal] = useState(0);
+
+  // head driver Total postData 
+  const [headdriverTotal, setHeaddriverTotal] = useState(0);
+
+  // drivers Total postData 
+  const [driversTotal, setDriversTotal] = useState(0);
+
+  // Transport Labour Total postData 
+  const [transportlabourTotal, setTransportlabourTotal] = useState(0);
 
 
   // end below B
@@ -3118,6 +3171,20 @@ function BudgetEdit() {
     </Row>
     </div>
     </Col>
+    <Col md={3} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
+    <Row>
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
+          onClick={() => setShowSound(showSound => !showSound)} >Production Sound Labour
+    </p>
+    </Col>
+    <Col md={4}>
+    <p className="mb-0">{soundlabourTotal} </p>
+    </Col>
+    </Row>
+    </div>
+    </Col>
     </Row> 
     {belowthelineBtotal}
     {grandtotal}
@@ -3531,6 +3598,25 @@ function BudgetEdit() {
       griplabourTotal={griplabourTotal}
       setGriplabourTotal={setGriplabourTotal}
       setShow={setShowGrip}  /> 
+    ) }
+    {/* sound */}
+    {!showSound ? (
+      ""
+    ) : (
+      <Sound 
+      postDataSoundPro={postDataSoundPro}
+      setPostDataSoundPro={setPostDataSoundPro}
+      soundmixerTotal={soundmixerTotal}
+      setSoundmixerTotal={setSoundmixerTotal}
+      boomoperatorTotal={boomoperatorTotal}
+      setBoomoperatorTotal={setBoomoperatorTotal}
+      cablewranglerTotal={cablewranglerTotal}
+      setCablewranglerTotal={setCablewranglerTotal}
+      othersoundlabourTotal={othersoundlabourTotal}
+      setOthersoundlabourTotal={setOthersoundlabourTotal}
+      soundlabourTotal={soundlabourTotal}
+      setSoundlabourTotal={setSoundlabourTotal}
+      setShow={setShowSound}  /> 
     ) }
     {/* buttons */}
     <Row>
