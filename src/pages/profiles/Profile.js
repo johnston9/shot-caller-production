@@ -33,7 +33,7 @@ const Profile = (props) => {
                 <Link to={`/profiles/${id}`}>
                 {/* Avatar */}
                 <Row>
-                <Col xs={3} >
+                <Col xs={12} >
                     <Avatar src={image}
                     width={40} height={40}/>
                 </Col>
@@ -85,7 +85,7 @@ const Profile = (props) => {
             </Card>
       </div>
       {/* version 2 */}
-      <div className={`my-3 d-flex align-items-center`}>
+      {/* <div className={`my-3 d-flex align-items-center`}>
       <div>
         <Link className="align-self-center" to={`/profiles/${id}`}>
           <Avatar src={image} height={imageSize} />
@@ -114,7 +114,7 @@ const Profile = (props) => {
             </Button>
           ))}
       </div>
-    </div>
+      </div> */}
     </div>
   )
 }

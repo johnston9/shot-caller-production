@@ -29,6 +29,7 @@ import Camera from "./budgetsections/Camera";
 import Electric from "./budgetsections/Electric";
 import Grip from "./budgetsections/Grip";
 import Sound from "./budgetsections/Sound";
+import Transport from "./budgetsections/Transport";
 
 function BudgetCreate() {
   const [errors, setErrors] = useState({});
@@ -55,6 +56,7 @@ function BudgetCreate() {
   const [showElec, setShowElec] = useState(false);
   const [showGrip, setShowGrip] = useState(false);
   const [showSound, setShowSound] = useState(false);
+  const [showTport, setShowTport] = useState(false);
 
   // INFO / LENGTH -------------------------
   // Info postData 
@@ -1431,7 +1433,7 @@ function BudgetCreate() {
 
   // Transport Labour postData
   const [postDataTransport, setPostDataTransport] = useState({
-    tp_co_ordinator_qty: 0,
+    tp_coordinator_qty: 0,
     tp_coordinator_uno: 0,
     tp_coordinator_una: "",
     tp_coordinator_rt: 0,
@@ -2276,6 +2278,33 @@ function BudgetCreate() {
     formData.append("cablewrangler_total", cablewranglerTotal);
     formData.append("othersoundlabour_total", othersoundlabourTotal);
     formData.append("soundlabour_total", soundlabourTotal);
+    // transport 
+    formData.append("tp_coordinator_qty", tp_coordinator_qty);
+    formData.append("tp_coordinator_uno", tp_coordinator_uno);
+    formData.append("tp_coordinator_una", tp_coordinator_una);
+    formData.append("tp_coordinator_rt", tp_coordinator_rt);
+    formData.append("tp_captain_qty", tp_captain_qty);
+    formData.append("tp_captain_uno", tp_captain_uno);
+    formData.append("tp_captain_una", tp_captain_una);
+    formData.append("tp_captain_rt", tp_captain_rt);
+    formData.append("tp_manager_qty", tp_manager_qty);
+    formData.append("tp_manager_uno", tp_manager_uno);
+    formData.append("tp_manager_una", tp_manager_una);
+    formData.append("tp_manager_rt", tp_manager_rt);
+    formData.append("head_driver_qty", head_driver_qty);
+    formData.append("head_driver_uno", head_driver_uno);
+    formData.append("head_driver_una", head_driver_una);
+    formData.append("head_driver_rt", head_driver_rt);
+    formData.append("drivers_qty", drivers_qty);
+    formData.append("drivers_uno", drivers_uno);
+    formData.append("drivers_una", drivers_una);
+    formData.append("drivers_rt", drivers_rt);
+    formData.append("tpcoordinator_total", tpcoordinatorTotal);
+    formData.append("tpcaptain_total", tpcaptainTotal);
+    formData.append("tpmanager_total", tpmanagerTotal);
+    formData.append("headdriver_total", headdriverTotal);
+    formData.append("drivers_total", driversTotal);
+    formData.append("transportlabour_total", transportlabourTotal);
     // formData.append("stars", stars);
 
     try {
@@ -2611,6 +2640,20 @@ function BudgetCreate() {
     </Col>
     <Col md={4}>
     <p className="mb-0">{soundlabourTotal} </p>
+    </Col>
+    </Row>
+    </div>
+    </Col>
+    <Col md={3} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
+    <Row>
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
+          onClick={() => setShowTport(showTport => !showTport)} >Transportation Labour
+    </p>
+    </Col>
+    <Col md={4}>
+    <p className="mb-0">{transportlabourTotal} </p>
     </Col>
     </Row>
     </div>
@@ -3047,6 +3090,27 @@ function BudgetCreate() {
       soundlabourTotal={soundlabourTotal}
       setSoundlabourTotal={setSoundlabourTotal}
       setShow={setShowSound}  /> 
+    ) }
+    {/* transport */}
+    {!showTport ? (
+      ""
+    ) : (
+      <Transport 
+      postDataTransport={postDataTransport}
+      setPostDataTransport={setPostDataTransport}
+      tpcoordinatorTotal={tpcoordinatorTotal}
+      setTpcoordinatorTotal={setTpcoordinatorTotal}
+      tpcaptainTotal={tpcaptainTotal}
+      setTpcaptainTotal={setTpcaptainTotal}
+      tpmanagerTotal={tpmanagerTotal}
+      setTpmanagerTotal={setTpmanagerTotal}
+      headdriverTotal={headdriverTotal}
+      setHeaddriverTotal={setHeaddriverTotal}
+      driversTotal={driversTotal}
+      setDriversTotal={setDriversTotal}
+      transportlabourTotal={transportlabourTotal}
+      setTransportlabourTotal={setTransportlabourTotal}
+      setShow={setShowTport}  /> 
     ) }
     {/* buttons */}
     <Row>

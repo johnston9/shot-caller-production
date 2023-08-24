@@ -43,6 +43,7 @@ function ChatsPage({message, filter=""} ) {
         const { data } = await axiosReq.get(`/chat/?${filter}search=${query}`);
         setChat(data);
         setHasLoaded(true);
+        console.log(data);
       } catch (err) {
         console.log(err);
       }

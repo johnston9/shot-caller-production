@@ -91,15 +91,18 @@ const ChatTop = (props) => {
                 <Avatar src={profile_image} height={45}  />
                 </Link>
                 </Col>
-                <Col xs={8} >
+                <Col xs={8} className='px-0' >
                     <Row>
-                    <Col xs={12} md={6}>
-                    <span style={{ fontWeight: '700', textTransform: 'capitalize'}} 
-                    className='ml-1 ml-md-3'>{owner} {name} {company} </span>
+                    <Col className='text-center px-0' xs={12} lg={6}>
+                    <p style={{textTransform: 'capitalize'}} 
+                    >{name} </p>
+                    <p style={{textTransform: 'capitalize', color:'#fff' }} 
+                    className='d-none d-md-block'
+                    >{company} </p>
                     </Col>
-                    <Col  xs={12} md={6}>
+                    <Col className='text-center px-0' xs={12} lg={6}>
                     <div className={`ml-5 ${styles.PostBar}`} >
-                    <span className='mr-3'>{updated_at}</span>
+                    <span className='mr-2'>{updated_at}</span>
                     {/* like */}
                     {is_owner ? (
                     <OverlayTrigger
@@ -149,7 +152,7 @@ const ChatTop = (props) => {
                 </Col>
             </Row>
             </Card.Body>
-            {/* end new className="d-flex align-items-center justify-content-center"*/}
+            {/* end new */}
             <Link to={`/chat/${id}`}>
             <Card.Body className={`${styles.ChatTopLink} py-1`}  >
                 {title && <h4 style={{ fontStyle: 'italic' }}

@@ -55,8 +55,7 @@ function ProfilePage() {
 
   const mainProfile = (
     <>
-      {profile?.is_owner && <ProfileEditDropdown id={profile?.id} />}
-      <Row className="px-3 text-center">
+      <Row className={`px-3 text-center ${styles.Back}`}>
         <Col lg={3} className="text-lg-left">
         <Image
             className={styles.ProfileImage}
@@ -69,7 +68,6 @@ function ProfilePage() {
         <Col lg={6}>
           <h3 className="m-0">{profile?.company}</h3>
           <h4 className="m-0">{profile?.name}</h4>
-          <h5>{profile?.owner}</h5>
           <Row className="justify-content-center no-gutters">
             <Col xs={3} className="my-2">
               <div>{profile?.posts_count ? (
@@ -90,6 +88,7 @@ function ProfilePage() {
           </Row>
         </Col>
         <Col lg={3} className="text-lg-right">
+        {profile?.is_owner && <ProfileEditDropdown id={profile?.id} />}
           {currentUser &&
             !is_owner &&
             (profile?.following_id ? (

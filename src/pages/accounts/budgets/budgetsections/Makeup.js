@@ -288,7 +288,7 @@ const Makeup = (props) => {
         type="text"
         className={styles.Input}
         name="makeup_dept_head_units_number"
-        value={costume_designer_units_number}
+        value={makeup_dept_head_units_number}
         onChange={handleChange}
             />
     </Form.Group>
@@ -322,7 +322,7 @@ const Makeup = (props) => {
         type="text"
         className={styles.Input}
         name="makeup_dept_head_rate"
-        value={costume_designer_rate}
+        value={makeup_dept_head_rate}
         onChange={handleChange}
             />
     </Form.Group>

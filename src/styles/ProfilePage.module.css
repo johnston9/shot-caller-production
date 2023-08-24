@@ -5,3 +5,24 @@
 .TopBack {
     background-color: #fff;
 }
+
+.Back {
+    background-color: #1ea7ae;
+    color: #000;
+  }
+
+.Back h3 {
+color: #fff;
+}
+
+.Back h4 {
+    color: #fff;
+}
+
+.Back h5 {
+    color: #fff;
+}
+
+i {
+    color: #fff
+}
