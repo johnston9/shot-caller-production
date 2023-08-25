@@ -94,7 +94,7 @@ const Chat = (props) => {
                     <Row>
                     <Col xs={12} md={6}>
                     <span style={{ fontWeight: '700', textTransform: 'capitalize'}} 
-                    className='ml-1 ml-md-3'>{owner} {name} {company} </span>
+                    className='ml-1 ml-md-3'>{name} - {company} </span>
                     </Col>
                     <Col  xs={12} md={6}>
                     <div className={` ${styles.PostBar}`} >
@@ -159,10 +159,12 @@ const Chat = (props) => {
                 <Row className='mb-2'>
                   {/* image */}
                   <Col xs={12} md={{span: 6, offset: 3}} >
-                      {image && <> 
-                          <Card.Img src={image} alt="image"
-                           className={`px-3 ${styles.Image}`} />
-                          </>
+                      {image ? (
+                        <> 
+                        <Card.Img src={image} alt="image"
+                         className={`px-3 ${styles.Image}`} />
+                        </>
+                      ) : ("")
                           }
                   </Col>  
               </Row >

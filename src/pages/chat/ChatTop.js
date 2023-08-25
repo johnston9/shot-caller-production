@@ -94,14 +94,12 @@ const ChatTop = (props) => {
                 <Col xs={8} className='px-0' >
                     <Row>
                     <Col className='text-center px-0' xs={12} lg={6}>
-                    <p style={{textTransform: 'capitalize'}} 
-                    >{name} </p>
-                    <p style={{textTransform: 'capitalize', color:'#fff' }} 
-                    className='d-none d-md-block'
-                    >{company} </p>
+                    <span style={{textTransform: 'capitalize', color:'#fff'}} 
+                    >{name} {company} 
+                     </span>
                     </Col>
                     <Col className='text-center px-0' xs={12} lg={6}>
-                    <div className={`ml-5 ${styles.PostBar}`} >
+                    <div className={` ${styles.PostBar}`} >
                     <span className='mr-2'>{updated_at}</span>
                     {/* like */}
                     {is_owner ? (

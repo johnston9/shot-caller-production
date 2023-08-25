@@ -1501,6 +1501,90 @@ function BudgetEdit() {
   // Transport Labour Total postData 
   const [transportlabourTotal, setTransportlabourTotal] = useState(0);
 
+  // TV SPECIFIC LABOUR ----------------------------------
+
+  // TV Labour postData
+  const [postDataTV, setPostDataTV] = useState({
+    tech_super_qty: 0,
+    tech_super_uno: 0,
+    tech_super_una: "",
+    tech_super_rt: 0,
+    tech_direct_qty: 0,
+    tech_direct_uno: 0,
+    tech_direct_una: "",
+    tech_direct_rt: 0,
+    floor_man_qty: 0,
+    floor_man_uno: 0,
+    floor_man_una: "",
+    floor_man_rt: 0,
+    light_direct_qty: 0,
+    light_direct_uno: 0,
+    light_direct_una: "",
+    light_direct_rt: 0,
+    boardman_qty: 0,
+    boardman_uno: 0,
+    boardman_una: "",
+    boardman_rt: 0,
+    audio_qty: 0,
+    audio_uno: 0,
+    audio_una: "",
+    audio_rt: 0,
+    vtr_operator_qty: 0,
+    vtr_operator_uno: 0,
+    vtr_operator_una: "",
+    vtr_operator_rt: 0,
+    stagehands_qty: 0,
+    stagehands_uno: 0,
+    stagehands_una: "",
+    stagehands_rt: 0,
+    other_tv_qty: 0,
+    other_tv_uno: 0,
+    other_tv_una: "",
+    other_tv_rt: 0,
+  });
+
+  const {tech_super_qty, tech_super_uno, tech_super_una, tech_super_rt,
+    tech_direct_qty, tech_direct_uno, tech_direct_una, tech_direct_rt,
+    floor_man_qty, floor_man_uno, floor_man_una, floor_man_rt, 
+    light_direct_qty, light_direct_uno, light_direct_una, light_direct_rt,
+    boardman_qty, boardman_uno, boardman_una, boardman_rt,
+    audio_qty, audio_uno, audio_una, audio_rt,
+    vtr_operator_qty, vtr_operator_uno, vtr_operator_una, vtr_operator_rt,
+    stagehands_qty, stagehands_uno, stagehands_una, stagehands_rt,
+    other_tv_qty, other_tv_uno, other_tv_una, other_tv_rt,
+  } = postDataTV;
+
+  // Totals
+  // Technical Supervisor Total postData 
+  const [techsuperTotal, setTechsuperTotal] = useState(0);
+
+  // Technical Director Total postData 
+  const [techdirectTotal, setTechdirectTotal] = useState(0);
+
+  // Floor Manager Total postData 
+  const [floormanTotal, setFloormanTotal] = useState(0);
+
+  // Lighting Director Total postData 
+  const [lightdirectTotal, setLightdirectTotal] = useState(0);
+
+  // Boardman Total postData 
+  const [boardmanTotal, setBoardmanTotal] = useState(0);
+
+  // Audio Total postData 
+  const [audioTotal, setAudioTotal] = useState(0);
+
+  // Audio Total postData 
+  const [vtroperatorTotal, setVtroperatorTotal] = useState(0);
+
+  // Stagehands Total postData 
+  const [stagehandsTotal, setStagehandsTotal] = useState(0);
+
+  // Other TV Roles Total postData 
+  const [othertvTotal, setOthertvTotal] = useState(0);
+
+  // TV Specific Labour Total postData 
+  const [tvspecificlabourTotal, setTvspecificlabourTotal] = useState(0);
+
 
   // end below B
 
@@ -1569,7 +1653,20 @@ function BudgetEdit() {
     const addbelowB = () => {
       setBelowTheLineBTotal(
         parseFloat(castTotal || 0) +
-        parseFloat(productionstaffTotal || 0) 
+        parseFloat(productionstaffTotal || 0) +
+        parseFloat(designlabourTotal || 0) +
+        parseFloat(constructionlabourTotal || 0) +
+        parseFloat(dressinglabourTotal || 0) +
+        parseFloat(propertylabourTotal || 0) +
+        parseFloat(wranglerlabourTotal || 0) +
+        parseFloat(fxlabourTotal || 0) +
+        parseFloat(wardrobelabourTotal || 0) +
+        parseFloat(makeuplabourTotal || 0) +
+        parseFloat(cameralabourTotal || 0) +
+        parseFloat(electriclabourTotal || 0) +
+        parseFloat(griplabourTotal || 0) +
+        parseFloat(soundlabourTotal || 0) +
+        parseFloat(transportlabourTotal || 0) 
         )
       }
     const timer = setTimeout(() => {
@@ -1579,7 +1676,10 @@ function BudgetEdit() {
     return () => {
       clearTimeout(timer);
     };
-  }, [castTotal, productionstaffTotal, 
+  }, [castTotal, productionstaffTotal, designlabourTotal, constructionlabourTotal,
+    dressinglabourTotal, propertylabourTotal, wranglerlabourTotal, fxlabourTotal,
+    wardrobelabourTotal, makeuplabourTotal, cameralabourTotal, electriclabourTotal,
+    griplabourTotal, soundlabourTotal, transportlabourTotal,
   ]);
 
   // Below the line input box
@@ -3013,6 +3113,7 @@ function BudgetEdit() {
     </Row>
     {/* sections below B click buttons */}
     <Row className={`${styles.ButtonLine} mx-1`}>
+    {/* Cast */}
     <Col md={3} className='px-0 mx-0'>
     <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
     <Row>
@@ -3027,6 +3128,7 @@ function BudgetEdit() {
     </Row>
     </div>
     </Col>
+    {/* Production Staff */}
     <Col md={3} className='px-0 mx-0'>
     <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
     <Row>
@@ -3041,6 +3143,7 @@ function BudgetEdit() {
     </Row>
     </div>
     </Col>
+    {/* Design */}
     <Col md={3} className='px-0 mx-0'>
     <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
     <Row>
@@ -3055,6 +3158,7 @@ function BudgetEdit() {
     </Row>
     </div>
     </Col>
+    {/* Construction */}
     <Col md={3} className='px-0 mx-0'>
     <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
     <Row>
@@ -3069,6 +3173,7 @@ function BudgetEdit() {
     </Row>
     </div>
     </Col>
+    {/* Dressing */}
     <Col md={3} className='px-0 mx-0'>
     <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
     <Row>
@@ -3083,6 +3188,7 @@ function BudgetEdit() {
     </Row>
     </div>
     </Col>
+    {/* FX */}
     <Col md={3} className='px-0 mx-0'>
     <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
     <Row>
@@ -3112,6 +3218,7 @@ function BudgetEdit() {
     </Row>
     </div>
     </Col>
+    {/* Wrangling */}
     <Col md={3} className='px-0 mx-0'>
     <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
     <Row>
@@ -3122,20 +3229,6 @@ function BudgetEdit() {
     </Col>
     <Col md={4}>
     <p className="mb-0">{wranglerlabourTotal} </p>
-    </Col>
-    </Row>
-    </div>
-    </Col>
-    <Col md={3} className='px-0 mx-0'>
-    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
-    <Row>
-    <Col md={8}>
-    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
-          onClick={() => setShowFx(showFx => !showFx)} >FX Labour
-    </p>
-    </Col>
-    <Col md={4}>
-    <p className="mb-0">{fxlabourTotal} </p>
     </Col>
     </Row>
     </div>
@@ -3155,6 +3248,7 @@ function BudgetEdit() {
     </Row>
     </div>
     </Col>
+    {/* Makeup */}
     <Col md={3} className='px-0 mx-0'>
     <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
     <Row>
@@ -3169,6 +3263,7 @@ function BudgetEdit() {
     </Row>
     </div>
     </Col>
+    {/* Camera */}
     <Col md={3} className='px-0 mx-0'>
     <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
     <Row>
@@ -3198,6 +3293,7 @@ function BudgetEdit() {
     </Row>
     </div>
     </Col>
+    {/* grip */}
     <Col md={3} className='px-0 mx-0'>
     <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
     <Row>
@@ -3212,12 +3308,13 @@ function BudgetEdit() {
     </Row>
     </div>
     </Col>
+    {/* Sound */}
     <Col md={3} className='px-0 mx-0'>
     <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
     <Row>
     <Col md={8}>
     <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
-          onClick={() => setShowSound(showSound => !showSound)} >Production Sound Labour
+          onClick={() => setShowSound(showSound => !showSound)} >Production Sound
     </p>
     </Col>
     <Col md={4}>
@@ -3226,12 +3323,13 @@ function BudgetEdit() {
     </Row>
     </div>
     </Col>
+    {/* Transportation */}
     <Col md={3} className='px-0 mx-0'>
     <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
     <Row>
     <Col md={8}>
     <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
-          onClick={() => setShowTport(showTport => !showTport)} >Transportation Labour
+          onClick={() => setShowTport(showTport => !showTport)} >Transportation
     </p>
     </Col>
     <Col md={4}>
@@ -3472,6 +3570,23 @@ function BudgetEdit() {
       setDressinglabourTotal={setDressinglabourTotal}
       setShow={setShowDress}  /> 
     ) }
+    {/* fx */}
+    {!showFx ? (
+      ""
+    ) : (
+      <SpecialEffects
+      postDataSpecialEffects={postDataSpecialEffects}
+      setPostDataSpecialEffects={setPostDataSpecialEffects}
+      fxsupervisorTotal={fxsupervisorTotal}
+      setFxsupervisorTotal={setFxsupervisorTotal}
+      assistfxTotal={assistfxTotal}
+      setAssistfxTotal={setAssistfxTotal}
+      otherfxlabourTotal={otherfxlabourTotal}
+      setOtherfxlabourTotal={setOtherfxlabourTotal}
+      fxlabourTotal={fxlabourTotal}
+      setFxlabourTotal={setFxlabourTotal}
+      setShow={setShowFx}  /> 
+    ) }
     {/* property */}
     {!showProps ? (
       ""
@@ -3507,23 +3622,6 @@ function BudgetEdit() {
       wranglerlabourTotal={wranglerlabourTotal}
       setWranglerlabourTotal={setWranglerlabourTotal}
       setShow={setShowWrang}  /> 
-    ) }
-    {/* fx */}
-    {!showFx ? (
-      ""
-    ) : (
-      <SpecialEffects
-      postDataSpecialEffects={postDataSpecialEffects}
-      setPostDataSpecialEffects={setPostDataSpecialEffects}
-      fxsupervisorTotal={fxsupervisorTotal}
-      setFxsupervisorTotal={setFxsupervisorTotal}
-      assistfxTotal={assistfxTotal}
-      setAssistfxTotal={setAssistfxTotal}
-      otherfxlabourTotal={otherfxlabourTotal}
-      setOtherfxlabourTotal={setOtherfxlabourTotal}
-      fxlabourTotal={fxlabourTotal}
-      setFxlabourTotal={setFxlabourTotal}
-      setShow={setShowFx}  /> 
     ) }
     {/* wardrobe */}
     {!showWardrobe ? (

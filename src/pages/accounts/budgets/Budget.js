@@ -275,6 +275,14 @@ const Budget = (props) => {
     other_sound_labour_una, other_sound_labour_rt,
     soundmixer_total, boomoperator_total, cablewrangler_total,
     othersoundlabour_total, soundlabour_total,
+    // transport
+    tp_coordinator_qty, tp_coordinator_uno, tp_coordinator_una, tp_coordinator_rt,
+    tp_captain_qty,tp_captain_uno, tp_captain_una, tp_captain_rt,
+    tp_manager_qty, tp_manager_uno, tp_manager_una, tp_manager_rt,
+    head_driver_qty, head_driver_uno, head_driver_una, head_driver_rt,
+    drivers_qty, drivers_uno, drivers_una, drivers_rt,
+    tpcoordinator_total, tpcaptain_total, tpmanager_total,
+    headdriver_total, drivers_total, transportlabour_total,
 
     } = budget;
 
@@ -480,7 +488,7 @@ const Budget = (props) => {
     <h5 className={ `${styles.BoldBlack}`}>ABOVE THE LINE</h5>
     </Col>
     </Row>
-    {/* RIGHTS ------------------------------------------- */}
+    {/* RIGHTS --------------------------------------- ------ */}
     <div>
     <Row>
     <Col md={1}>
@@ -548,7 +556,7 @@ const Budget = (props) => {
     </Col>
     </Row>
     </div>
-    {/* DEVELOPMENT -------------------------------------- */}
+    {/* DEVELOPMENT --------------------------------- ------- */}
     <div className='mt-5'>
     <Row>
     <Col md={1}>
@@ -2524,7 +2532,7 @@ const Budget = (props) => {
     </Col>
     </Row>
     </div>
-    {/* PROPERTY LABOUR ------------------------------------- */}
+    {/* PROPERTY LABOUR -------------------------------------- */}
     <div className='mt-5'>
     <Row>
     <Col xs={1}>
@@ -2804,7 +2812,7 @@ const Budget = (props) => {
     </Col>
     </Row>
     </div>
-    {/* FX LABOUR ------------------------------------------- */}
+    {/* FX LABOUR -------------------------------------------- */}
     <div className='mt-5'>
     <Row>
     <Col xs={1}>
@@ -2926,7 +2934,7 @@ const Budget = (props) => {
     </Col>
     </Row>
     </div>
-    {/* WARDROBE LABOUR ------------------------------------- */}
+    {/* WARDROBE LABOUR -------------------------------------- */}
     <div className='mt-5'>
     <Row>
     <Col xs={1}>
@@ -3120,7 +3128,7 @@ const Budget = (props) => {
     </Col>
     </Row>
     </div>
-    {/* MAKEUP LABOUR ------------------------------------- */}
+    {/* MAKEUP LABOUR ---------------------------------------- */}
     <div className='mt-5'>
     <Row>
     <Col xs={1}>
@@ -3362,7 +3370,7 @@ const Budget = (props) => {
     </Col>
     </Row>
     </div>
-    {/* CAMERA -------------------------------------------- */}
+    {/* CAMERA ----------------------------------------------- */}
     <div className='mt-5'>
     <Row>
     <Col xs={1}>
@@ -3652,7 +3660,7 @@ const Budget = (props) => {
     </Col>
     </Row>
     </div>
-    {/* ELECTRICAL ---------------------------------------- */}
+    {/* ELECTRICAL ------------------------------------------- */}
     <div className='mt-5'>
     <Row>
     <Col xs={1}>
@@ -3846,7 +3854,7 @@ const Budget = (props) => {
     </Col>
     </Row>
     </div>
-    {/* GRIP ---------------------------------------------- */}
+    {/* GRIP ------------------------------------------------- */}
     <div className='mt-5'>
     <Row>
     <Col xs={1}>
@@ -4064,7 +4072,7 @@ const Budget = (props) => {
     </Col>
     </Row>
     </div>
-    {/* SOUND --------------------------------------------- */}
+    {/* SOUND ------------------------------------------------ */}
     <div className='mt-5'>
     <Row>
     <Col xs={1}>
@@ -4210,7 +4218,177 @@ const Budget = (props) => {
     </Col>
     </Row>
     </div>
+    {/* TRANSPORTATION --------------------------------------- */}
+    <div className='mt-5'>
+    <Row>
+    <Col xs={1}>
+    <p className='mb-2'>20.00</p>
+    </Col>
+    <Col xs={10}>
+    <p className={ `${styles.BoldBlack} mb-2`}>TRANSPORTATION LABOUR</p>
+    </Col>
+    </Row>
+    {/* Titles */}
+    <Row className={ `${styles.Overview} mb-2 py-1`} >
+    <Col md={1} >
+    <p className="mb-0">ACCT</p>
+    </Col>
+    <Col md={5} >
+    <p className="mb-0">Description</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">#</p>
+    </Col>
+    <Col className="px-0 mx-0" md={1} >
+    <p># Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Price</p>
+    </Col>
+    <Col md={2} >
+    <p className="mb-0">Total</p>
+    </Col>
+    </Row>
+    {/* Transport Coordinator */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>20.10</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Transport Coordinator</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{tp_coordinator_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{tp_coordinator_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{tp_coordinator_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{tp_coordinator_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{tpcoordinator_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Transport Captain */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>20.20</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Transport Captain</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{tp_captain_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{tp_captain_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{tp_captain_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{tp_captain_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{tpcaptain_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Transport Manager */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>20.30</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Transport Manager</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{tp_manager_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{tp_manager_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{tp_manager_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{tp_manager_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{tpmanager_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Head Driver */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>20.40</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Head Driver</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{head_driver_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{head_driver_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{head_driver_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{head_driver_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{headdriver_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Drivers */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>20.50</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Drivers</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{drivers_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{drivers_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{drivers_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{drivers_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{drivers_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Transport Total */}
+    <Row className='mt-3' >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    <p></p>
+    </Col>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL TRANSPORTATION LABOUR </p>
+    </Col>
+    <Col md={3} >
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline} mb-0`}>{transportlabour_total || 0}</p>
+    </Col>
+    </Row>
 
+    </div>
     {/* END PRODUCTION B */}
     </div>
     </div>
