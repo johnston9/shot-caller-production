@@ -31,7 +31,7 @@ const Transport = (props) => {
         ...postDataTransport,
         [event.target.name]: parseFloat(event.target.value || 0 ),
         });
-      }; 
+    }; 
   
     // handleChange Text 
     const handleChangeText = (event) => {
@@ -39,7 +39,7 @@ const Transport = (props) => {
         ...postDataTransport,
         [event.target.name]: event.target.value,
         });
-        };
+    };
 
     // Calculate Functions
     // function to calculate Transport Coordinator on change

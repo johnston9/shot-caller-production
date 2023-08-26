@@ -283,6 +283,19 @@ const Budget = (props) => {
     drivers_qty, drivers_uno, drivers_una, drivers_rt,
     tpcoordinator_total, tpcaptain_total, tpmanager_total,
     headdriver_total, drivers_total, transportlabour_total,
+    // TV
+    tech_super_qty, tech_super_uno, tech_super_una, tech_super_rt,
+    tech_direct_qty, tech_direct_uno, tech_direct_una, tech_direct_rt,
+    floor_man_qty, floor_man_uno, floor_man_una, floor_man_rt, 
+    light_direct_qty, light_direct_uno, light_direct_una, light_direct_rt,
+    boardman_qty, boardman_uno, boardman_una, boardman_rt,
+    audio_qty, audio_uno, audio_una, audio_rt,
+    vtr_operator_qty, vtr_operator_uno, vtr_operator_una, vtr_operator_rt,
+    stagehands_qty, stagehands_uno, stagehands_una, stagehands_rt,
+    other_tv_qty, other_tv_uno, other_tv_una, other_tv_rt,
+    techsuper_total, techdirect_total, floorman_total, lightdirect_total,
+    boardman_total, audio_total, vtroperator_total, stagehands_total,
+    othertv_total, tvspecificlabour_total,
 
     } = budget;
 
@@ -4388,6 +4401,65 @@ const Budget = (props) => {
     </Col>
     </Row>
 
+    </div>
+    {/* TV SPECIFIC ------------------------------------------ */}
+    <div className='mt-5'>
+    <Row>
+    <Col xs={1}>
+    <p className='mb-2'>21.00</p>
+    </Col>
+    <Col xs={10}>
+    <p className={ `${styles.BoldBlack} mb-2`}>TV SPECIFIC LABOUR</p>
+    </Col>
+    </Row>
+    {/* Titles */}
+    <Row className={ `${styles.Overview} mb-2 py-1`} >
+    <Col md={1} >
+    <p className="mb-0">ACCT</p>
+    </Col>
+    <Col md={5} >
+    <p className="mb-0">Description</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">#</p>
+    </Col>
+    <Col className="px-0 mx-0" md={1} >
+    <p># Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Price</p>
+    </Col>
+    <Col md={2} >
+    <p className="mb-0">Total</p>
+    </Col>
+    </Row>
+    {/* Technical Supervisor */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>21.10</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Technical Supervisor</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{tech_super_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{tech_super_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{tech_super_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{tech_super_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{techsuper_total || 0}</p>
+    </Col>
+    </Row>
     </div>
     {/* END PRODUCTION B */}
     </div>

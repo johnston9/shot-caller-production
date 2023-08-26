@@ -30,6 +30,7 @@ import Electric from "./budgetsections/Electric";
 import Grip from "./budgetsections/Grip";
 import Sound from "./budgetsections/Sound";
 import Transport from "./budgetsections/Transport";
+import TV from "./budgetsections/TV";
 
 function BudgetCreate() {
   const [errors, setErrors] = useState({});
@@ -57,6 +58,7 @@ function BudgetCreate() {
   const [showGrip, setShowGrip] = useState(false);
   const [showSound, setShowSound] = useState(false);
   const [showTport, setShowTport] = useState(false);
+  const [showTV, setShowTV] = useState(false);
 
   // INFO / LENGTH -------------------------
   // Info postData 
@@ -1553,13 +1555,13 @@ function BudgetCreate() {
   // Audio Total postData 
   const [audioTotal, setAudioTotal] = useState(0);
 
-  // Audio Total postData 
+  // VRT Operator Total postData 
   const [vtroperatorTotal, setVtroperatorTotal] = useState(0);
 
   // Stagehands Total postData 
   const [stagehandsTotal, setStagehandsTotal] = useState(0);
 
-  // Other TV Roles Total postData 
+  // Other TV Labour Total postData 
   const [othertvTotal, setOthertvTotal] = useState(0);
 
   // TV Specific Labour Total postData 
@@ -1646,7 +1648,8 @@ function BudgetCreate() {
         parseFloat(electriclabourTotal || 0) +
         parseFloat(griplabourTotal || 0) +
         parseFloat(soundlabourTotal || 0) +
-        parseFloat(transportlabourTotal || 0) 
+        parseFloat(transportlabourTotal || 0) +
+        parseFloat(tvspecificlabourTotal || 0)
         )
       }
     const timer = setTimeout(() => {
@@ -1659,7 +1662,7 @@ function BudgetCreate() {
   }, [castTotal, productionstaffTotal, designlabourTotal, constructionlabourTotal,
     dressinglabourTotal, propertylabourTotal, wranglerlabourTotal, fxlabourTotal,
     wardrobelabourTotal, makeuplabourTotal, cameralabourTotal, electriclabourTotal,
-    griplabourTotal, soundlabourTotal, transportlabourTotal,
+    griplabourTotal, soundlabourTotal, transportlabourTotal, tvspecificlabourTotal,
   ]);
 
   // Below the line input box
@@ -2405,6 +2408,53 @@ function BudgetCreate() {
     formData.append("headdriver_total", headdriverTotal);
     formData.append("drivers_total", driversTotal);
     formData.append("transportlabour_total", transportlabourTotal);
+    // TV
+    formData.append("tech_super_qty", tech_super_qty);
+    formData.append("tech_super_uno", tech_super_uno);
+    formData.append("tech_super_una", tech_super_una);
+    formData.append("tech_super_rt", tech_super_rt);
+    formData.append("tech_direct_qty", tech_direct_qty);
+    formData.append("tech_direct_uno", tech_direct_uno);
+    formData.append("tech_direct_una", tech_direct_una);
+    formData.append("tech_direct_rt", tech_direct_rt);
+    formData.append("floor_man_qty", floor_man_qty);
+    formData.append("floor_man_uno", floor_man_uno);
+    formData.append("floor_man_una", floor_man_una);
+    formData.append("floor_man_rt", floor_man_rt);
+    formData.append("light_direct_qty", light_direct_qty);
+    formData.append("light_direct_uno", light_direct_uno);
+    formData.append("light_direct_una", light_direct_una);
+    formData.append("light_direct_rt", light_direct_rt);
+    formData.append("boardman_qty", boardman_qty);
+    formData.append("boardman_uno", boardman_uno);
+    formData.append("boardman_una", boardman_una);
+    formData.append("boardman_rt", boardman_rt);
+    formData.append("audio_qty", audio_qty);
+    formData.append("audio_uno", audio_uno);
+    formData.append("audio_una", audio_una);
+    formData.append("audio_rt", audio_rt);
+    formData.append("vtr_operator_qty", vtr_operator_qty);
+    formData.append("vtr_operator_uno", vtr_operator_uno);
+    formData.append("vtr_operator_una", vtr_operator_una);
+    formData.append("vtr_operator_rt", vtr_operator_rt);
+    formData.append("stagehands_qty", stagehands_qty);
+    formData.append("stagehands_uno", stagehands_uno);
+    formData.append("stagehands_una", stagehands_una);
+    formData.append("stagehands_rt", stagehands_rt);
+    formData.append("other_tv_qty", other_tv_qty);
+    formData.append("other_tv_uno", other_tv_uno);
+    formData.append("other_tv_una", other_tv_una);
+    formData.append("other_tv_rt", other_tv_rt);
+    formData.append("techsuper_total", techsuperTotal);
+    formData.append("techdirect_total", techdirectTotal);
+    formData.append("floorman_total", floormanTotal);
+    formData.append("lightdirect_total", lightdirectTotal);
+    formData.append("boardman_total", boardmanTotal);
+    formData.append("audio_total", audioTotal);
+    formData.append("vtroperator_total", vtroperatorTotal);
+    formData.append("stagehands_total", stagehandsTotal);
+    formData.append("othertv_total", othertvTotal);
+    formData.append("tvspecificlabour_total", tvspecificlabourTotal);
     // formData.append("stars", stars);
 
     try {
@@ -2766,6 +2816,21 @@ function BudgetCreate() {
     </Col>
     <Col md={4}>
     <p className="mb-0">{transportlabourTotal} </p>
+    </Col>
+    </Row>
+    </div>
+    </Col>
+    {/* TV */}
+    <Col md={3} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
+    <Row>
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
+          onClick={() => setShowTV(showTV => !showTV)} >TV Specific Labour
+    </p>
+    </Col>
+    <Col md={4}>
+    <p className="mb-0">{tvspecificlabourTotal} </p>
     </Col>
     </Row>
     </div>
@@ -3223,6 +3288,35 @@ function BudgetCreate() {
       transportlabourTotal={transportlabourTotal}
       setTransportlabourTotal={setTransportlabourTotal}
       setShow={setShowTport}  /> 
+    ) }
+    {/* TV */}
+    {!showTV ? (
+      ""
+    ) : (
+      <TV
+      postDataTV={postDataTV}
+      setPostDataTV={setPostDataTV}
+      techsuperTotal={techsuperTotal}
+      setTechsuperTotal={setTechsuperTotal}
+      techdirectTotal={techdirectTotal}
+      setTechdirectTotal={setTechdirectTotal}
+      floormanTotal={floormanTotal}
+      setFloormanTotal={setFloormanTotal}
+      lightdirectTotal={lightdirectTotal}
+      setLightdirectTotal={setLightdirectTotal}
+      boardmanTotal={boardmanTotal}
+      setBoardmanTotal={setBoardmanTotal}
+      audioTotal={audioTotal}
+      setAudioTotal={setAudioTotal}
+      vtroperatorTotal={vtroperatorTotal}
+      setVtroperatorTotal={setVtroperatorTotal}
+      stagehandsTotal={stagehandsTotal}
+      setStagehandsTotal={setStagehandsTotal}
+      othertvTotal={othertvTotal}
+      setOthertvTotal={setOthertvTotal}
+      tvspecificlabourTotal={tvspecificlabourTotal}
+      setTvspecificlabourTotal={setTvspecificlabourTotal}
+      setShow={setShowTV}  /> 
     ) }
     {/* buttons */}
     <Row>
