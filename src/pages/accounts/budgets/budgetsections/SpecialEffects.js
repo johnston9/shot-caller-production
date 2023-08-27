@@ -22,7 +22,7 @@ const SpecialEffects = (props) => {
         assist_fx_units_name, assist_fx_rate,
         other_fx_labour_quantity, other_fx_labour_units_number,
         other_fx_labour_units_name, other_fx_labour_rate,
-        } = postDataSpecialEffects;
+        fringes_taxes_fx,} = postDataSpecialEffects;
     
     // handleChange 
     const handleChange = (event) => {
@@ -98,6 +98,7 @@ const SpecialEffects = (props) => {
         setFxlabourTotal(
         parseFloat(fxsupervisorTotal || 0) +
         parseFloat(assistfxTotal || 0) +
+        parseFloat(fringes_taxes_fx || 0) +
         parseFloat(otherfxlabourTotal || 0)
         )
         }
@@ -110,7 +111,7 @@ const SpecialEffects = (props) => {
         };
 
         }, [fxsupervisorTotal, assistfxTotal, 
-            otherfxlabourTotal]);
+            otherfxlabourTotal, fringes_taxes_fx]);
 
   return (
     <div className="mt-5">
@@ -426,6 +427,41 @@ const SpecialEffects = (props) => {
             />
     </Form.Group>
     {errors?.otherfxlabourTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Fringes and Taxes */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>13.40</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Fringes and Taxes</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>%</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="fringes_taxes_fx" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="fringes_taxes_fx"
+        value={fringes_taxes_fx}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.fringes_taxes_fx?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>

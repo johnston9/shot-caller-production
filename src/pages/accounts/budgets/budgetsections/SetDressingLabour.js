@@ -22,7 +22,8 @@ const SetDressingLabour = (props) => {
         setShow} = props;
 
     // Set Dressing Labour values
-    const {set_decorator_quantity, set_decorator_units_number,
+    const {fringes_taxes_dressing,
+        set_decorator_quantity, set_decorator_units_number,
         set_decorator_units_name, set_decorator_rate,
         assist_set_decorator_quantity, assist_set_decorator_units_number,
         assist_set_decorator_units_name, assist_set_decorator_rate,
@@ -166,6 +167,7 @@ const SetDressingLabour = (props) => {
         parseFloat(dressersTotal || 0) +
         parseFloat(swinggangTotal || 0) +
         parseFloat(dressingbuyerTotal || 0) +
+        parseFloat(fringes_taxes_dressing || 0) +
         parseFloat(other_set_dressing || 0) 
         )
         }
@@ -179,7 +181,7 @@ const SetDressingLabour = (props) => {
 
         }, [decoratorsetTotal, assistdecoratorsetTotal, leadmanTotal,
             dressersTotal, swinggangTotal, dressingbuyerTotal,
-            other_set_dressing]);
+            other_set_dressing, fringes_taxes_dressing,]);
 
   return (
     <div className="mt-5">
@@ -809,6 +811,41 @@ const SetDressingLabour = (props) => {
             />
     </Form.Group>
     {errors?.other_set_dressing?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Fringes and Taxes */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>10.80</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Fringes and Taxes</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>%</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="fringes_taxes_dressing" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="fringes_taxes_dressing"
+        value={fringes_taxes_dressing}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.fringes_taxes_dressing?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>

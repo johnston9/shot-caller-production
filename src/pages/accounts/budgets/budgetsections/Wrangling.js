@@ -16,7 +16,8 @@ const Wrangling = (props) => {
            wranglerlabourTotal, setWranglerlabourTotal,
            setShow} = props;
 
-    const {head_wrangler_quantity, head_wrangler_units_number,
+    const {fringes_taxes_wrangling,
+        head_wrangler_quantity, head_wrangler_units_number,
         head_wrangler_units_name, head_wrangler_rate,
         other_wrangling_labour_quantity, other_wrangling_labour_units_number,
         other_wrangling_labour_units_name, 
@@ -78,6 +79,7 @@ const Wrangling = (props) => {
         const addWraLab = () => {
         setWranglerlabourTotal(
         parseFloat(headwranglerTotal || 0) +
+        parseFloat(fringes_taxes_wrangling || 0) +
         parseFloat(otherwranglinglabourTotal || 0)
         )
         }
@@ -89,7 +91,8 @@ const Wrangling = (props) => {
         clearTimeout(timer);
         };
 
-        }, [headwranglerTotal, otherwranglinglabourTotal]);
+        }, [headwranglerTotal, otherwranglinglabourTotal,
+            fringes_taxes_wrangling,]);
 
   return (
     <div className="mt-5">
@@ -311,6 +314,41 @@ const Wrangling = (props) => {
             />
     </Form.Group>
     {errors?.otherwranglinglabourTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Fringes and Taxes */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>12.30</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Fringes and Taxes</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>%</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="fringes_taxes_wrangling" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="fringes_taxes_wrangling"
+        value={fringes_taxes_wrangling}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.fringes_taxes_wrangling?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>

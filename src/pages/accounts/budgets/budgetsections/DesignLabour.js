@@ -18,7 +18,8 @@ const DesignLabour = (props) => {
         graphicartistsTotal, setGraphicartistsTotal,
         designlabourTotal, setDesignlabourTotal} = props;
     
-    const {production_designer_quantity, production_designer_units_number,
+    const {fringes_taxes_design,
+        production_designer_quantity, production_designer_units_number,
         production_designer_units_name, production_designer_rate,
         art_director_quantity, art_director_units_number,
         art_director_units_name, art_director_rate,
@@ -141,6 +142,7 @@ useEffect(() => {
       parseFloat(artassistantsTotal || 0) +
       parseFloat(productionassistantstraineesTotal || 0) +
       parseFloat(graphicartistsTotal || 0) +
+      parseFloat(fringes_taxes_design || 0) +
       parseFloat(other_design || 0)
       )
     }
@@ -152,7 +154,8 @@ useEffect(() => {
       clearTimeout(timer);
     };
   }, [other_design, graphicartistsTotal, productionassistantstraineesTotal,
-    artassistantsTotal, artdirectorTotal, productiondesignerTotal]);
+    artassistantsTotal, artdirectorTotal, productiondesignerTotal,
+    fringes_taxes_design,]);
 
   return (
     <div className="mt-5">
@@ -571,7 +574,7 @@ useEffect(() => {
     {/* Graphic Artists */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>08.85</p>
+    <p className={`${styles.Underline}`}>08.50</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>Graphic Artists</p>
@@ -688,6 +691,41 @@ useEffect(() => {
             />
     </Form.Group>
     {errors?.other_design?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Fringes and Taxes */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>08.70</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Fringes and Taxes</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>%</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="fringes_taxes_design" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="fringes_taxes_design"
+        value={fringes_taxes_design}
+        onChange={handleChangeDesign}
+            />
+    </Form.Group>
+    {errors?.fringes_taxes_design?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>

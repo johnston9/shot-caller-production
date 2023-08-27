@@ -77,7 +77,7 @@ const Budget = (props) => {
     casting_director, extras_casting,
     other_cast, fringes_taxes_cast, rights_payments_cast, cast_total,
     // production staff
-    production_manager_quantity,
+    fringes_taxes_production, production_manager_quantity,
     production_manager_units_number, production_manager_units_name,
     production_manager_rate, production_supervisor_quantity,
     production_supervisor_units_number, production_supervisor_units_name,
@@ -120,6 +120,7 @@ const Budget = (props) => {
     assistantdirector1st_total, assistantdirector2nd_total,
     assistantdirector3rd_total, craftservices_total, productionstaff_total,
     // design
+    fringes_taxes_design,
     production_designer_quantity, production_designer_units_number,
     production_designer_units_name, production_designer_rate,
     art_director_quantity, art_director_units_number,
@@ -133,6 +134,7 @@ const Budget = (props) => {
     productiondesigner_total, artdirector_total, artassistants_total,
     productionassistantstrainees_total, graphicartists_total, designlabour_total,
     // construction
+    fringes_taxes_construction,
     constructioncoordinator_quantity, constructioncoordinator_units_number,
     constructioncoordinator_units_name, constructioncoordinator_rate,
     headcarpenter_quantity, headcarpenter_units_number,
@@ -152,6 +154,7 @@ const Budget = (props) => {
     headpainter_total, painters_total, labourers_total,
     constructionlabour_total,
     // dressing
+    fringes_taxes_dressing,
     set_decorator_quantity, set_decorator_units_number,
     set_decorator_units_name, set_decorator_rate,
     assist_set_decorator_quantity, assist_set_decorator_units_number,
@@ -167,6 +170,8 @@ const Budget = (props) => {
     other_set_dressing, decoratorset_total, assistdecoratorset_total,
     leadman_total, dressers_total, swinggang_total,
     dressingbuyer_total, dressinglabour_total,
+    // dressing
+    fringes_taxes_property,
     property_master_quantity, property_master_units_number,
     property_master_units_name, property_master_rate,
     assist_property_master_quantity, assist_property_master_units_number,
@@ -185,7 +190,7 @@ const Budget = (props) => {
     other_wrangling_labour_quantity, other_wrangling_labour_units_number,
     other_wrangling_labour_units_name, other_wrangling_labour_rate,
     headwrangler_total, otherwranglinglabour_total,
-    wranglerlabour_total,
+    wranglerlabour_total, fringes_taxes_wrangling,
     // FX
     fx_supervisor_quantity, fx_supervisor_units_number,
     fx_supervisor_units_name, fx_supervisor_rate,
@@ -194,7 +199,7 @@ const Budget = (props) => {
     other_fx_labour_quantity, other_fx_labour_units_number,
     other_fx_labour_units_name, other_fx_labour_rate,
     fxsupervisor_total, assistfx_total,
-    otherfxlabour_total, fxlabour_total,
+    otherfxlabour_total, fxlabour_total, fringes_taxes_fx,
     // Wardrobe
     costume_designer_quantity, costume_designer_units_number,
     costume_designer_units_name, costume_designer_rate,
@@ -210,8 +215,9 @@ const Budget = (props) => {
     other_wardrobe_labour_units_name, other_wardrobe_labour_rate,
     costumedesigner_total, assistcosdesigner_total, headwardrobe_total,
     wardrobeassist_total, truckcostumer_total, otherwardrobe_total,
-    wardrobelabour_total,
+    wardrobelabour_total, fringes_taxes_wardrobe,
     // Makeup
+    fringes_taxes_makeup,
     makeup_dept_head_quantity, makeup_dept_head_units_number,
     makeup_dept_head_units_name, makeup_dept_head_rate,
     key_makeup_quantity, key_makeup_units_number,
@@ -244,8 +250,9 @@ const Budget = (props) => {
     stills_qty, stills_uno, stills_una, stills_rt,
     stills_total, dop_total, cameraop_total, camac1_total, camac2_total,
     dit_total, steadicam_total, campa_total, dronepilot_total,
-    othercam_total, cameralabour_total,
+    othercam_total, cameralabour_total, fringes_taxes_camera,
     // electric
+    fringes_taxes_electric,
     gaffer_qty, gaffer_uno, gaffer_una, gaffer_rt,
     best_boy_qty, best_boy_uno, best_boy_una, best_boy_rt,
     electrician_qty, electrician_uno, electrician_una, electrician_rt,
@@ -255,6 +262,7 @@ const Budget = (props) => {
     gaffer_total, bestboy_total, electrician_total, dailieselec_total,
     generatorop_total, otherelectric_total, electriclabour_total,
     // grip
+    fringes_taxes_grip,
     key_grip_qty, key_grip_uno, key_grip_una, key_grip_rt,
     best_boy_grip_qty, best_boy_grip_uno, best_boy_grip_una, best_boy_grip_rt,
     grips_qty, grips_uno, grips_una, grips_rt,
@@ -265,6 +273,7 @@ const Budget = (props) => {
     keygrip_total, bestboygrip_total, grips_total, dailiesgrip_total,
     dollycranegrip_total, swinggrips_total, othergriplabour_total, griplabour_total,
     // sound
+    fringes_taxes_sound,
     sound_mixer_qty, sound_mixer_uno,
     sound_mixer_una, sound_mixer_rt,
     boom_operator_qty, boom_operator_uno,
@@ -276,6 +285,7 @@ const Budget = (props) => {
     soundmixer_total, boomoperator_total, cablewrangler_total,
     othersoundlabour_total, soundlabour_total,
     // transport
+    fringes_taxes_transport,
     tp_coordinator_qty, tp_coordinator_uno, tp_coordinator_una, tp_coordinator_rt,
     tp_captain_qty,tp_captain_uno, tp_captain_una, tp_captain_rt,
     tp_manager_qty, tp_manager_uno, tp_manager_una, tp_manager_rt,
@@ -284,6 +294,7 @@ const Budget = (props) => {
     tpcoordinator_total, tpcaptain_total, tpmanager_total,
     headdriver_total, drivers_total, transportlabour_total,
     // TV
+    fringes_taxes_tv,
     tech_super_qty, tech_super_uno, tech_super_una, tech_super_rt,
     tech_direct_qty, tech_direct_uno, tech_direct_una, tech_direct_rt,
     floor_man_qty, floor_man_uno, floor_man_una, floor_man_rt, 
@@ -1410,7 +1421,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>06.91</p>
     </Col>
     <Col md={9}>
-    <p className={`${styles.Underline}`}>Fringes and Taxes - Cast</p>
+    <p className={`${styles.Underline}`}>Fringes and Taxes, Government/Unions</p>
     </Col>
     <Col md={2}>
     <p className={`${styles.Underline}`}>{fringes_taxes_cast || 0} </p>
@@ -1911,6 +1922,18 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{craftservices_total || 0}</p>
     </Col>
     </Row>
+    {/* Fringes Taxes */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>07.991</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Fringes and Taxes, Government/Unions</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{fringes_taxes_production || 0} </p>
+    </Col>
+    </Row>
     {/* Production Staff Total */}
     <Row className='mt-3' >
     <Col md={1} >
@@ -2091,6 +2114,18 @@ const Budget = (props) => {
     </Col>
     <Col md={2}>
     <p className={`${styles.Underline}`}>{other_design || 0} </p>
+    </Col>
+    </Row>
+    {/* Fringes Taxes */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>08.70</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Fringes and Taxes, Government/Unions</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{fringes_taxes_design || 0} </p>
     </Col>
     </Row>
     {/* Design Total */}
@@ -2323,6 +2358,18 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{other_construction || 0} </p>
     </Col>
     </Row>
+    {/* Fringes Taxes */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>09.90</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Fringes and Taxes, Government/Unions</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{fringes_taxes_construction || 0} </p>
+    </Col>
+    </Row>
     {/* Construction Total */}
     <Row className='mt-3' >
     <Col md={1} >
@@ -2529,6 +2576,18 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{other_set_dressing || 0} </p>
     </Col>
     </Row>
+    {/* Fringes Taxes */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>10.80</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Fringes and Taxes, Government/Unions</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{fringes_taxes_dressing || 0} </p>
+    </Col>
+    </Row>
     {/* Dressing Total */}
     <Row className='mt-3' >
     <Col md={1} >
@@ -2711,6 +2770,18 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{other_property || 0} </p>
     </Col>
     </Row>
+    {/* Fringes Taxes */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>11.70</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Fringes and Taxes, Government/Unions</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{fringes_taxes_property || 0} </p>
+    </Col>
+    </Row>
     {/* Property Total */}
     <Row className='mt-3' >
     <Col md={1} >
@@ -2807,6 +2878,18 @@ const Budget = (props) => {
     </Col>
     <Col md={2} >
     <p className={`${styles.Underline}`}>{otherwranglinglabour_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Fringes Taxes */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>12.30</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Fringes and Taxes, Government/Unions</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{fringes_taxes_property || 0} </p>
     </Col>
     </Row>
     {/* Wrangling Total */}
@@ -2929,6 +3012,18 @@ const Budget = (props) => {
     </Col>
     <Col md={2} >
     <p className={`${styles.Underline}`}>{otherfxlabour_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Fringes Taxes */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>13.40</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Fringes and Taxes, Government/Unions</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{fringes_taxes_fx || 0} </p>
     </Col>
     </Row>
     {/* FX Total */}
@@ -4400,7 +4495,6 @@ const Budget = (props) => {
     <p className={`${styles.Underline} mb-0`}>{transportlabour_total || 0}</p>
     </Col>
     </Row>
-
     </div>
     {/* TV SPECIFIC ------------------------------------------ */}
     <div className='mt-5'>
@@ -4458,6 +4552,213 @@ const Budget = (props) => {
     </Col>
     <Col md={2} >
     <p className={`${styles.Underline}`}>{techsuper_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Technical Director */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>21.20</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Technical Director</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{tech_direct_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{tech_direct_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{tech_direct_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{tech_direct_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{techdirect_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Floor Manager */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>21.30</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Floor Manager</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{floor_man_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{floor_man_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{floor_man_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{floor_man_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{floorman_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Lighting Director */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>21.40</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Lighting Director</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{light_direct_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{light_direct_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{light_direct_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{light_direct_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{lightdirect_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Boardman */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>21.50</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Boardman</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{boardman_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{boardman_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{boardman_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{boardman_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{boardman_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Audio */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>21.60</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Audio</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{audio_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{audio_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{audio_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{audio_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{audio_total || 0}</p>
+    </Col>
+    </Row>
+    {/* VRT Operator */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>21.70</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>VRT Operator</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{vtr_operator_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{vtr_operator_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{vtr_operator_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{vtr_operator_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{vtroperator_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Stagehands */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>21.80</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Stagehands</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{stagehands_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{stagehands_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{stagehands_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{stagehands_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{stagehands_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Other TV Labour */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>21.90</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Other TV Labour</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{other_tv_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{other_tv_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{other_tv_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{other_tv_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{othertv_total || 0}</p>
+    </Col>
+    </Row>
+    {/* TV Total */}
+    <Row className='mt-3' >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    <p></p>
+    </Col>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL TV SPECIFIC LABOUR </p>
+    </Col>
+    <Col md={3} >
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline} mb-0`}>{tvspecificlabour_total || 0}</p>
     </Col>
     </Row>
     </div>

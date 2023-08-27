@@ -27,7 +27,7 @@ const Grip = (props) => {
     dolly_crane_grip_qty, dolly_crane_grip_uno, dolly_crane_grip_una, dolly_crane_grip_rt,
     swing_grips_qty, swing_grips_uno, swing_grips_una, swing_grips_rt,
     other_grip_labour_qty, other_grip_labour_uno, other_grip_labour_una, other_grip_labour_rt,
-    } = postDataGrip;
+    fringes_taxes_grip,} = postDataGrip;
 
     // handleChange 
     const handleChange = (event) => {
@@ -168,6 +168,7 @@ const Grip = (props) => {
       parseFloat(dailiesgripTotal || 0) +
       parseFloat(dollycranegripTotal || 0) +
       parseFloat(swinggripsTotal || 0) +
+      parseFloat(fringes_taxes_grip || 0) +
       parseFloat(othergriplabourTotal || 0)
       )
       }
@@ -181,7 +182,7 @@ const Grip = (props) => {
 
       }, [keygripTotal, bestboygripTotal, gripsTotal,
         dailiesgripTotal, dollycranegripTotal, swinggripsTotal,
-        othergriplabourTotal,]);
+        othergriplabourTotal, fringes_taxes_grip,]);
    
   return (
     <div className="mt-5">
@@ -873,6 +874,41 @@ const Grip = (props) => {
             />
     </Form.Group>
     {errors?.othergriplabourTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Fringes and Taxes */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>18.80</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Fringes and Taxes</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>%</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="fringes_taxes_grip" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="fringes_taxes_grip"
+        value={fringes_taxes_grip}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.fringes_taxes_grip?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>

@@ -33,6 +33,7 @@ const ProductionStaff = (props) => {
   
   // Production postData values
   const {
+    fringes_taxes_production,
     production_manager_quantity,
     production_manager_units_number,
     production_manager_units_name,
@@ -451,6 +452,7 @@ const ProductionStaff = (props) => {
       parseFloat(assistantdirector1stTotal || 0) +
       parseFloat(assistantdirector2ndTotal || 0) +
       parseFloat(assistantdirector3rdTotal || 0) +
+      parseFloat(fringes_taxes_production || 0) +
       parseFloat(craftservicesTotal || 0)
       )
     }
@@ -467,7 +469,7 @@ const ProductionStaff = (props) => {
     productionaccountantassistantTotal, scriptsupervisorcontinuityTotal,
     payrollTotal, otherproductionTotal, directorsassistantTotal,
     assistantdirector1stTotal, assistantdirector2ndTotal,
-    assistantdirector3rdTotal, craftservicesTotal,
+    assistantdirector3rdTotal, craftservicesTotal, fringes_taxes_production,
     ]);
 
   return (
@@ -2194,6 +2196,41 @@ const ProductionStaff = (props) => {
             />
     </Form.Group>
     {errors?.craftservicesTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Fringes and Taxes */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>07.991</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Fringes and Taxes</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>%</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="fringes_taxes_production" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="fringes_taxes_production"
+        value={fringes_taxes_production}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.fringes_taxes_production?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>

@@ -34,7 +34,7 @@ const Camera = (props) => {
       drone_pilot_qty, drone_pilot_uno, drone_pilot_una, drone_pilot_rt,
       other_cam_qty, other_cam_uno, other_cam_una, other_cam_rt,
       stills_qty, stills_uno, stills_una, stills_rt,
-    } = postDataCamera;
+      fringes_taxes_camera,} = postDataCamera;
 
     // handleChange 
     const handleChange = (event) => {
@@ -226,6 +226,7 @@ const Camera = (props) => {
       parseFloat(campaTotal || 0) +
       parseFloat(stillsTotal || 0) +
       parseFloat(dronepilotTotal || 0) +
+      parseFloat(fringes_taxes_camera || 0) +
       parseFloat(othercamTotal || 0)
       )
       }
@@ -239,7 +240,8 @@ const Camera = (props) => {
 
       }, [dopTotal, cameraopTotal, camac1Total, camac2Total,
           ditTotal, steadicamTotal, campaTotal, 
-          dronepilotTotal, stillsTotal, othercamTotal,]);
+          dronepilotTotal, stillsTotal, othercamTotal,
+          fringes_taxes_camera,]);
     
   return (
     <div className="mt-5">
@@ -1213,6 +1215,41 @@ const Camera = (props) => {
             />
     </Form.Group>
     {errors?.othercamTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Fringes and Taxes */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>16.92</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Fringes and Taxes</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>%</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="fringes_taxes_camera" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="fringes_taxes_camera"
+        value={fringes_taxes_camera}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.fringes_taxes_camera?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>

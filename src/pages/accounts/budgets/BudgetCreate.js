@@ -491,6 +491,7 @@ function BudgetCreate() {
 
   // Production postData
   const [postDataProduction, setPostDataProduction] = useState({
+    fringes_taxes_production: 0,
     production_manager_quantity: 0,
     production_manager_units_number: 0,
     production_manager_units_name: "",
@@ -567,6 +568,7 @@ function BudgetCreate() {
 
   // Production postData values
   const {
+    fringes_taxes_production,
     production_manager_quantity,
     production_manager_units_number,
     production_manager_units_name,
@@ -685,6 +687,7 @@ function BudgetCreate() {
 
   // Design Labour postData
   const [postDataDesign, setPostDataDesign] = useState({
+    fringes_taxes_design: 0,
     production_designer_quantity: 0,
     production_designer_units_number: 0,
     production_designer_units_name: "",
@@ -709,7 +712,8 @@ function BudgetCreate() {
   });
 
   // Design Labour values
-  const {production_designer_quantity, production_designer_units_number,
+  const {fringes_taxes_design,
+    production_designer_quantity, production_designer_units_number,
     production_designer_units_name, production_designer_rate,
     art_director_quantity, art_director_units_number,
     art_director_units_name, art_director_rate,
@@ -739,6 +743,7 @@ function BudgetCreate() {
 
   // Construction Labour postData
   const [postDataConstruction, setPostDataConstruction] = useState({
+    fringes_taxes_construction: 0,
     constructioncoordinator_quantity: 0,
     constructioncoordinator_units_number: 0,
     constructioncoordinator_units_name: "",
@@ -771,7 +776,7 @@ function BudgetCreate() {
   });
 
   // Construction Labour values
-  const {
+  const {fringes_taxes_construction,
     constructioncoordinator_quantity, constructioncoordinator_units_number,
     constructioncoordinator_units_name, constructioncoordinator_rate,
     headcarpenter_quantity, headcarpenter_units_number,
@@ -817,6 +822,7 @@ function BudgetCreate() {
 
   // Set Dressing Labour postData 
   const [postDataSetDressing, setPostDataSetDressing] = useState({
+    fringes_taxes_dressing: 0,
     set_decorator_quantity: 0,
     set_decorator_units_number: 0,
     set_decorator_units_name: "",
@@ -845,7 +851,8 @@ function BudgetCreate() {
   });
 
   // Set Dressing Labour values
-  const {set_decorator_quantity, set_decorator_units_number,
+  const {fringes_taxes_dressing,
+    set_decorator_quantity, set_decorator_units_number,
     set_decorator_units_name, set_decorator_rate,
     assist_set_decorator_quantity, assist_set_decorator_units_number,
     assist_set_decorator_units_name, assist_set_decorator_rate,
@@ -886,6 +893,7 @@ function BudgetCreate() {
 
   // Property Labour postData 
   const [postDataProperty, setPostDataProperty] = useState({
+    fringes_taxes_property: 0,
     property_master_quantity: 0,
     property_master_units_number: 0,
     property_master_units_name: "",
@@ -909,7 +917,8 @@ function BudgetCreate() {
     other_property: 0,
   });
 
-  const {property_master_quantity, property_master_units_number,
+  const {fringes_taxes_property,
+    property_master_quantity, property_master_units_number,
     property_master_units_name, property_master_rate,
     assist_property_master_quantity, assist_property_master_units_number,
     assist_property_master_units_name, assist_property_master_rate,
@@ -944,6 +953,7 @@ function BudgetCreate() {
 
   // Wrangling Labour postData 
   const [postDataWrangling, setPostDataWrangling] = useState({
+    fringes_taxes_wrangling: 0,
     head_wrangler_quantity: 0,
     head_wrangler_units_number: 0,
     head_wrangler_units_name: "",
@@ -955,7 +965,8 @@ function BudgetCreate() {
   });
 
   // Wrangling Labour values
-  const {head_wrangler_quantity, head_wrangler_units_number,
+  const {fringes_taxes_wrangling,
+    head_wrangler_quantity, head_wrangler_units_number,
     head_wrangler_units_name, head_wrangler_rate,
     other_wrangling_labour_quantity, other_wrangling_labour_units_number,
     other_wrangling_labour_units_name, other_wrangling_labour_rate,
@@ -975,6 +986,7 @@ function BudgetCreate() {
 
   // Special Effects Labour postData
   const [postDataSpecialEffects, setPostDataSpecialEffects] = useState({
+    fringes_taxes_fx: 0,
     fx_supervisor_quantity: 0,
     fx_supervisor_units_number: 0,
     fx_supervisor_units_name: "",
@@ -990,7 +1002,8 @@ function BudgetCreate() {
   });
 
   // Special Effects Labour values
-  const {fx_supervisor_quantity, fx_supervisor_units_number,
+  const {fringes_taxes_fx,
+    fx_supervisor_quantity, fx_supervisor_units_number,
     fx_supervisor_units_name, fx_supervisor_rate,
     assist_fx_quantity, assist_fx_units_number,
     assist_fx_units_name, assist_fx_rate,
@@ -1015,6 +1028,7 @@ function BudgetCreate() {
 
   // Wardrobe Labour postData
   const [postDataWardrobe, setPostDataWardrobe] = useState({
+    fringes_taxes_wardrobe: 0,
     costume_designer_quantity: 0,
     costume_designer_units_number: 0,
     costume_designer_units_name: "",
@@ -1054,7 +1068,7 @@ function BudgetCreate() {
     truck_costumer_units_name, truck_costumer_rate,
     other_wardrobe_labour_quantity, other_wardrobe_labour_units_number,
     other_wardrobe_labour_units_name, other_wardrobe_labour_rate,
-  } = postDataWardrobe;
+    fringes_taxes_wardrobe,} = postDataWardrobe;
 
   // Totals
   // costume designer Total postData 
@@ -1082,6 +1096,7 @@ function BudgetCreate() {
 
   // Makeup Labour postData
   const [postDataMakeup, setPostDataMakeup] = useState({
+    fringes_taxes_makeup: 0,
     makeup_dept_head_quantity: 0,
     makeup_dept_head_units_number: 0,
     makeup_dept_head_units_name: "",
@@ -1132,7 +1147,7 @@ function BudgetCreate() {
     other_makeup_labour_units_name, other_makeup_labour_rate,
     sfx_makeup_quantity, sfx_makeup_units_number,
     sfx_makeup_units_name, sfx_makeup_rate,
-  } = postDataMakeup;
+    fringes_taxes_makeup,} = postDataMakeup;
   
   // Totals
   // head makeup Total postData 
@@ -1166,6 +1181,7 @@ function BudgetCreate() {
 
   // Camera Labour postData
   const [postDataCamera, setPostDataCamera] = useState({
+    fringes_taxes_camera: 0,
     dop_qty: 0,
     dop_uno: 0,
     dop_una: "",
@@ -1219,7 +1235,7 @@ function BudgetCreate() {
     drone_pilot_qty, drone_pilot_uno, drone_pilot_una, drone_pilot_rt,
     other_cam_qty, other_cam_uno, other_cam_una, other_cam_rt,
     stills_qty, stills_uno, stills_una, stills_rt,
-  } = postDataCamera;
+    fringes_taxes_camera,} = postDataCamera;
 
   // Totals
   // dop Total postData 
@@ -1259,6 +1275,7 @@ function BudgetCreate() {
 
   // Electrical Labour postData
   const [postDataElectric, setPostDataElectric] = useState({
+    fringes_taxes_electric: 0,
     gaffer_qty: 0,
     gaffer_uno: 0,
     gaffer_una: "",
@@ -1291,7 +1308,7 @@ function BudgetCreate() {
     dailies_elec_qty, dailies_elec_uno, dailies_elec_una, dailies_elec_rt,
     generator_op_qty, generator_op_uno, generator_op_una, generator_op_rt,
     other_elec_qty, other_elec_uno, other_elec_una, other_elec_rt,
-    } = postDataElectric;
+    fringes_taxes_electric, } = postDataElectric;
 
   // Totals
   // gaffer Total postData 
@@ -1319,6 +1336,7 @@ function BudgetCreate() {
 
   // Grip Labour postData
   const [postDataGrip, setPostDataGrip] = useState({
+    fringes_taxes_grip: 0,
     key_grip_qty: 0,
     key_grip_uno: 0,
     key_grip_una: "",
@@ -1356,7 +1374,7 @@ function BudgetCreate() {
     dolly_crane_grip_qty, dolly_crane_grip_uno, dolly_crane_grip_una, dolly_crane_grip_rt,
     swing_grips_qty, swing_grips_uno, swing_grips_una, swing_grips_rt,
     other_grip_labour_qty, other_grip_labour_uno, other_grip_labour_una, other_grip_labour_rt,
-    } = postDataGrip;
+    fringes_taxes_grip,} = postDataGrip;
 
   // Totals
   // key grip Total postData 
@@ -1387,6 +1405,7 @@ function BudgetCreate() {
 
   // Production Sound Labour postData
   const [postDataSoundPro, setPostDataSoundPro] = useState({
+    fringes_taxes_sound: 0,
     sound_mixer_qty: 0,
     sound_mixer_uno: 0,
     sound_mixer_una: "",
@@ -1413,7 +1432,7 @@ function BudgetCreate() {
     cable_wrangler_una, cable_wrangler_rt,
     other_sound_labour_qty, other_sound_labour_uno,
     other_sound_labour_una, other_sound_labour_rt,
-  } = postDataSoundPro;
+    fringes_taxes_sound,} = postDataSoundPro;
 
   // Totals
   // sound mixer Total postData 
@@ -1435,6 +1454,7 @@ function BudgetCreate() {
 
   // Transport Labour postData
   const [postDataTransport, setPostDataTransport] = useState({
+    fringes_taxes_transport: 0,
     tp_coordinator_qty: 0,
     tp_coordinator_uno: 0,
     tp_coordinator_una: "",
@@ -1462,7 +1482,7 @@ function BudgetCreate() {
     tp_manager_qty, tp_manager_uno, tp_manager_una, tp_manager_rt,
     head_driver_qty, head_driver_uno, head_driver_una, head_driver_rt,
     drivers_qty, drivers_uno, drivers_una, drivers_rt,
-  } = postDataTransport;
+    fringes_taxes_transport,} = postDataTransport;
 
   // Totals
   // tp coordinator Total postData 
@@ -1487,6 +1507,7 @@ function BudgetCreate() {
 
   // TV Labour postData
   const [postDataTV, setPostDataTV] = useState({
+    fringes_taxes_tv: 0,
     tech_super_qty: 0,
     tech_super_uno: 0,
     tech_super_una: "",
@@ -1534,7 +1555,7 @@ function BudgetCreate() {
     vtr_operator_qty, vtr_operator_uno, vtr_operator_una, vtr_operator_rt,
     stagehands_qty, stagehands_uno, stagehands_una, stagehands_rt,
     other_tv_qty, other_tv_uno, other_tv_una, other_tv_rt,
-  } = postDataTV;
+    fringes_taxes_tv,} = postDataTV;
 
   // Totals
   // Technical Supervisor Total postData 
@@ -1917,6 +1938,7 @@ function BudgetCreate() {
     formData.append("rights_payments_cast", rights_payments_cast);
     formData.append("cast_total", castTotal);
     // production staff
+    formData.append("fringes_taxes_production", fringes_taxes_production);
     formData.append("production_manager_quantity", production_manager_quantity);
     formData.append("production_manager_units_number", production_manager_units_number);
     formData.append("production_manager_units_name", production_manager_units_name);
@@ -2009,6 +2031,7 @@ function BudgetCreate() {
     formData.append("craftservices_total", craftservicesTotal);
     formData.append("productionstaff_total", productionstaffTotal);
     // design
+    formData.append("fringes_taxes_design", fringes_taxes_design);
     formData.append("production_designer_quantity", production_designer_quantity);
     formData.append("production_designer_units_number", production_designer_units_number);
     formData.append("production_designer_units_name", production_designer_units_name);
@@ -2037,6 +2060,7 @@ function BudgetCreate() {
     formData.append("other_design", other_design);
     formData.append("designlabour_total", designlabourTotal);
     // construction
+    formData.append("fringes_taxes_construction", fringes_taxes_construction);
     formData.append("constructioncoordinator_quantity", constructioncoordinator_quantity);
     formData.append("constructioncoordinator_units_number", constructioncoordinator_units_number);
     formData.append("constructioncoordinator_units_name", constructioncoordinator_units_name);
@@ -2075,6 +2099,7 @@ function BudgetCreate() {
     formData.append("labourers_total", labourersTotal);
     formData.append("constructionlabour_total", constructionlabourTotal);
     // dressing
+    formData.append("fringes_taxes_dressing", fringes_taxes_dressing);
     formData.append("set_decorator_quantity", set_decorator_quantity);
     formData.append("set_decorator_units_number", set_decorator_units_number);
     formData.append("set_decorator_units_name", set_decorator_units_name);
@@ -2108,6 +2133,7 @@ function BudgetCreate() {
     formData.append("dressingbuyer_total", dressingbuyerTotal);
     formData.append("dressinglabour_total", dressinglabourTotal);
     // property
+    formData.append("fringes_taxes_property", fringes_taxes_property);
     formData.append("property_master_quantity", property_master_quantity);
     formData.append("property_master_units_number", property_master_units_number);
     formData.append("property_master_units_name", property_master_units_name);
@@ -2136,6 +2162,7 @@ function BudgetCreate() {
     formData.append("armorer_total", armorerTotal);
     formData.append("propertylabour_total", propertylabourTotal);
     // wrangling 
+    formData.append("fringes_taxes_wrangling", fringes_taxes_wrangling);
     formData.append("head_wrangler_quantity", head_wrangler_quantity);
     formData.append("head_wrangler_units_number", head_wrangler_units_number);
     formData.append("head_wrangler_units_name", head_wrangler_units_name);
@@ -2148,6 +2175,7 @@ function BudgetCreate() {
     formData.append("otherwranglinglabour_total", otherwranglinglabourTotal);
     formData.append("wranglerlabour_total", wranglerlabourTotal);
     // fx
+    formData.append("fringes_taxes_fx", fringes_taxes_fx);
     formData.append("fx_supervisor_quantity", fx_supervisor_quantity);
     formData.append("fx_supervisor_units_number", fx_supervisor_units_number);
     formData.append("fx_supervisor_units_name", fx_supervisor_units_name);
@@ -2165,6 +2193,7 @@ function BudgetCreate() {
     formData.append("otherfxlabour_total", otherfxlabourTotal);
     formData.append("fxlabour_total", fxlabourTotal);
     // wardrobe
+    formData.append("fringes_taxes_wardrobe", fringes_taxes_wardrobe);
     formData.append("costume_designer_quantity", costume_designer_quantity); 
     formData.append("costume_designer_units_number", costume_designer_units_number); 
     formData.append("costume_designer_units_name", costume_designer_units_name); 
@@ -2197,6 +2226,7 @@ function BudgetCreate() {
     formData.append("otherwardrobe_total", otherwardrobeTotal); 
     formData.append("wardrobelabour_total", wardrobelabourTotal);
     // makeup
+    formData.append("fringes_taxes_makeup", fringes_taxes_makeup);
     formData.append("makeup_dept_head_quantity", makeup_dept_head_quantity);
     formData.append("makeup_dept_head_units_number", makeup_dept_head_units_number);
     formData.append("makeup_dept_head_units_name", makeup_dept_head_units_name);
@@ -2239,6 +2269,7 @@ function BudgetCreate() {
     formData.append("sfxmakeup_total", sfxmakeupTotal);
     formData.append("makeuplabour_total", makeuplabourTotal);
     // camera
+    formData.append("fringes_taxes_camera", fringes_taxes_camera);
     formData.append("dop_qty", dop_qty);
     formData.append("dop_uno", dop_uno);
     formData.append("dop_una", dop_una);
@@ -2291,6 +2322,7 @@ function BudgetCreate() {
     formData.append("othercam_total", othercamTotal);
     formData.append("cameralabour_total", cameralabourTotal);
     // electric
+    formData.append("fringes_taxes_electric", fringes_taxes_electric);
     formData.append("gaffer_qty", gaffer_qty);
     formData.append("gaffer_uno", gaffer_uno);
     formData.append("gaffer_una", gaffer_una);
@@ -2323,6 +2355,7 @@ function BudgetCreate() {
     formData.append("otherelectric_total", otherelectricTotal);
     formData.append("electriclabour_total", electriclabourTotal);
     // grip 
+    formData.append("fringes_taxes_grip", fringes_taxes_grip);
     formData.append("key_grip_qty", key_grip_qty);
     formData.append("key_grip_uno", key_grip_uno);
     formData.append("key_grip_una", key_grip_una);
@@ -2360,6 +2393,7 @@ function BudgetCreate() {
     formData.append("othergriplabour_total", othergriplabourTotal);
     formData.append("griplabour_total", griplabourTotal);
     // sound pro 
+    formData.append("fringes_taxes_sound", fringes_taxes_sound);
     formData.append("sound_mixer_qty", sound_mixer_qty);
     formData.append("sound_mixer_uno", sound_mixer_uno);
     formData.append("sound_mixer_una", sound_mixer_una);
@@ -2382,6 +2416,7 @@ function BudgetCreate() {
     formData.append("othersoundlabour_total", othersoundlabourTotal);
     formData.append("soundlabour_total", soundlabourTotal);
     // transport 
+    formData.append("fringes_taxes_transport", fringes_taxes_transport);
     formData.append("tp_coordinator_qty", tp_coordinator_qty);
     formData.append("tp_coordinator_uno", tp_coordinator_uno);
     formData.append("tp_coordinator_una", tp_coordinator_una);
@@ -2409,6 +2444,7 @@ function BudgetCreate() {
     formData.append("drivers_total", driversTotal);
     formData.append("transportlabour_total", transportlabourTotal);
     // TV
+    formData.append("fringes_taxes_tv", fringes_taxes_tv);
     formData.append("tech_super_qty", tech_super_qty);
     formData.append("tech_super_uno", tech_super_uno);
     formData.append("tech_super_una", tech_super_una);

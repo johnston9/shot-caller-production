@@ -21,7 +21,8 @@ const Construction = (props) => {
            constructionlabourTotal, setConstructionlabourTotal,
     } = props;
 
-    const {constructioncoordinator_quantity, constructioncoordinator_units_number,
+    const {fringes_taxes_construction,
+        constructioncoordinator_quantity, constructioncoordinator_units_number,
         constructioncoordinator_units_name, constructioncoordinator_rate,
         headcarpenter_quantity, headcarpenter_units_number,
         headcarpenter_units_name, headcarpenter_rate,
@@ -184,6 +185,7 @@ const Construction = (props) => {
       parseFloat(headpainterTotal || 0) +
       parseFloat(paintersTotal || 0) +
       parseFloat(labourersTotal || 0) +
+      parseFloat(fringes_taxes_construction || 0) +
       parseFloat(other_construction || 0) 
       )
     }
@@ -197,7 +199,7 @@ const Construction = (props) => {
 
     }, [constructioncoordinatorTotal, headcarpenterTotal, carpentersTotal,
         scenicpaintersTotal, headpainterTotal, paintersTotal,
-        labourersTotal, other_construction]);
+        labourersTotal, other_construction, fringes_taxes_construction]);
 
   return (
     <div className="mt-5">
@@ -921,6 +923,41 @@ const Construction = (props) => {
             />
     </Form.Group>
     {errors?.other_construction?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Fringes and Taxes */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>09.90</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Fringes and Taxes</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>%</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="fringes_taxes_construction" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="fringes_taxes_construction"
+        value={fringes_taxes_construction}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.fringes_taxes_construction?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>

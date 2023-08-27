@@ -32,7 +32,7 @@ const Wardrobe = (props) => {
         truck_costumer_units_name, truck_costumer_rate,
         other_wardrobe_labour_quantity, other_wardrobe_labour_units_number,
         other_wardrobe_labour_units_name, other_wardrobe_labour_rate,
-    } = postDataWardrobe;
+        fringes_taxes_wardrobe, } = postDataWardrobe;
 
     // handleChange 
     const handleChange = (event) => {
@@ -162,6 +162,7 @@ const Wardrobe = (props) => {
         parseFloat(headwardrobeTotal || 0) +
         parseFloat(wardrobeassistTotal || 0) +
         parseFloat(truckcostumerTotal || 0) +
+        parseFloat(fringes_taxes_wardrobe || 0) +
         parseFloat(otherwardrobeTotal || 0)
         )
         }
@@ -174,7 +175,8 @@ const Wardrobe = (props) => {
         };
 
         }, [costumedesignerTotal, assistcosdesignerTotal, headwardrobeTotal,
-            wardrobeassistTotal, truckcostumerTotal, otherwardrobeTotal]);
+            wardrobeassistTotal, truckcostumerTotal, otherwardrobeTotal,
+            fringes_taxes_wardrobe,]);
 
 
   return (
@@ -773,6 +775,41 @@ const Wardrobe = (props) => {
             />
     </Form.Group>
     {errors?.otherwardrobeTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Fringes and Taxes */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>14.70</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Fringes and Taxes</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>%</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="fringes_taxes_wardrobe" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="fringes_taxes_wardrobe"
+        value={fringes_taxes_wardrobe}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.fringes_taxes_wardrobe?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>

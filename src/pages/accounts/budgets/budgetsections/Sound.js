@@ -25,7 +25,7 @@ const Sound = (props) => {
       cable_wrangler_una, cable_wrangler_rt,
       other_sound_labour_qty, other_sound_labour_uno,
       other_sound_labour_una, other_sound_labour_rt,
-    } = postDataSoundPro;
+      fringes_taxes_sound,} = postDataSoundPro;
 
     // handleChange 
     const handleChange = (event) => {
@@ -115,6 +115,7 @@ const Sound = (props) => {
       parseFloat(soundmixerTotal || 0) +
       parseFloat(boomoperatorTotal || 0) +
       parseFloat(cablewranglerTotal || 0) +
+      parseFloat(fringes_taxes_sound || 0) +
       parseFloat(othersoundlabourTotal || 0)
       )
       }
@@ -127,7 +128,7 @@ const Sound = (props) => {
       };
 
       }, [soundmixerTotal, boomoperatorTotal, cablewranglerTotal,
-        othersoundlabourTotal,]);
+        othersoundlabourTotal, fringes_taxes_sound,]);
     
   return (
     <div className="mt-5">
@@ -537,6 +538,41 @@ const Sound = (props) => {
             />
     </Form.Group>
     {errors?.othersoundlabourTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Fringes and Taxes */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>19.50</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Fringes and Taxes</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>%</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="fringes_taxes_sound" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="fringes_taxes_sound"
+        value={fringes_taxes_sound}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.fringes_taxes_sound?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>

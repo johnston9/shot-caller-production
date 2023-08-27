@@ -23,7 +23,7 @@ const Transport = (props) => {
         tp_manager_qty, tp_manager_uno, tp_manager_una, tp_manager_rt,
         head_driver_qty, head_driver_uno, head_driver_una, head_driver_rt,
         drivers_qty, drivers_uno, drivers_una, drivers_rt,
-        } = postDataTransport;
+        fringes_taxes_transport,} = postDataTransport;
 
     // handleChange 
     const handleChange = (event) => {
@@ -130,6 +130,7 @@ const Transport = (props) => {
       parseFloat(tpcaptainTotal || 0) +
       parseFloat(tpmanagerTotal || 0) +
       parseFloat(headdriverTotal || 0) +
+      parseFloat(fringes_taxes_transport || 0) +
       parseFloat(driversTotal || 0)
       )
       }
@@ -142,7 +143,7 @@ const Transport = (props) => {
       };
 
       }, [tpcoordinatorTotal, tpcaptainTotal, tpmanagerTotal,
-        headdriverTotal, driversTotal]);
+        headdriverTotal, driversTotal, fringes_taxes_transport]);
 
   return (
     <div className="mt-5">
@@ -646,6 +647,41 @@ const Transport = (props) => {
             />
     </Form.Group>
     {errors?.driversTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Fringes and Taxes */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>20.60</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Fringes and Taxes</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>%</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="fringes_taxes_transport" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="fringes_taxes_transport"
+        value={fringes_taxes_transport}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.fringes_taxes_transport?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>

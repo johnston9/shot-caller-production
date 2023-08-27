@@ -31,7 +31,7 @@ const TV = (props) => {
     vtr_operator_qty, vtr_operator_uno, vtr_operator_una, vtr_operator_rt,
     stagehands_qty, stagehands_uno, stagehands_una, stagehands_rt,
     other_tv_qty, other_tv_uno, other_tv_una, other_tv_rt,
-    } = postDataTV;
+    fringes_taxes_tv,} = postDataTV;
 
     // handleChange 
     const handleChange = (event) => {
@@ -178,7 +178,7 @@ const TV = (props) => {
         };
       }, [stagehands_qty, stagehands_uno, stagehands_rt]);
 
-    // function to calculate Other TV Roles on change
+    // function to calculate Other TV Labour on change
     useEffect(() => {
         const addOthetv = () => {
         setOthertvTotal(parseFloat(other_tv_qty || 0) * 
@@ -206,6 +206,7 @@ const TV = (props) => {
         parseFloat(audioTotal || 0) +
         parseFloat(vtroperatorTotal || 0) +
         parseFloat(stagehandsTotal || 0) +
+        parseFloat(fringes_taxes_tv || 0) +
         parseFloat(othertvTotal || 0)
         )
         }
@@ -219,7 +220,8 @@ const TV = (props) => {
   
         }, [techsuperTotal, techdirectTotal, floormanTotal,
             lightdirectTotal, boardmanTotal, audioTotal,
-            vtroperatorTotal, stagehandsTotal, othertvTotal,]);
+            vtroperatorTotal, stagehandsTotal, othertvTotal,
+            fringes_taxes_tv,]);
 
   return (
     <div className="mt-5">
@@ -1099,6 +1101,41 @@ const TV = (props) => {
             />
     </Form.Group>
     {errors?.othertvTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Fringes and Taxes */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>21.91</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Fringes and Taxes</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>%</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="fringes_taxes_tv" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="fringes_taxes_tv"
+        value={fringes_taxes_tv}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.fringes_taxes_tv?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>

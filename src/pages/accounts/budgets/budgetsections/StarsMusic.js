@@ -592,3 +592,31 @@ const StarsMusic = (props) => {
 }
 
 export default StarsMusic
+
+// fringes_taxes_production
+// fringes_taxes_design
+// fringes_taxes_construction
+// fringes_taxes_dressing
+// fringes_taxes_property
+// fringes_taxes_wrangling
+// fringes_taxes_fx
+// fringes_taxes_wardrobe - next
+// fringes_taxes_makeup
+// fringes_taxes_camera
+// fringes_taxes_electric
+// fringes_taxes_grip
+// fringes_taxes_sound
+// fringes_taxes_transport
+
+{/* Fringes Taxes */}
+{/* <Row>
+<Col md={1}>
+<p className={`${styles.Underline}`}>09.50</p>
+</Col>
+<Col md={9}>
+<p className={`${styles.Underline}`}>Fringes and Taxes, Government/Unions</p>
+</Col>
+<Col md={2}>
+<p className={`${styles.Underline}`}>{fringes_taxes_production || 0} </p>
+</Col>
+</Row> */}

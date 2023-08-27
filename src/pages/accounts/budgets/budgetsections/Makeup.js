@@ -37,7 +37,7 @@ const Makeup = (props) => {
     other_makeup_labour_units_name, other_makeup_labour_rate,
     sfx_makeup_quantity, sfx_makeup_units_number,
     sfx_makeup_units_name, sfx_makeup_rate,
-    } = postDataMakeup;
+    fringes_taxes_makeup,} = postDataMakeup;
 
     // handleChange 
     const handleChange = (event) => {
@@ -203,6 +203,7 @@ const Makeup = (props) => {
       parseFloat(hairdresserTotal || 0) +
       parseFloat(hairmakeupdailiesTotal || 0) +
       parseFloat(othermakeuplabourTotal || 0) +
+      parseFloat(fringes_taxes_makeup || 0) +
       parseFloat(sfxmakeupTotal || 0)
       )
       }
@@ -216,7 +217,7 @@ const Makeup = (props) => {
 
       }, [headmakeupTotal, keymakeupTotal, makeupartistTotal,
         keyhairstylistTotal, hairdresserTotal, hairmakeupdailiesTotal,
-        othermakeuplabourTotal, sfxmakeupTotal]);
+        othermakeuplabourTotal, sfxmakeupTotal, fringes_taxes_makeup,]);
 
   return (
     <div className="mt-5">
@@ -1002,6 +1003,41 @@ const Makeup = (props) => {
             />
     </Form.Group>
     {errors?.sfxmakeupTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Fringes and Taxes */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>15.80</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Fringes and Taxes</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>%</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="fringes_taxes_makeup" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="fringes_taxes_makeup"
+        value={fringes_taxes_makeup}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.fringes_taxes_makeup?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>

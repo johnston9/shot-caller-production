@@ -25,7 +25,7 @@ const Electric = (props) => {
         dailies_elec_qty, dailies_elec_uno, dailies_elec_una, dailies_elec_rt,
         generator_op_qty, generator_op_uno, generator_op_una, generator_op_rt,
         other_elec_qty, other_elec_uno, other_elec_una, other_elec_rt,
-        } = postDataElectric;
+        fringes_taxes_electric,} = postDataElectric;
 
     // handleChange 
     const handleChange = (event) => {
@@ -149,6 +149,7 @@ const Electric = (props) => {
         parseFloat(electricianTotal || 0) +
         parseFloat(dailieselecTotal || 0) +
         parseFloat(generatoropTotal || 0) +
+        parseFloat(fringes_taxes_electric || 0) +
         parseFloat(otherelectricTotal || 0) 
         )
         }
@@ -161,7 +162,8 @@ const Electric = (props) => {
         };
   
         }, [gafferTotal, bestboyTotal, electricianTotal,
-            dailieselecTotal, generatoropTotal, otherelectricTotal]);
+            dailieselecTotal, generatoropTotal, otherelectricTotal,
+            fringes_taxes_electric,]);
 
 
   return (
@@ -760,6 +762,41 @@ const Electric = (props) => {
             />
     </Form.Group>
     {errors?.otherelectricTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Fringes and Taxes */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>17.70</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Fringes and Taxes</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>%</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="fringes_taxes_electric" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="fringes_taxes_electric"
+        value={fringes_taxes_electric}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.fringes_taxes_electric?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
