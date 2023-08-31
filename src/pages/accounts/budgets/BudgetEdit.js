@@ -59,6 +59,7 @@ function BudgetEdit() {
   const [showSound, setShowSound] = useState(false);
   const [showTport, setShowTport] = useState(false);
   const [showTV, setShowTV] = useState(false);
+  const [showProOff, setShowProOff] = useState(false);
 
   // budget id
   const [budgetId, setBudgetId] = useState("");
@@ -1607,8 +1608,28 @@ function BudgetEdit() {
   // TV Specific Labour Total postData 
   const [tvspecificlabourTotal, setTvspecificlabourTotal] = useState(0);
 
+  // end below B Labour
 
-  // end below B
+  // BELOW PRODUCTION B COSTS -------------------------------
+
+  // PRODUCTION OFFICE EXPENSES ------------------------------
+
+  // Production office postData
+  const [postDatProOff, setPostDataProOff] = useState({
+    office_rentals: 0,
+    office_equipment: 0,
+    office_supplies: 0,
+    phones_net: 0,
+    courier_postage: 0,
+    office_other: 0,
+  });
+
+  const {office_rentals, office_equipment, office_supplies,
+    phones_net, courier_postage, office_other,
+  } = postDatProOff;
+
+  // Production office Total postData 
+  const [proOffTotal, setProOffTotal] = useState(0);
 
   //TOTALS ABOVE / BELOW / GRAND --------------------------------
 
@@ -1724,6 +1745,107 @@ function BudgetEdit() {
               />
       </Form.Group>
       {errors?.belowTheLineBTotal?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+    </Col>
+    </Row>
+    </div>
+  );
+
+  // Below the line B Costs total
+
+  // Below the line B Total Costs postData 
+  const [belowTheLineBCostsTotal, setBelowTheLineBCostsTotal] = useState(0);
+
+  // function to add all Below the line Costs totals on change
+  useEffect(() => {
+    const addbelowBcosts = () => {
+      setBelowTheLineBCostsTotal(
+        parseFloat(proOffTotal || 0)
+        )
+      }
+    const timer = setTimeout(() => {
+      addbelowBcosts();
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [ proOffTotal,
+  ]);
+
+  // Below the line input box
+  // eslint-disable-next-line
+  const belowthelineBcoststotal = (
+    <div className="my-0 pl-3">
+    <Row>
+    <Col className={ `${styles.Overview}  my-0 py-2`} md={10} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL BELOW THE LINE - "B" PRODUCTION COSTS</p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="belowTheLineBCostsTotal" 
+          className={`${styles.Width95} text-center pt-1 mb-0`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="belowTheLineBCostsTotal"
+          value={belowTheLineBCostsTotal}
+          readOnly
+              />
+      </Form.Group>
+      {errors?.belowTheLineBCostsTotal?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+    </Col>
+    </Row>
+    </div>
+  );
+
+  // PRODUCTION B LABOUR AND COSTS TOTAL---------------------------
+
+  // B labour and costs Total postData 
+  const [bLabourandCostsTotal, setBLabourandCostsTotal] = useState(0);
+
+  // function to add both B labour and costs on change
+  useEffect(() => {
+    const addBlabcos = () => {
+      setBLabourandCostsTotal(
+        parseFloat(belowTheLineBTotal || 0) +
+        parseFloat(belowTheLineBCostsTotal || 0)
+        )
+      }
+    const timer = setTimeout(() => {
+      addBlabcos();
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [belowTheLineBTotal, belowTheLineBCostsTotal]);
+
+  // below labour and costs input box
+  const blabourncoststotal = (
+    <div className="mt-3 pl-3">
+    <Row>
+    <Col className={ `${styles.Overview}  my-0 py-2`} md={10} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>B LABOUR AND COSTS TOTAL</p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="bLabourandCostsTotal" 
+          className={`${styles.Width95} text-center pt-1 mb-0`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="bLabourandCostsTotal"
+          value={bLabourandCostsTotal}
+          readOnly
+              />
+      </Form.Group>
+      {errors?.bLabourandCostsTotal?.map((message, idx) => (
           <Alert variant="warning" key={idx}>
           {message}
           </Alert>
@@ -2390,6 +2512,11 @@ function BudgetEdit() {
           stagehands_qty, stagehands_uno, stagehands_una, stagehands_rt,
           other_tv_qty, other_tv_uno, other_tv_una, other_tv_rt,});
         setTvspecificlabourTotal(tvspecificlabour_total);
+        const {office_rentals, office_equipment, office_supplies,
+          phones_net, courier_postage, office_other, proOff_total} = data.results[0];
+        setPostDataProOff({office_rentals, office_equipment, office_supplies,
+          phones_net, courier_postage, office_other,});
+        setProOffTotal(proOff_total);
 
       } catch (err) {
         console.log(err);
@@ -3108,6 +3235,14 @@ function BudgetEdit() {
     formData.append("stagehands_total", stagehandsTotal);
     formData.append("othertv_total", othertvTotal);
     formData.append("tvspecificlabour_total", tvspecificlabourTotal);
+    // production office
+    formData.append("office_rentals", office_rentals);
+    formData.append("office_equipment", office_equipment);
+    formData.append("office_supplies", office_supplies);
+    formData.append("phones_net", phones_net);
+    formData.append("courier_postage", courier_postage);
+    formData.append("office_other", office_other);
+    formData.append("proOff_total", proOffTotal);
     // formData.append("stars", stars);
 
     try {
@@ -3238,15 +3373,15 @@ function BudgetEdit() {
     </Col>
     </Row>  
     {abovethelinetotal}
-    {/* below B total */}
+    {/* below B labour + total */}
     <Row className={ `${styles.OverviewBlue} mx-1 mb-2 mt-5 py-1`}>
     <Col md={10}>
     <p className={ `mb-0 ml-3 ${styles.BoldBlack}`}>
-      BELOW THE LINE "B" PRODUCTION</p>
+      BELOW THE LINE "B" PRODUCTION LABOUR</p>
     </Col>
     <Col md={2}><p className="mb-0">{belowTheLineBTotal} </p></Col>
     </Row>
-    {/* sections below B click buttons */}
+    {/* sections below B labour click buttons */}
     <Row className={`${styles.ButtonLine} mx-1`}>
     {/* Cast */}
     <Col md={3} className='px-0 mx-0'>
@@ -3490,6 +3625,33 @@ function BudgetEdit() {
     </Col>
     </Row> 
     {belowthelineBtotal}
+    {/* below B costs total */}
+    <Row className={ `${styles.OverviewBlue} mx-1 mb-2 mt-5 py-1`}>
+    <Col md={10}>
+    <p className={ `mb-0 ml-3 ${styles.BoldBlack}`}>
+      BELOW THE LINE "B" PRODUCTION COSTS</p>
+    </Col>
+    <Col md={2}><p className="mb-0">{belowTheLineBCostsTotal} </p></Col>
+    </Row>
+    {/* sections below B costs click buttons */}
+    <Row className={`${styles.ButtonLine} mx-1`}>
+    {/* Production Office */}
+    <Col md={3} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
+    <Row>
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
+          onClick={() => setShowProOff(showProOff => !showProOff)} >Production Office
+    </p>
+    </Col>
+    <Col md={4}>
+    <p className="mb-0">{proOffTotal} </p>
+    </Col>
+    </Row>
+    </div>
+    </Col>
+    </Row>
+    {blabourncoststotal}
     {grandtotal}
     {/* info */}
     {!showInfo ? (

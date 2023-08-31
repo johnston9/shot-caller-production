@@ -2889,7 +2889,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>Fringes and Taxes, Government/Unions</p>
     </Col>
     <Col md={2}>
-    <p className={`${styles.Underline}`}>{fringes_taxes_property || 0} </p>
+    <p className={`${styles.Underline}`}>{fringes_taxes_wrangling || 0} </p>
     </Col>
     </Row>
     {/* Wrangling Total */}
@@ -3220,6 +3220,18 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{otherwardrobe_total || 0}</p>
     </Col>
     </Row>
+    {/* Fringes Taxes */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>14.70</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Fringes and Taxes, Government/Unions</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{fringes_taxes_wardrobe || 0} </p>
+    </Col>
+    </Row>
     {/* Wardrobe Total */}
     <Row className='mt-3' >
     <Col md={1} >
@@ -3460,6 +3472,18 @@ const Budget = (props) => {
     </Col>
     <Col md={2} >
     <p className={`${styles.Underline}`}>{sfxmakeup_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Fringes Taxes */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>15.90</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Fringes and Taxes, Government/Unions</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{fringes_taxes_makeup || 0} </p>
     </Col>
     </Row>
     {/* Makeup Total */}
@@ -3752,6 +3776,18 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{othercam_total || 0}</p>
     </Col>
     </Row>
+    {/* Fringes Taxes */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>16.92</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Fringes and Taxes, Government/Unions</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{fringes_taxes_camera || 0} </p>
+    </Col>
+    </Row>
     {/* Camera Total */}
     <Row className='mt-3' >
     <Col md={1} >
@@ -3944,6 +3980,18 @@ const Budget = (props) => {
     </Col>
     <Col md={2} >
     <p className={`${styles.Underline}`}>{otherelectric_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Fringes Taxes */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>17.70</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Fringes and Taxes, Government/Unions</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{fringes_taxes_electric || 0} </p>
     </Col>
     </Row>
     {/* Electric Total */}
@@ -4164,6 +4212,18 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{othergriplabour_total || 0}</p>
     </Col>
     </Row>
+    {/* Fringes Taxes */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>18.80</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Fringes and Taxes, Government/Unions</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{fringes_taxes_grip || 0} </p>
+    </Col>
+    </Row>
     {/* Grip Total */}
     <Row className='mt-3' >
     <Col md={1} >
@@ -4308,6 +4368,18 @@ const Budget = (props) => {
     </Col>
     <Col md={2} >
     <p className={`${styles.Underline}`}>{othersoundlabour_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Fringes Taxes */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>19.50</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Fringes and Taxes, Government/Unions</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{fringes_taxes_sound || 0} </p>
     </Col>
     </Row>
     {/* Sound Total */}
@@ -4478,6 +4550,18 @@ const Budget = (props) => {
     </Col>
     <Col md={2} >
     <p className={`${styles.Underline}`}>{drivers_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Fringes Taxes */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>20.60</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Fringes and Taxes, Government/Unions</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{fringes_taxes_transport || 0} </p>
     </Col>
     </Row>
     {/* Transport Total */}
@@ -4744,6 +4828,18 @@ const Budget = (props) => {
     </Col>
     <Col md={2} >
     <p className={`${styles.Underline}`}>{othertv_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Fringes Taxes */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>21.91</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Fringes and Taxes, Government/Unions</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{fringes_taxes_tv || 0} </p>
     </Col>
     </Row>
     {/* TV Total */}
