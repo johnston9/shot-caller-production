@@ -18,8 +18,10 @@ const Budget = (props) => {
 
   const budget = budget1.results[0] || "" ;
 
-  const {// details
-    above_the_line_total, below_the_lineB_total, grand_total,
+  const {// totals
+    above_the_line_total, below_the_lineB_total, 
+    below_the_lineB_costs_total, b_labour_and_costs_total, grand_total,
+    // details
     title, series, prodco, format, location, dated,
     // length
     research, prep, shoot, wrap, post, length_total,
@@ -307,6 +309,12 @@ const Budget = (props) => {
     techsuper_total, techdirect_total, floorman_total, lightdirect_total,
     boardman_total, audio_total, vtroperator_total, stagehands_total,
     othertv_total, tvspecificlabour_total,
+    // Production Office
+    office_rentals, office_equipment, office_supplies,
+    phones_net, courier_postage, office_other, proOff_total,
+    // Studio
+    studio_rentals, power, carpentry_rentals, studio_total,
+    studio_fx_equipment, studio_security, studio_other,
 
     } = budget;
 
@@ -432,10 +440,36 @@ const Budget = (props) => {
     <p></p>
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={9} >
-    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - BELOW THE LINE "B" PRODUCTION </p>
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - BELOW THE LINE "B" PRODUCTION - LABOUR </p>
     </Col>
     <Col md={2} >
     <p className={`${styles.Bold} mb-0`}>{below_the_lineB_total || 0}</p>
+    </Col>
+    </Row>
+    {/* TOTAL - BELOW THE LINE "B" PRODUCTION */}
+    <Row className='mt-3' >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    <p></p>
+    </Col>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={9} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - BELOW THE LINE "B" PRODUCTION - COSTS </p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Bold} mb-0`}>{below_the_lineB_costs_total || 0}</p>
+    </Col>
+    </Row>
+    {/* TOTAL - BELOW THE LINE "B" PRODUCTION */}
+    <Row className='mt-3' >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    <p></p>
+    </Col>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={9} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - BELOW THE LINE "B" PRODUCTION LABOUR AND COSTS </p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Bold} mb-0`}>{b_labour_and_costs_total || 0}</p>
     </Col>
     </Row>
     </Col>
@@ -443,13 +477,6 @@ const Budget = (props) => {
     </div>
     {/* DETAILS LENGTH */}
     <div>
-    {/* Title */}
-    {/* <Row className={ `${styles.OverviewBlue} mx-1 mb-2 py-1 text-center`}>
-    <Col md={12}>
-    <h5 className={ `${styles.BoldBlack}`}>BUDGET DETAIL PAGE</h5>
-    </Col>
-    </Row> */}
-    {/* DETAILS / LENGTH --------------------------------- */}
     <Row className='px-5 mt-3'>
     {/* details  */}
     <Col xs={12} md={6} >
@@ -1193,11 +1220,11 @@ const Budget = (props) => {
     </div>
     </div>
     </div>
-    {/* BELOW THE LINE ---------------------------------------*/}
+    {/* BELOW THE LINE LABOUR---------------------------------------*/}
     <div className='px-3'>
     <Row className={ `${styles.OverviewBlue} mx-1 my-5 py-1 text-center`}>
     <Col md={12}>
-    <h5 className={ `${styles.BoldBlack}`}>BELOW THE LINE - "B" PRODUCTION </h5>
+    <h5 className={ `${styles.BoldBlack}`}>BELOW THE LINE - "B" PRODUCTION - LABOUR </h5>
     </Col>
     </Row>
     {/* CAST ------------------------------------------------ */}
@@ -4858,8 +4885,186 @@ const Budget = (props) => {
     </Col>
     </Row>
     </div>
-    {/* END PRODUCTION B */}
     </div>
+    {/* BELOW B PRODUCTION COSTS SECTIONS ----------------------------- */}
+    <div className='px-3'>
+    <Row className={ `${styles.OverviewBlue} mx-1 my-5 py-1 text-center`}>
+    <Col md={12}>
+    <h5 className={ `${styles.BoldBlack}`}>BELOW THE LINE - "B" PRODUCTION - COSTS </h5>
+    </Col>
+    </Row>
+    {/* PRODUCTION OFFICE ------------------------------------ */}
+    <div className='mt-5'>
+    <Row>
+    <Col xs={1}>
+    <p className='mb-2'>22.00</p>
+    </Col>
+    <Col xs={10}>
+    <p className={ `${styles.BoldBlack} mb-2`}>PRODUCTION OFFICE</p>
+    </Col>
+    </Row>
+    {/* Titles */}
+    <Row className={ `${styles.Overview} mb-2 py-1`} >
+    <Col md={1} >
+    <p className="mb-0">ACCT</p>
+    </Col>
+    <Col md={5} >
+    <p className="mb-0">Description</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">#</p>
+    </Col>
+    <Col className="px-0 mx-0" md={1} >
+    <p># Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Price</p>
+    </Col>
+    <Col md={2} >
+    <p className="mb-0">Total</p>
+    </Col>
+    </Row>
+    {/* Office Rentals */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>22.10</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Office Rentals</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{office_rentals || 0} </p>
+    </Col>
+    </Row>
+    {/* Office Equipment */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>22.20</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Office Equipment</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{office_equipment || 0} </p>
+    </Col>
+    </Row>
+    {/* Office Supplies */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>22.30</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Office Supplies</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{office_supplies || 0} </p>
+    </Col>
+    </Row>
+    {/* Phones/Internet/Mobiles */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>22.40</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Phones/Internet/Mobiles</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{phones_net || 0} </p>
+    </Col>
+    </Row>
+    {/* Couriers/Postage */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>22.50</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Couriers/Postage</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{courier_postage || 0} </p>
+    </Col>
+    </Row>
+    {/* Other */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>22.60</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Other</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{office_other || 0} </p>
+    </Col>
+    </Row>
+    {/* Production Office Total */}
+    <Row className='mt-3' >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    <p></p>
+    </Col>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL PRODUCTION OFFICE </p>
+    </Col>
+    <Col md={3} >
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline} mb-0`}>{proOff_total || 0}</p>
+    </Col>
+    </Row>
+    </div>
+    {/* STUDIO ----------------------------------------------- */}
+    <div className='mt-5'>
+    <Row>
+    <Col xs={1}>
+    <p className='mb-2'>23.00</p>
+    </Col>
+    <Col xs={10}>
+    <p className={ `${styles.BoldBlack} mb-2`}>STUDIO/BACKLOT EXPENSES</p>
+    </Col>
+    </Row>
+    {/* Titles */}
+    <Row className={ `${styles.Overview} mb-2 py-1`} >
+    <Col md={1} >
+    <p className="mb-0">ACCT</p>
+    </Col>
+    <Col md={5} >
+    <p className="mb-0">Description</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">#</p>
+    </Col>
+    <Col className="px-0 mx-0" md={1} >
+    <p># Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Price</p>
+    </Col>
+    <Col md={2} >
+    <p className="mb-0">Total</p>
+    </Col>
+    </Row>
+    {/* Studio/Backlot Rentals */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>23.10</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Studio/Backlot Rentals</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{studio_rentals || 0} </p>
+    </Col>
+    </Row>
+    </div>
+    
+    </div>
+    {/* END PRODUCTION B */}
     </div>
     </div>
   )

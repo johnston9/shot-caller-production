@@ -26,7 +26,7 @@ const StarsMusic = (props) => {
   const handleChangeStarsMusic = (event) => {
     setPostDataStarsMusic({
       ...postDataStarsMusic,
-      [event.target.name]: event.target.value,
+      [event.target.name]: parseFloat(event.target.value || 0 ),
     });
   }; 
 

@@ -6,57 +6,56 @@ import Col from "react-bootstrap/Col";
 import styles from "../../../../styles/Account.module.css";
 import Alert from "react-bootstrap/Alert";
 
-const ProductionOffice = (props) => {
+const Studio = (props) => {
   // eslint-disable-next-line
   const [errors, setErrors] = useState({});
 
-  const {postDataProOff, setPostDataProOff,
-    proOffTotal, setProOffTotal, setShow} = props;
+  const {postDataStudio, setPostDataStudio,
+    studioTotal, setStudioTotal, setShow} = props;
 
-  const {office_rentals, office_equipment, office_supplies,
-    phones_net, courier_postage, office_other,
-  } = postDataProOff;
+  const {studio_rentals, power, carpentry_rentals,
+    studio_fx_equipment, studio_security, studio_other,
+    } = postDataStudio;
 
   // handleChange 
   const handleChange = (event) => {
-    setPostDataProOff({
-    ...postDataProOff,
+    setPostDataStudio({
+    ...postDataStudio,
     [event.target.name]: parseFloat(event.target.value || 0 ),
     });
   }; 
 
-  // function to add all Production Office on change
+  // function to add all Studio on change
   useEffect(() => {
-    const addProoff = () => {
-      setProOffTotal(
-        parseFloat(office_rentals || 0) +
-        parseFloat(office_equipment || 0) +
-        parseFloat(office_supplies || 0) +
-        parseFloat(phones_net || 0) +
-        parseFloat(courier_postage || 0) +
-        parseFloat(office_other || 0) +
-        parseFloat(fringes_taxes_music || 0)
+    const addStudio = () => {
+        setStudioTotal(
+        parseFloat(studio_rentals || 0) +
+        parseFloat(power || 0) +
+        parseFloat(carpentry_rentals || 0) +
+        parseFloat(studio_fx_equipment || 0) +
+        parseFloat(studio_security || 0) +
+        parseFloat(studio_other || 0)
        )
     }
     const timer = setTimeout(() => {
-      addProoff();
+        addStudio();
     }, 1000);
 
     return () => {
       clearTimeout(timer);
     };
 
-  }, [office_rentals, office_equipment, office_supplies, 
-    phones_net, courier_postage, office_other]);
+  }, [studio_rentals, power, carpentry_rentals,
+    studio_fx_equipment, studio_security, studio_other,]);
 
   return (
     <div className="mt-5">
     <Row >
     <Col md={1} >
-    <p className="mb-2">22.00</p>
+    <p className="mb-2">23.00</p>
     </Col>
     <Col md={9} >
-    <p className={ `${styles.BoldBlack} mb-2`}>Production Office</p>
+    <p className={ `${styles.BoldBlack} mb-2`}>Studio/Backlot Expenses</p>
     </Col>
     <Col md={2}>
     <span className={`${styles.Close }`} 
@@ -87,13 +86,13 @@ const ProductionOffice = (props) => {
     <p className="mb-0">Total</p>
     </Col>
     </Row>
-    {/* Office Rentals */}
+    {/* Studio/Backlot Rentals */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>22.10</p>
+    <p className={`${styles.Underline}`}>23.10</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Office Rentals</p>
+    <p className={`${styles.Underline}`}>Studio/Backlot Rentals</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -105,30 +104,30 @@ const ProductionOffice = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="office_rentals" 
+    <Form.Group controlId="studio_rentals" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="office_rentals"
-        value={office_rentals}
+        name="studio_rentals"
+        value={studio_rentals}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.office_rentals?.map((message, idx) => (
+    {errors?.studio_rentals?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     </Row>
-    {/* Office Equipment */}
+    {/* Power */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>22.20</p>
+    <p className={`${styles.Underline}`}>23.20</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Office Equipment</p>
+    <p className={`${styles.Underline}`}>Power</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -140,30 +139,30 @@ const ProductionOffice = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="office_equipment" 
+    <Form.Group controlId="power" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="office_equipment"
-        value={office_equipment}
+        name="power"
+        value={power}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.office_equipment?.map((message, idx) => (
+    {errors?.power?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     </Row>
-    {/* Office Supplies */}
+    {/* Carpentry Shop Rentals */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>22.30</p>
+    <p className={`${styles.Underline}`}>23.30</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Office Supplies</p>
+    <p className={`${styles.Underline}`}>Carpentry Shop Rentals</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -175,30 +174,30 @@ const ProductionOffice = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="office_supplies" 
+    <Form.Group controlId="carpentry_rentals" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="office_supplies"
-        value={office_supplies}
+        name="carpentry_rentals"
+        value={carpentry_rentals}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.office_supplies?.map((message, idx) => (
+    {errors?.carpentry_rentals?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     </Row>
-    {/* Phones/Internet/Mobiles */}
+    {/* Special Effects Equipment */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>22.40</p>
+    <p className={`${styles.Underline}`}>23.40</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Phones/Internet/Mobiles</p>
+    <p className={`${styles.Underline}`}>Special Effects Equipment</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -210,30 +209,30 @@ const ProductionOffice = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="phones_net" 
+    <Form.Group controlId="studio_fx_equipment" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="phones_net"
-        value={phones_net}
+        name="studio_fx_equipment"
+        value={studio_fx_equipment}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.phones_net?.map((message, idx) => (
+    {errors?.studio_fx_equipment?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     </Row>
-    {/* Couriers/Postage */}
+    {/* Security */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>22.50</p>
+    <p className={`${styles.Underline}`}>23.50</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Couriers/Postage</p>
+    <p className={`${styles.Underline}`}>Security</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -245,17 +244,17 @@ const ProductionOffice = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="courier_postage" 
+    <Form.Group controlId="studio_security" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="courier_postage"
-        value={courier_postage}
+        name="studio_security"
+        value={studio_security}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.courier_postage?.map((message, idx) => (
+    {errors?.studio_security?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
@@ -265,7 +264,7 @@ const ProductionOffice = (props) => {
     {/* Other */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>22.60</p>
+    <p className={`${styles.Underline}`}>23.60</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Other</p>
@@ -280,29 +279,29 @@ const ProductionOffice = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="office_other" 
+    <Form.Group controlId="studio_other" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="office_other"
-        value={office_other}
+        name="studio_other"
+        value={studio_other}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.office_other?.map((message, idx) => (
+    {errors?.studio_other?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     </Row>
-    {/* Production Office Total */}
+    {/* Studio Total */}
     <Row className="mt-3">
     <Col md={1} >
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
-    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL PRODUCTION OFFICE</p>
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL STUDIO</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -314,17 +313,17 @@ const ProductionOffice = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="proOffTotal" 
+    <Form.Group controlId="studioTotal" 
         className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="proOffTotal"
-        value={proOffTotal}
+        name="studioTotal"
+        value={studioTotal}
         readOnly
             />
     </Form.Group>
-    {errors?.proOffTotal?.map((message, idx) => (
+    {errors?.studioTotal?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
@@ -335,4 +334,4 @@ const ProductionOffice = (props) => {
   )
 }
 
-export default ProductionOffice
+export default Studio

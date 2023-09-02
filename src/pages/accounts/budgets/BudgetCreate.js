@@ -31,6 +31,8 @@ import Grip from "./budgetsections/Grip";
 import Sound from "./budgetsections/Sound";
 import Transport from "./budgetsections/Transport";
 import TV from "./budgetsections/TV";
+import ProductionOffice from "./budgetsectionscosts/ProductionOffice";
+import Studio from "./budgetsectionscosts/Studio";
 
 function BudgetCreate() {
   const [errors, setErrors] = useState({});
@@ -60,6 +62,7 @@ function BudgetCreate() {
   const [showTport, setShowTport] = useState(false);
   const [showTV, setShowTV] = useState(false);
   const [showProOff, setShowProOff] = useState(false);
+  const [showStudio, setShowStudio] = useState(false);
 
   // INFO / LENGTH -------------------------
   // Info postData 
@@ -1596,7 +1599,7 @@ function BudgetCreate() {
   // PRODUCTION OFFICE EXPENSES ------------------------------
 
   // Production office postData
-  const [postDatProOff, setPostDataProOff] = useState({
+  const [postDataProOff, setPostDataProOff] = useState({
     office_rentals: 0,
     office_equipment: 0,
     office_supplies: 0,
@@ -1607,10 +1610,29 @@ function BudgetCreate() {
 
   const {office_rentals, office_equipment, office_supplies,
     phones_net, courier_postage, office_other,
-  } = postDatProOff;
+  } = postDataProOff;
 
   // Production office Total postData 
   const [proOffTotal, setProOffTotal] = useState(0);
+
+  // STUDIO/BACKLOT EXPENSES ------------------------------
+
+  // Studio postData
+  const [postDataStudio, setPostDataStudio] = useState({
+    studio_rentals: 0,
+    power: 0,
+    carpentry_rentals: 0,
+    studio_fx_equipment: 0,
+    studio_security: 0,
+    studio_other: 0,
+  });
+
+  const {studio_rentals, power, carpentry_rentals,
+    studio_fx_equipment, studio_security, studio_other,
+  } = postDataStudio;
+
+  // Studio Total postData 
+  const [studioTotal, setStudioTotal] = useState(0);
 
   // TOTALS ABOVE / BELOW / GRAND -----------------------------
 
@@ -1746,7 +1768,8 @@ function BudgetCreate() {
   useEffect(() => {
     const addbelowBcosts = () => {
       setBelowTheLineBCostsTotal(
-        parseFloat(proOffTotal || 0)
+        parseFloat(proOffTotal || 0) +
+        parseFloat(studioTotal || 0)
         )
       }
     const timer = setTimeout(() => {
@@ -1756,8 +1779,7 @@ function BudgetCreate() {
     return () => {
       clearTimeout(timer);
     };
-  }, [ proOffTotal,
-  ]);
+  }, [ proOffTotal, studioTotal,]);
 
   // Below the line input box
   // eslint-disable-next-line
@@ -1913,6 +1935,8 @@ function BudgetCreate() {
     // totals
     formData.append("above_the_line_total", aboveTheLineTotal);
     formData.append("below_the_lineB_total", belowTheLineBTotal);
+    formData.append("below_the_lineB_costs_total", belowTheLineBCostsTotal);
+    formData.append("b_labour_and_costs_total", bLabourandCostsTotal);
     formData.append("grand_total", grandTotal);
     // prepared by
     formData.append("prelimfin", prelimfin);
@@ -2622,6 +2646,14 @@ function BudgetCreate() {
     formData.append("courier_postage", courier_postage);
     formData.append("office_other", office_other);
     formData.append("proOff_total", proOffTotal);
+    // studio
+    formData.append("studio_rentals", studio_rentals);
+    formData.append("power", power);
+    formData.append("carpentry_rentals", carpentry_rentals);
+    formData.append("studio_fx_equipment", studio_fx_equipment);
+    formData.append("studio_security", studio_security);
+    formData.append("studio_other", studio_other);
+    formData.append("studio_total", studioTotal);
     // formData.append("stars", stars);
 
     try {
@@ -3029,9 +3061,25 @@ function BudgetCreate() {
     </Row>
     </div>
     </Col>
+    {/* Studio/Backlot Rentals */}
+    <Col md={3} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
+    <Row>
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
+          onClick={() => setShowStudio(showStudio => !showStudio)} >Studio/Backlot Rentals
+    </p>
+    </Col>
+    <Col md={4}>
+    <p className="mb-0">{studioTotal} </p>
+    </Col>
+    </Row>
+    </div>
+    </Col>
     </Row>
     {blabourncoststotal}
     {grandtotal}
+    {/* above components */}
     {/* info */}
     {!showInfo ? (
       ""
@@ -3122,6 +3170,7 @@ function BudgetCreate() {
       setStarsMusicTotal={setStarsMusicTotal}
       setShow={setShowStarsMus}  /> 
     ) }
+    {/* below B Labour components */}
     {/* cast */}
     {!showCast ? (
       ""
@@ -3511,6 +3560,29 @@ function BudgetCreate() {
       tvspecificlabourTotal={tvspecificlabourTotal}
       setTvspecificlabourTotal={setTvspecificlabourTotal}
       setShow={setShowTV}  /> 
+    ) }
+    {/* below B costs components  */}
+    {/* Production Office */}
+    {!showProOff ? (
+      ""
+    ) : (
+      <ProductionOffice
+      postDataProOff={postDataProOff}
+      setPostDataProOff={setPostDataProOff}
+      proOffTotal={proOffTotal}
+      setProOffTotal={setProOffTotal}
+      setShow={setShowProOff}  /> 
+    ) }
+    {/* Studio */}
+    {!showStudio ? (
+      ""
+    ) : (
+      <Studio
+      postDataStudio={postDataStudio}
+      setPostDataStudio={setPostDataStudio}
+      studioTotal={studioTotal}
+      setStudioTotal={setStudioTotal}
+      setShow={setShowStudio}  /> 
     ) }
     {/* buttons */}
     <Row>
