@@ -1,4 +1,4 @@
-/* Component in the Budget component to edit Sound */
+/* Component in the Budget component to edit TV */
 import React, { useEffect, useState } from "react";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";

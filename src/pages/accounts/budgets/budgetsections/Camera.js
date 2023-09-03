@@ -1,4 +1,4 @@
-/* Component in the Budget component to edit Camera */
+/* Component in the Budget component to edit Camera pattern="[0-9]*" */
 import React, { useEffect, useState } from "react";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";

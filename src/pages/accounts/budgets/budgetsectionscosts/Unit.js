@@ -1,4 +1,4 @@
-/* Component in the Budget component to edit Studio */
+/* Component in the Budget component to edit Unit */
 import React, { useEffect, useState } from "react";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
@@ -6,56 +6,58 @@ import Col from "react-bootstrap/Col";
 import styles from "../../../../styles/Account.module.css";
 import Alert from "react-bootstrap/Alert";
 
-const Studio = (props) => {
-  // eslint-disable-next-line
+const Unit = (props) => {
+// eslint-disable-next-line
   const [errors, setErrors] = useState({});
 
-  const {postDataStudio, setPostDataStudio,
-    studioTotal, setStudioTotal, setShow} = props;
+  const {postDataUnit, setPostDataUnit,
+    unitTotal, setUnitTotal, setShow} = props;
 
-  const {studio_rentals, power, carpentry_rentals,
-    studio_fx_equipment, studio_security, studio_other,
-    } = postDataStudio;
+  const {catering, craft_expenses, meal_penalty,
+        green_room, first_aid, outfitting,
+        medical_insurance, unit_other,} = postDataUnit;
 
   // handleChange 
   const handleChange = (event) => {
-    setPostDataStudio({
-    ...postDataStudio,
+    setPostDataUnit({
+    ...postDataUnit,
     [event.target.name]: parseFloat(event.target.value || 0 ),
     });
   }; 
 
-  // function to add all Studio on change
+  // function to add all Unit on change
   useEffect(() => {
-    const addStudio = () => {
-        setStudioTotal(
-        parseFloat(studio_rentals || 0) +
-        parseFloat(power || 0) +
-        parseFloat(carpentry_rentals || 0) +
-        parseFloat(studio_fx_equipment || 0) +
-        parseFloat(studio_security || 0) +
-        parseFloat(studio_other || 0)
+    const addUnit = () => {
+        setUnitTotal(
+        parseFloat(catering || 0) +
+        parseFloat(craft_expenses || 0) +
+        parseFloat(meal_penalty || 0) +
+        parseFloat(green_room || 0) +
+        parseFloat(first_aid || 0) +
+        parseFloat(outfitting || 0) +
+        parseFloat(medical_insurance || 0) +
+        parseFloat(unit_other || 0) 
        )
     }
     const timer = setTimeout(() => {
-        addStudio();
+        addUnit();
     }, 1000);
 
     return () => {
       clearTimeout(timer);
     };
 
-  }, [studio_rentals, power, carpentry_rentals,
-    studio_fx_equipment, studio_security, studio_other,]);
+  }, [catering, craft_expenses, meal_penalty, green_room, 
+    first_aid, outfitting, medical_insurance, unit_other,]);
 
   return (
     <div className="mt-5">
     <Row >
     <Col md={1} >
-    <p className="mb-2">23.00</p>
+    <p className="mb-2">25.00</p>
     </Col>
     <Col md={9} >
-    <p className={ `${styles.BoldBlack} mb-2`}>Studio/Backlot Expenses</p>
+    <p className={ `${styles.BoldBlack} mb-2`}>Unit Expenses</p>
     </Col>
     <Col md={2}>
     <span className={`${styles.Close }`} 
@@ -86,13 +88,13 @@ const Studio = (props) => {
     <p className="mb-0">Total</p>
     </Col>
     </Row>
-    {/* Studio/Backlot Rentals */}
+    {/* Catering */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>23.10</p>
+    <p className={`${styles.Underline}`}>25.10</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Studio/Backlot Rentals</p>
+    <p className={`${styles.Underline}`}>Catering</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -104,30 +106,30 @@ const Studio = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="studio_rentals" 
+    <Form.Group controlId="catering" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="studio_rentals"
-        value={studio_rentals}
+        name="catering"
+        value={catering}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.studio_rentals?.map((message, idx) => (
+    {errors?.catering?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     </Row>
-    {/* Power */}
+    {/* Craft Expenses */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>23.20</p>
+    <p className={`${styles.Underline}`}>25.20</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Power</p>
+    <p className={`${styles.Underline}`}>Craft Expenses</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -139,30 +141,30 @@ const Studio = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="power" 
+    <Form.Group controlId="craft_expenses" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="power"
-        value={power}
+        name="craft_expenses"
+        value={craft_expenses}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.power?.map((message, idx) => (
+    {errors?.craft_expenses?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     </Row>
-    {/* Carpentry Shop Rentals */}
+    {/* Meal Penalty */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>23.30</p>
+    <p className={`${styles.Underline}`}>25.30</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Carpentry Shop Rentals</p>
+    <p className={`${styles.Underline}`}>Meal Penalty</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -174,30 +176,30 @@ const Studio = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="carpentry_rentals" 
+    <Form.Group controlId="meal_penalty" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="carpentry_rentals"
-        value={carpentry_rentals}
+        name="meal_penalty"
+        value={meal_penalty}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.carpentry_rentals?.map((message, idx) => (
+    {errors?.meal_penalty?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     </Row>
-    {/* Special Effects Equipment */}
+    {/* Support Area/Green Room */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>23.40</p>
+    <p className={`${styles.Underline}`}>25.40</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Special Effects Equipment</p>
+    <p className={`${styles.Underline}`}>Support Area/Green Room</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -209,30 +211,30 @@ const Studio = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="studio_fx_equipment" 
+    <Form.Group controlId="green_room" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="studio_fx_equipment"
-        value={studio_fx_equipment}
+        name="green_room"
+        value={green_room}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.studio_fx_equipment?.map((message, idx) => (
+    {errors?.green_room?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     </Row>
-    {/* Security */}
+    {/* First Aid */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>23.50</p>
+    <p className={`${styles.Underline}`}>25.50</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Security</p>
+    <p className={`${styles.Underline}`}>First Aid</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -244,17 +246,87 @@ const Studio = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="studio_security" 
+    <Form.Group controlId="first_aid" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="studio_security"
-        value={studio_security}
+        name="first_aid"
+        value={first_aid}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.studio_security?.map((message, idx) => (
+    {errors?.first_aid?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Special Crew Outfitting */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>25.60</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Special Crew Outfitting</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="outfitting" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="outfitting"
+        value={outfitting}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.outfitting?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Medical/Insurance/Visa Expenses */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>25.70</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Medical/Insurance/Visa Expenses</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="medical_insurance" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="medical_insurance"
+        value={medical_insurance}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.medical_insurance?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
@@ -264,7 +336,7 @@ const Studio = (props) => {
     {/* Other */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>23.60</p>
+    <p className={`${styles.Underline}`}>25.80</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Other</p>
@@ -279,29 +351,29 @@ const Studio = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="studio_other" 
+    <Form.Group controlId="unit_other" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="studio_other"
-        value={studio_other}
+        name="unit_other"
+        value={unit_other}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.studio_other?.map((message, idx) => (
+    {errors?.unit_other?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     </Row>
-    {/* Studio Total */}
+    {/* Unit Total */}
     <Row className="mt-3">
     <Col md={1} >
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
-    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL STUDIO/BACKLOT EXPENSES</p>
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL UNIT EXPENSES</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -313,17 +385,17 @@ const Studio = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="studioTotal" 
+    <Form.Group controlId="unitTotal" 
         className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="studioTotal"
-        value={studioTotal}
+        name="unitTotal"
+        value={unitTotal}
         readOnly
             />
     </Form.Group>
-    {errors?.studioTotal?.map((message, idx) => (
+    {errors?.unitTotal?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
@@ -334,4 +406,4 @@ const Studio = (props) => {
   )
 }
 
-export default Studio
+export default Unit

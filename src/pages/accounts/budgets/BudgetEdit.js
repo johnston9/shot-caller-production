@@ -34,6 +34,8 @@ import Transport from "./budgetsections/Transport";
 import TV from "./budgetsections/TV";
 import ProductionOffice from "./budgetsectionscosts/ProductionOffice";
 import Studio from "./budgetsectionscosts/Studio";
+import Site from "./budgetsectionscosts/Site";
+import Unit from "./budgetsectionscosts/Unit";
 
 function BudgetEdit() {
   const [errors, setErrors] = useState({});
@@ -64,6 +66,8 @@ function BudgetEdit() {
   const [showTV, setShowTV] = useState(false);
   const [showProOff, setShowProOff] = useState(false);
   const [showStudio, setShowStudio] = useState(false);
+  const [showSite, setShowSite] = useState(false);
+  const [showUnit, setShowUnit] = useState(false);
 
   // budget id
   const [budgetId, setBudgetId] = useState("");
@@ -1654,6 +1658,48 @@ function BudgetEdit() {
   // Studio Total postData 
   const [studioTotal, setStudioTotal] = useState(0);
 
+  // SITE EXPENSES ------------------------------
+
+  // site postData
+  const [postDataSite, setPostDataSite] = useState({
+    surveying_scouting: 0,
+    site_rentals: 0,
+    site_power: 0,
+    site_access: 0,
+    site_insurance: 0,
+    repairs_construction: 0,
+    site_security: 0,
+    site_other: 0,
+    police_control: 0,
+  });
+
+  const {surveying_scouting, site_rentals, site_power, site_access,
+    site_insurance, repairs_construction, site_security, site_other,
+    police_control,} = postDataSite;
+
+  // Site Total postData 
+  const [siteTotal, setSiteTotal] = useState(0);
+
+  // UNIT EXPENSES ------------------------------
+
+  // unit postData
+  const [postDataUnit, setPostDataUnit] = useState({
+    catering: 0,
+    craft_expenses: 0,
+    meal_penalty: 0,
+    green_room: 0,
+    first_aid: 0,
+    outfitting: 0,
+    medical_insurance: 0,
+    unit_other: 0,
+  });
+
+  const {catering, craft_expenses, meal_penalty,
+    green_room, first_aid, outfitting,
+    medical_insurance, unit_other,} = postDataUnit;
+
+  const [unitTotal, setUnitTotal] = useState(0);
+
   // TOTALS ABOVE / BELOW / GRAND --------------------------------
 
   // Above the line total --------------------------
@@ -1787,7 +1833,9 @@ function BudgetEdit() {
     const addbelowBcosts = () => {
       setBelowTheLineBCostsTotal(
         parseFloat(proOffTotal || 0) +
-        parseFloat(studioTotal || 0)
+        parseFloat(studioTotal || 0) +
+        parseFloat(siteTotal || 0) +
+        parseFloat(unitTotal || 0)
         )
       }
     const timer = setTimeout(() => {
@@ -1797,7 +1845,7 @@ function BudgetEdit() {
     return () => {
       clearTimeout(timer);
     };
-  }, [ proOffTotal, studioTotal,]);
+  }, [ proOffTotal, studioTotal, siteTotal, unitTotal,]);
 
   // Below the line input box
   // eslint-disable-next-line
@@ -2546,6 +2594,20 @@ function BudgetEdit() {
         setPostDataStudio({studio_rentals, power, carpentry_rentals,
           studio_fx_equipment, studio_security, studio_other,});
         setStudioTotal(studio_total);
+        const {surveying_scouting, site_rentals, site_power, site_access,
+          site_insurance, repairs_construction, site_security, site_other,
+          police_control, site_total,} = data.results[0];
+        setPostDataSite({surveying_scouting, site_rentals, site_power, site_access,
+          site_insurance, repairs_construction, site_security, site_other,
+          police_control,});
+        setSiteTotal(site_total);
+        const {catering, craft_expenses, meal_penalty,
+          green_room, first_aid, outfitting,
+          medical_insurance, unit_other, unit_total,} = data.results[0];
+        setPostDataUnit({catering, craft_expenses, meal_penalty,
+          green_room, first_aid, outfitting,
+          medical_insurance, unit_other,});
+        setUnitTotal(unit_total);
       } catch (err) {
         console.log(err);
       }
@@ -3281,6 +3343,27 @@ function BudgetEdit() {
     formData.append("studio_security", studio_security);
     formData.append("studio_other", studio_other);
     formData.append("studio_total", studioTotal);
+    // site
+    formData.append("surveying_scouting", surveying_scouting);
+    formData.append("site_rentals", site_rentals);
+    formData.append("site_power", site_power);
+    formData.append("site_access", site_access);
+    formData.append("site_insurance", site_insurance);
+    formData.append("repairs_construction", repairs_construction);
+    formData.append("site_security", site_security);
+    formData.append("site_other", site_other);
+    formData.append("police_control", police_control);
+    formData.append("site_total", siteTotal);
+    // unit
+    formData.append("catering", catering);
+    formData.append("craft_expenses", craft_expenses);
+    formData.append("meal_penalty", meal_penalty);
+    formData.append("green_room", green_room);
+    formData.append("first_aid", first_aid);
+    formData.append("outfitting", outfitting);
+    formData.append("medical_insurance", medical_insurance);
+    formData.append("unit_other", unit_other);
+    formData.append("unit_total", unitTotal);
     // formData.append("stars", stars);
 
     try {
@@ -3688,17 +3771,47 @@ function BudgetEdit() {
     </Row>
     </div>
     </Col>
-    {/* Studio/Backlot Rentals */}
+    {/* Studio/Backlot */}
     <Col md={3} className='px-0 mx-0'>
     <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
     <Row>
     <Col md={8}>
     <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
-          onClick={() => setShowStudio(showStudio => !showStudio)} >Studio/Backlot Rentals
+          onClick={() => setShowStudio(showStudio => !showStudio)} >Studio/Backlot Expenses
     </p>
     </Col>
     <Col md={4}>
     <p className="mb-0">{studioTotal} </p>
+    </Col>
+    </Row>
+    </div>
+    </Col>
+    {/* Site Expenses */}
+    <Col md={3} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
+    <Row>
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
+          onClick={() => setShowSite(showSite => !showSite)} >Site Expenses
+    </p>
+    </Col>
+    <Col md={4}>
+    <p className="mb-0">{siteTotal} </p>
+    </Col>
+    </Row>
+    </div>
+    </Col>
+    {/* Unit Expenses */}
+    <Col md={3} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
+    <Row>
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
+          onClick={() => setShowUnit(showUnit => !showUnit)} >Unit Expenses
+    </p>
+    </Col>
+    <Col md={4}>
+    <p className="mb-0">{unitTotal} </p>
     </Col>
     </Row>
     </div>
@@ -4208,6 +4321,28 @@ function BudgetEdit() {
       studioTotal={studioTotal}
       setStudioTotal={setStudioTotal}
       setShow={setShowStudio}  /> 
+    ) }
+    {/* Site */}
+    {!showSite ? (
+      ""
+    ) : (
+      <Site
+      postDataSite={postDataSite}
+      setPostDataSite={setPostDataSite}
+      siteTotal={siteTotal}
+      setSiteTotal={setSiteTotal}
+      setShow={setShowSite}  /> 
+    ) }
+    {/* Unit */}
+    {!showUnit ? (
+      ""
+    ) : (
+      <Unit
+      postDataUnit={postDataUnit}
+      setPostDataUnit={setPostDataUnit}
+      unitTotal={unitTotal}
+      setUnitTotal={setUnitTotal}
+      setShow={setShowUnit}  /> 
     ) }
     {/* buttons */}
     <Row>

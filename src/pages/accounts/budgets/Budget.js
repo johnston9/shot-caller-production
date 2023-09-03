@@ -315,6 +315,14 @@ const Budget = (props) => {
     // Studio
     studio_rentals, power, carpentry_rentals, studio_total,
     studio_fx_equipment, studio_security, studio_other,
+    // Site
+    surveying_scouting, site_rentals, site_power, site_access,
+    site_insurance, repairs_construction, site_security, site_other,
+    police_control, site_total,
+    // unit
+    catering, craft_expenses, meal_penalty,
+    green_room, first_aid, outfitting,
+    medical_insurance, unit_other, unit_total,
 
     } = budget;
 
@@ -5061,8 +5069,387 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{studio_rentals || 0} </p>
     </Col>
     </Row>
+    {/* Power */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>23.20</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Power</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{power || 0} </p>
+    </Col>
+    </Row>
+    {/* Carpentry Shop Rentals */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>23.30</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Carpentry Shop Rentals</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{carpentry_rentals || 0} </p>
+    </Col>
+    </Row>
+    {/* Special Effects Equipment */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>23.40</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Special Effects Equipment</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{studio_fx_equipment || 0} </p>
+    </Col>
+    </Row>
+    {/* Security */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>23.50</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Security</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{studio_security || 0} </p>
+    </Col>
+    </Row>
+    {/* Other */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>23.60</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Other - Studio</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{studio_other || 0} </p>
+    </Col>
+    </Row>
+    {/* Studio Total */}
+    <Row className='mt-3' >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    <p></p>
+    </Col>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL STUDIO/BACKLOT EXPENSES </p>
+    </Col>
+    <Col md={3} >
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline} mb-0`}>{studio_total || 0}</p>
+    </Col>
+    </Row>
     </div>
-    
+    {/* SITE ------------------------------------------------- */}
+    <div className='mt-5'>
+    <Row>
+    <Col xs={1}>
+    <p className='mb-2'>24.00</p>
+    </Col>
+    <Col xs={10}>
+    <p className={ `${styles.BoldBlack} mb-2`}>SITE EXPENSES</p>
+    </Col>
+    </Row>
+    {/* Titles */}
+    <Row className={ `${styles.Overview} mb-2 py-1`} >
+    <Col md={1} >
+    <p className="mb-0">ACCT</p>
+    </Col>
+    <Col md={5} >
+    <p className="mb-0">Description</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">#</p>
+    </Col>
+    <Col className="px-0 mx-0" md={1} >
+    <p># Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Price</p>
+    </Col>
+    <Col md={2} >
+    <p className="mb-0">Total</p>
+    </Col>
+    </Row>
+    {/* Surveying/Scouting */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>24.10</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Surveying/Scouting Expences</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{surveying_scouting || 0} </p>
+    </Col>
+    </Row>
+    {/* Site Rentals */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>24.20</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Site Rentals</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{site_rentals || 0} </p>
+    </Col>
+    </Row>
+    {/* Site Power */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>24.30</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Site Power</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{site_power || 0} </p>
+    </Col>
+    </Row>
+    {/* Site Access */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>24.40</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Site Access</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{site_access || 0} </p>
+    </Col>
+    </Row>
+    {/* Site Insurance */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>24.50</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Site Insurance</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{site_insurance || 0} </p>
+    </Col>
+    </Row>
+    {/* Repairs/Construction */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>24.60</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Repairs/Construction</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{repairs_construction || 0} </p>
+    </Col>
+    </Row>
+    {/* Security */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>24.70</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Security</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{site_security || 0} </p>
+    </Col>
+    </Row>
+    {/* Police Control */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>24.80</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Police Control</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{police_control || 0} </p>
+    </Col>
+    </Row>
+    {/* Other */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>24.90</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Other</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{site_other || 0} </p>
+    </Col>
+    </Row>
+    {/* Site Total */}
+    <Row className='mt-3' >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    <p></p>
+    </Col>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL SITE EXPENSES </p>
+    </Col>
+    <Col md={3} >
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline} mb-0`}>{site_total || 0}</p>
+    </Col>
+    </Row>
+    </div>   
+    {/* UNIT ------------------------------------------------- */}
+    <div className='mt-5'>
+    <Row>
+    <Col xs={1}>
+    <p className='mb-2'>25.00</p>
+    </Col>
+    <Col xs={10}>
+    <p className={ `${styles.BoldBlack} mb-2`}>UNIT EXPENSES</p>
+    </Col>
+    </Row>
+    {/* Titles */}
+    <Row className={ `${styles.Overview} mb-2 py-1`} >
+    <Col md={1} >
+    <p className="mb-0">ACCT</p>
+    </Col>
+    <Col md={5} >
+    <p className="mb-0">Description</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">#</p>
+    </Col>
+    <Col className="px-0 mx-0" md={1} >
+    <p># Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Price</p>
+    </Col>
+    <Col md={2} >
+    <p className="mb-0">Total</p>
+    </Col>
+    </Row>
+    {/* Catering */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>25.10</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Catering</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{catering || 0} </p>
+    </Col>
+    </Row>
+    {/* Craft Expenses */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>25.20</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Craft Expenses</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{craft_expenses || 0} </p>
+    </Col>
+    </Row>
+    {/* Meal Penalty */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>25.30</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Meal Penalty</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{meal_penalty || 0} </p>
+    </Col>
+    </Row>
+    {/* Support Area/Green Room */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>25.40</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Support Area/Green Room</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{green_room || 0} </p>
+    </Col>
+    </Row>
+    {/* First Aid */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>25.50</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>First Aid</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{first_aid || 0} </p>
+    </Col>
+    </Row>
+    {/* Special Crew Outfitting */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>25.60</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Special Crew Outfitting</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{outfitting || 0} </p>
+    </Col>
+    </Row>
+    {/* Medical/Insurance/Visa Expenses */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>25.70</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Medical/Insurance/Visa Expenses</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{medical_insurance || 0} </p>
+    </Col>
+    </Row>
+    {/* Other */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>25.80</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Other</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{unit_other || 0} </p>
+    </Col>
+    </Row>
+    {/* Unit Total */}
+    <Row className='mt-3' >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    <p></p>
+    </Col>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL UNIT EXPENSES </p>
+    </Col>
+    <Col md={3} >
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline} mb-0`}>{unit_total || 0}</p>
+    </Col>
+    </Row>
+    </div>
+
     </div>
     {/* END PRODUCTION B */}
     </div>

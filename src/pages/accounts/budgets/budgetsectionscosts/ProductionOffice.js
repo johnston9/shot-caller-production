@@ -1,4 +1,4 @@
-/* Component in the Budget component to edit Stars/Music */
+/* Component in the Budget component to edit Production Office */
 import React, { useEffect, useState } from "react";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
@@ -34,8 +34,7 @@ const ProductionOffice = (props) => {
         parseFloat(office_supplies || 0) +
         parseFloat(phones_net || 0) +
         parseFloat(courier_postage || 0) +
-        parseFloat(office_other || 0) +
-        parseFloat(fringes_taxes_music || 0)
+        parseFloat(office_other || 0)
        )
     }
     const timer = setTimeout(() => {
