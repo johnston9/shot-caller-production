@@ -323,6 +323,9 @@ const Budget = (props) => {
     catering, craft_expenses, meal_penalty,
     green_room, first_aid, outfitting,
     medical_insurance, unit_other, unit_total,
+    // travel living
+    fares, accomatation_hotels, per_diems, taxis_limos,
+    shipping, other_trav_liv, customs_brokerage, traliv_total,
 
     } = budget;
 
@@ -5446,6 +5449,140 @@ const Budget = (props) => {
     </Col>
     <Col md={2} >
     <p className={`${styles.Underline} mb-0`}>{unit_total || 0}</p>
+    </Col>
+    </Row>
+    </div>
+    {/* TRAVEL & lIVING -------------------------------------- */}
+    <div className='mt-5'>
+    <Row>
+    <Col xs={1}>
+    <p className='mb-2'>26.00</p>
+    </Col>
+    <Col xs={10}>
+    <p className={ `${styles.BoldBlack} mb-2`}>TRAVEL & lIVING</p>
+    </Col>
+    </Row>
+    {/* Titles */}
+    <Row className={ `${styles.Overview} mb-2 py-1`} >
+    <Col md={1} >
+    <p className="mb-0">ACCT</p>
+    </Col>
+    <Col md={5} >
+    <p className="mb-0">Description</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">#</p>
+    </Col>
+    <Col className="px-0 mx-0" md={1} >
+    <p># Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Price</p>
+    </Col>
+    <Col md={2} >
+    <p className="mb-0">Total</p>
+    </Col>
+    </Row>
+    {/* Fares */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>26.10</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Fares</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{fares || 0} </p>
+    </Col>
+    </Row>
+    {/* Accomatation/Hotels */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>26.20</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Accomatation/Hotels</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{accomatation_hotels || 0} </p>
+    </Col>
+    </Row>
+    {/* Per diems */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>26.30</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Per diems</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{per_diems || 0} </p>
+    </Col>
+    </Row>
+    {/* Taxis/Limousines */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>26.40</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Taxis/Limousines</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{taxis_limos || 0} </p>
+    </Col>
+    </Row>
+    {/* Shipping */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>26.50</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Shipping</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{shipping || 0} </p>
+    </Col>
+    </Row>
+    {/* Customs Brokerage */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>26.60</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Customs Brokerage</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{customs_brokerage || 0} </p>
+    </Col>
+    </Row>
+    {/* Other */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>27.60</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Other</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{other_trav_liv || 0} </p>
+    </Col>
+    </Row>
+    {/* TRAVEL & LIVING Total */}
+    <Row className='mt-3' >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    <p></p>
+    </Col>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL TRAVEL & LIVING </p>
+    </Col>
+    <Col md={3} >
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline} mb-0`}>{traliv_total || 0}</p>
     </Col>
     </Row>
     </div>

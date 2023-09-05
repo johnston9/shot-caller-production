@@ -35,6 +35,7 @@ import ProductionOffice from "./budgetsectionscosts/ProductionOffice";
 import Studio from "./budgetsectionscosts/Studio";
 import Site from "./budgetsectionscosts/Site";
 import Unit from "./budgetsectionscosts/Unit";
+import TravelLiving from "./budgetsectionscosts/TravelLiving";
 
 function BudgetCreate() {
   const [errors, setErrors] = useState({});
@@ -67,6 +68,8 @@ function BudgetCreate() {
   const [showStudio, setShowStudio] = useState(false);
   const [showSite, setShowSite] = useState(false);
   const [showUnit, setShowUnit] = useState(false);
+  const [showTraLiv, setShowTraLiv] = useState(false);
+  const [showTransport, setShowTransport] = useState(false);
 
   // INFO / LENGTH -------------------------
   // Info postData 
@@ -1680,22 +1683,50 @@ function BudgetCreate() {
 
   const [unitTotal, setUnitTotal] = useState(0);
 
-  // Travel and Lining EXPENSES ------------------------------
+  // TRAVEL & LIVING -----------------------------------
 
-  // travel and Lining postData
+  // travel and living postData
   const [postDataTraLiv, setPostDataTraLiv] = useState({
     fares: 0,
     accomatation_hotels: 0,
     per_diems: 0,
     taxis_limos: 0,
     shipping: 0,
-    other_travLiv: 0,
+    other_trav_liv: 0,
+    customs_brokerage: 0,
   });
 
   const {fares, accomatation_hotels, per_diems, taxis_limos,
-    shipping, other_travLiv,} = postDataTraLiv;
+    shipping, other_trav_liv, customs_brokerage,} = postDataTraLiv;
 
-  const [tralivTotal, seTralivTTotal] = useState(0);
+  const [tralivTotal, setTralivTotal] = useState(0);
+
+  // TRANSPORTATION --------------------------------------
+
+  // Transport postData
+  const [postDataTransportation, setPostDataTransportation] = useState({
+    production_cars: 0,
+    trucks_vans: 0,
+    buses: 0,
+    motorhomes: 0,
+    talent_cars: 0,
+    support_vehicles: 0,
+    boats_planes: 0,
+    fuel: 0,
+    repairs: 0,
+    taxis: 0,
+    parking: 0,
+    licenses_permits: 0,
+    brokerage_insurance: 0,
+    other_transport: 0,
+  });
+
+  const {production_cars, trucks_vans, buses, motorhomes,
+    talent_cars, support_vehicles, boats_planes, fuel, repairs, taxis,
+    parking, licenses_permits, brokerage_insurance, other_transport,
+  } = postDataTransportation
+
+  const [transportTotal, setTransportTotal] = useState(0);
 
   // TOTALS ABOVE / BELOW / GRAND -----------------------------
 
@@ -1834,7 +1865,8 @@ function BudgetCreate() {
         parseFloat(proOffTotal || 0) +
         parseFloat(studioTotal || 0) +
         parseFloat(siteTotal || 0) +
-        parseFloat(unitTotal || 0)
+        parseFloat(unitTotal || 0) +
+        parseFloat(tralivTotal || 0)
         )
       }
     const timer = setTimeout(() => {
@@ -1844,7 +1876,7 @@ function BudgetCreate() {
     return () => {
       clearTimeout(timer);
     };
-  }, [ proOffTotal, studioTotal, siteTotal, unitTotal,]);
+  }, [ proOffTotal, studioTotal, siteTotal, unitTotal, tralivTotal,]);
 
   // Below the line input box
   // eslint-disable-next-line
@@ -2740,6 +2772,31 @@ function BudgetCreate() {
     formData.append("medical_insurance", medical_insurance);
     formData.append("unit_other", unit_other);
     formData.append("unit_total", unitTotal);
+    // travel & living
+    formData.append("fares", fares);
+    formData.append("accomatation_hotels", accomatation_hotels);
+    formData.append("per_diems", per_diems);
+    formData.append("taxis_limos", taxis_limos);
+    formData.append("shipping", shipping);
+    formData.append("customs_brokerage", customs_brokerage);
+    formData.append("other_trav_liv", other_trav_liv);
+    formData.append("traliv_total", tralivTotal);
+    // Transport
+    formData.append("production_cars", production_cars);
+    formData.append("trucks_vans", trucks_vans);
+    formData.append("buses", buses);
+    formData.append("motorhomes", motorhomes);
+    formData.append("talent_cars", talent_cars);
+    formData.append("support_vehicles", support_vehicles);
+    formData.append("boats_planes", boats_planes);
+    formData.append("fuel", fuel);
+    formData.append("repairs", repairs);
+    formData.append("taxis", taxis);
+    formData.append("parking", parking);
+    formData.append("licenses_permits", licenses_permits);
+    formData.append("brokerage_insurance", brokerage_insurance);
+    formData.append("other_transport", other_transport);
+    formData.append("transport_total", transportTotal);
     // formData.append("stars", stars);
 
     try {
@@ -3188,6 +3245,36 @@ function BudgetCreate() {
     </Col>
     <Col md={4}>
     <p className="mb-0">{unitTotal} </p>
+    </Col>
+    </Row>
+    </div>
+    </Col>
+    {/* travel and living */}
+    <Col md={3} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
+    <Row>
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
+          onClick={() => setShowTraLiv(showTraLiv => !showTraLiv)} >Travel & Living
+    </p>
+    </Col>
+    <Col md={4}>
+    <p className="mb-0">{tralivTotal} </p>
+    </Col>
+    </Row>
+    </div>
+    </Col>
+    {/* Transportation */}
+    <Col md={3} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
+    <Row>
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
+          onClick={() => setShowTraLiv(showTraLiv => !showTraLiv)} >Transportation
+    </p>
+    </Col>
+    <Col md={4}>
+    <p className="mb-0">{transportTotal} </p>
     </Col>
     </Row>
     </div>
@@ -3721,6 +3808,17 @@ function BudgetCreate() {
       unitTotal={unitTotal}
       setUnitTotal={setUnitTotal}
       setShow={setShowUnit}  /> 
+    ) }
+    {/* travel and living */}
+    {!showTraLiv ? (
+      ""
+    ) : (
+      <TravelLiving
+      postDataTraLiv={postDataTraLiv}
+      setPostDataTraLiv={setPostDataTraLiv}
+      tralivTotal={tralivTotal}
+      setTralivTotal={setTralivTotal}
+      setShow={setShowTraLiv}  /> 
     ) }
     {/* buttons */}
     <Row>

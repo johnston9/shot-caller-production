@@ -1,4 +1,4 @@
-/* Component in the Budget component to edit Unit */
+/* Component in the Budget component to edit travel and living */
 import React, { useEffect, useState } from "react";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
@@ -6,58 +6,56 @@ import Col from "react-bootstrap/Col";
 import styles from "../../../../styles/Account.module.css";
 import Alert from "react-bootstrap/Alert";
 
-const Unit = (props) => {
+const TravelLiving = (props) => {
   // eslint-disable-next-line
   const [errors, setErrors] = useState({});
 
-  const {postDataUnit, setPostDataUnit,
-    unitTotal, setUnitTotal, setShow} = props;
+  const {postDataTraLiv, setPostDataTraLiv,
+    tralivTotal, setTralivTotal, setShow} = props;
 
-  const {catering, craft_expenses, meal_penalty,
-        green_room, first_aid, outfitting,
-        medical_insurance, unit_other,} = postDataUnit;
+  const {fares, accomatation_hotels, per_diems, taxis_limos,
+        shipping, other_trav_liv, customs_brokerage,} = postDataTraLiv;
 
   // handleChange 
   const handleChange = (event) => {
-    setPostDataUnit({
-    ...postDataUnit,
+    setPostDataTraLiv({
+    ...postDataTraLiv,
     [event.target.name]: parseFloat(event.target.value || 0 ),
     });
   }; 
 
-  // function to add all Unit on change
+  // function to add all Travel & Living on change
   useEffect(() => {
-    const addUnit = () => {
-        setUnitTotal(
-        parseFloat(catering || 0) +
-        parseFloat(craft_expenses || 0) +
-        parseFloat(meal_penalty || 0) +
-        parseFloat(green_room || 0) +
-        parseFloat(first_aid || 0) +
-        parseFloat(outfitting || 0) +
-        parseFloat(medical_insurance || 0) +
-        parseFloat(unit_other || 0) 
+    const addTraliv = () => {
+        setTralivTotal(
+        parseFloat(fares || 0) +
+        parseFloat(accomatation_hotels || 0) +
+        parseFloat(per_diems || 0) +
+        parseFloat(taxis_limos || 0) +
+        parseFloat(shipping || 0) +
+        parseFloat(other_trav_liv || 0) +
+        parseFloat(customs_brokerage || 0) 
        )
     }
     const timer = setTimeout(() => {
-        addUnit();
+        addTraliv();
     }, 1000);
 
     return () => {
       clearTimeout(timer);
     };
 
-  }, [catering, craft_expenses, meal_penalty, green_room, 
-    first_aid, outfitting, medical_insurance, unit_other,]);
+  }, [fares, accomatation_hotels, per_diems, taxis_limos,
+    shipping, other_trav_liv, customs_brokerage,]);
 
   return (
     <div className="mt-5">
     <Row >
     <Col md={1} >
-    <p className="mb-2">25.00</p>
+    <p className="mb-2">26.00</p>
     </Col>
     <Col md={9} >
-    <p className={ `${styles.BoldBlack} mb-2`}>Unit Expenses</p>
+    <p className={ `${styles.BoldBlack} mb-2`}>Travel & Living</p>
     </Col>
     <Col md={2}>
     <span className={`${styles.Close }`} 
@@ -88,13 +86,13 @@ const Unit = (props) => {
     <p className="mb-0">Total</p>
     </Col>
     </Row>
-    {/* Catering */}
+    {/* Fares */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>25.10</p>
+    <p className={`${styles.Underline}`}>26.10</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Catering</p>
+    <p className={`${styles.Underline}`}>Fares</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -106,30 +104,30 @@ const Unit = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="catering" 
+    <Form.Group controlId="fares" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="catering"
-        value={catering}
+        name="fares"
+        value={fares}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.catering?.map((message, idx) => (
+    {errors?.fares?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     </Row>
-    {/* Craft Expenses */}
+    {/* Accomatation/Hotels */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>25.20</p>
+    <p className={`${styles.Underline}`}>26.20</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Craft Expenses</p>
+    <p className={`${styles.Underline}`}>Accomatation/Hotels</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -141,30 +139,30 @@ const Unit = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="craft_expenses" 
+    <Form.Group controlId="accomatation_hotels" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="craft_expenses"
-        value={craft_expenses}
+        name="accomatation_hotels"
+        value={accomatation_hotels}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.craft_expenses?.map((message, idx) => (
+    {errors?.accomatation_hotels?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     </Row>
-    {/* Meal Penalty */}
+    {/* Per diems */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>25.30</p>
+    <p className={`${styles.Underline}`}>26.30</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Meal Penalty</p>
+    <p className={`${styles.Underline}`}>Per diems</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -176,30 +174,30 @@ const Unit = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="meal_penalty" 
+    <Form.Group controlId="per_diems" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="meal_penalty"
-        value={meal_penalty}
+        name="per_diems"
+        value={per_diems}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.meal_penalty?.map((message, idx) => (
+    {errors?.per_diems?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     </Row>
-    {/* Support Area/Green Room */}
+    {/* Taxis/Limousines */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>25.40</p>
+    <p className={`${styles.Underline}`}>26.40</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Support Area/Green Room</p>
+    <p className={`${styles.Underline}`}>Taxis/Limousines</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -211,30 +209,30 @@ const Unit = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="green_room" 
+    <Form.Group controlId="taxis_limos" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="green_room"
-        value={green_room}
+        name="taxis_limos"
+        value={taxis_limos}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.green_room?.map((message, idx) => (
+    {errors?.taxis_limos?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     </Row>
-    {/* First Aid */}
+    {/* Shipping */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>25.50</p>
+    <p className={`${styles.Underline}`}>26.50</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>First Aid</p>
+    <p className={`${styles.Underline}`}>Shipping</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -246,30 +244,30 @@ const Unit = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="first_aid" 
+    <Form.Group controlId="shipping" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="first_aid"
-        value={first_aid}
+        name="shipping"
+        value={shipping}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.first_aid?.map((message, idx) => (
+    {errors?.shipping?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     </Row>
-    {/* Special Crew Outfitting */}
+    {/* Customs Brokerage */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>25.60</p>
+    <p className={`${styles.Underline}`}>26.60</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Special Crew Outfitting</p>
+    <p className={`${styles.Underline}`}>Customs Brokerage</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -281,52 +279,17 @@ const Unit = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="outfitting" 
+    <Form.Group controlId="customs_brokerage" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="outfitting"
-        value={outfitting}
+        name="customs_brokerage"
+        value={customs_brokerage}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.outfitting?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    </Row>
-    {/* Medical/Insurance/Visa Expenses */}
-    <Row>
-    <Col md={1} >
-    <p className={`${styles.Underline}`}>25.70</p>
-    </Col>
-    <Col md={6} >
-    <p className={`${styles.Underline}`}>Medical/Insurance/Visa Expenses</p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={2} >
-    <Form.Group controlId="medical_insurance" 
-        className={`${styles.Width95} text-center mb-1`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="medical_insurance"
-        value={medical_insurance}
-        onChange={handleChange}
-            />
-    </Form.Group>
-    {errors?.medical_insurance?.map((message, idx) => (
+    {errors?.customs_brokerage?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
@@ -336,7 +299,7 @@ const Unit = (props) => {
     {/* Other */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>25.80</p>
+    <p className={`${styles.Underline}`}>26.70</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Other</p>
@@ -351,29 +314,29 @@ const Unit = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="unit_other" 
+    <Form.Group controlId="other_trav_liv" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="unit_other"
-        value={unit_other}
+        name="other_trav_liv"
+        value={other_trav_liv}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.unit_other?.map((message, idx) => (
+    {errors?.other_trav_liv?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     </Row>
-    {/* Unit Total */}
+    {/* TRAVEL & LIVING Total */}
     <Row className="mt-3">
     <Col md={1} >
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
-    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL UNIT EXPENSES</p>
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL TRAVEL & LIVING</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -385,17 +348,17 @@ const Unit = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="unitTotal" 
+    <Form.Group controlId="tralivTotal" 
         className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="unitTotal"
-        value={unitTotal}
+        name="tralivTotal"
+        value={tralivTotal}
         readOnly
             />
     </Form.Group>
-    {errors?.unitTotal?.map((message, idx) => (
+    {errors?.tralivTotal?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
@@ -406,4 +369,4 @@ const Unit = (props) => {
   )
 }
 
-export default Unit
+export default TravelLiving
