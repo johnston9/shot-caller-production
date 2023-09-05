@@ -1700,6 +1700,23 @@ function BudgetEdit() {
 
   const [unitTotal, setUnitTotal] = useState(0);
 
+  // Travel and Lining EXPENSES ------------------------------
+
+  // travel and Lining postData
+  const [postDataTraLiv, setPostDataTraLiv] = useState({
+    fares: 0,
+    accomatation_hotels: 0,
+    per_diems: 0,
+    taxis_limos: 0,
+    shipping: 0,
+    other_travLiv: 0,
+  });
+
+  const {fares, accomatation_hotels, per_diems, taxis_limos,
+    shipping, other_travLiv,} = postDataTraLiv;
+
+  const [tralivTotal, seTralivTTotal] = useState(0);
+
   // TOTALS ABOVE / BELOW / GRAND --------------------------------
 
   // Above the line total --------------------------
