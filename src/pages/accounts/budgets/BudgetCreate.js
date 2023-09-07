@@ -36,6 +36,7 @@ import Studio from "./budgetsectionscosts/Studio";
 import Site from "./budgetsectionscosts/Site";
 import Unit from "./budgetsectionscosts/Unit";
 import TravelLiving from "./budgetsectionscosts/TravelLiving";
+import ConstructionMat from "./budgetsectionscosts/ConstructionMat";
 
 function BudgetCreate() {
   const [errors, setErrors] = useState({});
@@ -70,6 +71,7 @@ function BudgetCreate() {
   const [showUnit, setShowUnit] = useState(false);
   const [showTraLiv, setShowTraLiv] = useState(false);
   const [showTransport, setShowTransport] = useState(false);
+  const [showConMat, setShowConMat] = useState(false);
 
   // INFO / LENGTH -------------------------
   // Info postData 
@@ -1728,6 +1730,26 @@ function BudgetCreate() {
 
   const [transportTotal, setTransportTotal] = useState(0);
 
+  // CONSTRUCTION MATERIAL ------------------------------
+
+  // Construction Material postData
+  const [postDataConstructionMat, setPostDataConstructionMat] = useState({
+    rentals_carpentry: 0,
+    carpentry_purchases: 0,
+    painting_rentals: 0,
+    painting_purchases: 0,
+    backdrops_murals: 0,
+    scaffolding: 0,
+    warehouse_rental: 0,
+    construction_other: 0,
+  });
+
+  const {rentals_carpentry, carpentry_purchases, painting_rentals,
+    painting_purchases, backdrops_murals, construction_other,
+    scaffolding, warehouse_rental,} = postDataConstructionMat;
+
+  const [constructionMatTotal, setConstructionMatTotal] = useState(0);
+
   // TOTALS ABOVE / BELOW / GRAND -----------------------------
 
   // Above the line total --------------------------
@@ -1866,7 +1888,9 @@ function BudgetCreate() {
         parseFloat(studioTotal || 0) +
         parseFloat(siteTotal || 0) +
         parseFloat(unitTotal || 0) +
-        parseFloat(tralivTotal || 0)
+        parseFloat(tralivTotal || 0) +
+        parseFloat(transportTotal || 0) +
+        parseFloat(constructionMatTotal || 0)
         )
       }
     const timer = setTimeout(() => {
@@ -1876,7 +1900,8 @@ function BudgetCreate() {
     return () => {
       clearTimeout(timer);
     };
-  }, [ proOffTotal, studioTotal, siteTotal, unitTotal, tralivTotal,]);
+  }, [ proOffTotal, studioTotal, siteTotal, unitTotal, tralivTotal,
+    transportTotal, constructionMatTotal,]);
 
   // Below the line input box
   // eslint-disable-next-line
@@ -2797,6 +2822,16 @@ function BudgetCreate() {
     formData.append("brokerage_insurance", brokerage_insurance);
     formData.append("other_transport", other_transport);
     formData.append("transport_total", transportTotal);
+    // Construction Material
+    formData.append("rentals_carpentry", rentals_carpentry);
+    formData.append("carpentry_purchases", carpentry_purchases);
+    formData.append("painting_rentals", painting_rentals);
+    formData.append("painting_purchases", painting_purchases);
+    formData.append("backdrops_murals", backdrops_murals);
+    formData.append("scaffolding", scaffolding);
+    formData.append("warehouse_rental", warehouse_rental);
+    formData.append("construction_other", construction_other);
+    formData.append("constructionmat_total", constructionMatTotal);
     // formData.append("stars", stars);
 
     try {
@@ -3275,6 +3310,21 @@ function BudgetCreate() {
     </Col>
     <Col md={4}>
     <p className="mb-0">{transportTotal} </p>
+    </Col>
+    </Row>
+    </div>
+    </Col>
+    {/* Construction Material */}
+    <Col md={3} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
+    <Row>
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
+          onClick={() => setShowConMat(showConMat => !showConMat)} >Construction Material
+    </p>
+    </Col>
+    <Col md={4}>
+    <p className="mb-0">{constructionMatTotal} </p>
     </Col>
     </Row>
     </div>
@@ -3819,6 +3869,28 @@ function BudgetCreate() {
       tralivTotal={tralivTotal}
       setTralivTotal={setTralivTotal}
       setShow={setShowTraLiv}  /> 
+    ) }
+    {/* Transport */}
+    {!showTransport ? (
+      ""
+    ) : (
+      <Transportation
+      postDataTransportation={postDataTransportation}
+      setPostDataTransportation={setPostDataTransportation}
+      transportTotal={transportTotal}
+      setTransportTotal={setTransportTotal}
+      setShow={setShowTransport}  /> 
+    ) }
+    {/* Construction Material */}
+    {!showConMat ? (
+      ""
+    ) : (
+      <ConstructionMat
+      postDataConstructionMat={postDataConstructionMat}
+      setPostDataConstructionMat={setPostDataConstructionMat}
+      constructionMatTotal={constructionMatTotal}
+      setConstructionMatTotal={setConstructionMatTotal}
+      setShow={setShowConMat}  /> 
     ) }
     {/* buttons */}
     <Row>
