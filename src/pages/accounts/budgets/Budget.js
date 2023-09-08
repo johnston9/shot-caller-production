@@ -334,6 +334,12 @@ const Budget = (props) => {
     rentals_carpentry, carpentry_purchases, painting_rentals,
     painting_purchases, backdrops_murals, construction_other,
     scaffolding, warehouse_rental, constructionmat_total,
+    // art supplies
+    drawing_supplies, drawing_equipment, tech, artSup_total,
+    stock_prints_processing, blueprinting, other_art,
+    // dressing
+    dress_rentals, dress_purchases, dress_manufacture,
+    dress_repairs_replacements, other_dressing, dressing_total,
 
     } = budget;
 
@@ -5856,6 +5862,274 @@ const Budget = (props) => {
     </Col>
     <Col md={2}>
     <p className={`${styles.Underline}`}>{rentals_carpentry || 0} </p>
+    </Col>
+    </Row>
+    {/* Carpentry Purchases */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>28.20</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Carpentry Purchases</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{carpentry_purchases || 0} </p>
+    </Col>
+    </Row>
+    {/* Painting Rentals */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>28.30</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Painting Rentals</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{painting_rentals || 0} </p>
+    </Col>
+    </Row>
+    {/* Painting Purchases */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>28.40</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Painting Purchases</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{painting_purchases || 0} </p>
+    </Col>
+    </Row>
+    {/* Backdrops/Murals */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>28.50</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Backdrops/Murals</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{backdrops_murals || 0} </p>
+    </Col>
+    </Row>
+    {/* Scaffolding */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>28.60</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Scaffolding</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{scaffolding || 0} </p>
+    </Col>
+    </Row>
+    {/* Warehouse Rental */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>28.70</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Warehouse Rental</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{warehouse_rental || 0} </p>
+    </Col>
+    </Row>
+    {/* Other */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>28.80</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Other</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{construction_other || 0} </p>
+    </Col>
+    </Row>
+    {/* CONSTRUCTION MATERIAL Total */}
+    <Row className='mt-3' >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    <p></p>
+    </Col>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL CONSTRUCTION MATERIAL </p>
+    </Col>
+    <Col md={3} >
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline} mb-0`}>{constructionmat_total || 0}</p>
+    </Col>
+    </Row>
+    </div>
+    {/* ART SUPPLIES ----------------------------------------- */}
+    <div className='mt-5'>
+    <Row>
+    <Col xs={1}>
+    <p className='mb-2'>29.00</p>
+    </Col>
+    <Col xs={10}>
+    <p className={ `${styles.BoldBlack} mb-2`}>ART SUPPLIES</p>
+    </Col>
+    </Row>
+    {/* Titles */}
+    <Row className={ `${styles.Overview} mb-2 py-1`} >
+    <Col md={1} >
+    <p className="mb-0">ACCT</p>
+    </Col>
+    <Col md={5} >
+    <p className="mb-0">Description</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">#</p>
+    </Col>
+    <Col className="px-0 mx-0" md={1} >
+    <p># Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Price</p>
+    </Col>
+    <Col md={2} >
+    <p className="mb-0">Total</p>
+    </Col>
+    </Row>
+    {/* Drawing Supplies */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>29.10</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Drawing Supplies</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{drawing_supplies || 0} </p>
+    </Col>
+    </Row>
+    {/* Drawing Equipment */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>29.20</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Drawing Equipment</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{drawing_equipment || 0} </p>
+    </Col>
+    </Row>
+    {/* Tech/Software */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>29.30</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Tech/Software</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{tech || 0} </p>
+    </Col>
+    </Row>
+    {/* Stock/Prints/Processing */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>29.40</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Stock/Prints/Processing</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{stock_prints_processing || 0} </p>
+    </Col>
+    </Row>
+    {/* Blueprints */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>29.50</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Blueprints</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{blueprinting || 0} </p>
+    </Col>
+    </Row>
+    {/* Other */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>29.60</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Other</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{other_art || 0} </p>
+    </Col>
+    </Row>
+    {/* ART SUPPLIES Total */}
+    <Row className='mt-3' >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    <p></p>
+    </Col>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL ART SUPPLIES </p>
+    </Col>
+    <Col md={3} >
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline} mb-0`}>{artSup_total || 0}</p>
+    </Col>
+    </Row>
+    </div>
+    {/* SET DRESSING ----------------------------------------- */}
+    <div className='mt-5'>
+    <Row>
+    <Col xs={1}>
+    <p className='mb-2'>30.00</p>
+    </Col>
+    <Col xs={10}>
+    <p className={ `${styles.BoldBlack} mb-2`}>SET DRESSING</p>
+    </Col>
+    </Row>
+    {/* Titles */}
+    <Row className={ `${styles.Overview} mb-2 py-1`} >
+    <Col md={1} >
+    <p className="mb-0">ACCT</p>
+    </Col>
+    <Col md={5} >
+    <p className="mb-0">Description</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">#</p>
+    </Col>
+    <Col className="px-0 mx-0" md={1} >
+    <p># Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Price</p>
+    </Col>
+    <Col md={2} >
+    <p className="mb-0">Total</p>
+    </Col>
+    </Row>
+    {/* Rentals */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>30.10</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Rentals</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{dress_rentals || 0} </p>
     </Col>
     </Row>
     </div>

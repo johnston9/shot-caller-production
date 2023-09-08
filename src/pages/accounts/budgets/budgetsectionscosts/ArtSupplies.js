@@ -1,4 +1,4 @@
-/* Component in the Budget component to edit Construction Material */
+/* Component in the Budget component to edit Art Supplies */
 import React, { useEffect, useState } from "react";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
@@ -6,59 +6,56 @@ import Col from "react-bootstrap/Col";
 import styles from "../../../../styles/Account.module.css";
 import Alert from "react-bootstrap/Alert";
 
-const ConstructionMat = (props) => {
+const ArtSupplies = (props) => {
   // eslint-disable-next-line
   const [errors, setErrors] = useState({});
 
-  const {postDataConstructionMat,  setPostDataConstructionMat,
-    constructionMatTotal, setConstructionMatTotal, setShow,} = props;
+  const {postDataArtSup, setPostDataArtSup,
+    artSupTotal, setArtSupTotal, setShow} = props;
 
-  const {rentals_carpentry, carpentry_purchases, painting_rentals,
-        painting_purchases, backdrops_murals, construction_other,
-        scaffolding, warehouse_rental,} = postDataConstructionMat;
+  const {drawing_supplies, drawing_equipment, tech,
+        stock_prints_processing, blueprinting, other_art,
+  } = postDataArtSup;
 
   // handleChange 
   const handleChange = (event) => {
-    setPostDataConstructionMat({
-    ...postDataConstructionMat,
+    setPostDataArtSup({
+    ...postDataArtSup,
     [event.target.name]: parseFloat(event.target.value || 0 ),
     });
   };
 
-  // function to add all Construction Material on change
+  // function to add all Art Supplies on change
   useEffect(() => {
-    const addConmat = () => {
-        setConstructionMatTotal(
-        parseFloat(rentals_carpentry || 0) +
-        parseFloat(carpentry_purchases || 0) +
-        parseFloat(painting_rentals || 0) +
-        parseFloat(painting_purchases || 0) +
-        parseFloat(backdrops_murals || 0) +
-        parseFloat(scaffolding || 0) +
-        parseFloat(warehouse_rental || 0) +
-        parseFloat(construction_other || 0)
+    const addArtsup = () => {
+        setArtSupTotal(
+        parseFloat(drawing_supplies || 0) +
+        parseFloat(drawing_equipment || 0) +
+        parseFloat(tech || 0) +
+        parseFloat(stock_prints_processing || 0) +
+        parseFloat(blueprinting || 0) +
+        parseFloat(other_art || 0)
        )
     }
     const timer = setTimeout(() => {
-        addConmat();
+        addArtsup();
     }, 1000);
 
     return () => {
       clearTimeout(timer);
     };
 
-  }, [rentals_carpentry, , carpentry_purchases, painting_rentals,
-    painting_purchases, backdrops_murals, scaffolding, 
-    warehouse_rental, construction_other]);
+  }, [drawing_supplies, drawing_equipment, tech,
+    stock_prints_processing, blueprinting, other_art]);
 
   return (
     <div className="mt-5">
     <Row >
     <Col md={1} >
-    <p className="mb-2">28.00</p>
+    <p className="mb-2">29.00</p>
     </Col>
     <Col md={9} >
-    <p className={ `${styles.BoldBlack} mb-2`}>Construction Material</p>
+    <p className={ `${styles.BoldBlack} mb-2`}>Art Supplies</p>
     </Col>
     <Col md={2}>
     <span className={`${styles.Close }`} 
@@ -89,13 +86,13 @@ const ConstructionMat = (props) => {
     <p className="mb-0">Total</p>
     </Col>
     </Row>
-    {/* Carpentry Rentals */}
+    {/* Drawing Supplies */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>28.10</p>
+    <p className={`${styles.Underline}`}>29.10</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Carpentry Rentals</p>
+    <p className={`${styles.Underline}`}>Drawing Supplies</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -107,30 +104,30 @@ const ConstructionMat = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="rentals_carpentry" 
+    <Form.Group controlId="drawing_supplies" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="rentals_carpentry"
-        value={rentals_carpentry}
+        name="drawing_supplies"
+        value={drawing_supplies}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.rentals_carpentry?.map((message, idx) => (
+    {errors?.drawing_supplies?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     </Row>
-    {/* Carpentry Purchases */}
+    {/* Drawing Equipment */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>28.20</p>
+    <p className={`${styles.Underline}`}>29.20</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Carpentry Purchases</p>
+    <p className={`${styles.Underline}`}>Drawing Equipment</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -142,30 +139,30 @@ const ConstructionMat = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="carpentry_purchases" 
+    <Form.Group controlId="drawing_equipment" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="carpentry_purchases"
-        value={carpentry_purchases}
+        name="drawing_equipment"
+        value={drawing_equipment}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.carpentry_purchases?.map((message, idx) => (
+    {errors?.drawing_equipment?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     </Row>
-    {/* Painting Rentals */}
+    {/* Tech */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>28.30</p>
+    <p className={`${styles.Underline}`}>29.30</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Painting Rentals</p>
+    <p className={`${styles.Underline}`}>Tech/Software</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -177,30 +174,30 @@ const ConstructionMat = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="painting_rentals" 
+    <Form.Group controlId="tech" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="painting_rentals"
-        value={painting_rentals}
+        name="tech"
+        value={tech}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.painting_rentals?.map((message, idx) => (
+    {errors?.tech?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     </Row>
-    {/* Painting Purchases */}
+    {/* Stock/Prints/Processing */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>28.40</p>
+    <p className={`${styles.Underline}`}>29.40</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Painting Purchases</p>
+    <p className={`${styles.Underline}`}>Stock/Prints/Processing</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -212,30 +209,30 @@ const ConstructionMat = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="painting_purchases" 
+    <Form.Group controlId="stock_prints_processing" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="painting_purchases"
-        value={painting_purchases}
+        name="stock_prints_processing"
+        value={stock_prints_processing}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.painting_purchases?.map((message, idx) => (
+    {errors?.stock_prints_processing?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     </Row>
-    {/* Backdrops/Murals */}
+    {/* Blueprints */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>28.50</p>
+    <p className={`${styles.Underline}`}>29.50</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Backdrops/Murals</p>
+    <p className={`${styles.Underline}`}>Blueprints</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -247,87 +244,17 @@ const ConstructionMat = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="backdrops_murals" 
+    <Form.Group controlId="blueprinting" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="backdrops_murals"
-        value={backdrops_murals}
+        name="blueprinting"
+        value={blueprinting}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.backdrops_murals?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    </Row>
-    {/* Scaffolding */}
-    <Row>
-    <Col md={1} >
-    <p className={`${styles.Underline}`}>28.60</p>
-    </Col>
-    <Col md={6} >
-    <p className={`${styles.Underline}`}>Scaffolding</p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={2} >
-    <Form.Group controlId="scaffolding" 
-        className={`${styles.Width95} text-center mb-1`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="scaffolding"
-        value={scaffolding}
-        onChange={handleChange}
-            />
-    </Form.Group>
-    {errors?.scaffolding?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    </Row>
-    {/* Warehouse Rental */}
-    <Row>
-    <Col md={1} >
-    <p className={`${styles.Underline}`}>28.70</p>
-    </Col>
-    <Col md={6} >
-    <p className={`${styles.Underline}`}>Warehouse Rental</p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={2} >
-    <Form.Group controlId="warehouse_rental" 
-        className={`${styles.Width95} text-center mb-1`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="warehouse_rental"
-        value={warehouse_rental}
-        onChange={handleChange}
-            />
-    </Form.Group>
-    {errors?.warehouse_rental?.map((message, idx) => (
+    {errors?.blueprinting?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
@@ -337,7 +264,7 @@ const ConstructionMat = (props) => {
     {/* Other */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>28.80</p>
+    <p className={`${styles.Underline}`}>29.60</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Other</p>
@@ -352,29 +279,29 @@ const ConstructionMat = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="construction_other" 
+    <Form.Group controlId="other_art" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="construction_other"
-        value={construction_other}
+        name="other_art"
+        value={other_art}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.construction_other?.map((message, idx) => (
+    {errors?.other_art?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     </Row>
-    {/* CONSTRUCTION MATERIAL Total */}
+    {/* ART SUPPLIES Total */}
     <Row className="mt-3">
     <Col md={1} >
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
-    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL CONSTRUCTION MATERIAL</p>
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL ART SUPPLIES</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -386,17 +313,17 @@ const ConstructionMat = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="constructionMatTotal" 
+    <Form.Group controlId="artSupTotal" 
         className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="constructionMatTotal"
-        value={constructionMatTotal}
+        name="artSupTotal"
+        value={artSupTotal}
         readOnly
             />
     </Form.Group>
-    {errors?.constructionMatTotal?.map((message, idx) => (
+    {errors?.artSupTotal?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
@@ -407,4 +334,4 @@ const ConstructionMat = (props) => {
   )
 }
 
-export default ConstructionMat
+export default ArtSupplies

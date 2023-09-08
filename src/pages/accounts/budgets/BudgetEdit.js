@@ -39,6 +39,7 @@ import Unit from "./budgetsectionscosts/Unit";
 import TravelLiving from "./budgetsectionscosts/TravelLiving";
 import Transportation from "./budgetsectionscosts/Transportation";
 import ConstructionMat from "./budgetsectionscosts/ConstructionMat";
+import ArtSupplies from "./budgetsectionscosts/ArtSupplies";
 
 function BudgetEdit() {
   const [errors, setErrors] = useState({});
@@ -74,6 +75,8 @@ function BudgetEdit() {
   const [showTraLiv, setShowTraLiv] = useState(false);
   const [showTransport, setShowTransport] = useState(false);
   const [showConMat, setShowConMat] = useState(false);
+  const [showArtSup, setShowArtSup] = useState(false);
+  const [showDressing, setShowDressing] = useState(false);
 
   // budget id
   const [budgetId, setBudgetId] = useState("");
@@ -1772,6 +1775,39 @@ function BudgetEdit() {
 
   const [constructionMatTotal, setConstructionMatTotal] = useState(0);
 
+  // ART SUPPLIES ------------------------------
+
+  // Art Supplies postData
+  const [postDataArtSup, setPostDataArtSup] = useState({
+    drawing_supplies: 0,
+    drawing_equipment: 0,
+    tech: 0,
+    stock_prints_processing: 0,
+    blueprinting: 0,
+    other_art: 0,
+  });
+
+  const {drawing_supplies, drawing_equipment, tech,
+    stock_prints_processing, blueprinting, other_art,} = postDataArtSup;
+
+  const [artSupTotal, setArtSupTotal] = useState(0);
+
+  // SET DRESSING ------------------------------
+
+  // Set Dressing postData dressing_total
+  const [postDataDress, setPostDataDress] = useState({
+    dress_rentals: 0,
+    dress_purchases: 0,
+    dress_manufacture: 0,
+    dress_repairs_replacements: 0,
+    other_dressing: 0,
+  });
+
+  const {dress_rentals, dress_purchases, dress_manufacture,
+    dress_repairs_replacements, other_dressing,} = postDataDress;
+
+  const [dressingTotal, setDressingTotal] = useState(0);
+
   // TOTALS ABOVE / BELOW / GRAND --------------------------------
 
   // Above the line total --------------------------
@@ -1910,7 +1946,9 @@ function BudgetEdit() {
         parseFloat(unitTotal || 0) +
         parseFloat(tralivTotal || 0) +
         parseFloat(transportTotal || 0) +
-        parseFloat(constructionMatTotal || 0)
+        parseFloat(constructionMatTotal || 0) +
+        parseFloat(artSupTotal || 0) +
+        parseFloat(dressingTotal || 0)
         )
       }
     const timer = setTimeout(() => {
@@ -1921,7 +1959,8 @@ function BudgetEdit() {
       clearTimeout(timer);
     };
   }, [ proOffTotal, studioTotal, siteTotal, unitTotal, tralivTotal,
-    transportTotal, constructionMatTotal,]);
+    transportTotal, constructionMatTotal, artSupTotal, dressingTotal,
+    ]);
 
   // Below the line input box
   // eslint-disable-next-line
@@ -2703,6 +2742,16 @@ function BudgetEdit() {
           painting_purchases, backdrops_murals, construction_other,
           scaffolding, warehouse_rental,});
         setConstructionMatTotal(constructionmat_total);
+        const {drawing_supplies, drawing_equipment, tech, artSup_total,
+          stock_prints_processing, blueprinting, other_art,} = data.results[0];
+        setPostDataArtSup({drawing_supplies, drawing_equipment, tech,
+          stock_prints_processing, blueprinting, other_art,});
+        setArtSupTotal(artSup_total);
+        const {dress_rentals, dress_purchases, dress_manufacture, dressing_total,
+          dress_repairs_replacements, other_dressing,} = data.results[0];
+        setPostDataDress({dress_rentals, dress_purchases, dress_manufacture,
+          dress_repairs_replacements, other_dressing,});
+        setDressingTotal(dressing_total);
       } catch (err) {
         console.log(err);
       }
@@ -3494,6 +3543,21 @@ function BudgetEdit() {
     formData.append("warehouse_rental", warehouse_rental);
     formData.append("construction_other", construction_other);
     formData.append("constructionmat_total", constructionMatTotal);
+    // Art supplies
+    formData.append("drawing_supplies", drawing_supplies);
+    formData.append("drawing_equipment", drawing_equipment);
+    formData.append("tech", tech);
+    formData.append("stock_prints_processing", stock_prints_processing);
+    formData.append("blueprinting", blueprinting);
+    formData.append("other_art", other_art);
+    formData.append("artSup_total", artSupTotal);
+    // Dressing
+    formData.append("dress_rentals", dress_rentals);
+    formData.append("dress_purchases", dress_purchases);
+    formData.append("dress_manufacture", dress_manufacture);
+    formData.append("dress_repairs_replacements", dress_repairs_replacements);
+    formData.append("other_dressing", other_dressing);
+    formData.append("dressing_total", dressingTotal);
     // formData.append("stars", stars);
 
     try {
@@ -3987,6 +4051,36 @@ function BudgetEdit() {
     </Col>
     <Col md={4}>
     <p className="mb-0">{constructionMatTotal} </p>
+    </Col>
+    </Row>
+    </div>
+    </Col>
+    {/* Art supplies */}
+    <Col md={3} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
+    <Row>
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
+          onClick={() => setShowArtSup(showArtSup => !showArtSup)} >Art Supplies
+    </p>
+    </Col>
+    <Col md={4}>
+    <p className="mb-0">{artSupTotal} </p>
+    </Col>
+    </Row>
+    </div>
+    </Col>
+    {/* Set Dressing */}
+    <Col md={3} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
+    <Row>
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
+          onClick={() => setShowDressing(showDressing => !showDressing)} >Set Dressing
+    </p>
+    </Col>
+    <Col md={4}>
+    <p className="mb-0">{dressingTotal} </p>
     </Col>
     </Row>
     </div>
@@ -4551,6 +4645,28 @@ function BudgetEdit() {
       constructionMatTotal={constructionMatTotal}
       setConstructionMatTotal={setConstructionMatTotal}
       setShow={setShowConMat}  /> 
+    ) }
+    {/* Art supplies */}
+    {!showArtSup ? (
+      ""
+    ) : (
+      <ArtSupplies
+      postDataArtSup={postDataArtSup}
+      setPostDataArtSup={setPostDataArtSup}
+      artSupTotal={artSupTotal}
+      setArtSupTotal={setArtSupTotal}
+      setShow={setShowArtSup}  /> 
+    ) }
+    {/* Set Dressing */}
+    {!showDressing ? (
+      ""
+    ) : (
+      <Dressing
+      postDataDress={postDataDress}
+      setPostDataDress={setPostDataDress}
+      dressingTotal={dressingTotal}
+      setDressingTotal={setDressingTotal}
+      setShow={setShowDressing}  /> 
     ) }
     {/* buttons */}
     <Row>
