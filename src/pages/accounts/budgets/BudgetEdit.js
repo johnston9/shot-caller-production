@@ -77,6 +77,7 @@ function BudgetEdit() {
   const [showConMat, setShowConMat] = useState(false);
   const [showArtSup, setShowArtSup] = useState(false);
   const [showDressing, setShowDressing] = useState(false);
+  const [showProp, setShowProp] = useState(false);
 
   // budget id
   const [budgetId, setBudgetId] = useState("");
@@ -1794,7 +1795,7 @@ function BudgetEdit() {
 
   // SET DRESSING ------------------------------
 
-  // Set Dressing postData dressing_total
+  // Set Dressing postData
   const [postDataDress, setPostDataDress] = useState({
     dress_rentals: 0,
     dress_purchases: 0,
@@ -1807,6 +1808,28 @@ function BudgetEdit() {
     dress_repairs_replacements, other_dressing,} = postDataDress;
 
   const [dressingTotal, setDressingTotal] = useState(0);
+
+  // PROPS ------------------------------
+
+  // Props postData
+  const [postDataProps, setPostDataProps] = useState({
+    props_rentals: 0,
+    props_purchases: 0,
+    graphics_signs: 0,
+    props_repairs_replac: 0,
+    picture_vehicle_rentals: 0,
+    picture_vehicle_purchases: 0,
+    picture_vehicle_mods: 0,
+    picture_vehicle_ins: 0,
+    other_props: 0,
+  });
+
+  const{props_rentals, props_purchases, graphics_signs,
+    props_repairs_replac, picture_vehicle_rentals, picture_vehicle_purchases,
+    picture_vehicle_mods, picture_vehicle_ins, other_props,
+  } = postDataProps;
+
+  const [propsTotal, setPropsTotal] = useState(0);
 
   // TOTALS ABOVE / BELOW / GRAND --------------------------------
 
@@ -1948,7 +1971,8 @@ function BudgetEdit() {
         parseFloat(transportTotal || 0) +
         parseFloat(constructionMatTotal || 0) +
         parseFloat(artSupTotal || 0) +
-        parseFloat(dressingTotal || 0)
+        parseFloat(dressingTotal || 0) +
+        parseFloat(propsTotal || 0)
         )
       }
     const timer = setTimeout(() => {
@@ -1960,7 +1984,7 @@ function BudgetEdit() {
     };
   }, [ proOffTotal, studioTotal, siteTotal, unitTotal, tralivTotal,
     transportTotal, constructionMatTotal, artSupTotal, dressingTotal,
-    ]);
+    propsTotal,]);
 
   // Below the line input box
   // eslint-disable-next-line
@@ -2752,6 +2776,13 @@ function BudgetEdit() {
         setPostDataDress({dress_rentals, dress_purchases, dress_manufacture,
           dress_repairs_replacements, other_dressing,});
         setDressingTotal(dressing_total);
+        const {props_rentals, props_purchases, graphics_signs, props_total,
+          props_repairs_replac, picture_vehicle_rentals, picture_vehicle_purchases,
+          picture_vehicle_mods, picture_vehicle_ins, other_props,} = data.results[0];
+        setPostDataProps({props_rentals, props_purchases, graphics_signs,
+          props_repairs_replac, picture_vehicle_rentals, picture_vehicle_purchases,
+          picture_vehicle_mods, picture_vehicle_ins, other_props,});
+        setPropsTotal(props_total);
       } catch (err) {
         console.log(err);
       }
@@ -3558,6 +3589,17 @@ function BudgetEdit() {
     formData.append("dress_repairs_replacements", dress_repairs_replacements);
     formData.append("other_dressing", other_dressing);
     formData.append("dressing_total", dressingTotal);
+    // Props
+    formData.append("props_rentals", props_rentals);
+    formData.append("props_purchases", props_purchases);
+    formData.append("graphics_signs", graphics_signs);
+    formData.append("props_repairs_replac", props_repairs_replac);
+    formData.append("picture_vehicle_rentals", picture_vehicle_rentals);
+    formData.append("picture_vehicle_purchases", picture_vehicle_purchases);
+    formData.append("picture_vehicle_mods", picture_vehicle_mods);
+    formData.append("picture_vehicle_ins", picture_vehicle_ins);
+    formData.append("other_props", other_props);
+    formData.append("props_total", propsTotal);
     // formData.append("stars", stars);
 
     try {
@@ -4081,6 +4123,21 @@ function BudgetEdit() {
     </Col>
     <Col md={4}>
     <p className="mb-0">{dressingTotal} </p>
+    </Col>
+    </Row>
+    </div>
+    </Col>
+    {/* Props */}
+    <Col md={3} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
+    <Row>
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
+          onClick={() => setShowProp(showProp => !showProp)} >Props
+    </p>
+    </Col>
+    <Col md={4}>
+    <p className="mb-0">{propsTotal} </p>
     </Col>
     </Row>
     </div>
@@ -4667,6 +4724,17 @@ function BudgetEdit() {
       dressingTotal={dressingTotal}
       setDressingTotal={setDressingTotal}
       setShow={setShowDressing}  /> 
+    ) }
+    {/* Props */}
+    {!showProp ? (
+      ""
+    ) : (
+      <Props
+      postDataProps={postDataProps}
+      setPostDataProps={setPostDataProps}
+      propsTotal={propsTotal}
+      setPropsTotal={setPropsTotal}
+      setShow={setShowProp}  /> 
     ) }
     {/* buttons */}
     <Row>

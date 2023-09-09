@@ -340,6 +340,10 @@ const Budget = (props) => {
     // dressing
     dress_rentals, dress_purchases, dress_manufacture,
     dress_repairs_replacements, other_dressing, dressing_total,
+    // props
+    props_rentals, props_purchases, graphics_signs,
+    props_repairs_replac, picture_vehicle_rentals, picture_vehicle_purchases,
+    picture_vehicle_mods, picture_vehicle_ins, other_props, props_total,
 
     } = budget;
 
@@ -6130,6 +6134,227 @@ const Budget = (props) => {
     </Col>
     <Col md={2}>
     <p className={`${styles.Underline}`}>{dress_rentals || 0} </p>
+    </Col>
+    </Row>
+    {/* Purchases */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>30.20</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Purchases</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{dress_purchases || 0} </p>
+    </Col>
+    </Row>
+    {/* Manufacture */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>30.30</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Manufacture</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{dress_manufacture || 0} </p>
+    </Col>
+    </Row>
+    {/* Repairs/Replacements */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>30.40</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Repairs/Replacements</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{dress_repairs_replacements || 0} </p>
+    </Col>
+    </Row>
+    {/* Other */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>30.50</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Other</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{other_dressing || 0} </p>
+    </Col>
+    </Row>
+    {/* SET DRESSING Total */}
+    <Row className='mt-3' >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    <p></p>
+    </Col>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL SET DRESSING </p>
+    </Col>
+    <Col md={3} >
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline} mb-0`}>{dressing_total || 0}</p>
+    </Col>
+    </Row>
+    </div>
+    {/* PROPS ------------------------------------------------ */}
+    <div className='mt-5'>
+    <Row>
+    <Col xs={1}>
+    <p className='mb-2'>31.00</p>
+    </Col>
+    <Col xs={10}>
+    <p className={ `${styles.BoldBlack} mb-2`}>PROPS</p>
+    </Col>
+    </Row>
+    {/* Titles */}
+    <Row className={ `${styles.Overview} mb-2 py-1`} >
+    <Col md={1} >
+    <p className="mb-0">ACCT</p>
+    </Col>
+    <Col md={5} >
+    <p className="mb-0">Description</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">#</p>
+    </Col>
+    <Col className="px-0 mx-0" md={1} >
+    <p># Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Price</p>
+    </Col>
+    <Col md={2} >
+    <p className="mb-0">Total</p>
+    </Col>
+    </Row>
+    {/* Rentals */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>31.10</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Rentals</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{props_rentals || 0} </p>
+    </Col>
+    </Row>
+    {/* Purchases */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>31.20</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Purchases</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{props_purchases || 0} </p>
+    </Col>
+    </Row>
+    {/* Graphics/Signs */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>31.30</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Graphics/Signs</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{graphics_signs || 0} </p>
+    </Col>
+    </Row>
+    {/* Repairs/Replacements */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>31.40</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Repairs/Replacements</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{props_repairs_replac || 0} </p>
+    </Col>
+    </Row>
+    {/* Picture Vehicle Rentals */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>31.50</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Picture Vehicle Rentals</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{picture_vehicle_rentals || 0} </p>
+    </Col>
+    </Row>
+    {/* Picture Vehicle Purchases */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>31.60</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Picture Vehicle Purchases</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{picture_vehicle_purchases || 0} </p>
+    </Col>
+    </Row>
+    {/* Picture Vehicle Modifications */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>31.70</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Picture Vehicle Modifications</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{picture_vehicle_mods || 0} </p>
+    </Col>
+    </Row>
+    {/* Picture Vehicle Insurance */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>31.80</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Picture Vehicle Insurance</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{picture_vehicle_ins || 0} </p>
+    </Col>
+    </Row>
+    {/* Other */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>31.90</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Other</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{other_props || 0} </p>
+    </Col>
+    </Row>
+    {/* PROPS Total */}
+    <Row className='mt-3' >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    <p></p>
+    </Col>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL PROPS </p>
+    </Col>
+    <Col md={3} >
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline} mb-0`}>{props_total || 0}</p>
     </Col>
     </Row>
     </div>
