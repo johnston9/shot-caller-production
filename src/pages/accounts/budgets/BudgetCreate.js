@@ -40,6 +40,8 @@ import ConstructionMat from "./budgetsectionscosts/ConstructionMat";
 import ArtSupplies from "./budgetsectionscosts/ArtSupplies";
 import Dressing from "./budgetsectionscosts/Dressing";
 import Props from "./budgetsectionscosts/Props";
+import Fx from "./budgetsectionscosts/Fx";
+import Animals from "./budgetsectionscosts/Animals";
 
 function BudgetCreate() {
   const [errors, setErrors] = useState({});
@@ -78,6 +80,8 @@ function BudgetCreate() {
   const [showArtSup, setShowArtSup] = useState(false);
   const [showDressing, setShowDressing] = useState(false);
   const [showProp, setShowProp] = useState(false);
+  const [showSpecFx, setShowSpecFx] = useState(false);
+  const [showAnim, setShowAnim] = useState(false);
 
   // INFO / LENGTH -------------------------
   // Info postData 
@@ -1811,6 +1815,40 @@ function BudgetCreate() {
 
   const [propsTotal, setPropsTotal] = useState(0);
 
+  // SPECIAL EFFECTS ------------------------------
+
+  // Special effects postData
+  const [postDataSpecEf, setPostDataSpecEf] = useState({
+    fx_rentals: 0,
+    fx_purchases: 0,
+    stunts_purchases_rentals: 0,
+    armaments_permits_fees: 0,
+    other_fx: 0,
+  });
+
+  const {fx_rentals, fx_purchases, stunts_purchases_rentals,
+    armaments_permits_fees, other_fx,} = postDataSpecEf;
+
+  const [fxTotal, setFxTotal] = useState(0);
+
+  // ANIMALS ------------------------------
+
+  // Animals postData
+  const [postDataAnimals, setPostDataAnimals] = useState({
+    animals_rentals: 0,
+    animals_purchases: 0,
+    food_stabling: 0,
+    transport: 0,
+    vet: 0,
+    customs_broker: 0,
+    other_animals: 0,
+  });
+
+  const {animals_rentals, animals_purchases, food_stabling,
+    transport, vet, customs_broker, other_animals,} = postDataAnimals;
+
+  const [animalsTotal, setAnimalsTotal] = useState(0);
+
   // TOTALS ABOVE / BELOW / GRAND -----------------------------
 
   // Above the line total --------------------------
@@ -1954,7 +1992,9 @@ function BudgetCreate() {
         parseFloat(constructionMatTotal || 0) +
         parseFloat(artSupTotal || 0) +
         parseFloat(dressingTotal || 0) +
-        parseFloat(propsTotal || 0)
+        parseFloat(propsTotal || 0) +
+        parseFloat(fxTotal || 0) +
+        parseFloat(animalsTotal || 0)
         )
       }
     const timer = setTimeout(() => {
@@ -1966,7 +2006,7 @@ function BudgetCreate() {
     };
   }, [ proOffTotal, studioTotal, siteTotal, unitTotal, tralivTotal,
     transportTotal, constructionMatTotal, artSupTotal, dressingTotal,
-    propsTotal,]);
+    propsTotal, fxTotal, animalsTotal]);
 
   // Below the line input box
   // eslint-disable-next-line
@@ -2923,6 +2963,22 @@ function BudgetCreate() {
     formData.append("picture_vehicle_ins", picture_vehicle_ins);
     formData.append("other_props", other_props);
     formData.append("props_total", propsTotal);
+    // Fx
+    formData.append("fx_rentals", fx_rentals);
+    formData.append("fx_purchases", fx_purchases);
+    formData.append("stunts_purchases_rentals", stunts_purchases_rentals);
+    formData.append("armaments_permits_fees", armaments_permits_fees);
+    formData.append("other_fx", other_fx);
+    formData.append("fx_total", fxTotal);
+    // Animals
+    formData.append("animals_rentals", animals_rentals);
+    formData.append("animals_purchases", animals_purchases);
+    formData.append("food_stabling", food_stabling);
+    formData.append("transport", transport);
+    formData.append("vet", vet);
+    formData.append("customs_broker", customs_broker);
+    formData.append("other_animals", other_animals);
+    formData.append("animals_total", animalsTotal);
     // formData.append("stars", stars);
 
     try {
@@ -3461,6 +3517,36 @@ function BudgetCreate() {
     </Col>
     <Col md={4}>
     <p className="mb-0">{propsTotal} </p>
+    </Col>
+    </Row>
+    </div>
+    </Col>
+    {/* Fx */}
+    <Col md={3} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
+    <Row>
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
+          onClick={() => setShowSpecFx(showSpecFx => !showSpecFx)} >Special Effects
+    </p>
+    </Col>
+    <Col md={4}>
+    <p className="mb-0">{fxTotal} </p>
+    </Col>
+    </Row>
+    </div>
+    </Col>
+    {/* Animals */}
+    <Col md={3} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
+    <Row>
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
+          onClick={() => setShowAnim(showAnim => !showAnim)} >Animals
+    </p>
+    </Col>
+    <Col md={4}>
+    <p className="mb-0">{animalsTotal} </p>
     </Col>
     </Row>
     </div>
@@ -4060,6 +4146,28 @@ function BudgetCreate() {
       propsTotal={propsTotal}
       setPropsTotal={setPropsTotal}
       setShow={setShowProp}  /> 
+    ) }
+    {/* Fx */}
+    {!showSpecFx ? (
+      ""
+    ) : (
+      <Fx
+      postDataSpecEf={postDataSpecEf}
+      setPostDataSpecEf={setPostDataSpecEf}
+      fxTotal={fxTotal}
+      setFxTotal={setFxTotal}
+      setShow={setShowSpecFx}  /> 
+    ) }
+    {/* Animals */}
+    {!showAnim ? (
+      ""
+    ) : (
+      <Animals
+      postDataAnimals={postDataAnimals}
+      setPostDataAnimals={setPostDataAnimals}
+      animalsTotal={animalsTotal}
+      setAnimalsTotal={setAnimalsTotal}
+      setShow={setShowAnim}  /> 
     ) }
     {/* buttons */}
     <Row>

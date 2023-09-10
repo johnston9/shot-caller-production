@@ -344,6 +344,12 @@ const Budget = (props) => {
     props_rentals, props_purchases, graphics_signs,
     props_repairs_replac, picture_vehicle_rentals, picture_vehicle_purchases,
     picture_vehicle_mods, picture_vehicle_ins, other_props, props_total,
+    // FX
+    fx_rentals, fx_purchases, stunts_purchases_rentals,
+    armaments_permits_fees, other_fx, fx_total,
+    // Animals
+    animals_rentals, animals_purchases, food_stabling,
+    transport, vet, customs_broker, other_animals, animals_total,
 
     } = budget;
 
@@ -6355,6 +6361,250 @@ const Budget = (props) => {
     </Col>
     <Col md={2} >
     <p className={`${styles.Underline} mb-0`}>{props_total || 0}</p>
+    </Col>
+    </Row>
+    </div>
+    {/* FX --------------------------------------------------- */}
+    <div className='mt-5'>
+    <Row>
+    <Col xs={1}>
+    <p className='mb-2'>32.00</p>
+    </Col>
+    <Col xs={10}>
+    <p className={ `${styles.BoldBlack} mb-2`}>SPECIAL EFFECTS</p>
+    </Col>
+    </Row>
+    {/* Titles */}
+    <Row className={ `${styles.Overview} mb-2 py-1`} >
+    <Col md={1} >
+    <p className="mb-0">ACCT</p>
+    </Col>
+    <Col md={5} >
+    <p className="mb-0">Description</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">#</p>
+    </Col>
+    <Col className="px-0 mx-0" md={1} >
+    <p># Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Price</p>
+    </Col>
+    <Col md={2} >
+    <p className="mb-0">Total</p>
+    </Col>
+    </Row>
+    {/* Rentals */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>32.10</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Rentals</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{fx_rentals || 0} </p>
+    </Col>
+    </Row>
+    {/* Purchases */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>32.20</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Purchases</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{fx_purchases || 0} </p>
+    </Col>
+    </Row>
+    {/* Stunts Purchases/Rentals */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>32.30</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Stunts Purchases/Rentals</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{stunts_purchases_rentals || 0} </p>
+    </Col>
+    </Row>
+    {/* Armaments & Permits/Fees */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>32.40</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Armaments & Permits/Fees</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{armaments_permits_fees || 0} </p>
+    </Col>
+    </Row>
+    {/* Other */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>32.50</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Other</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{other_fx || 0} </p>
+    </Col>
+    </Row>
+    {/* SPECIAL EFFECTS Total */}
+    <Row className='mt-3' >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    <p></p>
+    </Col>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL SPECIAL EFFECTS </p>
+    </Col>
+    <Col md={3} >
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline} mb-0`}>{fx_total || 0}</p>
+    </Col>
+    </Row>
+    </div>
+    {/* ANIMALS ---------------------------------------------- */}
+    <div className='mt-5'>
+    <Row>
+    <Col xs={1}>
+    <p className='mb-2'>33.00</p>
+    </Col>
+    <Col xs={10}>
+    <p className={ `${styles.BoldBlack} mb-2`}>ANIMALS</p>
+    </Col>
+    </Row>
+    {/* Titles */}
+    <Row className={ `${styles.Overview} mb-2 py-1`} >
+    <Col md={1} >
+    <p className="mb-0">ACCT</p>
+    </Col>
+    <Col md={5} >
+    <p className="mb-0">Description</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">#</p>
+    </Col>
+    <Col className="px-0 mx-0" md={1} >
+    <p># Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Price</p>
+    </Col>
+    <Col md={2} >
+    <p className="mb-0">Total</p>
+    </Col>
+    </Row>
+    {/* Rentals */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>33.10</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Rentals</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{animals_rentals || 0} </p>
+    </Col>
+    </Row>
+    {/* Purchases */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>33.20</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Purchases</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{animals_purchases || 0} </p>
+    </Col>
+    </Row>
+    {/* Food/Stabling */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>33.30</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Food/Stabling</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{food_stabling || 0} </p>
+    </Col>
+    </Row>
+    {/* Transport */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>33.40</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Transport</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{transport || 0} </p>
+    </Col>
+    </Row>
+    {/* Veterinary Fees */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>33.50</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Veterinary Fees</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{vet || 0} </p>
+    </Col>
+    </Row>
+    {/* Customs Brokerage */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>33.60</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Customs Brokerage</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{customs_broker || 0} </p>
+    </Col>
+    </Row>
+    {/* Other */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>33.70</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Other</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{other_animals || 0} </p>
+    </Col>
+    </Row>
+    {/* ANIMALS Total */}
+    <Row className='mt-3' >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    <p></p>
+    </Col>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL ANIMALS </p>
+    </Col>
+    <Col md={3} >
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline} mb-0`}>{animals_total || 0}</p>
     </Col>
     </Row>
     </div>
