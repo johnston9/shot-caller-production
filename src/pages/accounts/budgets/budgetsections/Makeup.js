@@ -226,7 +226,7 @@ const Makeup = (props) => {
     <p className="mb-2">15.00</p>
     </Col>
     <Col md={9} >
-    <p className={ `${styles.BoldBlack} mb-2`}>Makeup Labour</p>
+    <p className={ `${styles.BoldBlack} mb-2`}>Makeup & Hair Labour</p>
     </Col>
     <Col md={2}>
     <span className={`${styles.Close }`} 

@@ -42,6 +42,8 @@ import Dressing from "./budgetsectionscosts/Dressing";
 import Props from "./budgetsectionscosts/Props";
 import Fx from "./budgetsectionscosts/Fx";
 import Animals from "./budgetsectionscosts/Animals";
+import WardrobeSup from "./budgetsectionscosts/WardrobeSup";
+import MakeupSup from "./budgetsectionscosts/MakeupSup";
 
 function BudgetCreate() {
   const [errors, setErrors] = useState({});
@@ -82,6 +84,8 @@ function BudgetCreate() {
   const [showProp, setShowProp] = useState(false);
   const [showSpecFx, setShowSpecFx] = useState(false);
   const [showAnim, setShowAnim] = useState(false);
+  const [showWardSup, setShowWardSup] = useState(false);
+  const [showMakeSup, setShowMakeSup] = useState(false);
 
   // INFO / LENGTH -------------------------
   // Info postData 
@@ -1849,6 +1853,44 @@ function BudgetCreate() {
 
   const [animalsTotal, setAnimalsTotal] = useState(0);
 
+  // WARDROBE SUPPLIES ------------------------------
+
+  // Wardrobe postData
+  const [postDataWardrobeSup, setPostDataWardrobeSup] = useState({
+    wardrobe_rentals: 0,
+    wardrobe_purchases: 0,
+    ward_manufact: 0,
+    ward_ship_brok: 0,
+    ward_repairs_clean: 0,
+    other_ward: 0,
+  });
+
+  const {wardrobe_rentals, wardrobe_purchases, ward_manufact,
+    ward_ship_brok, ward_repairs_clean, other_ward,
+  } = postDataWardrobeSup;
+
+  const [wardrobeTotal, setWardrobeTotal] = useState(0);
+
+  // MAKEUP SUPPLIES ------------------------------
+
+  // Makeup postData
+  const [postDataMakeupSup, setPostDataMakeupSup] = useState({
+    makeup_rentals: 0,
+    makeup_purchases: 0,
+    hair_rentals: 0,
+    hair_purchases: 0,
+    wigs: 0,
+    makeup_fx: 0,
+    makeup_ship_brok: 0,
+    other_makeup: 0,
+  });
+
+  const {makeup_rentals, makeup_purchases, hair_rentals,
+    hair_purchases, wigs, makeup_fx, makeup_ship_brok, other_makeup,
+  } = postDataMakeupSup;
+
+  const [makeupTotal, setMakeupTotal] = useState(0);
+
   // TOTALS ABOVE / BELOW / GRAND -----------------------------
 
   // Above the line total --------------------------
@@ -1994,7 +2036,9 @@ function BudgetCreate() {
         parseFloat(dressingTotal || 0) +
         parseFloat(propsTotal || 0) +
         parseFloat(fxTotal || 0) +
-        parseFloat(animalsTotal || 0)
+        parseFloat(animalsTotal || 0) +
+        parseFloat(wardrobeTotal || 0) +
+        parseFloat(makeupTotal || 0)
         )
       }
     const timer = setTimeout(() => {
@@ -2006,7 +2050,7 @@ function BudgetCreate() {
     };
   }, [ proOffTotal, studioTotal, siteTotal, unitTotal, tralivTotal,
     transportTotal, constructionMatTotal, artSupTotal, dressingTotal,
-    propsTotal, fxTotal, animalsTotal]);
+    propsTotal, fxTotal, animalsTotal, wardrobeTotal, makeupTotal,]);
 
   // Below the line input box
   // eslint-disable-next-line
@@ -2979,6 +3023,24 @@ function BudgetCreate() {
     formData.append("customs_broker", customs_broker);
     formData.append("other_animals", other_animals);
     formData.append("animals_total", animalsTotal);
+    // Wardrobe sup
+    formData.append("wardrobe_rentals", wardrobe_rentals);
+    formData.append("wardrobe_purchases", wardrobe_purchases);
+    formData.append("ward_manufact", ward_manufact);
+    formData.append("ward_ship_brok", ward_ship_brok);
+    formData.append("ward_repairs_clean", ward_repairs_clean);
+    formData.append("other_ward", other_ward);
+    formData.append("wardrobe_total", wardrobeTotal);
+    // Makeup sup 
+    formData.append("makeup_rentals", makeup_rentals);
+    formData.append("makeup_purchases", makeup_purchases);
+    formData.append("hair_rentals", hair_rentals);
+    formData.append("hair_purchases", hair_purchases);
+    formData.append("wigs", wigs);
+    formData.append("makeup_fx", makeup_fx);
+    formData.append("makeup_ship_brok", makeup_ship_brok);
+    formData.append("other_makeup", other_makeup);
+    formData.append("makeup_total", makeupTotal);
     // formData.append("stars", stars);
 
     try {
@@ -3547,6 +3609,36 @@ function BudgetCreate() {
     </Col>
     <Col md={4}>
     <p className="mb-0">{animalsTotal} </p>
+    </Col>
+    </Row>
+    </div>
+    </Col>
+    {/* Wardrobe */}
+    <Col md={3} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
+    <Row>
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
+          onClick={() => setShowWardSup(showWardSup => !showWardSup)} >Wardrobe Supplies
+    </p>
+    </Col>
+    <Col md={4}>
+    <p className="mb-0">{wardrobeTotal} </p>
+    </Col>
+    </Row>
+    </div>
+    </Col>
+    {/* Makeup */}
+    <Col md={3} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
+    <Row>
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
+          onClick={() => setShowMakeSup(showMakeSup => !showMakeSup)} >Makeup Supplies
+    </p>
+    </Col>
+    <Col md={4}>
+    <p className="mb-0">{makeupTotal} </p>
     </Col>
     </Row>
     </div>
@@ -4168,6 +4260,28 @@ function BudgetCreate() {
       animalsTotal={animalsTotal}
       setAnimalsTotal={setAnimalsTotal}
       setShow={setShowAnim}  /> 
+    ) }
+    {/* Wardrobe Sup */}
+    {!showWardSup ? (
+      ""
+    ) : (
+      <WardrobeSup
+      postDataWardrobeSup={postDataWardrobeSup}
+      setPostDataWardrobeSup={setPostDataWardrobeSup}
+      wardrobeTotal={wardrobeTotal}
+      setWardrobeTotal={setWardrobeTotal}
+      setShow={setShowWardSup}  /> 
+    ) }
+    {/* Makeup Sup */}
+    {!showMakeSup ? (
+      ""
+    ) : (
+      <MakeupSup
+      postDataMakeupSup={postDataMakeupSup}
+      setPostDataMakeupSup={setPostDataMakeupSup}
+      makeupTotal={makeupTotal}
+      setMakeupTotal={setMakeupTotal}
+      setShow={setShowMakeSup}  /> 
     ) }
     {/* buttons */}
     <Row>

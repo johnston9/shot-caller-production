@@ -1,4 +1,4 @@
-/* Component in the Budget component to edit Animals */
+/* Component in the Budget component to edit Wardrobe Supplies */
 import React, { useEffect, useState } from "react";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
@@ -6,56 +6,58 @@ import Col from "react-bootstrap/Col";
 import styles from "../../../../styles/Account.module.css";
 import Alert from "react-bootstrap/Alert";
 
-const Animals = (props) => {
-  // eslint-disable-next-line
+const MakeupSup = (props) => {
+// eslint-disable-next-line
   const [errors, setErrors] = useState({});
 
-  const {postDataAnimals, setPostDataAnimals,
-    animalsTotal, setAnimalsTotal, setShow} = props;
+  const {postDataMakeupSup, setPostDataMakeupSup,
+    makeupTotal, setMakeupTotal, setShow} = props;
 
-  const {animals_rentals, animals_purchases, food_stabling,
-        transport, vet, customs_broker, other_animals,} = postDataAnimals;
+  const {makeup_rentals, makeup_purchases, hair_rentals,
+      hair_purchases, wigs, makeup_fx, makeup_ship_brok, other_makeup,
+  } = postDataMakeupSup;
 
   // handleChange 
   const handleChange = (event) => {
-    setPostDataAnimals({
-    ...postDataAnimals,
+    setPostDataWardrobeSup({
+    ...postDataWardrobeSup,
     [event.target.name]: parseFloat(event.target.value || 0 ),
     });
   };
 
-  // function to add all Animals on change
+  // function to add all Makeup sup on change
   useEffect(() => {
-    const addAnimal = () => {
-        setAnimalsTotal(
-        parseFloat(animals_rentals || 0) +
-        parseFloat(animals_purchases || 0) +
-        parseFloat(food_stabling || 0) +
-        parseFloat(transport || 0) +
-        parseFloat(vet || 0) +
-        parseFloat(customs_broker || 0) +
-        parseFloat(other_animals || 0)
+    const addMakeSup = () => {
+        setMakeupTotal(
+        parseFloat(makeup_rentals || 0) +
+        parseFloat(makeup_purchases || 0) +
+        parseFloat(hair_rentals || 0) +
+        parseFloat(hair_purchases || 0) +
+        parseFloat(wigs || 0) +
+        parseFloat(makeup_fx || 0) +
+        parseFloat(makeup_ship_brok || 0) +
+        parseFloat(other_makeup || 0)
        )
     }
     const timer = setTimeout(() => {
-        addAnimal();
+      addMakeSup();
     }, 1000);
 
     return () => {
       clearTimeout(timer);
     };
 
-  }, [animals_rentals, animals_purchases, food_stabling,
-    transport, vet, customs_broker, other_animals,]);
-
+  }, [makeup_rentals, makeup_purchases, hair_rentals, hair_purchases,
+    wigs, makeup_fx, makeup_ship_brok, other_makeup,]);
+    
   return (
     <div className="mt-5">
     <Row >
     <Col md={1} >
-    <p className="mb-2">33.00</p>
+    <p className="mb-2">35.00</p>
     </Col>
     <Col md={9} >
-    <p className={ `${styles.BoldBlack} mb-2`}>Animals</p>
+    <p className={ `${styles.BoldBlack} mb-2`}>Makeup Supplies</p>
     </Col>
     <Col md={2}>
     <span className={`${styles.Close }`} 
@@ -86,13 +88,13 @@ const Animals = (props) => {
     <p className="mb-0">Total</p>
     </Col>
     </Row>
-    {/* Rentals */}
+    {/* Makeup Rentals */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>33.10</p>
+    <p className={`${styles.Underline}`}>35.10</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Rentals</p>
+    <p className={`${styles.Underline}`}>Makeup Rentals</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -104,30 +106,30 @@ const Animals = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="animals_rentals" 
+    <Form.Group controlId="makeup_rentals" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="animals_rentals"
-        value={animals_rentals}
+        name="makeup_rentals"
+        value={makeup_rentals}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.animals_rentals?.map((message, idx) => (
+    {errors?.makeup_rentals?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     </Row>
-    {/* Purchases */}
+    {/* Makeup Purchases */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>33.20</p>
+    <p className={`${styles.Underline}`}>35.20</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Purchases</p>
+    <p className={`${styles.Underline}`}>Makeup Purchases</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -139,30 +141,30 @@ const Animals = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="animals_purchases" 
+    <Form.Group controlId="makeup_purchases" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="animals_purchases"
-        value={animals_purchases}
+        name="makeup_purchases"
+        value={makeup_purchases}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.animals_purchases?.map((message, idx) => (
+    {errors?.makeup_purchases?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     </Row>
-    {/* Food/Stabling */}
+    {/* Hair Rentals */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>33.30</p>
+    <p className={`${styles.Underline}`}>35.30</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Food/Stabling</p>
+    <p className={`${styles.Underline}`}>Hair Rentals</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -174,30 +176,30 @@ const Animals = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="food_stabling" 
+    <Form.Group controlId="hair_rentals" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="food_stabling"
-        value={food_stabling}
+        name="hair_rentals"
+        value={hair_rentals}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.food_stabling?.map((message, idx) => (
+    {errors?.hair_rentals?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     </Row>
-    {/* Transport */}
+    {/* Hair Purchases */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>33.40</p>
+    <p className={`${styles.Underline}`}>35.40</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Transport</p>
+    <p className={`${styles.Underline}`}>Hair Purchases</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -209,30 +211,30 @@ const Animals = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="transport" 
+    <Form.Group controlId="hair_purchases" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="transport"
-        value={transport}
+        name="hair_purchases"
+        value={hair_purchases}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.transport?.map((message, idx) => (
+    {errors?.hair_purchases?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     </Row>
-    {/* Veterinary Fees */}
+    {/* Wigs Rentals/Purchases */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>33.50</p>
+    <p className={`${styles.Underline}`}>35.50</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Veterinary Fees</p>
+    <p className={`${styles.Underline}`}>Wigs Rentals/Purchases</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -244,30 +246,30 @@ const Animals = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="vet" 
+    <Form.Group controlId="wigs" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="vet"
-        value={vet}
+        name="wigs"
+        value={wigs}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.vet?.map((message, idx) => (
+    {errors?.wigs?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     </Row>
-    {/* Customs Brokerage */}
+    {/* Special Effects */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>33.60</p>
+    <p className={`${styles.Underline}`}>35.60</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Customs Brokerage</p>
+    <p className={`${styles.Underline}`}>Special Effects</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -279,17 +281,52 @@ const Animals = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="customs_broker" 
+    <Form.Group controlId="makeup_fx" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="customs_broker"
-        value={customs_broker}
+        name="makeup_fx"
+        value={makeup_fx}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.customs_broker?.map((message, idx) => (
+    {errors?.makeup_fx?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Shipping/Brokerage */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>35.70</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Shipping/Brokerage</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="makeup_ship_brok" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="makeup_ship_brok"
+        value={makeup_ship_brok}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.makeup_ship_brok?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
@@ -299,7 +336,7 @@ const Animals = (props) => {
     {/* Other */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>33.70</p>
+    <p className={`${styles.Underline}`}>35.80</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Other</p>
@@ -314,29 +351,29 @@ const Animals = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="other_animals" 
+    <Form.Group controlId="other_makeup" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="other_animals"
-        value={other_animals}
+        name="other_makeup"
+        value={other_makeup}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.other_animals?.map((message, idx) => (
+    {errors?.other_makeup?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     </Row>
-    {/* ANIMALS Total */}
+    {/* MAKEUP SUPPLIES Total */}
     <Row className="mt-3">
     <Col md={1} >
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
-    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL ANIMALS</p>
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL MAKEUP SUPPLIES</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -348,17 +385,17 @@ const Animals = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="animalsTotal" 
+    <Form.Group controlId="makeupTotal" 
         className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="animalsTotal"
-        value={animalsTotal}
+        name="makeupTotal"
+        value={makeupTotal}
         readOnly
             />
     </Form.Group>
-    {errors?.animalsTotal?.map((message, idx) => (
+    {errors?.makeupTotal?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
@@ -369,4 +406,4 @@ const Animals = (props) => {
   )
 }
 
-export default Animals
+export default MakeupSup
