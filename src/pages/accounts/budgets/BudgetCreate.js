@@ -44,6 +44,8 @@ import Fx from "./budgetsectionscosts/Fx";
 import Animals from "./budgetsectionscosts/Animals";
 import WardrobeSup from "./budgetsectionscosts/WardrobeSup";
 import MakeupSup from "./budgetsectionscosts/MakeupSup";
+import CameraEqu from "./budgetsectionscosts/CameraEqu";
+import ElectricEqu from "./budgetsectionscosts/ElectricEqu";
 
 function BudgetCreate() {
   const [errors, setErrors] = useState({});
@@ -86,6 +88,8 @@ function BudgetCreate() {
   const [showAnim, setShowAnim] = useState(false);
   const [showWardSup, setShowWardSup] = useState(false);
   const [showMakeSup, setShowMakeSup] = useState(false);
+  const [showCamEqu, setShowCamEqu] = useState(false);
+  const [showElecEqu, setShowElecEqu] = useState(false);
 
   // INFO / LENGTH -------------------------
   // Info postData 
@@ -1891,6 +1895,48 @@ function BudgetCreate() {
 
   const [makeupTotal, setMakeupTotal] = useState(0);
 
+  // CAMERA EQUIPMENT ------------------------------
+
+  // Camera Equipment postData
+  const [postDataCameraEqu, setPostDataCameraEqu] = useState({
+    basic_package_rent_cam: 0,
+    daily_rentals_cam: 0,
+    specialty_rent_cam: 0,
+    camera_purchases: 0,
+    steadicam: 0,
+    video_teleprompter: 0,
+    camera_ship_brok: 0,
+    loss_damage_cam: 0,
+    other_camera: 0,
+  });
+
+  const  {basic_package_rent_cam, daily_rentals_cam, other_camera,
+    specialty_rent_cam, camera_purchases, steadicam,
+    video_teleprompter, camera_ship_brok, loss_damage_cam,
+  } = postDataCameraEqu;
+
+  const [cameraTotal, setCameraTotal] = useState(0);
+
+  // ELECTRICAL EQUIPMENT ------------------------------ 
+
+  // Electric Equipment postData
+  const [postDataElectricEqu, setPostDataElectricEqu] = useState({
+    basic_package_rent_elec: 0,
+    daily_rentals_elec: 0,
+    specialty_rent_elec: 0,
+    electric_purchases: 0,
+    generators: 0,
+    loss_damage_elec: 0,
+    other_electric: 0,
+  });
+
+  const {basic_package_rent_elec, daily_rentals_elec,
+    specialty_rent_elec, electric_purchases,
+    generators, loss_damage_elec, other_electric,
+  } = postDataElectricEqu;
+
+  const [electricTotal, setElectricTotal] = useState(0);
+
   // TOTALS ABOVE / BELOW / GRAND -----------------------------
 
   // Above the line total --------------------------
@@ -2038,7 +2084,9 @@ function BudgetCreate() {
         parseFloat(fxTotal || 0) +
         parseFloat(animalsTotal || 0) +
         parseFloat(wardrobeTotal || 0) +
-        parseFloat(makeupTotal || 0)
+        parseFloat(makeupTotal || 0) +
+        parseFloat(cameraTotal || 0) +
+        parseFloat(electricTotal || 0)
         )
       }
     const timer = setTimeout(() => {
@@ -2050,7 +2098,8 @@ function BudgetCreate() {
     };
   }, [ proOffTotal, studioTotal, siteTotal, unitTotal, tralivTotal,
     transportTotal, constructionMatTotal, artSupTotal, dressingTotal,
-    propsTotal, fxTotal, animalsTotal, wardrobeTotal, makeupTotal,]);
+    propsTotal, fxTotal, animalsTotal, wardrobeTotal, makeupTotal,
+    cameraTotal, electricTotal,]);
 
   // Below the line input box
   // eslint-disable-next-line
@@ -3041,6 +3090,26 @@ function BudgetCreate() {
     formData.append("makeup_ship_brok", makeup_ship_brok);
     formData.append("other_makeup", other_makeup);
     formData.append("makeup_total", makeupTotal);
+    // Camera Equ
+    formData.append("basic_package_rent_cam", basic_package_rent_cam);
+    formData.append("daily_rentals_cam", daily_rentals_cam);
+    formData.append("specialty_rent_cam", specialty_rent_cam);
+    formData.append("camera_purchases", camera_purchases);
+    formData.append("steadicam", steadicam);
+    formData.append("video_teleprompter", video_teleprompter);
+    formData.append("camera_ship_brok", camera_ship_brok);
+    formData.append("loss_damage_cam", loss_damage_cam);
+    formData.append("other_camera", other_camera);
+    formData.append("camera_total", cameraTotal);
+    // Electric Equ 
+    formData.append("basic_package_rent_elec", basic_package_rent_elec);
+    formData.append("daily_rentals_elec", daily_rentals_elec);
+    formData.append("specialty_rent_elec", specialty_rent_elec);
+    formData.append("electric_purchases", electric_purchases);
+    formData.append("generators", generators);
+    formData.append("loss_damage_elec", loss_damage_elec);
+    formData.append("other_electric", other_electric);
+    formData.append("electric_total", electricTotal);
     // formData.append("stars", stars);
 
     try {
@@ -3639,6 +3708,36 @@ function BudgetCreate() {
     </Col>
     <Col md={4}>
     <p className="mb-0">{makeupTotal} </p>
+    </Col>
+    </Row>
+    </div>
+    </Col>
+    {/* Camera Equipment */}
+    <Col md={3} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
+    <Row>
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
+          onClick={() => setShowCamEqu(showCamEqu => !showCamEqu)} >Camera Eq
+    </p>
+    </Col>
+    <Col md={4}>
+    <p className="mb-0">{cameraTotal} </p>
+    </Col>
+    </Row>
+    </div>
+    </Col>
+    {/* Electrical Equipment */}
+    <Col md={3} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
+    <Row>
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
+          onClick={() => setShowElecEqu(showElecEqu => !showElecEqu)} >Electrical Eq
+    </p>
+    </Col>
+    <Col md={4}>
+    <p className="mb-0">{electricTotal} </p>
     </Col>
     </Row>
     </div>
@@ -4282,6 +4381,28 @@ function BudgetCreate() {
       makeupTotal={makeupTotal}
       setMakeupTotal={setMakeupTotal}
       setShow={setShowMakeSup}  /> 
+    ) }
+    {/* Camera Equipment */}
+    {!showCamEqu ? (
+      ""
+    ) : (
+      <CameraEqu
+      postDataCameraEqu={postDataCameraEqu}
+      setPostDataCameraEqu={setPostDataCameraEqu}
+      cameraTotal={cameraTotal}
+      setCameraTotal={setCameraTotal}
+      setShow={setShowCamEqu}  /> 
+    ) }
+    {/* Electric Equipment */}
+    {!showElecEqu ? (
+      ""
+    ) : (
+      <ElectricEqu
+      postDataElectricEqu={postDataElectricEqu}
+      setPostDataElectricEqu={setPostDataElectricEqu}
+      electricTotal={electricTotal}
+      setElectricTotal={setElectricTotal}
+      setShow={setShowElecEqu}  /> 
     ) }
     {/* buttons */}
     <Row>
