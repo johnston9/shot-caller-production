@@ -67,6 +67,7 @@ const Camera = (props) => {
       return () => {
       clearTimeout(timer);
       };
+      // eslint-disable-next-line
     }, [dop_qty, dop_uno, dop_rt]);
 
     // function to calculate stills on change
@@ -83,6 +84,7 @@ const Camera = (props) => {
         return () => {
         clearTimeout(timer);
         };
+        // eslint-disable-next-line
       }, [stills_qty, stills_uno, stills_rt]);
 
     // function to calculate Camera Operator on change
@@ -99,6 +101,7 @@ const Camera = (props) => {
       return () => {
       clearTimeout(timer);
       };
+      // eslint-disable-next-line
     }, [camera_op_qty, camera_op_uno, camera_op_rt]);
 
     // function to calculate 1st Assistant Camera on change
@@ -115,6 +118,7 @@ const Camera = (props) => {
       return () => {
       clearTimeout(timer);
       };
+      // eslint-disable-next-line
     }, [cam_ac1_qty, cam_ac1_uno, cam_ac1_rt]);
 
     // function to calculate 2nd Assistant Camera on change
@@ -131,6 +135,7 @@ const Camera = (props) => {
       return () => {
       clearTimeout(timer);
       };
+      // eslint-disable-next-line
     }, [cam_ac2_qty, cam_ac2_uno, cam_ac2_rt]);
 
     // function to calculate DIT on change
@@ -147,6 +152,7 @@ const Camera = (props) => {
       return () => {
       clearTimeout(timer);
       };
+      // eslint-disable-next-line
     }, [dit_qty, dit_uno, dit_rt]);
 
     // function to calculate Steadicam on change
@@ -163,6 +169,7 @@ const Camera = (props) => {
       return () => {
       clearTimeout(timer);
       };
+      // eslint-disable-next-line
     }, [steadicam_qty, steadicam_uno, steadicam_rt]);
 
     // function to calculate Camera PA on change
@@ -179,6 +186,7 @@ const Camera = (props) => {
       return () => {
       clearTimeout(timer);
       };
+      // eslint-disable-next-line
     }, [cam_pa_qty, cam_pa_uno, cam_pa_rt]);
 
     // function to calculate Drone Pilot on change
@@ -195,6 +203,7 @@ const Camera = (props) => {
       return () => {
       clearTimeout(timer);
       };
+      // eslint-disable-next-line
     }, [drone_pilot_qty, drone_pilot_uno, drone_pilot_rt]);
 
     // function to calculate Other Camera on change
@@ -211,6 +220,7 @@ const Camera = (props) => {
       return () => {
       clearTimeout(timer);
       };
+      // eslint-disable-next-line
     }, [other_cam_qty, other_cam_uno, other_cam_rt]);
 
     // function to add all Camera Labour on change
@@ -237,7 +247,7 @@ const Camera = (props) => {
       return () => {
       clearTimeout(timer);
       };
-
+      // eslint-disable-next-line
       }, [dopTotal, cameraopTotal, camac1Total, camac2Total,
           ditTotal, steadicamTotal, campaTotal, 
           dronepilotTotal, stillsTotal, othercamTotal,

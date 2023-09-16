@@ -1,4 +1,4 @@
-/* Component in the Budget component to edit Studio */
+/* Component in the Budget component to edit Sound Equ */
 import React, { useEffect, useState } from "react";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
@@ -6,56 +6,56 @@ import Col from "react-bootstrap/Col";
 import styles from "../../../../styles/Account.module.css";
 import Alert from "react-bootstrap/Alert";
 
-const Studio = (props) => {
+const SoundEqu = (props) => {  
   // eslint-disable-next-line
   const [errors, setErrors] = useState({});
+  
+  const {postDataSoundEqu, setPostDataSoundEqu,
+  soundTotal, setSoundTotal, setShow,} = props;
 
-  const {postDataStudio, setPostDataStudio,
-    studioTotal, setStudioTotal, setShow} = props;
-
-  const {studio_rentals, power, carpentry_rentals,
-    studio_fx_equipment, studio_security, studio_other,
-    } = postDataStudio;
+  const {basic_package_rent_sound, daily_rentals_sound,
+    wireless_mics, sound_purchases, walkie_talkies, other_sound,
+  } = postDataSoundEqu;
 
   // handleChange 
   const handleChange = (event) => {
-    setPostDataStudio({
-    ...postDataStudio,
+    setPostDataSoundEqu({
+    ...postDataSoundEqu,
     [event.target.name]: parseFloat(event.target.value || 0 ),
     });
-  }; 
+  };
 
-  // function to add all Studio on change
+  // function to add all Sound Equipment on change
   useEffect(() => {
-    const addStudio = () => {
-        setStudioTotal(
-        parseFloat(studio_rentals || 0) +
-        parseFloat(power || 0) +
-        parseFloat(carpentry_rentals || 0) +
-        parseFloat(studio_fx_equipment || 0) +
-        parseFloat(studio_security || 0) +
-        parseFloat(studio_other || 0)
+    const addSoundEqu = () => {
+      setSoundTotal(
+        parseFloat(basic_package_rent_sound || 0) +
+        parseFloat(daily_rentals_sound || 0) +
+        parseFloat(wireless_mics || 0) +
+        parseFloat(sound_purchases || 0) +
+        parseFloat(walkie_talkies || 0) +
+        parseFloat(other_sound || 0)
        )
     }
     const timer = setTimeout(() => {
-        addStudio();
+      addSoundEqu();
     }, 1000);
 
     return () => {
       clearTimeout(timer);
     };
    // eslint-disable-next-line
-  }, [studio_rentals, power, carpentry_rentals,
-    studio_fx_equipment, studio_security, studio_other,]);
-
+  }, [basic_package_rent_sound, daily_rentals_sound,
+    wireless_mics, sound_purchases, walkie_talkies, other_sound,]);
+  
   return (
     <div className="mt-5">
     <Row >
     <Col md={1} >
-    <p className="mb-2">23.00</p>
+    <p className="mb-2">39.00</p>
     </Col>
     <Col md={9} >
-    <p className={ `${styles.BoldBlack} mb-2`}>Studio/Backlot Expenses</p>
+    <p className={ `${styles.BoldBlack} mb-2`}>Sound Equipment</p>
     </Col>
     <Col md={2}>
     <span className={`${styles.Close }`} 
@@ -86,13 +86,13 @@ const Studio = (props) => {
     <p className="mb-0">Total</p>
     </Col>
     </Row>
-    {/* Studio/Backlot Rentals */}
+    {/* Basic Package Rentals */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>23.10</p>
+    <p className={`${styles.Underline}`}>39.10</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Studio/Backlot Rentals</p>
+    <p className={`${styles.Underline}`}>Basic Package Rentals</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -104,30 +104,30 @@ const Studio = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="studio_rentals" 
+    <Form.Group controlId="basic_package_rent_sound" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="studio_rentals"
-        value={studio_rentals}
+        name="basic_package_rent_sound"
+        value={basic_package_rent_sound}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.studio_rentals?.map((message, idx) => (
+    {errors?.basic_package_rent_sound?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     </Row>
-    {/* Power */}
+    {/* Daily Rentals */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>23.20</p>
+    <p className={`${styles.Underline}`}>39.20</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Power</p>
+    <p className={`${styles.Underline}`}>Daily Rentals</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -139,30 +139,30 @@ const Studio = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="power" 
+    <Form.Group controlId="daily_rentals_sound" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="power"
-        value={power}
+        name="daily_rentals_sound"
+        value={daily_rentals_sound}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.power?.map((message, idx) => (
+    {errors?.daily_rentals_sound?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     </Row>
-    {/* Carpentry Shop Rentals */}
+    {/* Wireless Microphones */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>23.30</p>
+    <p className={`${styles.Underline}`}>39.30</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Carpentry Shop Rentals</p>
+    <p className={`${styles.Underline}`}>Wireless Microphones</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -174,30 +174,30 @@ const Studio = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="carpentry_rentals" 
+    <Form.Group controlId="wireless_mics" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="carpentry_rentals"
-        value={carpentry_rentals}
+        name="wireless_mics"
+        value={wireless_mics}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.carpentry_rentals?.map((message, idx) => (
+    {errors?.wireless_mics?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     </Row>
-    {/* Special Effects Equipment */}
+    {/* Purchases */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>23.40</p>
+    <p className={`${styles.Underline}`}>39.40</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Special Effects Equipment</p>
+    <p className={`${styles.Underline}`}>Purchases</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -209,30 +209,30 @@ const Studio = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="studio_fx_equipment" 
+    <Form.Group controlId="sound_purchases" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="studio_fx_equipment"
-        value={studio_fx_equipment}
+        name="sound_purchases"
+        value={sound_purchases}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.studio_fx_equipment?.map((message, idx) => (
+    {errors?.sound_purchases?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     </Row>
-    {/* Security */}
+    {/* Walkie Talkies */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>23.50</p>
+    <p className={`${styles.Underline}`}>39.50</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Security</p>
+    <p className={`${styles.Underline}`}>Walkie Talkies</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -244,17 +244,17 @@ const Studio = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="studio_security" 
+    <Form.Group controlId="walkie_talkies" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="studio_security"
-        value={studio_security}
+        name="walkie_talkies"
+        value={walkie_talkies}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.studio_security?.map((message, idx) => (
+    {errors?.walkie_talkies?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
@@ -264,7 +264,7 @@ const Studio = (props) => {
     {/* Other */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>23.60</p>
+    <p className={`${styles.Underline}`}>39.60</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Other</p>
@@ -279,29 +279,29 @@ const Studio = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="studio_other" 
+    <Form.Group controlId="other_sound" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="studio_other"
-        value={studio_other}
+        name="other_sound"
+        value={other_sound}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.studio_other?.map((message, idx) => (
+    {errors?.other_sound?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     </Row>
-    {/* Studio Total */}
+    {/* SOUND EQUIPMENT Total */}
     <Row className="mt-3">
     <Col md={1} >
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
-    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL STUDIO/BACKLOT EXPENSES</p>
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL SOUND EQUIPMENT</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -313,17 +313,17 @@ const Studio = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="studioTotal" 
+    <Form.Group controlId="soundTotal" 
         className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="studioTotal"
-        value={studioTotal}
+        name="soundTotal"
+        value={soundTotal}
         readOnly
             />
     </Form.Group>
-    {errors?.studioTotal?.map((message, idx) => (
+    {errors?.soundTotal?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
@@ -334,4 +334,4 @@ const Studio = (props) => {
   )
 }
 
-export default Studio
+export default SoundEqu

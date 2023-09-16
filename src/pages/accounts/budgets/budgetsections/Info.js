@@ -54,6 +54,7 @@ const Info = (props) => {
         return () => {
         clearTimeout(timer);
         };
+        // eslint-disable-next-line
     }, [research, prep, shoot, wrap, post ]);
 
   return (

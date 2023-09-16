@@ -63,6 +63,7 @@ const ProducersDirectors = (props) => {
     return () => {
       clearTimeout(timer);
     };
+    // eslint-disable-next-line
   }, [executive_producers_quantity, executive_producers_rate]);
 
   // function to calculate Producers on change
@@ -78,6 +79,7 @@ const ProducersDirectors = (props) => {
     return () => {
       clearTimeout(timer);
     };
+    // eslint-disable-next-line
   }, [producers_quantity, producers_rate]);
 
   // function to calculate Line Producers on change
@@ -93,6 +95,7 @@ const ProducersDirectors = (props) => {
     return () => {
       clearTimeout(timer);
     };
+    // eslint-disable-next-line
   }, [line_producers_quantity, line_producers_rate]);
 
   // function to calculate  Co Producers on change
@@ -108,6 +111,7 @@ const ProducersDirectors = (props) => {
     return () => {
       clearTimeout(timer);
     };
+    // eslint-disable-next-line
   }, [co_producers_quantity, co_producers_rate]);
 
   // function to calculate  Assoc Producers on change
@@ -123,6 +127,7 @@ const ProducersDirectors = (props) => {
     return () => {
       clearTimeout(timer);
     };
+    // eslint-disable-next-line
   }, [associate_producers_quantity, associate_producers_rate]);
 
   // function to calculate Directors on change
@@ -138,6 +143,7 @@ const ProducersDirectors = (props) => {
     return () => {
       clearTimeout(timer);
     };
+    // eslint-disable-next-line
   }, [directors_quantity, directors_rate]);
 
   // function to calculate 2nd Unit Directors on change
@@ -153,6 +159,7 @@ const ProducersDirectors = (props) => {
     return () => {
       clearTimeout(timer);
     };
+    // eslint-disable-next-line
   }, [unit2_directors_quantity, unit2_directors_rate]);
 
   // end calculate functions
@@ -180,6 +187,7 @@ const ProducersDirectors = (props) => {
     return () => {
       clearTimeout(timer);
     };
+    // eslint-disable-next-line
   }, [execProducersTotal, producersTotal, lineProducersTotal, coProducersTotal,
     assocProducersTotal, directorsTotal, unit2DirectorsTotal,
     travel_expenses_producers_dirs, living_expenses_producers_dirs,

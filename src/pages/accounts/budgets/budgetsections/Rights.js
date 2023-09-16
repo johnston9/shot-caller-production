@@ -36,6 +36,7 @@ const Rights = (props) => {
     return () => {
       clearTimeout(timer);
     };
+    // eslint-disable-next-line
   }, [story_rights, miscellaneous ]);
 
   return (

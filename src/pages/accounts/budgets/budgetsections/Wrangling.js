@@ -54,6 +54,7 @@ const Wrangling = (props) => {
         return () => {
         clearTimeout(timer);
         };
+        // eslint-disable-next-line
     }, [head_wrangler_quantity, head_wrangler_units_number,
         head_wrangler_rate]);
 
@@ -71,6 +72,7 @@ const Wrangling = (props) => {
         return () => {
         clearTimeout(timer);
         };
+        // eslint-disable-next-line
     }, [other_wrangling_labour_quantity, other_wrangling_labour_units_number,
         other_wrangling_labour_rate]);
     
@@ -90,7 +92,7 @@ const Wrangling = (props) => {
         return () => {
         clearTimeout(timer);
         };
-
+        // eslint-disable-next-line
         }, [headwranglerTotal, otherwranglinglabourTotal,
             fringes_taxes_wrangling,]);
 

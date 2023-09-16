@@ -44,7 +44,7 @@ const ArtSupplies = (props) => {
     return () => {
       clearTimeout(timer);
     };
-
+    // eslint-disable-next-line
   }, [drawing_supplies, drawing_equipment, tech,
     stock_prints_processing, blueprinting, other_art]);
 

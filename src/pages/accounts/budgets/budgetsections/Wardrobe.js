@@ -65,6 +65,7 @@ const Wardrobe = (props) => {
         return () => {
         clearTimeout(timer);
         };
+        // eslint-disable-next-line
     }, [costume_designer_quantity, costume_designer_units_number,
         costume_designer_rate]);
     
@@ -82,6 +83,7 @@ const Wardrobe = (props) => {
         return () => {
         clearTimeout(timer);
         };
+        // eslint-disable-next-line
     }, [assist_costume_designer_quantity, assist_costume_designer_units_number,
         assist_costume_designer_rate]);
 
@@ -99,6 +101,7 @@ const Wardrobe = (props) => {
         return () => {
         clearTimeout(timer);
         };
+        // eslint-disable-next-line
     }, [head_wardrobe_quantity, head_wardrobe_units_number,
         head_wardrobe_rate]);
 
@@ -116,6 +119,7 @@ const Wardrobe = (props) => {
         return () => {
         clearTimeout(timer);
         };
+        // eslint-disable-next-line
     }, [wardrobe_assist_quantity, wardrobe_assist_units_number,
         wardrobe_assist_rate]);
 
@@ -133,6 +137,7 @@ const Wardrobe = (props) => {
         return () => {
         clearTimeout(timer);
         };
+        // eslint-disable-next-line
     }, [truck_costumer_quantity, truck_costumer_units_number,
         truck_costumer_rate]);
 
@@ -150,6 +155,7 @@ const Wardrobe = (props) => {
         return () => {
         clearTimeout(timer);
         };
+        // eslint-disable-next-line
     }, [other_wardrobe_labour_quantity, other_wardrobe_labour_units_number,
         other_wardrobe_labour_rate]);
 
@@ -173,7 +179,7 @@ const Wardrobe = (props) => {
         return () => {
         clearTimeout(timer);
         };
-
+        // eslint-disable-next-line
         }, [costumedesignerTotal, assistcosdesignerTotal, headwardrobeTotal,
             wardrobeassistTotal, truckcostumerTotal, otherwardrobeTotal,
             fringes_taxes_wardrobe,]);

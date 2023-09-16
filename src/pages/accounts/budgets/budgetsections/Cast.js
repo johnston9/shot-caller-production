@@ -18,8 +18,7 @@ const Cast = (props) => {
          otherperformersTotal, setOtherperformersTotal,
          extrasTotal, setExtrasTotal,
          castTotal, setCastTotal} = props;
-
-  console.log(postDataCast)
+         
   // Cast postData values
   const {
     principals_quantity, principals_units_number,

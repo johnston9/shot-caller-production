@@ -69,6 +69,7 @@ const SetDressingLabour = (props) => {
         return () => {
         clearTimeout(timer);
         };
+        // eslint-disable-next-line
     }, [set_decorator_quantity, set_decorator_units_number,
         set_decorator_rate]);
 
@@ -86,6 +87,7 @@ const SetDressingLabour = (props) => {
         return () => {
         clearTimeout(timer);
         };
+        // eslint-disable-next-line
     }, [assist_set_decorator_quantity, assist_set_decorator_units_number,
         assist_set_decorator_rate]);
 
@@ -103,6 +105,7 @@ const SetDressingLabour = (props) => {
         return () => {
         clearTimeout(timer);
         };
+        // eslint-disable-next-line
     }, [lead_man_quantity, lead_man_units_number,
         lead_man_rate]);
 
@@ -120,6 +123,7 @@ const SetDressingLabour = (props) => {
         return () => {
         clearTimeout(timer);
         };
+        // eslint-disable-next-line
     }, [set_dressers_quantity, set_dressers_units_number,
         set_dressers_rate]);
 
@@ -137,6 +141,7 @@ const SetDressingLabour = (props) => {
         return () => {
         clearTimeout(timer);
         };
+        // eslint-disable-next-line
     }, [swing_gang_quantity, swing_gang_units_number,
         swing_gang_rate]);
 
@@ -154,6 +159,7 @@ const SetDressingLabour = (props) => {
         return () => {
         clearTimeout(timer);
         };
+        // eslint-disable-next-line
     }, [set_dressing_buyer_quantity, set_dressing_buyer_units_number,
         set_dressing_buyer_rate]);
     
@@ -178,7 +184,7 @@ const SetDressingLabour = (props) => {
         return () => {
         clearTimeout(timer);
         };
-
+        // eslint-disable-next-line
         }, [decoratorsetTotal, assistdecoratorsetTotal, leadmanTotal,
             dressersTotal, swinggangTotal, dressingbuyerTotal,
             other_set_dressing, fringes_taxes_dressing,]);

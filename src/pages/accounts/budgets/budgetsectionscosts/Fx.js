@@ -42,7 +42,7 @@ const Fx = (props) => {
     return () => {
       clearTimeout(timer);
     };
-
+    // eslint-disable-next-line
   }, [fx_rentals, fx_purchases, stunts_purchases_rentals,
     armaments_permits_fees, other_fx]);
 

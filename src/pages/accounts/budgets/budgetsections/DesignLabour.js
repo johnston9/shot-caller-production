@@ -62,6 +62,7 @@ const DesignLabour = (props) => {
     return () => {
       clearTimeout(timer);
     };
+    // eslint-disable-next-line
   }, [production_designer_quantity, production_designer_units_number, 
     production_designer_rate]);
 
@@ -79,6 +80,7 @@ const DesignLabour = (props) => {
     return () => {
       clearTimeout(timer);
     };
+    // eslint-disable-next-line
   }, [art_director_quantity, art_director_units_number, 
     art_director_rate]);
 
@@ -96,6 +98,7 @@ const DesignLabour = (props) => {
     return () => {
       clearTimeout(timer);
     };
+    // eslint-disable-next-line
   }, [art_assistants_quantity, art_assistants_units_number, 
     art_assistants_rate]);
 
@@ -113,6 +116,7 @@ const DesignLabour = (props) => {
     return () => {
       clearTimeout(timer);
     };
+    // eslint-disable-next-line
   }, [production_assistants_trainees_quantity, production_assistants_trainees_units_number, 
     production_assistants_trainees_rate]);
 
@@ -130,11 +134,12 @@ const DesignLabour = (props) => {
     return () => {
       clearTimeout(timer);
     };
+    // eslint-disable-next-line
   }, [graphic_artists_quantity, graphic_artists_units_number, 
     graphic_artists_rate]);
 
-// function to add all design on change
-useEffect(() => {
+  // function to add all design on change
+  useEffect(() => {
     const addDesign = () => {
       setDesignlabourTotal(
       parseFloat(productiondesignerTotal || 0) +
@@ -153,6 +158,7 @@ useEffect(() => {
     return () => {
       clearTimeout(timer);
     };
+    // eslint-disable-next-line
   }, [other_design, graphicartistsTotal, productionassistantstraineesTotal,
     artassistantsTotal, artdirectorTotal, productiondesignerTotal,
     fringes_taxes_design,]);

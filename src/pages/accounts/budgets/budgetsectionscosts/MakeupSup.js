@@ -46,7 +46,7 @@ const MakeupSup = (props) => {
     return () => {
       clearTimeout(timer);
     };
-
+   // eslint-disable-next-line
   }, [makeup_rentals, makeup_purchases, hair_rentals, hair_purchases,
     wigs, makeup_fx, makeup_ship_brok, other_makeup,]);
     

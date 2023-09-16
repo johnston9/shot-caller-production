@@ -58,6 +58,7 @@ const Sound = (props) => {
       return () => {
       clearTimeout(timer);
       };
+      // eslint-disable-next-line
     }, [sound_mixer_qty, sound_mixer_uno, sound_mixer_rt]);
 
     // function to calculate Boom Operator on change
@@ -74,6 +75,7 @@ const Sound = (props) => {
       return () => {
       clearTimeout(timer);
       };
+      // eslint-disable-next-line
     }, [boom_operator_qty, boom_operator_uno, boom_operator_rt]);
 
     // function to calculate Cable Wrangler on change
@@ -90,6 +92,7 @@ const Sound = (props) => {
       return () => {
       clearTimeout(timer);
       };
+      // eslint-disable-next-line
     }, [cable_wrangler_qty, cable_wrangler_uno, cable_wrangler_rt]);
 
     // function to calculate Other Sound Labour on change
@@ -106,6 +109,7 @@ const Sound = (props) => {
       return () => {
       clearTimeout(timer);
       };
+      // eslint-disable-next-line
     }, [other_sound_labour_qty, other_sound_labour_uno, other_sound_labour_rt]);
 
     // function to add all Sound Labour on change
@@ -126,7 +130,7 @@ const Sound = (props) => {
       return () => {
       clearTimeout(timer);
       };
-
+      // eslint-disable-next-line
       }, [soundmixerTotal, boomoperatorTotal, cablewranglerTotal,
         othersoundlabourTotal, fringes_taxes_sound,]);
     

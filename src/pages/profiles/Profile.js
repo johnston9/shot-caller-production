@@ -16,6 +16,7 @@ import Row from 'react-bootstrap/Row';
 import { useSetProfileData } from '../../contexts/ProfileDataContext';
 
 const Profile = (props) => {
+  // eslint-disable-next-line
   const { profile, imageSize="40" } = props;
   const { id, following_id, image, owner, name, company } = profile;
 

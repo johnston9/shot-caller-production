@@ -48,7 +48,7 @@ const CameraEqu = (props) => {
     return () => {
       clearTimeout(timer);
     };
-
+    // eslint-disable-next-line
   }, [basic_package_rent_cam, daily_rentals_cam, other_camera,
     specialty_rent_cam, camera_purchases, steadicam,
     video_teleprompter, camera_ship_brok, loss_damage_cam,]);

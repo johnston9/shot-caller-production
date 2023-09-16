@@ -60,6 +60,7 @@ const Grip = (props) => {
       return () => {
       clearTimeout(timer);
       };
+      // eslint-disable-next-line
     }, [key_grip_qty, key_grip_uno, key_grip_rt]);
 
     // function to calculate best boy grip on change
@@ -76,6 +77,7 @@ const Grip = (props) => {
       return () => {
       clearTimeout(timer);
       };
+      // eslint-disable-next-line
     }, [best_boy_grip_qty, best_boy_grip_uno, best_boy_grip_rt]);
 
     // function to calculate grips on change
@@ -92,6 +94,7 @@ const Grip = (props) => {
       return () => {
       clearTimeout(timer);
       };
+      // eslint-disable-next-line
     }, [grips_qty, grips_uno, grips_rt]);
 
     // function to calculate dailies grip on change
@@ -108,6 +111,7 @@ const Grip = (props) => {
       return () => {
       clearTimeout(timer);
       };
+      // eslint-disable-next-line
     }, [dailies_grip_qty, dailies_grip_uno, dailies_grip_rt]);
 
     // function to calculate dolly crane grip on change
@@ -124,6 +128,7 @@ const Grip = (props) => {
       return () => {
       clearTimeout(timer);
       };
+      // eslint-disable-next-line
     }, [dolly_crane_grip_qty, dolly_crane_grip_uno, dolly_crane_grip_rt]);
 
     // function to calculate swing grips on change
@@ -140,6 +145,7 @@ const Grip = (props) => {
       return () => {
       clearTimeout(timer);
       };
+      // eslint-disable-next-line
     }, [swing_grips_qty, swing_grips_uno, swing_grips_rt]);
 
     // function to calculate other grip labour on change
@@ -156,6 +162,7 @@ const Grip = (props) => {
       return () => {
       clearTimeout(timer);
       };
+      // eslint-disable-next-line
     }, [other_grip_labour_qty, other_grip_labour_uno, other_grip_labour_rt]);
 
     // function to add all Grip Labour on change
@@ -179,7 +186,7 @@ const Grip = (props) => {
       return () => {
       clearTimeout(timer);
       };
-
+      // eslint-disable-next-line
       }, [keygripTotal, bestboygripTotal, gripsTotal,
         dailiesgripTotal, dollycranegripTotal, swinggripsTotal,
         othergriplabourTotal, fringes_taxes_grip,]);

@@ -46,7 +46,7 @@ const Unit = (props) => {
     return () => {
       clearTimeout(timer);
     };
-
+   // eslint-disable-next-line
   }, [catering, craft_expenses, meal_penalty, green_room, 
     first_aid, outfitting, medical_insurance, unit_other,]);
 

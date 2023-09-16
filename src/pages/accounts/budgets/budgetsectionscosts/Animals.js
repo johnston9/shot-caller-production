@@ -44,7 +44,7 @@ const Animals = (props) => {
     return () => {
       clearTimeout(timer);
     };
-
+    // eslint-disable-next-line
   }, [animals_rentals, animals_purchases, food_stabling,
     transport, vet, customs_broker, other_animals,]);
 

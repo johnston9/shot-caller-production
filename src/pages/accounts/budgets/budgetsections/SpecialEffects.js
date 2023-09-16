@@ -55,6 +55,7 @@ const SpecialEffects = (props) => {
         return () => {
         clearTimeout(timer);
         };
+        // eslint-disable-next-line
     }, [fx_supervisor_quantity, fx_supervisor_units_number,
         fx_supervisor_rate]);
     
@@ -72,6 +73,7 @@ const SpecialEffects = (props) => {
         return () => {
         clearTimeout(timer);
         };
+        // eslint-disable-next-line
     }, [assist_fx_quantity, assist_fx_units_number,
         assist_fx_rate]);
     
@@ -89,6 +91,7 @@ const SpecialEffects = (props) => {
         return () => {
         clearTimeout(timer);
         };
+        // eslint-disable-next-line
     }, [other_fx_labour_quantity, other_fx_labour_units_number,
         other_fx_labour_rate]);
 
@@ -109,7 +112,7 @@ const SpecialEffects = (props) => {
         return () => {
         clearTimeout(timer);
         };
-
+        // eslint-disable-next-line
         }, [fxsupervisorTotal, assistfxTotal, 
             otherfxlabourTotal, fringes_taxes_fx]);
 

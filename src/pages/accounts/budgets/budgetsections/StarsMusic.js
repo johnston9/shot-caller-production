@@ -56,6 +56,7 @@ const StarsMusic = (props) => {
     return () => {
       clearTimeout(timer);
     };
+    // eslint-disable-next-line
   }, [stars, stars_rights_payments, travel_expenses_stars,
     living_expenses_stars, other_stars, fringes_taxes_stars,
     music, music_supervisor, travel_expenses_music, living_expenses_music,

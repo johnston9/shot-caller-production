@@ -64,6 +64,7 @@ const TV = (props) => {
         return () => {
         clearTimeout(timer);
         };
+        // eslint-disable-next-line
       }, [tech_super_qty, tech_super_uno, tech_super_rt]);
     
     // function to calculate Technical Director on change
@@ -80,6 +81,7 @@ const TV = (props) => {
         return () => {
         clearTimeout(timer);
         };
+        // eslint-disable-next-line
       }, [tech_direct_qty, tech_direct_uno, tech_direct_rt]);
 
     // function to calculate Floor Manager on change
@@ -96,6 +98,7 @@ const TV = (props) => {
         return () => {
         clearTimeout(timer);
         };
+        // eslint-disable-next-line
       }, [floor_man_qty, floor_man_uno, floor_man_rt]);
 
     // function to calculate Lighting Director on change
@@ -112,6 +115,7 @@ const TV = (props) => {
         return () => {
         clearTimeout(timer);
         };
+        // eslint-disable-next-line
       }, [light_direct_qty, light_direct_uno, light_direct_rt]);
 
     // function to calculate Boardman on change
@@ -128,6 +132,7 @@ const TV = (props) => {
         return () => {
         clearTimeout(timer);
         };
+        // eslint-disable-next-line
       }, [boardman_qty, boardman_uno, boardman_rt]);
 
     // function to calculate Audio on change
@@ -144,6 +149,7 @@ const TV = (props) => {
         return () => {
         clearTimeout(timer);
         };
+        // eslint-disable-next-line
       }, [audio_qty, audio_uno, audio_rt]);
 
     // function to calculate VRT Operator on change
@@ -160,6 +166,7 @@ const TV = (props) => {
         return () => {
         clearTimeout(timer);
         };
+        // eslint-disable-next-line
       }, [vtr_operator_qty, vtr_operator_uno, vtr_operator_rt]);
 
     // function to calculate Stagehands on change
@@ -176,6 +183,7 @@ const TV = (props) => {
         return () => {
         clearTimeout(timer);
         };
+        // eslint-disable-next-line
       }, [stagehands_qty, stagehands_uno, stagehands_rt]);
 
     // function to calculate Other TV Labour on change
@@ -192,6 +200,7 @@ const TV = (props) => {
         return () => {
         clearTimeout(timer);
         };
+        // eslint-disable-next-line
     }, [other_tv_qty, other_tv_uno, other_tv_rt]);
 
     // function to add all TV Specific Labour on change
@@ -217,7 +226,7 @@ const TV = (props) => {
         return () => {
         clearTimeout(timer);
         };
-  
+        // eslint-disable-next-line
         }, [techsuperTotal, techdirectTotal, floormanTotal,
             lightdirectTotal, boardmanTotal, audioTotal,
             vtroperatorTotal, stagehandsTotal, othertvTotal,

@@ -48,7 +48,7 @@ const Props = (props) => {
     return () => {
       clearTimeout(timer);
     };
-
+    // eslint-disable-next-line
   }, [props_rentals, props_purchases, graphics_signs,
     props_repairs_replac, picture_vehicle_rentals, picture_vehicle_purchases,
     picture_vehicle_mods, picture_vehicle_ins, other_props]);

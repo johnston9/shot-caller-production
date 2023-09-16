@@ -46,7 +46,7 @@ const ElectricEqu = (props) => {
     return () => {
       clearTimeout(timer);
     };
-
+   // eslint-disable-next-line
   }, [basic_package_rent_elec, daily_rentals_elec,
     specialty_rent_elec, electric_purchases,
     generators, loss_damage_elec, other_electric,]);
@@ -58,7 +58,7 @@ const ElectricEqu = (props) => {
     <p className="mb-2">37.00</p>
     </Col>
     <Col md={9} >
-    <p className={ `${styles.BoldBlack} mb-2`}>Camera Equipment</p>
+    <p className={ `${styles.BoldBlack} mb-2`}>Electrical Equipment</p>
     </Col>
     <Col md={2}>
     <span className={`${styles.Close }`} 

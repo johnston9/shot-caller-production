@@ -56,6 +56,7 @@ const Transport = (props) => {
       return () => {
       clearTimeout(timer);
       };
+      // eslint-disable-next-line
     }, [tp_coordinator_qty, tp_coordinator_uno, tp_coordinator_rt]);
 
     // function to calculate Transport Captain on change
@@ -72,6 +73,7 @@ const Transport = (props) => {
       return () => {
       clearTimeout(timer);
       };
+      // eslint-disable-next-line
     }, [tp_captain_qty, tp_captain_uno, tp_captain_rt]);
 
     // function to calculate Transport Manager on change
@@ -88,6 +90,7 @@ const Transport = (props) => {
       return () => {
       clearTimeout(timer);
       };
+      // eslint-disable-next-line
     }, [tp_manager_qty, tp_manager_uno, tp_manager_rt]);
 
     // function to calculate Head Driver on change
@@ -104,6 +107,7 @@ const Transport = (props) => {
       return () => {
       clearTimeout(timer);
       };
+      // eslint-disable-next-line
     }, [head_driver_qty, head_driver_uno, head_driver_rt]);
 
     // function to calculate Drivers on change
@@ -120,6 +124,7 @@ const Transport = (props) => {
       return () => {
       clearTimeout(timer);
       };
+      // eslint-disable-next-line
     }, [drivers_qty, drivers_uno, drivers_rt]);
 
     // function to add all Transport Labour on change
@@ -141,7 +146,7 @@ const Transport = (props) => {
       return () => {
       clearTimeout(timer);
       };
-
+      // eslint-disable-next-line
       }, [tpcoordinatorTotal, tpcaptainTotal, tpmanagerTotal,
         headdriverTotal, driversTotal, fringes_taxes_transport]);
 

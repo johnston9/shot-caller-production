@@ -43,7 +43,7 @@ const Dressing = (props) => {
     return () => {
       clearTimeout(timer);
     };
-
+    // eslint-disable-next-line
   }, [dress_rentals, dress_purchases, dress_manufacture,
     dress_repairs_replacements, other_dressing,]);
 

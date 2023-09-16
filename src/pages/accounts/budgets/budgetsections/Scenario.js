@@ -59,6 +59,7 @@ const Scenario = (props) => {
     return () => {
       clearTimeout(timer);
     };
+    // eslint-disable-next-line
   }, [writers_units_number, writers_quantity, writers_rate]);
 
   // function to calculate consultants on change
@@ -74,6 +75,7 @@ const Scenario = (props) => {
     return () => {
       clearTimeout(timer);
     };
+    // eslint-disable-next-line
   }, [consultants_units_number, consultants_quantity, consultants_rate, ])
 
   // function to calculate editors on change
@@ -90,6 +92,7 @@ const Scenario = (props) => {
     return () => {
       clearTimeout(timer);
     };
+    // eslint-disable-next-line
   }, [editors_scenario_units_number, 
     editors_scenario_quantity, editors_scenario_rate]);
 
@@ -107,6 +110,7 @@ const Scenario = (props) => {
     return () => {
       clearTimeout(timer);
     };
+    // eslint-disable-next-line
   }, [admin_scenario_units_number,
     admin_scenario_quantity, admin_scenario_rate]);
 
@@ -132,6 +136,7 @@ const Scenario = (props) => {
     return () => {
       clearTimeout(timer);
     };
+    // eslint-disable-next-line
   }, [writersTotal, consultantsTotal, editorsscenarioTotal,
     office_expenses_scenario, adminScenarioTotal, travel_expenses_scenario,
     living_expenses_scenario, other_scenario, 

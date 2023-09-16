@@ -40,10 +40,16 @@ import TravelLiving from "./budgetsectionscosts/TravelLiving";
 import Transportation from "./budgetsectionscosts/Transportation";
 import ConstructionMat from "./budgetsectionscosts/ConstructionMat";
 import ArtSupplies from "./budgetsectionscosts/ArtSupplies";
+import Dressing from "./budgetsectionscosts/Dressing";
+import Props from "./budgetsectionscosts/Props";
+import Fx from "./budgetsectionscosts/Fx";
+import Animals from "./budgetsectionscosts/Animals";
 import WardrobeSup from "./budgetsectionscosts/WardrobeSup";
 import MakeupSup from "./budgetsectionscosts/MakeupSup";
 import CameraEqu from "./budgetsectionscosts/CameraEqu";
 import ElectricEqu from "./budgetsectionscosts/ElectricEqu";
+import GripEqu from "./budgetsectionscosts/GripEqu";
+import SoundEqu from "./budgetsectionscosts/SoundEqu";
 
 function BudgetEdit() {
   const [errors, setErrors] = useState({});
@@ -88,6 +94,8 @@ function BudgetEdit() {
   const [showMakeSup, setShowMakeSup] = useState(false);
   const [showCamEqu, setShowCamEqu] = useState(false);
   const [showElecEqu, setShowElecEqu] = useState(false);
+  const [showGripEqu, setShowGripEqu] = useState(false);
+  const [showSoundEqu, setShowSoundEqu] = useState(false);
 
   // budget id
   const [budgetId, setBudgetId] = useState("");
@@ -1928,7 +1936,7 @@ function BudgetEdit() {
     other_camera: 0,
   });
 
-  const  {basic_package_rent_cam,mdaily_rentals_cam, 
+  const  {basic_package_rent_cam, daily_rentals_cam, 
     specialty_rent_cam, camera_purchases, steadicam,
     video_teleprompter, camera_ship_brok, loss_damage_cam, other_camera,
   } = postDataCameraEqu;
@@ -1954,6 +1962,45 @@ function BudgetEdit() {
   } = postDataElectricEqu;
 
   const [electricTotal, setElectricTotal] = useState(0);
+
+  // GRIP EQUIPMENT ------------------------------
+
+  // Grip Equipment postData
+  const [postDataGripEqu, setPostDataGripEqu] = useState({
+    basic_package_rent_grip: 0,
+    daily_rentals_grip: 0,
+    specialty_rent_grip: 0,
+    crane_rentals: 0,
+    scaffolding_grip: 0,
+    grip_purchases: 0,
+    loss_damage_grip: 0,
+    other_grip: 0,
+  });
+
+  const {basic_package_rent_grip, daily_rentals_grip,
+    specialty_rent_grip, crane_rentals, scaffolding_grip,
+    grip_purchases, loss_damage_grip, other_grip,
+  } = postDataGripEqu;
+
+  const [gripTotal, setGripTotal] = useState(0);
+
+  // SOUND EQUIPMENT ------------------------------
+  
+  // Sound Equipment postData
+  const [postDataSoundEqu, setPostDataSoundEqu] = useState({
+    basic_package_rent_sound: 0,
+    daily_rentals_sound: 0,
+    wireless_mics: 0,
+    sound_purchases: 0,
+    walkie_talkies: 0,
+    other_sound: 0,
+  });
+
+  const {basic_package_rent_sound, daily_rentals_sound,
+    wireless_mics, sound_purchases, walkie_talkies, other_sound,
+  } = postDataSoundEqu;
+
+  const [soundTotal, setSoundTotal] = useState(0);
 
   // TOTALS ABOVE / BELOW / GRAND --------------------------------
 
@@ -1983,6 +2030,7 @@ function BudgetEdit() {
     producersDirsTotal, starsMusicTotal]);
 
   // Above the line input box
+  // eslint-disable-next-line
   const abovethelinetotal = (
     <div className="my-2 pl-3">
     <Row>
@@ -2051,6 +2099,7 @@ function BudgetEdit() {
   ]);
 
   // Below the line input box
+  // eslint-disable-next-line
   const belowthelineBtotal = (
     <div className="my-2 pl-3">
     <Row>
@@ -2102,7 +2151,9 @@ function BudgetEdit() {
         parseFloat(wardrobeTotal || 0) +
         parseFloat(makeupTotal || 0) +
         parseFloat(cameraTotal || 0) +
-        parseFloat(electricTotal || 0)
+        parseFloat(electricTotal || 0) +
+        parseFloat(gripTotal || 0) +
+        parseFloat(soundTotal || 0)
         )
       }
     const timer = setTimeout(() => {
@@ -2115,7 +2166,7 @@ function BudgetEdit() {
   }, [ proOffTotal, studioTotal, siteTotal, unitTotal, tralivTotal,
     transportTotal, constructionMatTotal, artSupTotal, dressingTotal,
     propsTotal, fxTotal, animalsTotal, wardrobeTotal, makeupTotal,
-    cameraTotal, electricTotal,]);
+    cameraTotal, electricTotal, gripTotal, soundTotal,]);
 
   // Below the line input box
   // eslint-disable-next-line
@@ -2948,6 +2999,18 @@ function BudgetEdit() {
           specialty_rent_elec, electric_purchases,
           generators, loss_damage_elec, other_electric,});
         setElectricTotal(electric_total);
+        const {basic_package_rent_grip, daily_rentals_grip, grip_total,
+          specialty_rent_grip, crane_rentals, scaffolding_grip,
+          grip_purchases, loss_damage_grip, other_grip,} = data.results[0];
+        setPostDataGripEqu({basic_package_rent_grip, daily_rentals_grip,
+          specialty_rent_grip, crane_rentals, scaffolding_grip,
+          grip_purchases, loss_damage_grip, other_grip,});
+        setGripTotal(grip_total);
+        const {basic_package_rent_sound, daily_rentals_sound, sound_total,
+          wireless_mics, sound_purchases, walkie_talkies, other_sound,} = data.results[0];
+        setPostDataSoundEqu({basic_package_rent_sound, daily_rentals_sound,
+          wireless_mics, sound_purchases, walkie_talkies, other_sound,});
+        setSoundTotal(sound_total);
       } catch (err) {
         console.log(err);
       }
@@ -3819,6 +3882,24 @@ function BudgetEdit() {
     formData.append("loss_damage_elec", loss_damage_elec);
     formData.append("other_electric", other_electric);
     formData.append("electric_total", electricTotal);
+    // Grip Equipment
+    formData.append("basic_package_rent_grip", basic_package_rent_grip);
+    formData.append("daily_rentals_grip", daily_rentals_grip);
+    formData.append("specialty_rent_grip", specialty_rent_grip);
+    formData.append("crane_rentals", crane_rentals);
+    formData.append("scaffolding_grip", scaffolding_grip);
+    formData.append("grip_purchases", grip_purchases);
+    formData.append("loss_damage_grip", loss_damage_grip);
+    formData.append("other_grip", other_grip);
+    formData.append("grip_total", gripTotal);
+    // Sound Equipment
+    formData.append("basic_package_rent_sound", basic_package_rent_sound);
+    formData.append("daily_rentals_sound", daily_rentals_sound);
+    formData.append("wireless_mics", wireless_mics);
+    formData.append("sound_purchases", sound_purchases);
+    formData.append("walkie_talkies", walkie_talkies);
+    formData.append("other_sound", other_sound);
+    formData.append("sound_total", soundTotal);
     // formData.append("stars", stars);
 
     try {
@@ -3857,7 +3938,7 @@ function BudgetEdit() {
     {/* above total */}
     <Row className={ `${styles.OverviewBlue} mx-1 mt-5 py-1`}>
     <Col md={10}>
-    <h5 className={ `ml-3 ${styles.BoldBlack}`}>ABOVE THE LINE</h5>
+    <p className={ `pb-0 mb-0 ml-3 ${styles.BoldBlack}`}>ABOVE THE LINE</p>
     </Col>
     <Col md={2}><p className="mb-0">{aboveTheLineTotal} </p></Col>
     </Row>
@@ -3948,12 +4029,12 @@ function BudgetEdit() {
     </div>
     </Col>
     </Row>  
-    {abovethelinetotal}
+    {/* {abovethelinetotal} */}
     {/* below B labour + total */}
-    <Row className={ `${styles.OverviewBlue} mx-1 mb-2 mt-5 py-1`}>
+    <Row className={ `${styles.OverviewBlue} mx-1 mb-0 mt-2 py-1`}>
     <Col md={10}>
     <p className={ `mb-0 ml-3 ${styles.BoldBlack}`}>
-      BELOW THE LINE "B" PRODUCTION LABOUR</p>
+      BELOW THE LINE "B" PRODUCTION - LABOUR</p>
     </Col>
     <Col md={2}><p className="mb-0">{belowTheLineBTotal} </p></Col>
     </Row>
@@ -4200,12 +4281,12 @@ function BudgetEdit() {
     </div>
     </Col>
     </Row> 
-    {belowthelineBtotal}
+    {/* {belowthelineBtotal} */}
     {/* below B costs + total */}
-    <Row className={ `${styles.OverviewBlue} mx-1 mb-2 mt-5 py-1`}>
+    <Row className={ `${styles.OverviewBlue} mx-1 mb-0 mt-2 py-1`}>
     <Col md={10}>
     <p className={ `mb-0 ml-3 ${styles.BoldBlack}`}>
-      BELOW THE LINE "B" PRODUCTION COSTS</p>
+      BELOW THE LINE "B" PRODUCTION - COSTS</p>
     </Col>
     <Col md={2}><p className="mb-0">{belowTheLineBCostsTotal} </p></Col>
     </Row>
@@ -4232,7 +4313,7 @@ function BudgetEdit() {
     <Row>
     <Col md={8}>
     <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
-          onClick={() => setShowStudio(showStudio => !showStudio)} >Studio/Backlot Expenses
+          onClick={() => setShowStudio(showStudio => !showStudio)} >Studio/Backlot
     </p>
     </Col>
     <Col md={4}>
@@ -4447,6 +4528,36 @@ function BudgetEdit() {
     </Col>
     <Col md={4}>
     <p className="mb-0">{electricTotal} </p>
+    </Col>
+    </Row>
+    </div>
+    </Col>
+    {/* Grip Equipment */}
+    <Col md={3} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
+    <Row>
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
+          onClick={() => setShowGripEqu(showGripEqu => !showGripEqu)} >Grip
+    </p>
+    </Col>
+    <Col md={4}>
+    <p className="mb-0">{gripTotal} </p>
+    </Col>
+    </Row>
+    </div>
+    </Col>
+    {/* Sound Equipment */}
+    <Col md={3} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
+    <Row>
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
+          onClick={() => setShowSoundEqu(showSoundEqu => !showSoundEqu)} >Sound
+    </p>
+    </Col>
+    <Col md={4}>
+    <p className="mb-0">{soundTotal} </p>
     </Col>
     </Row>
     </div>
@@ -5110,6 +5221,28 @@ function BudgetEdit() {
       electricTotal={electricTotal}
       setElectricTotal={setElectricTotal}
       setShow={setShowElecEqu}  /> 
+    ) }
+    {/* Grip Equipment */}
+    {!showGripEqu ? (
+      ""
+    ) : (
+      <GripEqu
+      postDataGripEqu={postDataGripEqu}
+      setPostDataGripEqu={setPostDataGripEqu}
+      gripTotal={gripTotal}
+      setGripTotal={setGripTotal}
+      setShow={setShowGripEqu}  /> 
+    ) }
+    {/* Sound Equipment */}
+    {!showSoundEqu ? (
+      ""
+    ) : (
+      <SoundEqu
+      postDataSoundEqu={postDataSoundEqu}
+      setPostDataSoundEqu={setPostDataSoundEqu}
+      soundTotal={soundTotal}
+      setSoundTotal={setSoundTotal}
+      setShow={setShowSoundEqu}  /> 
     ) }
     {/* buttons */}
     <Row>

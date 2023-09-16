@@ -1,4 +1,4 @@
-/* Component in the Budget component to edit Site */
+/* Component in the Budget component to edit Grip Equ */
 import React, { useEffect, useState } from "react";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
@@ -6,60 +6,60 @@ import Col from "react-bootstrap/Col";
 import styles from "../../../../styles/Account.module.css";
 import Alert from "react-bootstrap/Alert";
 
-const Site = (props) => {
+const GripEqu = (props) => {
   // eslint-disable-next-line
   const [errors, setErrors] = useState({});
 
-  const {postDataSite, setPostDataSite,
-    siteTotal, setSiteTotal, setShow} = props;
+  const {postDataGripEqu, setPostDataGripEqu,
+  gripTotal, setGripTotal, setShow,} = props;
 
-  const {surveying_scouting, site_rentals, site_power, site_access,
-        site_insurance, repairs_construction, site_security, site_other,
-        police_control,} = postDataSite;
+  const {basic_package_rent_grip, daily_rentals_grip,
+    specialty_rent_grip, crane_rentals, scaffolding_grip,
+    grip_purchases, loss_damage_grip, other_grip,
+  } = postDataGripEqu;
 
   // handleChange 
   const handleChange = (event) => {
-    setPostDataSite({
-    ...postDataSite,
+    setPostDataGripEqu({
+    ...postDataGripEqu,
     [event.target.name]: parseFloat(event.target.value || 0 ),
     });
-  }; 
+  };
 
-  // function to add all Site on change
+  // function to add all Grip Equipment on change
   useEffect(() => {
-    const addSite = () => {
-        setSiteTotal(
-        parseFloat(surveying_scouting || 0) +
-        parseFloat(site_rentals || 0) +
-        parseFloat(site_power || 0) +
-        parseFloat(site_access || 0) +
-        parseFloat(site_insurance || 0) +
-        parseFloat(repairs_construction || 0) +
-        parseFloat(site_security || 0) +
-        parseFloat(site_other || 0) +
-        parseFloat(police_control || 0) 
+    const addGripEqu= () => {
+        setGripTotal(
+        parseFloat(basic_package_rent_grip || 0) +
+        parseFloat(daily_rentals_grip || 0) +
+        parseFloat(specialty_rent_grip || 0) +
+        parseFloat(grip_purchases || 0) +
+        parseFloat(crane_rentals || 0) +
+        parseFloat(scaffolding_grip || 0) +
+        parseFloat(loss_damage_grip || 0) +
+        parseFloat(other_grip || 0)
        )
     }
     const timer = setTimeout(() => {
-        addSite();
+        addGripEqu();
     }, 1000);
 
     return () => {
       clearTimeout(timer);
     };
     // eslint-disable-next-line
-  }, [surveying_scouting, site_rentals, site_power, site_access,
-    site_insurance, repairs_construction, site_security,
-    site_other, police_control,]);
+  }, [basic_package_rent_grip, daily_rentals_grip,
+    specialty_rent_grip, crane_rentals, scaffolding_grip,
+    grip_purchases, loss_damage_grip, other_grip,]);
 
   return (
     <div className="mt-5">
     <Row >
     <Col md={1} >
-    <p className="mb-2">24.00</p>
+    <p className="mb-2">38.00</p>
     </Col>
     <Col md={9} >
-    <p className={ `${styles.BoldBlack} mb-2`}>Site Expenses</p>
+    <p className={ `${styles.BoldBlack} mb-2`}>Grip Equipment</p>
     </Col>
     <Col md={2}>
     <span className={`${styles.Close }`} 
@@ -90,13 +90,13 @@ const Site = (props) => {
     <p className="mb-0">Total</p>
     </Col>
     </Row>
-    {/* Surveying/Scouting */}
+    {/* Basic Package Rentals */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>24.10</p>
+    <p className={`${styles.Underline}`}>38.10</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Surveying/Scouting Expenses</p>
+    <p className={`${styles.Underline}`}>Basic Package Rentals</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -108,30 +108,30 @@ const Site = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="surveying_scouting" 
+    <Form.Group controlId="basic_package_rent_grip" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="surveying_scouting"
-        value={surveying_scouting}
+        name="basic_package_rent_grip"
+        value={basic_package_rent_grip}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.surveying_scouting?.map((message, idx) => (
+    {errors?.basic_package_rent_grip?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     </Row>
-    {/* Site Rentals */}
+    {/* Daily Rentals */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>24.20</p>
+    <p className={`${styles.Underline}`}>38.20</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Site Rentals</p>
+    <p className={`${styles.Underline}`}>Daily Rentals</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -143,30 +143,30 @@ const Site = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="site_rentals" 
+    <Form.Group controlId="daily_rentals_grip" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="site_rentals"
-        value={site_rentals}
+        name="daily_rentals_grip"
+        value={daily_rentals_grip}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.site_rentals?.map((message, idx) => (
+    {errors?.daily_rentals_grip?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     </Row>
-    {/* Site Power */}
+    {/* Specialty Rentals */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>24.30</p>
+    <p className={`${styles.Underline}`}>38.30</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Site Power</p>
+    <p className={`${styles.Underline}`}>Specialty Rentals</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -178,30 +178,30 @@ const Site = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="site_power" 
+    <Form.Group controlId="specialty_rent_grip" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="site_power"
-        value={site_power}
+        name="specialty_rent_grip"
+        value={specialty_rent_grip}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.site_power?.map((message, idx) => (
+    {errors?.specialty_rent_grip?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     </Row>
-    {/* Site Access */}
+    {/* Crane Rentals */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>24.40</p>
+    <p className={`${styles.Underline}`}>38.40</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Site Access</p>
+    <p className={`${styles.Underline}`}>Crane Rentals</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -213,30 +213,30 @@ const Site = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="site_access" 
+    <Form.Group controlId="crane_rentals" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="site_access"
-        value={site_access}
+        name="crane_rentals"
+        value={crane_rentals}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.site_access?.map((message, idx) => (
+    {errors?.crane_rentals?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     </Row>
-    {/* Site Insurance */}
+    {/* Scaffolding */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>24.50</p>
+    <p className={`${styles.Underline}`}>38.50</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Site Insurance</p>
+    <p className={`${styles.Underline}`}>Scaffolding</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -248,30 +248,30 @@ const Site = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="site_insurance" 
+    <Form.Group controlId="scaffolding_grip" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="site_insurance"
-        value={site_insurance}
+        name="scaffolding_grip"
+        value={scaffolding_grip}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.site_insurance?.map((message, idx) => (
+    {errors?.scaffolding_grip?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     </Row>
-    {/* Repairs/Construction */}
+    {/* Purchases */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>24.60</p>
+    <p className={`${styles.Underline}`}>38.60</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Repairs/Construction</p>
+    <p className={`${styles.Underline}`}>Purchases</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -283,30 +283,30 @@ const Site = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="repairs_construction" 
+    <Form.Group controlId="grip_purchases" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="repairs_construction"
-        value={repairs_construction}
+        name="grip_purchases"
+        value={grip_purchases}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.repairs_construction?.map((message, idx) => (
+    {errors?.grip_purchases?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     </Row>
-    {/* Security */}
+    {/* Loss & Damage */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>24.70</p>
+    <p className={`${styles.Underline}`}>38.70</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Security</p>
+    <p className={`${styles.Underline}`}>Loss & Damage</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -318,52 +318,17 @@ const Site = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="site_security" 
+    <Form.Group controlId="loss_damage_grip" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="site_security"
-        value={site_security}
+        name="loss_damage_grip"
+        value={loss_damage_grip}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.site_security?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    </Row>
-    {/* Police Control */}
-    <Row>
-    <Col md={1} >
-    <p className={`${styles.Underline}`}>24.80</p>
-    </Col>
-    <Col md={6} >
-    <p className={`${styles.Underline}`}>Police Control</p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={2} >
-    <Form.Group controlId="police_control" 
-        className={`${styles.Width95} text-center mb-1`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="police_control"
-        value={police_control}
-        onChange={handleChange}
-            />
-    </Form.Group>
-    {errors?.police_control?.map((message, idx) => (
+    {errors?.loss_damage_grip?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
@@ -373,7 +338,7 @@ const Site = (props) => {
     {/* Other */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>24.90</p>
+    <p className={`${styles.Underline}`}>38.80</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Other</p>
@@ -388,29 +353,29 @@ const Site = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="site_other" 
+    <Form.Group controlId="other_grip" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="site_other"
-        value={site_other}
+        name="other_grip"
+        value={other_grip}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.site_other?.map((message, idx) => (
+    {errors?.other_grip?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     </Row>
-    {/* Site Total */}
+    {/* GRIP EQUIPMENT Total */}
     <Row className="mt-3">
     <Col md={1} >
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
-    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL SITE EXPENSES</p>
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL GRIP EQUIPMENT</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -422,17 +387,17 @@ const Site = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="siteTotal" 
+    <Form.Group controlId="gripTotal" 
         className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="siteTotal"
-        value={siteTotal}
+        name="gripTotal"
+        value={gripTotal}
         readOnly
             />
     </Form.Group>
-    {errors?.siteTotal?.map((message, idx) => (
+    {errors?.gripTotal?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
@@ -443,4 +408,4 @@ const Site = (props) => {
   )
 }
 
-export default Site
+export default GripEqu

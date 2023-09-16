@@ -44,7 +44,7 @@ const WardrobeSup = (props) => {
     return () => {
       clearTimeout(timer);
     };
-
+   // eslint-disable-next-line
   }, [wardrobe_rentals, wardrobe_purchases, ward_manufact,
     ward_ship_brok, ward_repairs_clean, other_ward,]);
 

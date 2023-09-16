@@ -356,14 +356,21 @@ const Budget = (props) => {
     // Makeup
     makeup_rentals, makeup_purchases, hair_rentals, makeup_total,
     hair_purchases, wigs, makeup_fx, makeup_ship_brok, other_makeup,
-    // Camera Equ
+    // Camera Equipment
     basic_package_rent_cam, daily_rentals_cam, other_camera,
     specialty_rent_cam, camera_purchases, steadicam, camera_total,
     video_teleprompter, camera_ship_brok, loss_damage_cam,
-    // Electric Equ
+    // Electric Equipment
     basic_package_rent_elec, daily_rentals_elec,
     specialty_rent_elec, electric_purchases, electric_total,
     generators, loss_damage_elec, other_electric,
+    // Grip Equipment
+    basic_package_rent_grip, daily_rentals_grip, grip_total,
+    specialty_rent_grip, crane_rentals, scaffolding_grip,
+    grip_purchases, loss_damage_grip, other_grip,
+    // Sound Equipment
+    basic_package_rent_sound, daily_rentals_sound, sound_total,
+    wireless_mics, sound_purchases, walkie_talkies, other_sound,
 
     } = budget;
 
@@ -7179,6 +7186,274 @@ const Budget = (props) => {
     </Col>
     <Col md={2} >
     <p className={`${styles.Underline} mb-0`}>{electric_total || 0}</p>
+    </Col>
+    </Row>
+    </div>
+    {/* GRIP EQUIPMENT --------------------------------------- */}
+    <div className='mt-5'>
+    <Row>
+    <Col xs={1}>
+    <p className='mb-2'>38.00</p>
+    </Col>
+    <Col xs={10}>
+    <p className={ `${styles.BoldBlack} mb-2`}>GRIP EQUIPMENT</p>
+    </Col>
+    </Row>
+    {/* Titles */}
+    <Row className={ `${styles.Overview} mb-2 py-1`} >
+    <Col md={1} >
+    <p className="mb-0">ACCT</p>
+    </Col>
+    <Col md={5} >
+    <p className="mb-0">Description</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">#</p>
+    </Col>
+    <Col className="px-0 mx-0" md={1} >
+    <p># Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Price</p>
+    </Col>
+    <Col md={2} >
+    <p className="mb-0">Total</p>
+    </Col>
+    </Row>
+    {/* Basic Package Rentals */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>38.10</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Basic Package Rentals</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{basic_package_rent_grip || 0} </p>
+    </Col>
+    </Row>
+    {/* Daily Rentals */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>38.20</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Daily Rentals</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{daily_rentals_grip || 0} </p>
+    </Col>
+    </Row>
+    {/* Specialty Rentals */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>38.30</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Specialty Rentals</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{specialty_rent_grip || 0} </p>
+    </Col>
+    </Row>
+    {/* Crane Rentals */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>38.40</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Crane Rentals</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{crane_rentals || 0} </p>
+    </Col>
+    </Row>
+    {/* Scaffolding */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>38.50</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Scaffolding</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{scaffolding_grip || 0} </p>
+    </Col>
+    </Row>
+    {/* Purchases */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>38.60</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Purchases</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{grip_purchases || 0} </p>
+    </Col>
+    </Row>
+    {/* Loss & Damage */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>38.70</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Loss & Damage</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{loss_damage_grip || 0} </p>
+    </Col>
+    </Row>
+    {/* Other */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>38.80</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Other</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{other_grip || 0} </p>
+    </Col>
+    </Row>
+    {/* GRIP EQUIPMENT Total */}
+    <Row className='mt-3' >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    <p></p>
+    </Col>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL GRIP EQUIPMENT </p>
+    </Col>
+    <Col md={3} >
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline} mb-0`}>{grip_total || 0}</p>
+    </Col>
+    </Row>
+    </div>
+    {/* SOUND EQUIPMENT -------------------------------------- */}
+    <div className='mt-5'>
+    <Row>
+    <Col xs={1}>
+    <p className='mb-2'>39.00</p>
+    </Col>
+    <Col xs={10}>
+    <p className={ `${styles.BoldBlack} mb-2`}>SOUND EQUIPMENT</p>
+    </Col>
+    </Row>
+    {/* Titles */}
+    <Row className={ `${styles.Overview} mb-2 py-1`} >
+    <Col md={1} >
+    <p className="mb-0">ACCT</p>
+    </Col>
+    <Col md={5} >
+    <p className="mb-0">Description</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">#</p>
+    </Col>
+    <Col className="px-0 mx-0" md={1} >
+    <p># Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Price</p>
+    </Col>
+    <Col md={2} >
+    <p className="mb-0">Total</p>
+    </Col>
+    </Row>
+    {/* Basic Package Rentals */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>39.10</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Basic Package Rentals</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{basic_package_rent_sound || 0} </p>
+    </Col>
+    </Row>
+    {/* Daily Rentals */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>39.20</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Daily Rentals</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{daily_rentals_sound || 0} </p>
+    </Col>
+    </Row>
+    {/* Wireless Microphones */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>39.30</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Wireless Microphones</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{wireless_mics || 0} </p>
+    </Col>
+    </Row>
+    {/* Purchases */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>39.40</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Purchases</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{sound_purchases || 0} </p>
+    </Col>
+    </Row>
+    {/* Walkie Talkies */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>39.50</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Walkie Talkies</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{walkie_talkies || 0} </p>
+    </Col>
+    </Row>
+    {/* Other */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>39.60</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Other</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{other_sound || 0} </p>
+    </Col>
+    </Row>
+    {/* SOUND EQUIPMENT Total */}
+    <Row className='mt-3' >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    <p></p>
+    </Col>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL SOUND EQUIPMENT </p>
+    </Col>
+    <Col md={3} >
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline} mb-0`}>{sound_total || 0}</p>
     </Col>
     </Row>
     </div>

@@ -70,6 +70,7 @@ const Makeup = (props) => {
       return () => {
       clearTimeout(timer);
       };
+      // eslint-disable-next-line
   }, [makeup_dept_head_quantity, makeup_dept_head_units_number,
     makeup_dept_head_rate]);
 
@@ -87,6 +88,7 @@ const Makeup = (props) => {
       return () => {
       clearTimeout(timer);
       };
+      // eslint-disable-next-line
   }, [key_makeup_quantity, key_makeup_units_number,
     key_makeup_rate]);
 
@@ -104,6 +106,7 @@ const Makeup = (props) => {
       return () => {
       clearTimeout(timer);
       };
+      // eslint-disable-next-line
   }, [makeup_artist_quantity, makeup_artist_units_number,
     makeup_artist_rate]);
 
@@ -121,6 +124,7 @@ const Makeup = (props) => {
       return () => {
       clearTimeout(timer);
       };
+      // eslint-disable-next-line
   }, [key_hairstylist_quantity, key_hairstylist_units_number,
     key_hairstylist_rate]);
 
@@ -138,6 +142,7 @@ const Makeup = (props) => {
       return () => {
       clearTimeout(timer);
       };
+      // eslint-disable-next-line
   }, [hairdresser_quantity, hairdresser_units_number,
     hairdresser_rate]);
 
@@ -155,6 +160,7 @@ const Makeup = (props) => {
       return () => {
       clearTimeout(timer);
       };
+      // eslint-disable-next-line
   }, [hair_makeup_dailies_quantity, hair_makeup_dailies_units_number,
     hair_makeup_dailies_rate]);
 
@@ -172,6 +178,7 @@ const Makeup = (props) => {
       return () => {
       clearTimeout(timer);
       };
+      // eslint-disable-next-line
   }, [other_makeup_labour_quantity, other_makeup_labour_units_number,
     other_makeup_labour_rate]);
 
@@ -189,6 +196,7 @@ const Makeup = (props) => {
       return () => {
       clearTimeout(timer);
       };
+      // eslint-disable-next-line
   }, [sfx_makeup_quantity, sfx_makeup_units_number,
     sfx_makeup_rate]);
 
@@ -214,7 +222,7 @@ const Makeup = (props) => {
       return () => {
       clearTimeout(timer);
       };
-
+      // eslint-disable-next-line
       }, [headmakeupTotal, keymakeupTotal, makeupartistTotal,
         keyhairstylistTotal, hairdresserTotal, hairmakeupdailiesTotal,
         othermakeuplabourTotal, sfxmakeupTotal, fringes_taxes_makeup,]);

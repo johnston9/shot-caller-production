@@ -69,6 +69,7 @@ const Construction = (props) => {
     return () => {
       clearTimeout(timer);
     };
+    // eslint-disable-next-line
   }, [constructioncoordinator_quantity, constructioncoordinator_units_number,
       constructioncoordinator_rate]);
 
@@ -86,6 +87,7 @@ const Construction = (props) => {
     return () => {
       clearTimeout(timer);
     };
+    // eslint-disable-next-line
   }, [headcarpenter_quantity, headcarpenter_units_number,
     headcarpenter_rate]);
 
@@ -103,6 +105,7 @@ const Construction = (props) => {
     return () => {
       clearTimeout(timer);
     };
+    // eslint-disable-next-line
   }, [carpenters_quantity, carpenters_units_number,
     carpenters_rate]);
 
@@ -120,6 +123,7 @@ const Construction = (props) => {
     return () => {
       clearTimeout(timer);
     };
+    // eslint-disable-next-line
   }, [scenicpainters_quantity, scenicpainters_units_number,
       scenicpainters_rate]);
 
@@ -137,6 +141,7 @@ const Construction = (props) => {
     return () => {
       clearTimeout(timer);
     };
+    // eslint-disable-next-line
   }, [headpainter_quantity, headpainter_units_number,
     headpainter_rate]);
 
@@ -154,6 +159,7 @@ const Construction = (props) => {
     return () => {
       clearTimeout(timer);
     };
+    // eslint-disable-next-line
   }, [painters_quantity, painters_units_number,
     painters_rate]);
 
@@ -171,6 +177,7 @@ const Construction = (props) => {
     return () => {
       clearTimeout(timer);
     };
+    // eslint-disable-next-line
   }, [labourers_quantity, labourers_units_number,
     labourers_rate]);
 
@@ -196,7 +203,7 @@ const Construction = (props) => {
     return () => {
       clearTimeout(timer);
     };
-
+    // eslint-disable-next-line
     }, [constructioncoordinatorTotal, headcarpenterTotal, carpentersTotal,
         scenicpaintersTotal, headpainterTotal, paintersTotal,
         labourersTotal, other_construction, fringes_taxes_construction]);

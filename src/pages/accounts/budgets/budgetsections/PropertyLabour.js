@@ -62,6 +62,7 @@ const PropertyLabour = (props) => {
         return () => {
         clearTimeout(timer);
         };
+        // eslint-disable-next-line
     }, [property_master_quantity, property_master_units_number,
         property_master_rate]);
     
@@ -79,6 +80,7 @@ const PropertyLabour = (props) => {
         return () => {
         clearTimeout(timer);
         };
+        // eslint-disable-next-line
     }, [assist_property_master_quantity, assist_property_master_units_number,
         assist_property_master_rate]);
     
@@ -96,6 +98,7 @@ const PropertyLabour = (props) => {
         return () => {
         clearTimeout(timer);
         };
+        // eslint-disable-next-line
     }, [on_set_props_person_quantity, on_set_props_person_units_number,
         on_set_props_person_rate]);
     
@@ -113,6 +116,7 @@ const PropertyLabour = (props) => {
         return () => {
         clearTimeout(timer);
         };
+        // eslint-disable-next-line
     }, [property_buyer_quantity, property_buyer_units_number,
         property_buyer_rate]);
     
@@ -130,6 +134,7 @@ const PropertyLabour = (props) => {
         return () => {
         clearTimeout(timer);
         };
+        // eslint-disable-next-line
     }, [armorer_quantity, armorer_units_number,
         armorer_rate]);
     
@@ -153,7 +158,7 @@ const PropertyLabour = (props) => {
         return () => {
         clearTimeout(timer);
         };
-
+          // eslint-disable-next-line
         }, [propertymasterTotal, assistpropertymasterTotal,
             onsetpropspersonTotal, propertybuyerTotal,
             armorerTotal, other_property, fringes_taxes_property]);

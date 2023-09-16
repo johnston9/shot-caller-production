@@ -58,6 +58,7 @@ const Electric = (props) => {
         return () => {
         clearTimeout(timer);
         };
+        // eslint-disable-next-line
       }, [gaffer_qty, gaffer_uno, gaffer_rt]);
 
     // function to calculate best boy on change
@@ -74,6 +75,7 @@ const Electric = (props) => {
         return () => {
         clearTimeout(timer);
         };
+        // eslint-disable-next-line
       }, [best_boy_qty, best_boy_uno, best_boy_rt]);
 
     // function to calculate electrician on change
@@ -90,6 +92,7 @@ const Electric = (props) => {
         return () => {
         clearTimeout(timer);
         };
+        // eslint-disable-next-line
       }, [electrician_qty, electrician_uno, electrician_rt]);
 
     // function to calculate dailies on change
@@ -106,6 +109,7 @@ const Electric = (props) => {
         return () => {
         clearTimeout(timer);
         };
+        // eslint-disable-next-line
       }, [dailies_elec_qty, dailies_elec_uno, dailies_elec_rt]);
 
     // function to calculate generator operator on change
@@ -122,6 +126,7 @@ const Electric = (props) => {
         return () => {
         clearTimeout(timer);
         };
+        // eslint-disable-next-line
       }, [generator_op_qty, generator_op_uno, generator_op_rt]);
 
     // function to calculate other elec on change
@@ -138,6 +143,7 @@ const Electric = (props) => {
         return () => {
         clearTimeout(timer);
         };
+        // eslint-disable-next-line
       }, [other_elec_qty, other_elec_uno, other_elec_rt]);
 
     // function to add all Electric Labour on change
@@ -160,7 +166,7 @@ const Electric = (props) => {
         return () => {
         clearTimeout(timer);
         };
-  
+        // eslint-disable-next-line
         }, [gafferTotal, bestboyTotal, electricianTotal,
             dailieselecTotal, generatoropTotal, otherelectricTotal,
             fringes_taxes_electric,]);
