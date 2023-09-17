@@ -371,6 +371,13 @@ const Budget = (props) => {
     // Sound Equipment
     basic_package_rent_sound, daily_rentals_sound, sound_total,
     wireless_mics, sound_purchases, walkie_talkies, other_sound,
+    // Second Unit
+    crew_2U, equipment_2U, travliv_2U, transport_2U, secondU_total,
+    mat_sup_2U, aerial_unit, marine_unit, fringes_taxes_2U, other_2U,
+    // Stock and Lab
+    film_stock, video_stock, digital_stock, transfer_stock,
+    hard_drives, dalies, telecine, audio_stock, magnetic_transfer,
+    stills, loss_dam_lab, other_lab, stockLab_total,
 
     } = budget;
 
@@ -7457,6 +7464,359 @@ const Budget = (props) => {
     </Col>
     </Row>
     </div>
+    {/* SECOND UNIT ------------------------------------------ */}
+    <div className='mt-5'>
+    <Row>
+    <Col xs={1}>
+    <p className='mb-2'>40.00</p>
+    </Col>
+    <Col xs={10}>
+    <p className={ `${styles.BoldBlack} mb-2`}>SECOND UNIT</p>
+    </Col>
+    </Row>
+    {/* Titles */}
+    <Row className={ `${styles.Overview} mb-2 py-1`} >
+    <Col md={1} >
+    <p className="mb-0">ACCT</p>
+    </Col>
+    <Col md={5} >
+    <p className="mb-0">Description</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">#</p>
+    </Col>
+    <Col className="px-0 mx-0" md={1} >
+    <p># Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Price</p>
+    </Col>
+    <Col md={2} >
+    <p className="mb-0">Total</p>
+    </Col>
+    </Row>
+    {/* Crew */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>40.10</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Crew</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{crew_2U || 0} </p>
+    </Col>
+    </Row>
+    {/* Equipment */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>40.20</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Equipment</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{equipment_2U || 0} </p>
+    </Col>
+    </Row>
+    {/* Travel & Living */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>40.30</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Travel & Living</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{travliv_2U || 0} </p>
+    </Col>
+    </Row>
+    {/* Transport */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>40.40</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Transport</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{transport_2U || 0} </p>
+    </Col>
+    </Row>
+    {/* Materials/Supplies */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>40.50</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Materials/Supplies</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{mat_sup_2U || 0} </p>
+    </Col>
+    </Row>
+    {/* Aerial Unit */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>40.60</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Aerial Unit</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{aerial_unit || 0} </p>
+    </Col>
+    </Row>
+    {/* Marine Unit */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>40.70</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Marine Unit</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{marine_unit || 0} </p>
+    </Col>
+    </Row>
+    {/* Fringes & Taxes */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>40.80</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Fringes & Taxes</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{fringes_taxes_2U || 0} </p>
+    </Col>
+    </Row>
+    {/* Other */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>40.90</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Other</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{other_2U || 0} </p>
+    </Col>
+    </Row>
+    {/* SECOND UNIT Total */}
+    <Row className='mt-3' >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    <p></p>
+    </Col>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL SECOND UNIT</p>
+    </Col>
+    <Col md={3} >
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline} mb-0`}>{secondU_total || 0}</p>
+    </Col>
+    </Row>
+    </div>
+    {/* STOCK & LAB ------------------------------------------ */}
+    <div className='mt-5'>
+    <Row>
+    <Col xs={1}>
+    <p className='mb-2'>41.00</p>
+    </Col>
+    <Col xs={10}>
+    <p className={ `${styles.BoldBlack} mb-2`}>PRODUCTION STOCK & LAB</p>
+    </Col>
+    </Row>
+    {/* Titles */}
+    <Row className={ `${styles.Overview} mb-2 py-1`} >
+    <Col md={1} >
+    <p className="mb-0">ACCT</p>
+    </Col>
+    <Col md={5} >
+    <p className="mb-0">Description</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">#</p>
+    </Col>
+    <Col className="px-0 mx-0" md={1} >
+    <p># Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Price</p>
+    </Col>
+    <Col md={2} >
+    <p className="mb-0">Total</p>
+    </Col>
+    </Row>
+    {/* Film Stock */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>41.10</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Film Stock</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{film_stock || 0} </p>
+    </Col>
+    </Row>
+    {/* Video Stock */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>41.20</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Video Stock</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{video_stock || 0} </p>
+    </Col>
+    </Row>
+    {/* Digital Stock */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>41.30</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Digital Stock</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{digital_stock || 0} </p>
+    </Col>
+    </Row>
+    {/* Transfer Stock */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>41.40</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Transfer Stock</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{transfer_stock || 0} </p>
+    </Col>
+    </Row>
+    {/* Hard Drives */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>41.50</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Hard Drives</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{hard_drives || 0} </p>
+    </Col>
+    </Row>
+    {/* Dailies */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>41.60</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Dailies</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{dalies || 0} </p>
+    </Col>
+    </Row>
+    {/* Telecine */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>41.70</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Telecine</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{telecine || 0} </p>
+    </Col>
+    </Row>
+    {/* Audio Stock */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>41.80</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Audio Stock</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{audio_stock || 0} </p>
+    </Col>
+    </Row>
+    {/* Magnetic Transfer */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>41.90</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Magnetic Transfer</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{magnetic_transfer || 0} </p>
+    </Col>
+    </Row>
+    {/* Stills */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>41.91</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Stills</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{stills || 0} </p>
+    </Col>
+    </Row>
+    {/* Loss & Damage */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>41.92</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Loss & Damage</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{loss_dam_lab || 0} </p>
+    </Col>
+    </Row>
+    {/* Other */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>41.93</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Other</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{other_lab || 0} </p>
+    </Col>
+    </Row>
+    {/* PRODUCTION STOCK & LAB Total */}
+    <Row className='mt-3' >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    <p></p>
+    </Col>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL PRODUCTION STOCK & LAB </p>
+    </Col>
+    <Col md={3} >
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline} mb-0`}>{stockLab_total || 0}</p>
+    </Col>
+    </Row>
+    </div>
+
     </div>
     {/* END PRODUCTION B */}
     </div>

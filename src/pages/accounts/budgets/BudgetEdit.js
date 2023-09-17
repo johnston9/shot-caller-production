@@ -50,6 +50,8 @@ import CameraEqu from "./budgetsectionscosts/CameraEqu";
 import ElectricEqu from "./budgetsectionscosts/ElectricEqu";
 import GripEqu from "./budgetsectionscosts/GripEqu";
 import SoundEqu from "./budgetsectionscosts/SoundEqu";
+import SecondU from "./budgetsectionscosts/SecondU";
+import StockLab from "./budgetsectionscosts/StockLab";
 
 function BudgetEdit() {
   const [errors, setErrors] = useState({});
@@ -96,6 +98,8 @@ function BudgetEdit() {
   const [showElecEqu, setShowElecEqu] = useState(false);
   const [showGripEqu, setShowGripEqu] = useState(false);
   const [showSoundEqu, setShowSoundEqu] = useState(false);
+  const [showSecond, setShowSecond] = useState(false);
+  const [showLab, setShowLab] = useState(false);
 
   // budget id
   const [budgetId, setBudgetId] = useState("");
@@ -2002,6 +2006,52 @@ function BudgetEdit() {
 
   const [soundTotal, setSoundTotal] = useState(0);
 
+  // SECOND UNIT ------------------------------
+  
+  // Second Unit postData
+  const [postDataSecondU, setPostDataSecondU] = useState({
+    crew_2U: 0,
+    equipment_2U: 0,
+    mat_sup_2U: 0,
+    travliv_2U: 0,
+    transport_2U: 0,
+    aerial_unit: 0,
+    marine_unit: 0,
+    fringes_taxes_2U: 0,
+    other_2U: 0,
+  });
+
+  const {crew_2U, equipment_2U, travliv_2U, transport_2U,
+    mat_sup_2U, aerial_unit, marine_unit, fringes_taxes_2U, other_2U,
+  } = postDataSecondU;
+
+  const [secondUTotal, setSecondUTotal] = useState(0);
+
+  // PRODUCTION STOCK & LABORATORY ------------------------------
+  
+  // Production Stock and Lab postData
+  const [postDataStockLab, setPostDataStockLab] = useState({
+    film_stock: 0,
+    video_stock: 0,
+    digital_stock: 0,
+    transfer_stock: 0,
+    hard_drives: 0,
+    dalies: 0,
+    telecine: 0,
+    audio_stock: 0,
+    magnetic_transfer: 0,
+    stills: 0,
+    loss_dam_lab: 0,
+    other_lab: 0,
+  });
+
+  const {film_stock, video_stock, digital_stock, transfer_stock,
+    hard_drives, dalies, telecine, audio_stock, magnetic_transfer,
+    stills, loss_dam_lab, other_lab,
+  } = postDataStockLab;
+
+  const [stockLabTotal, setStockLabTotal] = useState(0);
+
   // TOTALS ABOVE / BELOW / GRAND --------------------------------
 
   // Above the line total --------------------------
@@ -2153,7 +2203,9 @@ function BudgetEdit() {
         parseFloat(cameraTotal || 0) +
         parseFloat(electricTotal || 0) +
         parseFloat(gripTotal || 0) +
-        parseFloat(soundTotal || 0)
+        parseFloat(soundTotal || 0) +
+        parseFloat(secondUTotal || 0) +
+        parseFloat(stockLabTotal || 0)
         )
       }
     const timer = setTimeout(() => {
@@ -2166,7 +2218,8 @@ function BudgetEdit() {
   }, [ proOffTotal, studioTotal, siteTotal, unitTotal, tralivTotal,
     transportTotal, constructionMatTotal, artSupTotal, dressingTotal,
     propsTotal, fxTotal, animalsTotal, wardrobeTotal, makeupTotal,
-    cameraTotal, electricTotal, gripTotal, soundTotal,]);
+    cameraTotal, electricTotal, gripTotal, soundTotal,
+    secondUTotal, stockLabTotal,]);
 
   // Below the line input box
   // eslint-disable-next-line
@@ -3011,6 +3064,18 @@ function BudgetEdit() {
         setPostDataSoundEqu({basic_package_rent_sound, daily_rentals_sound,
           wireless_mics, sound_purchases, walkie_talkies, other_sound,});
         setSoundTotal(sound_total);
+        const {crew_2U, equipment_2U, travliv_2U, transport_2U, secondU_total,
+          mat_sup_2U, aerial_unit, marine_unit, fringes_taxes_2U, other_2U,} = data.results[0];
+        setPostDataSecondU({crew_2U, equipment_2U, travliv_2U, transport_2U,
+          mat_sup_2U, aerial_unit, marine_unit, fringes_taxes_2U, other_2U,});
+        setSecondUTotal(secondU_total);
+        const {film_stock, video_stock, digital_stock, transfer_stock,
+          hard_drives, dalies, telecine, audio_stock, magnetic_transfer,
+          stills, loss_dam_lab, other_lab, stockLab_total,} = data.results[0];
+        setPostDataStockLab({film_stock, video_stock, digital_stock, transfer_stock,
+          hard_drives, dalies, telecine, audio_stock, magnetic_transfer,
+          stills, loss_dam_lab, other_lab,});
+        setStockLabTotal(stockLab_total);
       } catch (err) {
         console.log(err);
       }
@@ -3900,6 +3965,31 @@ function BudgetEdit() {
     formData.append("walkie_talkies", walkie_talkies);
     formData.append("other_sound", other_sound);
     formData.append("sound_total", soundTotal);
+    // Second Unit
+    formData.append("crew_2U", crew_2U);
+    formData.append("equipment_2U", equipment_2U);
+    formData.append("mat_sup_2U", mat_sup_2U);
+    formData.append("travliv_2U", travliv_2U);
+    formData.append("transport_2U", transport_2U);
+    formData.append("aerial_unit", aerial_unit);
+    formData.append("marine_unit", marine_unit);
+    formData.append("fringes_taxes_2U", fringes_taxes_2U);
+    formData.append("other_2U", other_2U);
+    formData.append("secondU_total", secondUTotal);
+    // Stock and Lab
+    formData.append("film_stock", film_stock);
+    formData.append("video_stock", video_stock);
+    formData.append("digital_stock", digital_stock);
+    formData.append("transfer_stock", transfer_stock);
+    formData.append("hard_drives", hard_drives);
+    formData.append("dalies", dalies);
+    formData.append("telecine", telecine);
+    formData.append("audio_stock", audio_stock);
+    formData.append("magnetic_transfer", magnetic_transfer);
+    formData.append("stills", stills);
+    formData.append("loss_dam_lab", loss_dam_lab);
+    formData.append("other_lab", other_lab);
+    formData.append("stockLab_total", stockLabTotal);
     // formData.append("stars", stars);
 
     try {
@@ -4558,6 +4648,36 @@ function BudgetEdit() {
     </Col>
     <Col md={4}>
     <p className="mb-0">{soundTotal} </p>
+    </Col>
+    </Row>
+    </div>
+    </Col>
+    {/* Second Unit */}
+    <Col md={3} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
+    <Row>
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
+          onClick={() => setShowSecond(showSecond => !showSecond)} >Second Unit
+    </p>
+    </Col>
+    <Col md={4}>
+    <p className="mb-0">{secondUTotal} </p>
+    </Col>
+    </Row>
+    </div>
+    </Col>
+    {/* Stock & Lab */}
+    <Col md={3} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
+    <Row>
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
+          onClick={() => setShowLab(showLab => !showLab)} >Stock & Lab
+    </p>
+    </Col>
+    <Col md={4}>
+    <p className="mb-0">{stockLabTotal} </p>
     </Col>
     </Row>
     </div>
@@ -5243,6 +5363,28 @@ function BudgetEdit() {
       soundTotal={soundTotal}
       setSoundTotal={setSoundTotal}
       setShow={setShowSoundEqu}  /> 
+    ) }
+    {/*  Second Unit */}
+    {!showSecond ? (
+      ""
+    ) : (
+      <SecondU
+      postDataSecondU={postDataSecondU}
+      setPostDataSecondU={setPostDataSecondU}
+      secondUTotal={secondUTotal}
+      setSecondUTotal={setSecondUTotal}
+      setShow={setShowSecond}  /> 
+    ) }
+    {/*  Stock Lab */}
+    {!showLab ? (
+      ""
+    ) : (
+      <StockLab
+      postDataStockLab={postDataStockLab}
+      setPostDataStockLab={setPostDataStockLab}
+      stockLabTotal={stockLabTotal}
+      setStockLabTotal={setStockLabTotal}
+      setShow={setShowLab}  /> 
     ) }
     {/* buttons */}
     <Row>
