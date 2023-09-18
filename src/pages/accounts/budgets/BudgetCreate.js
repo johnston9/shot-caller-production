@@ -454,7 +454,9 @@ function BudgetCreate() {
   // StarsMusic Total postData 
   const [starsMusicTotal, setStarsMusicTotal] = useState(0);
 
-  // BELOW THE LINE - "B" PRODUCTION
+  // end Above the Line
+
+  // BELOW THE LINE - "B" PRODUCTION ---------------------------------------
 
   // CAST ----  ----------------------------------------
   
@@ -1628,7 +1630,7 @@ function BudgetCreate() {
 
   // end below B Labour
 
-  // BELOW PRODUCTION B COSTS -------------------------------
+  // BELOW PRODUCTION B COSTS ----------------------------------------------
 
   // PRODUCTION OFFICE EXPENSES ------------------------------
 
@@ -2028,6 +2030,123 @@ function BudgetCreate() {
   } = postDataStockLab;
 
   const [stockLabTotal, setStockLabTotal] = useState(0);
+
+  // end below B Costs
+
+  // "C" - POST PRODUCTION ----------------------------------------------
+
+  // POST PRODUCTION STAFF/FACILITIES ------------------------------
+  
+  // Post Staff/Facilities postData
+  const [postDataPostStaffFac, setPostDataPostStaffFac] = useState({
+    post_superviser: 0,
+    post_coordinator: 0,
+    post_consultant: 0,
+    post_assistants: 0,
+    post_accountants: 0,
+    post_office_rent: 0,
+    post_office_equ: 0,
+    post_office_sup: 0,
+    post_it_network: 0,
+    post_phone_net: 0,
+    post_computers_soft: 0,
+    post_store: 0,
+    post_ship: 0,
+    post_craft: 0,
+    fringes_taxes_post: 0,
+    post_other: 0,
+  });
+
+  const {post_superviser, post_coordinator, post_consultant,
+    post_assistants, post_accountants, post_office_rent,
+    post_office_equ, post_office_sup, post_it_network,
+    post_phone_net, post_computers_soft, post_store,
+  post_ship, post_craft, fringes_taxes_post, post_other,} = postDataPostStaffFac;
+
+  // EDITING -------------------------------------------------------
+
+  const [postDataEdit, setPostDataEdit] = useState({
+    edit_rooms: 0,
+    editor: 0,
+    editor_ass: 0,
+    edit_equip: 0,
+    edit_equip_nonlin: 0,
+    foley_ed_system: 0,
+    editor_vfx: 0,
+    vfx_ed_system: 0,
+    colorist_grader: 0,
+    graphics: 0,
+    post_edit_pur: 0,
+    fringes_taxes_post_edit: 0,
+    soooooooon: 0,
+    soooooooon: 0,
+    soooooooon: 0,
+    soooooooon: 0,
+    soooooooon: 0,
+    soooooooon: 0,
+  });
+
+  const {} = postDataEdit;
+
+  // POST SOUND -------------------------------------------------------
+
+  // Post Sound data
+  const [postDataPostSound, setPostDataPostSound] = useState({
+    sound_edit_rooms: 0,
+    editor_sound: 0,
+    editor_music_sound: 0,
+    editor_ass_sound: 0,
+    adr_super: 0,
+    foley_labour: 0,
+    sound_edit_equ: 0,
+    sound_music_edit_equ: 0,
+    post_sound_edit_pur: 0,
+    adr: 0,
+    foley: 0,
+    pre_mix: 0,
+    mix: 0,
+    printmaster: 0,
+    transfers_deliverables: 0,
+    other_post_sound_lab: 0,
+    fringes_taxes_post_sound: 0,
+    other_post_sound: 0,
+  });
+
+  const {} = postDataPostSound;
+
+  // POST LAB -------------------------------------------------------
+
+  // Post lab
+  const [postDataPostLab, setPostDataPostLab] = useState({
+    stock: 0,
+    neg_cutting: 0,
+    soooooooon: 0,
+    soooooooon: 0,
+    soooooooon: 0,
+    color_cor: 0,
+    titles_opticals: 0,
+    dubs: 0,
+    transfers: 0,
+    interpos_neg: 0,
+    prints: 0,
+    other_media_delivery: 0,
+    storage_post: 0,
+  });
+
+  const {} = postDataPostLab;
+
+  // POST TITLES -------------------------------------------------------
+
+  // Post Titles/Opticals/Stock Footage
+  const [postDataPostTitles, setPostDataPostTitles] = useState({
+    titles_opticals: 0,
+    dubs: 0,
+    soooooooon: 0,
+    soooooooon: 0,
+    soooooooon: 0,
+  });
+
+  const {} = postDataPostOther;
 
   // TOTALS ABOVE / BELOW / GRAND -----------------------------
 
