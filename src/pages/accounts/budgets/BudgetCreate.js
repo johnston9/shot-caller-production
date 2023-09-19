@@ -2037,13 +2037,29 @@ function BudgetCreate() {
 
   // POST PRODUCTION STAFF/FACILITIES ------------------------------
   
-  // Post Staff/Facilities postData
+  // Post Production Staff/Facilities postData
   const [postDataPostStaffFac, setPostDataPostStaffFac] = useState({
-    post_superviser: 0,
-    post_coordinator: 0,
+    post_supervisor_qty: 0,
+    post_supervisor_uno: 0,
+    post_supervisor_una: 0,
+    post_supervisor_rt: 0,
+    post_coordinator_qty: 0,
+    post_coordinator_uno: 0,
+    post_coordinator_una: 0,
+    post_coordinator_rt: 0,
+    post_assistants_qty: 0,
+    post_assistants_uno: 0,
+    post_assistants_una: 0,
+    post_assistants_rt: 0,
+    post_accountants_qty: 0,
+    post_accountants_uno: 0,
+    post_accountants_una: 0,
+    post_accountants_rt: 0,
+    post_accountants_ass_qty: 0,
+    post_accountants_ass_uno: 0,
+    post_accountants_ass_una: 0,
+    post_accountants_ass_rt: 0,
     post_consultant: 0,
-    post_assistants: 0,
-    post_accountants: 0,
     post_office_rent: 0,
     post_office_equ: 0,
     post_office_sup: 0,
@@ -2057,49 +2073,133 @@ function BudgetCreate() {
     post_other: 0,
   });
 
-  const {post_superviser, post_coordinator, post_consultant,
-    post_assistants, post_accountants, post_office_rent,
-    post_office_equ, post_office_sup, post_it_network,
-    post_phone_net, post_computers_soft, post_store,
-  post_ship, post_craft, fringes_taxes_post, post_other,} = postDataPostStaffFac;
+  const {post_supervisor_qty, post_supervisor_uno, 
+    post_supervisor_una, post_supervisor_rt, 
+    post_coordinator_qty, post_coordinator_uno,
+    post_coordinator_una, post_coordinator_rt,
+    post_assistants_qty, post_assistants_uno,
+    post_assistants_una, post_assistants_rt,
+    post_accountants_qty, post_accountants_uno,
+    post_accountants_una, post_accountants_rt,
+    post_accountants_ass_qty, post_accountants_ass_uno,
+    post_accountants_ass_una, post_accountants_ass_rt,
+    post_office_rent, post_office_equ, post_office_sup, 
+    post_it_network, post_phone_net, post_computers_soft, post_store,
+    post_ship, post_craft, fringes_taxes_post, post_other,
+  } = postDataPostStaffFac;
+
+  // Totals
+  // Post Production Supervisor Total postData
+  const [postSuperTotal, setPostSuperTotal] = useState(0);
+
+  // Post Production Coordinator Total postData
+  const [postCoordinTotal, setPostCoordinTotal] = useState(0);
+
+  // Post Production Assistants Total postData
+  const [postAssistTotal, setPostAssistTotal] = useState(0);
+
+  // Post Production Accountants Total postData
+  const [postAccountTotal, setPostAccountTotal] = useState(0);
+
+  // Post Production Accountants Assistants Total postData
+  const [postAccountAssTotal, setPostAccountAssTotal] = useState(0);
+
+  // Post Production Staff/Facilities Total postData
+  const [postStaffFacTotal, setPostStaffFacTotal] = useState(0);
 
   // EDITING -------------------------------------------------------
 
   const [postDataEdit, setPostDataEdit] = useState({
+    editor_qty: 0,
+    editor_uno: 0,
+    editor_una: 0,
+    editor_rt: 0,
+    editor_vfx_qty: 0,
+    editor_vfx_uno: 0,
+    editor_vfx_una: 0,
+    editor_vfx_rt: 0,
+    editor_ass_qty: 0,
+    editor_ass_uno: 0,
+    editor_ass_una: 0,
+    editor_ass_rt: 0,
+    colorist_grader_qty: 0,
+    colorist_grader_uno: 0,
+    colorist_grader_una: 0,
+    colorist_grader_rt: 0,
+    graphics_qty: 0,
+    graphics_uno: 0,
+    graphics_una: 0,
+    graphics_rt: 0,
     edit_rooms: 0,
-    editor: 0,
-    editor_ass: 0,
     edit_equip: 0,
     edit_equip_nonlin: 0,
-    foley_ed_system: 0,
-    editor_vfx: 0,
+    online: 0,
     vfx_ed_system: 0,
-    colorist_grader: 0,
-    graphics: 0,
     post_edit_pur: 0,
+    lossdam_edit: 0,
     fringes_taxes_post_edit: 0,
-    soooooooon: 0,
-    soooooooon: 0,
-    soooooooon: 0,
-    soooooooon: 0,
-    soooooooon: 0,
-    soooooooon: 0,
+    other_post_edit: 0,
   });
 
-  const {} = postDataEdit;
+  const {editor_qty, editor_uno, editor_una, editor_rt,
+    editor_vfx_qty, editor_vfx_uno, editor_vfx_una, editor_vfx_rt,
+    editor_ass_qty, editor_ass_uno, editor_ass_una, editor_ass_rt,
+    colorist_grader_qty, colorist_grader_uno, colorist_grader_una, colorist_grader_rt,
+    graphics_qty, graphics_uno, graphics_una, graphics_rt,
+    edit_rooms, edit_equip, edit_equip_nonlin, online,
+    vfx_ed_system, post_edit_pur, lossdam_edit, fringes_taxes_post_edit,
+  other_post_edit,} = postDataEdit;
+
+  // Totals
+  // Editor Total postData
+  const [editorTotal, setEditorTotal] = useState(0);
+
+  // VFX Editor Total postData
+  const [editorVfxTotal, setEditorVfxTotal] = useState(0);
+
+  // Assistant Editor Total postData
+  const [editorAssTotal, setEditorAssTotal] = useState(0);
+
+  // Colorist/Grader Total postData
+  const [graderTotal, setGraderTotal] = useState(0);
+
+  // Graphics Total postData
+  const [graphicsTotal, setGraphicsTotal] = useState(0);
+
+  // EDITING Total postData
+  const [editingTotal, setEditingTotal] = useState(0);
 
   // POST SOUND -------------------------------------------------------
 
   // Post Sound data
   const [postDataPostSound, setPostDataPostSound] = useState({
+    sound_designer_qty: 0,
+    sound_designer_uno: 0,
+    sound_designer_una: 0,
+    sound_designer_rt: 0,
+    editor_sound_qty: 0,
+    editor_sound_uno: 0,
+    editor_sound_una: 0,
+    editor_sound_rt: 0,
+    editor_music_qty: 0,
+    editor_music_uno: 0,
+    editor_music_una: 0,
+    editor_music_rt: 0,
+    ed_sound_ass_qty: 0,
+    ed_sound_ass_uno: 0,
+    ed_sound_ass_una: 0,
+    ed_sound_ass_rt: 0,
+    adr_super_qty: 0,
+    adr_super_uno: 0,
+    adr_super_una: 0,
+    adr_super_rt: 0,
+    foley_labour_qty: 0,
+    foley_labour_uno: 0,
+    foley_labour_una: 0,
+    foley_labour_rt: 0,
     sound_edit_rooms: 0,
-    editor_sound: 0,
-    editor_music_sound: 0,
-    editor_ass_sound: 0,
-    adr_super: 0,
-    foley_labour: 0,
     sound_edit_equ: 0,
-    sound_music_edit_equ: 0,
+    music_edit_equ: 0,
     post_sound_edit_pur: 0,
     adr: 0,
     foley: 0,
@@ -2107,46 +2207,138 @@ function BudgetCreate() {
     mix: 0,
     printmaster: 0,
     transfers_deliverables: 0,
-    other_post_sound_lab: 0,
+    lossdam_sound: 0,
     fringes_taxes_post_sound: 0,
     other_post_sound: 0,
   });
 
-  const {} = postDataPostSound;
+  const {sound_designer_qty, sound_designer_uno, sound_designer_una, sound_designer_rt,
+    editor_sound_qty, editor_sound_uno, editor_sound_una, editor_sound_rt,
+    editor_music_qty, editor_music_uno, editor_music_una, editor_music_rt,
+    ed_sound_ass_qty, ed_sound_ass_uno, ed_sound_ass_una, ed_sound_ass_rt,
+    adr_super_qty, adr_super_uno, adr_super_una, adr_super_rt,
+    foley_labour_qty, foley_labour_uno, foley_labour_una, foley_labour_rt,
+    sound_edit_rooms, sound_edit_equ, music_edit_equ,
+    post_sound_edit_pur, adr, foley, pre_mix, mix, printmaster, transfers_deliverables,
+    lossdam_sound, fringes_taxes_post_sound, other_post_sound,
+  } = postDataPostSound;
 
-  // POST LAB -------------------------------------------------------
+  // Totals
+  // Sound Designer Total postData
+  const [desSoundTotal, setDesSoundTotal] = useState(0);
 
-  // Post lab
+  // Sound Editor Total postData
+  const [editorSoundTotal, setEditorSoundTotal] = useState(0);
+
+  // Music Editor Total postData
+  const [editorMusicTotal, setEditorMusicTotal] = useState(0);
+
+  // Assistant Editor Total postData
+  const [soundEdAssTotal, setSoundEdAssTotal] = useState(0);
+
+  // ADR Supervisor Total postData
+  const [adrSupTotal, setAdrSupTotal] = useState(0);
+
+  // Foley Labour Total postData
+  const [FolLabTotal, setFolLabTotal] = useState(0);
+
+  // POST SOUND Total postData
+  const [postSoundTotal, setPostSoundTotal] = useState(0);
+
+  // POST LAB & VIDEO COPIES-------------------------------------------------------
+
+  // Post Lab/Video Copies
   const [postDataPostLab, setPostDataPostLab] = useState({
     stock: 0,
     neg_cutting: 0,
-    soooooooon: 0,
-    soooooooon: 0,
-    soooooooon: 0,
     color_cor: 0,
-    titles_opticals: 0,
-    dubs: 0,
-    transfers: 0,
     interpos_neg: 0,
     prints: 0,
+    transfers: 0,
     other_media_delivery: 0,
+    distribution_copies: 0,
     storage_post: 0,
   });
 
-  const {} = postDataPostLab;
+  const {stock, neg_cutting, color_cor, interpos_neg, prints,
+    transfers, other_media_delivery, distribution_copies, storage_post,
+  } = postDataPostLab;
 
-  // POST TITLES -------------------------------------------------------
+  // POST LAB/VIDEO COPIES Total postData
+  const [postLabTotal, setPostLabTotal] = useState(0);
+
+  // POST TITLES/OPTICALS/STOCK FOOTAGE/ -------------------------------------------------------
 
   // Post Titles/Opticals/Stock Footage
   const [postDataPostTitles, setPostDataPostTitles] = useState({
-    titles_opticals: 0,
-    dubs: 0,
-    soooooooon: 0,
-    soooooooon: 0,
-    soooooooon: 0,
+    titles: 0,
+    opticals: 0,
+    stock_footage: 0,
+    subtitles: 0,
+    con_script_ccsl: 0,
   });
 
-  const {} = postDataPostOther;
+  const {titles, opticals, stock_footage, subtitles, con_script_ccsl,
+  } = postDataPostTitles;
+
+  // POST TITLES Total postData
+  const [postTitlesTotal, setPostTitlesTotal] = useState(0);
+
+  // POST VERSIONING/CLOSED-CAPTIONING/COPIEs -------------------------------------------------------
+
+  // Post Versioning
+  const [postDataPostVersion, setPostDataPostVersion] = useState({
+    dubs: 0,
+    subtitles: 0,
+    closed_caption: 0,
+    versioning: 0,
+    trailers: 0,
+    ads: 0,
+    transfers_ver: 0,
+    prints_ver: 0,
+    dig_copies_ver: 0,
+    other_copies_ver: 0,
+  });
+
+  const {} = postDataPostTitles;
+
+  // POST VISUAL EFFECTS -------------------------------------------------------
+
+  // Post Visual Effects
+  const [postDataPostVFX, setPostDataPostVFX] = useState({
+    vfx_producer: 0,
+    vfx_supervisor: 0,
+    vfx_coordinator: 0,
+    vfx_post_other_lab: 0,
+    vfx_storyboard: 0,
+    vfx_pre_vis_team: 0,
+    vfx_post_vis_team: 0,
+    cyberscanning: 0,
+    vfx_rentals: 0,
+    vfx_purchases: 0,
+    vfx_vendor_1: 0,
+    vfx_vendor_2: 0,
+    vfx_vendor_3: 0,
+    vfx_vendor_4: 0,
+    vfx_vendor_5: 0,
+    vfx_vendor_6: 0,
+    vfx_vendor_7: 0,
+    vfx_vendor_8: 0,
+    vfx_vendor_9: 0,
+    vfx_vendor_10: 0,
+    vfx_vendors_x: 0,
+    vfx_traliv: 0,
+    vfx_expenses: 0,
+    miniatures_build: 0,
+    miniatures_shoot: 0,
+    motion_capture: 0,
+    lossdam_vfx: 0,
+    box_ren_vfx: 0,
+    fringes_taxes_vfx: 0,
+    other_post_vfx: 0,
+  });
+
+  const {} = postDataPostTitles;
 
   // TOTALS ABOVE / BELOW / GRAND -----------------------------
 
