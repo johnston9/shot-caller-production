@@ -100,6 +100,13 @@ function BudgetEdit() {
   const [showSoundEqu, setShowSoundEqu] = useState(false);
   const [showSecond, setShowSecond] = useState(false);
   const [showLab, setShowLab] = useState(false);
+  const [showStaFac, setShowStaFac] = useState(false);
+  const [showEdit, setShowEdit] = useState(false);
+  const [showPoSoun, setShowPoSoun] = useState(false);
+  const [showPoLab, setShowPoLab] = useState(false);
+  const [showTitle, setShowTitle] = useState(false);
+  const [showVers, setShowVers] = useState(false);
+  const [showVfxPo, setShowVfxPo] = useState(false);
 
   // budget id
   const [budgetId, setBudgetId] = useState("");
@@ -2130,6 +2137,7 @@ function BudgetEdit() {
 
   // EDITING -------------------------------------------------------
 
+  // data Editing
   const [postDataEdit, setPostDataEdit] = useState({
     editor_qty: 0,
     editor_uno: 0,
@@ -2189,6 +2197,8 @@ function BudgetEdit() {
 
   // EDITING Total postData
   const [editingTotal, setEditingTotal] = useState(0);
+
+  // POST SOUND -----------------------------
 
   // Post Sound data
   const [postDataPostSound, setPostDataPostSound] = useState({
@@ -2264,7 +2274,7 @@ function BudgetEdit() {
   // POST SOUND Total postData
   const [postSoundTotal, setPostSoundTotal] = useState(0);
 
-  // POST LAB & VIDEO COPIES-------------------------------------------------------
+  // POST LAB & VIDEO COPIES ----------------------------
 
   // Post Lab/Video Copies
   const [postDataPostLab, setPostDataPostLab] = useState({
@@ -2286,22 +2296,95 @@ function BudgetEdit() {
   // POST LAB/VIDEO COPIES Total postData
   const [postLabTotal, setPostLabTotal] = useState(0);
 
-  // POST TITLES/OPTICALS/STOCK FOOTAGE/ -------------------------------------------------------
+  // POST TITLES/OPTICALS/STOCK FOOTAGE -----------------
 
   // Post Titles/Opticals/Stock Footage
   const [postDataPostTitles, setPostDataPostTitles] = useState({
     titles: 0,
     opticals: 0,
     stock_footage: 0,
-    subtitles: 0,
     con_script_ccsl: 0,
   });
 
-  const {titles, opticals, stock_footage, subtitles, con_script_ccsl,
+  const {titles, opticals, stock_footage, con_script_ccsl,
   } = postDataPostTitles;
 
   // POST TITLES Total postData
   const [postTitlesTotal, setPostTitlesTotal] = useState(0);
+
+  // POST VERSIONING/CLOSED-CAPTIONING/COPIES -------------
+
+  // Post Versioning
+  const [postDataPostVersion, setPostDataPostVersion] = useState({
+    dubs: 0,
+    subtitles: 0,
+    closed_caption: 0,
+    versioning: 0,
+    trailers: 0,
+    ads: 0,
+    transfers_ver: 0,
+    prints_ver: 0,
+    dig_copies_ver: 0,
+    other_copies_ver: 0,
+  });
+
+  const {dubs, subtitles, closed_caption, versioning, trailers,
+    ads, transfers_ver, prints_ver, dig_copies_ver, other_copies_ver,
+  } = postDataPostVersion;
+
+  // POST VERSIONING/CLOSED-CAPTIONING/COPIES Total postData
+  const [postVersionTotal, setPostVersionTotal] = useState(0);
+
+  // POST VISUAL EFFECTS -------------------------------------------------------
+
+  // Post Visual Effects
+  const [postDataPostVFX, setPostDataPostVFX] = useState({
+    vfx_producer: 0,
+    vfx_supervisor: 0,
+    vfx_coordinator: 0,
+    vfx_post_other_lab: 0,
+    vfx_storyboard: 0,
+    vfx_pre_vis_team: 0,
+    vfx_post_vis_team: 0,
+    cyberscanning: 0,
+    vfx_rentals: 0,
+    vfx_purchases: 0,
+    vfx_vendor_1: 0,
+    vfx_vendor_2: 0,
+    vfx_vendor_3: 0,
+    vfx_vendor_4: 0,
+    vfx_vendor_5: 0,
+    vfx_vendor_6: 0,
+    vfx_vendor_7: 0,
+    vfx_vendor_8: 0,
+    vfx_vendor_9: 0,
+    vfx_vendor_10: 0,
+    vfx_vendors_x: 0,
+    vfx_traliv: 0,
+    vfx_expenses: 0,
+    miniatures_build: 0,
+    miniatures_shoot: 0,
+    motion_capture: 0,
+    lossdam_vfx: 0,
+    box_ren_vfx: 0,
+    fringes_taxes_vfx: 0,
+    other_post_vfx: 0,
+  });
+
+  const {vfx_producer, vfx_supervisor, vfx_coordinator, vfx_post_other_lab,
+    vfx_storyboard, vfx_pre_vis_team, vfx_post_vis_team, cyberscanning,
+    vfx_rentals, vfx_purchases, vfx_vendor_1, vfx_vendor_2, vfx_vendor_3,
+    vfx_vendor_4, vfx_vendor_5, vfx_vendor_6, vfx_vendor_7, vfx_vendor_8,
+    vfx_vendor_9, vfx_vendor_10, vfx_vendors_x, vfx_traliv, vfx_expenses,
+    miniatures_build, miniatures_shoot, motion_capture, lossdam_vfx,
+    box_ren_vfx, fringes_taxes_vfx, other_post_vfx,
+  } = postDataPostTitles;
+
+  // POST VERSIONING/CLOSED-CAPTIONING/COPIES Total postData
+  const [postVfxTotal, setPostVfxTotal] = useState(0);
+
+  // FISCAL SPONSOR FEE
+  // Bond - 2% (direct plus contingency & finance fees)
 
   // TOTALS ABOVE / BELOW / GRAND --------------------------------
 
@@ -2501,7 +2584,7 @@ function BudgetEdit() {
     </div>
   );
 
-  // PRODUCTION B LABOUR AND COSTS TOTAL---------------------------
+  // PRODUCTION B LABOUR AND COSTS ---------------------------
 
   // B labour and costs Total postData 
   const [bLabourandCostsTotal, setBLabourandCostsTotal] = useState(0);
@@ -2542,6 +2625,165 @@ function BudgetEdit() {
               />
       </Form.Group>
       {errors?.bLabourandCostsTotal?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+    </Col>
+    </Row>
+    </div>
+  );
+
+  // Post Production "C" ------------------------------------
+
+  // Post Production "C" postData 
+  const [postProductionCTotal, setPostProductionCTotal] = useState(0);
+
+  // function to add all Post Production "C" totals on change
+  useEffect(() => {
+    const adddPostProC = () => {
+      setPostProductionCTotal(
+        parseFloat(postStaffFacTotal || 0) +
+        parseFloat(editingTotal || 0) +
+        parseFloat(postSoundTotal || 0) +
+        parseFloat(postLabTotal || 0) +
+        parseFloat(postTitlesTotal || 0) +
+        parseFloat(postVersionTotal || 0) +
+        parseFloat(postVfxTotal || 0)
+        )
+      }
+    const timer = setTimeout(() => {
+      adddPostProC();
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [postStaffFacTotal, editingTotal, postSoundTotal, postLabTotal,
+      postTitlesTotal, postVersionTotal, postVfxTotal]);
+
+  // Post Production input box
+  // eslint-disable-next-line
+  const postproductionCtotal = (
+    <div className="my-0 pl-3">
+    <Row>
+    <Col className={ `${styles.Overview}  my-0 py-2`} md={10} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL "C "POST PRODUCTION COSTS</p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="postProductionCTotal" 
+          className={`${styles.Width95} text-center pt-1 mb-0`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="postProductionCTotal"
+          value={postProductionCTotal}
+          readOnly
+              />
+      </Form.Group>
+      {errors?.postProductionCTotal?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+    </Col>
+    </Row>
+    </div>
+  );
+
+  // BELOW B & C TOTAL ---------------------------
+
+  // C & B Total postData 
+  const [belowBandCTotal, setBelowBandCTotal] = useState(0);
+
+  // function to add both B and C Below on change
+  useEffect(() => {
+    const addBelowBandC = () => {
+      setBelowBandCTotal(
+        parseFloat(bLabourandCostsTotal || 0) +
+        parseFloat(postProductionCTotal || 0)
+        )
+      }
+    const timer = setTimeout(() => {
+      addBelowBandC();
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [bLabourandCostsTotal, postProductionCTotal]);
+
+  // below B and C input box --- belowbandcTotal abovebelowabcTotal
+  // eslint-disable-next-line
+  const belowbandcTotal = (
+    <div className="mt-3 pl-3">
+    <Row>
+    <Col className={ `${styles.Overview}  my-0 py-2`} md={10} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>BELOW THE LINE "B" AND "C" TOTAL</p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="belowBandCTotal" 
+          className={`${styles.Width95} text-center pt-1 mb-0`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="belowBandCTotal"
+          value={belowBandCTotal}
+          readOnly
+              />
+      </Form.Group>
+      {errors?.belowBandCTotal?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+    </Col>
+    </Row>
+    </div>
+  );
+
+  // ABOVE AND BELOW A, B & C TOTAL ---------------------------
+
+  // A, B & C Total postData 
+  const [aboveBelowABCTotal, setAboveBelowABCTotal] = useState(0);
+
+  // function to add above A and below B and C on change
+  useEffect(() => {
+    const addBelowAboveABC = () => {
+      setAboveBelowABCTotal(
+        parseFloat(aboveTheLineTotal || 0) +
+        parseFloat(belowBandCTotal || 0)
+        )
+      }
+    const timer = setTimeout(() => {
+      addBelowAboveABC();
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [aboveTheLineTotal, belowBandCTotal]);
+
+  // below B and C input box
+  // eslint-disable-next-line
+  const abovebelowabcTotal = (
+    <div className="mt-3 pl-3">
+    <Row>
+    <Col className={ `${styles.Overview}  my-0 py-2`} md={10} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>ABOVE AND BELOW THE LINE "A", "B" AND "C" TOTAL</p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="aboveBelowABCTotal" 
+          className={`${styles.Width95} text-center pt-1 mb-0`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="aboveBelowABCTotal"
+          value={aboveBelowABCTotal}
+          readOnly
+              />
+      </Form.Group>
+      {errors?.aboveBelowABCTotal?.map((message, idx) => (
           <Alert variant="warning" key={idx}>
           {message}
           </Alert>
@@ -3327,7 +3569,104 @@ function BudgetEdit() {
           hard_drives, dalies, telecine, audio_stock, magnetic_transfer,
           stills, loss_dam_lab, other_lab,});
         setStockLabTotal(stockLab_total);
-      } catch (err) {
+        const {post_supervisor_qty, post_supervisor_uno, 
+          post_supervisor_una, post_supervisor_rt, 
+          post_coordinator_qty, post_coordinator_uno,
+          post_coordinator_una, post_coordinator_rt,
+          post_assistants_qty, post_assistants_uno,
+          post_assistants_una, post_assistants_rt,
+          post_accountants_qty, post_accountants_uno,
+          post_accountants_una, post_accountants_rt, postStaffFac_total,
+          post_accountants_ass_qty, post_accountants_ass_uno,
+          post_accountants_ass_una, post_accountants_ass_rt,
+          post_office_rent, post_office_equ, post_office_sup, 
+          post_it_network, post_phone_net, post_computers_soft, post_store,
+          post_ship, post_craft, fringes_taxes_post, post_other,} = data.results[0];
+        setPostDataPostStaffFac({post_supervisor_qty, post_supervisor_uno, 
+          post_supervisor_una, post_supervisor_rt, 
+          post_coordinator_qty, post_coordinator_uno,
+          post_coordinator_una, post_coordinator_rt,
+          post_assistants_qty, post_assistants_uno,
+          post_assistants_una, post_assistants_rt,
+          post_accountants_qty, post_accountants_uno,
+          post_accountants_una, post_accountants_rt,
+          post_accountants_ass_qty, post_accountants_ass_uno,
+          post_accountants_ass_una, post_accountants_ass_rt,
+          post_office_rent, post_office_equ, post_office_sup, 
+          post_it_network, post_phone_net, post_computers_soft, post_store,
+          post_ship, post_craft, fringes_taxes_post, post_other,});
+        setPostStaffFacTotal(postStaffFac_total);  
+        const {editor_qty, editor_uno, editor_una, editor_rt,
+          editor_vfx_qty, editor_vfx_uno, editor_vfx_una, editor_vfx_rt,
+          editor_ass_qty, editor_ass_uno, editor_ass_una, editor_ass_rt,
+          colorist_grader_qty, colorist_grader_uno, colorist_grader_una, colorist_grader_rt,
+          graphics_qty, graphics_uno, graphics_una, graphics_rt,
+          edit_rooms, edit_equip, edit_equip_nonlin, online,
+          vfx_ed_system, post_edit_pur, lossdam_edit, fringes_taxes_post_edit,
+          other_post_edit, editing_total,} = data.results[0];
+        setPostDataEdit({editor_qty, editor_uno, editor_una, editor_rt,
+          editor_vfx_qty, editor_vfx_uno, editor_vfx_una, editor_vfx_rt,
+          editor_ass_qty, editor_ass_uno, editor_ass_una, editor_ass_rt,
+          colorist_grader_qty, colorist_grader_uno, colorist_grader_una, colorist_grader_rt,
+          graphics_qty, graphics_uno, graphics_una, graphics_rt,
+          edit_rooms, edit_equip, edit_equip_nonlin, online,
+          vfx_ed_system, post_edit_pur, lossdam_edit, fringes_taxes_post_edit,
+        other_post_edit,});
+        setEditingTotal(editing_total);
+        const {sound_designer_qty, sound_designer_uno, sound_designer_una, sound_designer_rt,
+          editor_sound_qty, editor_sound_uno, editor_sound_una, editor_sound_rt,
+          editor_music_qty, editor_music_uno, editor_music_una, editor_music_rt,
+          ed_sound_ass_qty, ed_sound_ass_uno, ed_sound_ass_una, ed_sound_ass_rt,
+          adr_super_qty, adr_super_uno, adr_super_una, adr_super_rt,
+          foley_labour_qty, foley_labour_uno, foley_labour_una, foley_labour_rt,
+          sound_edit_rooms, sound_edit_equ, music_edit_equ, postSound_total,
+          post_sound_edit_pur, adr, foley, pre_mix, mix, printmaster, transfers_deliverables,
+          lossdam_sound, fringes_taxes_post_sound, other_post_sound,} = data.results[0];
+        setPostDataPostSound({sound_designer_qty, sound_designer_uno, sound_designer_una, sound_designer_rt,
+          editor_sound_qty, editor_sound_uno, editor_sound_una, editor_sound_rt,
+          editor_music_qty, editor_music_uno, editor_music_una, editor_music_rt,
+          ed_sound_ass_qty, ed_sound_ass_uno, ed_sound_ass_una, ed_sound_ass_rt,
+          adr_super_qty, adr_super_uno, adr_super_una, adr_super_rt,
+          foley_labour_qty, foley_labour_uno, foley_labour_una, foley_labour_rt,
+          sound_edit_rooms, sound_edit_equ, music_edit_equ,
+          post_sound_edit_pur, adr, foley, pre_mix, mix, printmaster, transfers_deliverables,
+        lossdam_sound, fringes_taxes_post_sound, other_post_sound,});  
+        setPostSoundTotal(postSound_total);      
+        const {stock, neg_cutting, color_cor, interpos_neg, prints,
+          transfers, other_media_delivery, distribution_copies, 
+        storage_post, postLab_total,} = data.results[0];
+        setPostDataPostLab({stock, neg_cutting, color_cor, interpos_neg, prints,
+          transfers, other_media_delivery, distribution_copies, 
+        storage_post,});
+        setPostLabTotal(postLab_total);
+        const {titles, opticals, stock_footage, con_script_ccsl,
+          postTitles_total,} = data.results[0];
+        setPostDataPostTitles({titles, opticals, stock_footage, con_script_ccsl,});
+        setPostTitlesTotal(postTitles_total);
+        const {dubs, subtitles, closed_caption, versioning, trailers,
+          ads, transfers_ver, prints_ver, dig_copies_ver, 
+          other_copies_ver, postVersion_total,} = data.results[0];
+        setPostDataPostVersion({dubs, subtitles, closed_caption, versioning, trailers,
+          ads, transfers_ver, prints_ver, dig_copies_ver, 
+          other_copies_ver,});
+        setPostVersionTotal(postVersion_total);
+        const {vfx_producer, vfx_supervisor, vfx_coordinator, vfx_post_other_lab,
+          vfx_storyboard, vfx_pre_vis_team, vfx_post_vis_team, cyberscanning,
+          vfx_rentals, vfx_purchases, vfx_vendor_1, vfx_vendor_2, vfx_vendor_3,
+          vfx_vendor_4, vfx_vendor_5, vfx_vendor_6, vfx_vendor_7, vfx_vendor_8,
+          vfx_vendor_9, vfx_vendor_10, vfx_vendors_x, vfx_traliv, vfx_expenses,
+          miniatures_build, miniatures_shoot, motion_capture, lossdam_vfx,
+          box_ren_vfx, fringes_taxes_vfx, other_post_vfx, postVfx_total,} = data.results[0];
+        setPostDataPostVFX({vfx_producer, vfx_supervisor, vfx_coordinator, vfx_post_other_lab,
+          vfx_storyboard, vfx_pre_vis_team, vfx_post_vis_team, cyberscanning,
+          vfx_rentals, vfx_purchases, vfx_vendor_1, vfx_vendor_2, vfx_vendor_3,
+          vfx_vendor_4, vfx_vendor_5, vfx_vendor_6, vfx_vendor_7, vfx_vendor_8,
+          vfx_vendor_9, vfx_vendor_10, vfx_vendors_x, vfx_traliv, vfx_expenses,
+          miniatures_build, miniatures_shoot, motion_capture, lossdam_vfx,
+          box_ren_vfx, fringes_taxes_vfx, other_post_vfx,});
+        setPostVfxTotal(postVfx_total);
+
+            } catch (err) {
         console.log(err);
       }
     };
@@ -4241,6 +4580,187 @@ function BudgetEdit() {
     formData.append("loss_dam_lab", loss_dam_lab);
     formData.append("other_lab", other_lab);
     formData.append("stockLab_total", stockLabTotal);
+    // Post Staff/Facilities
+    formData.append("post_supervisor_qty", post_supervisor_qty);
+    formData.append("post_supervisor_uno", post_supervisor_uno);
+    formData.append("post_supervisor_una", post_supervisor_una);
+    formData.append("post_supervisor_rt", post_supervisor_rt);
+    formData.append("post_coordinator_qty", post_coordinator_qty);
+    formData.append("post_coordinator_uno", post_coordinator_uno);
+    formData.append("post_coordinator_una", post_coordinator_una);
+    formData.append("post_coordinator_rt", post_coordinator_rt);
+    formData.append("post_assistants_qty", post_assistants_qty);
+    formData.append("post_assistants_uno", post_assistants_uno);
+    formData.append("post_assistants_una", post_assistants_una);
+    formData.append("post_assistants_rt", post_assistants_rt);
+    formData.append("post_accountants_qty", post_accountants_qty);
+    formData.append("post_accountants_uno", post_accountants_uno);
+    formData.append("post_accountants_una", post_accountants_una);
+    formData.append("post_accountants_rt", post_accountants_rt);
+    formData.append("post_accountants_ass_qty", post_accountants_ass_qty);
+    formData.append("post_accountants_ass_uno", post_accountants_ass_uno);
+    formData.append("post_accountants_ass_una", post_accountants_ass_una);
+    formData.append("post_accountants_ass_rt", post_accountants_ass_rt);
+    formData.append("post_consultant", post_consultant);
+    formData.append("post_office_rent", post_office_rent);
+    formData.append("post_office_equ", post_office_equ);
+    formData.append("post_office_sup", post_office_sup);
+    formData.append("post_it_network", post_it_network);
+    formData.append("post_phone_net", post_phone_net);
+    formData.append("post_computers_soft", post_computers_soft);
+    formData.append("post_store", post_store);
+    formData.append("post_ship", post_ship);
+    formData.append("post_craft", post_craft);
+    formData.append("fringes_taxes_post", fringes_taxes_post);
+    formData.append("post_other", post_other);
+    formData.append("postSuper_total", postSuperTotal);
+    formData.append("postCoordin_total", postCoordinTotal);
+    formData.append("postAssist_total", postAssistTotal);
+    formData.append("postAccount_total", postAccountTotal);
+    formData.append("postAccountAss_total", postAccountAssTotal);
+    formData.append("postStaffFac_total", postStaffFacTotal);
+    // Editing
+    formData.append("editor_qty", editor_qty);
+    formData.append("editor_uno", editor_uno);
+    formData.append("editor_una", editor_una);
+    formData.append("editor_rt", editor_rt);
+    formData.append("editor_vfx_qty", editor_vfx_qty);
+    formData.append("editor_vfx_uno", editor_vfx_uno);
+    formData.append("editor_vfx_una", editor_vfx_una);
+    formData.append("editor_vfx_rt", editor_vfx_rt);
+    formData.append("editor_ass_qty", editor_ass_qty);
+    formData.append("editor_ass_uno", editor_ass_uno);
+    formData.append("editor_ass_una", editor_ass_una);
+    formData.append("editor_ass_rt", editor_ass_rt);
+    formData.append("colorist_grader_qty", colorist_grader_qty);
+    formData.append("colorist_grader_uno", colorist_grader_uno);
+    formData.append("colorist_grader_una", colorist_grader_una);
+    formData.append("colorist_grader_rt", colorist_grader_rt);
+    formData.append("graphics_qty", graphics_qty);
+    formData.append("graphics_uno", graphics_uno);
+    formData.append("graphics_una", graphics_una);
+    formData.append("graphics_rt", graphics_rt);
+    formData.append("edit_rooms", edit_rooms);
+    formData.append("edit_equip", edit_equip);
+    formData.append("edit_equip_nonlin", edit_equip_nonlin);
+    formData.append("online", online);
+    formData.append("vfx_ed_system", vfx_ed_system);
+    formData.append("post_edit_pur", post_edit_pur);
+    formData.append("lossdam_edit", lossdam_edit);
+    formData.append("fringes_taxes_post_edit", fringes_taxes_post_edit);
+    formData.append("other_post_edit", other_post_edit);
+    formData.append("editor_total", editorTotal);
+    formData.append("editorVfx_total", editorVfxTotal);
+    formData.append("editorAss_total", editorAssTotal);
+    formData.append("grader_total", graderTotal);
+    formData.append("graphics_total", graphicsTotal);
+    formData.append("editing_total", editingTotal);
+    // Sound
+    formData.append("sound_designer_qty", sound_designer_qty);
+    formData.append("sound_designer_uno", sound_designer_uno);
+    formData.append("sound_designer_una", sound_designer_una);
+    formData.append("sound_designer_rt", sound_designer_rt);
+    formData.append("editor_sound_qty", editor_sound_qty);
+    formData.append("editor_sound_uno", editor_sound_uno);
+    formData.append("editor_sound_una", editor_sound_una);
+    formData.append("editor_sound_rt", editor_sound_rt);
+    formData.append("editor_music_qty", editor_music_qty);
+    formData.append("editor_music_uno", editor_music_uno);
+    formData.append("editor_music_una", editor_music_una);
+    formData.append("editor_music_rt", editor_music_rt);
+    formData.append("ed_sound_ass_qty", ed_sound_ass_qty);
+    formData.append("ed_sound_ass_uno", ed_sound_ass_uno);
+    formData.append("ed_sound_ass_una", ed_sound_ass_una);
+    formData.append("ed_sound_ass_rt", ed_sound_ass_rt);
+    formData.append("adr_super_qty", adr_super_qty);
+    formData.append("adr_super_uno", adr_super_uno);
+    formData.append("adr_super_una", adr_super_una);
+    formData.append("adr_super_rt", adr_super_rt);
+    formData.append("foley_labour_qty", foley_labour_qty);
+    formData.append("foley_labour_uno", foley_labour_uno);
+    formData.append("foley_labour_una", foley_labour_una);
+    formData.append("foley_labour_rt", foley_labour_rt);
+    formData.append("sound_edit_rooms", sound_edit_rooms);
+    formData.append("sound_edit_equ", sound_edit_equ);
+    formData.append("music_edit_equ", music_edit_equ);
+    formData.append("post_sound_edit_pur", post_sound_edit_pur);
+    formData.append("adr", adr);
+    formData.append("foley", foley);
+    formData.append("pre_mix", pre_mix);
+    formData.append("mix", mix);
+    formData.append("printmaster", printmaster);
+    formData.append("transfers_deliverables", transfers_deliverables);
+    formData.append("lossdam_sound", lossdam_sound);
+    formData.append("fringes_taxes_post_sound", fringes_taxes_post_sound);
+    formData.append("other_post_sound", other_post_sound);
+    formData.append("desSound_total", desSoundTotal);
+    formData.append("editorSound_total", editorSoundTotal);
+    formData.append("editorMusic_total", editorMusicTotal);
+    formData.append("soundEdAss_total", soundEdAssTotal);
+    formData.append("adrSup_total", adrSupTotal);
+    formData.append("FolLab_total", FolLabTotal);
+    formData.append("postSound_total", postSoundTotal);
+    // Post Lab/Video Copies
+    formData.append("stock", stock);
+    formData.append("neg_cutting", neg_cutting);
+    formData.append("color_cor", color_cor);
+    formData.append("interpos_neg", interpos_neg);
+    formData.append("prints", prints);
+    formData.append("transfers", transfers);
+    formData.append("other_media_delivery", other_media_delivery);
+    formData.append("distribution_copies", distribution_copies);
+    formData.append("storage_post", storage_post);
+    formData.append("postLab_total", postLabTotal);
+    // Post Titles
+    formData.append("titles", titles);
+    formData.append("opticals", opticals);
+    formData.append("stock_footage", stock_footage);
+    formData.append("con_script_ccsl", con_script_ccsl);
+    formData.append("postTitles_total", postTitlesTotal);
+    // Post Versioning
+    formData.append("dubs", dubs);
+    formData.append("subtitles", subtitles);
+    formData.append("closed_caption", closed_caption);
+    formData.append("versioning", versioning);
+    formData.append("trailers", trailers);
+    formData.append("ads", ads);
+    formData.append("transfers_ver", transfers_ver);
+    formData.append("prints_ver", prints_ver);
+    formData.append("dig_copies_ver", dig_copies_ver);
+    formData.append("other_copies_ver", other_copies_ver);
+    formData.append("postVersion_total", postVersionTotal);
+    // VFX
+    formData.append("vfx_producer", vfx_producer);
+    formData.append("vfx_supervisor", vfx_supervisor);
+    formData.append("vfx_coordinator", vfx_coordinator);
+    formData.append("vfx_post_other_lab", vfx_post_other_lab);
+    formData.append("vfx_storyboard", vfx_storyboard);
+    formData.append("vfx_pre_vis_team", vfx_pre_vis_team);
+    formData.append("vfx_post_vis_team", vfx_post_vis_team);
+    formData.append("cyberscanning", cyberscanning);
+    formData.append("vfx_rentals", vfx_rentals);
+    formData.append("vfx_purchases", vfx_purchases);
+    formData.append("vfx_vendor_1", vfx_vendor_1);
+    formData.append("vfx_vendor_2", vfx_vendor_2);
+    formData.append("vfx_vendor_3", vfx_vendor_3);
+    formData.append("vfx_vendor_4", vfx_vendor_4);
+    formData.append("vfx_vendor_5", vfx_vendor_5);
+    formData.append("vfx_vendor_6", vfx_vendor_6);
+    formData.append("vfx_vendor_7", vfx_vendor_7);
+    formData.append("vfx_vendor_8", vfx_vendor_8);
+    formData.append("vfx_vendor_9", vfx_vendor_9);
+    formData.append("vfx_vendor_10", vfx_vendor_10);
+    formData.append("vfx_vendors_x", vfx_vendors_x);
+    formData.append("vfx_traliv", vfx_traliv);
+    formData.append("vfx_expenses", vfx_expenses);
+    formData.append("miniatures_build", miniatures_build);
+    formData.append("miniatures_shoot", miniatures_shoot);
+    formData.append("motion_capture", motion_capture);
+    formData.append("lossdam_vfx", lossdam_vfx);
+    formData.append("box_ren_vfx", box_ren_vfx);
+    formData.append("fringes_taxes_vfx", fringes_taxes_vfx);
+    formData.append("other_post_vfx", other_post_vfx);
+    formData.append("postVfx_total", postVfxTotal);
     // formData.append("stars", stars);
 
     try {
@@ -4935,6 +5455,133 @@ function BudgetEdit() {
     </Col>
     </Row>
     {blabourncoststotal}
+    {/* Post Production "C" & total */}
+    <Row className={ `${styles.OverviewBlue} mx-1 mb-0 mt-2 py-1`}>
+    <Col md={10}>
+    <p className={ `mb-0 ml-3 ${styles.BoldBlack}`}>
+      "C" POST PRODUCTION </p>
+    </Col>
+    <Col md={2}><p className="mb-0">{postProductionCTotal} </p></Col>
+    </Row>
+    {/* sections post production C click buttons */}
+    <Row className={`${styles.ButtonLine} mx-1`}>
+    {/* Post Production Staff/Facilities */}
+    <Col md={3} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
+    <Row>
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
+      onClick={() => setShowStaFac(showStaFac => !showStaFac)} >
+    Staff/Facilities
+    </p>
+    </Col>
+    <Col md={4}>
+    <p className="mb-0">{postStaffFacTotal} </p>
+    </Col>
+    </Row>
+    </div>
+    </Col>
+    {/* Editing */}
+    <Col md={3} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
+    <Row>
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
+      onClick={() => setShowEdit(showEdit => !showEdit)} >
+    Editing
+    </p>
+    </Col>
+    <Col md={4}>
+    <p className="mb-0">{editingTotal} </p>
+    </Col>
+    </Row>
+    </div>
+    </Col>
+    {/* Post Sound */}
+    <Col md={3} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
+    <Row>
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
+      onClick={() => setShowPoSoun(showPoSoun => !showPoSoun)} >
+    Post Sound
+    </p>
+    </Col>
+    <Col md={4}>
+    <p className="mb-0">{postSoundTotal} </p>
+    </Col>
+    </Row>
+    </div>
+    </Col>
+    {/* Post Lab/Video Copies */}
+    <Col md={3} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
+    <Row>
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
+      onClick={() => setShowPoLab(showPoLab => !showPoLab)} >
+    Lab/Video
+    </p>
+    </Col>
+    <Col md={4}>
+    <p className="mb-0">{postLabTotal} </p>
+    </Col>
+    </Row>
+    </div>
+    </Col>
+    {/* Post Titles/Opticals/Stock Footage */}
+    <Col md={3} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
+    <Row>
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
+      onClick={() => setShowTitle(showTitle => !showTitle)} >
+    Titles/Opticals
+    </p>
+    </Col>
+    <Col md={4}>
+    <p className="mb-0">{postTitlesTotal} </p>
+    </Col>
+    </Row>
+    </div>
+    </Col>
+    {/* Post Versioning */}
+    <Col md={3} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
+    <Row>
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
+      onClick={() => setShowVers(showVers => !showVers)} >
+    Versioning
+    </p>
+    </Col>
+    <Col md={4}>
+    <p className="mb-0">{postVersionTotal} </p>
+    </Col>
+    </Row>
+    </div>
+    </Col>
+    {/* Post Visual Effects */}
+    <Col md={3} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
+    <Row>
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
+      onClick={() => setShowVfxPo(showVfxPo => !showVfxPo)} >
+    Visual Effects
+    </p>
+    </Col>
+    <Col md={4}>
+    <p className="mb-0">{postVfxTotal} </p>
+    </Col>
+    </Row>
+    </div>
+    </Col>
+    </Row>
+    {/* below B and C total  */}
+    {belowbandcTotal}
+    {/* Above "A" and Below "B" and "C" total  */}
+    {abovebelowabcTotal}
     {grandtotal}
     {/* info */}
     {!showInfo ? (
