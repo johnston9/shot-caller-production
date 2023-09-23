@@ -52,6 +52,10 @@ import GripEqu from "./budgetsectionscosts/GripEqu";
 import SoundEqu from "./budgetsectionscosts/SoundEqu";
 import SecondU from "./budgetsectionscosts/SecondU";
 import StockLab from "./budgetsectionscosts/StockLab";
+import StaffFacilities from "./budgetsectionspost/StaffFacilities";
+import Editing from "./budgetsectionspost/Editing";
+import Postsound from "./budgetsectionspost/Postsound";
+import PostLabVideo from "./budgetsectionspost/PostLabVideo";
 
 function BudgetEdit() {
   const [errors, setErrors] = useState({});
@@ -107,7 +111,7 @@ function BudgetEdit() {
   const [showTitle, setShowTitle] = useState(false);
   const [showVers, setShowVers] = useState(false);
   const [showVfxPo, setShowVfxPo] = useState(false);
-
+  
   // budget id
   const [budgetId, setBudgetId] = useState("");
 
@@ -2111,7 +2115,7 @@ function BudgetEdit() {
     post_accountants_una, post_accountants_rt,
     post_accountants_ass_qty, post_accountants_ass_uno,
     post_accountants_ass_una, post_accountants_ass_rt,
-    post_office_rent, post_office_equ, post_office_sup, 
+    post_office_rent, post_office_equ, post_office_sup, post_consultant,
     post_it_network, post_phone_net, post_computers_soft, post_store,
     post_ship, post_craft, fringes_taxes_post, post_other,
   } = postDataPostStaffFac;
@@ -2269,7 +2273,7 @@ function BudgetEdit() {
   const [adrSupTotal, setAdrSupTotal] = useState(0);
 
   // Foley Labour Total postData
-  const [FolLabTotal, setFolLabTotal] = useState(0);
+  const [folLabTotal, setFolLabTotal] = useState(0);
 
   // POST SOUND Total postData
   const [postSoundTotal, setPostSoundTotal] = useState(0);
@@ -3575,7 +3579,7 @@ function BudgetEdit() {
           post_coordinator_una, post_coordinator_rt,
           post_assistants_qty, post_assistants_uno,
           post_assistants_una, post_assistants_rt,
-          post_accountants_qty, post_accountants_uno,
+          post_accountants_qty, post_accountants_uno, post_consultant,
           post_accountants_una, post_accountants_rt, postStaffFac_total,
           post_accountants_ass_qty, post_accountants_ass_uno,
           post_accountants_ass_una, post_accountants_ass_rt,
@@ -3589,7 +3593,7 @@ function BudgetEdit() {
           post_assistants_qty, post_assistants_uno,
           post_assistants_una, post_assistants_rt,
           post_accountants_qty, post_accountants_uno,
-          post_accountants_una, post_accountants_rt,
+          post_accountants_una, post_accountants_rt, post_consultant,
           post_accountants_ass_qty, post_accountants_ass_uno,
           post_accountants_ass_una, post_accountants_ass_rt,
           post_office_rent, post_office_equ, post_office_sup, 
@@ -4698,7 +4702,7 @@ function BudgetEdit() {
     formData.append("editorMusic_total", editorMusicTotal);
     formData.append("soundEdAss_total", soundEdAssTotal);
     formData.append("adrSup_total", adrSupTotal);
-    formData.append("FolLab_total", FolLabTotal);
+    formData.append("folLab_total", folLabTotal);
     formData.append("postSound_total", postSoundTotal);
     // Post Lab/Video Copies
     formData.append("stock", stock);
@@ -6284,7 +6288,85 @@ function BudgetEdit() {
       setStockLabTotal={setStockLabTotal}
       setShow={setShowLab}  /> 
     ) }
+    {/* post production "C" components */}
+    {/* Staff/Facilities */}
+    {!showStaFac ? (
+      ""
+    ) : (
+      <StaffFacilities
+      postDataPostStaffFac={postDataPostStaffFac}
+      setPostDataPostStaffFac={setPostDataPostStaffFac}
+      postSuperTotal={postSuperTotal}
+      setPostSuperTotal={setPostSuperTotal}
+      postCoordinTotal={postCoordinTotal}
+      setPostCoordinTotal={setPostCoordinTotal}
+      postAssistTotal={postAssistTotal}
+      setPostAssistTotal={setPostAssistTotal}
+      postAccountTotal={postAccountTotal}
+      setPostAccountTotal={setPostAccountTotal}
+      postAccountAssTotal={postAccountAssTotal}
+      setPostAccountAssTotal={setPostAccountAssTotal}
+      postStaffFacTotal={postStaffFacTotal}
+      setPostStaffFacTotal={setPostStaffFacTotal}
+      setShow={setShowStaFac}  /> 
+    ) }
+    {/* Editing */}
+    {!showEdit ? (
+      ""
+    ) : (
+      <Editing
+      postDataEdit={postDataEdit}
+      setPostDataEdit={setPostDataEdit}
+      editorTotal={editorTotal}
+      setEditorTotal={setEditorTotal}
+      editorVfxTotal={editorVfxTotal}
+      setEditorVfxTotal={setEditorVfxTotal}
+      editorAssTotal={editorAssTotal}
+      setEditorAssTotal={setEditorAssTotal}
+      graderTotal={graderTotal}
+      setGraderTotal={setGraderTotal}
+      graphicsTotal={graphicsTotal}
+      setGraphicsTotal={setGraphicsTotal}
+      editingTotal={editingTotal}
+      setEditingTotal={setEditingTotal}
+      setShow={setShowEdit}  /> 
+    ) }
+    {/* Post Sound */}
+    {!showPoSoun ? (
+      ""
+    ) : (
+      <Postsound
+      postDataPostSound={postDataPostSound}
+      setPostDataPostSound={setPostDataPostSound}
+      desSoundTotal={desSoundTotal}
+      setDesSoundTotal={setDesSoundTotal}
+      editorSoundTotal={editorSoundTotal}
+      setEditorSoundTotal={setEditorSoundTotal}
+      editorMusicTotal={editorMusicTotal}
+      setEditorMusicTotal={setEditorMusicTotal}
+      soundEdAssTotal={soundEdAssTotal}
+      setSoundEdAssTotal={setSoundEdAssTotal}
+      adrSupTotal={adrSupTotal}
+      setAdrSupTotal={setAdrSupTotal}
+      folLabTotal={folLabTotal}
+      setFolLabTotal={setFolLabTotal}
+      postSoundTotal={postSoundTotal}
+      setPostSoundTotal={setPostSoundTotal}
+      setShow={setShowPoSoun}  /> 
+    ) }
+    {/* Post Lab/Video */}
+    {!showPoLab ? (
+      ""
+    ) : (
+      <PostLabVideo
+      postDataPostLab={postDataPostLab}
+      setPostDataPostLab={setPostDataPostLab}
+      postLabTotal={postLabTotal}
+      setPostLabTotal={setPostLabTotal}
+      setShow={setShowPoLab}  /> 
+    ) }
     {/* buttons */}
+    {/* showPoLab showTitle showVers showVfxPo */}
     <Row>
     <Col>
       <div className= {`mt-1`} >{buttons} </div>

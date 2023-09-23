@@ -2090,7 +2090,7 @@ function BudgetCreate() {
     post_accountants_una, post_accountants_rt,
     post_accountants_ass_qty, post_accountants_ass_uno,
     post_accountants_ass_una, post_accountants_ass_rt,
-    post_office_rent, post_office_equ, post_office_sup, 
+    post_office_rent, post_office_equ, post_office_sup, post_consultant, 
     post_it_network, post_phone_net, post_computers_soft, post_store,
     post_ship, post_craft, fringes_taxes_post, post_other,
   } = postDataPostStaffFac;
@@ -2251,12 +2251,12 @@ function BudgetCreate() {
   const [adrSupTotal, setAdrSupTotal] = useState(0);
 
   // Foley Labour Total postData
-  const [FolLabTotal, setFolLabTotal] = useState(0);
+  const [folLabTotal, setFolLabTotal] = useState(0);
 
   // POST SOUND Total postData
   const [postSoundTotal, setPostSoundTotal] = useState(0);
 
-  // POST LAB & VIDEO COPIE ----------------------------------
+  // POST LAB & VIDEO COPIES ----------------------------------
 
   // Post Lab/Video Copies
   const [postDataPostLab, setPostDataPostLab] = useState({
@@ -3869,7 +3869,7 @@ function BudgetCreate() {
     formData.append("editorMusic_total", editorMusicTotal);
     formData.append("soundEdAss_total", soundEdAssTotal);
     formData.append("adrSup_total", adrSupTotal);
-    formData.append("FolLab_total", FolLabTotal);
+    formData.append("folLab_total", folLabTotal);
     formData.append("postSound_total", postSoundTotal);
     // Post Lab/Video Copies
     formData.append("stock", stock);
