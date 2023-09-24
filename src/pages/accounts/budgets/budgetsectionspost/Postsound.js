@@ -207,7 +207,44 @@ const Postsound = (props) => {
         lossdam_sound, fringes_taxes_post_sound, other_post_sound,]);
 
   return (
-    <div>Postsound</div>
+    <div className="mt-5">
+    <Row >
+    <Col md={1} >
+    <p className="mb-2">44.00</p>
+    </Col>
+    <Col md={9} >
+    <p className={ `${styles.BoldBlack} mb-2`}>Post Production Sound</p>
+    </Col>
+    <Col md={2}>
+    <span className={`${styles.Close }`} 
+    onClick={() => setShow(false) } >Close</span>
+    </Col>
+    </Row>
+    {/* TITLES */}
+    <Row className={ `${styles.Overview} mb-2 py-1`} >
+    <Col md={1} >
+    <p className="mb-0">ACCT</p>
+    </Col>
+    <Col md={5} >
+    <p className="mb-0">Description</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">#</p>
+    </Col>
+    <Col className="px-0 mx-0" md={1} >
+    <p># Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Price</p>
+    </Col>
+    <Col md={2} >
+    <p className="mb-0">Total</p>
+    </Col>
+    </Row>
+    </div>
   )
 }
 

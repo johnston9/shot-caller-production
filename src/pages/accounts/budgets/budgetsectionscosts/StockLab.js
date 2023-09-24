@@ -63,7 +63,7 @@ const StockLab = (props) => {
     <p className="mb-2">41.00</p>
     </Col>
     <Col md={9} >
-    <p className={ `${styles.BoldBlack} mb-2`}>Production Stock % Lab</p>
+    <p className={ `${styles.BoldBlack} mb-2`}>Production Stock & Lab</p>
     </Col>
     <Col md={2}>
     <span className={`${styles.Close }`} 

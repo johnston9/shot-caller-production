@@ -56,6 +56,9 @@ import StaffFacilities from "./budgetsectionspost/StaffFacilities";
 import Editing from "./budgetsectionspost/Editing";
 import Postsound from "./budgetsectionspost/Postsound";
 import PostLabVideo from "./budgetsectionspost/PostLabVideo";
+import Titles from "./budgetsectionspost/Titles";
+import Versioning from "./budgetsectionspost/Versioning";
+import PostVisualEffects from "./budgetsectionspost/PostVisualEffects";
 
 function BudgetEdit() {
   const [errors, setErrors] = useState({});
@@ -2278,6 +2281,55 @@ function BudgetEdit() {
   // POST SOUND Total postData
   const [postSoundTotal, setPostSoundTotal] = useState(0);
 
+  // POST VISUAL EFFECTS -------------------------------------------------------
+
+  // Post Visual Effects
+  const [postDataPostVFX, setPostDataPostVFX] = useState({
+    vfx_producer: 0,
+    vfx_supervisor: 0,
+    vfx_coordinator: 0,
+    vfx_post_other_lab: 0,
+    vfx_storyboard: 0,
+    vfx_pre_vis_team: 0,
+    vfx_post_vis_team: 0,
+    cyberscanning: 0,
+    vfx_rentals: 0,
+    vfx_purchases: 0,
+    vfx_vendor_1: 0,
+    vfx_vendor_2: 0,
+    vfx_vendor_3: 0,
+    vfx_vendor_4: 0,
+    vfx_vendor_5: 0,
+    vfx_vendor_6: 0,
+    vfx_vendor_7: 0,
+    vfx_vendor_8: 0,
+    vfx_vendor_9: 0,
+    vfx_vendor_10: 0,
+    vfx_vendors_x: 0,
+    miniatures_build: 0,
+    miniatures_shoot: 0,
+    motion_capture: 0,
+    vfx_expenses: 0,
+    vfx_traliv: 0,
+    box_ren_vfx: 0,
+    lossdam_vfx: 0,
+    fringes_taxes_vfx: 0,
+    other_post_vfx: 0,
+  });
+
+  const {vfx_producer, vfx_supervisor, vfx_coordinator, vfx_post_other_lab,
+    vfx_storyboard, vfx_pre_vis_team, vfx_post_vis_team, cyberscanning,
+    vfx_rentals, vfx_purchases, vfx_vendor_1, vfx_vendor_2, vfx_vendor_3,
+    vfx_vendor_4, vfx_vendor_5, vfx_vendor_6, vfx_vendor_7, vfx_vendor_8,
+    vfx_vendor_9, vfx_vendor_10, vfx_vendors_x, vfx_traliv, vfx_expenses,
+    miniatures_build, miniatures_shoot, motion_capture, lossdam_vfx,
+    box_ren_vfx, fringes_taxes_vfx, other_post_vfx,
+  } = postDataPostTitles;
+  // postVfx_total
+
+  // POST VISUAL EFFECTS Total postData
+  const [postVfxTotal, setPostVfxTotal] = useState(0);
+
   // POST LAB & VIDEO COPIES ----------------------------
 
   // Post Lab/Video Copies
@@ -2338,54 +2390,6 @@ function BudgetEdit() {
 
   // POST VERSIONING/CLOSED-CAPTIONING/COPIES Total postData
   const [postVersionTotal, setPostVersionTotal] = useState(0);
-
-  // POST VISUAL EFFECTS -------------------------------------------------------
-
-  // Post Visual Effects
-  const [postDataPostVFX, setPostDataPostVFX] = useState({
-    vfx_producer: 0,
-    vfx_supervisor: 0,
-    vfx_coordinator: 0,
-    vfx_post_other_lab: 0,
-    vfx_storyboard: 0,
-    vfx_pre_vis_team: 0,
-    vfx_post_vis_team: 0,
-    cyberscanning: 0,
-    vfx_rentals: 0,
-    vfx_purchases: 0,
-    vfx_vendor_1: 0,
-    vfx_vendor_2: 0,
-    vfx_vendor_3: 0,
-    vfx_vendor_4: 0,
-    vfx_vendor_5: 0,
-    vfx_vendor_6: 0,
-    vfx_vendor_7: 0,
-    vfx_vendor_8: 0,
-    vfx_vendor_9: 0,
-    vfx_vendor_10: 0,
-    vfx_vendors_x: 0,
-    vfx_traliv: 0,
-    vfx_expenses: 0,
-    miniatures_build: 0,
-    miniatures_shoot: 0,
-    motion_capture: 0,
-    lossdam_vfx: 0,
-    box_ren_vfx: 0,
-    fringes_taxes_vfx: 0,
-    other_post_vfx: 0,
-  });
-
-  const {vfx_producer, vfx_supervisor, vfx_coordinator, vfx_post_other_lab,
-    vfx_storyboard, vfx_pre_vis_team, vfx_post_vis_team, cyberscanning,
-    vfx_rentals, vfx_purchases, vfx_vendor_1, vfx_vendor_2, vfx_vendor_3,
-    vfx_vendor_4, vfx_vendor_5, vfx_vendor_6, vfx_vendor_7, vfx_vendor_8,
-    vfx_vendor_9, vfx_vendor_10, vfx_vendors_x, vfx_traliv, vfx_expenses,
-    miniatures_build, miniatures_shoot, motion_capture, lossdam_vfx,
-    box_ren_vfx, fringes_taxes_vfx, other_post_vfx,
-  } = postDataPostTitles;
-
-  // POST VERSIONING/CLOSED-CAPTIONING/COPIES Total postData
-  const [postVfxTotal, setPostVfxTotal] = useState(0);
 
   // FISCAL SPONSOR FEE
   // Bond - 2% (direct plus contingency & finance fees)
@@ -5517,6 +5521,22 @@ function BudgetEdit() {
     </Row>
     </div>
     </Col>
+    {/* Post Visual Effects */}
+    <Col md={3} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
+    <Row>
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
+      onClick={() => setShowVfxPo(showVfxPo => !showVfxPo)} >
+    Visual Effects
+    </p>
+    </Col>
+    <Col md={4}>
+    <p className="mb-0">{postVfxTotal} </p>
+    </Col>
+    </Row>
+    </div>
+    </Col>
     {/* Post Lab/Video Copies */}
     <Col md={3} className='px-0 mx-0'>
     <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
@@ -5561,22 +5581,6 @@ function BudgetEdit() {
     </Col>
     <Col md={4}>
     <p className="mb-0">{postVersionTotal} </p>
-    </Col>
-    </Row>
-    </div>
-    </Col>
-    {/* Post Visual Effects */}
-    <Col md={3} className='px-0 mx-0'>
-    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
-    <Row>
-    <Col md={8}>
-    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
-      onClick={() => setShowVfxPo(showVfxPo => !showVfxPo)} >
-    Visual Effects
-    </p>
-    </Col>
-    <Col md={4}>
-    <p className="mb-0">{postVfxTotal} </p>
     </Col>
     </Row>
     </div>
@@ -6354,6 +6358,17 @@ function BudgetEdit() {
       setPostSoundTotal={setPostSoundTotal}
       setShow={setShowPoSoun}  /> 
     ) }
+    {/* Post VFX */}
+    {!showVfxPo ? (
+      ""
+    ) : (
+      <PostVisualEffects
+      postDataPostVFX={postDataPostVFX}
+      setPostDataPostVFX={setPostDataPostVFX}
+      postVfxTotal={postVfxTotal}
+      setPostVfxTotal={setPostVfxTotal}
+      setShow={setShowVfxPo}  /> 
+    ) }
     {/* Post Lab/Video */}
     {!showPoLab ? (
       ""
@@ -6365,8 +6380,29 @@ function BudgetEdit() {
       setPostLabTotal={setPostLabTotal}
       setShow={setShowPoLab}  /> 
     ) }
+    {/* Post Titles/Opticals */}
+    {!showTitle ? (
+      ""
+    ) : (
+      <Titles
+      postDataPostTitles={postDataPostTitles}
+      setPostDataPostTitles={setPostDataPostTitles}
+      postTitlesTotal={postTitlesTotal}
+      setPostTitlesTotal={setPostTitlesTotal}
+      setShow={setShowTitle}  /> 
+    ) }
+    {/* Post Versioning */}
+    {!showVers ? (
+      ""
+    ) : (
+      <Versioning
+      postDataPostVersion={postDataPostVersion}
+      setPostDataPostVersion={setPostDataPostVersion}
+      postVersionTotal={postVersionTotal}
+      setPostTitlesTotal={setPostTitlesTotal}
+      setShow={setShowVers}  /> 
+    ) }
     {/* buttons */}
-    {/* showPoLab showTitle showVers showVfxPo */}
     <Row>
     <Col>
       <div className= {`mt-1`} >{buttons} </div>

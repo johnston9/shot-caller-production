@@ -1,4 +1,4 @@
-/* Component in the Budget component to edit Post Lab/Video */
+/* Component in the Budget component to edit Titles */
 import React, { useEffect, useState } from "react";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
@@ -6,60 +6,52 @@ import Col from "react-bootstrap/Col";
 import styles from "../../../../styles/Account.module.css";
 import Alert from "react-bootstrap/Alert";
 
-const PostLabVideo = (props) => {
+const Titles = (props) => {
   // eslint-disable-next-line
   const [errors, setErrors] = useState({});
 
-  const {postDataPostLab, setPostDataPostLab,
-  postLabTotal, setPostLabTotal, setShow,} = props;
+  const {postDataPostTitles, setPostDataPostTitles,
+  postTitlesTotal, setPostTitlesTotal, setShow,} = props;
 
-  const {stock, neg_cutting, color_cor, interpos_neg, prints,
-    transfers, other_media_delivery, distribution_copies, 
-    storage_post,
-  } = postDataPostLab;
+  const {titles, opticals, stock_footage, con_script_ccsl,
+  } = postDataPostTitles;
 
   // handleChange 
   const handleChange = (event) => {
-    setPostDataPostLab({
-    ...postDataPostLab,
+    setPostDataPostTitles({
+    ...postDataPostTitles,
     [event.target.name]: parseFloat(event.target.value || 0 ),
     });
   };
   
-  // function to add all Post Lab/Video on change
+  // function to add all Post Titles/Opticals on change
   useEffect(() => {
-    const addPoslabvid = () => {
-        setPostLabTotal(
-        parseFloat(stock || 0) +
-        parseFloat(neg_cutting || 0) +
-        parseFloat(color_cor || 0) +
-        parseFloat(interpos_neg || 0) +
-        parseFloat(prints || 0) +
-        parseFloat(transfers || 0) +
-        parseFloat(other_media_delivery || 0) +
-        parseFloat(distribution_copies || 0) +
-        parseFloat(storage_post || 0)
+    const addTitOp = () => {
+        setPostTitlesTotal(
+        parseFloat(titles || 0) +
+        parseFloat(opticals || 0) +
+        parseFloat(stock_footage || 0) +
+        parseFloat(con_script_ccsl || 0)
        )
     }
     const timer = setTimeout(() => {
-        addPoslabvid();
+        addTitOp();
     }, 1000);
 
     return () => {
       clearTimeout(timer);
     };
    // eslint-disable-next-line
-  }, [stock, neg_cutting, color_cor, interpos_neg, prints,
-    transfers, other_media_delivery, distribution_copies, storage_post,]);
+  }, [titles, opticals, stock_footage, con_script_ccsl,]);
 
   return (
     <div className="mt-5">
     <Row >
     <Col md={1} >
-    <p className="mb-2">46.00</p>
+    <p className="mb-2">47.00</p>
     </Col>
     <Col md={9} >
-    <p className={ `${styles.BoldBlack} mb-2`}>Post Production Lab/Video Copies</p>
+    <p className={ `${styles.BoldBlack} mb-2`}>Titles/Opticals/Stock Footage</p>
     </Col>
     <Col md={2}>
     <span className={`${styles.Close }`} 
@@ -94,4 +86,4 @@ const PostLabVideo = (props) => {
   )
 }
 
-export default PostLabVideo
+export default Titles

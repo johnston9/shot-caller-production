@@ -175,7 +175,968 @@ const StaffFacilities = (props) => {
         post_ship, post_craft, fringes_taxes_post, post_other,]);
 
   return (
-    <div>StaffFacilities</div>
+    <div className="mt-5">
+    <Row >
+    <Col md={1} >
+    <p className="mb-2">42.00</p>
+    </Col>
+    <Col md={9} >
+    <p className={ `${styles.BoldBlack} mb-2`}>Post Production Staff/Facilities</p>
+    </Col>
+    <Col md={2}>
+    <span className={`${styles.Close }`} 
+    onClick={() => setShow(false) } >Close</span>
+    </Col>
+    </Row>
+    {/* TITLES */}
+    <Row className={ `${styles.Overview} mb-2 py-1`} >
+    <Col md={1} >
+    <p className="mb-0">ACCT</p>
+    </Col>
+    <Col md={5} >
+    <p className="mb-0">Description</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">#</p>
+    </Col>
+    <Col className="px-0 mx-0" md={1} >
+    <p># Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Price</p>
+    </Col>
+    <Col md={2} >
+    <p className="mb-0">Total</p>
+    </Col>
+    </Row>
+    {/* Post Production Supervisor */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>42.10</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Post Production Supervisor</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="post_supervisor_qty" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="post_supervisor_qty"
+        value={post_supervisor_qty}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.post_supervisor_qty?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="post_supervisor_uno" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="post_supervisor_uno"
+        value={post_supervisor_uno}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.post_supervisor_uno?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="post_supervisor_una" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="post_supervisor_una"
+        value={post_supervisor_una}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.post_supervisor_una?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="post_supervisor_rt" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="post_supervisor_rt"
+        value={post_supervisor_rt}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.post_supervisor_rt?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="postSuperTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="postSuperTotal"
+        value={postSuperTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.postSuperTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Post Production Coordinator */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>42.20</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Post Production Coordinator</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="post_coordinator_qty" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="post_coordinator_qty"
+        value={post_coordinator_qty}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.post_coordinator_qty?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="post_coordinator_uno" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="post_coordinator_uno"
+        value={post_coordinator_uno}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.post_coordinator_uno?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="post_coordinator_una" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="post_coordinator_una"
+        value={post_coordinator_una}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.post_coordinator_una?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="post_coordinator_rt" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="post_coordinator_rt"
+        value={post_coordinator_rt}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.post_coordinator_rt?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="postCoordinTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="postCoordinTotal"
+        value={postCoordinTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.postCoordinTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Post Production Assistants */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>42.30</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Post Production Assistants</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="post_assistants_qty" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="post_assistants_qty"
+        value={post_assistants_qty}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.post_assistants_qty?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="post_assistants_uno" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="post_assistants_uno"
+        value={post_assistants_uno}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.post_assistants_uno?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="post_assistants_una" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="post_assistants_una"
+        value={post_assistants_una}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.post_assistants_una?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="post_assistants_rt" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="post_assistants_rt"
+        value={post_assistants_rt}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.post_assistants_rt?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="postAssistTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="postAssistTotal"
+        value={postAssistTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.postAssistTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Post Production Accountants */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>42.40</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Post Production Accountants</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="post_accountants_qty" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="post_accountants_qty"
+        value={post_accountants_qty}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.post_accountants_qty?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="post_accountants_uno" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="post_accountants_uno"
+        value={post_accountants_uno}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.post_accountants_uno?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="post_accountants_una" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="post_accountants_una"
+        value={post_accountants_una}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.post_accountants_una?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="post_accountants_rt" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="post_accountants_rt"
+        value={post_accountants_rt}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.post_accountants_rt?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="postAccountTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="postAccountTotal"
+        value={postAccountTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.postAccountTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Post Production Accounting Assistants */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>42.50</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Post Production Accounting Assistants</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="post_accountants_ass_qty" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="post_accountants_ass_qty"
+        value={post_accountants_ass_qty}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.post_accountants_ass_qty?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="post_accountants_ass_uno" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="post_accountants_ass_uno"
+        value={post_accountants_ass_uno}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.post_accountants_ass_uno?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="post_accountants_ass_una" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="post_accountants_ass_una"
+        value={post_accountants_ass_una}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.post_accountants_ass_una?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="post_accountants_ass_rt" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="post_accountants_ass_rt"
+        value={post_accountants_ass_rt}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.post_accountants_ass_rt?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="postAccountAssTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="postAccountAssTotal"
+        value={postAccountAssTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.postAccountAssTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Post Production Consultant */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>42.60</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Post Production Consultant</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="post_consultant" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="post_consultant"
+        value={post_consultant}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.post_consultant?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Post Production Office Rental */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>42.70</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Post Production Office Rental</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="post_office_rent" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="post_office_rent"
+        value={post_office_rent}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.post_office_rent?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Post Office Equipment */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>42.80</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Post Production Equipment</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="post_office_equ" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="post_office_equ"
+        value={post_office_equ}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.post_office_equ?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Post Office Supplies */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>42.90</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Post Production Supplies</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="post_office_sup" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="post_office_sup"
+        value={post_office_sup}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.post_office_sup?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Post IT, Network Equipment & Support */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>42.91</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Post IT, Network Equipment & Support</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="post_it_network" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="post_it_network"
+        value={post_it_network}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.post_it_network?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Post Phone & Internet */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>42.92</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Post Phone & Internet</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="post_phone_net" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="post_phone_net"
+        value={post_phone_net}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.post_phone_net?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Post Computers & Software */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>42.93</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Post Computers & Software</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="post_computers_soft" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="post_computers_soft"
+        value={post_computers_soft}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.post_computers_soft?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Post Storage */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>42.94</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Post Storage</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="post_store" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="post_store"
+        value={post_store}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.post_store?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Post Shipping */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>42.95</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Post Shipping</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="post_ship" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="post_ship"
+        value={post_ship}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.post_ship?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Post Catering & Craft Services */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>42.96</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Post Catering & Craft Services</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="post_craft" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="post_craft"
+        value={post_craft}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.post_craft?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Fringes & Taxes */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>42.97</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Fringes & Taxes</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>%</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="fringes_taxes_post" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="fringes_taxes_post"
+        value={fringes_taxes_post}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.fringes_taxes_post?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Other */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>42.98</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Other</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p ></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="post_other" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="post_other"
+        value={post_other}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.post_other?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* POST PRODUCTION STAFF/FACILITIES Total */}
+    <Row className="mt-3">
+    <Col md={1} >
+    </Col>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>POST PRODUCTION STAFF/FACILITIES TOTAL</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="postStaffFacTotal" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="postStaffFacTotal"
+        value={postStaffFacTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.postStaffFacTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    </div>
   )
 }
 

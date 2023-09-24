@@ -1,4 +1,4 @@
-/* Component in the Budget component to edit Post Lab/Video */
+/* Component in the Budget component to edit Post Versioning */
 import React, { useEffect, useState } from "react";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
@@ -6,60 +6,62 @@ import Col from "react-bootstrap/Col";
 import styles from "../../../../styles/Account.module.css";
 import Alert from "react-bootstrap/Alert";
 
-const PostLabVideo = (props) => {
+const Versioning = (props) => {
   // eslint-disable-next-line
   const [errors, setErrors] = useState({});
 
-  const {postDataPostLab, setPostDataPostLab,
-  postLabTotal, setPostLabTotal, setShow,} = props;
+  const {postDataPostVersion, setPostDataPostVersion,
+  postVersionTotal, setPostVersionTotal, setShow,} = props;
 
-  const {stock, neg_cutting, color_cor, interpos_neg, prints,
-    transfers, other_media_delivery, distribution_copies, 
-    storage_post,
-  } = postDataPostLab;
+  const {dubs, subtitles, closed_caption, versioning, trailers,
+    ads, transfers_ver, prints_ver, dig_copies_ver, 
+    other_copies_ver,
+  } = postDataPostVersion;
 
   // handleChange 
   const handleChange = (event) => {
-    setPostDataPostLab({
-    ...postDataPostLab,
+    setPostDataPostVersion({
+    ...postDataPostVersion,
     [event.target.name]: parseFloat(event.target.value || 0 ),
     });
   };
   
-  // function to add all Post Lab/Video on change
+  // function to add all Versioning on change
   useEffect(() => {
-    const addPoslabvid = () => {
-        setPostLabTotal(
-        parseFloat(stock || 0) +
-        parseFloat(neg_cutting || 0) +
-        parseFloat(color_cor || 0) +
-        parseFloat(interpos_neg || 0) +
-        parseFloat(prints || 0) +
-        parseFloat(transfers || 0) +
-        parseFloat(other_media_delivery || 0) +
-        parseFloat(distribution_copies || 0) +
-        parseFloat(storage_post || 0)
+    const addVersio = () => {
+        setPostVersionTotal(
+        parseFloat(dubs || 0) +
+        parseFloat(subtitles || 0) +
+        parseFloat(closed_caption || 0) +
+        parseFloat(versioning || 0) +
+        parseFloat(trailers || 0) +
+        parseFloat(ads || 0) +
+        parseFloat(transfers_ver || 0) +
+        parseFloat(prints_ver || 0) +
+        parseFloat(dig_copies_ver || 0) +
+        parseFloat(other_copies_ver || 0)
        )
     }
     const timer = setTimeout(() => {
-        addPoslabvid();
+        addVersio();
     }, 1000);
 
     return () => {
       clearTimeout(timer);
     };
    // eslint-disable-next-line
-  }, [stock, neg_cutting, color_cor, interpos_neg, prints,
-    transfers, other_media_delivery, distribution_copies, storage_post,]);
+  }, [dubs, subtitles, closed_caption, versioning, trailers,
+    ads, transfers_ver, prints_ver, dig_copies_ver, 
+    other_copies_ver,]);
 
   return (
     <div className="mt-5">
     <Row >
     <Col md={1} >
-    <p className="mb-2">46.00</p>
+    <p className="mb-2">48.00</p>
     </Col>
     <Col md={9} >
-    <p className={ `${styles.BoldBlack} mb-2`}>Post Production Lab/Video Copies</p>
+    <p className={ `${styles.BoldBlack} mb-2`}>Versioning/Closed-captioning/Dubs</p>
     </Col>
     <Col md={2}>
     <span className={`${styles.Close }`} 
@@ -94,4 +96,4 @@ const PostLabVideo = (props) => {
   )
 }
 
-export default PostLabVideo
+export default Versioning

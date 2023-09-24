@@ -163,7 +163,549 @@ const Editing = (props) => {
         vfx_ed_system, post_edit_pur, lossdam_edit, fringes_taxes_post_edit,]);
 
   return (
-    <div>Editing</div>
+    <div className="mt-5">
+    <Row >
+    <Col md={1} >
+    <p className="mb-2">43.00</p>
+    </Col>
+    <Col md={9} >
+    <p className={ `${styles.BoldBlack} mb-2`}>Editing</p>
+    </Col>
+    <Col md={2}>
+    <span className={`${styles.Close }`} 
+    onClick={() => setShow(false) } >Close</span>
+    </Col>
+    </Row>
+    {/* TITLES */}
+    <Row className={ `${styles.Overview} mb-2 py-1`} >
+    <Col md={1} >
+    <p className="mb-0">ACCT</p>
+    </Col>
+    <Col md={5} >
+    <p className="mb-0">Description</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">#</p>
+    </Col>
+    <Col className="px-0 mx-0" md={1} >
+    <p># Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Price</p>
+    </Col>
+    <Col md={2} >
+    <p className="mb-0">Total</p>
+    </Col>
+    </Row>
+    {/* Film/Video Editors */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>43.10</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Film/Video Editors</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="editor_qty" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="editor_qty"
+        value={editor_qty}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.editor_qty?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="editor_uno" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="editor_uno"
+        value={editor_uno}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.editor_uno?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="editor_una" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="editor_una"
+        value={editor_una}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.editor_una?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="editor_rt" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="editor_rt"
+        value={editor_rt}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.editor_rt?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="editorTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="editorTotal"
+        value={editorTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.editorTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* VFX Editors */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>43.20</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>VFX Editors</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="editor_vfx_qty" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="editor_vfx_qty"
+        value={editor_vfx_qty}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.editor_vfx_qty?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="editor_vfx_uno" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="editor_vfx_uno"
+        value={editor_vfx_uno}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.editor_vfx_uno?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="editor_vfx_una" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="editor_vfx_una"
+        value={editor_vfx_una}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.editor_vfx_una?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="editor_vfx_rt" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="editor_vfx_rt"
+        value={editor_vfx_rt}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.editor_vfx_rt?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="editorVfxTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="editorVfxTotal"
+        value={editorVfxTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.editorVfxTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Assistant Editors */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>43.30</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Assistant Editors</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="editor_ass_qty" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="editor_ass_qty"
+        value={editor_ass_qty}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.editor_ass_qty?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="editor_ass_uno" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="editor_ass_uno"
+        value={editor_ass_uno}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.editor_ass_uno?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="editor_ass_una" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="editor_ass_una"
+        value={editor_ass_una}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.editor_ass_una?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="editor_ass_rt" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="editor_ass_rt"
+        value={editor_ass_rt}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.editor_ass_rt?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="editorAssTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="editorAssTotal"
+        value={editorAssTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.editorAssTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Colorist/Grader */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>43.40</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Colorist Grader</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="colorist_grader_qty" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="colorist_grader_qty"
+        value={colorist_grader_qty}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.colorist_grader_qty?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="colorist_grader_uno" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="colorist_grader_uno"
+        value={colorist_grader_uno}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.colorist_grader_uno?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="colorist_grader_una" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="colorist_grader_una"
+        value={colorist_grader_una}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.colorist_grader_una?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="colorist_grader_rt" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="colorist_grader_rt"
+        value={colorist_grader_rt}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.colorist_grader_rt?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="graderTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="graderTotal"
+        value={graderTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.graderTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Graphics */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>43.50</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Graphics</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="graphics_qty" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="graphics_qty"
+        value={graphics_qty}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.graphics_qty?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="graphics_uno" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="graphics_uno"
+        value={graphics_uno}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.graphics_uno?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="graphics_una" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="graphics_una"
+        value={graphics_una}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.graphics_una?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="graphics_rt" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="graphics_rt"
+        value={graphics_rt}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.graphics_rt?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="graphicsTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="graphicsTotal"
+        value={graphicsTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.graphicsTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Editing Rooms */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>43.60</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Editing Rooms</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="edit_rooms" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="edit_rooms"
+        value={edit_rooms}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.edit_rooms?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    </div>
   )
 }
 
