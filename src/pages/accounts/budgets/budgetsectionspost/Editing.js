@@ -705,6 +705,320 @@ const Editing = (props) => {
     ))}
     </Col>
     </Row>
+    {/* Editing Equipment */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>43.70</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Editing Equipment</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="edit_equip" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="edit_equip"
+        value={edit_equip}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.edit_equip?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Editing Equipment Offline */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>43.80</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Editing Equipment Offline</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="edit_equip_nonlin" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="edit_equip_nonlin"
+        value={edit_equip_nonlin}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.edit_equip_nonlin?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Editing Equipment Online */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>43.90</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Editing Equipment Online</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="online" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="online"
+        value={online}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.online?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* VFX Editing System */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>43.91</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>VFX Editing System</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="vfx_ed_system" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="vfx_ed_system"
+        value={vfx_ed_system}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.vfx_ed_system?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Editing Purchases */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>43.92</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Editing Purchases</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="post_edit_pur" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="post_edit_pur"
+        value={post_edit_pur}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.post_edit_pur?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Loss/Damage Editing */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>43.93</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Loss/Damage</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="lossdam_edit" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="lossdam_edit"
+        value={lossdam_edit}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.lossdam_edit?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Fringes & Taxes */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>43.94</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Fringes & Taxes</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>%</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="fringes_taxes_post_edit" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="fringes_taxes_post_edit"
+        value={fringes_taxes_post_edit}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.fringes_taxes_post_edit?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Other */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>43.95</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Other</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="other_post_edit" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="other_post_edit"
+        value={other_post_edit}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.other_post_edit?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* EDITING Total */}
+    <Row className="mt-3">
+    <Col md={1} >
+    </Col>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>EDITING TOTAL</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="editingTotal" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="editingTotal"
+        value={editingTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.editingTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
     </div>
   )
 }
