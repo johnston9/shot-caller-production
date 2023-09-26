@@ -82,6 +82,180 @@ const Titles = (props) => {
     <p className="mb-0">Total</p>
     </Col>
     </Row>
+    {/* Titles */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>47.10</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Titles</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="titles" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="titles"
+        value={titles}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.titles?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Opticals */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>47.20</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Opticals</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="opticals" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="opticals"
+        value={opticals}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.opticals?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Stock Footage */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>47.30</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Stock Footage</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="stock_footage" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="stock_footage"
+        value={stock_footage}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.stock_footage?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Continuity Script CCSL */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>47.40</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Continuity Script CCSL</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="con_script_ccsl" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="con_script_ccsl"
+        value={con_script_ccsl}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.con_script_ccsl?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* POST TITLES/OPTICALS/STOCK FOOTAGE Total */}
+    <Row className="mt-3">
+    <Col md={1} >
+    </Col>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TITLES/OPTICALS/STOCK FOOTAGE TOTAL</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="postTitlesTotal" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="postTitlesTotal"
+        value={postTitlesTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.postTitlesTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
     </div>
   )
 }

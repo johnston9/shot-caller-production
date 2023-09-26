@@ -2324,7 +2324,7 @@ function BudgetEdit() {
     vfx_vendor_9, vfx_vendor_10, vfx_vendors_x, vfx_traliv, vfx_expenses,
     miniatures_build, miniatures_shoot, motion_capture, lossdam_vfx,
     box_ren_vfx, fringes_taxes_vfx, other_post_vfx,
-  } = postDataPostTitles;
+  } = postDataPostVFX;
   // postVfx_total
 
   // POST VISUAL EFFECTS Total postData

@@ -2306,7 +2306,7 @@ function BudgetCreate() {
     vfx_vendor_9, vfx_vendor_10, vfx_vendors_x, vfx_traliv, vfx_expenses,
     miniatures_build, miniatures_shoot, motion_capture, lossdam_vfx,
     box_ren_vfx, fringes_taxes_vfx, other_post_vfx,
-  } = postDataPostTitles;
+  } = postDataPostVFX;
   // postVfx_total
 
   // POST VISUAL EFFECTS Total postData
@@ -2353,7 +2353,7 @@ function BudgetCreate() {
   // POST TITLES Total postData
   const [postTitlesTotal, setPostTitlesTotal] = useState(0);
 
-  // POST VERSIONING/CLOSED-CAPTIONING/COPIES -------------
+  // POST VERSIONING/CLOSED-CAPTIONING/DUBS/COPIES -------------
 
   // Post Versioning
   const [postDataPostVersion, setPostDataPostVersion] = useState({

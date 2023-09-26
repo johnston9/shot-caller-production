@@ -61,7 +61,7 @@ const Versioning = (props) => {
     <p className="mb-2">48.00</p>
     </Col>
     <Col md={9} >
-    <p className={ `${styles.BoldBlack} mb-2`}>Versioning/Closed-captioning/Dubs</p>
+    <p className={ `${styles.BoldBlack} mb-2`}>Versioning/Closed-captioning/Dubs/Copies</p>
     </Col>
     <Col md={2}>
     <span className={`${styles.Close }`} 
@@ -90,6 +90,390 @@ const Versioning = (props) => {
     </Col>
     <Col md={2} >
     <p className="mb-0">Total</p>
+    </Col>
+    </Row>
+    {/* Dubs */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>48.10</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Dubs</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="dubs" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="dubs"
+        value={dubs}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.dubs?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Subtitles */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>48.20</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Subtitles</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="subtitles" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="subtitles"
+        value={subtitles}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.subtitles?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Closed-Captioning */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>48.30</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Closed-Captioning</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="closed_caption" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="closed_caption"
+        value={closed_caption}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.closed_caption?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Versioning */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>48.40</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Versioning</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="versioning" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="versioning"
+        value={versioning}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.versioning?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Trailers */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>48.50</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Trailers</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="trailers" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="trailers"
+        value={trailers}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.trailers?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Ads */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>48.60</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Ads</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="ads" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="ads"
+        value={ads}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.ads?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Transfers */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>48.70</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Transfers</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="transfers_ver" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="transfers_ver"
+        value={transfers_ver}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.transfers_ver?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Prints */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>48.80</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Prints</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="prints_ver" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="prints_ver"
+        value={prints_ver}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.prints_ver?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Digital Copies */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>48.90</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Prints</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="dig_copies_ver" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="dig_copies_ver"
+        value={dig_copies_ver}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.dig_copies_ver?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* All Other Copies */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>48.91</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>All Other Copies</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="other_copies_ver" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="other_copies_ver"
+        value={other_copies_ver}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.other_copies_ver?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* VERSIONING/CLOSED-CAPTIONING/DUBS/COPIES Total */}
+    <Row className="mt-3">
+    <Col md={1} >
+    </Col>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>VERSIONING/CLOSED-CAPTIONING/DUBS/COPIES TOTAL</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="postVersionTotal" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="postVersionTotal"
+        value={postVersionTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.postVersionTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
     </Col>
     </Row>
     </div>

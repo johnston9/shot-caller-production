@@ -20,7 +20,7 @@ const PostVisualEffects = (props) => {
     vfx_vendor_9, vfx_vendor_10, vfx_vendors_x, vfx_traliv, vfx_expenses,
     miniatures_build, miniatures_shoot, motion_capture, lossdam_vfx,
     box_ren_vfx, fringes_taxes_vfx, other_post_vfx,
-  } = postDataPostTitles;
+  } = postDataPostVFX;
 
   // handleChange 
   const handleChange = (event) => {
@@ -1147,7 +1147,7 @@ const PostVisualEffects = (props) => {
     <p></p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>%</p>
+    <p></p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -1170,12 +1170,12 @@ const PostVisualEffects = (props) => {
     ))}
     </Col>
     </Row>
-    {/* POST PRODUCTION SOUND Total */}
+    {/* VISUAL EFFECTS Total */}
     <Row className="mt-3">
     <Col md={1} >
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
-    <p className={ `${styles.Bold} pb-0 mb-0`}>POST PRODUCTION SOUND TOTAL</p>
+    <p className={ `${styles.Bold} pb-0 mb-0`}>VISUAL EFFECTS TOTAL</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -1187,17 +1187,17 @@ const PostVisualEffects = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="postSoundTotal" 
+    <Form.Group controlId="postVfxTotal" 
         className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="postSoundTotal"
-        value={postSoundTotal}
+        name="postVfxTotal"
+        value={postVfxTotal}
         readOnly
             />
     </Form.Group>
-    {errors?.postSoundTotal?.map((message, idx) => (
+    {errors?.postVfxTotal?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
