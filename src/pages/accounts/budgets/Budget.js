@@ -378,6 +378,62 @@ const Budget = (props) => {
     film_stock, video_stock, digital_stock, transfer_stock,
     hard_drives, dalies, telecine, audio_stock, magnetic_transfer,
     stills, loss_dam_lab, other_lab, stockLab_total,
+    // Post Production Staff/Facilities
+    post_supervisor_qty, post_supervisor_uno, 
+    post_supervisor_una, post_supervisor_rt, 
+    post_coordinator_qty, post_coordinator_uno,
+    post_coordinator_una, post_coordinator_rt,
+    post_assistants_qty, post_assistants_uno,
+    post_assistants_una, post_assistants_rt,
+    post_accountants_qty, post_accountants_uno,
+    post_accountants_una, post_accountants_rt,
+    post_accountants_ass_qty, post_accountants_ass_uno,
+    post_accountants_ass_una, post_accountants_ass_rt,
+    post_office_rent, post_office_equ, post_office_sup, post_consultant, 
+    post_it_network, post_phone_net, post_computers_soft, post_store,
+    post_ship, post_craft, fringes_taxes_post, post_other,
+    postSuper_total,postCoordin_total, postAssist_total, 
+    postAccount_total, postAccountAss_total, postStaffFac_total,
+    // Editing
+    editor_qty, editor_uno, editor_una, editor_rt,
+    editor_vfx_qty, editor_vfx_uno, editor_vfx_una, editor_vfx_rt,
+    editor_ass_qty, editor_ass_uno, editor_ass_una, editor_ass_rt,
+    colorist_grader_qty, colorist_grader_uno, colorist_grader_una, colorist_grader_rt,
+    graphics_qty, graphics_uno, graphics_una, graphics_rt,
+    edit_rooms, edit_equip, edit_equip_nonlin, online,
+    vfx_ed_system, post_edit_pur, lossdam_edit, fringes_taxes_post_edit,
+    other_post_edit, editor_total, editorVfx_total, editorAss_total,
+    grader_total, graphics_total, editing_total,
+    // Post Sound
+    sound_designer_qty, sound_designer_uno, sound_designer_una, sound_designer_rt,
+    editor_sound_qty, editor_sound_uno, editor_sound_una, editor_sound_rt,
+    editor_music_qty, editor_music_uno, editor_music_una, editor_music_rt,
+    ed_sound_ass_qty, ed_sound_ass_uno, ed_sound_ass_una, ed_sound_ass_rt,
+    adr_super_qty, adr_super_uno, adr_super_una, adr_super_rt,
+    foley_labour_qty, foley_labour_uno, foley_labour_una, foley_labour_rt,
+    sound_edit_rooms, sound_edit_equ, music_edit_equ,
+    post_sound_edit_pur, adr, foley, pre_mix, mix, printmaster, transfers_deliverables,
+    lossdam_sound, fringes_taxes_post_sound, other_post_sound,
+    desSound_total, editorSound_total, editorMusic_total, 
+    soundEdAss_total, adrSup_total, folLab_total, postSound_total,
+    // VFX
+    vfx_producer, vfx_supervisor, vfx_coordinator, vfx_post_other_lab,
+    vfx_storyboard, vfx_pre_vis_team, vfx_post_vis_team, cyberscanning,
+    vfx_rentals, vfx_purchases, vfx_vendor_1, vfx_vendor_2, vfx_vendor_3,
+    vfx_vendor_4, vfx_vendor_5, vfx_vendor_6, vfx_vendor_7, vfx_vendor_8,
+    vfx_vendor_9, vfx_vendor_10, vfx_vendors_x, vfx_traliv, vfx_expenses,
+    miniatures_build, miniatures_shoot, motion_capture, lossdam_vfx,
+    box_ren_vfx, fringes_taxes_vfx, other_post_vfx, postVfx_total,
+    // Post Lab/Video Copies
+    stock, neg_cutting, color_cor, interpos_neg, prints,
+    transfers, other_media_delivery, distribution_copies, 
+    storage_post, postLab_total,
+    // Post Titles/Opticals/Stock Footage
+    titles, opticals, stock_footage, con_script_ccsl, postTitles_total,
+    // Versioning,
+    dubs, subtitles, closed_caption, versioning, trailers,
+    ads, transfers_ver, prints_ver, dig_copies_ver, 
+    other_copies_ver, postVersion_total,
 
     } = budget;
 
@@ -595,7 +651,7 @@ const Budget = (props) => {
     </Col>
     </Row>
     </div>
-    {/* ABOVE THE LINE */}
+    {/* ABOVE THE LINE -----------------------------------------*/}
     <div className='px-3'>
     <Row className={ `${styles.OverviewBlue} mx-1 my-5 py-1 text-center`}>
     <Col md={12}>
@@ -1283,7 +1339,7 @@ const Budget = (props) => {
     </div>
     </div>
     </div>
-    {/* BELOW THE LINE LABOUR---------------------------------------*/}
+    {/* BELOW THE LINE "B" PRODUCTION - LABOUR -----------------*/}
     <div className='px-3'>
     <Row className={ `${styles.OverviewBlue} mx-1 my-5 py-1 text-center`}>
     <Col md={12}>
@@ -1579,7 +1635,6 @@ const Budget = (props) => {
     <p className="mb-0">Total</p>
     </Col>
     </Row>
-    {/* Values */}
     {/* Production Manager */}
     <Row  >
     <Col md={1} >
@@ -4949,7 +5004,7 @@ const Budget = (props) => {
     </Row>
     </div>
     </div>
-    {/* BELOW B PRODUCTION COSTS SECTIONS ----------------------------- */}
+    {/* BELOW THE LINE "B" PRODUCTION - COSTS ----------------- */}
     <div className='px-3'>
     <Row className={ `${styles.OverviewBlue} mx-1 my-5 py-1 text-center`}>
     <Col md={12}>
@@ -7816,9 +7871,972 @@ const Budget = (props) => {
     </Col>
     </Row>
     </div>
+    </div>
+    {/* "C" POST PRODUCTION ----------------------------------- */}
+    <div className='px-3'>
+    <Row className={ `${styles.OverviewBlue} mx-1 my-5 py-1 text-center`}>
+    <Col md={12}>
+    <h5 className={ `${styles.BoldBlack}`}>"C" POST PRODUCTION</h5>
+    </Col>
+    </Row>
+    {/* POST PRODUCTION STAFF/FACILITIES ---------------------- */}
+    <div className='mt-5'>
+    <Row>
+    <Col xs={1}>
+    <p className='mb-2'>42.00</p>
+    </Col>
+    <Col xs={10}>
+    <p className={ `${styles.BoldBlack} mb-2`}>POST PRODUCTION STAFF/FACILITIES</p>
+    </Col>
+    </Row>
+    {/* Titles */}
+    <Row className={ `${styles.Overview} mb-2 py-1`} >
+    <Col md={1} >
+    <p className="mb-0">ACCT</p>
+    </Col>
+    <Col md={5} >
+    <p className="mb-0">Description</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">#</p>
+    </Col>
+    <Col className="px-0 mx-0" md={1} >
+    <p># Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Price</p>
+    </Col>
+    <Col md={2} >
+    <p className="mb-0">Total</p>
+    </Col>
+    </Row>
+    {/* Post Production Supervisor */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>42.10</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Post Production Supervisor</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{post_supervisor_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{post_supervisor_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{post_supervisor_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{post_supervisor_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{postSuper_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Post Production Coordinator */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>42.20</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Post Production Coordinator</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{post_coordinator_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{post_coordinator_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{post_coordinator_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{post_coordinator_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{postCoordin_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Post Production Assistants */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>42.30</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Post Production Assistants</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{post_assistants_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{post_assistants_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{post_assistants_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{post_assistants_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{postAssist_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Post Production Assistants */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>42.30</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Post Production Assistants</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{post_assistants_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{post_assistants_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{post_assistants_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{post_assistants_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{postAssist_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Post Production Accountants */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>42.40</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Post Production Accountants</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{post_accountants_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{post_accountants_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{post_accountants_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{post_accountants_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{postAccount_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Post Production Accounting Assistants */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>42.50</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Post Production Accounting Assistants</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{post_accountants_ass_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{post_accountants_ass_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{post_accountants_ass_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{post_accountants_ass_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{postAccountAss_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Post Production Consultant */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>42.60</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Post Production Consultant</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{post_consultant || 0} </p>
+    </Col>
+    </Row>
+    {/* Post Production Office Rental */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>42.70</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Post Production Office Rental</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{post_office_rent || 0} </p>
+    </Col>
+    </Row>
+    {/* Post Office Equipment */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>42.80</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Post Office Equipment</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{post_office_equ || 0} </p>
+    </Col>
+    </Row>
+    {/* Post Office Supplies */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>42.90</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Post Office Supplies</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{post_office_sup || 0} </p>
+    </Col>
+    </Row>
+    {/* Post IT, Network Equipment & Support*/}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>42.91</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Post IT, Network Equipment & Support</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{post_it_network || 0} </p>
+    </Col>
+    </Row>
+    {/* Post Phone & Internet */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>42.92</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Post Phone & Internet</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{post_phone_net || 0} </p>
+    </Col>
+    </Row>
+    {/* Post Computers & Software */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>42.93</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Post Computers & Software</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{post_computers_soft || 0} </p>
+    </Col>
+    </Row>
+    {/* Post Storage */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>42.94</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Post Storage</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{post_store || 0} </p>
+    </Col>
+    </Row>
+    {/* Post Shipping */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>42.95</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Post Shipping</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{post_ship || 0} </p>
+    </Col>
+    </Row>
+    {/* Post Catering & Craft Services */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>42.96</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Post Catering & Craft Services</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{post_craft || 0} </p>
+    </Col>
+    </Row>
+    {/* Fringes & Taxes */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>42.97</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Fringes & Taxes</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{fringes_taxes_post || 0} </p>
+    </Col>
+    </Row>
+    {/* POST PRODUCTION STAFF/FACILITIES Total */}
+    <Row className='mt-3' >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    <p></p>
+    </Col>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL POST PRODUCTION STAFF/FACILITIES </p>
+    </Col>
+    <Col md={3} >
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline} mb-0`}>{postStaffFac_total || 0}</p>
+    </Col>
+    </Row>
+    </div>
+    {/* EDITING ----------------------------------------------- */}
+    <div className='mt-5'>
+    <Row>
+    <Col xs={1}>
+    <p className='mb-2'>43.00</p>
+    </Col>
+    <Col xs={10}>
+    <p className={ `${styles.BoldBlack} mb-2`}>EDITING</p>
+    </Col>
+    </Row>
+    {/* Titles */}
+    <Row className={ `${styles.Overview} mb-2 py-1`} >
+    <Col md={1} >
+    <p className="mb-0">ACCT</p>
+    </Col>
+    <Col md={5} >
+    <p className="mb-0">Description</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">#</p>
+    </Col>
+    <Col className="px-0 mx-0" md={1} >
+    <p># Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Price</p>
+    </Col>
+    <Col md={2} >
+    <p className="mb-0">Total</p>
+    </Col>
+    </Row>
+    {/* Film/Video Editors */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>43.10</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Film/Video Editors</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{editor_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{editor_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{editor_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{editor_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{editor_total || 0}</p>
+    </Col>
+    </Row>
+    {/* VFX Editors */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>43.20</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>VFX Editors</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{editor_vfx_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{editor_vfx_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{editor_vfx_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{editor_vfx_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{editorVfx_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Assistant Editors */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>43.30</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Assistant Editors</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{editor_ass_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{editor_ass_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{editor_ass_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{editor_ass_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{editorAss_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Colorist/Grader */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>43.40</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Colorist/Grader</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{colorist_grader_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{colorist_grader_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{colorist_grader_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{colorist_grader_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{grader_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Graphics */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>43.50</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Graphics</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{graphics_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{graphics_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{graphics_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{graphics_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{graphics_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Editing Rooms */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>43.60</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Editing Rooms</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{edit_rooms || 0} </p>
+    </Col>
+    </Row>
+    {/* Editing Equipment */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>43.70</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Editing Equipment</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{edit_equip || 0} </p>
+    </Col>
+    </Row>
+    {/* Editing Equipment Offline */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>43.80</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Editing Equipment Offline</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{edit_equip_nonlin || 0} </p>
+    </Col>
+    </Row>
+    {/* Editing Equipment Online */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>43.90</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Editing Equipment Online</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{online || 0} </p>
+    </Col>
+    </Row>
+    {/* VFX Editing System */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>43.91</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>VFX Editing System</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{vfx_ed_system || 0} </p>
+    </Col>
+    </Row>
+    {/* Editing Purchases */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>43.92</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Editing Purchases</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{post_edit_pur || 0} </p>
+    </Col>
+    </Row>
+    {/* Loss/Damage Editing */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>43.93</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Loss/Damage Editing</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{lossdam_edit || 0} </p>
+    </Col>
+    </Row>
+    {/* Fringes & Taxes */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>43.94</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Fringes & Taxes</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{fringes_taxes_post_edit || 0} </p>
+    </Col>
+    </Row>
+    {/* Other */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>43.95</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Other</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{other_post_edit || 0} </p>
+    </Col>
+    </Row>
+    {/* EDITING Total */}
+    <Row className='mt-3' >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    <p></p>
+    </Col>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL EDITING</p>
+    </Col>
+    <Col md={3} >
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline} mb-0`}>{editing_total || 0}</p>
+    </Col>
+    </Row>
+    </div>
+    {/* POST SOUND -------------------------------------------- */}
+    <div className='mt-5'>
+    <Row>
+    <Col xs={1}>
+    <p className='mb-2'>44.00</p>
+    </Col>
+    <Col xs={10}>
+    <p className={ `${styles.BoldBlack} mb-2`}>POST SOUND</p>
+    </Col>
+    </Row>
+    {/* Titles */}
+    <Row className={ `${styles.Overview} mb-2 py-1`} >
+    <Col md={1} >
+    <p className="mb-0">ACCT</p>
+    </Col>
+    <Col md={5} >
+    <p className="mb-0">Description</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">#</p>
+    </Col>
+    <Col className="px-0 mx-0" md={1} >
+    <p># Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Price</p>
+    </Col>
+    <Col md={2} >
+    <p className="mb-0">Total</p>
+    </Col>
+    </Row>
+    {/* Sound Designer */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>44.10</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Sound Designer</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{sound_designer_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{sound_designer_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{sound_designer_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{sound_designer_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{desSound_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Sound Editor */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>44.20</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Sound Editor</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{editor_sound_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{editor_sound_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{editor_sound_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{editor_sound_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{editorSound_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Music Editor */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>44.30</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Music Editor</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{editor_music_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{editor_music_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{editor_music_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{editor_music_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{editorMusic_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Assistant Sound Editors */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>44.40</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Assistant Sound Editors</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{ed_sound_ass_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{ed_sound_ass_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{ed_sound_ass_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{ed_sound_ass_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{soundEdAss_total || 0}</p>
+    </Col>
+    </Row>
+    {/* ADR Supervisor */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>44.50</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>ADR Supervisor</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{adr_super_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{adr_super_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{adr_super_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{adr_super_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{adrSup_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Foley Labour */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>44.60</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Foley Labour</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{foley_labour_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{foley_labour_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{foley_labour_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{foley_labour_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{folLab_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Sound Editing Rooms */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>44.70</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Sound Editing Rooms</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{sound_edit_rooms || 0} </p>
+    </Col>
+    </Row>
+    {/* Sound Editing Equipment */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>44.80</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Sound Editing Equipment</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{sound_edit_equ || 0} </p>
+    </Col>
+    </Row>
+    {/* Music Editing Equipment */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>44.90</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Music Editing Equipment</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{music_edit_equ || 0} </p>
+    </Col>
+    </Row>
+    {/* Sound Editing Purchases */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>44.91</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Sound Editing Purchases</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{post_sound_edit_pur || 0} </p>
+    </Col>
+    </Row>
+    {/* ADR */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>44.92</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>ADR</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{adr || 0} </p>
+    </Col>
+    </Row>
+    {/* Foley */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>44.93</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Foley</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{foley || 0} </p>
+    </Col>
+    </Row>
+    {/* Pre-mix */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>44.94</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Pre-mix</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{pre_mix || 0} </p>
+    </Col>
+    </Row>
+    {/* Mix */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>44.95</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Mix</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{mix || 0} </p>
+    </Col>
+    </Row>
+    {/* Printmaster */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>44.96</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Printmaster</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{printmaster || 0} </p>
+    </Col>
+    </Row>
+    {/* Transfers/Deliverables */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>44.97</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Transfers/Deliverables</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{transfers_deliverables || 0} </p>
+    </Col>
+    </Row>
+    {/* Loss/Damage */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>44.98</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Loss/Damage</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{lossdam_sound || 0} </p>
+    </Col>
+    </Row>
+    {/* Fringes & Taxes */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>44.99</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Fringes & Taxes</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{fringes_taxes_post_sound || 0} </p>
+    </Col>
+    </Row>
+    {/* Other */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>44.991</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Other</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{other_post_sound || 0} </p>
+    </Col>
+    </Row>
+    {/* POST SOUND Total */}
+    <Row className='mt-3' >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    <p></p>
+    </Col>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL POST SOUND</p>
+    </Col>
+    <Col md={3} >
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline} mb-0`}>{postSound_total || 0}</p>
+    </Col>
+    </Row>
+    
+    </div>
 
     </div>
-    {/* END PRODUCTION B */}
+
     </div>
     </div>
   )
