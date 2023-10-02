@@ -49,6 +49,8 @@ import CameraEqu from "./budgetsectionscosts/CameraEqu";
 import ElectricEqu from "./budgetsectionscosts/ElectricEqu";
 import GripEqu from "./budgetsectionscosts/GripEqu";
 import SoundEqu from "./budgetsectionscosts/SoundEqu";
+import SecondU from "./budgetsectionscosts/SecondU";
+import StockLab from "./budgetsectionscosts/StockLab";
 import StaffFacilities from "./budgetsectionspost/StaffFacilities";
 import Editing from "./budgetsectionspost/Editing";
 import Postsound from "./budgetsectionspost/Postsound";
@@ -2055,23 +2057,23 @@ function BudgetCreate() {
   const [postDataPostStaffFac, setPostDataPostStaffFac] = useState({
     post_supervisor_qty: 0,
     post_supervisor_uno: 0,
-    post_supervisor_una: 0,
+    post_supervisor_una: "",
     post_supervisor_rt: 0,
     post_coordinator_qty: 0,
     post_coordinator_uno: 0,
-    post_coordinator_una: 0,
+    post_coordinator_una: "",
     post_coordinator_rt: 0,
     post_assistants_qty: 0,
     post_assistants_uno: 0,
-    post_assistants_una: 0,
+    post_assistants_una: "",
     post_assistants_rt: 0,
     post_accountants_qty: 0,
     post_accountants_uno: 0,
-    post_accountants_una: 0,
+    post_accountants_una: "",
     post_accountants_rt: 0,
     post_accountants_ass_qty: 0,
     post_accountants_ass_uno: 0,
-    post_accountants_ass_una: 0,
+    post_accountants_ass_una: "",
     post_accountants_ass_rt: 0,
     post_consultant: 0,
     post_office_rent: 0,
@@ -2128,23 +2130,23 @@ function BudgetCreate() {
   const [postDataEdit, setPostDataEdit] = useState({
     editor_qty: 0,
     editor_uno: 0,
-    editor_una: 0,
+    editor_una: "",
     editor_rt: 0,
     editor_vfx_qty: 0,
     editor_vfx_uno: 0,
-    editor_vfx_una: 0,
+    editor_vfx_una: "",
     editor_vfx_rt: 0,
     editor_ass_qty: 0,
     editor_ass_uno: 0,
-    editor_ass_una: 0,
+    editor_ass_una: "",
     editor_ass_rt: 0,
     colorist_grader_qty: 0,
     colorist_grader_uno: 0,
-    colorist_grader_una: 0,
+    colorist_grader_una: "",
     colorist_grader_rt: 0,
     graphics_qty: 0,
     graphics_uno: 0,
-    graphics_una: 0,
+    graphics_una: "",
     graphics_rt: 0,
     edit_rooms: 0,
     edit_equip: 0,
@@ -2192,27 +2194,27 @@ function BudgetCreate() {
   const [postDataPostSound, setPostDataPostSound] = useState({
     sound_designer_qty: 0,
     sound_designer_uno: 0,
-    sound_designer_una: 0,
+    sound_designer_una: "",
     sound_designer_rt: 0,
     editor_sound_qty: 0,
     editor_sound_uno: 0,
-    editor_sound_una: 0,
+    editor_sound_una: "",
     editor_sound_rt: 0,
     editor_music_qty: 0,
     editor_music_uno: 0,
-    editor_music_una: 0,
+    editor_music_una: "",
     editor_music_rt: 0,
     ed_sound_ass_qty: 0,
     ed_sound_ass_uno: 0,
-    ed_sound_ass_una: 0,
+    ed_sound_ass_una: "",
     ed_sound_ass_rt: 0,
     adr_super_qty: 0,
     adr_super_uno: 0,
-    adr_super_una: 0,
+    adr_super_una: "",
     adr_super_rt: 0,
     foley_labour_qty: 0,
     foley_labour_uno: 0,
-    foley_labour_una: 0,
+    foley_labour_una: "",
     foley_labour_rt: 0,
     sound_edit_rooms: 0,
     sound_edit_equ: 0,
@@ -5571,7 +5573,7 @@ function BudgetCreate() {
       postDataPostVersion={postDataPostVersion}
       setPostDataPostVersion={setPostDataPostVersion}
       postVersionTotal={postVersionTotal}
-      setPostTitlesTotal={setPostTitlesTotal}
+      setPostVersionTotal={setPostVersionTotal}
       setShow={setShowVers}  /> 
     ) }
     {/* buttons */}

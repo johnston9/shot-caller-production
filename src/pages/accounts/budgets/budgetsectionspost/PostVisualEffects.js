@@ -925,7 +925,7 @@ const PostVisualEffects = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Other VFX Vendors Total*/}
+    {/* Other VFX Vendors Total */}
     <Row>
     <Col md={1} >
     <p className={`${styles.Underline}`}>45.996</p>

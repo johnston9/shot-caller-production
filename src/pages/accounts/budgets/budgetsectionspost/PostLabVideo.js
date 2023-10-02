@@ -265,7 +265,7 @@ const PostLabVideo = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Transfers*/}
+    {/* Transfers */}
     <Row>
     <Col md={1} >
     <p className={`${styles.Underline}`}>46.60</p>
@@ -300,7 +300,7 @@ const PostLabVideo = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Distribution Copies*/}
+    {/* Distribution Copies */}
     <Row>
     <Col md={1} >
     <p className={`${styles.Underline}`}>46.70</p>

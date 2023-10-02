@@ -308,7 +308,7 @@ const Versioning = (props) => {
     <p className={`${styles.Underline}`}>48.70</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Transfers</p>
+    <p className={`${styles.Underline}`}>Versioning Transfers</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -343,7 +343,7 @@ const Versioning = (props) => {
     <p className={`${styles.Underline}`}>48.80</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Prints</p>
+    <p className={`${styles.Underline}`}>Versioning Prints</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -378,7 +378,7 @@ const Versioning = (props) => {
     <p className={`${styles.Underline}`}>48.90</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Prints</p>
+    <p className={`${styles.Underline}`}>Versioning Digital Copies</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -407,13 +407,13 @@ const Versioning = (props) => {
     ))}
     </Col>
     </Row>
-    {/* All Other Copies */}
+    {/* Other Media Copies */}
     <Row>
     <Col md={1} >
     <p className={`${styles.Underline}`}>48.91</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>All Other Copies</p>
+    <p className={`${styles.Underline}`}>Other Media Copies</p>
     </Col>
     <Col md={1} >
     <p></p>

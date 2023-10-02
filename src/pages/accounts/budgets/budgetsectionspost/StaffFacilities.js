@@ -30,7 +30,7 @@ const StaffFacilities = (props) => {
     post_accountants_ass_una, post_accountants_ass_rt,
     post_office_rent, post_office_equ, post_office_sup, 
     post_it_network, post_phone_net, post_computers_soft, post_store,
-    post_ship, post_craft, fringes_taxes_post, post_other,
+    post_ship, post_craft, fringes_taxes_post, post_other, post_consultant,
   } = postDataPostStaffFac;
 
   // handleChange 

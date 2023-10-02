@@ -8177,7 +8177,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{post_craft || 0} </p>
     </Col>
     </Row>
-    {/* Fringes & Taxes */}
+    {/* Fringes & Taxes post_other */}
     <Row>
     <Col md={1} >
     <p className={`${styles.Underline}`}>42.97</p>
@@ -8187,6 +8187,18 @@ const Budget = (props) => {
     </Col>
     <Col md={2}>
     <p className={`${styles.Underline}`}>{fringes_taxes_post || 0} </p>
+    </Col>
+    </Row>
+    {/* Fringes & Taxes */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>42.98</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Other</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{post_other || 0} </p>
     </Col>
     </Row>
     {/* POST PRODUCTION STAFF/FACILITIES Total */}
@@ -8831,8 +8843,867 @@ const Budget = (props) => {
     <Col md={2} >
     <p className={`${styles.Underline} mb-0`}>{postSound_total || 0}</p>
     </Col>
+    </Row>  
+    </div>
+    {/* VISUAL EFFECTS ---------------------------------------- */}
+    <div className='mt-5'>
+    <Row>
+    <Col xs={1}>
+    <p className='mb-2'>45.00</p>
+    </Col>
+    <Col xs={10}>
+    <p className={ `${styles.BoldBlack} mb-2`}>VISUAL EFFECTS</p>
+    </Col>
     </Row>
-    
+    {/* Titles */}
+    <Row className={ `${styles.Overview} mb-2 py-1`} >
+    <Col md={1} >
+    <p className="mb-0">ACCT</p>
+    </Col>
+    <Col md={5} >
+    <p className="mb-0">Description</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">#</p>
+    </Col>
+    <Col className="px-0 mx-0" md={1} >
+    <p># Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Price</p>
+    </Col>
+    <Col md={2} >
+    <p className="mb-0">Total</p>
+    </Col>
+    </Row>
+    {/* VFX Producer */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>45.10</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>VFX Producer</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{vfx_producer || 0} </p>
+    </Col>
+    </Row>
+    {/* VFX Supervisor */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>45.20</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>VFX Supervisor</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{vfx_supervisor || 0} </p>
+    </Col>
+    </Row>
+    {/* VFX Coordinator */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>45.30</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>VFX Coordinator</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{vfx_coordinator || 0} </p>
+    </Col>
+    </Row>
+    {/* VFX Storyboard */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>45.40</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>VFX Storyboard</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{vfx_storyboard || 0} </p>
+    </Col>
+    </Row>
+    {/* VFX Pre Vis Team */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>45.50</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>VFX Pre Vis Team</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{vfx_pre_vis_team || 0} </p>
+    </Col>
+    </Row>
+    {/* VFX Post Vis Team */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>45.60</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>VFX Post Vis Team</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{vfx_post_vis_team || 0} </p>
+    </Col>
+    </Row>
+    {/* VFX Other Labour */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>45.70</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>VFX Other Labour</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{vfx_post_other_lab || 0} </p>
+    </Col>
+    </Row>
+    {/* Miniatures Build */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>45.80</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Miniatures Build</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{miniatures_build || 0} </p>
+    </Col>
+    </Row>
+    {/* Miniatures Shoot */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>45.90</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Miniatures Shoot</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{miniatures_shoot || 0} </p>
+    </Col>
+    </Row>
+    {/* Motion Capture */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>45.91</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Motion Capture</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{motion_capture || 0} </p>
+    </Col>
+    </Row>
+    {/* Cyberscanning */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>45.92</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Cyberscanning</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{cyberscanning || 0} </p>
+    </Col>
+    </Row>
+    {/* VFX Rentals */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>45.93</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>VFX Rentals</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{vfx_rentals || 0} </p>
+    </Col>
+    </Row>
+    {/* VFX Purchases */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>45.94</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>VFX Purchases</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{vfx_purchases || 0} </p>
+    </Col>
+    </Row>
+    {/* VFX Vendor #1 */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>45.95</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>VFX Vendor #1</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{vfx_vendor_1 || 0} </p>
+    </Col>
+    </Row>
+    {/* VFX Vendor #2 */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>45.96</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>VFX Vendor #2</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{vfx_vendor_2 || 0} </p>
+    </Col>
+    </Row>
+    {/* VFX Vendor #3 */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>45.97</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>VFX Vendor #3</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{vfx_vendor_3 || 0} </p>
+    </Col>
+    </Row>
+    {/* VFX Vendor #4 */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>45.98</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>VFX Vendor #4</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{vfx_vendor_4 || 0} </p>
+    </Col>
+    </Row>
+    {/* VFX Vendor #5 */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>45.99</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>VFX Vendor #5</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{vfx_vendor_5 || 0} </p>
+    </Col>
+    </Row>
+    {/* VFX Vendor #6 */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>45.991</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>VFX Vendor #6</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{vfx_vendor_6 || 0} </p>
+    </Col>
+    </Row>
+    {/* VFX Vendor #7 */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>45.992</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>VFX Vendor #7</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{vfx_vendor_7 || 0} </p>
+    </Col>
+    </Row>
+    {/* VFX Vendor #8 */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>45.993</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>VFX Vendor #8</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{vfx_vendor_8 || 0} </p>
+    </Col>
+    </Row>
+    {/* VFX Vendor #9 */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>45.994</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>VFX Vendor #9</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{vfx_vendor_9 || 0} </p>
+    </Col>
+    </Row>
+    {/* VFX Vendor #10 */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>45.995</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>VFX Vendor #10</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{vfx_vendor_10 || 0} </p>
+    </Col>
+    </Row>
+    {/* Other VFX Vendors Total */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>45.996</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Other VFX Vendors Total </p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{vfx_vendors_x || 0} </p>
+    </Col>
+    </Row>
+    {/* VFX Expenses */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>45.997</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>VFX Expense </p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{vfx_expenses || 0} </p>
+    </Col>
+    </Row>
+    {/* VFX Travel & Living */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>45.998</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>VFX Travel & Living </p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{vfx_traliv || 0} </p>
+    </Col>
+    </Row>
+    {/* Box Rentals */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>45.999</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Box Rentals</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{box_ren_vfx || 0} </p>
+    </Col>
+    </Row>
+    {/* Loss/Damage */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>45.9991</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Loss/Damage</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{lossdam_vfx || 0} </p>
+    </Col>
+    </Row>
+    {/* Fringes & Taxes */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>45.9992</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Fringes & Taxes</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{fringes_taxes_vfx || 0} </p>
+    </Col>
+    </Row>
+    {/* Other */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>45.9993</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Other</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{other_post_vfx || 0} </p>
+    </Col>
+    </Row>
+    {/* VISUAL EFFECTS Total */}
+    <Row className='mt-3' >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    <p></p>
+    </Col>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL VISUAL EFFECTS</p>
+    </Col>
+    <Col md={3} >
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline} mb-0`}>{postVfx_total || 0}</p>
+    </Col>
+    </Row>
+    </div>
+    {/* POST LAB/VIDEO COPIES ------------------------------- */}
+    <div className='mt-5'>
+    <Row>
+    <Col xs={1}>
+    <p className='mb-2'>46.00</p>
+    </Col>
+    <Col xs={10}>
+    <p className={ `${styles.BoldBlack} mb-2`}>POST PRODUCTION LAB/VIDEO COPIES</p>
+    </Col>
+    </Row>
+    {/* Titles */}
+    <Row className={ `${styles.Overview} mb-2 py-1`} >
+    <Col md={1} >
+    <p className="mb-0">ACCT</p>
+    </Col>
+    <Col md={5} >
+    <p className="mb-0">Description</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">#</p>
+    </Col>
+    <Col className="px-0 mx-0" md={1} >
+    <p># Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Price</p>
+    </Col>
+    <Col md={2} >
+    <p className="mb-0">Total</p>
+    </Col>
+    </Row>
+    {/* Stock */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>46.10</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Stock</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{stock || 0} </p>
+    </Col>
+    </Row>
+    {/* Neg Cutting */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>46.20</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Neg Cutting</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{neg_cutting || 0} </p>
+    </Col>
+    </Row>
+    {/* Colour Correct */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>46.30</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Colour Correct</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{color_cor || 0} </p>
+    </Col>
+    </Row>
+    {/* Interpositive/Internegative */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>46.40</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Interpositive/Internegative</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{interpos_neg || 0} </p>
+    </Col>
+    </Row>
+    {/* Prints */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>46.50</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Prints</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{prints || 0} </p>
+    </Col>
+    </Row>
+    {/* Transfers */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>46.60</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Transfers</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{transfers || 0} </p>
+    </Col>
+    </Row>
+    {/* Distribution Copies */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>46.70</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Distribution Copies</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{distribution_copies || 0} </p>
+    </Col>
+    </Row>
+    {/* All Media Types Copies */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>46.80</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>All Media Types Copies</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{other_media_delivery || 0} </p>
+    </Col>
+    </Row>
+    {/* Storage */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>46.90</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Storage</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{storage_post || 0} </p>
+    </Col>
+    </Row>
+    {/* POST PRODUCTION LAB/VIDEO COPIES Total */}
+    <Row className='mt-3' >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    <p></p>
+    </Col>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL POST PRODUCTION LAB/VIDEO COPIES</p>
+    </Col>
+    <Col md={3} >
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline} mb-0`}>{postLab_total || 0}</p>
+    </Col>
+    </Row>
+    </div>
+    {/* TITLES/OPTICALS/STOCK FOOTAGE ------------------------- */}
+    <div className='mt-5'>
+    <Row>
+    <Col xs={1}>
+    <p className='mb-2'>47.00</p>
+    </Col>
+    <Col xs={10}>
+    <p className={ `${styles.BoldBlack} mb-2`}>TITLES/OPTICALS/STOCK FOOTAGE</p>
+    </Col>
+    </Row>
+    {/* Titles */}
+    <Row className={ `${styles.Overview} mb-2 py-1`} >
+    <Col md={1} >
+    <p className="mb-0">ACCT</p>
+    </Col>
+    <Col md={5} >
+    <p className="mb-0">Description</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">#</p>
+    </Col>
+    <Col className="px-0 mx-0" md={1} >
+    <p># Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Price</p>
+    </Col>
+    <Col md={2} >
+    <p className="mb-0">Total</p>
+    </Col>
+    </Row>
+    {/* Titles */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>47.10</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Titles</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{titles || 0} </p>
+    </Col>
+    </Row>
+    {/* Opticals */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>47.20</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Opticals</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{opticals || 0} </p>
+    </Col>
+    </Row>
+    {/* Stock Footage */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>47.30</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Stock Footage</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{stock_footage || 0} </p>
+    </Col>
+    </Row>
+    {/* Continuity Script CCSL */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>47.40</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Continuity Script CCSL</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{con_script_ccsl || 0} </p>
+    </Col>
+    </Row>
+    {/* TITLES/OPTICALS/STOCK FOOTAGE Total */}
+    <Row className='mt-3' >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    <p></p>
+    </Col>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL TITLES/OPTICALS/STOCK FOOTAGE </p>
+    </Col>
+    <Col md={3} >
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline} mb-0`}>{postTitles_total || 0}</p>
+    </Col>
+    </Row>
+    </div>
+    {/* VERSIONING/CLOSED-CAPTIONING/COPIES ------------------- */}
+    <div className='mt-5'>
+    <Row>
+    <Col xs={1}>
+    <p className='mb-2'>48.00</p>
+    </Col>
+    <Col xs={10}>
+    <p className={ `${styles.BoldBlack} mb-2`}>VERSIONING/CLOSED-CAPTIONING/COPIES</p>
+    </Col>
+    </Row>
+    {/* Titles */}
+    <Row className={ `${styles.Overview} mb-2 py-1`} >
+    <Col md={1} >
+    <p className="mb-0">ACCT</p>
+    </Col>
+    <Col md={5} >
+    <p className="mb-0">Description</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">#</p>
+    </Col>
+    <Col className="px-0 mx-0" md={1} >
+    <p># Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Unit</p>
+    </Col>
+    <Col md={1} >
+    <p className="mb-0">Price</p>
+    </Col>
+    <Col md={2} >
+    <p className="mb-0">Total</p>
+    </Col>
+    </Row>
+    {/* Dubs */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>48.10</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Dubs</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{dubs || 0} </p>
+    </Col>
+    </Row>
+    {/* Dubs */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>48.10</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Dubs</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{dubs || 0} </p>
+    </Col>
+    </Row>
+    {/* Subtitles */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>48.20</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Subtitles</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{subtitles || 0} </p>
+    </Col>
+    </Row>
+    {/* Closed-Captioning */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>48.30</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Closed-Captioning</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{closed_caption || 0} </p>
+    </Col>
+    </Row>
+    {/* Versioning */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>48.40</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Versioning</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{versioning || 0} </p>
+    </Col>
+    </Row>
+    {/* Trailers */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>48.50</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Trailers</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{trailers || 0} </p>
+    </Col>
+    </Row>
+    {/* Ads */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>48.60</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Ads</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{ads || 0} </p>
+    </Col>
+    </Row>
+    {/* Versioning Transfers */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>48.70</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Versioning Transfers</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{transfers_ver || 0} </p>
+    </Col>
+    </Row>
+    {/* Versioning Prints */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>48.80</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Versioning Prints</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{prints_ver || 0} </p>
+    </Col>
+    </Row>
+    {/* Versioning Digital Copies */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>48.90</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Versioning Digital Copies</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{dig_copies_ver || 0} </p>
+    </Col>
+    </Row>
+    {/* Versioning Digital Copies */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>48.90</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Versioning Digital Copies</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{dig_copies_ver || 0} </p>
+    </Col>
+    </Row>
+    {/* Versioning Other Media Copies */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>48.90</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Versioning Other Media Copies</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{other_copies_ver || 0} </p>
+    </Col>
+    </Row>
+    {/* VERSIONING/CLOSED-CAPTIONING/COPIES Total */}
+    <Row className='mt-3' >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    <p></p>
+    </Col>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL VERSIONING/CLOSED-CAPTIONING/COPIES</p>
+    </Col>
+    <Col md={3} >
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline} mb-0`}>{postVersion_total || 0}</p>
+    </Col>
+    </Row>
     </div>
 
     </div>
