@@ -2380,6 +2380,81 @@ function BudgetCreate() {
   // POST VERSIONING/CLOSED-CAPTIONING/COPIES Total postData
   const [postVersionTotal, setPostVersionTotal] = useState(0);
 
+  // end below C Costs
+
+  // OTHER -------------------------------------------------------------
+
+  // TESTS ----------------------------------------------------
+  
+  //  postData tests
+  const [postDataTests, setPostDataTests] = useState({
+    theater_ren: 0,
+    research_fees: 0,
+    tests_other: 0,
+  });
+
+  const {theater_ren, research_fees, tests_other,} = postDataTests;
+
+  // TESTS Total postData
+  const [testsTotal, setTestsTotal] = useState(0);
+
+  // PUBLICITY ----------------------------------------------
+  
+  //  postData Publicity
+  const [postDataPublicity, setPostDataPublicity] = useState({
+    unit_publicist: 0,
+    pub_press_ex: 0,
+    photography: 0,
+    epk: 0,
+    promotion: 0,
+    pr: 0,
+    firnges_pub: 0,
+    other_pub: 0,
+    previews: 0,
+  });
+
+  const {unit_publicist, pub_press_ex, photography, epk,
+    promotion, pr, firnges_pub, other_pub, previews,
+  } = postDataPublicity;
+
+  // PUBLICITY Total postData
+  const [pubTotal, setPubTotal] = useState(0);
+
+  // INSURANCE ----------------------------------------------
+  
+  //  postData Insurance
+  const [postDataInsurance, setPostDataInsurance] = useState({
+    pro_package: 0,
+    gen_lia: 0,
+    eando: 0,
+    umbrella: 0,
+    union_insurance: 0,
+    other_in: 0,
+  });
+
+  const {pro_package, gen_lia, eando, umbrella, 
+    union_insurance, other_in,} = 
+  postDataInsurance;
+
+   // INSURANCE Total postData
+   const [insurTotal, setInsurTotal] = useState(0);
+
+  // GENERAL EXPENSES ----------------------------------------------
+  
+  //  postData General Expenses
+  const [postDataGeneralEx, setPostDataGeneralEx] = useState({
+    legal: 0,
+    medical: 0,
+    licences: 0,
+    payroll: 0,
+    bank_charges_fees: 0,
+    nnnnnnn: 0,
+    nnnnnnn: 0,
+    nnnnnnn: 0,
+    nnnnnnn: 0,
+    nnnnnnn: 0,
+  });
+
   // TOTALS ABOVE / BELOW / GRAND -----------------------------
 
   // Above the line  ------------------------------------
