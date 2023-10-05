@@ -2411,10 +2411,11 @@ function BudgetCreate() {
     firnges_pub: 0,
     other_pub: 0,
     previews: 0,
+    website: 0,
   });
 
   const {unit_publicist, pub_press_ex, photography, epk,
-    promotion, pr, firnges_pub, other_pub, previews,
+    promotion, pr, firnges_pub, other_pub, previews, website,
   } = postDataPublicity;
 
   // PUBLICITY Total postData
@@ -2447,13 +2448,46 @@ function BudgetCreate() {
     medical: 0,
     licences: 0,
     payroll: 0,
-    bank_charges_fees: 0,
-    nnnnnnn: 0,
+    bank_charges: 0,
+    audit: 0,
     nnnnnnn: 0,
     nnnnnnn: 0,
     nnnnnnn: 0,
     nnnnnnn: 0,
   });
+
+  // GENERAL EXPENSES Total postData
+  const [genExTotal, setGenExTotal] = useState(0);
+
+  // INDIRECT COSTS ----------------------------------------------
+  
+  //  postData Indirect Costs
+  const [postDataIndirectCo, setPostDataIndirectCo] = useState({
+    corporate_overhead: 0,
+    interim_financing: 0,
+  });
+
+  const {corporate_overhead, interim_financing,
+  } = postDataIndirectCo;
+
+  // INDIRECT COSTS Total postData
+  const [indirCoTotal, setIndirCoTotal] = useState(0);
+
+  // CONTINGENCY ----------------------------------------------
+  
+  //  postData Contingency
+  const [postDataContingency, setPostDataContingency] = useState({
+    contingency: 0,
+    fiscal_sponsor_fee: 0,
+    completion_guarantee: 0,
+    bond: 0,
+  });
+
+  const {contingency, fiscal_sponsor_fee, completion_guarantee, bond,
+  } = postDataContingency;
+
+  // CONTINGENCY Total postData
+  const [contingencyTotal, seContingencyTotal] = useState(0);
 
   // TOTALS ABOVE / BELOW / GRAND -----------------------------
 
