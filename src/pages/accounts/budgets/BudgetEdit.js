@@ -1,5 +1,4 @@
-/* Component in the Budget component to edit Budget
-*/
+/* Component in the Budget component to edit Budget */
 import React, { useEffect, useState } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
@@ -114,6 +113,11 @@ function BudgetEdit() {
   const [showTitle, setShowTitle] = useState(false);
   const [showVers, setShowVers] = useState(false);
   const [showVfxPo, setShowVfxPo] = useState(false);
+  const [showPub, setShowPub] = useState(false);
+  const [showInsur, setShowInsur] = useState(false);
+  const [showGenex, setShowGenex] = useState(false);
+  const [showIndir, setShowIndir] = useState(false);
+  const [showContin, setShowContin] = useState(false);
   
   // budget id
   const [budgetId, setBudgetId] = useState("");
@@ -2391,8 +2395,93 @@ function BudgetEdit() {
   // POST VERSIONING/CLOSED-CAPTIONING/COPIES Total postData
   const [postVersionTotal, setPostVersionTotal] = useState(0);
 
-  // FISCAL SPONSOR FEE
-  // Bond - 2% (direct plus contingency & finance fees)
+  // "D" - OTHER -------------------------------------------------
+
+  // PUBLICITY ----------------------------------------------
+  
+  //  postData Publicity
+  const [postDataPublicity, setPostDataPublicity] = useState({
+    tests_theater_ren: 0,
+    tests_other: 0,
+    unit_publicist: 0,
+    pub_press_ex: 0,
+    photography: 0,
+    epk: 0,
+    promotion: 0,
+    pr: 0,
+    firnges_pub: 0,
+    other_pub: 0,
+    previews: 0,
+    website: 0,
+  });
+
+  const {tests_theater_ren, tests_other, unit_publicist,
+    pub_press_ex, photography, epk, promotion, pr, firnges_pub,
+    other_pub, previews, website,
+  } = postDataPublicity;
+
+  // PUBLICITY Total postData
+  const [pubTotal, setPubTotal] = useState(0);
+
+  // INSURANCE ----------------------------------------------
+  
+  //  postData Insurance
+  const [postDataInsurance, setPostDataInsurance] = useState({
+    pro_package: 0,
+    gen_lia: 0,
+    eando: 0,
+    umbrella: 0,
+    union_insurance: 0,
+    other_in: 0,
+  });
+
+  const {pro_package, gen_lia, eando, umbrella, 
+    union_insurance, other_in,} = 
+  postDataInsurance;
+
+   // INSURANCE Total postData
+   const [insurTotal, setInsurTotal] = useState(0);
+
+  // GENERAL EXPENSES ----------------------------------------
+  
+  //  postData General Expenses
+  const [postDataGeneralEx, setPostDataGeneralEx] = useState({
+    legal: 0,
+    medical: 0,
+    licences: 0,
+    payroll: 0,
+    bank_charges: 0,
+    audit: 0,
+  });
+
+  // GENERAL EXPENSES Total postData
+  const [genExTotal, setGenExTotal] = useState(0);
+
+  // INDIRECT COSTS ------------------------------------------
+  
+  //  postData Indirect Costs
+  const [postDataIndirectCo, setPostDataIndirectCo] = useState({
+    corporate_overhead: 0,
+    interim_financing: 0,
+    fiscal_sponsor_fee: 0,
+  });
+
+  const {corporate_overhead, interim_financing, fiscal_sponsor_fee,
+  } = postDataIndirectCo;
+
+  // INDIRECT COSTS Total postData
+  const [indirCoTotal, setIndirCoTotal] = useState(0);
+
+  // CONTINGENCY/BOND ETC --------------------------------------------------
+  
+  //  postData Contingency/Bond
+  const [postDataContingency, setPostDataContingency] = useState({
+    contingency: 0,
+    completion_bond: 0,
+  });
+
+  const {contingency, completion_bond,
+  } = postDataContingency;
 
   // TOTALS ABOVE / BELOW / GRAND --------------------------------
 
@@ -2649,7 +2738,7 @@ function BudgetEdit() {
 
   // function to add all Post Production "C" totals on change
   useEffect(() => {
-    const adddPostProC = () => {
+    const addPostProC = () => {
       setPostProductionCTotal(
         parseFloat(postStaffFacTotal || 0) +
         parseFloat(editingTotal || 0) +
@@ -2661,7 +2750,7 @@ function BudgetEdit() {
         )
       }
     const timer = setTimeout(() => {
-      adddPostProC();
+      addPostProC();
     }, 1000);
 
     return () => {
@@ -2750,7 +2839,60 @@ function BudgetEdit() {
     </div>
   );
 
-  // ABOVE AND BELOW A, B & C TOTAL ---------------------------
+  // Other "D" ------------------------------------
+
+  // Other "D" postData 
+  const [otherDTotal, setOtherDTotal] = useState(0);
+
+  // function to add all Other "D" totals on change
+  useEffect(() => {
+    const addOtherd = () => {
+      setOtherDTotal(
+        parseFloat(pubTotal || 0) +
+        parseFloat(insurTotal || 0) +
+        parseFloat(genExTotal || 0) +
+        parseFloat(indirCoTotal || 0)
+        )
+      }
+    const timer = setTimeout(() => {
+      addOtherd();
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [pubTotal, insurTotal, genExTotal, indirCoTotal]);
+
+  // Other input box
+  // eslint-disable-next-line
+  const otherdtotal = (
+    <div className="my-0 pl-3">
+    <Row>
+    <Col className={ `${styles.Overview}  my-0 py-2`} md={10} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL "D" OTHER COSTS</p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="otherDTotal" 
+          className={`${styles.Width95} text-center pt-1 mb-0`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="otherDTotal"
+          value={otherDTotal}
+          readOnly
+              />
+      </Form.Group>
+      {errors?.otherDTotal?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+    </Col>
+    </Row>
+    </div>
+  );
+
+  // ABOVE AND BELOW A, B C TOTAL ---------------------------
 
   // A, B & C Total postData 
   const [aboveBelowABCTotal, setAboveBelowABCTotal] = useState(0);
@@ -2772,7 +2914,7 @@ function BudgetEdit() {
     };
   }, [aboveTheLineTotal, belowBandCTotal]);
 
-  // below B and C input box
+  // A B and C input box
   // eslint-disable-next-line
   const abovebelowabcTotal = (
     <div className="mt-3 pl-3">
@@ -2792,6 +2934,58 @@ function BudgetEdit() {
               />
       </Form.Group>
       {errors?.aboveBelowABCTotal?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+    </Col>
+    </Row>
+    </div>
+  );
+
+  // A, B, C & D TOTAL ---------------------------
+
+  // A, B, C & D Total postData 
+  const [aboveBelowABCandDTotal, setAboveBelowABCandDTotal] = useState(0);
+
+  // function to add A B C and D on change otherDTotal
+  useEffect(() => {
+    const addBelowAboveABCandD = () => {
+      setAboveBelowABCandDTotal(
+        parseFloat(aboveTheLineTotal || 0) +
+        parseFloat(belowBandCTotal || 0) +
+        parseFloat(otherDTotal || 0)
+        )
+      }
+    const timer = setTimeout(() => {
+      addBelowAboveABCandD();
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [aboveTheLineTotal, belowBandCTotal, otherDTotal,]);
+
+  // below B and C input box
+  // eslint-disable-next-line
+  const abovebelowabcanddTotal = (
+    <div className="mt-3 pl-3">
+    <Row>
+    <Col className={ `${styles.Overview}  my-0 py-2`} md={10} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}> "A", "B", "C" & "D" TOTAL</p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="aboveBelowABCandDTotal" 
+          className={`${styles.Width95} text-center pt-1 mb-0`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="aboveBelowABCandDTotal"
+          value={aboveBelowABCandDTotal}
+          readOnly
+              />
+      </Form.Group>
+      {errors?.aboveBelowABCandDTotal?.map((message, idx) => (
           <Alert variant="warning" key={idx}>
           {message}
           </Alert>
@@ -4769,6 +4963,44 @@ function BudgetEdit() {
     formData.append("fringes_taxes_vfx", fringes_taxes_vfx);
     formData.append("other_post_vfx", other_post_vfx);
     formData.append("postVfx_total", postVfxTotal);
+    // Publicity
+    formData.append("tests_theater_ren", tests_theater_ren);
+    formData.append("tests_other", tests_other);
+    formData.append("unit_publicist", unit_publicist);
+    formData.append("pub_press_ex", pub_press_ex);
+    formData.append("photography", photography);
+    formData.append("epk", epk);
+    formData.append("promotion", promotion);
+    formData.append("pr", pr);
+    formData.append("firnges_pub", firnges_pub);
+    formData.append("other_pub", other_pub);
+    formData.append("previews", previews);
+    formData.append("website", website);
+    formData.append("pub_total", pubTotal);
+    // Insurance
+    formData.append("pro_package", pro_package);
+    formData.append("gen_lia", gen_lia);
+    formData.append("eando", eando);
+    formData.append("umbrella", umbrella);
+    formData.append("union_insurance", union_insurance);
+    formData.append("other_in", other_in);
+    formData.append("insurTotal", insurTotal);
+    // General Expenses
+    formData.append("legal", legal);
+    formData.append("medical", medical);
+    formData.append("licences", licences);
+    formData.append("payroll", payroll);
+    formData.append("bank_charges", bank_charges);
+    formData.append("audit", audit);
+    formData.append("genEx_total", genExTotal);
+    // Indirect Costs
+    formData.append("corporate_overhead", corporate_overhead);
+    formData.append("fiscal_sponsor_fee", fiscal_sponsor_fee);
+    formData.append("interim_financing", interim_financing);
+    formData.append("indirCo_total", indirCoTotal);
+    // Contingency/Bond
+    formData.append("contingency", contingency);
+    formData.append("completion_bond", completion_bond);
     // formData.append("stars", stars);
 
     try {
@@ -4898,7 +5130,6 @@ function BudgetEdit() {
     </div>
     </Col>
     </Row>  
-    {/* {abovethelinetotal} */}
     {/* below B labour + total */}
     <Row className={ `${styles.OverviewBlue} mx-1 mb-0 mt-2 py-1`}>
     <Col md={10}>
@@ -5150,7 +5381,6 @@ function BudgetEdit() {
     </div>
     </Col>
     </Row> 
-    {/* {belowthelineBtotal} */}
     {/* below B costs + total */}
     <Row className={ `${styles.OverviewBlue} mx-1 mb-0 mt-2 py-1`}>
     <Col md={10}>
@@ -5463,7 +5693,7 @@ function BudgetEdit() {
     </Col>
     </Row>
     {blabourncoststotal}
-    {/* Post Production "C" & total */}
+    {/* Post Production "C" & total*/}
     <Row className={ `${styles.OverviewBlue} mx-1 mb-0 mt-2 py-1`}>
     <Col md={10}>
     <p className={ `mb-0 ml-3 ${styles.BoldBlack}`}>
@@ -5471,7 +5701,7 @@ function BudgetEdit() {
     </Col>
     <Col md={2}><p className="mb-0">{postProductionCTotal} </p></Col>
     </Row>
-    {/* sections post production C click buttons */}
+    {/* sections post production "C" click buttons */}
     <Row className={`${styles.ButtonLine} mx-1`}>
     {/* Post Production Staff/Facilities */}
     <Col md={3} className='px-0 mx-0'>
@@ -5588,8 +5818,36 @@ function BudgetEdit() {
     </Row>
     {/* below B and C total  */}
     {belowbandcTotal}
-    {/* Above "A" and Below "B" and "C" total  */}
+    {/* Above "A" / Below "B" and "C"  total */}
     {abovebelowabcTotal}
+    {/* Other "D" & total */}
+    <Row className={ `${styles.OverviewBlue} mx-1 mb-0 mt-2 py-1`}>
+    <Col md={10}>
+    <p className={ `mb-0 ml-3 ${styles.BoldBlack}`}>
+      "D" OTHER </p>
+    </Col>
+    <Col md={2}><p className="mb-0">{otherDTotal} </p></Col>
+    </Row>
+    {/* sections other "D" click buttons */}
+    <Row className={`${styles.ButtonLine} mx-1`}>
+    <Col md={3} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
+    <Row>
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
+      onClick={() => setShowStaFac(showStaFac => !showStaFac)} >
+    xxxxxxxx
+    </p>
+    </Col>
+    <Col md={4}>
+    <p className="mb-0">{postStaffFacTotal} </p>
+    </Col>
+    </Row>
+    </div>
+    </Col>
+    </Row>
+    {/* "A"  "B" and "C" and "D" total */}
+    {abovebelowabcanddTotal}
     {grandtotal}
     {/* info */}
     {!showInfo ? (
