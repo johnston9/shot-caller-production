@@ -2446,6 +2446,9 @@ function BudgetCreate() {
     audit: 0,
   });
 
+  const {legal, medical, licences, payroll, bank_charges, audit,
+  } = postDataGeneralEx;
+
   // GENERAL EXPENSES Total postData
   const [genExTotal, setGenExTotal] = useState(0);
 
@@ -2455,29 +2458,25 @@ function BudgetCreate() {
   const [postDataIndirectCo, setPostDataIndirectCo] = useState({
     corporate_overhead: 0,
     interim_financing: 0,
+    fiscal_sponsor_fee: 0,
   });
 
-  const {corporate_overhead, interim_financing,
+  const {corporate_overhead, interim_financing, fiscal_sponsor_fee,
   } = postDataIndirectCo;
 
   // INDIRECT COSTS Total postData
   const [indirCoTotal, setIndirCoTotal] = useState(0);
 
-  // CONTINGENCY/BOND ETC --------------------------------------------------
+  // CONTINGENCY/BOND --------------------------------------
   
-  //  postData Contingency
+  //  postData Contingency/Bond
   const [postDataContingency, setPostDataContingency] = useState({
     contingency: 0,
-    fiscal_sponsor_fee: 0,
-    completion_guarantee: 0,
-    bond: 0,
+    completion_bond: 0,
   });
 
-  const {contingency, fiscal_sponsor_fee, completion_guarantee, bond,
+  const {contingency, completion_bond,
   } = postDataContingency;
-
-  // CONTINGENCY Total postData
-  const [contingencyTotal, seContingencyTotal] = useState(0);
 
   // TOTALS ABOVE / BELOW / GRAND -----------------------------
 
@@ -3000,8 +2999,9 @@ function BudgetCreate() {
   useEffect(() => {
     const addGrand = () => {
       setGrandTotal(
-        parseFloat(aboveTheLineTotal || 0) +
-        parseFloat(belowBandCTotal || 0)
+        parseFloat(aboveBelowABCandDTotal || 0) +
+        parseFloat(contingency || 0) +
+        parseFloat(completion_bond || 0)
         )
       }
     const timer = setTimeout(() => {
@@ -3011,7 +3011,7 @@ function BudgetCreate() {
     return () => {
       clearTimeout(timer);
     };
-  }, [aboveTheLineTotal, belowBandCTotal,]);
+  }, [aboveBelowABCandDTotal, contingency, completion_bond,]);
 
   // Grand input box
   const grandtotal = (
@@ -4166,7 +4166,7 @@ function BudgetCreate() {
     formData.append("umbrella", umbrella);
     formData.append("union_insurance", union_insurance);
     formData.append("other_in", other_in);
-    formData.append("insurTotal", insurTotal);
+    formData.append("insur_total", insurTotal);
     // General Expenses
     formData.append("legal", legal);
     formData.append("medical", medical);
@@ -5017,12 +5017,57 @@ function BudgetCreate() {
     <Row>
     <Col md={8}>
     <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
-      onClick={() => setShowStaFac(showStaFac => !showStaFac)} >
-    xxxxxxxx
+      onClick={() => setShowPub(showPub => !showPub)} >
+    Publicity
     </p>
     </Col>
     <Col md={4}>
-    <p className="mb-0">{postStaffFacTotal} </p>
+    <p className="mb-0">{pubTotal} </p>
+    </Col>
+    </Row>
+    </div>
+    </Col>
+    <Col md={3} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
+    <Row>
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
+      onClick={() => setShowInsur(showInsur => !showInsur)} >
+    Insurance
+    </p>
+    </Col>
+    <Col md={4}>
+    <p className="mb-0">{insurTotal} </p>
+    </Col>
+    </Row>
+    </div>
+    </Col>
+    <Col md={3} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
+    <Row>
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
+      onClick={() => setShowGenex(showGenex => !showGenex)} >
+    General Exp
+    </p>
+    </Col>
+    <Col md={4}>
+    <p className="mb-0">{genExTotal} </p>
+    </Col>
+    </Row>
+    </div>
+    </Col>
+    <Col md={3} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
+    <Row>
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
+      onClick={() => setShowIndir(showIndir => !showIndir)} >
+    Indirect Costs
+    </p>
+    </Col>
+    <Col md={4}>
+    <p className="mb-0">{indirCoTotal} </p>
     </Col>
     </Row>
     </div>

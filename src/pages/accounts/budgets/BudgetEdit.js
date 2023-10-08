@@ -58,6 +58,8 @@ import PostLabVideo from "./budgetsectionspost/PostLabVideo";
 import Titles from "./budgetsectionspost/Titles";
 import Versioning from "./budgetsectionspost/Versioning";
 import PostVisualEffects from "./budgetsectionspost/PostVisualEffects";
+import Publicity from "./budgetsectionsother/Publicity";
+import Insurance from "./budgetsectionsother/Insurance";
 
 function BudgetEdit() {
   const [errors, setErrors] = useState({});
@@ -2454,6 +2456,9 @@ function BudgetEdit() {
     audit: 0,
   });
 
+  const {legal, medical, licences, payroll, bank_charges, audit,
+  } = postDataGeneralEx;
+
   // GENERAL EXPENSES Total postData
   const [genExTotal, setGenExTotal] = useState(0);
 
@@ -3004,8 +3009,9 @@ function BudgetEdit() {
   useEffect(() => {
     const addGrand = () => {
       setGrandTotal(
-        parseFloat(aboveTheLineTotal || 0) +
-        parseFloat(belowTheLineBTotal || 0) 
+        parseFloat(aboveBelowABCandDTotal || 0) +
+        parseFloat(contingency || 0) +
+        parseFloat(completion_bond || 0)
         )
       }
     const timer = setTimeout(() => {
@@ -3015,7 +3021,7 @@ function BudgetEdit() {
     return () => {
       clearTimeout(timer);
     };
-  }, [aboveTheLineTotal, belowTheLineBTotal,]);
+  }, [aboveBelowABCandDTotal, contingency, completion_bond,]);
 
   // Grand input box
   const grandtotal = (
@@ -3867,6 +3873,29 @@ function BudgetEdit() {
           miniatures_build, miniatures_shoot, motion_capture, lossdam_vfx,
           box_ren_vfx, fringes_taxes_vfx, other_post_vfx,});
         setPostVfxTotal(postVfx_total);
+        const {tests_theater_ren, tests_other, pub_total,
+          unit_publicist, pub_press_ex, photography, epk,
+          promotion, pr, firnges_pub, other_pub, previews, website,} = data.results[0];
+        setPostDataPublicity({tests_theater_ren, tests_other,
+          unit_publicist, pub_press_ex, photography, epk,
+          promotion, pr, firnges_pub, other_pub, previews, website,});
+        setPubTotal(pub_total);
+        const {pro_package, gen_lia, eando, umbrella, 
+        union_insurance, other_in, insur_total,} = data.results[0];
+        setPostDataInsurance({pro_package, gen_lia, eando, umbrella, 
+        union_insurance, other_in,});
+        setInsurTotal(insur_total);
+        const {legal, medical, licences, payroll, bank_charges, audit,
+        genEx_total,} = data.results[0];
+        setPostDataGeneralEx({legal, medical, licences, payroll, bank_charges, audit,
+        });
+        setGenExTotal(genEx_total);
+        const {corporate_overhead, interim_financing, fiscal_sponsor_fee,
+        indirCo_total,} = data.results[0];
+        setPostDataIndirectCo({corporate_overhead, interim_financing, fiscal_sponsor_fee,});
+        setIndirCoTotal(indirCo_total);
+        const {contingency, completion_bond,} = data.results[0];
+        setPostDataContingency({contingency, completion_bond,});
 
             } catch (err) {
         console.log(err);
@@ -4984,7 +5013,7 @@ function BudgetEdit() {
     formData.append("umbrella", umbrella);
     formData.append("union_insurance", union_insurance);
     formData.append("other_in", other_in);
-    formData.append("insurTotal", insurTotal);
+    formData.append("insur_total", insurTotal);
     // General Expenses
     formData.append("legal", legal);
     formData.append("medical", medical);
@@ -5835,12 +5864,57 @@ function BudgetEdit() {
     <Row>
     <Col md={8}>
     <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
-      onClick={() => setShowStaFac(showStaFac => !showStaFac)} >
-    xxxxxxxx
+      onClick={() => setShowPub(showPub => !showPub)} >
+    Publicity
     </p>
     </Col>
     <Col md={4}>
-    <p className="mb-0">{postStaffFacTotal} </p>
+    <p className="mb-0">{pubTotal} </p>
+    </Col>
+    </Row>
+    </div>
+    </Col>
+    <Col md={3} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
+    <Row>
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
+      onClick={() => setShowInsur(showInsur => !showInsur)} >
+    Insurance
+    </p>
+    </Col>
+    <Col md={4}>
+    <p className="mb-0">{insurTotal} </p>
+    </Col>
+    </Row>
+    </div>
+    </Col>
+    <Col md={3} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
+    <Row>
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
+      onClick={() => setShowGenex(showGenex => !showGenex)} >
+    General Exp
+    </p>
+    </Col>
+    <Col md={4}>
+    <p className="mb-0">{genExTotal} </p>
+    </Col>
+    </Row>
+    </div>
+    </Col>
+    <Col md={3} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
+    <Row>
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
+      onClick={() => setShowIndir(showIndir => !showIndir)} >
+    Indirect Costs
+    </p>
+    </Col>
+    <Col md={4}>
+    <p className="mb-0">{indirCoTotal} </p>
     </Col>
     </Row>
     </div>
@@ -6659,6 +6733,28 @@ function BudgetEdit() {
       postVersionTotal={postVersionTotal}
       setPostTitlesTotal={setPostTitlesTotal}
       setShow={setShowVers}  /> 
+    ) }
+    {/* Publicity */}
+    {!showPub ? (
+      ""
+    ) : (
+      <Publicity
+      postDataPublicity={postDataPublicity}
+      setPostDataPublicity={setPostDataPublicity}
+      pubTotal={pubTotal}
+      setPubTotal={setPubTotal}
+      setShow={setShowPub}  /> 
+    ) }
+    {/* Insurance */}
+    {!showInsur ? (
+      ""
+    ) : (
+      <Insurance
+      postDataInsurance={postDataInsurance}
+      setPostDataInsurance={setPostDataInsurance}
+      insurTotal={insurTotal}
+      setInsurTotal={setInsurTotal}
+      setShow={setShowInsur}  /> 
     ) }
     {/* buttons */}
     <Row>
