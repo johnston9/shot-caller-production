@@ -4000,6 +4000,7 @@ function BudgetEdit() {
     formData.append("b_labour_and_costs_total", bLabourandCostsTotal);
     formData.append("grand_total", grandTotal);
     // prepared by
+    formData.append("dated", dated);
     formData.append("prelimfin", prelimfin);
     formData.append("preparedby", preparedby);
     formData.append("approvedby", approvedby);
@@ -4011,11 +4012,6 @@ function BudgetEdit() {
     formData.append("writer", writer);
     formData.append("format", format);
     formData.append("location", location);
-    formData.append("dated", dated);
-    formData.append("prelimfin", prelimfin);
-    formData.append("preparedby", preparedby);
-    formData.append("approvedby", approvedby);
-    formData.append("approvedbyco", approvedbyco);
     // length
     formData.append("research", research);
     formData.append("prep", prep);

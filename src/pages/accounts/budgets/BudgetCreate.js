@@ -58,6 +58,14 @@ import PostLabVideo from "./budgetsectionspost/PostLabVideo";
 import Titles from "./budgetsectionspost/Titles";
 import Versioning from "./budgetsectionspost/Versioning";
 import PostVisualEffects from "./budgetsectionspost/PostVisualEffects";
+import Publicity from "./budgetsectionsother/Publicity";
+import Insurance from "./budgetsectionsother/Insurance";
+import GeneralEx from "./budgetsectionsother/GeneralEx";
+import IndirectCosts from "./budgetsectionsother/IndirectCosts";
+// import Publicity from "./budgetsectionsother/Publicity";
+// import Insurance from "./budgetsectionsother/Insurance";
+// import GeneralEx from "./budgetsectionsother/GeneralEx";
+// import IndirectCosts from "./budgetsectionsother/IndirectCosts";
 
 function BudgetCreate() {
   const [errors, setErrors] = useState({});
@@ -117,7 +125,6 @@ function BudgetCreate() {
   const [showInsur, setShowInsur] = useState(false);
   const [showGenex, setShowGenex] = useState(false);
   const [showIndir, setShowIndir] = useState(false);
-  const [showContin, setShowContin] = useState(false);
 
   // INFO / LENGTH -------------------------
   // Info postData 
@@ -2487,7 +2494,7 @@ function BudgetCreate() {
   };
 
   const contin = (
-    <div>
+    <div className="mt-3">
     {/* Contingency */}
     <Row>
     <Col md={1} >
@@ -3152,6 +3159,7 @@ function BudgetCreate() {
     formData.append("b_labour_and_costs_total", bLabourandCostsTotal);
     formData.append("grand_total", grandTotal);
     // prepared by
+    formData.append("dated", dated);
     formData.append("prelimfin", prelimfin);
     formData.append("preparedby", preparedby);
     formData.append("approvedby", approvedby);
@@ -3163,11 +3171,6 @@ function BudgetCreate() {
     formData.append("writer", writer);
     formData.append("format", format);
     formData.append("location", location);
-    formData.append("dated", dated);
-    formData.append("prelimfin", prelimfin);
-    formData.append("preparedby", preparedby);
-    formData.append("approvedby", approvedby);
-    formData.append("approvedbyco", approvedbyco);
     // length
     formData.append("research", research);
     formData.append("prep", prep);
@@ -4308,9 +4311,9 @@ function BudgetCreate() {
     {/* above total */}
     <Row className={ `${styles.OverviewBlue} mx-1 mt-5 py-1`}>
     <Col md={10}>
-    <p className={ `ml-3 ${styles.BoldBlack}`}>ABOVE THE LINE</p>
+    <p className={ `mb-0 ml-3 ${styles.BoldBlack}`}>ABOVE THE LINE</p>
     </Col>
-    <Col md={2}><p className="mb-0">{aboveTheLineTotal} </p></Col>
+    <Col md={2}><p className="mb-0 mb-0">{aboveTheLineTotal} </p></Col>
     </Row>
     {/* sections above click buttons */}
     <Row className={`${styles.ButtonLine} mx-1`}>

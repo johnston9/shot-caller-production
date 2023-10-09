@@ -374,45 +374,10 @@ const Publicity = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Fringes & Taxes */}
-    <Row>
-    <Col md={1} >
-    <p className={`${styles.Underline}`}>49.90</p>
-    </Col>
-    <Col md={6} >
-    <p className={`${styles.Underline}`}>Fringes & Taxes</p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={2} >
-    <Form.Group controlId="firnges_pub" 
-        className={`${styles.Width95} text-center mb-1`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="firnges_pub"
-        value={firnges_pub}
-        onChange={handleChange}
-            />
-    </Form.Group>
-    {errors?.firnges_pub?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    </Row>
     {/* Previews */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>49.91</p>
+    <p className={`${styles.Underline}`}>49.90</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Previews</p>
@@ -447,7 +412,7 @@ const Publicity = (props) => {
     {/* Website */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>49.92</p>
+    <p className={`${styles.Underline}`}>49.91</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Website</p>
@@ -473,6 +438,41 @@ const Publicity = (props) => {
             />
     </Form.Group>
     {errors?.website?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Fringes & Taxes */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>49.92</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Fringes & Taxes</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="firnges_pub" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="firnges_pub"
+        value={firnges_pub}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.firnges_pub?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
