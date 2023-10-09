@@ -1,4 +1,4 @@
-/* Component in the Budget component to edit Insurance */
+/* Component in the Budget component to edit General Expenses */
 import React, { useEffect, useState } from "react";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
@@ -6,56 +6,54 @@ import Col from "react-bootstrap/Col";
 import styles from "../../../../styles/Account.module.css";
 import Alert from "react-bootstrap/Alert";
 
-const Insurance = (props) => {
+const GeneralEx = (props) => {
   // eslint-disable-next-line
   const [errors, setErrors] = useState({});
 
-  const {postDataInsurance, setPostDataInsurance,
-  insurTotal, setInsurTotal, setShow,} = props;
+  const {postDataGeneralEx, setPostDataGeneralEx,
+  genExTotal, setGenExTotal, setShow,} = props;
 
-  const {pro_package, gen_lia, eando, umbrella, 
-    union_insurance, other_in,
-  } = postDataInsurance;
+  const {legal, medical, licences, payroll, bank_charges, audit,
+  } = postDataGeneralEx;
 
   // handleChange 
   const handleChange = (event) => {
-    setPostDataInsurance({
-    ...postDataInsurance,
+    setPostDataGeneralEx({
+    ...postDataGeneralEx,
     [event.target.name]: parseFloat(event.target.value || 0 ),
     });
   };
 
-  // function to add all Insurance on change
+  // function to add all General Expenses on change
   useEffect(() => {
-    const addInsur = () => {
-        setInsurTotal(
-        parseFloat(pro_package || 0) +
-        parseFloat(gen_lia || 0) +
-        parseFloat(eando || 0) +
-        parseFloat(umbrella || 0) +
-        parseFloat(union_insurance || 0) +
-        parseFloat(other_in || 0)
+    const addGenerex = () => {
+        setGenExTotal(
+        parseFloat(legal || 0) +
+        parseFloat(medical || 0) +
+        parseFloat(licences || 0) +
+        parseFloat(payroll || 0) +
+        parseFloat(bank_charges || 0) +
+        parseFloat(audit || 0)
        )
     }
     const timer = setTimeout(() => {
-      addInsur();
+        addGenerex();
     }, 1000);
 
     return () => {
       clearTimeout(timer);
     };
    // eslint-disable-next-line
-  }, [pro_package, gen_lia, eando, umbrella, 
-    union_insurance, other_in,]);
+  }, [legal, medical, licences, payroll, bank_charges, audit,]);
 
   return (
     <div className="mt-5">
     <Row >
     <Col md={1} >
-    <p className="mb-2">50.00</p>
+    <p className="mb-2">51.00</p>
     </Col>
     <Col md={9} >
-    <p className={ `${styles.BoldBlack} mb-2`}>Insurance</p>
+    <p className={ `${styles.BoldBlack} mb-2`}>General Expenses</p>
     </Col>
     <Col md={2}>
     <span className={`${styles.Close }`} 
@@ -86,13 +84,13 @@ const Insurance = (props) => {
     <p className="mb-0">Total</p>
     </Col>
     </Row>
-    {/* Production Package */}
+    {/* Legal */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>50.10</p>
+    <p className={`${styles.Underline}`}>51.10</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Production Package</p>
+    <p className={`${styles.Underline}`}>Legal</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -104,30 +102,30 @@ const Insurance = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="pro_package" 
+    <Form.Group controlId="legal" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="pro_package"
-        value={pro_package}
+        name="legal"
+        value={legal}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.pro_package?.map((message, idx) => (
+    {errors?.legal?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     </Row>
-    {/* General/Public Liability */}
+    {/* Medical */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>50.20</p>
+    <p className={`${styles.Underline}`}>51.20</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>General/Public Liability</p>
+    <p className={`${styles.Underline}`}>Medical</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -139,30 +137,30 @@ const Insurance = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="gen_lia" 
+    <Form.Group controlId="medical" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="gen_lia"
-        value={gen_lia}
+        name="medical"
+        value={medical}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.gen_lia?.map((message, idx) => (
+    {errors?.medical?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     </Row>
-    {/* E & O */}
+    {/* Licences */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>50.30</p>
+    <p className={`${styles.Underline}`}>51.30</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>E & O</p>
+    <p className={`${styles.Underline}`}>Licences</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -174,30 +172,30 @@ const Insurance = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="eando" 
+    <Form.Group controlId="licences" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="eando"
-        value={eando}
+        name="licences"
+        value={licences}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.eando?.map((message, idx) => (
+    {errors?.licences?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     </Row>
-    {/* Umbrella */}
+    {/* Payroll */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>50.40</p>
+    <p className={`${styles.Underline}`}>51.40</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Umbrella</p>
+    <p className={`${styles.Underline}`}>Payroll</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -209,30 +207,30 @@ const Insurance = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="umbrella" 
+    <Form.Group controlId="payroll" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="umbrella"
-        value={umbrella}
+        name="payroll"
+        value={payroll}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.umbrella?.map((message, idx) => (
+    {errors?.payroll?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     </Row>
-    {/* Union Insurance/Workers Comp */}
+    {/* Bank Charges */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>50.50</p>
+    <p className={`${styles.Underline}`}>51.50</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Union Insurance/Workers Comp</p>
+    <p className={`${styles.Underline}`}>Bank Charges</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -244,30 +242,30 @@ const Insurance = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="union_insurance" 
+    <Form.Group controlId="bank_charges" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="union_insurance"
-        value={union_insurance}
+        name="bank_charges"
+        value={bank_charges}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.union_insurance?.map((message, idx) => (
+    {errors?.bank_charges?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     </Row>
-    {/* Equipment/Specialty/Other Insurance */}
+    {/* Audit/Other */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>50.60</p>
+    <p className={`${styles.Underline}`}>51.60</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Equipment/Specialty/Other Insurance</p>
+    <p className={`${styles.Underline}`}>Audit/Other</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -279,29 +277,29 @@ const Insurance = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="other_in" 
+    <Form.Group controlId="audit" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="other_in"
-        value={other_in}
+        name="audit"
+        value={audit}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.other_in?.map((message, idx) => (
+    {errors?.audit?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     </Row>
-    {/* INSURANCE Total */}
+    {/* GENERAL EXPENSES Total */}
     <Row className="mt-3">
     <Col md={1} >
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
-    <p className={ `${styles.Bold} pb-0 mb-0`}>INSURANCE TOTAL</p>
+    <p className={ `${styles.Bold} pb-0 mb-0`}>GENERAL EXPENSES TOTAL</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -313,17 +311,17 @@ const Insurance = (props) => {
     <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="insurTotal" 
+    <Form.Group controlId="genExTotal" 
         className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="insurTotal"
-        value={insurTotal}
+        name="genExTotal"
+        value={genExTotal}
         readOnly
             />
     </Form.Group>
-    {errors?.insurTotal?.map((message, idx) => (
+    {errors?.genExTotal?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
@@ -334,4 +332,4 @@ const Insurance = (props) => {
   )
 }
 
-export default Insurance
+export default GeneralEx

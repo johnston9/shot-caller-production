@@ -2428,8 +2428,8 @@ function BudgetCreate() {
   });
 
   const {pro_package, gen_lia, eando, umbrella, 
-    union_insurance, other_in,} = 
-  postDataInsurance;
+    union_insurance, other_in,
+  } = postDataInsurance;
 
    // INSURANCE Total postData
    const [insurTotal, setInsurTotal] = useState(0);
@@ -2477,6 +2477,89 @@ function BudgetCreate() {
 
   const {contingency, completion_bond,
   } = postDataContingency;
+
+  // handleChange 
+  const handleChangeCon = (event) => {
+    setPostDataContingency({
+    ...postDataContingency,
+    [event.target.name]: parseFloat(event.target.value || 0 ),
+    });
+  };
+
+  const contin = (
+    <div>
+    {/* Contingency */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Contingency</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="contingency" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="contingency"
+        value={contingency}
+        onChange={handleChangeCon}
+            />
+    </Form.Group>
+    {errors?.contingency?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Completion Bond */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Completion Bond</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="completion_bond" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="completion_bond"
+        value={completion_bond}
+        onChange={handleChangeCon}
+            />
+    </Form.Group>
+    {errors?.completion_bond?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    </div>
+  );
 
   // TOTALS ABOVE / BELOW / GRAND -----------------------------
 
@@ -2726,7 +2809,7 @@ function BudgetCreate() {
     </div>
   );
 
-  // Post Production "C" ------------------------------------
+  // POST PRODUCTION "C" ------------------------------------
 
   // Post Production "C" postData 
   const [postProductionCTotal, setPostProductionCTotal] = useState(0);
@@ -2805,7 +2888,7 @@ function BudgetCreate() {
     };
   }, [bLabourandCostsTotal, postProductionCTotal]);
 
-  // below B and C input box --- belowbandcTotal abovebelowabcTotal
+  // below B and C input box ---------------------
   // eslint-disable-next-line
   const belowbandcTotal = (
     <div className="mt-3 pl-3">
@@ -2834,7 +2917,58 @@ function BudgetCreate() {
     </div>
   );
 
-  // Other "D" ------------------------------------
+  // ABOVE AND BELOW A, B & C TOTAL ---------------------------
+
+  // A, B & C Total postData 
+  const [aboveBelowABCTotal, setAboveBelowABCTotal] = useState(0);
+
+  // function to add above A and below B and C on change
+  useEffect(() => {
+    const addBelowAboveABC = () => {
+      setAboveBelowABCTotal(
+        parseFloat(aboveTheLineTotal || 0) +
+        parseFloat(belowBandCTotal || 0)
+        )
+      }
+    const timer = setTimeout(() => {
+      addBelowAboveABC();
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [aboveTheLineTotal, belowBandCTotal]);
+
+  // above and below A B and C input box
+  // eslint-disable-next-line
+  const abovebelowabcTotal = (
+    <div className="mt-3 pl-3">
+    <Row>
+    <Col className={ `${styles.Overview}  my-0 py-2`} md={10} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>ABOVE AND BELOW THE LINE "A", "B" AND "C" TOTAL</p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="aboveBelowABCTotal" 
+          className={`${styles.Width95} text-center pt-1 mb-0`} >
+          <Form.Control 
+          type="text"
+          className={styles.Input}
+          name="aboveBelowABCTotal"
+          value={aboveBelowABCTotal}
+          readOnly
+              />
+      </Form.Group>
+      {errors?.aboveBelowABCTotal?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+          {message}
+          </Alert>
+      ))}
+    </Col>
+    </Row>
+    </div>
+  );
+
+  // OTHER "D" ------------------------------------
 
   // Other "D" postData 
   const [otherDTotal, setOtherDTotal] = useState(0);
@@ -2887,68 +3021,16 @@ function BudgetCreate() {
     </div>
   );
 
-  // ABOVE AND BELOW A, B & C TOTAL ---------------------------
-
-  // A, B & C Total postData 
-  const [aboveBelowABCTotal, setAboveBelowABCTotal] = useState(0);
-
-  // function to add above A and below B and C on change
-  useEffect(() => {
-    const addBelowAboveABC = () => {
-      setAboveBelowABCTotal(
-        parseFloat(aboveTheLineTotal || 0) +
-        parseFloat(belowBandCTotal || 0)
-        )
-      }
-    const timer = setTimeout(() => {
-      addBelowAboveABC();
-    }, 1000);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [aboveTheLineTotal, belowBandCTotal]);
-
-  // below B and C input box
-  // eslint-disable-next-line
-  const abovebelowabcTotal = (
-    <div className="mt-3 pl-3">
-    <Row>
-    <Col className={ `${styles.Overview}  my-0 py-2`} md={10} >
-    <p className={ `${styles.Bold} pb-0 mb-0`}>ABOVE AND BELOW THE LINE "A", "B" AND "C" TOTAL</p>
-    </Col>
-    <Col md={2} >
-    <Form.Group controlId="aboveBelowABCTotal" 
-          className={`${styles.Width95} text-center pt-1 mb-0`} >
-          <Form.Control 
-          type="text"
-          className={styles.Input}
-          name="aboveBelowABCTotal"
-          value={aboveBelowABCTotal}
-          readOnly
-              />
-      </Form.Group>
-      {errors?.aboveBelowABCTotal?.map((message, idx) => (
-          <Alert variant="warning" key={idx}>
-          {message}
-          </Alert>
-      ))}
-    </Col>
-    </Row>
-    </div>
-  );
-
   // A, B, C & D TOTAL ---------------------------
 
   // A, B, C & D Total postData 
   const [aboveBelowABCandDTotal, setAboveBelowABCandDTotal] = useState(0);
 
-  // function to add A B C and D on change otherDTotal
+  // function to add A B C and D on change
   useEffect(() => {
     const addBelowAboveABCandD = () => {
       setAboveBelowABCandDTotal(
-        parseFloat(aboveTheLineTotal || 0) +
-        parseFloat(belowBandCTotal || 0) +
+        parseFloat(aboveBelowABCTotal || 0) +
         parseFloat(otherDTotal || 0)
         )
       }
@@ -2959,7 +3041,7 @@ function BudgetCreate() {
     return () => {
       clearTimeout(timer);
     };
-  }, [aboveTheLineTotal, belowBandCTotal, otherDTotal,]);
+  }, [aboveBelowABCTotal, otherDTotal,]);
 
   // A B C and D input box
   // eslint-disable-next-line
@@ -2990,7 +3072,7 @@ function BudgetCreate() {
     </div>
   );
 
-  // Grand total---------------------------
+  // GRAND TOTAL ---------------------------
 
   // Grand Total postData 
   const [grandTotal, setGrandTotal] = useState(0);
@@ -4184,6 +4266,11 @@ function BudgetCreate() {
     formData.append("contingency", contingency);
     formData.append("completion_bond", completion_bond);
     // formData.append("stars", stars);
+    formData.append("post_productionC_total", postProductionCTotal);
+    formData.append("belowB_andC_total", belowBandCTotal);
+    formData.append("above_belowABC_total", aboveBelowABCTotal);
+    formData.append("otherD_total", otherDTotal);
+    formData.append("above_belowABCandD_total", aboveBelowABCandDTotal);
 
     try {
       const { data } = await axiosReq.post("/budgets/", formData);
@@ -5075,6 +5162,7 @@ function BudgetCreate() {
     </Row>
     {/* "A"  "B" and "C" and "D" total */}
     {abovebelowabcanddTotal}
+    {contin}
     {grandtotal}
     {/* above components */}
     {/* info */}
@@ -5888,6 +5976,50 @@ function BudgetCreate() {
       postVersionTotal={postVersionTotal}
       setPostVersionTotal={setPostVersionTotal}
       setShow={setShowVers}  /> 
+    ) }
+    {/* Publicity */}
+    {!showPub ? (
+      ""
+    ) : (
+      <Publicity
+      postDataPublicity={postDataPublicity}
+      setPostDataPublicity={setPostDataPublicity}
+      pubTotal={pubTotal}
+      setPubTotal={setPubTotal}
+      setShow={setShowPub}  /> 
+    ) }
+    {/* Insurance */}
+    {!showInsur ? (
+      ""
+    ) : (
+      <Insurance
+      postDataInsurance={postDataInsurance}
+      setPostDataInsurance={setPostDataInsurance}
+      insurTotal={insurTotal}
+      setInsurTotal={setInsurTotal}
+      setShow={setShowInsur}  /> 
+    ) }
+    {/* General Expenses */}
+    {!showGenex ? (
+      ""
+    ) : (
+      <GeneralEx
+      postDataGeneralEx={postDataGeneralEx}
+      setPostDataGeneralEx={setPostDataGeneralEx}
+      genExTotal={genExTotal}
+      setGenExTotal={setGenExTotal}
+      setShow={setShowGenex}  /> 
+    ) }
+    {/* Indirect Costs */}
+    {!showIndir ? (
+      ""
+    ) : (
+      <IndirectCosts
+      postDataIndirectCo={postDataIndirectCo}
+      setPostDataIndirectCo={setPostDataIndirectCo}
+      indirCoTotal={indirCoTotal}
+      setIndirCoTotal={setIndirCoTotal}
+      setShow={setShowIndir}  /> 
     ) }
     {/* buttons */}
     <Row>

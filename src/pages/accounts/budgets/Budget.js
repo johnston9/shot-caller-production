@@ -20,7 +20,10 @@ const Budget = (props) => {
 
   const {// totals
     above_the_line_total, below_the_lineB_total, 
-    below_the_lineB_costs_total, b_labour_and_costs_total, grand_total,
+    below_the_lineB_costs_total, b_labour_and_costs_total, 
+    post_productionC_total, belowB_andC_total,
+    above_belowABC_total, otherD_total, above_belowABCandD_total,
+    grand_total,
     // details
     title, series, prodco, format, location, dated,
     // length
@@ -434,6 +437,21 @@ const Budget = (props) => {
     dubs, subtitles, closed_caption, versioning, trailers,
     ads, transfers_ver, prints_ver, dig_copies_ver, 
     other_copies_ver, postVersion_total,
+    // Publicity
+    tests_theater_ren, tests_other, unit_publicist,
+    pub_press_ex, photography, epk, promotion, pr, firnges_pub,
+    other_pub, previews, website, pub_total,
+    // Insurance
+    pro_package, gen_lia, eando, umbrella, 
+    union_insurance, other_in, insur_total,
+    // General Expenses
+    legal, medical, licences, payroll, bank_charges, audit,
+    genEx_total,
+    // Indirect Costs
+    corporate_overhead, interim_financing, fiscal_sponsor_fee,
+    indirCo_total,
+    // Contingency/Bond
+    contingency, completion_bond,
 
     } = budget;
 
