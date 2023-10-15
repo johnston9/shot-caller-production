@@ -541,6 +541,11 @@ const Budget = (props) => {
     {/* BUDGET ALL */}
     <div className='px-3'>
     <div className='mt-3 pl-5'>
+    <Row className={ `${styles.OverviewBlue} mx-1 my-5 py-3 text-center`}>
+    <Col md={12}>
+    <h5 className={ `${styles.BoldBlack}`}>BUDGET DETAIL PAGE</h5>
+    </Col>
+    </Row>
     <Row>
     <Col md={6} >
     <p className={`${styles.Underline}`}>
