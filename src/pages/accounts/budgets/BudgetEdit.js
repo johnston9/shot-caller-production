@@ -3998,6 +3998,11 @@ function BudgetEdit() {
     formData.append("below_the_lineB_total", belowTheLineBTotal);
     formData.append("below_the_lineB_costs_total", belowTheLineBCostsTotal);
     formData.append("b_labour_and_costs_total", bLabourandCostsTotal);
+    formData.append("post_productionC_total", postProductionCTotal);
+    formData.append("belowB_andC_total", belowBandCTotal);
+    formData.append("above_belowABC_total", aboveBelowABCTotal);
+    formData.append("otherD_total", otherDTotal);
+    formData.append("above_belowABCandD_total", aboveBelowABCandDTotal);
     formData.append("grand_total", grandTotal);
     // prepared by
     formData.append("dated", dated);
@@ -5110,11 +5115,6 @@ function BudgetEdit() {
     formData.append("contingency", contingency);
     formData.append("completion_bond", completion_bond);
     // formData.append("stars", stars);
-    formData.append("post_productionC_total", postProductionCTotal);
-    formData.append("belowB_andC_total", belowBandCTotal);
-    formData.append("above_belowABC_total", aboveBelowABCTotal);
-    formData.append("otherD_total", otherDTotal);
-    formData.append("above_belowABCandD_total", aboveBelowABCandDTotal);
 
     try {
       const { data } = await axiosReq.put(`/budgets/${budgetId}/`, formData);

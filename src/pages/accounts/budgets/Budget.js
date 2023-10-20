@@ -1448,6 +1448,19 @@ const Budget = (props) => {
     </Row>
     </div>
     </div>
+    {/* TOTAL - ABOVE THE LINE */}
+    <Row className='mt-3' >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    <p></p>
+    </Col>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={9} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - ABOVE THE LINE "A"</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Bold} mb-0`}>{above_the_line_total || 0}</p>
+    </Col>
+    </Row>
     </div>
     {/* BELOW THE LINE "B" PRODUCTION - LABOUR -----------------*/}
     <div className='px-3'>
@@ -5113,6 +5126,19 @@ const Budget = (props) => {
     </Col>
     </Row>
     </div>
+    {/* TOTAL - BELOW THE LINE "B" PRODUCTION */}
+    <Row className='mt-3' >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    <p></p>
+    </Col>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={9} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - "B" PRODUCTION - LABOUR </p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Bold} mb-0`}>{below_the_lineB_total || 0}</p>
+    </Col>
+    </Row>
     </div>
     {/* BELOW THE LINE "B" PRODUCTION - COSTS ----------------- */}
     <div className='px-3'>
@@ -5676,7 +5702,7 @@ const Budget = (props) => {
     <p className='mb-2'>26.00</p>
     </Col>
     <Col xs={10}>
-    <p className={ `${styles.BoldBlack} mb-2`}>TRAVEL & lIVING</p>
+    <p className={ `${styles.BoldBlack} mb-2`}>TRAVEL & LIVING</p>
     </Col>
     </Row>
     {/* Titles */}
@@ -7981,6 +8007,32 @@ const Budget = (props) => {
     </Col>
     </Row>
     </div>
+    {/* TOTAL - BELOW THE LINE "B" PRODUCTION - COSTS */}
+    <Row className='mt-3' >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    <p></p>
+    </Col>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={9} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - "B" PRODUCTION - COSTS </p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Bold} mb-0`}>{below_the_lineB_costs_total || 0}</p>
+    </Col>
+    </Row>
+    {/* TOTAL - BELOW THE LINE "B" PRODUCTION LABOUR AND COSTS */}
+    <Row className='mt-3' >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    <p></p>
+    </Col>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={9} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - "B" LABOUR AND COSTS </p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Bold} mb-0`}>{b_labour_and_costs_total || 0}</p>
+    </Col>
+    </Row>
     </div>
     {/* "C" POST PRODUCTION ----------------------------------- */}
     <div className='px-3'>
@@ -9803,8 +9855,47 @@ const Budget = (props) => {
     </Col>
     </Row>
     </div>
+    {/* TOTAL - POST PRODUCTION "C" */}
+    <Row className='mt-3 mb-3' >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    <p></p>
+    </Col>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={9} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - POST PRODUCTION "C" </p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Bold} mb-0`}>{post_productionC_total || 0}</p>
+    </Col>
+    </Row>
+    {/* TOTAL - BELOW "B" and "C" */}
+    <Row className='mt-3 mb-3' >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    <p></p>
+    </Col>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={9} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - BELOW "B" and "C" </p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Bold} mb-0`}>{belowB_andC_total || 0}</p>
+    </Col>
+    </Row>
+    {/* TOTAL - ABOVE/BELOW "A" "B" and "C" */}
+    <Row className='mt-3 mb-3' >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    <p></p>
+    </Col>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={9} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - ABOVE/BELOW "A" "B" and "C" </p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Bold} mb-0`}>{above_belowABC_total || 0}</p>
+    </Col>
+    </Row>
     </div>
-    {/* "D" OTHER -------------------------------------------------- */}
+    {/* "D" OTHER --------------------------------------------- */}
     <div className='px-3'>
     <Row className={ `${styles.OverviewBlue} mx-1 my-5 py-1 text-center`}>
     <Col md={12}>
