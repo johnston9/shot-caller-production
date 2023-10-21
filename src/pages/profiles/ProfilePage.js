@@ -55,7 +55,7 @@ function ProfilePage() {
 
   const mainProfile = (
     <>
-      <Row className={`px-3 text-center ${styles.Back}`}>
+      <Row className={`px-3 pt-2 text-center ${styles.Back}`}>
         <Col lg={3} className="text-lg-left">
         <Image
             className={styles.ProfileImage}

@@ -10426,6 +10426,19 @@ const Budget = (props) => {
     </Col>
     </Row>
     </div>
+    {/* TOTAL - OTHER "D" */}
+    <Row className='mt-3 mb-3' >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    <p></p>
+    </Col>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={9} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - OTHER "D" </p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Bold} mb-0`}>{otherD_total || 0}</p>
+    </Col>
+    </Row>
     </div>
     {/* TOTAL - A, B, C and D */}
     <div className='px-3 mt-3'>

@@ -11,10 +11,28 @@
 const BudgetTop = (props) => {
 const {setShowTop, budget} = props;
 
-const {above_the_line_total,
+const {above_the_line_total, below_the_lineB_total,
+  below_the_lineB_costs_total, b_labour_and_costs_total,
+  post_productionC_total, belowB_andC_total, grand_total,
+  above_belowABC_total, otherD_total, above_belowABCandD_total,
   dated, prelimfin, preparedby, approvedby, approvedbyco,
   title, series, prodco, writer, format, location,
   research, prep, shoot, wrap, post, length_total,
+  rights_total, development_total, scenario_total,
+  producers_dirs_total, stars_music_total, cast_total,
+  productionstaff_total, designlabour_total, constructionlabour_total,
+  dressinglabour_total, propertylabour_total, wranglerlabour_total,
+  fxlabour_total, wardrobelabour_total, makeuplabour_total,
+  cameralabour_total, electriclabour_total, griplabour_total,
+  soundlabour_total, transportlabour_total, tvspecificlabour_total,
+  proOff_total, studio_total, site_total, unit_total, traliv_total,
+  transport_total, constructionmat_total, artSup_total, dressing_total,
+  props_total, fx_total, animals_total, wardrobe_total, makeup_total,
+  camera_total, electric_total, grip_total, sound_total, secondU_total,
+  stockLab_total, postStaffFac_total, editing_total, postSound_total,
+  postLab_total, postTitles_total, postVersion_total, postVfx_total,
+  pub_total, insur_total, genEx_total, indirCo_total,
+  contingency, completion_bond,
 } = budget;
 
   return (
@@ -856,6 +874,19 @@ const {above_the_line_total,
     </Col>
     <Col md={2} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
     <p className="mb-2">{indirCo_total}</p>
+    </Col>
+    </Row>
+    {/* TOTAL - OTHER "D" */}
+    <Row className='mt-3 mb-3' >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    <p></p>
+    </Col>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={9} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - OTHER "D" </p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Bold} mb-0`}>{otherD_total || 0}</p>
     </Col>
     </Row>
     </div>

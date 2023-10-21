@@ -5118,6 +5118,7 @@ function BudgetEdit() {
 
     try {
       const { data } = await axiosReq.put(`/budgets/${budgetId}/`, formData);
+      // const { data } = await axiosReq.put(`/budgets/?project=${id}`, formData);
       console.log(data);
       history.goBack();
     } catch (err) {
@@ -6816,8 +6817,8 @@ function BudgetEdit() {
       postDataPostVersion={postDataPostVersion}
       setPostDataPostVersion={setPostDataPostVersion}
       postVersionTotal={postVersionTotal}
-      setPostTitlesTotal={setPostTitlesTotal}
-      setShow={setShowVers}  /> 
+      setPostVersionTotal={setPostVersionTotal}
+      setShow={setShowVers}   /> 
     ) }
     {/* Publicity */}
     {!showPub ? (
