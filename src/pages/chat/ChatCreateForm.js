@@ -174,7 +174,6 @@ function ChatCreateForm({setShow}) {
                 ref={imageInput}
               />
             </Form.Group>
-            <div className="d-md-none">{textFields}</div>
           </Container>
         </Col>
       </Row>

@@ -498,7 +498,7 @@ const Budget = (props) => {
        md={{span: 4, offset: 4 }} >
       <Link to={`/budgets/create/${projectId}`}>
       <div className={`px-1`}>
-      <spam className={ `${styles.Edit} py-1 px-5`}>Create Budget</spam>
+      <span className={ `${styles.Edit} py-1 px-5`}>Create Budget</span>
       </div>
       </Link>
       </Col>

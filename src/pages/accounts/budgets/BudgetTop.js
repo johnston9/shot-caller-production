@@ -126,7 +126,7 @@ const {above_the_line_total, below_the_lineB_total,
     <div className='px-3'>
     <Row className={ `${styles.OverviewBlue} mx-1 my-2 py-1 text-center`}>
     <Col md={12}>
-    <h5 className={ `${styles.BoldBlack}`}>ABOVE THE LINE {above_the_line_total} </h5>
+    <h5 className={ `${styles.BoldBlack}`}>ABOVE THE LINE</h5>
     </Col>
     </Row>
     {/* RIGHTS */}
@@ -205,7 +205,7 @@ const {above_the_line_total, below_the_lineB_total,
     </div>
     {/* BELOW THE LINE "B" PRODUCTION - LABOUR -----------------*/}
     <div className='px-3'>
-    <Row className={ `${styles.OverviewBlue} mx-1 my-5 py-1 text-center`}>
+    <Row className={ `${styles.OverviewBlue} mx-1 mt-3 mb-2 py-1 text-center`}>
     <Col md={12}>
     <h5 className={ `${styles.BoldBlack}`}>BELOW THE LINE - "B" PRODUCTION - LABOUR </h5>
     </Col>
@@ -418,7 +418,7 @@ const {above_the_line_total, below_the_lineB_total,
     </div>
     {/* BELOW THE LINE "B" PRODUCTION - COSTS ----------------- */}
     <div className='px-3'>
-    <Row className={ `${styles.OverviewBlue} mx-1 my-5 py-1 text-center`}>
+    <Row className={ `${styles.OverviewBlue} mx-1 mt-3 mb-2 py-1 text-center`}>
     <Col md={12}>
     <h5 className={ `${styles.BoldBlack}`}>BELOW THE LINE - "B" PRODUCTION - COSTS </h5>
     </Col>
@@ -692,7 +692,7 @@ const {above_the_line_total, below_the_lineB_total,
     </div>
     {/* "C" POST PRODUCTION ----------------------------------- */}
     <div className='px-3'>
-    <Row className={ `${styles.OverviewBlue} mx-1 my-5 py-1 text-center`}>
+    <Row className={ `${styles.OverviewBlue} mx-1 mt-3 mb-2 py-1 text-center`}>
     <Col md={12}>
     <h5 className={ `${styles.BoldBlack}`}>"C" POST PRODUCTION</h5>
     </Col>
@@ -823,7 +823,7 @@ const {above_the_line_total, below_the_lineB_total,
     </div>
     {/* "D" OTHER --------------------------------------------- */}
     <div className='px-3'>
-    <Row className={ `${styles.OverviewBlue} mx-1 my-5 py-1 text-center`}>
+    <Row className={ `${styles.OverviewBlue} mx-1 mt-3 mb-2 py-1 text-center`}>
     <Col md={12}>
     <h5 className={ `${styles.BoldBlack}`}>"D" OTHER</h5>
     </Col>
