@@ -59,9 +59,9 @@ const {above_the_line_total, below_the_lineB_total,
     <p className={`${styles.Underline}`}>Location</p>
     <p className={`${styles.Underline}`}>Dated</p>
     </Col>
-    <Col xs={4}>   
+    <Col xs={2}>   
     </Col>
-    <Col xs={4}>
+    <Col xs={6}>
     <p className={`${styles.Underline}`}>{title || "-"}</p>
     <p className={`${styles.Underline}`}>{series || "-"}</p>
     <p className={`${styles.Underline}`}>{prodco || "-"}</p>
@@ -74,7 +74,7 @@ const {above_the_line_total, below_the_lineB_total,
     </Col>
     <Col xs={12} md={6} >
     <Row className='mt-3 mt-md-0'>
-    <Col xs={4}>
+    <Col xs={7}>
     <p className={`${styles.Underline}`}>Development</p>
     <p className={`${styles.Underline}`}>Prep</p> 
     <p className={`${styles.Underline}`}>Shoot</p> 
@@ -82,7 +82,7 @@ const {above_the_line_total, below_the_lineB_total,
     <p className={`${styles.Underline}`}>Post</p>
     <p className={`${styles.Underline}`}>Length Total</p>
     </Col>
-    <Col xs={4}>
+    <Col xs={2}>
     <p className={`${styles.Underline}`}>{research || 0}</p>
     <p className={`${styles.Underline}`}>{prep || 0}</p>
     <p className={`${styles.Underline}`}>{shoot || 0}</p>
@@ -90,7 +90,7 @@ const {above_the_line_total, below_the_lineB_total,
     <p className={`${styles.Underline}`}>{post || 0}</p>
     <p className={`${styles.Underline}`}>{length_total}</p>   
     </Col>
-    <Col xs={4}>
+    <Col xs={3}>
     <p className={`${styles.Underline}`}>Weeks</p>
     <p className={`${styles.Underline}`}>Weeks</p>
     <p className={`${styles.Underline}`}>Weeks</p>
@@ -101,7 +101,8 @@ const {above_the_line_total, below_the_lineB_total,
     </Row>      
     </Col>
     </Row>
-    <div className='mt-1 px-2'>
+    {/* prepared by */}
+    <div className='mt-1 px-3'>
     <Row>
     <Col md={6} >
     <p className={`${styles.Underline}`}>
@@ -124,7 +125,7 @@ const {above_the_line_total, below_the_lineB_total,
     </div>
     {/* ABOVE THE LINE */}
     <div className='px-3'>
-    <Row className={ `${styles.OverviewBlue} mx-1 my-2 py-1 text-center`}>
+    <Row className={ `${styles.OverviewBlue} mx-1 mb-2 mt-3 py-1 text-center`}>
     <Col md={12}>
     <h5 className={ `${styles.BoldBlack}`}>ABOVE THE LINE</h5>
     </Col>

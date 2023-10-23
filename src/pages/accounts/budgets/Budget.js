@@ -483,7 +483,7 @@ const Budget = (props) => {
     </Row>
     {/* Add /Edit Budget */}
     {budget ? (
-    <Row className='mt-0 mb-4'>
+    <Row className='mt-0 mb-0'>
     <Col className="text-center">
     <Link to={`/budgets/edit/${projectId}`}>
     <div className={`px-1`}>
@@ -493,7 +493,7 @@ const Budget = (props) => {
     </Col>
     </Row>
     ) : (
-    <Row className='mt-0 mb-5'>
+    <Row className='mt-0 mb-0'>
       <Col className="text-center" xs={{span: 6, offset: 3 }} 
        md={{span: 4, offset: 4 }} >
       <Link to={`/budgets/create/${projectId}`}>
@@ -541,173 +541,16 @@ const Budget = (props) => {
     {/* BUDGET ALL */}
     <div className='px-3'>
     <div className='mt-3 pl-5'>
-    <Row className={ `${styles.OverviewBlue} mx-1 my-5 py-3 text-center`}>
+    <Row className={ `${styles.OverviewBlue} mx-1 my-3 py-3 text-center`}>
     <Col md={12}>
     <h5 className={ `${styles.BoldBlack}`}>BUDGET DETAIL PAGE</h5>
-    </Col>
-    </Row>
-    <Row>
-    <Col md={6} >
-    <p className={`${styles.Underline}`}>
-    BUDGET PREPARED BY: {preparedby}
-    </p>
-    <p className={`${styles.Underline}`}>
-    PRELIMINARY OR FINAL: {prelimfin}
-    </p>
-    </Col>
-    <Col md={6} className='pl-4' >
-    <p className={`${styles.Underline}`}>
-    BUDGET APPROVED BY: {approvedby}
-    </p>
-    <p className={`${styles.Underline}`}>
-    APPROVING COMPANY: {approvedbyco}
-    </p>
-    </Col>
-    </Row>
-    </div>
-    {/* TOTALS */}
-    <div>
-    <Row>
-    <Col md={6}>
-    {/* TOTAL - ABOVE THE LINE */}
-    <Row className='mt-3' >
-    <Col md={1} >
-    <p className={`${styles.Underline}`}></p>
-    <p></p>
-    </Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={9} >
-    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - ABOVE THE LINE "A"</p>
-    </Col>
-    <Col md={2} >
-    <p className={`${styles.Bold} mb-0`}>{above_the_line_total || 0}</p>
-    </Col>
-    </Row>
-    {/* TOTAL - BELOW THE LINE "B" PRODUCTION */}
-    <Row className='mt-3' >
-    <Col md={1} >
-    <p className={`${styles.Underline}`}></p>
-    <p></p>
-    </Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={9} >
-    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - "B" PRODUCTION - LABOUR </p>
-    </Col>
-    <Col md={2} >
-    <p className={`${styles.Bold} mb-0`}>{below_the_lineB_total || 0}</p>
-    </Col>
-    </Row>
-    {/* TOTAL - BELOW THE LINE "B" PRODUCTION - COSTS */}
-    <Row className='mt-3' >
-    <Col md={1} >
-    <p className={`${styles.Underline}`}></p>
-    <p></p>
-    </Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={9} >
-    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - "B" PRODUCTION - COSTS </p>
-    </Col>
-    <Col md={2} >
-    <p className={`${styles.Bold} mb-0`}>{below_the_lineB_costs_total || 0}</p>
-    </Col>
-    </Row>
-    {/* TOTAL - BELOW THE LINE "B" PRODUCTION LABOUR AND COSTS */}
-    <Row className='mt-3' >
-    <Col md={1} >
-    <p className={`${styles.Underline}`}></p>
-    <p></p>
-    </Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={9} >
-    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - "B" LABOUR AND COSTS </p>
-    </Col>
-    <Col md={2} >
-    <p className={`${styles.Bold} mb-0`}>{b_labour_and_costs_total || 0}</p>
-    </Col>
-    </Row>
-    {/* TOTAL - POST PRODUCTION "C" */}
-    <Row className='mt-3 mb-3' >
-    <Col md={1} >
-    <p className={`${styles.Underline}`}></p>
-    <p></p>
-    </Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={9} >
-    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - POST PRODUCTION "C" </p>
-    </Col>
-    <Col md={2} >
-    <p className={`${styles.Bold} mb-0`}>{post_productionC_total || 0}</p>
-    </Col>
-    </Row>
-    </Col>
-    <Col md={6}>
-    {/* TOTAL - BELOW "B" and "C" */}
-    <Row className='mt-3 mb-3' >
-    <Col md={1} >
-    <p className={`${styles.Underline}`}></p>
-    <p></p>
-    </Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={9} >
-    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - BELOW "B" and "C" </p>
-    </Col>
-    <Col md={2} >
-    <p className={`${styles.Bold} mb-0`}>{belowB_andC_total || 0}</p>
-    </Col>
-    </Row>
-    {/* TOTAL - ABOVE/BELOW "A" "B" and "C" */}
-    <Row className='mt-3 mb-3' >
-    <Col md={1} >
-    <p className={`${styles.Underline}`}></p>
-    <p></p>
-    </Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={9} >
-    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - ABOVE/BELOW "A" "B" and "C" </p>
-    </Col>
-    <Col md={2} >
-    <p className={`${styles.Bold} mb-0`}>{above_belowABC_total || 0}</p>
-    </Col>
-    </Row>
-    {/* TOTAL - OTHER "D" */}
-    <Row className='mt-3 mb-3' >
-    <Col md={1} >
-    <p className={`${styles.Underline}`}></p>
-    <p></p>
-    </Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={9} >
-    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - OTHER "D" </p>
-    </Col>
-    <Col md={2} >
-    <p className={`${styles.Bold} mb-0`}>{otherD_total || 0}</p>
-    </Col>
-    </Row>
-    {/* TOTAL - "A", "B", "C" and "D" */}
-    <Row className='mt-3 mb-3' >
-    <Col md={1} >
-    <p className={`${styles.Underline}`}></p>
-    <p></p>
-    </Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={9} >
-    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - "A", "B", "C" and "D" </p>
-    </Col>
-    <Col md={2} >
-    <p className={`${styles.Bold} mb-0`}>{above_belowABCandD_total || 0}</p>
-    </Col>
-    </Row>
-    {/* TOTAL - GRAND */}
-    <Row className='mt-3 mb-3' >
-    <Col md={1} >
-    <p className={`${styles.Underline}`}></p>
-    <p></p>
-    </Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={9} >
-    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - GRAND </p>
-    </Col>
-    <Col md={2} >
-    <p className={`${styles.Bold} mb-0`}>{grand_total || 0}</p>
-    </Col>
-    </Row>
     </Col>
     </Row>
     </div>
     {/* DETAILS LENGTH */}
     <div>
-    <Row className='px-5 mt-3'>
-    {/* details  */}
+    <Row className='px-5'>
+    {/* details */}
     <Col xs={12} md={6} >
     <Row>
     <Col xs={4}>
@@ -718,9 +561,9 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>Location</p>
     <p className={`${styles.Underline}`}>Dated</p>
     </Col>
-    <Col xs={4}>   
+    <Col xs={2}>   
     </Col>
-    <Col xs={4}>
+    <Col xs={6}>
     <p className={`${styles.Underline}`}>{title || "-"}</p>
     <p className={`${styles.Underline}`}>{series || "-"}</p>
     <p className={`${styles.Underline}`}>{prodco || "-"}</p>
@@ -730,10 +573,9 @@ const Budget = (props) => {
     </Col>
     </Row>  
     </Col>
-    <Col xs={12} md={6} >
-    {/* length */}
+    <Col xs={12} md={6} className='pl-5' >
     <Row className='mt-3 mt-md-0'>
-    <Col xs={4}>
+    <Col xs={7}>
     <p className={`${styles.Underline}`}>Development</p>
     <p className={`${styles.Underline}`}>Prep</p> 
     <p className={`${styles.Underline}`}>Shoot</p> 
@@ -741,15 +583,15 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>Post</p>
     <p className={`${styles.Underline}`}>Length Total</p>
     </Col>
-    <Col xs={4}>
+    <Col xs={2}>
     <p className={`${styles.Underline}`}>{research || 0}</p>
     <p className={`${styles.Underline}`}>{prep || 0}</p>
     <p className={`${styles.Underline}`}>{shoot || 0}</p>
     <p className={`${styles.Underline}`}>{wrap || 0}</p>
     <p className={`${styles.Underline}`}>{post || 0}</p>
-    <p className={`${styles.Underline}`}>{length_total || 0}</p>   
+    <p className={`${styles.Underline}`}>{length_total}</p>   
     </Col>
-    <Col xs={4}>
+    <Col xs={3}>
     <p className={`${styles.Underline}`}>Weeks</p>
     <p className={`${styles.Underline}`}>Weeks</p>
     <p className={`${styles.Underline}`}>Weeks</p>
@@ -761,9 +603,133 @@ const Budget = (props) => {
     </Col>
     </Row>
     </div>
+    {/* prepared by */}
+    <div className='mt-1 px-5'>
+    <Row>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>
+    BUDGET PREPARED BY: {preparedby}
+    </p>
+    <p className={`${styles.Underline}`}>
+    PRELIMINARY OR FINAL: {prelimfin}
+    </p>
+    </Col>
+    <Col md={6} className='pl-5'>
+    <p className={`${styles.Underline}`}>
+    BUDGET APPROVED BY: {approvedby}
+    </p>
+    <p className={`${styles.Underline}`}>
+    APPROVING COMPANY: {approvedbyco}
+    </p>
+    </Col>
+    </Row>
+    </div>
+    {/* TOTALS */}
+    <div className='mt-3 px-5'>
+    <Row>
+    <Col md={6}>
+    <div className='pl-2'>
+    {/* TOTAL - ABOVE THE LINE */}
+    <Row className='mt-3' >
+    <Col className={ `${styles.Overview} my-0 py-0`} md={10} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - ABOVE THE LINE "A"</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Bold} mb-0`}>{above_the_line_total || 0}</p>
+    </Col>
+    </Row>
+    {/* TOTAL - BELOW THE LINE "B" PRODUCTION */}
+    <Row className='mt-3' >
+    <Col className={ `${styles.Overview} my-0 py-0`} md={10} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - "B" PRODUCTION - LABOUR </p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Bold} mb-0`}>{below_the_lineB_total || 0}</p>
+    </Col>
+    </Row>
+    {/* TOTAL - BELOW THE LINE "B" PRODUCTION - COSTS */}
+    <Row className='mt-3' >
+    <Col className={ `${styles.Overview} my-0 py-0`} md={10} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - "B" PRODUCTION - COSTS </p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Bold} mb-0`}>{below_the_lineB_costs_total || 0}</p>
+    </Col>
+    </Row>
+    {/* TOTAL - BELOW THE LINE "B" PRODUCTION LABOUR AND COSTS */}
+    <Row className='mt-3' >
+    <Col className={ `${styles.Overview} my-0 py-0`} md={10} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - "B" LABOUR AND COSTS </p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Bold} mb-0`}>{b_labour_and_costs_total || 0}</p>
+    </Col>
+    </Row>
+    {/* TOTAL - POST PRODUCTION "C" */}
+    <Row className='mt-3 mb-3' >
+    <Col className={ `${styles.Overview} my-0 py-0`} md={10} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - POST PRODUCTION "C" </p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Bold} mb-0`}>{post_productionC_total || 0}</p>
+    </Col>
+    </Row>
+    </div>
+    </Col>
+    <Col md={6} className='pl-5' >
+    <div className='pl-2'>
+    {/* TOTAL - BELOW "B" and "C" */}
+    <Row className='mt-3 mb-3' >
+    <Col className={ `${styles.Overview} my-0 py-0`} md={10} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - BELOW "B" and "C" </p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Bold} mb-0`}>{belowB_andC_total || 0}</p>
+    </Col>
+    </Row>
+    {/* TOTAL - ABOVE/BELOW "A" "B" and "C" */}
+    <Row className='mt-3 mb-3' >
+    <Col className={ `${styles.Overview} my-0 py-0`} md={10} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - ABOVE/BELOW "A" "B" and "C" </p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Bold} mb-0`}>{above_belowABC_total || 0}</p>
+    </Col>
+    </Row>
+    {/* TOTAL - OTHER "D" */}
+    <Row className='mt-3 mb-3' >
+    <Col className={ `${styles.Overview} my-0 py-0`} md={10} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - OTHER "D" </p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Bold} mb-0`}>{otherD_total || 0}</p>
+    </Col>
+    </Row>
+    {/* TOTAL - "A", "B", "C" and "D" */}
+    <Row className='mt-3 mb-3' >
+    <Col className={ `${styles.Overview} my-0 py-0`} md={10} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - "A", "B", "C" and "D" </p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Bold} mb-0`}>{above_belowABCandD_total || 0}</p>
+    </Col>
+    </Row>
+    {/* TOTAL - GRAND */}
+    <Row className='mt-3 mb-3' >
+    <Col className={ `${styles.Overview} my-0 py-0`} md={10} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - GRAND </p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Bold} mb-0`}>{grand_total || 0}</p>
+    </Col>
+    </Row>
+    </div>
+    </Col>
+    </Row>
+    </div>
     {/* ABOVE THE LINE -----------------------------------------*/}
     <div className='px-3'>
-    <Row className={ `${styles.OverviewBlue} mx-1 my-5 py-1 text-center`}>
+    <Row className={ `${styles.OverviewBlue} mx- mt-5 mb-3 py-1 text-center`}>
     <Col md={12}>
     <h5 className={ `${styles.BoldBlack}`}>ABOVE THE LINE</h5>
     </Col>
@@ -1443,24 +1409,11 @@ const Budget = (props) => {
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL ABOVE THE LINE</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline} pt-2 mb-0`}>{above_the_line_total || 0}</p>
+    <p className={`${styles.Bold} pt-2 mb-0`}>{above_the_line_total || 0}</p>
     </Col>
     </Row>
     </div>
     </div>
-    {/* TOTAL - ABOVE THE LINE */}
-    <Row className='mt-3' >
-    <Col md={1} >
-    <p className={`${styles.Underline}`}></p>
-    <p></p>
-    </Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={9} >
-    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - ABOVE THE LINE "A"</p>
-    </Col>
-    <Col md={2} >
-    <p className={`${styles.Bold} mb-0`}>{above_the_line_total || 0}</p>
-    </Col>
-    </Row>
     </div>
     {/* BELOW THE LINE "B" PRODUCTION - LABOUR -----------------*/}
     <div className='px-3'>
@@ -5127,16 +5080,12 @@ const Budget = (props) => {
     </Row>
     </div>
     {/* TOTAL - BELOW THE LINE "B" PRODUCTION */}
-    <Row className='mt-3' >
-    <Col md={1} >
-    <p className={`${styles.Underline}`}></p>
-    <p></p>
-    </Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={9} >
+    <Row className='mt-5' >
+    <Col className={ `${styles.Overview} my-0 py-2`} md={10} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - "B" PRODUCTION - LABOUR </p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Bold} mb-0`}>{below_the_lineB_total || 0}</p>
+    <p className={`${styles.Bold} pt-2 mb-0`}>{below_the_lineB_total || 0}</p>
     </Col>
     </Row>
     </div>
@@ -8009,28 +7958,20 @@ const Budget = (props) => {
     </div>
     {/* TOTAL - BELOW THE LINE "B" PRODUCTION - COSTS */}
     <Row className='mt-3' >
-    <Col md={1} >
-    <p className={`${styles.Underline}`}></p>
-    <p></p>
-    </Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={9} >
+    <Col className={ `${styles.Overview} my-0 py-2`} md={10} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - "B" PRODUCTION - COSTS </p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Bold} mb-0`}>{below_the_lineB_costs_total || 0}</p>
+    <p className={`${styles.Bold} pt-2 mb-0`}>{below_the_lineB_costs_total || 0}</p>
     </Col>
     </Row>
     {/* TOTAL - BELOW THE LINE "B" PRODUCTION LABOUR AND COSTS */}
     <Row className='mt-3' >
-    <Col md={1} >
-    <p className={`${styles.Underline}`}></p>
-    <p></p>
-    </Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={9} >
+    <Col className={ `${styles.Overview} my-0 py-2`} md={10} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - "B" LABOUR AND COSTS </p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Bold} mb-0`}>{b_labour_and_costs_total || 0}</p>
+    <p className={`${styles.Bold} pt-2 mb-0`}>{b_labour_and_costs_total || 0}</p>
     </Col>
     </Row>
     </div>
@@ -9856,42 +9797,30 @@ const Budget = (props) => {
     </Row>
     </div>
     {/* TOTAL - POST PRODUCTION "C" */}
-    <Row className='mt-3 mb-3' >
-    <Col md={1} >
-    <p className={`${styles.Underline}`}></p>
-    <p></p>
-    </Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={9} >
+    <Row className='mt-5 mb-3' >
+    <Col className={ `${styles.Overview} my-0 py-2`} md={10} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - POST PRODUCTION "C" </p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Bold} mb-0`}>{post_productionC_total || 0}</p>
+    <p className={`${styles.Bold} pt-2 mb-0`}>{post_productionC_total || 0}</p>
     </Col>
     </Row>
     {/* TOTAL - BELOW "B" and "C" */}
     <Row className='mt-3 mb-3' >
-    <Col md={1} >
-    <p className={`${styles.Underline}`}></p>
-    <p></p>
-    </Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={9} >
+    <Col className={ `${styles.Overview} my-0 py-2`} md={10} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - BELOW "B" and "C" </p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Bold} mb-0`}>{belowB_andC_total || 0}</p>
+    <p className={`${styles.Bold} pt-2 mb-0`}>{belowB_andC_total || 0}</p>
     </Col>
     </Row>
     {/* TOTAL - ABOVE/BELOW "A" "B" and "C" */}
     <Row className='mt-3 mb-3' >
-    <Col md={1} >
-    <p className={`${styles.Underline}`}></p>
-    <p></p>
-    </Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={9} >
+    <Col className={ `${styles.Overview} my-0 py-2`} md={10} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - ABOVE/BELOW "A" "B" and "C" </p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Bold} mb-0`}>{above_belowABC_total || 0}</p>
+    <p className={`${styles.Bold} pt-2 mb-0`}>{above_belowABC_total || 0}</p>
     </Col>
     </Row>
     </div>
@@ -10427,32 +10356,23 @@ const Budget = (props) => {
     </Row>
     </div>
     {/* TOTAL - OTHER "D" */}
-    <Row className='mt-3 mb-3' >
-    <Col md={1} >
-    <p className={`${styles.Underline}`}></p>
-    <p></p>
-    </Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={9} >
+    <Row className='mt-5 mb-3' >
+    <Col className={ `${styles.Overview} my-0 py-2`} md={10} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - OTHER "D" </p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Bold} mb-0`}>{otherD_total || 0}</p>
+    <p className={`${styles.Bold} pt-2 mb-0`}>{otherD_total || 0}</p>
     </Col>
     </Row>
     </div>
     {/* TOTAL - A, B, C and D */}
     <div className='px-3 mt-3'>
-    <Row className='mt-5' >
-    <Col md={1} >
-    <p className={`${styles.Underline}`}></p>
-    <p></p>
-    </Col>
-    <Col className={ `${styles.Overview} my-0 py-2`} md={8} >
+    <Row >
+    <Col className={ `${styles.Overview} my-0 py-2`} md={10} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - "A", "B", "C" and "D" </p>
     </Col>
-    <Col md={1}></Col>
     <Col md={2} >
-    <p className={`${styles.Bold} mb-0 my-2`}>{above_belowABCandD_total || 0}</p>
+    <p className={`${styles.Bold} mb-0 pb-0 my-2`}>{above_belowABCandD_total || 0}</p>
     </Col>
     </Row>
     </div>
@@ -10484,16 +10404,11 @@ const Budget = (props) => {
     </Row>
     </div>
     {/* TOTAL - GRAND */}
-    <div className='px-3 mt-3'>
-    <Row className='mt-3 mb-3' >
-    <Col md={1} >
-    <p className={`${styles.Underline}`}></p>
-    <p></p>
-    </Col>
-    <Col className={ `${styles.Overview} my-3 py-3`} md={8} >
+    <div className='px-3 mt-5'>
+    <Row className='mb-3' >
+    <Col className={ `${styles.Overview} my-3 py-3`} md={10} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - GRAND </p>
     </Col>
-    <Col md={1}></Col>
     <Col md={2} className="pt-3" >
     <p className={`${styles.Bold} mt-3 mb-0`}>{grand_total || 0}</p>
     </Col>

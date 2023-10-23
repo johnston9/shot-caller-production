@@ -3184,10 +3184,10 @@ function BudgetCreate() {
     formData.append("post", post);
     formData.append("length_total", postDataLengthTotal);
     // ABOVE THE LINE
-    // rights 
+    // rights miscellaneous
     formData.append("story_rights", story_rights);
     formData.append("miscellaneous", miscellaneous);
-    formData.append("rights_total ", postDataRightsTotal);
+    formData.append("rights_total ", postDataRightsTotal); 
     // development
     formData.append("research_development", research_development);
     formData.append("prelim_budget", prelim_budget);
@@ -4002,7 +4002,7 @@ function BudgetCreate() {
     formData.append("loss_damage_cam", loss_damage_cam);
     formData.append("other_camera", other_camera);
     formData.append("camera_total", cameraTotal);
-    // Electric Equ 
+    // Electric Equ
     formData.append("basic_package_rent_elec", basic_package_rent_elec);
     formData.append("daily_rentals_elec", daily_rentals_elec);
     formData.append("specialty_rent_elec", specialty_rent_elec);
@@ -4203,14 +4203,34 @@ function BudgetCreate() {
     formData.append("dig_copies_ver", dig_copies_ver);
     formData.append("other_copies_ver", other_copies_ver);
     formData.append("postVersion_total", postVersionTotal);
+
+    try {
+      const { data } = await axiosReq.post("/budgets/", formData);
+      console.log(`submit1 ${data}`);
+      handleSubmit2(event);
+    } catch (err) {
+      console.log(err);
+      if (err.response?.status !== 401) {
+        setErrors(err.response?.data);
+      }
+    }
+  };
+
+  // Submit2
+  const handleSubmit2 = async (event) => {
+    event.preventDefault();
+    const formData = new FormData();
     // VFX
     formData.append("vfx_producer", vfx_producer);
     formData.append("vfx_supervisor", vfx_supervisor);
     formData.append("vfx_coordinator", vfx_coordinator);
-    formData.append("vfx_post_other_lab", vfx_post_other_lab);
     formData.append("vfx_storyboard", vfx_storyboard);
     formData.append("vfx_pre_vis_team", vfx_pre_vis_team);
     formData.append("vfx_post_vis_team", vfx_post_vis_team);
+    formData.append("vfx_post_other_lab", vfx_post_other_lab);
+    formData.append("miniatures_build", miniatures_build);
+    formData.append("miniatures_shoot", miniatures_shoot);
+    formData.append("motion_capture", motion_capture);
     formData.append("cyberscanning", cyberscanning);
     formData.append("vfx_rentals", vfx_rentals);
     formData.append("vfx_purchases", vfx_purchases);
@@ -4225,13 +4245,10 @@ function BudgetCreate() {
     formData.append("vfx_vendor_9", vfx_vendor_9);
     formData.append("vfx_vendor_10", vfx_vendor_10);
     formData.append("vfx_vendors_x", vfx_vendors_x);
-    formData.append("vfx_traliv", vfx_traliv);
     formData.append("vfx_expenses", vfx_expenses);
-    formData.append("miniatures_build", miniatures_build);
-    formData.append("miniatures_shoot", miniatures_shoot);
-    formData.append("motion_capture", motion_capture);
-    formData.append("lossdam_vfx", lossdam_vfx);
+    formData.append("vfx_traliv", vfx_traliv);
     formData.append("box_ren_vfx", box_ren_vfx);
+    formData.append("lossdam_vfx", lossdam_vfx);
     formData.append("fringes_taxes_vfx", fringes_taxes_vfx);
     formData.append("other_post_vfx", other_post_vfx);
     formData.append("postVfx_total", postVfxTotal);
@@ -4273,11 +4290,10 @@ function BudgetCreate() {
     // Contingency/Bond
     formData.append("contingency", contingency);
     formData.append("completion_bond", completion_bond);
-    // formData.append("stars", stars);
 
     try {
       const { data } = await axiosReq.post("/budgets/", formData);
-      console.log(data);
+      console.log(`submit2 ${data}`);
       history.goBack();
     } catch (err) {
       console.log(err);
@@ -4308,7 +4324,7 @@ function BudgetCreate() {
     </Row>
     <Form className="mt-3 px-3" onSubmit={handleSubmit}>
     {prepare}
-    {/* above total */}
+    {/* above + total */}
     <Row className={ `${styles.OverviewBlue} mx-1 mt-5 py-1`}>
     <Col md={10}>
     <p className={ `mb-0 ml-3 ${styles.BoldBlack}`}>ABOVE THE LINE</p>
