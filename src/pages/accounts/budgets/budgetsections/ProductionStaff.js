@@ -513,19 +513,19 @@ const ProductionStaff = (props) => {
     <Col md={5} >
     <p className="mb-0">Description</p>
     </Col>
-    <Col md={1} >
+    <Col md={1} className="text-center" >
     <p className="mb-0">#</p>
     </Col>
-    <Col className="px-0 mx-0" md={1} >
+    <Col className="text-center" md={1} >
     <p># Unit</p>
     </Col>
-    <Col md={1} >
+    <Col md={1} className="text-center" >
     <p className="mb-0">Unit</p>
     </Col>
-    <Col md={1} >
+    <Col md={1} className="text-center" >
     <p className="mb-0">Price</p>
     </Col>
-    <Col md={2} >
+    <Col md={2} className="text-center" >
     <p className="mb-0">Total</p>
     </Col>
     </Row>
@@ -1475,7 +1475,7 @@ const ProductionStaff = (props) => {
     <p className={`${styles.Underline}`}>07.92</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Production Accountant Assistant</p>
+    <p className={`${styles.Underline}`}>Script Supervisor / Continuity</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="scriptsupervisor_continuity_quantity" 
@@ -2232,7 +2232,7 @@ const ProductionStaff = (props) => {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col md={1} >
+    <Col md={1} className="text-center" >
     <p className={`${styles.Underline}`}>%</p>
     </Col>
     <Col md={1} >

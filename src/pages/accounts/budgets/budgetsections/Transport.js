@@ -172,19 +172,19 @@ const Transport = (props) => {
     <Col md={5} >
     <p className="mb-0">Description</p>
     </Col>
-    <Col md={1} >
+    <Col md={1} className="text-center" >
     <p className="mb-0">#</p>
     </Col>
-    <Col className="px-0 mx-0" md={1} >
+    <Col className="text-center" md={1} >
     <p># Unit</p>
     </Col>
-    <Col md={1} >
+    <Col md={1} className="text-center" >
     <p className="mb-0">Unit</p>
     </Col>
-    <Col md={1} >
+    <Col md={1} className="text-center" >
     <p className="mb-0">Price</p>
     </Col>
-    <Col md={2} >
+    <Col md={2} className="text-center" >
     <p className="mb-0">Total</p>
     </Col>
     </Row>
@@ -391,7 +391,7 @@ const Transport = (props) => {
         type="text"
         className={styles.Input}
         name="tp_manager_qty"
-        value={tp_captain_qty}
+        value={tp_manager_qty}
         onChange={handleChange}
             />
     </Form.Group>
@@ -669,7 +669,7 @@ const Transport = (props) => {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col md={1} >
+    <Col md={1} className="text-center" >
     <p className={`${styles.Underline}`}>%</p>
     </Col>
     <Col md={1} >

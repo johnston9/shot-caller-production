@@ -4760,7 +4760,7 @@ function BudgetCreate() {
     <Row>
     <Col md={8}>
     <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
-          onClick={() => setShowTraLiv(showTraLiv => !showTraLiv)} >Transportation
+          onClick={() => setShowTransport(showTransport => !showTransport)} >Transportation
     </p>
     </Col>
     <Col md={4}>

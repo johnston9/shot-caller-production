@@ -42,8 +42,8 @@ const Budget = (props) => {
     writers_quantity, writers_rate, writers_total,
     consultants_units_number, consultants_units_name,
     consultants_quantity, consultants_rate, consultants_total,
-    editors_units_number, editors_units_name,
-    editors_quantity, editors_rate, editors_scenario_total,
+    editors_scenario_units_number, editors_scenario_units_name,
+    editors_scenario_quantity, editors_scenario_rate, editors_scenario_total,
     admin_scenario_units_number, admin_scenario_units_name,
     admin_scenario_quantity, admin_scenario_rate, admin_scenario_total,
     office_expenses_scenario, travel_expenses_scenario,
@@ -1007,7 +1007,7 @@ const Budget = (props) => {
     <Col md={1} >
     <p className={`${styles.Underline}`}>{writers_quantity || 0}</p>
     <p className={`${styles.Underline}`}>{consultants_quantity || 0}</p>
-    <p className={`${styles.Underline}`}>{editors_quantity || 0}</p>
+    <p className={`${styles.Underline}`}>{editors_scenario_quantity || 0}</p>
     <p className={`${styles.Underline}`}>{admin_scenario_quantity || 0}</p>
     <p className={`${styles.Underline}`}></p>
     <p className={`${styles.Underline}`}></p>
@@ -1017,7 +1017,7 @@ const Budget = (props) => {
     <Col md={1} >
     <p className={`${styles.Underline}`}>{writers_units_number || 0}</p>
     <p className={`${styles.Underline}`}>{consultants_units_number || 0}</p>
-    <p className={`${styles.Underline}`}>{editors_units_number || 0}</p>
+    <p className={`${styles.Underline}`}>{editors_scenario_units_number || 0}</p>
     <p className={`${styles.Underline}`}>{admin_scenario_units_number || 0}</p>
     <p className={`${styles.Underline}`}></p>
     <p className={`${styles.Underline}`}></p>
@@ -1027,7 +1027,7 @@ const Budget = (props) => {
     <Col md={1} >
     <p className={`${styles.Underline}`}>{writers_units_name || 0}</p>
     <p className={`${styles.Underline}`}>{consultants_units_name || 0}</p>
-    <p className={`${styles.Underline}`}>{editors_units_name || 0}</p>
+    <p className={`${styles.Underline}`}>{editors_scenario_units_name || 0}</p>
     <p className={`${styles.Underline}`}>{admin_scenario_units_name || 0}</p>
     <p className={`${styles.Underline}`}></p>
     <p className={`${styles.Underline}`}></p>
@@ -1037,7 +1037,7 @@ const Budget = (props) => {
     <Col md={1} >
     <p className={`${styles.Underline}`}>{writers_rate || 0}</p>
     <p className={`${styles.Underline}`}>{consultants_rate || 0}</p>
-    <p className={`${styles.Underline}`}>{editors_rate || 0}</p>
+    <p className={`${styles.Underline}`}>{editors_scenario_rate || 0}</p>
     <p className={`${styles.Underline}`}>{admin_scenario_rate || 0}</p>
     <p className={`${styles.Underline}`}></p>
     <p className={`${styles.Underline}`}></p>

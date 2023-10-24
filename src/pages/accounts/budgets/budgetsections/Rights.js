@@ -58,19 +58,22 @@ const Rights = (props) => {
     <Col md={1} >
     <p className="mb-0">ACCT</p>
     </Col>
-    <Col md={6} >
+    <Col md={5} >
     <p className="mb-0">Description</p>
     </Col>
-    <Col md={1} >
+    <Col md={1} className="text-center" >
     <p className="mb-0">#</p>
     </Col>
-    <Col md={1} >
+    <Col className="text-center" md={1} >
+    <p># Unit</p>
+    </Col>
+    <Col md={1} className="text-center" >
     <p className="mb-0">Unit</p>
     </Col>
-    <Col md={1} >
+    <Col md={1} className="text-center" >
     <p className="mb-0">Price</p>
     </Col>
-    <Col md={2} >
+    <Col md={2} className="text-center" >
     <p className="mb-0">Total</p>
     </Col>
     </Row>
