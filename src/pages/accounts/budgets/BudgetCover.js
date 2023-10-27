@@ -16,14 +16,15 @@ const Budgetcover = (props) => {
   return (
     <div className='px-5 mx-md-5 mb-5'>
     <h5 style={{ textTransform: 'uppercase'}} 
-    className={`mt-1 mb-2 pl-5 py-1 text-center ${styles.SubTitle }`}>
+    className={`mt-1 pl-5 py-1 text-center ${styles.SubTitle }`}>
         Budget Cover Page
         <span style={{ textTransform: 'none'}} 
         className={`float-right ${styles.Close } pr-3`} 
         onClick={() => setShowCover(false) } >Close</span>
     </h5>
-    <div className='mt-5'>
-    <Row>
+    <div className={`${styles.TopSheet}`}>
+    <div >
+    <Row className='pt-3'>
       <Col className='d-none d-md-block' md={6}></Col>
     <Col md={6}>
     <p>
@@ -110,6 +111,7 @@ const Budgetcover = (props) => {
         className={`float-right ${styles.Close } pr-3`} 
         onClick={() => setShowCover(false) } >Close</span>
     </h5>
+    </div>
     </div>
   )
 }

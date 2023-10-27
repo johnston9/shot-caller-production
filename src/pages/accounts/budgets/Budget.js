@@ -9,8 +9,10 @@ import btnStyles from "../../../styles/Button.module.css";
 import Button from "react-bootstrap/Button";
 import Budgetcover from './BudgetCover';
 import BudgetTop from './BudgetTop';
+import Information from './Information';
 
 const Budget = (props) => {
+  const [showInfo, setShowInfo] = useState(false);
 
   const {
     budget1, projectId,
@@ -470,17 +472,26 @@ const Budget = (props) => {
     <h2 className={`py-2 ${styles.OverviewText} ${appStyles.playfair}
      text-center`} >{title} Budget Detail Page </h2>
     </div>
-    {/* back */}
-    <Row className="mt-1 ml-2" >
-        <Col xs={3}>
+    {/* back/INFO */}
+    <Row className="mt-1 ml-2 px-3" >
+        <Col xs={12}>
         <Button
           className={`${btnStyles.Button} ${btnStyles.Blue} mb-2`}
           onClick={() => history.goBack()}
         >
           Back
         </Button>
+        <Button
+          className={`float-right py-0 mt-1 ${btnStyles.Blue} ${btnStyles.Button}`}
+          onClick={() => setShowInfo(showInfo => !showInfo)} >Information
+        </Button>
         </Col>
     </Row>
+    {!showInfo ? (
+      ""
+          ) : (
+            <Information  /> 
+    ) }   
     {/* Add /Edit Budget */}
     {budget ? (
     <Row className='mt-0 mb-0'>

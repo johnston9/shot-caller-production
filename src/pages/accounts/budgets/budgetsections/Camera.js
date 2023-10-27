@@ -40,7 +40,8 @@ const Camera = (props) => {
     const handleChange = (event) => {
       setPostDataCamera({
       ...postDataCamera,
-      [event.target.name]: parseFloat(event.target.value || 0 ),
+      [event.target.name]: parseInt(event.target.value) ? parseInt(event.target.value) : '',
+    //   [event.target.name]: parseFloat(event.target.value.replace(/\D/,'') || 0 ),
       });
     }; 
 
@@ -303,12 +304,12 @@ const Camera = (props) => {
     <Form.Group controlId="dop_qty" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
-        type="text"
+        // type="number"
         className={styles.Input}
         name="dop_qty"
         value={dop_qty}
         onChange={handleChange}
-            />
+          />
     </Form.Group>
     {errors?.dop_qty?.map((message, idx) => (
         <Alert variant="warning" key={idx}>

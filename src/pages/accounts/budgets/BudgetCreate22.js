@@ -1,4 +1,4 @@
-/* Component in the Budget component to edit Budget */
+/* Component in the Account component to create Budgets */
 import React, { useEffect, useState } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
@@ -18,8 +18,8 @@ import StarsMusic from "./budgetsections/StarsMusic";
 import Cast from "./budgetsections/Cast";
 import ProductionStaff from "./budgetsections/ProductionStaff";
 import DesignLabour from "./budgetsections/DesignLabour";
-import SetDressingLabour from "./budgetsections/SetDressingLabour";
 import Construction from "./budgetsections/Construction";
+import SetDressingLabour from "./budgetsections/SetDressingLabour";
 import PropertyLabour from "./budgetsections/PropertyLabour";
 import Wrangling from "./budgetsections/Wrangling";
 import SpecialEffects from "./budgetsections/SpecialEffects";
@@ -62,15 +62,15 @@ import Publicity from "./budgetsectionsother/Publicity";
 import Insurance from "./budgetsectionsother/Insurance";
 import GeneralEx from "./budgetsectionsother/GeneralEx";
 import IndirectCosts from "./budgetsectionsother/IndirectCosts";
-import InfoBudEdit from "./InfoBudEdit";
-import Globals from "./Globals";
+// import Publicity from "./budgetsectionsother/Publicity";
+// import Insurance from "./budgetsectionsother/Insurance";
+// import GeneralEx from "./budgetsectionsother/GeneralEx";
+// import IndirectCosts from "./budgetsectionsother/IndirectCosts";
 
-function BudgetEdit() {
+function BudgetCreate() {
   const [errors, setErrors] = useState({});
   const history = useHistory();
   const { id } = useParams();
-  const [showInformation, setShowInformation] = useState(false);
-  const [showGlobals, setShowGlobals] = useState(false);
 
   const [showInfo, setShowInfo] = useState(false);
   const [showRights, setShowRights] = useState(false);
@@ -125,11 +125,8 @@ function BudgetEdit() {
   const [showInsur, setShowInsur] = useState(false);
   const [showGenex, setShowGenex] = useState(false);
   const [showIndir, setShowIndir] = useState(false);
-  
-  // budget id
-  const [budgetId, setBudgetId] = useState("");
 
-  // INFO / LENGTH-------------------------------
+  // INFO / LENGTH -------------------------
   // Info postData 
   const [postDataDetails, setPostDataDetails] = useState({
     // details
@@ -174,7 +171,7 @@ function BudgetEdit() {
     });
   };
 
-  // prepared by input boxes to display on the Edit page on top
+  // prepared by input boxes
   const prepare = (
     <div>
     <Row>
@@ -335,10 +332,10 @@ function BudgetEdit() {
   const {research_development, prelim_budget, consultant_expenses,
     office_expenses, staff, travel_expenses_development,
     living_expenses_development, other_development,
-    fringes_taxes_development,} = postDataDevelopment
+    fringes_taxes_development,} = postDataDevelopment;
 
   // Development Total postData 
-  const [developmentTotal, setDevelopmentTotal] = useState(0)
+  const [developmentTotal, setDevelopmentTotal] = useState(0);
 
   // SCENARIO --------------------------------------------
   
@@ -394,7 +391,7 @@ function BudgetEdit() {
 
   // PRODUCERS DIRECTORS --------------------------------------------
   
-  // producers postData
+  // producers/directors postData
   const [postDataProducersDirs, setPostDataProducersDirs] = useState({
     executive_producers_rate: 0,
     producers_rate: 0,
@@ -454,10 +451,10 @@ function BudgetEdit() {
   const [unit2DirectorsTotal, setUnit2DirectorsTotal] = useState(0);
 
   // ProducersDirs Total postData 
-  const [producersDirsTotal, setProducersDirsTotal] = useState(0);
+  const [producersDirsTotal, setProducersDirsTotal] = useState(0)
 
   // STARS / MUSIC ------------------------------------------
-  // Stars postData
+  // Stars Music postData
   const [postDataStarsMusic, setPostDataStarsMusic] = useState({
     stars: 0,
     stars_rights_payments: 0,
@@ -480,12 +477,14 @@ function BudgetEdit() {
     living_expenses_stars, other_stars, fringes_taxes_stars,
     music, music_supervisor, travel_expenses_music, living_expenses_music,
     music_rights_addl_songs, other_music, fringes_taxes_music,
-  } = postDataStarsMusic; 
+  } = postDataStarsMusic;
 
   // StarsMusic Total postData 
-  const [starsMusicTotal, setStarsMusicTotal] = useState(0)
+  const [starsMusicTotal, setStarsMusicTotal] = useState(0);
 
-  // BELOW THE LINE - "B" PRODUCTION
+  // end Above the Line
+
+  // BELOW THE LINE - "B" PRODUCTION ---------------------------------------
 
   // CAST ----  ----------------------------------------
   
@@ -886,7 +885,7 @@ function BudgetEdit() {
 
   // construction Labour Total postData 
   const [constructionlabourTotal, setConstructionlabourTotal] = useState(0);
-  
+
   // SET DRESSING LABOUR ----------------------------------
 
   // Set Dressing Labour postData 
@@ -932,7 +931,8 @@ function BudgetEdit() {
     swing_gang_quantity, swing_gang_units_number,
     swing_gang_units_name, swing_gang_rate,
     set_dressing_buyer_quantity, set_dressing_buyer_units_number,
-    set_dressing_buyer_units_name, set_dressing_buyer_rate, other_set_dressing,
+    set_dressing_buyer_units_name, set_dressing_buyer_rate, 
+    other_set_dressing,
   } = postDataSetDressing;
 
   // Totals
@@ -954,7 +954,7 @@ function BudgetEdit() {
   // set dressing buyer Total postData
   const [dressingbuyerTotal, setDressingbuyerTotal] = useState(0);
 
-  // Set Dressing Labour Total postData 
+  // set dressing Labour Total postData 
   const [dressinglabourTotal, setDressinglabourTotal] = useState(0);
 
   // PROPERTY LABOUR ----------------------------------
@@ -985,7 +985,6 @@ function BudgetEdit() {
     other_property: 0,
   });
 
-  // Property Labour postData values
   const {fringes_taxes_property,
     property_master_quantity, property_master_units_number,
     property_master_units_name, property_master_rate,
@@ -998,7 +997,7 @@ function BudgetEdit() {
     armorer_quantity, armorer_units_number,
     armorer_units_name, armorer_rate,
     other_property,} = postDataProperty;
-  
+
   // Totals
   // property master Total postData
   const [propertymasterTotal, setPropertymasterTotal] = useState(0);
@@ -1137,7 +1136,7 @@ function BudgetEdit() {
     truck_costumer_units_name, truck_costumer_rate,
     other_wardrobe_labour_quantity, other_wardrobe_labour_units_number,
     other_wardrobe_labour_units_name, other_wardrobe_labour_rate,
-    fringes_taxes_wardrobe, } = postDataWardrobe;
+    fringes_taxes_wardrobe,} = postDataWardrobe;
 
   // Totals
   // costume designer Total postData 
@@ -1200,38 +1199,23 @@ function BudgetEdit() {
     sfx_makeup_rate: 0,
   });
 
-  const {makeup_dept_head_quantity,
-    makeup_dept_head_units_number,
-    makeup_dept_head_units_name,
-    makeup_dept_head_rate,
-    key_makeup_quantity,
-    key_makeup_units_number,
-    key_makeup_units_name,
-    key_makeup_rate,
-    makeup_artist_quantity,
-    makeup_artist_units_number,
-    makeup_artist_units_name,
-    makeup_artist_rate,
-    key_hairstylist_quantity,
-    key_hairstylist_units_number,
-    key_hairstylist_units_name,
-    key_hairstylist_rate,
-    hairdresser_quantity,
-    hairdresser_units_number,
-    hairdresser_units_name,
-    hairdresser_rate,
-    hair_makeup_dailies_quantity,
-    hair_makeup_dailies_units_number,
-    hair_makeup_dailies_units_name,
-    hair_makeup_dailies_rate,
-    other_makeup_labour_quantity,
-    other_makeup_labour_units_number,
-    other_makeup_labour_units_name,
-    other_makeup_labour_rate,
-    sfx_makeup_quantity,
-    sfx_makeup_units_number,
-    sfx_makeup_units_name,
-    sfx_makeup_rate, fringes_taxes_makeup,} = postDataMakeup;
+  const {makeup_dept_head_quantity, makeup_dept_head_units_number,
+    makeup_dept_head_units_name, makeup_dept_head_rate,
+    key_makeup_quantity, key_makeup_units_number,
+    key_makeup_units_name, key_makeup_rate,
+    makeup_artist_quantity, makeup_artist_units_number,
+    makeup_artist_units_name, makeup_artist_rate,
+    key_hairstylist_quantity, key_hairstylist_units_number,
+    key_hairstylist_units_name, key_hairstylist_rate,
+    hairdresser_quantity, hairdresser_units_number,
+    hairdresser_units_name, hairdresser_rate,
+    hair_makeup_dailies_quantity, hair_makeup_dailies_units_number,
+    hair_makeup_dailies_units_name, hair_makeup_dailies_rate,
+    other_makeup_labour_quantity, other_makeup_labour_units_number,
+    other_makeup_labour_units_name, other_makeup_labour_rate,
+    sfx_makeup_quantity, sfx_makeup_units_number,
+    sfx_makeup_units_name, sfx_makeup_rate,
+    fringes_taxes_makeup,} = postDataMakeup;
   
   // Totals
   // head makeup Total postData 
@@ -1255,7 +1239,7 @@ function BudgetEdit() {
   // other makeup labour Total postData 
   const [othermakeuplabourTotal, setOthermakeuplabourTotal] = useState(0);
 
-  // sfx makeup labour Total postData 
+  // sfxmakeup labour Total postData 
   const [sfxmakeupTotal, setSfxmakeupTotal] = useState(0);
 
   // Makeup Labour Total postData 
@@ -1346,7 +1330,7 @@ function BudgetEdit() {
   // Drone Pilot Total postData 
   const [dronepilotTotal, setDronepilotTotal] = useState(0);
 
-  // other cam Total postData 
+  // Other Camera Total postData 
   const [othercamTotal, setOthercamTotal] = useState(0);
 
   // Stills Total postData 
@@ -1386,14 +1370,13 @@ function BudgetEdit() {
     other_elec_rt: 0,
   });
 
-  // values
   const {gaffer_qty, gaffer_uno, gaffer_una, gaffer_rt,
     best_boy_qty, best_boy_uno, best_boy_una, best_boy_rt,
     electrician_qty, electrician_uno, electrician_una, electrician_rt,
     dailies_elec_qty, dailies_elec_uno, dailies_elec_una, dailies_elec_rt,
     generator_op_qty, generator_op_uno, generator_op_una, generator_op_rt,
     other_elec_qty, other_elec_uno, other_elec_una, other_elec_rt,
-    fringes_taxes_electric,} = postDataElectric;
+    fringes_taxes_electric, } = postDataElectric;
 
   // Totals
   // gaffer Total postData 
@@ -1675,7 +1658,7 @@ function BudgetEdit() {
 
   // end below B Labour
 
-  // BELOW PRODUCTION B COSTS -------------------------------
+  // BELOW PRODUCTION B COSTS ----------------------------------------------
 
   // PRODUCTION OFFICE EXPENSES ------------------------------
 
@@ -1757,9 +1740,9 @@ function BudgetEdit() {
 
   const [unitTotal, setUnitTotal] = useState(0);
 
-  // Travel and Living EXPENSES ------------------------------
+  // TRAVEL & LIVING -----------------------------------
 
-  // travel and Living postData
+  // travel and living postData
   const [postDataTraLiv, setPostDataTraLiv] = useState({
     fares: 0,
     accomatation_hotels: 0,
@@ -1771,11 +1754,11 @@ function BudgetEdit() {
   });
 
   const {fares, accomatation_hotels, per_diems, taxis_limos,
-    shipping, other_trav_liv, customs_brokerage} = postDataTraLiv;
+    shipping, other_trav_liv, customs_brokerage,} = postDataTraLiv;
 
   const [tralivTotal, setTralivTotal] = useState(0);
 
-  // TRANSPORTATION ------------------------------
+  // TRANSPORTATION --------------------------------------
 
   // Transport postData
   const [postDataTransportation, setPostDataTransportation] = useState({
@@ -1818,8 +1801,7 @@ function BudgetEdit() {
 
   const {rentals_carpentry, carpentry_purchases, painting_rentals,
     painting_purchases, backdrops_murals, construction_other,
-    scaffolding, warehouse_rental,
-  } = postDataConstructionMat;
+    scaffolding, warehouse_rental,} = postDataConstructionMat;
 
   const [constructionMatTotal, setConstructionMatTotal] = useState(0);
 
@@ -1952,7 +1934,7 @@ function BudgetEdit() {
 
   // CAMERA EQUIPMENT ------------------------------
 
-  // Camera postData
+  // Camera Equipment postData
   const [postDataCameraEqu, setPostDataCameraEqu] = useState({
     basic_package_rent_cam: 0,
     daily_rentals_cam: 0,
@@ -1965,16 +1947,16 @@ function BudgetEdit() {
     other_camera: 0,
   });
 
-  const  {basic_package_rent_cam, daily_rentals_cam, 
+  const  {basic_package_rent_cam, daily_rentals_cam, other_camera,
     specialty_rent_cam, camera_purchases, steadicam,
-    video_teleprompter, camera_ship_brok, loss_damage_cam, other_camera,
+    video_teleprompter, camera_ship_brok, loss_damage_cam,
   } = postDataCameraEqu;
 
   const [cameraTotal, setCameraTotal] = useState(0);
 
-  // ELECTRICAL EQUIPMENT ------------------------------
+  // ELECTRICAL EQUIPMENT ------------------------------ 
 
-  // Electric postData
+  // Electric Equipment postData
   const [postDataElectricEqu, setPostDataElectricEqu] = useState({
     basic_package_rent_elec: 0,
     daily_rentals_elec: 0,
@@ -2037,9 +2019,9 @@ function BudgetEdit() {
   const [postDataSecondU, setPostDataSecondU] = useState({
     crew_2U: 0,
     equipment_2U: 0,
-    mat_sup_2U: 0,
     travliv_2U: 0,
     transport_2U: 0,
+    mat_sup_2U: 0,
     aerial_unit: 0,
     marine_unit: 0,
     fringes_taxes_2U: 0,
@@ -2083,7 +2065,7 @@ function BudgetEdit() {
 
   // POST PRODUCTION STAFF/FACILITIES ------------------------------
   
-  // Post Staff/Facilities postData
+  // Post Production Staff/Facilities postData
   const [postDataPostStaffFac, setPostDataPostStaffFac] = useState({
     post_supervisor_qty: 0,
     post_supervisor_uno: 0,
@@ -2129,10 +2111,11 @@ function BudgetEdit() {
     post_accountants_una, post_accountants_rt,
     post_accountants_ass_qty, post_accountants_ass_uno,
     post_accountants_ass_una, post_accountants_ass_rt,
-    post_office_rent, post_office_equ, post_office_sup, post_consultant,
+    post_office_rent, post_office_equ, post_office_sup, post_consultant, 
     post_it_network, post_phone_net, post_computers_soft, post_store,
     post_ship, post_craft, fringes_taxes_post, post_other,
   } = postDataPostStaffFac;
+  // postStaffFac_total
 
   // Totals
   // Post Production Supervisor Total postData
@@ -2150,12 +2133,12 @@ function BudgetEdit() {
   // Post Production Accountants Assistants Total postData
   const [postAccountAssTotal, setPostAccountAssTotal] = useState(0);
 
-  // POST PRODUCTION STAFF/FACILITIES Total postData
+  // Post Production Staff/Facilities Total postData
   const [postStaffFacTotal, setPostStaffFacTotal] = useState(0);
 
   // EDITING -------------------------------------------------------
 
-  // data Editing
+  // Editing
   const [postDataEdit, setPostDataEdit] = useState({
     editor_qty: 0,
     editor_uno: 0,
@@ -2196,6 +2179,7 @@ function BudgetEdit() {
     edit_rooms, edit_equip, edit_equip_nonlin, online,
     vfx_ed_system, post_edit_pur, lossdam_edit, fringes_taxes_post_edit,
     other_post_edit,} = postDataEdit;
+  // editing_total
 
   // Totals
   // Editor Total postData
@@ -2269,6 +2253,7 @@ function BudgetEdit() {
     post_sound_edit_pur, adr, foley, pre_mix, mix, printmaster, transfers_deliverables,
     lossdam_sound, fringes_taxes_post_sound, other_post_sound,
   } = postDataPostSound;
+  // postSound_total
 
   // Totals
   // Sound Designer Total postData
@@ -2299,10 +2284,13 @@ function BudgetEdit() {
     vfx_producer: 0,
     vfx_supervisor: 0,
     vfx_coordinator: 0,
-    vfx_post_other_lab: 0,
     vfx_storyboard: 0,
     vfx_pre_vis_team: 0,
     vfx_post_vis_team: 0,
+    vfx_post_other_lab: 0,
+    miniatures_build: 0,
+    miniatures_shoot: 0,
+    motion_capture: 0,
     cyberscanning: 0,
     vfx_rentals: 0,
     vfx_purchases: 0,
@@ -2317,9 +2305,6 @@ function BudgetEdit() {
     vfx_vendor_9: 0,
     vfx_vendor_10: 0,
     vfx_vendors_x: 0,
-    miniatures_build: 0,
-    miniatures_shoot: 0,
-    motion_capture: 0,
     vfx_expenses: 0,
     vfx_traliv: 0,
     box_ren_vfx: 0,
@@ -2341,7 +2326,7 @@ function BudgetEdit() {
   // POST VISUAL EFFECTS Total postData
   const [postVfxTotal, setPostVfxTotal] = useState(0);
 
-  // POST LAB & VIDEO COPIES ----------------------------
+  // POST LAB & VIDEO COPIES ----------------------------------
 
   // Post Lab/Video Copies
   const [postDataPostLab, setPostDataPostLab] = useState({
@@ -2357,13 +2342,15 @@ function BudgetEdit() {
   });
 
   const {stock, neg_cutting, color_cor, interpos_neg, prints,
-    transfers, other_media_delivery, distribution_copies, storage_post,
+    transfers, other_media_delivery, distribution_copies, 
+    storage_post,
   } = postDataPostLab;
+  // postLab_total
 
   // POST LAB/VIDEO COPIES Total postData
   const [postLabTotal, setPostLabTotal] = useState(0);
 
-  // POST TITLES/OPTICALS/STOCK FOOTAGE -----------------
+  // POST TITLES/OPTICALS/STOCK FOOTAGE ----------------------
 
   // Post Titles/Opticals/Stock Footage
   const [postDataPostTitles, setPostDataPostTitles] = useState({
@@ -2375,11 +2362,12 @@ function BudgetEdit() {
 
   const {titles, opticals, stock_footage, con_script_ccsl,
   } = postDataPostTitles;
+  // postTitles_total
 
   // POST TITLES Total postData
   const [postTitlesTotal, setPostTitlesTotal] = useState(0);
 
-  // POST VERSIONING/CLOSED-CAPTIONING/COPIES -------------
+  // POST VERSIONING/CLOSED-CAPTIONING/DUBS/COPIES -------------
 
   // Post Versioning
   const [postDataPostVersion, setPostDataPostVersion] = useState({
@@ -2396,13 +2384,17 @@ function BudgetEdit() {
   });
 
   const {dubs, subtitles, closed_caption, versioning, trailers,
-    ads, transfers_ver, prints_ver, dig_copies_ver, other_copies_ver,
+    ads, transfers_ver, prints_ver, dig_copies_ver, 
+    other_copies_ver,
   } = postDataPostVersion;
+  // postVersion_total
 
   // POST VERSIONING/CLOSED-CAPTIONING/COPIES Total postData
   const [postVersionTotal, setPostVersionTotal] = useState(0);
 
-  // "D" - OTHER -------------------------------------------------
+  // end below "C"
+
+  // "D" - OTHER --------------------------------------------------------
 
   // PUBLICITY ----------------------------------------------
   
@@ -2422,9 +2414,9 @@ function BudgetEdit() {
     website: 0,
   });
 
-  const {tests_theater_ren, tests_other, unit_publicist,
-    pub_press_ex, photography, epk, promotion, pr, firnges_pub,
-    other_pub, previews, website,
+  const {tests_theater_ren, tests_other,
+    unit_publicist, pub_press_ex, photography, epk,
+    promotion, pr, firnges_pub, other_pub, previews, website,
   } = postDataPublicity;
 
   // PUBLICITY Total postData
@@ -2482,7 +2474,7 @@ function BudgetEdit() {
   // INDIRECT COSTS Total postData
   const [indirCoTotal, setIndirCoTotal] = useState(0);
 
-  // CONTINGENCY/BOND ETC --------------------------------------------------
+  // CONTINGENCY/BOND --------------------------------------
   
   //  postData Contingency/Bond
   const [postDataContingency, setPostDataContingency] = useState({
@@ -2502,7 +2494,7 @@ function BudgetEdit() {
   };
 
   const contin = (
-    <div>
+    <div className="mt-3">
     {/* Contingency */}
     <Row>
     <Col md={1} >
@@ -2576,9 +2568,9 @@ function BudgetEdit() {
     </div>
   );
 
-  // TOTALS ABOVE / BELOW / GRAND --------------------------------
+  // TOTALS ABOVE / BELOW / GRAND -----------------------------
 
-  // Above the line total --------------------------
+  // Above the line  ------------------------------------
 
   // Above the line Total postData 
   const [aboveTheLineTotal, setAboveTheLineTotal] = useState(0);
@@ -2606,7 +2598,7 @@ function BudgetEdit() {
   // Above the line input box
   // eslint-disable-next-line
   const abovethelinetotal = (
-    <div className="my-2 pl-3">
+    <div className="my-0 pl-3">
     <Row>
     <Col className={ `${styles.Overview}  my-0 py-2`} md={10} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL ABOVE THE LINE</p>
@@ -2632,12 +2624,12 @@ function BudgetEdit() {
     </div>
   );
 
-  // Below the line B Labour total -------------------------------
+  // Below the line B Labour -----------------------------------
 
-  // Below the line B Total postData 
+  // Below the line B Total Labour postData 
   const [belowTheLineBTotal, setBelowTheLineBTotal] = useState(0);
 
-  // function to add all Below the line totals on change
+  // function to add all Below the line labour totals on change
   useEffect(() => {
     const addbelowB = () => {
       setBelowTheLineBTotal(
@@ -2675,7 +2667,7 @@ function BudgetEdit() {
   // Below the line input box
   // eslint-disable-next-line
   const belowthelineBtotal = (
-    <div className="my-2 pl-3">
+    <div className="my-0 pl-3">
     <Row>
     <Col className={ `${styles.Overview}  my-0 py-2`} md={10} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL BELOW THE LINE - "B" PRODUCTION</p>
@@ -2701,7 +2693,7 @@ function BudgetEdit() {
     </div>
   );
 
-  // Below the line B Costs total -------------------------------
+  // Below the line B Costs total ----------------------------------
 
   // Below the line B Total Costs postData 
   const [belowTheLineBCostsTotal, setBelowTheLineBCostsTotal] = useState(0);
@@ -2831,7 +2823,7 @@ function BudgetEdit() {
 
   // function to add all Post Production "C" totals on change
   useEffect(() => {
-    const addPostProC = () => {
+    const adddPostProC = () => {
       setPostProductionCTotal(
         parseFloat(postStaffFacTotal || 0) +
         parseFloat(editingTotal || 0) +
@@ -2843,7 +2835,7 @@ function BudgetEdit() {
         )
       }
     const timer = setTimeout(() => {
-      addPostProC();
+      adddPostProC();
     }, 1000);
 
     return () => {
@@ -2903,7 +2895,7 @@ function BudgetEdit() {
     };
   }, [bLabourandCostsTotal, postProductionCTotal]);
 
-  // below B and C input box --- belowbandcTotal abovebelowabcTotal
+  // below B and C input box ---------------------
   // eslint-disable-next-line
   const belowbandcTotal = (
     <div className="mt-3 pl-3">
@@ -2932,7 +2924,7 @@ function BudgetEdit() {
     </div>
   );
 
-  // ABOVE AND BELOW A, B C TOTAL ---------------------------
+  // ABOVE AND BELOW A, B & C TOTAL ---------------------------
 
   // A, B & C Total postData 
   const [aboveBelowABCTotal, setAboveBelowABCTotal] = useState(0);
@@ -2954,7 +2946,7 @@ function BudgetEdit() {
     };
   }, [aboveTheLineTotal, belowBandCTotal]);
 
-  // A B and C input box
+  // above and below A B and C input box
   // eslint-disable-next-line
   const abovebelowabcTotal = (
     <div className="mt-3 pl-3">
@@ -3112,7 +3104,7 @@ function BudgetEdit() {
 
   // Grand input box
   const grandtotal = (
-    <div className="my-2 pl-3">
+    <div className="mt-3 pl-3">
     <Row>
     <Col className={ `${styles.Overview}  my-0 py-2`} md={10} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>GRAND TOTAL</p>
@@ -3138,8 +3130,9 @@ function BudgetEdit() {
     </div>
   );
 
-  // end totals------------------------
+  // end totals-------------------------
 
+  // Buttons
   const buttons = (
     <div className="text-center mt-3">    
       <Button
@@ -3153,852 +3146,6 @@ function BudgetEdit() {
       </Button>
     </div>
   );
-
-  // USE EFFECT EDIT
-  // Fetch budget for edit pre-filled values
-  useEffect(() => {
-    const handleMount = async () => {
-      try {
-        const { data } = await axiosReq.get(`/budgets/?project=${id}`);
-        console.log(data.results[0])
-        setBudgetId(data.results[0].id);
-        // details
-        const { title, series, prodco, format, location, dated, writer,
-          prelimfin, preparedby, approvedby, approvedbyco} = data.results[0];
-        setPostDataDetails({ title, series, prodco, format, location, dated,
-          writer, prelimfin, preparedby, approvedby, approvedbyco });
-        // length
-        const {research, prep, shoot, wrap, post, length_total} = data.results[0];
-        setPostDataLength({research, prep, shoot, wrap, post});
-        setPostDataLengthTotal(length_total);
-        // rights
-        const {story_rights, miscellaneous, rights_total} = data.results[0];
-        setPostDataRights({story_rights, miscellaneous});
-        setPostDataRightsTotal(rights_total);
-        // development
-        const {research_development, prelim_budget, consultant_expenses,
-          office_expenses, staff, travel_expenses_development,
-          living_expenses_development, other_development,
-          fringes_taxes_development, development_total} = data.results[0];
-          setPostDataDevelopment({research_development, prelim_budget, consultant_expenses,
-          office_expenses, staff, travel_expenses_development,
-          living_expenses_development, other_development,
-          fringes_taxes_development});
-          setDevelopmentTotal(development_total);
-        // scenario
-        const {writers_units_number, writers_units_name, writers_quantity, writers_rate,
-          consultants_units_number, consultants_units_name, consultants_quantity, consultants_rate,
-          editors_scenario_units_number, editors_scenario_units_name,
-          editors_scenario_quantity, editors_scenario_rate,
-          admin_scenario_units_number, admin_scenario_units_name,
-          admin_scenario_quantity, admin_scenario_rate,
-          office_expenses_scenario, travel_expenses_scenario,
-          living_expenses_scenario, other_scenario,
-          fringes_taxes_scenario, scenario_total} = data.results[0];
-          setPostDataScenario({writers_units_number, writers_units_name, writers_quantity, writers_rate,
-          consultants_units_number, consultants_units_name, consultants_quantity, consultants_rate,
-          editors_scenario_units_number, editors_scenario_units_name,
-          editors_scenario_quantity, editors_scenario_rate,
-          admin_scenario_units_number, admin_scenario_units_name,
-          admin_scenario_quantity, admin_scenario_rate,
-          office_expenses_scenario, travel_expenses_scenario,
-          living_expenses_scenario, other_scenario, fringes_taxes_scenario
-          });
-          setScenarioTotal(scenario_total);
-        // producers-directors
-        const {executive_producers_rate, producers_rate,
-          line_producers_rate, co_producers_rate,
-          associate_producers_rate, directors_rate,
-          unit2_directors_rate, executive_producers_quantity,
-          producers_quantity, line_producers_quantity,
-          co_producers_quantity, associate_producers_quantity,
-          directors_quantity, unit2_directors_quantity,
-          travel_expenses_producers_dirs, living_expenses_producers_dirs,
-          other_producers_dirs, fringes_taxes_producers_dirs,
-          producers_dirs_total} = data.results[0];
-          setPostDataProducersDirs({
-            executive_producers_rate, producers_rate,
-          line_producers_rate, co_producers_rate,
-          associate_producers_rate, directors_rate,
-          unit2_directors_rate, executive_producers_quantity,
-          producers_quantity, line_producers_quantity,
-          co_producers_quantity, associate_producers_quantity,
-          directors_quantity, unit2_directors_quantity,
-          travel_expenses_producers_dirs, living_expenses_producers_dirs,
-          other_producers_dirs, fringes_taxes_producers_dirs,
-        });
-        setProducersDirsTotal(producers_dirs_total);
-        // stars music
-        const {stars, stars_rights_payments, travel_expenses_stars,
-          living_expenses_stars, other_stars, fringes_taxes_stars,
-          music, music_supervisor, travel_expenses_music, living_expenses_music,
-          music_rights_addl_songs, other_music, 
-          fringes_taxes_music, stars_music_total} = data.results[0];
-        setPostDataStarsMusic({stars, stars_rights_payments, travel_expenses_stars,
-          living_expenses_stars, other_stars, fringes_taxes_stars,
-          music, music_supervisor, travel_expenses_music, living_expenses_music,
-          music_rights_addl_songs, other_music, 
-          fringes_taxes_music});
-          setStarsMusicTotal(stars_music_total);
-        // cast
-        const {principals_quantity, principals_units_number,
-          principals_units_name, principals_rate,
-          actors_quantity, actors_units_number, 
-          actors_units_name, actors_rate,
-          stuntcoordinators_quantity, stuntcoordinators_units_number,
-          stuntcoordinators_units_name, stuntcoordinators_rate,
-          stuntperformers_quantity, stuntperformers_units_number,
-          stuntperformers_units_name, stuntperformers_rate,
-          otherperformers_quantity, otherperformers_units_number,
-          otherperformers_units_name, otherperformers_rate,
-          extras_quantity, extras_units_number,
-          extras_units_name, extras_rate,
-          casting_director, extras_casting, cast_total,
-          other_cast, fringes_taxes_cast, rights_payments_cast,} = data.results[0];
-          setPostDataCast({principals_quantity, principals_units_number,
-          principals_units_name, principals_rate,
-          actors_quantity, actors_units_number, 
-          actors_units_name, actors_rate,
-          stuntcoordinators_quantity, stuntcoordinators_units_number,
-          stuntcoordinators_units_name, stuntcoordinators_rate,
-          stuntperformers_quantity, stuntperformers_units_number,
-          stuntperformers_units_name, stuntperformers_rate,
-          otherperformers_quantity, otherperformers_units_number,
-          otherperformers_units_name, otherperformers_rate,
-          extras_quantity, extras_units_number,
-          extras_units_name, extras_rate,
-          casting_director, extras_casting,
-          other_cast, fringes_taxes_cast, rights_payments_cast,});
-          setCastTotal(cast_total);
-        // production
-        const {fringes_taxes_production,
-          production_manager_quantity,
-          production_manager_units_number,
-          production_manager_units_name,
-          production_manager_rate,
-          production_supervisor_quantity,
-          production_supervisor_units_number,
-          production_supervisor_units_name,
-          production_supervisor_rate,
-          production_coordinator_quantity,
-          production_coordinator_units_number,
-          production_coordinator_units_name,
-          production_coordinator_rate,
-          unit_manager_quantity,
-          unit_manager_units_number,
-          unit_manager_units_name,
-          unit_manager_rate,
-          location_manager_quantity,
-          location_manager_units_number,
-          location_manager_units_name,
-          location_manager_rate,
-          location_manager_assistant_quantity,
-          location_manager_assistant_units_number,
-          location_manager_assistant_units_name,
-          location_manager_assistant_rate,
-          production_assistants_quantity,
-          production_assistants_units_number,
-          production_assistants_units_name,
-          production_assistants_rate,
-          production_secretary_quantity,
-          production_secretary_units_number,
-          production_secretary_units_name,
-          production_secretary_rate,
-          production_accountant_quantity,
-          production_accountant_units_number,
-          production_accountant_units_name,
-          production_accountant_rate,
-          production_accountant_assistant_quantity,
-          production_accountant_assistant_units_number,
-          production_accountant_assistant_units_name,
-          production_accountant_assistant_rate,
-          scriptsupervisor_continuity_quantity,
-          scriptsupervisor_continuity_units_number,
-          scriptsupervisor_continuity_units_name,
-          scriptsupervisor_continuity_rate,
-          payroll_quantity,
-          payroll_units_number,
-          payroll_units_name,
-          payroll_rate,
-          other_production_quantity,
-          other_production_units_number,
-          other_production_units_name,
-          other_production_rate,
-          directors_assistant_quantity,
-          directors_assistant_units_number,
-          directors_assistant_units_name,
-          directors_assistant_rate,
-          assistant_director_1st_quantity,
-          assistant_director_1st_units_number,
-          assistant_director_1st_units_name,
-          assistant_director_1st_rate,
-          assistant_director_2nd_quantity,
-          assistant_director_2nd_units_number,
-          assistant_director_2nd_units_name,
-          assistant_director_2nd_rate,
-          assistant_director_3rd_quantity,
-          assistant_director_3rd_units_number,
-          assistant_director_3rd_units_name,
-          assistant_director_3rd_rate,
-          craft_services_quantity,
-          craft_services_units_number,
-          craft_services_units_name,
-          craft_services_rate,
-          productionstaff_total} = data.results[0];
-          setPostDataProduction({fringes_taxes_production,
-            production_manager_quantity,
-            production_manager_units_number,
-            production_manager_units_name,
-            production_manager_rate,
-            production_supervisor_quantity,
-            production_supervisor_units_number,
-            production_supervisor_units_name,
-            production_supervisor_rate,
-            production_coordinator_quantity,
-            production_coordinator_units_number,
-            production_coordinator_units_name,
-            production_coordinator_rate,
-            unit_manager_quantity,
-            unit_manager_units_number,
-            unit_manager_units_name,
-            unit_manager_rate,
-            location_manager_quantity,
-            location_manager_units_number,
-            location_manager_units_name,
-            location_manager_rate,
-            location_manager_assistant_quantity,
-            location_manager_assistant_units_number,
-            location_manager_assistant_units_name,
-            location_manager_assistant_rate,
-            production_assistants_quantity,
-            production_assistants_units_number,
-            production_assistants_units_name,
-            production_assistants_rate,
-            production_secretary_quantity,
-            production_secretary_units_number,
-            production_secretary_units_name,
-            production_secretary_rate,
-            production_accountant_quantity,
-            production_accountant_units_number,
-            production_accountant_units_name,
-            production_accountant_rate,
-            production_accountant_assistant_quantity,
-            production_accountant_assistant_units_number,
-            production_accountant_assistant_units_name,
-            production_accountant_assistant_rate,
-            scriptsupervisor_continuity_quantity,
-            scriptsupervisor_continuity_units_number,
-            scriptsupervisor_continuity_units_name,
-            scriptsupervisor_continuity_rate,
-            payroll_quantity,
-            payroll_units_number,
-            payroll_units_name,
-            payroll_rate,
-            other_production_quantity,
-            other_production_units_number,
-            other_production_units_name,
-            other_production_rate,
-            directors_assistant_quantity,
-            directors_assistant_units_number,
-            directors_assistant_units_name,
-            directors_assistant_rate,
-            assistant_director_1st_quantity,
-            assistant_director_1st_units_number,
-            assistant_director_1st_units_name,
-            assistant_director_1st_rate,
-            assistant_director_2nd_quantity,
-            assistant_director_2nd_units_number,
-            assistant_director_2nd_units_name,
-            assistant_director_2nd_rate,
-            assistant_director_3rd_quantity,
-            assistant_director_3rd_units_number,
-            assistant_director_3rd_units_name,
-            assistant_director_3rd_rate,
-            craft_services_quantity,
-            craft_services_units_number,
-            craft_services_units_name,
-            craft_services_rate});
-          setProductionstaffTotal(productionstaff_total);
-        // design
-        const {fringes_taxes_design,
-          production_designer_quantity, production_designer_units_number,
-          production_designer_units_name, production_designer_rate,
-          art_director_quantity, art_director_units_number,
-          art_director_units_name, art_director_rate,
-          art_assistants_quantity, art_assistants_units_number,
-          art_assistants_units_name, art_assistants_rate,
-          production_assistants_trainees_quantity, production_assistants_trainees_units_number,
-          production_assistants_trainees_units_name, production_assistants_trainees_rate,
-          graphic_artists_quantity, graphic_artists_units_number,
-          graphic_artists_units_name, graphic_artists_rate, other_design,
-          designlabour_total} = data.results[0];
-        setPostDataDesign({fringes_taxes_design,
-          production_designer_quantity, production_designer_units_number,
-          production_designer_units_name, production_designer_rate,
-          art_director_quantity, art_director_units_number,
-          art_director_units_name, art_director_rate,
-          art_assistants_quantity, art_assistants_units_number,
-          art_assistants_units_name, art_assistants_rate,
-          production_assistants_trainees_quantity, production_assistants_trainees_units_number,
-          production_assistants_trainees_units_name, production_assistants_trainees_rate,
-          graphic_artists_quantity, graphic_artists_units_number,
-          graphic_artists_units_name, graphic_artists_rate, other_design,
-        });
-        setDesignlabourTotal(designlabour_total);
-        // construction
-        const {fringes_taxes_construction,
-          constructioncoordinator_quantity, constructioncoordinator_units_number,
-          constructioncoordinator_units_name, constructioncoordinator_rate,
-          headcarpenter_quantity, headcarpenter_units_number,
-          headcarpenter_units_name, headcarpenter_rate,
-          carpenters_quantity, carpenters_units_number,
-          carpenters_units_name, carpenters_rate,
-          scenicpainters_quantity, scenicpainters_units_number,
-          scenicpainters_units_name, scenicpainters_rate,
-          headpainter_quantity, headpainter_units_number,
-          headpainter_units_name, headpainter_rate,
-          painters_quantity, painters_units_number, 
-          painters_units_name, painters_rate,
-          labourers_quantity, labourers_units_number, 
-          labourers_units_name, labourers_rate, other_construction,
-          constructionlabour_total} = data.results[0];
-        setPostDataConstruction({fringes_taxes_construction,
-          constructioncoordinator_quantity, constructioncoordinator_units_number,
-          constructioncoordinator_units_name, constructioncoordinator_rate,
-          headcarpenter_quantity, headcarpenter_units_number,
-          headcarpenter_units_name, headcarpenter_rate,
-          carpenters_quantity, carpenters_units_number,
-          carpenters_units_name, carpenters_rate,
-          scenicpainters_quantity, scenicpainters_units_number,
-          scenicpainters_units_name, scenicpainters_rate,
-          headpainter_quantity, headpainter_units_number,
-          headpainter_units_name, headpainter_rate,
-          painters_quantity, painters_units_number, 
-          painters_units_name, painters_rate,
-          labourers_quantity, labourers_units_number, 
-          labourers_units_name, labourers_rate, other_construction,}) ;
-        setConstructionlabourTotal(constructionlabour_total);
-        //dressing
-        const {fringes_taxes_dressing,
-          set_decorator_quantity, set_decorator_units_number,
-          set_decorator_units_name, set_decorator_rate,
-          assist_set_decorator_quantity, assist_set_decorator_units_number,
-          assist_set_decorator_units_name, assist_set_decorator_rate,
-          lead_man_quantity, lead_man_units_number,
-          lead_man_units_name, lead_man_rate,
-          set_dressers_quantity, set_dressers_units_number,
-          set_dressers_units_name, set_dressers_rate,
-          swing_gang_quantity, swing_gang_units_number,
-          swing_gang_units_name, swing_gang_rate,
-          set_dressing_buyer_quantity, set_dressing_buyer_units_number,
-          set_dressing_buyer_units_name, set_dressing_buyer_rate, 
-          other_set_dressing, dressinglabour_total} = data.results[0];
-        setPostDataSetDressing({fringes_taxes_dressing,
-            set_decorator_quantity, set_decorator_units_number,
-            set_decorator_units_name, set_decorator_rate,
-            assist_set_decorator_quantity, assist_set_decorator_units_number,
-            assist_set_decorator_units_name, assist_set_decorator_rate,
-            lead_man_quantity, lead_man_units_number,
-            lead_man_units_name, lead_man_rate,
-            set_dressers_quantity, set_dressers_units_number,
-            set_dressers_units_name, set_dressers_rate,
-            swing_gang_quantity, swing_gang_units_number,
-            swing_gang_units_name, swing_gang_rate,
-            set_dressing_buyer_quantity, set_dressing_buyer_units_number,
-            set_dressing_buyer_units_name, set_dressing_buyer_rate, 
-            other_set_dressing,});
-        setDressinglabourTotal(dressinglabour_total);
-        // property
-        const {fringes_taxes_property,
-          property_master_quantity, property_master_units_number,
-          property_master_units_name, property_master_rate,
-          assist_property_master_quantity, assist_property_master_units_number,
-          assist_property_master_units_name, assist_property_master_rate,
-          on_set_props_person_quantity, on_set_props_person_units_number,
-          on_set_props_person_units_name, on_set_props_person_rate,
-          property_buyer_quantity, property_buyer_units_number,
-          property_buyer_units_name, property_buyer_rate,
-          armorer_quantity, armorer_units_number,
-          armorer_units_name, armorer_rate,
-          other_property, propertylabour_total} = data.results[0];
-        setPostDataProperty({fringes_taxes_property,
-          property_master_quantity, property_master_units_number,
-          property_master_units_name, property_master_rate,
-          assist_property_master_quantity, assist_property_master_units_number,
-          assist_property_master_units_name, assist_property_master_rate,
-          on_set_props_person_quantity, on_set_props_person_units_number,
-          on_set_props_person_units_name, on_set_props_person_rate,
-          property_buyer_quantity, property_buyer_units_number,
-          property_buyer_units_name, property_buyer_rate,
-          armorer_quantity, armorer_units_number,
-          armorer_units_name, armorer_rate,
-          other_property});
-        setPropertylabourTotal(propertylabour_total);
-        // wrangling
-        const {fringes_taxes_wrangling,
-          head_wrangler_quantity, head_wrangler_units_number,
-          head_wrangler_units_name, head_wrangler_rate,
-          other_wrangling_labour_quantity, other_wrangling_labour_units_number,
-          other_wrangling_labour_units_name, other_wrangling_labour_rate,
-          wranglerlabour_total,} = data.results[0];
-        setPostDataWrangling({fringes_taxes_wrangling,
-          head_wrangler_quantity, head_wrangler_units_number,
-          head_wrangler_units_name, head_wrangler_rate,
-          other_wrangling_labour_quantity, other_wrangling_labour_units_number,
-          other_wrangling_labour_units_name, other_wrangling_labour_rate,});
-        setWranglerlabourTotal(wranglerlabour_total);
-        // fx
-        const {fringes_taxes_fx,
-          fx_supervisor_quantity, fx_supervisor_units_number,
-          fx_supervisor_units_name, fx_supervisor_rate,
-          assist_fx_quantity, assist_fx_units_number,
-          assist_fx_units_name, assist_fx_rate,
-          other_fx_labour_quantity, other_fx_labour_units_number,
-          other_fx_labour_units_name, other_fx_labour_rate,
-          fxlabour_total} = data.results[0];
-        setPostDataSpecialEffects({fringes_taxes_fx,
-            fx_supervisor_quantity, fx_supervisor_units_number,
-            fx_supervisor_units_name, fx_supervisor_rate,
-            assist_fx_quantity, assist_fx_units_number,
-            assist_fx_units_name, assist_fx_rate,
-            other_fx_labour_quantity, other_fx_labour_units_number,
-            other_fx_labour_units_name, other_fx_labour_rate,});
-        setFxlabourTotal(fxlabour_total);
-        // wradrobe
-        const {fringes_taxes_wardrobe,
-          costume_designer_quantity, costume_designer_units_number,
-          costume_designer_units_name, costume_designer_rate,
-          assist_costume_designer_quantity, assist_costume_designer_units_number,
-          assist_costume_designer_units_name, assist_costume_designer_rate,
-          head_wardrobe_quantity, head_wardrobe_units_number,
-          head_wardrobe_units_name, head_wardrobe_rate,
-          wardrobe_assist_quantity, wardrobe_assist_units_number,
-          wardrobe_assist_units_name, wardrobe_assist_rate,
-          truck_costumer_quantity, truck_costumer_units_number,
-          truck_costumer_units_name, truck_costumer_rate,
-          other_wardrobe_labour_quantity, other_wardrobe_labour_units_number,
-          other_wardrobe_labour_units_name, other_wardrobe_labour_rate,
-          wardrobelabour_total} = data.results[0];
-        setPostDataWardrobe({fringes_taxes_wardrobe,
-          costume_designer_quantity, costume_designer_units_number,
-          costume_designer_units_name, costume_designer_rate,
-          assist_costume_designer_quantity, assist_costume_designer_units_number,
-          assist_costume_designer_units_name, assist_costume_designer_rate,
-          head_wardrobe_quantity, head_wardrobe_units_number,
-          head_wardrobe_units_name, head_wardrobe_rate,
-          wardrobe_assist_quantity, wardrobe_assist_units_number,
-          wardrobe_assist_units_name, wardrobe_assist_rate,
-          truck_costumer_quantity, truck_costumer_units_number,
-          truck_costumer_units_name, truck_costumer_rate,
-          other_wardrobe_labour_quantity, other_wardrobe_labour_units_number,
-          other_wardrobe_labour_units_name, other_wardrobe_labour_rate,});
-        setWardrobelabourTotal(wardrobelabour_total);
-        // makeup
-        const {fringes_taxes_makeup,
-          makeup_dept_head_quantity, makeup_dept_head_units_number,
-          makeup_dept_head_units_name, makeup_dept_head_rate,
-          key_makeup_quantity, key_makeup_units_number,
-          key_makeup_units_name, key_makeup_rate,
-          makeup_artist_quantity, makeup_artist_units_number,
-          makeup_artist_units_name, makeup_artist_rate,
-          key_hairstylist_quantity, key_hairstylist_units_number,
-          key_hairstylist_units_name, key_hairstylist_rate,
-          hairdresser_quantity, hairdresser_units_number,
-          hairdresser_units_name, hairdresser_rate,
-          hair_makeup_dailies_quantity, hair_makeup_dailies_units_number,
-          hair_makeup_dailies_units_name, hair_makeup_dailies_rate,
-          other_makeup_labour_quantity, other_makeup_labour_units_number,
-          other_makeup_labour_units_name, other_makeup_labour_rate,
-          sfx_makeup_quantity, sfx_makeup_units_number,
-          sfx_makeup_units_name, sfx_makeup_rate,
-          makeuplabour_total} = data.results[0];
-        setPostDataMakeup({fringes_taxes_makeup,
-            makeup_dept_head_quantity, makeup_dept_head_units_number,
-            makeup_dept_head_units_name, makeup_dept_head_rate,
-            key_makeup_quantity, key_makeup_units_number,
-            key_makeup_units_name, key_makeup_rate,
-            makeup_artist_quantity, makeup_artist_units_number,
-            makeup_artist_units_name, makeup_artist_rate,
-            key_hairstylist_quantity, key_hairstylist_units_number,
-            key_hairstylist_units_name, key_hairstylist_rate,
-            hairdresser_quantity, hairdresser_units_number,
-            hairdresser_units_name, hairdresser_rate,
-            hair_makeup_dailies_quantity, hair_makeup_dailies_units_number,
-            hair_makeup_dailies_units_name, hair_makeup_dailies_rate,
-            other_makeup_labour_quantity, other_makeup_labour_units_number,
-            other_makeup_labour_units_name, other_makeup_labour_rate,
-            sfx_makeup_quantity, sfx_makeup_units_number,
-            sfx_makeup_units_name, sfx_makeup_rate,});
-        setMakeuplabourTotal(makeuplabour_total);
-        // camera
-        const {fringes_taxes_camera, 
-          dop_qty, dop_uno, dop_una, dop_rt,
-          camera_op_qty, camera_op_uno, camera_op_una, camera_op_rt,
-          cam_ac1_qty, cam_ac1_uno, cam_ac1_una, cam_ac1_rt,
-          cam_ac2_qty, cam_ac2_uno, cam_ac2_una, cam_ac2_rt,
-          dit_qty, dit_uno, dit_una, dit_rt,
-          steadicam_qty, steadicam_uno, steadicam_una, steadicam_rt,
-          cam_pa_qty, cam_pa_uno, cam_pa_una, cam_pa_rt, 
-          drone_pilot_qty, drone_pilot_uno, drone_pilot_una, drone_pilot_rt,
-          other_cam_qty, other_cam_uno, cameralabour_total,
-          stills_qty, stills_uno, stills_una, stills_rt,
-          other_cam_una, other_cam_rt,} = data.results[0];
-        setPostDataCamera({fringes_taxes_camera,
-          dop_qty, dop_uno, dop_una, dop_rt,
-          camera_op_qty, camera_op_uno, camera_op_una, camera_op_rt,
-          cam_ac1_qty, cam_ac1_uno, cam_ac1_una, cam_ac1_rt,
-          cam_ac2_qty, cam_ac2_uno, cam_ac2_una, cam_ac2_rt,
-          dit_qty, dit_uno, dit_una, dit_rt,
-          steadicam_qty, steadicam_uno, steadicam_una, steadicam_rt,
-          cam_pa_qty, cam_pa_uno, cam_pa_una, cam_pa_rt, 
-          drone_pilot_qty, drone_pilot_uno, drone_pilot_una, drone_pilot_rt,
-          stills_qty, stills_uno, stills_una, stills_rt,
-          other_cam_qty, other_cam_uno, other_cam_una, other_cam_rt,});
-        setCameralabourTotal(cameralabour_total);
-        // electric
-        const {fringes_taxes_electric,
-          gaffer_qty, gaffer_uno, gaffer_una, gaffer_rt,
-          best_boy_qty, best_boy_uno, best_boy_una, best_boy_rt,
-          electrician_qty, electrician_uno, electrician_una, electrician_rt,
-          dailies_elec_qty, dailies_elec_uno, dailies_elec_una, dailies_elec_rt,
-          generator_op_qty, generator_op_uno, generator_op_una, generator_op_rt,
-          other_elec_qty, other_elec_uno, other_elec_una, other_elec_rt,
-          electriclabour_total,} = data.results[0];
-        setPostDataElectric({fringes_taxes_electric,
-          gaffer_qty, gaffer_uno, gaffer_una, gaffer_rt,
-          best_boy_qty, best_boy_uno, best_boy_una, best_boy_rt,
-          electrician_qty, electrician_uno, electrician_una, electrician_rt,
-          dailies_elec_qty, dailies_elec_uno, dailies_elec_una, dailies_elec_rt,
-          generator_op_qty, generator_op_uno, generator_op_una, generator_op_rt,
-          other_elec_qty, other_elec_uno, other_elec_una, other_elec_rt,})
-        setElectriclabourTotal(electriclabour_total);
-        const {fringes_taxes_grip,
-          key_grip_qty, key_grip_uno, key_grip_una, key_grip_rt,
-          best_boy_grip_qty, best_boy_grip_uno, best_boy_grip_una, best_boy_grip_rt,
-          grips_qty, grips_uno, grips_una, grips_rt,
-          dailies_grip_qty, dailies_grip_uno, dailies_grip_una, dailies_grip_rt, 
-          dolly_crane_grip_qty, dolly_crane_grip_uno, dolly_crane_grip_una, dolly_crane_grip_rt,
-          swing_grips_qty, swing_grips_uno, swing_grips_una, swing_grips_rt,
-          other_grip_labour_qty, other_grip_labour_uno, griplabour_total,
-          other_grip_labour_una, other_grip_labour_rt,} = data.results[0];
-        setPostDataGrip({fringes_taxes_grip,
-          key_grip_qty, key_grip_uno, key_grip_una, key_grip_rt,
-          best_boy_grip_qty, best_boy_grip_uno, best_boy_grip_una, best_boy_grip_rt,
-          grips_qty, grips_uno, grips_una, grips_rt,
-          dailies_grip_qty, dailies_grip_uno, dailies_grip_una, dailies_grip_rt, 
-          dolly_crane_grip_qty, dolly_crane_grip_uno, dolly_crane_grip_una, dolly_crane_grip_rt,
-          swing_grips_qty, swing_grips_uno, swing_grips_una, swing_grips_rt,
-          other_grip_labour_qty, other_grip_labour_uno, 
-          other_grip_labour_una, other_grip_labour_rt,});
-        setGriplabourTotal(griplabour_total);
-        const {fringes_taxes_sound,
-          sound_mixer_qty, sound_mixer_uno,
-          sound_mixer_una, sound_mixer_rt,
-          boom_operator_qty, boom_operator_uno,
-          boom_operator_una, boom_operator_rt,
-          cable_wrangler_qty, cable_wrangler_uno,
-          cable_wrangler_una, cable_wrangler_rt,
-          other_sound_labour_qty, other_sound_labour_uno, soundlabour_total,
-          other_sound_labour_una, other_sound_labour_rt,} = data.results[0];
-        setPostDataSoundPro({fringes_taxes_sound,
-          sound_mixer_qty, sound_mixer_uno,
-          sound_mixer_una, sound_mixer_rt,
-          boom_operator_qty, boom_operator_uno,
-          boom_operator_una, boom_operator_rt,
-          cable_wrangler_qty, cable_wrangler_uno,
-          cable_wrangler_una, cable_wrangler_rt,
-          other_sound_labour_qty, other_sound_labour_uno,
-          other_sound_labour_una, other_sound_labour_rt,});
-        setSoundlabourTotal(soundlabour_total);
-        const {fringes_taxes_transport,
-          tp_coordinator_qty, tp_coordinator_uno, tp_coordinator_una, tp_coordinator_rt,
-          tp_captain_qty,tp_captain_uno, tp_captain_una, tp_captain_rt,
-          tp_manager_qty, tp_manager_uno, tp_manager_una, tp_manager_rt,
-          head_driver_qty, head_driver_uno, head_driver_una, head_driver_rt,
-          drivers_qty, drivers_uno, drivers_una, drivers_rt,
-          transportlabour_total,} = data.results[0];
-        setPostDataTransport({fringes_taxes_transport,
-          tp_coordinator_qty, tp_coordinator_uno, tp_coordinator_una, tp_coordinator_rt,
-          tp_captain_qty,tp_captain_uno, tp_captain_una, tp_captain_rt,
-          tp_manager_qty, tp_manager_uno, tp_manager_una, tp_manager_rt,
-          head_driver_qty, head_driver_uno, head_driver_una, head_driver_rt,
-          drivers_qty, drivers_uno, drivers_una, drivers_rt,});
-        setTransportlabourTotal(transportlabour_total);
-        const {fringes_taxes_tv,
-          tech_super_qty, tech_super_uno, tech_super_una, tech_super_rt,
-          tech_direct_qty, tech_direct_uno, tech_direct_una, tech_direct_rt,
-          floor_man_qty, floor_man_uno, floor_man_una, floor_man_rt, 
-          light_direct_qty, light_direct_uno, light_direct_una, light_direct_rt,
-          boardman_qty, boardman_uno, boardman_una, boardman_rt,
-          audio_qty, audio_uno, audio_una, audio_rt,
-          vtr_operator_qty, vtr_operator_uno, vtr_operator_una, vtr_operator_rt,
-          stagehands_qty, stagehands_uno, stagehands_una, stagehands_rt,
-          other_tv_qty, other_tv_uno, other_tv_una, other_tv_rt,
-          tvspecificlabour_total,} = data.results[0];
-        setPostDataTV({fringes_taxes_tv,
-          tech_super_qty, tech_super_uno, tech_super_una, tech_super_rt,
-          tech_direct_qty, tech_direct_uno, tech_direct_una, tech_direct_rt,
-          floor_man_qty, floor_man_uno, floor_man_una, floor_man_rt, 
-          light_direct_qty, light_direct_uno, light_direct_una, light_direct_rt,
-          boardman_qty, boardman_uno, boardman_una, boardman_rt,
-          audio_qty, audio_uno, audio_una, audio_rt,
-          vtr_operator_qty, vtr_operator_uno, vtr_operator_una, vtr_operator_rt,
-          stagehands_qty, stagehands_uno, stagehands_una, stagehands_rt,
-          other_tv_qty, other_tv_uno, other_tv_una, other_tv_rt,});
-        setTvspecificlabourTotal(tvspecificlabour_total);
-        const {office_rentals, office_equipment, office_supplies,
-          phones_net, courier_postage, office_other, 
-        proOff_total} = data.results[0];
-        setPostDataProOff({office_rentals, office_equipment, office_supplies,
-          phones_net, courier_postage, office_other,});
-        setProOffTotal(proOff_total);
-        const {studio_rentals, power, carpentry_rentals, studio_total,
-          studio_fx_equipment, studio_security, studio_other,} = data.results[0];
-        setPostDataStudio({studio_rentals, power, carpentry_rentals,
-          studio_fx_equipment, studio_security, studio_other,});
-        setStudioTotal(studio_total);
-        const {surveying_scouting, site_rentals, site_power, site_access,
-          site_insurance, repairs_construction, site_security, site_other,
-          police_control, site_total,} = data.results[0];
-        setPostDataSite({surveying_scouting, site_rentals, site_power, site_access,
-          site_insurance, repairs_construction, site_security, site_other,
-          police_control,});
-        setSiteTotal(site_total);
-        const {catering, craft_expenses, meal_penalty,
-          green_room, first_aid, outfitting,
-          medical_insurance, unit_other, unit_total,} = data.results[0];
-        setPostDataUnit({catering, craft_expenses, meal_penalty,
-          green_room, first_aid, outfitting,
-          medical_insurance, unit_other,});
-        setUnitTotal(unit_total);
-        const {fares, accomatation_hotels, per_diems, taxis_limos,
-          shipping, other_trav_liv, customs_brokerage, traliv_total,} = data.results[0];
-        setPostDataTraLiv({fares, accomatation_hotels, per_diems, taxis_limos,
-          shipping, other_trav_liv, customs_brokerage,});
-        setTralivTotal(traliv_total);
-        const {production_cars, trucks_vans, buses, motorhomes, transport_total,
-          talent_cars, support_vehicles, boats_planes, fuel, repairs, taxis,
-          parking, licenses_permits, brokerage_insurance, other_transport,} = data.results[0];
-        setPostDataTransportation({production_cars, trucks_vans, buses, motorhomes,
-          talent_cars, support_vehicles, boats_planes, fuel, repairs, taxis,
-          parking, licenses_permits, brokerage_insurance, other_transport,});
-        setTransportTotal(transport_total);
-        const {rentals_carpentry, carpentry_purchases, painting_rentals,
-          painting_purchases, backdrops_murals, construction_other,
-          scaffolding, warehouse_rental, constructionmat_total} = data.results[0];
-        setPostDataConstructionMat({rentals_carpentry, carpentry_purchases, painting_rentals,
-          painting_purchases, backdrops_murals, construction_other,
-          scaffolding, warehouse_rental,});
-        setConstructionMatTotal(constructionmat_total);
-        const {drawing_supplies, drawing_equipment, tech, artSup_total,
-          stock_prints_processing, blueprinting, other_art,} = data.results[0];
-        setPostDataArtSup({drawing_supplies, drawing_equipment, tech,
-          stock_prints_processing, blueprinting, other_art,});
-        setArtSupTotal(artSup_total);
-        const {dress_rentals, dress_purchases, dress_manufacture, dressing_total,
-          dress_repairs_replacements, other_dressing,} = data.results[0];
-        setPostDataDress({dress_rentals, dress_purchases, dress_manufacture,
-          dress_repairs_replacements, other_dressing,});
-        setDressingTotal(dressing_total);
-        const {props_rentals, props_purchases, graphics_signs, props_total,
-          props_repairs_replac, picture_vehicle_rentals, picture_vehicle_purchases,
-          picture_vehicle_mods, picture_vehicle_ins, other_props,} = data.results[0];
-        setPostDataProps({props_rentals, props_purchases, graphics_signs,
-          props_repairs_replac, picture_vehicle_rentals, picture_vehicle_purchases,
-          picture_vehicle_mods, picture_vehicle_ins, other_props,});
-        setPropsTotal(props_total);
-        const {fx_rentals, fx_purchases, stunts_purchases_rentals,
-          armaments_permits_fees, other_fx, fx_total,} = data.results[0];
-        setPostDataSpecEf({fx_rentals, fx_purchases, stunts_purchases_rentals,
-          armaments_permits_fees, other_fx,});
-        setFxTotal(fx_total);
-        const {animals_rentals, animals_purchases, food_stabling,
-          transport, vet, customs_broker, other_animals, animals_total,} = data.results[0];
-        setPostDataAnimals({animals_rentals, animals_purchases, food_stabling,
-          transport, vet, customs_broker, other_animals,});
-        setAnimalsTotal(animals_total);
-        const {wardrobe_rentals, wardrobe_purchases, ward_manufact,
-          ward_ship_brok, ward_repairs_clean, other_ward, wardrobe_total} = data.results[0];
-        setPostDataWardrobeSup({wardrobe_rentals, wardrobe_purchases, ward_manufact,
-          ward_ship_brok, ward_repairs_clean, other_ward,});
-        setWardrobeTotal(wardrobe_total);
-        const {makeup_rentals, makeup_purchases, hair_rentals, makeup_total,
-          hair_purchases, wigs, makeup_fx, makeup_ship_brok, other_makeup,} = data.results[0];
-        setPostDataMakeupSup({makeup_rentals, makeup_purchases, hair_rentals,
-          hair_purchases, wigs, makeup_fx, makeup_ship_brok, other_makeup,});
-        setMakeupTotal(makeup_total);
-        const {basic_package_rent_cam, daily_rentals_cam, other_camera,
-          specialty_rent_cam, camera_purchases, steadicam, camera_total,
-          video_teleprompter, camera_ship_brok, loss_damage_cam,} = data.results[0];
-        setPostDataCameraEqu({basic_package_rent_cam, daily_rentals_cam, other_camera,
-          specialty_rent_cam, camera_purchases, steadicam,
-          video_teleprompter, camera_ship_brok, loss_damage_cam,});
-        setCameraTotal(camera_total);
-        const {basic_package_rent_elec, daily_rentals_elec,
-          specialty_rent_elec, electric_purchases, electric_total,
-          generators, loss_damage_elec, other_electric,} = data.results[0];
-        setPostDataElectricEqu({basic_package_rent_elec, daily_rentals_elec,
-          specialty_rent_elec, electric_purchases,
-          generators, loss_damage_elec, other_electric,});
-        setElectricTotal(electric_total);
-        const {basic_package_rent_grip, daily_rentals_grip, grip_total,
-          specialty_rent_grip, crane_rentals, scaffolding_grip,
-          grip_purchases, loss_damage_grip, other_grip,} = data.results[0];
-        setPostDataGripEqu({basic_package_rent_grip, daily_rentals_grip,
-          specialty_rent_grip, crane_rentals, scaffolding_grip,
-          grip_purchases, loss_damage_grip, other_grip,});
-        setGripTotal(grip_total);
-        const {basic_package_rent_sound, daily_rentals_sound, sound_total,
-          wireless_mics, sound_purchases, walkie_talkies, other_sound,} = data.results[0];
-        setPostDataSoundEqu({basic_package_rent_sound, daily_rentals_sound,
-          wireless_mics, sound_purchases, walkie_talkies, other_sound,});
-        setSoundTotal(sound_total);
-        const {crew_2U, equipment_2U, travliv_2U, transport_2U, secondU_total,
-          mat_sup_2U, aerial_unit, marine_unit, fringes_taxes_2U, other_2U,} = data.results[0];
-        setPostDataSecondU({crew_2U, equipment_2U, travliv_2U, transport_2U,
-          mat_sup_2U, aerial_unit, marine_unit, fringes_taxes_2U, other_2U,});
-        setSecondUTotal(secondU_total);
-        const {film_stock, video_stock, digital_stock, transfer_stock,
-          hard_drives, dalies, telecine, audio_stock, magnetic_transfer,
-          stills, loss_dam_lab, other_lab, stockLab_total,} = data.results[0];
-        setPostDataStockLab({film_stock, video_stock, digital_stock, transfer_stock,
-          hard_drives, dalies, telecine, audio_stock, magnetic_transfer,
-          stills, loss_dam_lab, other_lab,});
-        setStockLabTotal(stockLab_total);
-        const {post_supervisor_qty, post_supervisor_uno, 
-          post_supervisor_una, post_supervisor_rt, 
-          post_coordinator_qty, post_coordinator_uno,
-          post_coordinator_una, post_coordinator_rt,
-          post_assistants_qty, post_assistants_uno,
-          post_assistants_una, post_assistants_rt,
-          post_accountants_qty, post_accountants_uno, post_consultant,
-          post_accountants_una, post_accountants_rt, postStaffFac_total,
-          post_accountants_ass_qty, post_accountants_ass_uno,
-          post_accountants_ass_una, post_accountants_ass_rt,
-          post_office_rent, post_office_equ, post_office_sup, 
-          post_it_network, post_phone_net, post_computers_soft, post_store,
-          post_ship, post_craft, fringes_taxes_post, post_other,} = data.results[0];
-        setPostDataPostStaffFac({post_supervisor_qty, post_supervisor_uno, 
-          post_supervisor_una, post_supervisor_rt, 
-          post_coordinator_qty, post_coordinator_uno,
-          post_coordinator_una, post_coordinator_rt,
-          post_assistants_qty, post_assistants_uno,
-          post_assistants_una, post_assistants_rt,
-          post_accountants_qty, post_accountants_uno,
-          post_accountants_una, post_accountants_rt, post_consultant,
-          post_accountants_ass_qty, post_accountants_ass_uno,
-          post_accountants_ass_una, post_accountants_ass_rt,
-          post_office_rent, post_office_equ, post_office_sup, 
-          post_it_network, post_phone_net, post_computers_soft, post_store,
-          post_ship, post_craft, fringes_taxes_post, post_other,});
-        setPostStaffFacTotal(postStaffFac_total);  
-        const {editor_qty, editor_uno, editor_una, editor_rt,
-          editor_vfx_qty, editor_vfx_uno, editor_vfx_una, editor_vfx_rt,
-          editor_ass_qty, editor_ass_uno, editor_ass_una, editor_ass_rt,
-          colorist_grader_qty, colorist_grader_uno, colorist_grader_una, colorist_grader_rt,
-          graphics_qty, graphics_uno, graphics_una, graphics_rt,
-          edit_rooms, edit_equip, edit_equip_nonlin, online,
-          vfx_ed_system, post_edit_pur, lossdam_edit, fringes_taxes_post_edit,
-          other_post_edit, editing_total,} = data.results[0];
-        setPostDataEdit({editor_qty, editor_uno, editor_una, editor_rt,
-          editor_vfx_qty, editor_vfx_uno, editor_vfx_una, editor_vfx_rt,
-          editor_ass_qty, editor_ass_uno, editor_ass_una, editor_ass_rt,
-          colorist_grader_qty, colorist_grader_uno, colorist_grader_una, colorist_grader_rt,
-          graphics_qty, graphics_uno, graphics_una, graphics_rt,
-          edit_rooms, edit_equip, edit_equip_nonlin, online,
-          vfx_ed_system, post_edit_pur, lossdam_edit, fringes_taxes_post_edit,
-        other_post_edit,});
-        setEditingTotal(editing_total);
-        const {sound_designer_qty, sound_designer_uno, sound_designer_una, sound_designer_rt,
-          editor_sound_qty, editor_sound_uno, editor_sound_una, editor_sound_rt,
-          editor_music_qty, editor_music_uno, editor_music_una, editor_music_rt,
-          ed_sound_ass_qty, ed_sound_ass_uno, ed_sound_ass_una, ed_sound_ass_rt,
-          adr_super_qty, adr_super_uno, adr_super_una, adr_super_rt,
-          foley_labour_qty, foley_labour_uno, foley_labour_una, foley_labour_rt,
-          sound_edit_rooms, sound_edit_equ, music_edit_equ, postSound_total,
-          post_sound_edit_pur, adr, foley, pre_mix, mix, printmaster, transfers_deliverables,
-          lossdam_sound, fringes_taxes_post_sound, other_post_sound,} = data.results[0];
-        setPostDataPostSound({sound_designer_qty, sound_designer_uno, sound_designer_una, sound_designer_rt,
-          editor_sound_qty, editor_sound_uno, editor_sound_una, editor_sound_rt,
-          editor_music_qty, editor_music_uno, editor_music_una, editor_music_rt,
-          ed_sound_ass_qty, ed_sound_ass_uno, ed_sound_ass_una, ed_sound_ass_rt,
-          adr_super_qty, adr_super_uno, adr_super_una, adr_super_rt,
-          foley_labour_qty, foley_labour_uno, foley_labour_una, foley_labour_rt,
-          sound_edit_rooms, sound_edit_equ, music_edit_equ,
-          post_sound_edit_pur, adr, foley, pre_mix, mix, printmaster, transfers_deliverables,
-        lossdam_sound, fringes_taxes_post_sound, other_post_sound,});  
-        setPostSoundTotal(postSound_total);      
-        const {stock, neg_cutting, color_cor, interpos_neg, prints,
-          transfers, other_media_delivery, distribution_copies, 
-        storage_post, postLab_total,} = data.results[0];
-        setPostDataPostLab({stock, neg_cutting, color_cor, interpos_neg, prints,
-          transfers, other_media_delivery, distribution_copies, 
-        storage_post,});
-        setPostLabTotal(postLab_total);
-        const {titles, opticals, stock_footage, con_script_ccsl,
-          postTitles_total,} = data.results[0];
-        setPostDataPostTitles({titles, opticals, stock_footage, con_script_ccsl,});
-        setPostTitlesTotal(postTitles_total);
-        const {dubs, subtitles, closed_caption, versioning, trailers,
-          ads, transfers_ver, prints_ver, dig_copies_ver, 
-          other_copies_ver, postVersion_total,} = data.results[0];
-        setPostDataPostVersion({dubs, subtitles, closed_caption, versioning, trailers,
-          ads, transfers_ver, prints_ver, dig_copies_ver, 
-          other_copies_ver,});
-        setPostVersionTotal(postVersion_total);
-        const {vfx_producer, vfx_supervisor, vfx_coordinator, vfx_post_other_lab,
-          vfx_storyboard, vfx_pre_vis_team, vfx_post_vis_team, cyberscanning,
-          vfx_rentals, vfx_purchases, vfx_vendor_1, vfx_vendor_2, vfx_vendor_3,
-          vfx_vendor_4, vfx_vendor_5, vfx_vendor_6, vfx_vendor_7, vfx_vendor_8,
-          vfx_vendor_9, vfx_vendor_10, vfx_vendors_x, vfx_traliv, vfx_expenses,
-          miniatures_build, miniatures_shoot, motion_capture, lossdam_vfx,
-          box_ren_vfx, fringes_taxes_vfx, other_post_vfx, postVfx_total,} = data.results[0];
-        setPostDataPostVFX({vfx_producer, vfx_supervisor, vfx_coordinator, vfx_post_other_lab,
-          vfx_storyboard, vfx_pre_vis_team, vfx_post_vis_team, cyberscanning,
-          vfx_rentals, vfx_purchases, vfx_vendor_1, vfx_vendor_2, vfx_vendor_3,
-          vfx_vendor_4, vfx_vendor_5, vfx_vendor_6, vfx_vendor_7, vfx_vendor_8,
-          vfx_vendor_9, vfx_vendor_10, vfx_vendors_x, vfx_traliv, vfx_expenses,
-          miniatures_build, miniatures_shoot, motion_capture, lossdam_vfx,
-          box_ren_vfx, fringes_taxes_vfx, other_post_vfx,});
-        setPostVfxTotal(postVfx_total);
-        const {tests_theater_ren, tests_other, pub_total,
-          unit_publicist, pub_press_ex, photography, epk,
-          promotion, pr, firnges_pub, other_pub, previews, website,} = data.results[0];
-        setPostDataPublicity({tests_theater_ren, tests_other,
-          unit_publicist, pub_press_ex, photography, epk,
-          promotion, pr, firnges_pub, other_pub, previews, website,});
-        setPubTotal(pub_total);
-        const {pro_package, gen_lia, eando, umbrella, 
-        union_insurance, other_in, insur_total,} = data.results[0];
-        setPostDataInsurance({pro_package, gen_lia, eando, umbrella, 
-        union_insurance, other_in,});
-        setInsurTotal(insur_total);
-        const {legal, medical, licences, payroll, bank_charges, audit,
-        genEx_total,} = data.results[0];
-        setPostDataGeneralEx({legal, medical, licences, payroll, bank_charges, audit,
-        });
-        setGenExTotal(genEx_total);
-        const {corporate_overhead, interim_financing, fiscal_sponsor_fee,
-        indirCo_total,} = data.results[0];
-        setPostDataIndirectCo({corporate_overhead, interim_financing, fiscal_sponsor_fee,});
-        setIndirCoTotal(indirCo_total);
-        const {contingency, completion_bond,} = data.results[0];
-        setPostDataContingency({contingency, completion_bond,});
-
-            } catch (err) {
-        console.log(err);
-      }
-    };
-
-    handleMount();
-  }, [history, id]);
-
-  // const handleSubmitBoth = (event) => {
-  //   event.preventDefault();
-  //   handleSubmit();
-  //   handleSubmit2();
-
-  // }
 
   // Submit
   const handleSubmit = async (event) => {
@@ -5058,7 +4205,7 @@ function BudgetEdit() {
     formData.append("postVersion_total", postVersionTotal);
 
     try {
-      const { data } = await axiosReq.put(`/budgets/${budgetId}/`, formData);
+      const { data } = await axiosReq.post("/budgets/", formData);
       console.log(`submit1 ${data}`);
       handleSubmit2(event);
     } catch (err) {
@@ -5145,7 +4292,7 @@ function BudgetEdit() {
     formData.append("completion_bond", completion_bond);
 
     try {
-      const { data } = await axiosReq.put(`/budgets/${budgetId}/`, formData);
+      const { data } = await axiosReq.post("/budgets/", formData);
       console.log(`submit2 ${data}`);
       history.goBack();
     } catch (err) {
@@ -5157,58 +4304,32 @@ function BudgetEdit() {
   };
 
   return (
-    <div className="mt-3 ">
+    <div className="mt-3">
     <Row >
     <Col className={`${styles.Back}`}>
     <Row className={ `${styles.OverviewBlue} mx-1 mb-1 py-3 text-center`}>
     <Col md={12}>
-    <h5 className={ `${styles.BoldBlack}`}>EDIT BUDGET - Project ID: {id}</h5>
+    <h5 className={ `${styles.BoldBlack}`}>CREATE BUDGET - Project ID: {id}</h5>
     </Col>
     </Row>
     <Row className="mt-1 ml-0" >
-        <Col xs={12}>
+        <Col xs={3}>
         <Button
           className={`${btnStyles.Button} ${btnStyles.Blue} mb-2`}
           onClick={() => history.goBack()}
         >
           Back
         </Button>
-        <Button
-          className={`float-right py-0 mt-1 ${btnStyles.Blue} ${btnStyles.Button}`}
-          onClick={() => setShowInformation(showInformation => !showInformation)} >Information
-        </Button>
         </Col>
     </Row>
-    {/* info */}
-    {!showInformation ? (
-      ""
-          ) : (
-            <InfoBudEdit  /> 
-    ) } 
-    {/* Globals button */}
-    <Row className="mt-1 ml-0" >
-        <Col className="text-center" xs={12}>
-        <Button
-          className={`py-1 px-5 mt-1 mb-3 ${btnStyles.Order} ${btnStyles.Button}`}
-          onClick={() => setShowGlobals(showGlobals => !showGlobals)} >
-            Globals
-        </Button>
-        </Col>
-    </Row>
-    {/* Globals */}
-    {!showGlobals ? (
-      ""
-          ) : (
-            <Globals  /> 
-    ) } 
-    <Form className="mt-1 px-3" onSubmit={handleSubmit}>
+    <Form className="mt-3 px-3" onSubmit={handleSubmit}>
     {prepare}
-    {/* above total */}
+    {/* above + total */}
     <Row className={ `${styles.OverviewBlue} mx-1 mt-5 py-1`}>
     <Col md={10}>
-    <p className={ `pb-0 mb-0 ml-3 ${styles.BoldBlack}`}>ABOVE THE LINE</p>
+    <p className={ `mb-0 ml-3 ${styles.BoldBlack}`}>ABOVE THE LINE</p>
     </Col>
-    <Col md={2}><p className="mb-0">{aboveTheLineTotal} </p></Col>
+    <Col md={2}><p className="mb-0 mb-0">{aboveTheLineTotal} </p></Col>
     </Row>
     {/* sections above click buttons */}
     <Row className={`${styles.ButtonLine} mx-1`}>
@@ -5217,7 +4338,7 @@ function BudgetEdit() {
     <Row>
     <Col md={8}>
     <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
-          onClick={() => setShowInfo(showInfo => !showInfo)} > Info
+          onClick={() => setShowInfo(showInfo => !showInfo)} > Info / Length
         </p>
     </Col>
     <Col md={4}>
@@ -5297,7 +4418,7 @@ function BudgetEdit() {
     </div>
     </Col>
     </Row>  
-    {/* below B labour + total */}
+    {/* below B labour */}
     <Row className={ `${styles.OverviewBlue} mx-1 mb-0 mt-2 py-1`}>
     <Col md={10}>
     <p className={ `mb-0 ml-3 ${styles.BoldBlack}`}>
@@ -5548,7 +4669,7 @@ function BudgetEdit() {
     </div>
     </Col>
     </Row> 
-    {/* below B costs + total */}
+    {/* below B costs & total */}
     <Row className={ `${styles.OverviewBlue} mx-1 mb-0 mt-2 py-1`}>
     <Col md={10}>
     <p className={ `mb-0 ml-3 ${styles.BoldBlack}`}>
@@ -5573,7 +4694,7 @@ function BudgetEdit() {
     </Row>
     </div>
     </Col>
-    {/* Studio/Backlot */}
+    {/* Studio/Backlot Expenses */}
     <Col md={3} className='px-0 mx-0'>
     <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
     <Row>
@@ -5759,7 +4880,7 @@ function BudgetEdit() {
     <Row>
     <Col md={8}>
     <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
-          onClick={() => setShowMakeSup(showMakeSup => !showMakeSup)} >Makeup Sup
+          onClick={() => setShowMakeSup(showMakeSup => !showMakeSup)} >Makeup Supplies
     </p>
     </Col>
     <Col md={4}>
@@ -5860,7 +4981,7 @@ function BudgetEdit() {
     </Col>
     </Row>
     {blabourncoststotal}
-    {/* Post Production "C" & total*/}
+    {/* Post Production "C" & total */}
     <Row className={ `${styles.OverviewBlue} mx-1 mb-0 mt-2 py-1`}>
     <Col md={10}>
     <p className={ `mb-0 ml-3 ${styles.BoldBlack}`}>
@@ -5868,7 +4989,7 @@ function BudgetEdit() {
     </Col>
     <Col md={2}><p className="mb-0">{postProductionCTotal} </p></Col>
     </Row>
-    {/* sections post production "C" click buttons */}
+    {/* sections post production C click buttons */}
     <Row className={`${styles.ButtonLine} mx-1`}>
     {/* Post Production Staff/Facilities */}
     <Col md={3} className='px-0 mx-0'>
@@ -5985,7 +5106,7 @@ function BudgetEdit() {
     </Row>
     {/* below B and C total  */}
     {belowbandcTotal}
-    {/* Above "A" / Below "B" and "C"  total */}
+    {/* Above "A" and Below "B" and "C" total  */}
     {abovebelowabcTotal}
     {/* Other "D" & total */}
     <Row className={ `${styles.OverviewBlue} mx-1 mb-0 mt-2 py-1`}>
@@ -6062,6 +5183,7 @@ function BudgetEdit() {
     {abovebelowabcanddTotal}
     {contin}
     {grandtotal}
+    {/* above components */}
     {/* info */}
     {!showInfo ? (
       ""
@@ -6152,6 +5274,7 @@ function BudgetEdit() {
       setStarsMusicTotal={setStarsMusicTotal}
       setShow={setShowStarsMus}  /> 
     ) }
+    {/* below B Labour components */}
     {/* cast */}
     {!showCast ? (
       ""
@@ -6291,23 +5414,6 @@ function BudgetEdit() {
       setDressinglabourTotal={setDressinglabourTotal}
       setShow={setShowDress}  /> 
     ) }
-    {/* fx */}
-    {!showFx ? (
-      ""
-    ) : (
-      <SpecialEffects
-      postDataSpecialEffects={postDataSpecialEffects}
-      setPostDataSpecialEffects={setPostDataSpecialEffects}
-      fxsupervisorTotal={fxsupervisorTotal}
-      setFxsupervisorTotal={setFxsupervisorTotal}
-      assistfxTotal={assistfxTotal}
-      setAssistfxTotal={setAssistfxTotal}
-      otherfxlabourTotal={otherfxlabourTotal}
-      setOtherfxlabourTotal={setOtherfxlabourTotal}
-      fxlabourTotal={fxlabourTotal}
-      setFxlabourTotal={setFxlabourTotal}
-      setShow={setShowFx}  /> 
-    ) }
     {/* property */}
     {!showProps ? (
       ""
@@ -6343,6 +5449,23 @@ function BudgetEdit() {
       wranglerlabourTotal={wranglerlabourTotal}
       setWranglerlabourTotal={setWranglerlabourTotal}
       setShow={setShowWrang}  /> 
+    ) }
+    {/* fx */}
+    {!showFx ? (
+      ""
+    ) : (
+      <SpecialEffects
+      postDataSpecialEffects={postDataSpecialEffects}
+      setPostDataSpecialEffects={setPostDataSpecialEffects}
+      fxsupervisorTotal={fxsupervisorTotal}
+      setFxsupervisorTotal={setFxsupervisorTotal}
+      assistfxTotal={assistfxTotal}
+      setAssistfxTotal={setAssistfxTotal}
+      otherfxlabourTotal={otherfxlabourTotal}
+      setOtherfxlabourTotal={setOtherfxlabourTotal}
+      fxlabourTotal={fxlabourTotal}
+      setFxlabourTotal={setFxlabourTotal}
+      setShow={setShowFx}  /> 
     ) }
     {/* wardrobe */}
     {!showWardrobe ? (
@@ -6496,7 +5619,7 @@ function BudgetEdit() {
     {!showTport ? (
       ""
     ) : (
-      <Transport
+      <Transport 
       postDataTransport={postDataTransport}
       setPostDataTransport={setPostDataTransport}
       tpcoordinatorTotal={tpcoordinatorTotal}
@@ -6871,7 +5994,7 @@ function BudgetEdit() {
       setPostDataPostVersion={setPostDataPostVersion}
       postVersionTotal={postVersionTotal}
       setPostVersionTotal={setPostVersionTotal}
-      setShow={setShowVers}   /> 
+      setShow={setShowVers}  /> 
     ) }
     {/* Publicity */}
     {!showPub ? (
@@ -6924,10 +6047,10 @@ function BudgetEdit() {
     </Col>
     </Row>
     </Form>
-    </Col>
-    </Row>
+        </Col>
+       </Row>
     </div>
   );
 }
 
-export default BudgetEdit
+export default BudgetCreate

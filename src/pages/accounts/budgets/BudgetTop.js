@@ -38,12 +38,13 @@ const {above_the_line_total, below_the_lineB_total,
   return (
     <div className='mx-5 px-5 mb-5'>
     <h5 style={{ textTransform: 'uppercase'}} 
-    className={`mt-1 mb-2 pl-5 py-3 text-center ${styles.SubTitle4 }`}>
+    className={`mt-1 pl-5 py-3 text-center ${styles.SubTitle4 }`}>
         Budget Topsheet
         <span style={{ textTransform: 'none'}} 
         className={`float-right ${styles.Close } pr-3`} 
         onClick={() => setShowTop(false) } >Close</span>
     </h5>
+    <div className={`${styles.TopSheet}`}>
     <div>
     {/* details length */}
     <Row className='px-3'>
@@ -958,6 +959,7 @@ const {above_the_line_total, below_the_lineB_total,
         className={`float-right ${styles.Close } pr-3`} 
         onClick={() => setShowTop(false) } >Close</span>
     </h5>
+    </div>
     </div>
   )
 }
