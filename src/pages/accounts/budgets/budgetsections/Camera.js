@@ -36,20 +36,28 @@ const Camera = (props) => {
       stills_qty, stills_uno, stills_una, stills_rt,
     fringes_taxes_camera,} = postDataCamera;
 
-    // handleChange - Use parseFloat only - - doesn't work first go
-    const handleChange = (event) => {
-        setPostDataCamera({
-        ...postDataCamera,
-        [event.target.name]: parseFloat(event.target.value) || 0,
-        });
-    }; 
-
     // handleChange1 - replace(/\D/g,'')
     const handleChange1 = (event) => {
       setPostDataCamera({
       ...postDataCamera,
       [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
       });
+    }; 
+
+    // handleChange3 - parseFloat(event.target.value) ?  
+    const handleChange3 = (event) => {
+        setPostDataCamera({
+        ...postDataCamera,
+        [event.target.name]: parseFloat(event.target.value) ? parseFloat(event.target.value) : '',
+        });
+    }; 
+
+    // handleChange - Use parseFloat only - - doesn't work first go
+    const handleChange = (event) => {
+        setPostDataCamera({
+        ...postDataCamera,
+        [event.target.name]: parseFloat(event.target.value) || 0,
+        });
     }; 
 
     // handleChange2 - const re = /\d+\.?\d*/ - doesn't work
@@ -61,14 +69,6 @@ const Camera = (props) => {
           [event.target.name]: event.target.value,
           });
         }
-    }; 
-
-    // handleChange3 - parseFloat(event.target.value) ?  
-    const handleChange3 = (event) => {
-        setPostDataCamera({
-        ...postDataCamera,
-        [event.target.name]: parseFloat(event.target.value) ? parseFloat(event.target.value) : '',
-        });
     }; 
 
     // handleChange4 - Use text="number" in imput box
