@@ -34,16 +34,50 @@ const Camera = (props) => {
       drone_pilot_qty, drone_pilot_uno, drone_pilot_una, drone_pilot_rt,
       other_cam_qty, other_cam_uno, other_cam_una, other_cam_rt,
       stills_qty, stills_uno, stills_una, stills_rt,
-      fringes_taxes_camera,} = postDataCamera;
+    fringes_taxes_camera,} = postDataCamera;
 
-    // handleChange 
+    // handleChange - Use parseFloat only - - doesn't work first go
     const handleChange = (event) => {
+        setPostDataCamera({
+        ...postDataCamera,
+        [event.target.name]: parseFloat(event.target.value) || 0,
+        });
+    }; 
+
+    // handleChange1 - replace(/\D/g,'')
+    const handleChange1 = (event) => {
       setPostDataCamera({
       ...postDataCamera,
-      [event.target.name]: parseInt(event.target.value) ? parseInt(event.target.value) : '',
-    //   [event.target.name]: parseFloat(event.target.value.replace(/\D/,'') || 0 ),
+      [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
       });
     }; 
+
+    // handleChange2 - const re = /\d+\.?\d*/ - doesn't work
+    const handleChange2 = (event) => {
+        const re = new RegExp('/\d+\.?\d*/');
+        if (re.test(event.target.value)) {
+          setPostDataCamera({
+          ...postDataCamera,
+          [event.target.name]: event.target.value,
+          });
+        }
+    }; 
+
+    // handleChange3 - parseFloat(event.target.value) ?  
+    const handleChange3 = (event) => {
+        setPostDataCamera({
+        ...postDataCamera,
+        [event.target.name]: parseFloat(event.target.value) ? parseFloat(event.target.value) : '',
+        });
+    }; 
+
+    // handleChange4 - Use text="number" in imput box
+    const handleChange4 = (event) => {
+        setPostDataCamera({
+        ...postDataCamera,
+        [event.target.name]: parseFloat(event.target.value) || 0,
+        });
+    };      
 
     // handleChange Text 
     const handleChangeText = (event) => {
@@ -325,7 +359,7 @@ const Camera = (props) => {
         className={styles.Input}
         name="dop_uno"
         value={dop_uno}
-        onChange={handleChange}
+        onChange={handleChange1}
             />
     </Form.Group>
     {errors?.dop_uno?.map((message, idx) => (
@@ -359,7 +393,7 @@ const Camera = (props) => {
         className={styles.Input}
         name="dop_rt"
         value={dop_rt}
-        onChange={handleChange}
+        onChange={handleChange3}
             />
     </Form.Group>
     {errors?.dop_rt?.map((message, idx) => (
@@ -419,7 +453,7 @@ const Camera = (props) => {
         className={styles.Input}
         name="camera_op_uno"
         value={camera_op_uno}
-        onChange={handleChange}
+        onChange={handleChange1}
             />
     </Form.Group>
     {errors?.camera_op_uno?.map((message, idx) => (
@@ -453,7 +487,7 @@ const Camera = (props) => {
         className={styles.Input}
         name="camera_op_rt"
         value={camera_op_rt}
-        onChange={handleChange}
+        onChange={handleChange2}
             />
     </Form.Group>
     {errors?.camera_op_rt?.map((message, idx) => (
@@ -496,7 +530,7 @@ const Camera = (props) => {
         className={styles.Input}
         name="cam_ac1_qty"
         value={cam_ac1_qty}
-        onChange={handleChange}
+        onChange={handleChange3}
             />
     </Form.Group>
     {errors?.cam_ac1_qty?.map((message, idx) => (
@@ -513,7 +547,7 @@ const Camera = (props) => {
         className={styles.Input}
         name="cam_ac1_uno"
         value={cam_ac1_uno}
-        onChange={handleChange}
+        onChange={handleChange4}
             />
     </Form.Group>
     {errors?.cam_ac1_uno?.map((message, idx) => (
@@ -543,11 +577,11 @@ const Camera = (props) => {
     <Form.Group controlId="cam_ac1_rt" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
-        type="text"
+        type="number"
         className={styles.Input}
         name="cam_ac1_rt"
         value={cam_ac1_rt}
-        onChange={handleChange}
+        onChange={handleChange3}
             />
     </Form.Group>
     {errors?.cam_ac1_rt?.map((message, idx) => (

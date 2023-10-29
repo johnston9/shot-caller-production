@@ -5,7 +5,6 @@ import Col from "react-bootstrap/Col";
 import styles from "../../../styles/Account.module.css";
 
 const InfoBudEdit = () => {
-  const [showInfo, setShowInfo] = useState(false);
   
   return (
     <div>
