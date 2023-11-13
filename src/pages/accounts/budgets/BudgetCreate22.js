@@ -2,6 +2,7 @@
   Production Staff - Holidays, Overtime, 6th day, 7th day, dailies, COA, Other, Box Rentals
   prep wrap qty uno una rt
  */
+  // 68 in submit2 already
   // production_manager_qty_prep,
   // production_manager_uno_prep,
   // production_manager_una_prep,
@@ -138,6 +139,8 @@
   // craft_services_uno_wrap,
   // craft_services_una_wrap,
   // craft_services_rt_wrap,
+  // 137 total 205
+  
 
 /* Component in the Account component to create Budgets */
 import React, { useEffect, useState } from "react";
