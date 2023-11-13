@@ -565,78 +565,360 @@ function BudgetEdit() {
     production_manager_units_number: 0,
     production_manager_units_name: "",
     production_manager_rate: 0,
+    production_manager_qty_prep: 0,
+    production_manager_uno_prep: 0,
+    production_manager_una_prep: "",
+    production_manager_rt_prep: 0,
+    production_manager_qty_wrap: 0,
+    production_manager_uno_wrap: 0,
+    production_manager_una_wrap: "",
+    production_manager_rt_wrap: 0,
     production_supervisor_quantity: 0,
     production_supervisor_units_number: 0,
     production_supervisor_units_name: "",
     production_supervisor_rate: 0,
+    production_supervisor_qty_prep: 0,
+    production_supervisor_uno_prep: 0,
+    production_supervisor_una_prep: "",
+    production_supervisor_rt_prep: 0,
+    production_supervisor_qty_wrap: 0,
+    production_supervisor_uno_wrap: 0,
+    production_supervisor_una_wrap: "",
+    production_supervisor_rt_wrap: 0,
     production_coordinator_quantity: 0,
     production_coordinator_units_number: 0,
     production_coordinator_units_name: "",
     production_coordinator_rate: 0,
+    production_coordinator_qty_prep: 0,
+    production_coordinator_uno_prep: 0,
+    production_coordinator_una_prep: "",
+    production_coordinator_rt_prep: 0,
+    production_coordinator_qty_wrap: 0,
+    production_coordinator_uno_wrap: 0,
+    production_coordinator_una_wrap: "",
+    production_coordinator_rt_wrap: 0,
     unit_manager_quantity: 0,
     unit_manager_units_number: 0,
     unit_manager_units_name: "",
     unit_manager_rate: 0,
+    unit_manager_qty_prep: 0,
+    unit_manager_uno_prep: 0,
+    unit_manager_una_prep: "",
+    unit_manager_rt_prep: 0,
+    unit_manager_qty_wrap: 0,
+    unit_manager_uno_wrap: 0,
+    unit_manager_una_wrap: "",
+    unit_manager_rt_wrap: 0,
     location_manager_quantity: 0,
     location_manager_units_number: 0,
     location_manager_units_name: "",
     location_manager_rate: 0,
+    location_manager_qty_prep: 0,
+    location_manager_uno_prep: 0,
+    location_manager_una_prep: "",
+    location_manager_rt_prep: 0,
+    location_manager_qty_wrap: 0,
+    location_manager_uno_wrap: 0,
+    location_manager_una_wrap: "",
+    location_manager_rt_wrap: 0,
     location_manager_assistant_quantity: 0,
     location_manager_assistant_units_number: 0,
     location_manager_assistant_units_name: "",
     location_manager_assistant_rate: 0,
+    location_manager_ass_qty_prep: 0,
+    location_manager_ass_uno_prep: 0,
+    location_manager_ass_una_prep: "",
+    location_manager_ass_rt_prep: 0,
+    location_manager_ass_qty_wrap: 0,
+    location_manager_ass_uno_wrap: 0,
+    location_manager_ass_una_wrap: "",
+    location_manager_ass_rt_wrap: 0,
     production_assistants_quantity: 0,
     production_assistants_units_number: 0,
     production_assistants_units_name: "",
     production_assistants_rate: 0,
+    production_ass_qty_prep: 0,
+    production_ass_uno_prep: 0,
+    production_ass_una_prep: "",
+    production_ass_rt_prep: 0,
+    production_ass_qty_wrap: 0,
+    production_ass_uno_wrap: 0,
+    production_ass_una_wrap: "",
+    production_ass_rt_wrap: 0,
     production_secretary_quantity: 0,
     production_secretary_units_number: 0,
     production_secretary_units_name: "",
     production_secretary_rate: 0,
+    production_sec_qty_prep: 0,
+    production_sec_uno_prep: 0,
+    production_sec_una_prep: "",
+    production_sec_rt_prep: 0,
+    production_sec_qty_wrap: 0,
+    production_sec_uno_wrap: 0,
+    production_sec_una_wrap: "",
+    production_sec_rt_wrap: 0,
     production_accountant_quantity: 0,
     production_accountant_units_number: 0,
     production_accountant_units_name: "",
     production_accountant_rate: 0,
+    production_acc_qty_prep: 0,
+    production_acc_uno_prep: 0,
+    production_acc_una_prep: "",
+    production_acc_rt_prep: 0,
+    production_acc_qty_wrap: 0,
+    production_acc_uno_wrap: 0,
+    production_acc_una_wrap: "",
+    production_acc_rt_wrap: 0,
     production_accountant_assistant_quantity: 0,
     production_accountant_assistant_units_number: 0,
     production_accountant_assistant_units_name: "",
     production_accountant_assistant_rate: 0,
+    production_acc_ass_qty_prep: 0,
+    production_acc_ass_uno_prep: 0,
+    production_acc_ass_una_prep: "",
+    production_acc_ass_rt_prep: 0,
+    production_acc_ass_qty_wrap: 0,
+    production_acc_ass_uno_wrap: 0,
+    production_acc_ass_una_wrap: "",
+    production_acc_ass_rt_wrap: 0,
     scriptsupervisor_continuity_quantity: 0,
     scriptsupervisor_continuity_units_number: 0,
     scriptsupervisor_continuity_units_name: "",
     scriptsupervisor_continuity_rate: 0,
+    scriptsupervisor_con_qty_prep: 0,
+    scriptsupervisor_con_uno_prep: 0,
+    scriptsupervisor_con_una_prep: "",
+    scriptsupervisor_con_rt_prep: 0,
+    scriptsupervisor_con_qty_wrap: 0,
+    scriptsupervisor_con_uno_wrap: 0,
+    scriptsupervisor_con_una_wrap: "",
+    scriptsupervisor_con_rt_wrap: 0,
     payroll_quantity: 0,
     payroll_units_number: 0,
     payroll_units_name: "",
     payroll_rate: 0,
+    payroll_qty_prep: 0,
+    payroll_uno_prep: 0,
+    payroll_una_prep: "",
+    payroll_rt_prep: 0,
+    payroll_qty_wrap: 0,
+    payroll_uno_wrap: 0,
+    payroll_una_wrap: "",
+    payroll_rt_wrap: 0,
     other_production_quantity: 0,
     other_production_units_number: 0,
     other_production_units_name: "",
     other_production_rate: 0,
+    other_pro_qty_prep: 0,
+    other_pro_uno_prep: 0,
+    other_pro_una_prep: "",
+    other_pro_rt_prep: 0,
+    other_pro_qty_wrap: 0,
+    other_pro_uno_wrap: 0,
+    other_pro_una_wrap: "",
+    other_pro_rt_wrap: 0,
     directors_assistant_quantity: 0,
     directors_assistant_units_number: 0,
     directors_assistant_units_name: "",
     directors_assistant_rate: 0,
+    directors_ass_qty_prep: 0,
+    directors_ass_uno_prep: 0,
+    directors_ass_una_prep: "",
+    directors_ass_rt_prep: 0,
+    directors_ass_qty_wrap: 0,
+    directors_ass_uno_wrap: 0,
+    directors_ass_una_wrap: "",
+    directors_ass_rt_wrap: 0,
     assistant_director_1st_quantity: 0,
     assistant_director_1st_units_number: 0,
     assistant_director_1st_units_name: "",
     assistant_director_1st_rate: 0,
+    ass_director_1st_qty_prep: 0,
+    ass_director_1st_uno_prep: 0,
+    ass_director_1st_una_prep: "",
+    ass_director_1st_rt_prep: 0,
+    ass_director_1st_qty_wrap: 0,
+    ass_director_1st_uno_wrap: 0,
+    ass_director_1st_una_wrap: "",
+    ass_director_1st_rt_wrap: 0,
     assistant_director_2nd_quantity: 0,
     assistant_director_2nd_units_number: 0,
     assistant_director_2nd_units_name: "",
     assistant_director_2nd_rate: 0,
+    ass_director_2nd_qty_prep: 0,
+    ass_director_2nd_uno_prep: 0,
+    ass_director_2nd_una_prep: "",
+    ass_director_2nd_rt_prep: 0,
+    ass_director_2nd_qty_wrap: 0,
+    ass_director_2nd_uno_wrap: 0,
+    ass_director_2nd_una_wrap: "",
+    ass_director_2nd_rt_wrap: 0,
     assistant_director_3rd_quantity: 0,
     assistant_director_3rd_units_number: 0,
     assistant_director_3rd_units_name: "",
     assistant_director_3rd_rate: 0,
+    ass_director_3rd_qty_prep: 0,
+    ass_director_3rd_uno_prep: 0,
+    ass_director_3rd_una_prep: "",
+    ass_director_3rd_rt_prep: 0,
+    ass_director_3rd_qty_wrap: 0,
+    ass_director_3rd_uno_wrap: 0,
+    ass_director_3rd_una_wrap: "",
+    ass_director_3rd_rt_wrap: 0,
     craft_services_quantity: 0,
     craft_services_units_number: 0,
     craft_services_units_name: "",
     craft_services_rate: 0,
+    craft_services_qty_prep: 0,
+    craft_services_uno_prep: 0,
+    craft_services_una_prep: "",
+    craft_services_rt_prep: 0,
+    craft_services_qty_wrap: 0,
+    craft_services_uno_wrap: 0,
+    craft_services_una_wrap: "",
+    craft_services_rt_wrap: 0,
   });
 
   // Production postData values
   const {
+    // new
+    production_manager_qty_prep,
+    production_manager_uno_prep,
+    production_manager_una_prep,
+    production_manager_rt_prep,
+    production_manager_qty_wrap,
+    production_manager_uno_wrap,
+    production_manager_una_wrap,
+    production_manager_rt_wrap,
+    production_supervisor_qty_prep,
+    production_supervisor_uno_prep,
+    production_supervisor_una_prep,
+    production_supervisor_rt_prep,
+    production_supervisor_qty_wrap,
+    production_supervisor_uno_wrap,
+    production_supervisor_una_wrap,
+    production_supervisor_rt_wrap,
+    production_coordinator_qty_prep,
+    production_coordinator_uno_prep,
+    production_coordinator_una_prep,
+    production_coordinator_rt_prep,
+    production_coordinator_qty_wrap,
+    production_coordinator_uno_wrap,
+    production_coordinator_una_wrap,
+    production_coordinator_rt_wrap,
+    unit_manager_qty_prep,
+    unit_manager_uno_prep,
+    unit_manager_una_prep,
+    unit_manager_rt_prep,
+    unit_manager_qty_wrap,
+    unit_manager_uno_wrap,
+    unit_manager_una_wrap,
+    unit_manager_rt_wrap,
+    location_manager_qty_prep,
+    location_manager_uno_prep,
+    location_manager_una_prep,
+    location_manager_rt_prep,
+    location_manager_qty_wrap,
+    location_manager_uno_wrap,
+    location_manager_una_wrap,
+    location_manager_rt_wrap,
+    location_manager_ass_qty_prep,
+    location_manager_ass_uno_prep,
+    location_manager_ass_una_prep,
+    location_manager_ass_rt_prep,
+    location_manager_ass_qty_wrap,
+    location_manager_ass_uno_wrap,
+    location_manager_ass_una_wrap,
+    location_manager_ass_rt_wrap,
+    production_ass_qty_prep,
+    production_ass_uno_prep,
+    production_ass_una_prep,
+    production_ass_rt_prep,
+    production_ass_qty_wrap,
+    production_ass_uno_wrap,
+    production_ass_una_wrap,
+    production_ass_rt_wrap,
+    production_sec_qty_prep,
+    production_sec_uno_prep,
+    production_sec_una_prep,
+    production_sec_rt_prep,
+    production_sec_qty_wrap,
+    production_sec_uno_wrap,
+    production_sec_una_wrap,
+    production_sec_rt_wrap,
+    production_acc_qty_prep,
+    production_acc_uno_prep,
+    production_acc_una_prep,
+    production_acc_rt_prep,
+    production_acc_qty_wrap,
+    production_acc_uno_wrap,
+    production_acc_una_wrap,
+    production_acc_rt_wrap,
+    production_acc_ass_qty_prep,
+    production_acc_ass_uno_prep,
+    production_acc_ass_una_prep,
+    production_acc_ass_rt_prep,
+    production_acc_ass_qty_wrap,
+    production_acc_ass_uno_wrap,
+    production_acc_ass_una_wrap,
+    production_acc_ass_rt_wrap,
+    scriptsupervisor_con_qty_prep,
+    scriptsupervisor_con_uno_prep,
+    scriptsupervisor_con_una_prep,
+    scriptsupervisor_con_rt_prep,
+    scriptsupervisor_con_qty_wrap,
+    scriptsupervisor_con_uno_wrap,
+    scriptsupervisor_con_una_wrap,
+    scriptsupervisor_con_rt_wrap,
+    payroll_qty_prep,
+    payroll_uno_prep,
+    payroll_una_prep,
+    payroll_rt_prep,
+    payroll_qty_wrap,
+    payroll_uno_wrap,
+    payroll_una_wrap,
+    payroll_rt_wrap,
+    directors_ass_qty_prep,
+    directors_ass_uno_prep,
+    directors_ass_una_prep,
+    directors_ass_rt_prep,
+    directors_ass_qty_wrap,
+    directors_ass_uno_wrap,
+    directors_ass_una_wrap,
+    directors_ass_rt_wrap,
+    ass_director_1st_qty_prep,
+    ass_director_1st_uno_prep,
+    ass_director_1st_una_prep,
+    ass_director_1st_rt_prep,
+    ass_director_1st_qty_wrap,
+    ass_director_1st_uno_wrap,
+    ass_director_1st_una_wrap,
+    ass_director_1st_rt_wrap,
+    ass_director_2nd_qty_prep,
+    ass_director_2nd_uno_prep,
+    ass_director_2nd_una_prep,
+    ass_director_2nd_rt_prep,
+    ass_director_2nd_qty_wrap,
+    ass_director_2nd_uno_wrap,
+    ass_director_2nd_una_wrap,
+    ass_director_2nd_rt_wrap,
+    ass_director_3rd_qty_prep,
+    ass_director_3rd_uno_prep,
+    ass_director_3rd_una_prep,
+    ass_director_3rd_rt_prep,
+    ass_director_3rd_qty_wrap,
+    ass_director_3rd_uno_wrap,
+    ass_director_3rd_una_wrap,
+    ass_director_3rd_rt_wrap,
+    craft_services_qty_prep,
+    craft_services_uno_prep,
+    craft_services_una_prep,
+    craft_services_rt_prep,
+    craft_services_qty_wrap,
+    craft_services_uno_wrap,
+    craft_services_una_wrap,
+    craft_services_rt_wrap,
+    // old
     fringes_taxes_production,
     production_manager_quantity,
     production_manager_units_number,
@@ -3217,7 +3499,7 @@ function BudgetEdit() {
           other_producers_dirs, fringes_taxes_producers_dirs,
           producers_dirs_total} = data.results[0];
           setPostDataProducersDirs({
-            executive_producers_rate, producers_rate,
+          executive_producers_rate, producers_rate,
           line_producers_rate, co_producers_rate,
           associate_producers_rate, directors_rate,
           unit2_directors_rate, executive_producers_quantity,
@@ -3271,7 +3553,146 @@ function BudgetEdit() {
           other_cast, fringes_taxes_cast, rights_payments_cast,});
           setCastTotal(cast_total);
         // production
-        const {fringes_taxes_production,
+        const {
+          // new
+          production_manager_qty_prep,
+          production_manager_uno_prep,
+          production_manager_una_prep,
+          production_manager_rt_prep,
+          production_manager_qty_wrap,
+          production_manager_uno_wrap,
+          production_manager_una_wrap,
+          production_manager_rt_wrap,
+          production_supervisor_qty_prep,
+          production_supervisor_uno_prep,
+          production_supervisor_una_prep,
+          production_supervisor_rt_prep,
+          production_supervisor_qty_wrap,
+          production_supervisor_uno_wrap,
+          production_supervisor_una_wrap,
+          production_supervisor_rt_wrap,
+          production_coordinator_qty_prep,
+          production_coordinator_uno_prep,
+          production_coordinator_una_prep,
+          production_coordinator_rt_prep,
+          production_coordinator_qty_wrap,
+          production_coordinator_uno_wrap,
+          production_coordinator_una_wrap,
+          production_coordinator_rt_wrap,
+          unit_manager_qty_prep,
+          unit_manager_uno_prep,
+          unit_manager_una_prep,
+          unit_manager_rt_prep,
+          unit_manager_qty_wrap,
+          unit_manager_uno_wrap,
+          unit_manager_una_wrap,
+          unit_manager_rt_wrap,
+          location_manager_qty_prep,
+          location_manager_uno_prep,
+          location_manager_una_prep,
+          location_manager_rt_prep,
+          location_manager_qty_wrap,
+          location_manager_uno_wrap,
+          location_manager_una_wrap,
+          location_manager_rt_wrap,
+          location_manager_ass_qty_prep,
+          location_manager_ass_uno_prep,
+          location_manager_ass_una_prep,
+          location_manager_ass_rt_prep,
+          location_manager_ass_qty_wrap,
+          location_manager_ass_uno_wrap,
+          location_manager_ass_una_wrap,
+          location_manager_ass_rt_wrap,
+          production_ass_qty_prep,
+          production_ass_uno_prep,
+          production_ass_una_prep,
+          production_ass_rt_prep,
+          production_ass_qty_wrap,
+          production_ass_uno_wrap,
+          production_ass_una_wrap,
+          production_ass_rt_wrap,
+          production_sec_qty_prep,
+          production_sec_uno_prep,
+          production_sec_una_prep,
+          production_sec_rt_prep,
+          production_sec_qty_wrap,
+          production_sec_uno_wrap,
+          production_sec_una_wrap,
+          production_sec_rt_wrap,
+          production_acc_qty_prep,
+          production_acc_uno_prep,
+          production_acc_una_prep,
+          production_acc_rt_prep,
+          production_acc_qty_wrap,
+          production_acc_uno_wrap,
+          production_acc_una_wrap,
+          production_acc_rt_wrap,
+          production_acc_ass_qty_prep,
+          production_acc_ass_uno_prep,
+          production_acc_ass_una_prep,
+          production_acc_ass_rt_prep,
+          production_acc_ass_qty_wrap,
+          production_acc_ass_uno_wrap,
+          production_acc_ass_una_wrap,
+          production_acc_ass_rt_wrap,
+          scriptsupervisor_con_qty_prep,
+          scriptsupervisor_con_uno_prep,
+          scriptsupervisor_con_una_prep,
+          scriptsupervisor_con_rt_prep,
+          scriptsupervisor_con_qty_wrap,
+          scriptsupervisor_con_uno_wrap,
+          scriptsupervisor_con_una_wrap,
+          scriptsupervisor_con_rt_wrap,
+          payroll_qty_prep,
+          payroll_uno_prep,
+          payroll_una_prep,
+          payroll_rt_prep,
+          payroll_qty_wrap,
+          payroll_uno_wrap,
+          payroll_una_wrap,
+          payroll_rt_wrap,
+          directors_ass_qty_prep,
+          directors_ass_uno_prep,
+          directors_ass_una_prep,
+          directors_ass_rt_prep,
+          directors_ass_qty_wrap,
+          directors_ass_uno_wrap,
+          directors_ass_una_wrap,
+          directors_ass_rt_wrap,
+          ass_director_1st_qty_prep,
+          ass_director_1st_uno_prep,
+          ass_director_1st_una_prep,
+          ass_director_1st_rt_prep,
+          ass_director_1st_qty_wrap,
+          ass_director_1st_uno_wrap,
+          ass_director_1st_una_wrap,
+          ass_director_1st_rt_wrap,
+          ass_director_2nd_qty_prep,
+          ass_director_2nd_uno_prep,
+          ass_director_2nd_una_prep,
+          ass_director_2nd_rt_prep,
+          ass_director_2nd_qty_wrap,
+          ass_director_2nd_uno_wrap,
+          ass_director_2nd_una_wrap,
+          ass_director_2nd_rt_wrap,
+          ass_director_3rd_qty_prep,
+          ass_director_3rd_uno_prep,
+          ass_director_3rd_una_prep,
+          ass_director_3rd_rt_prep,
+          ass_director_3rd_qty_wrap,
+          ass_director_3rd_uno_wrap,
+          ass_director_3rd_una_wrap,
+          ass_director_3rd_rt_wrap,
+          craft_services_qty_prep,
+          craft_services_uno_prep,
+          craft_services_una_prep,
+          craft_services_rt_prep,
+          craft_services_qty_wrap,
+          craft_services_uno_wrap,
+          craft_services_una_wrap,
+          craft_services_rt_wrap,
+          // old
+          fringes_taxes_production,
           production_manager_quantity,
           production_manager_units_number,
           production_manager_units_name,
@@ -3345,7 +3766,146 @@ function BudgetEdit() {
           craft_services_units_name,
           craft_services_rate,
           productionstaff_total} = data.results[0];
-          setPostDataProduction({fringes_taxes_production,
+          setPostDataProduction({
+            // new
+            production_manager_qty_prep,
+            production_manager_uno_prep,
+            production_manager_una_prep,
+            production_manager_rt_prep,
+            production_manager_qty_wrap,
+            production_manager_uno_wrap,
+            production_manager_una_wrap,
+            production_manager_rt_wrap,
+            production_supervisor_qty_prep,
+            production_supervisor_uno_prep,
+            production_supervisor_una_prep,
+            production_supervisor_rt_prep,
+            production_supervisor_qty_wrap,
+            production_supervisor_uno_wrap,
+            production_supervisor_una_wrap,
+            production_supervisor_rt_wrap,
+            production_coordinator_qty_prep,
+            production_coordinator_uno_prep,
+            production_coordinator_una_prep,
+            production_coordinator_rt_prep,
+            production_coordinator_qty_wrap,
+            production_coordinator_uno_wrap,
+            production_coordinator_una_wrap,
+            production_coordinator_rt_wrap,
+            unit_manager_qty_prep,
+            unit_manager_uno_prep,
+            unit_manager_una_prep,
+            unit_manager_rt_prep,
+            unit_manager_qty_wrap,
+            unit_manager_uno_wrap,
+            unit_manager_una_wrap,
+            unit_manager_rt_wrap,
+            location_manager_qty_prep,
+            location_manager_uno_prep,
+            location_manager_una_prep,
+            location_manager_rt_prep,
+            location_manager_qty_wrap,
+            location_manager_uno_wrap,
+            location_manager_una_wrap,
+            location_manager_rt_wrap,
+            location_manager_ass_qty_prep,
+            location_manager_ass_uno_prep,
+            location_manager_ass_una_prep,
+            location_manager_ass_rt_prep,
+            location_manager_ass_qty_wrap,
+            location_manager_ass_uno_wrap,
+            location_manager_ass_una_wrap,
+            location_manager_ass_rt_wrap,
+            production_ass_qty_prep,
+            production_ass_uno_prep,
+            production_ass_una_prep,
+            production_ass_rt_prep,
+            production_ass_qty_wrap,
+            production_ass_uno_wrap,
+            production_ass_una_wrap,
+            production_ass_rt_wrap,
+            production_sec_qty_prep,
+            production_sec_uno_prep,
+            production_sec_una_prep,
+            production_sec_rt_prep,
+            production_sec_qty_wrap,
+            production_sec_uno_wrap,
+            production_sec_una_wrap,
+            production_sec_rt_wrap,
+            production_acc_qty_prep,
+            production_acc_uno_prep,
+            production_acc_una_prep,
+            production_acc_rt_prep,
+            production_acc_qty_wrap,
+            production_acc_uno_wrap,
+            production_acc_una_wrap,
+            production_acc_rt_wrap,
+            production_acc_ass_qty_prep,
+            production_acc_ass_uno_prep,
+            production_acc_ass_una_prep,
+            production_acc_ass_rt_prep,
+            production_acc_ass_qty_wrap,
+            production_acc_ass_uno_wrap,
+            production_acc_ass_una_wrap,
+            production_acc_ass_rt_wrap,
+            scriptsupervisor_con_qty_prep,
+            scriptsupervisor_con_uno_prep,
+            scriptsupervisor_con_una_prep,
+            scriptsupervisor_con_rt_prep,
+            scriptsupervisor_con_qty_wrap,
+            scriptsupervisor_con_uno_wrap,
+            scriptsupervisor_con_una_wrap,
+            scriptsupervisor_con_rt_wrap,
+            payroll_qty_prep,
+            payroll_uno_prep,
+            payroll_una_prep,
+            payroll_rt_prep,
+            payroll_qty_wrap,
+            payroll_uno_wrap,
+            payroll_una_wrap,
+            payroll_rt_wrap,
+            directors_ass_qty_prep,
+            directors_ass_uno_prep,
+            directors_ass_una_prep,
+            directors_ass_rt_prep,
+            directors_ass_qty_wrap,
+            directors_ass_uno_wrap,
+            directors_ass_una_wrap,
+            directors_ass_rt_wrap,
+            ass_director_1st_qty_prep,
+            ass_director_1st_uno_prep,
+            ass_director_1st_una_prep,
+            ass_director_1st_rt_prep,
+            ass_director_1st_qty_wrap,
+            ass_director_1st_uno_wrap,
+            ass_director_1st_una_wrap,
+            ass_director_1st_rt_wrap,
+            ass_director_2nd_qty_prep,
+            ass_director_2nd_uno_prep,
+            ass_director_2nd_una_prep,
+            ass_director_2nd_rt_prep,
+            ass_director_2nd_qty_wrap,
+            ass_director_2nd_uno_wrap,
+            ass_director_2nd_una_wrap,
+            ass_director_2nd_rt_wrap,
+            ass_director_3rd_qty_prep,
+            ass_director_3rd_uno_prep,
+            ass_director_3rd_una_prep,
+            ass_director_3rd_rt_prep,
+            ass_director_3rd_qty_wrap,
+            ass_director_3rd_uno_wrap,
+            ass_director_3rd_una_wrap,
+            ass_director_3rd_rt_wrap,
+            craft_services_qty_prep,
+            craft_services_uno_prep,
+            craft_services_una_prep,
+            craft_services_rt_prep,
+            craft_services_qty_wrap,
+            craft_services_uno_wrap,
+            craft_services_una_wrap,
+            craft_services_rt_wrap,
+            // old
+            fringes_taxes_production,
             production_manager_quantity,
             production_manager_units_number,
             production_manager_units_name,
@@ -5143,6 +5703,214 @@ function BudgetEdit() {
     // Contingency/Bond
     formData.append("contingency", contingency);
     formData.append("completion_bond", completion_bond);
+    // New Production Staff
+    formData.append("production_manager_qty_prep", production_manager_qty_prep);
+    formData.append("production_manager_uno_prep", production_manager_uno_prep);
+    formData.append("production_manager_una_prep", production_manager_una_prep);
+    formData.append("production_manager_rt_prep", production_manager_rt_prep);
+    formData.append("production_manager_qty_wrap", production_manager_qty_wrap);
+    formData.append("production_manager_uno_wrap", production_manager_uno_wrap);
+    formData.append("production_manager_una_wrap", production_manager_una_wrap);
+    formData.append("production_manager_rt_wrap", production_manager_rt_wrap);
+    formData.append("production_supervisor_qty_prep", production_supervisor_qty_prep);
+    formData.append("production_supervisor_uno_prep", production_supervisor_uno_prep);
+    formData.append("production_supervisor_una_prep", production_supervisor_una_prep);
+    formData.append("production_supervisor_rt_prep", production_supervisor_rt_prep);
+    formData.append("production_supervisor_qty_wrap", production_supervisor_qty_wrap);
+    formData.append("production_supervisor_uno_wrap", production_supervisor_uno_wrap);
+    formData.append("production_supervisor_una_wrap", production_supervisor_una_wrap);
+    formData.append("production_supervisor_rt_wrap", production_supervisor_rt_wrap);
+    formData.append("production_coordinator_qty_prep", production_coordinator_qty_prep);
+    formData.append("production_coordinator_uno_prep", production_coordinator_uno_prep);
+    formData.append("production_coordinator_una_prep", production_coordinator_una_prep);
+    formData.append("production_coordinator_rt_prep", production_coordinator_rt_prep);
+    formData.append("production_coordinator_qty_wrap", production_coordinator_qty_wrap);
+    formData.append("production_coordinator_uno_wrap", production_coordinator_uno_wrap);
+    formData.append("production_coordinator_una_wrap", production_coordinator_una_wrap);
+    formData.append("production_coordinator_rt_wrap", production_coordinator_rt_wrap);
+    formData.append("unit_manager_qty_prep", unit_manager_qty_prep);
+    formData.append("unit_manager_uno_prep", unit_manager_uno_prep);
+    formData.append("unit_manager_una_prep", unit_manager_una_prep);
+    formData.append("unit_manager_rt_prep", unit_manager_rt_prep);
+    formData.append("unit_manager_qty_wrap", unit_manager_qty_wrap);
+    formData.append("unit_manager_uno_wrap", unit_manager_uno_wrap);
+    formData.append("unit_manager_una_wrap", unit_manager_una_wrap);
+    formData.append("unit_manager_rt_wrap", unit_manager_rt_wrap);
+    formData.append("location_manager_qty_prep", location_manager_qty_prep);
+    formData.append("location_manager_uno_prep", location_manager_uno_prep);
+    formData.append("location_manager_una_prep", location_manager_una_prep);
+    formData.append("location_manager_rt_prep", location_manager_rt_prep);
+    formData.append("location_manager_qty_wrap", location_manager_qty_wrap);
+    formData.append("location_manager_uno_wrap", location_manager_uno_wrap);
+    formData.append("location_manager_una_wrap", location_manager_una_wrap);
+    formData.append("location_manager_rt_wrap", location_manager_rt_wrap);
+    formData.append("location_manager_ass_qty_prep", location_manager_ass_qty_prep);
+    formData.append("location_manager_ass_uno_prep", location_manager_ass_uno_prep);
+    formData.append("location_manager_ass_una_prep", location_manager_ass_una_prep);
+    formData.append("location_manager_ass_rt_prep", location_manager_ass_rt_prep);
+    formData.append("location_manager_ass_qty_wrap", location_manager_ass_qty_wrap);
+    formData.append("location_manager_ass_uno_wrap", location_manager_ass_uno_wrap);
+    formData.append("location_manager_ass_una_wrap", location_manager_ass_una_wrap);
+    formData.append("location_manager_ass_rt_wrap", location_manager_ass_rt_wrap);
+    formData.append("production_ass_qty_prep", production_ass_qty_prep);
+    formData.append("production_ass_uno_prep", production_ass_uno_prep);
+    formData.append("production_ass_una_prep", production_ass_una_prep);
+    formData.append("production_ass_rt_prep", production_ass_rt_prep);
+    formData.append("production_ass_qty_wrap", production_ass_qty_wrap);
+    formData.append("production_ass_uno_wrap", production_ass_uno_wrap);
+    formData.append("production_ass_una_wrap", production_ass_una_wrap);
+    formData.append("production_ass_rt_wrap", production_ass_rt_wrap);
+    formData.append("production_sec_qty_prep", production_sec_qty_prep);
+    formData.append("production_sec_uno_prep", production_sec_uno_prep);
+    formData.append("production_sec_una_prep", production_sec_una_prep);
+    formData.append("production_sec_rt_prep", production_sec_rt_prep);
+    formData.append("production_sec_qty_wrap", production_sec_qty_wrap);
+    formData.append("production_sec_uno_wrap", production_sec_uno_wrap);
+    formData.append("production_sec_una_wrap", production_sec_una_wrap);
+    formData.append("production_sec_rt_wrap", production_sec_rt_wrap);
+    formData.append("production_acc_qty_prep", production_acc_qty_prep);
+    formData.append("production_acc_uno_prep", production_acc_uno_prep);
+    formData.append("production_acc_una_prep", production_acc_una_prep);
+    formData.append("production_acc_rt_prep", production_acc_rt_prep);
+    formData.append("production_acc_qty_wrap", production_acc_qty_wrap);
+    formData.append("production_acc_uno_wrap", production_acc_uno_wrap);
+    formData.append("production_acc_una_wrap", production_acc_una_wrap);
+    formData.append("production_acc_rt_wrap", production_acc_rt_wrap);
+    formData.append("production_acc_ass_qty_prep", production_acc_ass_qty_prep);
+    formData.append("production_acc_ass_uno_prep", production_acc_ass_uno_prep);
+    formData.append("production_acc_ass_una_prep", production_acc_ass_una_prep);
+    formData.append("production_acc_ass_rt_prep", production_acc_ass_rt_prep);
+    formData.append("production_acc_ass_qty_wrap", production_acc_ass_qty_wrap);
+    formData.append("production_acc_ass_uno_wrap", production_acc_ass_uno_wrap);
+    formData.append("production_acc_ass_una_wrap", production_acc_ass_una_wrap);
+    formData.append("production_acc_ass_rt_wrap", production_acc_ass_rt_wrap);
+    formData.append("scriptsupervisor_con_qty_prep", scriptsupervisor_con_qty_prep);
+    formData.append("scriptsupervisor_con_uno_prep", scriptsupervisor_con_uno_prep);
+    formData.append("scriptsupervisor_con_una_prep", scriptsupervisor_con_una_prep);
+    formData.append("scriptsupervisor_con_rt_prep", scriptsupervisor_con_rt_prep);
+    formData.append("scriptsupervisor_con_qty_wrap", scriptsupervisor_con_qty_wrap);
+    formData.append("scriptsupervisor_con_uno_wrap", scriptsupervisor_con_uno_wrap);
+    formData.append("scriptsupervisor_con_una_wrap", scriptsupervisor_con_una_wrap);
+    formData.append("scriptsupervisor_con_rt_wrap", scriptsupervisor_con_rt_wrap);
+    formData.append("payroll_qty_prep", payroll_qty_prep);
+    formData.append("payroll_uno_prep", payroll_uno_prep);
+    formData.append("payroll_una_prep", payroll_una_prep);
+    formData.append("payroll_rt_prep", payroll_rt_prep);
+    formData.append("payroll_qty_wrap", payroll_qty_wrap);
+    formData.append("payroll_uno_wrap", payroll_uno_wrap);
+    formData.append("payroll_una_wrap", payroll_una_wrap);
+    formData.append("payroll_rt_wrap", payroll_rt_wrap);
+    formData.append("directors_ass_qty_prep", directors_ass_qty_prep);
+    formData.append("directors_ass_uno_prep", directors_ass_uno_prep);
+    formData.append("directors_ass_una_prep", directors_ass_una_prep);
+    formData.append("directors_ass_rt_prep", directors_ass_rt_prep);
+    formData.append("directors_ass_qty_wrap", directors_ass_qty_wrap);
+    formData.append("directors_ass_uno_wrap", directors_ass_uno_wrap);
+    formData.append("directors_ass_una_wrap", directors_ass_una_wrap);
+    formData.append("directors_ass_rt_wrap", directors_ass_rt_wrap);
+    formData.append("ass_director_1st_qty_prep", ass_director_1st_qty_prep);
+    formData.append("ass_director_1st_uno_prep", ass_director_1st_uno_prep);
+    formData.append("ass_director_1st_una_prep", ass_director_1st_una_prep);
+    formData.append("ass_director_1st_rt_prep", ass_director_1st_rt_prep);
+    formData.append("ass_director_1st_qty_wrap", ass_director_1st_qty_wrap);
+    formData.append("ass_director_1st_uno_wrap", ass_director_1st_uno_wrap);
+    formData.append("ass_director_1st_una_wrap", ass_director_1st_una_wrap);
+    formData.append("ass_director_1st_rt_wrap", ass_director_1st_rt_wrap);
+    formData.append("ass_director_2nd_qty_prep", ass_director_2nd_qty_prep);
+    formData.append("ass_director_2nd_uno_prep", ass_director_2nd_uno_prep);
+    formData.append("ass_director_2nd_una_prep", ass_director_2nd_una_prep);
+    formData.append("ass_director_2nd_rt_prep", ass_director_2nd_rt_prep);
+    formData.append("ass_director_2nd_qty_wrap", ass_director_2nd_qty_wrap);
+    formData.append("ass_director_2nd_uno_wrap", ass_director_2nd_uno_wrap);
+    formData.append("ass_director_2nd_una_wrap", ass_director_2nd_una_wrap);
+    formData.append("ass_director_2nd_rt_wrap", ass_director_2nd_rt_wrap);
+    formData.append("ass_director_3rd_qty_prep", ass_director_3rd_qty_prep);
+    formData.append("ass_director_3rd_uno_prep", ass_director_3rd_uno_prep);
+    formData.append("ass_director_3rd_una_prep", ass_director_3rd_una_prep);
+    formData.append("ass_director_3rd_rt_prep", ass_director_3rd_rt_prep);
+    formData.append("ass_director_3rd_qty_wrap", ass_director_3rd_qty_wrap);
+    formData.append("ass_director_3rd_uno_wrap", ass_director_3rd_uno_wrap);
+    formData.append("ass_director_3rd_una_wrap", ass_director_3rd_una_wrap);
+    formData.append("ass_director_3rd_rt_wrap", ass_director_3rd_rt_wrap);
+    formData.append("craft_services_qty_prep", craft_services_qty_prep);
+    formData.append("craft_services_uno_prep", craft_services_uno_prep);
+    formData.append("craft_services_una_prep", craft_services_una_prep);
+    formData.append("craft_services_rt_prep", craft_services_rt_prep);
+    formData.append("craft_services_qty_wrap", craft_services_qty_wrap);
+    formData.append("craft_services_uno_wrap", craft_services_uno_wrap);
+    formData.append("craft_services_una_wrap", craft_services_una_wrap);
+    formData.append("craft_services_rt_wrap", craft_services_rt_wrap);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
 
     try {
       const { data } = await axiosReq.put(`/budgets/${budgetId}/`, formData);

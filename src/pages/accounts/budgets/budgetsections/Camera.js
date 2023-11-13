@@ -44,6 +44,14 @@ const Camera = (props) => {
       });
     }; 
 
+    // handleChange1 - replace(/[^0-9.]/g, '')
+    const handleChange6 = (event) => {
+        setPostDataCamera({
+        ...postDataCamera,
+        [event.target.name]: parseFloat(event.target.value.replace(/[^0-9.]/g, '') || 0 ),
+        });
+      }; 
+
     // handleChange3 - parseFloat(event.target.value) ?  
     const handleChange3 = (event) => {
         setPostDataCamera({
@@ -1339,4 +1347,4 @@ const Camera = (props) => {
   )
 }
 
-export default Camera
+export default Camera 
