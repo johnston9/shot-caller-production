@@ -29,7 +29,34 @@ const ProductionStaff = (props) => {
          assistantdirector2ndTotal, setAssistantdirector2ndTotal,
          assistantdirector3rdTotal, setAssistantdirector3rdTotal,
          craftservicesTotal, setCraftservicesTotal,
-         productionstaffTotal, setProductionstaffTotal} = props;
+         productionstaffTotal, setProductionstaffTotal,
+         // new
+         productionmanagerprepTotal, setProductionmanagerprepTotal,
+         productionmanagerwrapTotal, setProductionmanagerwrapTotal,
+         productionmanagerallTotal, setProductionmanagerallTotal,
+         productionsupervisorprepTotal, setProductionsupervisorprepTotal,
+         productionsupervisorwrapTotal, setProductionsupervisorwrapTotal,
+         productionsupervisorallTotal, setProductionsupervisorallTotal,
+         productioncoordinatorprepTotal, setProductioncoordinatorprepTotal,
+         productioncoordinatorwrapTotal, setProductioncoordinatorwrapTotal,
+         productioncoordinatorallTotal, setProductioncoordinatorallTotal,
+         unitmanagerprepTotal, setUnitmanagerprepTotal,
+         unitmanagerwrapTotal, setUnitmanagerwrapTotal,
+         unitmanagerallTotal, setUnitmanagerallTotal,
+         locationmanagerwrapTotal, setLocationmanagerwrapTotal,
+         locationmanagerprepTotal, setLocationmanagerprepTotal,
+         locationmanagerallTotal, setLocationmanagerallTotal,
+         locmanassprepTotal, setLocmanassprepTotal,
+         locmanasswrapTotal, setLocmanasswrapTotal,
+         locmanassallTotal, setLocmanassallTotal,
+         proassprepTotal, setProassprepTotal,
+         proasswrapTotal, setProasswrapTotal,
+         proassallTotal, setProassallTotal,
+         prosecprepTotal, setProsecprepTotal,
+         prosecwrapTotal, setProsecwrapTotal,
+         prosecallTotal, setProsecallTotal,
+         
+        } = props;
   
   // Production postData values
   const {

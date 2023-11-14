@@ -491,6 +491,15 @@ function BudgetEdit() {
   
   // Cast postData
   const [postDataCast, setPostDataCast] = useState({
+    // new
+    holidays_cast: 0, 
+    overtime_cast: 0, 
+    days6th7th_cast: 0, 
+    rehersals_cast: 0,
+    holidays_unit_cast: 0, 
+    overtime_unit_cast: 0, 
+    days6th7th_unit_cast: 0, 
+    rehersals_unit_cast: 0,
     principals_quantity: 0,
     principals_units_number: 0,
     principals_units_name: "",
@@ -522,8 +531,12 @@ function BudgetEdit() {
     rights_payments_cast: 0,
   });
 
-  // Cast postData values
+  // Cast postData values _unit
   const {
+    holidays_cast, overtime_cast, 
+    days6th7th_cast, rehersals_cast,
+    holidays_unit_cast, overtime_unit_cast, 
+    days6th7th_unit_cast, rehersals_unit_cast,
     principals_quantity, principals_units_number,
     principals_units_name, principals_rate,
     actors_quantity, actors_units_number, 
@@ -560,6 +573,17 @@ function BudgetEdit() {
 
   // Production postData
   const [postDataProduction, setPostDataProduction] = useState({
+    // new
+    holidays_pro_sta: 0, 
+    overtime_pro_sta: 0, 
+    days6th7th_pro_sta: 0, 
+    other_pro_sta: 0,
+    box_rent_pro_sta: 0,
+    holidays_unit_pro_sta: 0, 
+    overtime_unit_pro_sta: 0, 
+    days6th7th_unit_pro_sta: 0, 
+    other_unit_pro_sta: 0,
+    box_rent_unit_pro_sta: 0,
     fringes_taxes_production: 0,
     production_manager_quantity: 0,
     production_manager_units_number: 0,
@@ -782,6 +806,12 @@ function BudgetEdit() {
   // Production postData values
   const {
     // new
+    holidays_pro_sta, overtime_pro_sta, 
+    days6th7th_pro_sta, other_pro_sta,
+    box_rent_pro_sta,
+    holidays_unit_pro_sta, overtime_unit_pro_sta, 
+    days6th7th_unit_pro_sta, other_unit_pro_sta,
+    box_rent_unit_pro_sta,
     production_manager_qty_prep,
     production_manager_uno_prep,
     production_manager_una_prep,
@@ -994,6 +1024,8 @@ function BudgetEdit() {
     craft_services_rate,
   } = postDataProduction;
 
+  // Totals
+
   // production manager
   // production manager shoot Total postData
   const [productionmanagerTotal, setProductionmanagerTotal] = useState(0);
@@ -1048,61 +1080,61 @@ function BudgetEdit() {
   // location manager assistant shoot Total postData
   const [locationmanagerassistantTotal, setLocationmanagerassistantTotal] = useState(0);
   // location manager assistant prep Total postData
-  const [locationmanagerassistantprepTotal, setLocationmanagerassistantprepTotal] = useState(0);
+  const [locmanassprepTotal, setLocmanassprepTotal] = useState(0);
   // location manager assistant wrap Total postData
-  const [locationmanagerassistantwrapTotal, setLocationmanagerassistantwrapTotal] = useState(0);
+  const [locmanasswrapTotal, setLocmanasswrapTotal] = useState(0);
   // location manager assistant all Total postData
-  const [locationmanagerassistantallTotal, setLocationmanagerassistantallTotal] = useState(0);
+  const [locmanassallTotal, setLocmanassallTotal] = useState(0);
 
   // production assistants
   // production assistants shoot Total postData
   const [productionassistantsTotal, setProductionassistantsTotal] = useState(0);
   // production assistants prep Total postData
-  const [productionassistantsprepTotal, setProductionassistantsprepTotal] = useState(0);
+  const [proassprepTotal, setProassprepTotal] = useState(0);
   // production assistants wrap Total postData
-  const [productionassistantswrapTotal, setProductionassistantswrapTotal] = useState(0);
+  const [proasswrapTotal, setProasswrapTotal] = useState(0);
   // production assistants all Total postData
-  const [productionassistantsallTotal, setProductionassistantsallTotal] = useState(0);
+  const [proassallTotal, setProassallTotal] = useState(0);
 
-  // production secretary
+  // production secretary   
   // production secretary shoot Total postData
   const [productionsecretaryTotal, setProductionsecretaryTotal] = useState(0);
   // production secretary prep Total postData
-  const [productionsecretaryprepTotal, setProductionsecretaryprepTotal] = useState(0);
+  const [prosecprepTotal, setProsecprepTotal] = useState(0);
   // production secretary wrap Total postData
-  const [productionsecretarywrapTotal, setProductionsecretarywrapTotal] = useState(0);
+  const [prosecwrapTotal, setProsecwrapTotal] = useState(0);
   // production secretary all Total postData
-  const [productionsecretaryallTotal, setProductionsecretaryallTotal] = useState(0);
+  const [prosecallTotal, setProsecallTotal] = useState(0);
 
-  // production accountant
+  // production accountant accass
   // production accountant shoot Total postData
   const [productionaccountantTotal, setProductionaccountantTotal] = useState(0);
   // production accountant prep Total postData
-  const [productionaccountantprepTotal, setProductionaccountantprepTotal] = useState(0);
+  const [proaccprepTotal, setProaccprepTotal] = useState(0);
   // production accountant wrap Total postData
-  const [productionaccountantwrapTotal, setProductionaccountantwrapTotal] = useState(0);
+  const [proaccwrapTotal, setProaccwrapTotal] = useState(0);
   // production accountant all Total postData
-  const [productionaccountantallTotal, setProductionaccountantallTotal] = useState(0);
+  const [proaccallTotal, setProaccallTotal] = useState(0);
 
   // production accountant assistant
   // production accountant assistant shoot Total postData
   const [productionaccountantassistantTotal, setProductionaccountantassistantTotal] = useState(0);
   // production accountant assistant prep Total postData
-  const [productionaccountantassistantprepTotal, setProductionaccountantassistantprepTotal] = useState(0);
+  const [proaccassprepTotal, setProaccassprepTotal] = useState(0);
   // production accountant assistant wrap Total postData
-  const [productionaccountantassistantwrapTotal, setProductionaccountantassistantwrapTotal] = useState(0);
+  const [proaccasswrapTotal, setProaccasswrapTotal] = useState(0);
   // production accountant assistant all Total postData
-  const [productionaccountantassistantallTotal, setProductionaccountantassistantallTotal] = useState(0);
+  const [proaccassallTotal, setProaccassallTotal] = useState(0);
 
-  // scriptsupervisor continuity
+  // scriptsupervisor continuity con
   // scriptsupervisor continuity shoot Total postData
   const [scriptsupervisorcontinuityTotal, setScriptsupervisorcontinuityTotal] = useState(0);
   // scriptsupervisor continuity prep Total postData
-  const [scriptsupervisorcontinuityprepTotal, setScriptsupervisorcontinuityprepTotal] = useState(0);
+  const [scriptsupconprepTotal, setScriptsupconprepTotal] = useState(0);
   // scriptsupervisor continuity wrap Total postData
-  const [scriptsupervisorcontinuitywrapTotal, setScriptsupervisorcontinuitywrapTotal] = useState(0);
+  const [scriptsupconwrapTotal, setScriptsupconwrapTotal] = useState(0);
   // scriptsupervisor continuity all Total postData
-  const [scriptsupervisorcontinuityallTotal, setScriptsupervisorcontinuityallTotal] = useState(0);
+  const [scriptsupconallTotal, setScriptsupconallTotal] = useState(0);
 
   // payroll Total
   // payroll shoot Total postData
@@ -1118,51 +1150,51 @@ function BudgetEdit() {
   // other production shoot Total postData
   const [otherproductionTotal, setOtherproductionTotal] = useState(0);
   // other production prep Total postData
-  const [otherproductionprepTotal, setOtherproductionprepTotal] = useState(0);
+  const [otherproprepTotal, setOtherproprepTotal] = useState(0);
   // other production wrap Total postData
-  const [otherproductionwrapTotal, setOtherproductionwrapTotal] = useState(0);
+  const [otherprowrapTotal, setOtherprowrapTotal] = useState(0);
   // other production all Total postData
-  const [otherproductionallTotal, setOtherproductionallTotal] = useState(0);
+  const [otherproallTotal, setOtherproallTotal] = useState(0);
 
   // directors assistant
   // directors assistant shoot Total postData
   const [directorsassistantTotal, setDirectorsassistantTotal] = useState(0);
   // directors assistant prep Total postData
-  const [directorsassistantprepTotal, setDirectorsassistantprepTotal] = useState(0);
+  const [directorsassprepTotal, setDirectorsassprepTotal] = useState(0);
   // directors assistant wrap Total postData
-  const [directorsassistantwrapTotal, setDirectorsassistantwrapTotal] = useState(0);
+  const [directorsasswrapTotal, setDirectorsasswrapTotal] = useState(0);
   // directors assistant all Total postData
-  const [directorsassistantallTotal, setDirectorsassistantallTotal] = useState(0);
+  const [directorsassallTotal, setDirectorsassallTotal] = useState(0);
 
   // assistant director 1st
   // assistant director 1st shoot Total postData
   const [assistantdirector1stTotal, setAssistantdirector1stTotal] = useState(0);
   // assistant director 1st prep Total postData
-  const [assistantdirector1stprepTotal, setAssistantdirector1stprepTotal] = useState(0);
+  const [assdirector1stprepTotal, setAssdirector1stprepTotal] = useState(0);
   // assistant director 1st wrap Total postData
-  const [assistantdirector1stwrapTotal, setAssistantdirector1stwrapTotal] = useState(0);
+  const [assdirector1stwrapTotal, setAssdirector1stwrapTotal] = useState(0);
   // assistant director 1st all Total postData
-  const [assistantdirector1stallTotal, setAssistantdirector1stallTotal] = useState(0);
+  const [assdirector1stallTotal, setAssdirector1stallTotal] = useState(0);
 
   // assistant director 2nd
   // assistant director 2nd shoot Total postData
   const [assistantdirector2ndTotal, setAssistantdirector2ndTotal] = useState(0);
   // assistant director 2nd prep Total postData
-  const [assistantdirector2ndprepTotal, setAssistantdirector2ndprepTotal] = useState(0);
+  const [assdirector2ndprepTotal, setAssdirector2ndprepTotal] = useState(0);
   // assistant director 2nd wrap Total postData
-  const [assistantdirector2ndwrapTotal, setAssistantdirector2ndwrapTotal] = useState(0);
+  const [assdirector2ndwrapTotal, setAssdirector2ndwrapTotal] = useState(0);
   // assistant director 2nd all Total postData
-  const [assistantdirector2ndallTotal, setAssistantdirector2ndallTotal] = useState(0);
+  const [assdirector2ndallTotal, setAssdirector2ndallTotal] = useState(0);
 
   // assistant director 3rd
   // assistant director 3rd shoot Total postData
   const [assistantdirector3rdTotal, setAssistantdirector3rdTotal] = useState(0);
   // assistant director 3rd prep Total postData
-  const [assistantdirector3rdprepTotal, setAssistantdirector3rdprepTotal] = useState(0);
+  const [assdirector3rdprepTotal, setAssdirector3rdprepTotal] = useState(0);
   // assistant director 3rd wrap Total postData
-  const [assistantdirector3rdwrapTotal, setAssistantdirector3rdwrapTotal] = useState(0);
+  const [assdirector3rdwrapTotal, setAssdirector3rdwrapTotal] = useState(0);
   // assistant director 3rd all Total postData
-  const [assistantdirector3rdallTotal, setAssistantdirector3rdallTotal] = useState(0);
+  const [assdirector3rdallTotal, setAssdirector3rdallTotal] = useState(0);
 
   // craft services Total
   // craft services shoot Total postData
@@ -3666,7 +3698,13 @@ function BudgetEdit() {
           fringes_taxes_music});
           setStarsMusicTotal(stars_music_total);
         // cast
-        const {principals_quantity, principals_units_number,
+        const {
+          // new
+          holidays_cast, overtime_cast, 
+          days6th7th_cast, rehersals_cast,
+          holidays_unit_cast, overtime_unit_cast, 
+          days6th7th_unit_cast, rehersals_unit_cast,
+          principals_quantity, principals_units_number,
           principals_units_name, principals_rate,
           actors_quantity, actors_units_number, 
           actors_units_name, actors_rate,
@@ -3680,7 +3718,11 @@ function BudgetEdit() {
           extras_units_name, extras_rate,
           casting_director, extras_casting, cast_total,
           other_cast, fringes_taxes_cast, rights_payments_cast,} = data.results[0];
-          setPostDataCast({principals_quantity, principals_units_number,
+          setPostDataCast({holidays_cast, overtime_cast, 
+          days6th7th_cast, rehersals_cast,
+          holidays_unit_cast, overtime_unit_cast, 
+          days6th7th_unit_cast, rehersals_unit_cast,
+          principals_quantity, principals_units_number,
           principals_units_name, principals_rate,
           actors_quantity, actors_units_number, 
           actors_units_name, actors_rate,
@@ -3698,6 +3740,11 @@ function BudgetEdit() {
         // production
         const {
           // new
+          holidays_pro_sta, overtime_pro_sta, 
+          days6th7th_pro_sta, other_pro_sta,
+          box_rent_pro_sta, holidays_unit_pro_sta, 
+          overtime_unit_pro_sta, days6th7th_unit_pro_sta, 
+          other_unit_pro_sta, box_rent_unit_pro_sta,
           production_manager_qty_prep,
           production_manager_uno_prep,
           production_manager_una_prep,
@@ -3911,6 +3958,11 @@ function BudgetEdit() {
           productionstaff_total} = data.results[0];
           setPostDataProduction({
             // new
+            holidays_pro_sta, overtime_pro_sta, 
+            days6th7th_pro_sta, other_pro_sta,
+            box_rent_pro_sta, holidays_unit_pro_sta, 
+            overtime_unit_pro_sta, days6th7th_unit_pro_sta, 
+            other_unit_pro_sta, box_rent_unit_pro_sta,
             production_manager_qty_prep,
             production_manager_uno_prep,
             production_manager_una_prep,
@@ -4696,14 +4748,7 @@ function BudgetEdit() {
     handleMount();
   }, [history, id]);
 
-  // const handleSubmitBoth = (event) => {
-  //   event.preventDefault();
-  //   handleSubmit();
-  //   handleSubmit2();
-
-  // }
-
-  // Submit
+  // Submit1
   const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData();
@@ -5846,7 +5891,26 @@ function BudgetEdit() {
     // Contingency/Bond
     formData.append("contingency", contingency);
     formData.append("completion_bond", completion_bond);
+    // New Cast
+    formData.append("holidays_cast", holidays_cast);
+    formData.append("overtime_cast", overtime_cast);
+    formData.append("days6th7th_cast", days6th7th_cast);
+    formData.append("rehersals_cast", rehersals_cast);
+    formData.append("holidays_unit_cast", holidays_unit_cast);
+    formData.append("overtime_unit_cast", overtime_unit_cast);
+    formData.append("days6th7th_unit_cast", days6th7th_unit_cast);
+    formData.append("rehersals_unit_cast", rehersals_unit_cast);
     // New Production Staff
+    formData.append("holidays_pro_sta", holidays_pro_sta);
+    formData.append("overtime_pro_sta", overtime_pro_sta);
+    formData.append("days6th7th_pro_sta", days6th7th_pro_sta);
+    formData.append("other_pro_sta", other_pro_sta);
+    formData.append("box_rent_pro_sta", box_rent_pro_sta);
+    formData.append("holidays_unit_pro_sta", holidays_unit_pro_sta);
+    formData.append("overtime_unit_pro_sta", overtime_unit_pro_sta);
+    formData.append("days6th7th_unit_pro_sta", days6th7th_unit_pro_sta);
+    formData.append("other_unit_pro_sta", other_unit_pro_sta);
+    formData.append("box_rent_unit_pro_sta", box_rent_unit_pro_sta);
     formData.append("production_manager_qty_prep", production_manager_qty_prep);
     formData.append("production_manager_uno_prep", production_manager_uno_prep);
     formData.append("production_manager_una_prep", production_manager_una_prep);
@@ -5983,60 +6047,60 @@ function BudgetEdit() {
     formData.append("craft_services_uno_wrap", craft_services_uno_wrap);
     formData.append("craft_services_una_wrap", craft_services_una_wrap);
     formData.append("craft_services_rt_wrap", craft_services_rt_wrap);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
+    formData.append("productionmanagerprep_total", productionmanagerprepTotal);
+    formData.append("productionmanagerwrap_total", productionmanagerwrapTotal);
+    formData.append("productionmanagerall_total", productionmanagerallTotal);
+    formData.append("productionsupervisorprep_total", productionsupervisorprepTotal);
+    formData.append("productionsupervisorwrap_total", productionsupervisorwrapTotal);
+    formData.append("productionsupervisorall_total", productionsupervisorallTotal);
+    formData.append("productioncoordinatorprep_total", productioncoordinatorprepTotal);
+    formData.append("productioncoordinatorwrap_total", productioncoordinatorwrapTotal);
+    formData.append("productioncoordinatorall_total", productioncoordinatorallTotal);
+    formData.append("unitmanagerprep_total", unitmanagerprepTotal);
+    formData.append("unitmanagerwrap_total", unitmanagerwrapTotal);
+    formData.append("unitmanagerall_total", unitmanagerallTotal);
+    formData.append("locationmanagerwrap_total", locationmanagerwrapTotal);
+    formData.append("locationmanagerprep_total", locationmanagerprepTotal);
+    formData.append("locationmanagerall_total", locationmanagerallTotal);
+    formData.append("locmanassprep_total", locmanassprepTotal);
+    formData.append("locmanasswrap_total", locmanasswrapTotal);
+    formData.append("locmanassall_total", locmanassallTotal);
+    formData.append("proassprep_total", proassprepTotal);
+    formData.append("proasswrap_total", proasswrapTotal);
+    formData.append("proassall_total", proassallTotal);
+    formData.append("prosecprep_total", prosecprepTotal);
+    formData.append("prosecwrap_total", prosecwrapTotal);
+    formData.append("prosecall_total", prosecallTotal);
+    formData.append("proaccprep_total", proaccprepTotal);
+    formData.append("proaccwrap_total", proaccwrapTotal);
+    formData.append("proaccall_total", proaccallTotal);
+    formData.append("proaccassprep_total", proaccassprepTotal);
+    formData.append("proaccasswrap_total", proaccasswrapTotal);
+    formData.append("proaccassall_total", proaccassallTotal);
+    formData.append("scriptsupconprep_total", scriptsupconprepTotal);
+    formData.append("scriptsupconwrap_total", scriptsupconwrapTotal);
+    formData.append("scriptsupconall_total", scriptsupconallTotal);
+    formData.append("payrollprep_total", payrollprepTotal);
+    formData.append("payrollwrap_total", payrollwrapTotal);
+    formData.append("payrollall_total", payrollallTotal);
+    formData.append("otherproprep_total", otherproprepTotal);
+    formData.append("otherprowrap_total", otherprowrapTotal);
+    formData.append("otherproall_total", otherproallTotal);
+    formData.append("directorsassprep_total", directorsassprepTotal);
+    formData.append("directorsasswrap_total", directorsasswrapTotal);
+    formData.append("directorsassall_total", directorsassallTotal);
+    formData.append("assdirector1stprep_total", assdirector1stprepTotal);
+    formData.append("assdirector1stwrap_total", assdirector1stwrapTotal);
+    formData.append("assdirector1stall_total", assdirector1stallTotal);
+    formData.append("assdirector2ndprep_total", assdirector2ndprepTotal);
+    formData.append("assdirector2ndwrap_total", assdirector2ndwrapTotal);
+    formData.append("assdirector2ndall_total", assdirector2ndallTotal);
+    formData.append("assdirector3rdprep_total", assdirector3rdprepTotal);
+    formData.append("assdirector3rdwrap_total", assdirector3rdwrapTotal);
+    formData.append("assdirector3rdall_total", assdirector3rdallTotal);
+    formData.append("craftservicesprep_total", craftservicesprepTotal);
+    formData.append("craftserviceswrap_total", craftserviceswrapTotal);
+    formData.append("craftservicesall_total", craftservicesallTotal);
     // formData.append("staaaaars", staaaaars);
     // formData.append("staaaaars", staaaaars);
     // formData.append("staaaaars", staaaaars);
@@ -7131,7 +7195,59 @@ function BudgetEdit() {
       setCraftservicesTotal={setCraftservicesTotal}
       productionstaffTotal={productionstaffTotal}
       setProductionstaffTotal={setProductionstaffTotal}
-      setShow={setShowProStaff}  /> 
+      setShow={setShowProStaff}  
+      // New
+      productionmanagerprepTotal={productionmanagerprepTotal}
+      setProductionmanagerprepTotal={setProductionmanagerprepTotal}
+      productionmanagerwrapTotal={productionmanagerwrapTotal}
+      setProductionmanagerwrapTotal={setProductionmanagerwrapTotal}
+      productionmanagerallTotal={productionmanagerallTotal}
+      setProductionmanagerallTotal={setProductionmanagerallTotal}
+      productionsupervisorprepTotal={productionsupervisorprepTotal}
+      setProductionsupervisorprepTotal={setProductionsupervisorprepTotal}
+      productionsupervisorwrapTotal={productionsupervisorwrapTotal}
+      setProductionsupervisorwrapTotal={setProductionsupervisorwrapTotal}
+      productionsupervisorallTotal={productionsupervisorallTotal}
+      setProductionsupervisorallTotal={setProductionsupervisorallTotal}
+      productioncoordinatorprepTotal={productioncoordinatorprepTotal}
+      setProductioncoordinatorprepTotal={setProductioncoordinatorprepTotal}
+      productioncoordinatorwrapTotal={productioncoordinatorwrapTotal}
+      setProductioncoordinatorwrapTotal={setProductioncoordinatorwrapTotal}
+      productioncoordinatorallTotal={productioncoordinatorallTotal}
+      setProductioncoordinatorallTotal={setProductioncoordinatorallTotal}
+      unitmanagerprepTotal={unitmanagerprepTotal}
+      setUnitmanagerprepTotal={setUnitmanagerprepTotal}
+      unitmanagerwrapTotal={unitmanagerwrapTotal}
+      setUnitmanagerwrapTotal={setUnitmanagerwrapTotal}
+      unitmanagerallTotal={unitmanagerallTotal}
+      setUnitmanagerallTotal={setUnitmanagerallTotal}
+      locationmanagerwrapTotal={locationmanagerwrapTotal}
+      setLocationmanagerwrapTotal={setLocationmanagerwrapTotal}
+      locationmanagerprepTotal={locationmanagerprepTotal}
+      setLocationmanagerprepTotal={setLocationmanagerprepTotal}
+      locationmanagerallTotal={locationmanagerallTotal}
+      setLocationmanagerallTotal={setLocationmanagerallTotal}
+      locmanassprepTotal={locmanassprepTotal}
+      setLocmanassprepTotal={setLocmanassprepTotal}
+      locmanasswrapTotal={locmanasswrapTotal}
+      setLocmanasswrapTotal={setLocmanasswrapTotal}
+      locmanassallTotal={locmanassallTotal}
+      setLocmanassallTotal={setLocmanassallTotal}
+      proassprepTotal={proassprepTotal}
+      setProassprepTotal={setProassprepTotal}
+      proasswrapTotal={proasswrapTotal}
+      setProasswrapTotal={setProasswrapTotal}
+      proassallTotal={proassallTotal}
+      setProassallTotal={setProassallTotal}
+      prosecprepTotal={prosecprepTotal}
+      setProsecprepTotal={setProsecprepTotal}
+      prosecwrapTotal={prosecwrapTotal}
+      setProsecwrapTotal={setProsecwrapTotal}
+      prosecallTotal={prosecallTotal}
+      setProsecallTotal={setProsecallTotal}
+      
+
+      /> 
     ) }
     {/* design */}
     {!showDesign ? (
