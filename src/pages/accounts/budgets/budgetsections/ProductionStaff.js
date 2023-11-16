@@ -55,11 +55,190 @@ const ProductionStaff = (props) => {
          prosecprepTotal, setProsecprepTotal,
          prosecwrapTotal, setProsecwrapTotal,
          prosecallTotal, setProsecallTotal,
+         proaccprepTotal, setProaccprepTotal,
+         proaccwrapTotal, setProaccwrapTotal,
+         proaccallTotal, setProaccallTotal,
+         proaccassprepTotal, setProaccassprepTotal,
+         proaccasswrapTotal, setProaccasswrapTotal,
+         proaccassallTotal, setProaccassallTotal,
+         scriptsupconprepTotal, setScriptsupconprepTotal,
+         scriptsupconwrapTotal, setScriptsupconwrapTotal,
+         scriptsupconallTotal, setScriptsupconallTotal,
+         payrollprepTotal, setPayrollprepTotal,
+         payrollwrapTotal, setPayrollwrapTotal,
+         payrollallTotal, setPayrollallTotal,
+         otherproprepTotal, setOtherproprepTotal,
+         otherprowrapTotal, setOtherprowrapTotal,
+         otherproallTotal, setOtherproallTotal,
+         directorsassprepTotal, setDirectorsassprepTotal,
+         directorsasswrapTotal, setDirectorsasswrapTotal,
+         directorsassallTotal, setDirectorsassallTotal,
+         assdirector1stprepTotal, setAssdirector1stprepTotal,
+         assdirector1stwrapTotal, setAssdirector1stwrapTotal,
+         assdirector1stallTotal, setAssdirector1stallTotal,
+         assdirector2ndprepTotal, setAssdirector2ndprepTotal,
+         assdirector2ndwrapTotal, setAssdirector2ndwrapTotal,
+         assdirector2ndallTotal, setAssdirector2ndallTotal,
+         assdirector3rdprepTotal, setAssdirector3rdprepTotal,
+         assdirector3rdwrapTotal, setAssdirector3rdwrapTotal,
+         assdirector3rdallTotal, setAssdirector3rdallTotal,
+         craftservicesprepTotal, setCraftservicesprepTotal,
+         craftserviceswrapTotal, setCraftserviceswrapTotal,
+         craftservicesallTotal, setCraftservicesallTotal,
+      
+
          
         } = props;
   
   // Production postData values
   const {
+    // new
+    holidays_pro_sta, 
+    overtime_pro_sta, 
+    days6th7th_pro_sta, 
+    other_pro_sta,
+    box_rent_pro_sta,
+    holidays_unit_pro_sta, 
+    overtime_unit_pro_sta, 
+    days6th7th_unit_pro_sta, 
+    other_unit_pro_sta,
+    box_rent_unit_pro_sta,
+    production_manager_qty_prep,
+    production_manager_uno_prep,
+    production_manager_una_prep,
+    production_manager_rt_prep,
+    production_manager_qty_wrap,
+    production_manager_uno_wrap,
+    production_manager_una_wrap,
+    production_manager_rt_wrap,
+    production_supervisor_qty_prep,
+    production_supervisor_uno_prep,
+    production_supervisor_una_prep,
+    production_supervisor_rt_prep,
+    production_supervisor_qty_wrap,
+    production_supervisor_uno_wrap,
+    production_supervisor_una_wrap,
+    production_supervisor_rt_wrap,
+    production_coordinator_qty_prep,
+    production_coordinator_uno_prep,
+    production_coordinator_una_prep,
+    production_coordinator_rt_prep,
+    production_coordinator_qty_wrap,
+    production_coordinator_uno_wrap,
+    production_coordinator_una_wrap,
+    production_coordinator_rt_wrap,
+    unit_manager_qty_prep,
+    unit_manager_uno_prep,
+    unit_manager_una_prep,
+    unit_manager_rt_prep,
+    unit_manager_qty_wrap,
+    unit_manager_uno_wrap,
+    unit_manager_una_wrap,
+    unit_manager_rt_wrap,
+    location_manager_qty_prep,
+    location_manager_uno_prep,
+    location_manager_una_prep,
+    location_manager_rt_prep,
+    location_manager_qty_wrap,
+    location_manager_uno_wrap,
+    location_manager_una_wrap,
+    location_manager_rt_wrap,
+    location_manager_ass_qty_prep,
+    location_manager_ass_uno_prep,
+    location_manager_ass_una_prep,
+    location_manager_ass_rt_prep,
+    location_manager_ass_qty_wrap,
+    location_manager_ass_uno_wrap,
+    location_manager_ass_una_wrap,
+    location_manager_ass_rt_wrap,
+    production_ass_qty_prep,
+    production_ass_uno_prep,
+    production_ass_una_prep,
+    production_ass_rt_prep,
+    production_ass_qty_wrap,
+    production_ass_uno_wrap,
+    production_ass_una_wrap,
+    production_ass_rt_wrap,
+    production_sec_qty_prep,
+    production_sec_uno_prep,
+    production_sec_una_prep,
+    production_sec_rt_prep,
+    production_sec_qty_wrap,
+    production_sec_uno_wrap,
+    production_sec_una_wrap,
+    production_sec_rt_wrap,
+    production_acc_qty_prep,
+    production_acc_uno_prep,
+    production_acc_una_prep,
+    production_acc_rt_prep,
+    production_acc_qty_wrap,
+    production_acc_uno_wrap,
+    production_acc_una_wrap,
+    production_acc_rt_wrap,
+    production_acc_ass_qty_prep,
+    production_acc_ass_uno_prep,
+    production_acc_ass_una_prep,
+    production_acc_ass_rt_prep,
+    production_acc_ass_qty_wrap,
+    production_acc_ass_uno_wrap,
+    production_acc_ass_una_wrap,
+    production_acc_ass_rt_wrap,
+    scriptsupervisor_con_qty_prep,
+    scriptsupervisor_con_uno_prep,
+    scriptsupervisor_con_una_prep,
+    scriptsupervisor_con_rt_prep,
+    scriptsupervisor_con_qty_wrap,
+    scriptsupervisor_con_uno_wrap,
+    scriptsupervisor_con_una_wrap,
+    scriptsupervisor_con_rt_wrap,
+    payroll_qty_prep,
+    payroll_uno_prep,
+    payroll_una_prep,
+    payroll_rt_prep,
+    payroll_qty_wrap,
+    payroll_uno_wrap,
+    payroll_una_wrap,
+    payroll_rt_wrap,
+    directors_ass_qty_prep,
+    directors_ass_uno_prep,
+    directors_ass_una_prep,
+    directors_ass_rt_prep,
+    directors_ass_qty_wrap,
+    directors_ass_uno_wrap,
+    directors_ass_una_wrap,
+    directors_ass_rt_wrap,
+    ass_director_1st_qty_prep,
+    ass_director_1st_uno_prep,
+    ass_director_1st_una_prep,
+    ass_director_1st_rt_prep,
+    ass_director_1st_qty_wrap,
+    ass_director_1st_uno_wrap,
+    ass_director_1st_una_wrap,
+    ass_director_1st_rt_wrap,
+    ass_director_2nd_qty_prep,
+    ass_director_2nd_uno_prep,
+    ass_director_2nd_una_prep,
+    ass_director_2nd_rt_prep,
+    ass_director_2nd_qty_wrap,
+    ass_director_2nd_uno_wrap,
+    ass_director_2nd_una_wrap,
+    ass_director_2nd_rt_wrap,
+    ass_director_3rd_qty_prep,
+    ass_director_3rd_uno_prep,
+    ass_director_3rd_una_prep,
+    ass_director_3rd_rt_prep,
+    ass_director_3rd_qty_wrap,
+    ass_director_3rd_uno_wrap,
+    ass_director_3rd_una_wrap,
+    ass_director_3rd_rt_wrap,
+    craft_services_qty_prep,
+    craft_services_uno_prep,
+    craft_services_una_prep,
+    craft_services_rt_prep,
+    craft_services_qty_wrap,
+    craft_services_uno_wrap,
+    craft_services_una_wrap,
+    craft_services_rt_wrap,
     fringes_taxes_production,
     production_manager_quantity,
     production_manager_units_number,
@@ -151,8 +330,10 @@ const ProductionStaff = (props) => {
     });
   };
 
-    // Calculate Functions
-  // function to calculate production manager on change
+  // Calculate Functions
+
+  // production manager
+  // function to calculate production manager shoot on change
   useEffect(() => {
     const addproman = () => {
       setProductionmanagerTotal(parseFloat(production_manager_quantity || 0) * 
@@ -169,7 +350,64 @@ const ProductionStaff = (props) => {
     // eslint-disable-next-line
   }, [production_manager_quantity, production_manager_units_number, 
     production_manager_rate]);
+  
+  // function to calculate production manager prep on change
+  useEffect(() => {
+    const addpromanprep = () => {
+      setProductionmanagerprepTotal(parseFloat(production_manager_qty_prep || 0) * 
+      parseFloat(production_manager_uno_prep || 0) * 
+      parseFloat(production_manager_rt_prep || 0))
+    }
+    const timer = setTimeout(() => {
+      addpromanprep();
+    }, 2000);
 
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [production_manager_qty_prep, production_manager_uno_prep,
+  production_manager_rt_prep,]);
+
+  // function to calculate production manager wrap on change
+  useEffect(() => {
+    const addpromanwrap = () => {
+      setProductionmanagerwrapTotal(parseFloat(production_manager_qty_wrap || 0) * 
+      parseFloat(production_manager_uno_wrap || 0) * 
+      parseFloat(production_manager_rt_wrap || 0))
+    }
+    const timer = setTimeout(() => {
+      addpromanwrap();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [production_manager_qty_wrap, production_manager_uno_wrap,
+  production_manager_rt_wrap,]);
+
+  // function to add all production manager on change 
+  useEffect(() => {
+    const addProMan = () => {
+      setProductionmanagerallTotal(
+      parseFloat(productionmanagerTotal || 0) +
+      parseFloat(productionmanagerprepTotal || 0) +
+      parseFloat(productionmanagerwrapTotal || 0) 
+      )
+    }
+    const timer = setTimeout(() => {
+      addProMan();
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [productionmanagerTotal, productionmanagerprepTotal,
+    productionmanagerwrapTotal,]);
+
+    // production supervisor
   // function to calculate production supervisor on change
   useEffect(() => {
     const addprosup = () => {
