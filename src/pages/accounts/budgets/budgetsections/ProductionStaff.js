@@ -199,6 +199,14 @@ const ProductionStaff = (props) => {
     payroll_uno_wrap,
     payroll_una_wrap,
     payroll_rt_wrap,
+    other_pro_qty_prep,
+    other_pro_uno_prep,
+    other_pro_una_prep,
+    other_pro_rt_prep,
+    other_pro_qty_wrap,
+    other_pro_uno_wrap,
+    other_pro_una_wrap,
+    other_pro_rt_wrap,
     directors_ass_qty_prep,
     directors_ass_uno_prep,
     directors_ass_una_prep,
@@ -407,8 +415,8 @@ const ProductionStaff = (props) => {
   }, [productionmanagerTotal, productionmanagerprepTotal,
     productionmanagerwrapTotal,]);
 
-    // production supervisor
-  // function to calculate production supervisor on change
+  // production supervisor
+  // function to calculate production supervisor shoot on change
   useEffect(() => {
     const addprosup = () => {
       setProductionsupervisorTotal(parseFloat(production_supervisor_quantity || 0) * 
@@ -424,9 +432,66 @@ const ProductionStaff = (props) => {
     };
     // eslint-disable-next-line
   }, [production_supervisor_quantity, production_supervisor_units_number, 
-    production_supervisor_rate]);
+  production_supervisor_rate]);
 
-  // function to calculate production coordinator on change
+  // function to calculate production supervisor prep on change
+  useEffect(() => {
+    const addprosupprep = () => {
+      setProductionsupervisorprepTotal(parseFloat(production_supervisor_qty_prep || 0) * 
+      parseFloat(production_supervisor_uno_prep || 0) * 
+      parseFloat(production_supervisor_rt_prep || 0))
+    }
+    const timer = setTimeout(() => {
+      addprosupprep();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [production_supervisor_qty_prep, production_supervisor_uno_prep,
+  production_supervisor_rt_prep]);
+
+  // function to calculate production supervisor wrap on change
+  useEffect(() => {
+    const addprosupwrap = () => {
+      setProductionsupervisorwrapTotal(parseFloat(production_supervisor_qty_wrap || 0) * 
+      parseFloat(production_supervisor_uno_wrap || 0) * 
+      parseFloat(production_supervisor_rt_wrap || 0))
+    }
+    const timer = setTimeout(() => {
+      addprosupwrap();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [production_supervisor_qty_wrap, production_supervisor_uno_wrap,
+  production_supervisor_rt_wrap]);
+
+  // function to add all production supervisor on change 
+  useEffect(() => {
+    const addProSup = () => {
+      setProductionsupervisorallTotal(
+      parseFloat(productionsupervisorTotal || 0) +
+      parseFloat(productionsupervisorprepTotal || 0) +
+      parseFloat(productionsupervisorwrapTotal || 0) 
+      )
+    }
+    const timer = setTimeout(() => {
+      addProSup();
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [productionsupervisorTotal, productionsupervisorprepTotal,
+    productionsupervisorwrapTotal]);
+
+  // production coordinator
+  // function to calculate production coordinator shoot on change
   useEffect(() => {
     const addprocoor = () => {
       setProductioncoordinatorTotal(parseFloat(production_coordinator_quantity || 0) * 
@@ -442,9 +507,66 @@ const ProductionStaff = (props) => {
     };
     // eslint-disable-next-line
   }, [production_coordinator_quantity, production_coordinator_units_number, 
-    production_coordinator_rate]);
+  production_coordinator_rate]);
 
-  // function to calculate unit manager on change
+  // function to calculate production coordinator prep on change
+  useEffect(() => {
+    const addprocoorprep = () => {
+      setProductioncoordinatorprepTotal(parseFloat(production_coordinator_qty_prep || 0) * 
+      parseFloat(production_coordinator_uno_prep || 0) * 
+      parseFloat(production_coordinator_rt_prep || 0))
+    }
+    const timer = setTimeout(() => {
+      addprocoorprep();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [production_coordinator_qty_prep, production_coordinator_uno_prep,
+  production_coordinator_rt_prep]);
+
+  // function to calculate production coordinator wrap on change
+  useEffect(() => {
+    const addprocoorwrap = () => {
+      setProductioncoordinatorprepTotal(parseFloat(production_coordinator_qty_wrap || 0) * 
+      parseFloat(production_coordinator_uno_wrap || 0) * 
+      parseFloat(production_coordinator_rt_wrap || 0))
+    }
+    const timer = setTimeout(() => {
+      addprocoorwrap();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [production_coordinator_qty_wrap, production_coordinator_uno_wrap,
+  production_coordinator_rt_wrap]);
+
+  // function to add all production coordinator on change 
+  useEffect(() => {
+    const addProCoo = () => {
+      setProductioncoordinatorallTotal(
+      parseFloat(productioncoordinatorTotal || 0) +
+      parseFloat(productioncoordinatorprepTotal || 0) +
+      parseFloat(productioncoordinatorwrapTotal || 0) 
+      )
+    }
+    const timer = setTimeout(() => {
+      addProCoo();
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [productioncoordinatorTotal, productioncoordinatorprepTotal,
+    productioncoordinatorwrapTotal]);
+
+  // unit manager
+  // function to calculate unit manager shoot on change
   useEffect(() => {
     const addunitman = () => {
       setUnitmanagerTotal(parseFloat(unit_manager_quantity || 0) * 
@@ -460,9 +582,63 @@ const ProductionStaff = (props) => {
     };
     // eslint-disable-next-line
   }, [unit_manager_quantity, unit_manager_units_number, 
-    unit_manager_rate]);
+  unit_manager_rate]);
+
+  // function to calculate unit manager prep on change
+  useEffect(() => {
+    const addunitmanprep = () => {
+      setUnitmanagerprepTotal(parseFloat(unit_manager_qty_prep || 0) * 
+      parseFloat(unit_manager_uno_prep || 0) * 
+      parseFloat(unit_manager_rt_prep || 0))
+    }
+    const timer = setTimeout(() => {
+      addunitmanprep();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [unit_manager_qty_prep, unit_manager_uno_prep, unit_manager_rt_prep]);
+
+  // function to calculate unit manager wrap on change
+  useEffect(() => {
+    const addunitmanwrap = () => {
+      setUnitmanagerwrapTotal(parseFloat(unit_manager_qty_wrap || 0) * 
+      parseFloat(unit_manager_uno_wrap || 0) * 
+      parseFloat(unit_manager_rt_wrap || 0))
+    }
+    const timer = setTimeout(() => {
+      addunitmanwrap();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [unit_manager_qty_wrap, unit_manager_uno_wrap, unit_manager_rt_wrap]);
+
+  // function to add all unit manager on change 
+  useEffect(() => {
+    const addUniMan = () => {
+      setUnitmanagerallTotal(
+      parseFloat(unitmanagerTotal || 0) +
+      parseFloat(unitmanagerprepTotal || 0) +
+      parseFloat(unitmanagerwrapTotal || 0) 
+      )
+    }
+    const timer = setTimeout(() => {
+      addUniMan();
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [unitmanagerTotal, unitmanagerprepTotal, unitmanagerwrapTotal]);
   
-  // function to calculate location manager on change
+  // location manager
+  // function to calculate location manager shoot on change
   useEffect(() => {
     const addlocman = () => {
       setLocationmanagerTotal(parseFloat(location_manager_quantity || 0) * 
@@ -478,9 +654,66 @@ const ProductionStaff = (props) => {
     };
     // eslint-disable-next-line
   }, [location_manager_quantity, location_manager_units_number, 
-    location_manager_rate]);
+  location_manager_rate]);
+
+  // function to calculate location manager prep on change
+  useEffect(() => {
+    const addlocmanprep = () => {
+      setLocationmanagerprepTotal(parseFloat(location_manager_qty_prep || 0) * 
+      parseFloat(location_manager_uno_prep || 0) * 
+      parseFloat(location_manager_rt_prep || 0))
+    }
+    const timer = setTimeout(() => {
+      addlocmanprep();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [location_manager_qty_prep, location_manager_uno_prep, 
+  location_manager_rt_prep]);
+
+  // function to calculate location manager wrap on change
+  useEffect(() => {
+    const addlocmanwrap = () => {
+      setLocationmanagerwrapTotal(parseFloat(location_manager_qty_wrap || 0) * 
+      parseFloat(location_manager_uno_wrap || 0) * 
+      parseFloat(location_manager_rt_wrap || 0))
+    }
+    const timer = setTimeout(() => {
+      addlocmanwrap();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [location_manager_qty_wrap, location_manager_uno_wrap,
+  location_manager_rt_wrap]);
+
+  // function to add all location manager on change 
+  useEffect(() => {
+    const addLocMan = () => {
+      setLocationmanagerallTotal(
+      parseFloat(locationmanagerTotal || 0) +
+      parseFloat(locationmanagerprepTotal || 0) +
+      parseFloat(locationmanagerwrapTotal || 0) 
+      )
+    }
+    const timer = setTimeout(() => {
+      addLocMan();
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [locationmanagerTotal, locationmanagerprepTotal,
+    locationmanagerwrapTotal,]);
   
-  // function to calculate location manager assistant on change
+  // location manager assistant
+  // function to calculate location manager assistant shoot on change
   useEffect(() => {
     const addlocmanass = () => {
       setLocationmanagerassistantTotal(parseFloat(location_manager_assistant_quantity || 0) * 
@@ -496,9 +729,66 @@ const ProductionStaff = (props) => {
     };
     // eslint-disable-next-line
   }, [location_manager_assistant_quantity, location_manager_assistant_units_number, 
-    location_manager_assistant_rate]);
+  location_manager_assistant_rate]);
+
+  // function to calculate location manager assistant prep on change
+  useEffect(() => {
+    const addlocmanassprep = () => {
+      setLocmanassprepTotal(parseFloat(location_manager_ass_qty_prep || 0) * 
+      parseFloat(location_manager_ass_uno_prep || 0) * 
+      parseFloat(location_manager_ass_rt_prep || 0))
+    }
+    const timer = setTimeout(() => {
+      addlocmanassprep();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [location_manager_ass_qty_prep, location_manager_ass_uno_prep,
+  location_manager_ass_rt_prep]);
+
+  // function to calculate location manager assistant wrap on change
+  useEffect(() => {
+    const addlocmanasswrap = () => {
+      setLocmanasswrapTotal(parseFloat(location_manager_ass_qty_wrap || 0) * 
+      parseFloat(location_manager_ass_uno_wrap || 0) * 
+      parseFloat(location_manager_ass_rt_wrap || 0))
+    }
+    const timer = setTimeout(() => {
+      addlocmanasswrap();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [location_manager_ass_qty_wrap, location_manager_ass_uno_wrap,
+  location_manager_ass_rt_wrap]);
+
+  // function to add all location manager assistant on change 
+  useEffect(() => {
+    const addLocManAss = () => {
+      setLocmanassallTotal(
+      parseFloat(locationmanagerassistantTotal || 0) +
+      parseFloat(locmanassprepTotal || 0) +
+      parseFloat(locmanasswrapTotal || 0) 
+      )
+    }
+    const timer = setTimeout(() => {
+      addLocManAss();
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [locationmanagerassistantTotal, locmanassprepTotal,
+    locmanasswrapTotal]);
   
-  // function to calculate production assistants on change
+  // production assistants 
+  // function to calculate production assistants shoot on change
   useEffect(() => {
     const addproass = () => {
       setProductionassistantsTotal(parseFloat(production_assistants_quantity || 0) * 
@@ -514,9 +804,65 @@ const ProductionStaff = (props) => {
     };
     // eslint-disable-next-line
   }, [production_assistants_quantity, production_assistants_units_number, 
-    production_assistants_rate]);
+  production_assistants_rate]);
 
-  // function to calculate production secretary on change
+  // function to calculate production assistants prep on change
+  useEffect(() => {
+    const addproassprep = () => {
+      setProassprepTotal(parseFloat(production_ass_qty_prep || 0) * 
+      parseFloat(production_ass_uno_prep || 0) * 
+      parseFloat(production_assistants_rate || 0))
+    }
+    const timer = setTimeout(() => {
+      addproassprep();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [production_ass_qty_prep, production_ass_uno_prep, production_ass_rt_prep]);
+
+  // function to calculate production assistants wrap on change
+  useEffect(() => {
+    const addproasswrap = () => {
+      setProasswrapTotal(parseFloat(production_ass_qty_wrap || 0) * 
+      parseFloat(production_ass_uno_wrap || 0) * 
+      parseFloat(production_ass_rt_wrap || 0))
+    }
+    const timer = setTimeout(() => {
+      addproasswrap();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [production_ass_qty_wrap, production_ass_uno_wrap,
+  production_ass_rt_wrap]);
+
+  // function to add all production assistants on change 
+  useEffect(() => {
+    const addProAss = () => {
+      setProassallTotal(
+      parseFloat(productionassistantsTotal || 0) +
+      parseFloat(proassprepTotal || 0) +
+      parseFloat(proasswrapTotal || 0) 
+      )
+    }
+    const timer = setTimeout(() => {
+      addProAss();
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [productionassistantsTotal, proassprepTotal,
+    proasswrapTotal]);
+
+  // production secretary
+  // function to calculate production secretary shoot on change
   useEffect(() => {
     const addprosec = () => {
       setProductionsecretaryTotal(parseFloat(production_secretary_quantity || 0) * 
@@ -532,9 +878,66 @@ const ProductionStaff = (props) => {
     };
     // eslint-disable-next-line
   }, [production_secretary_quantity, production_secretary_units_number, 
-    production_secretary_rate]);
+  production_secretary_rate]);
 
-  // function to calculate production accountant on change
+  // function to calculate production secretary prep on change
+  useEffect(() => {
+    const addprosecprep = () => {
+      setProsecprepTotal(parseFloat(production_sec_qty_prep || 0) * 
+      parseFloat(production_sec_uno_prep || 0) * 
+      parseFloat(production_sec_rt_prep || 0))
+    }
+    const timer = setTimeout(() => {
+      addprosecprep();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [production_sec_qty_prep, production_sec_uno_prep,
+  production_sec_rt_prep]);
+
+  // function to calculate production secretary wrap on change
+  useEffect(() => {
+    const addprosecwrap = () => {
+      setProsecwrapTotal(parseFloat(production_sec_qty_wrap || 0) * 
+      parseFloat(production_sec_uno_wrap || 0) * 
+      parseFloat(production_sec_rt_wrap || 0))
+    }
+    const timer = setTimeout(() => {
+      addprosecwrap();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [production_sec_qty_wrap, production_sec_uno_wrap,
+  production_sec_rt_wrap]);
+
+  // function to add all production secretary on change 
+  useEffect(() => {
+    const addProSec = () => {
+      setProsecallTotal(
+      parseFloat(productionsecretaryTotal || 0) +
+      parseFloat(prosecprepTotal || 0) +
+      parseFloat(prosecwrapTotal || 0) 
+      )
+    }
+    const timer = setTimeout(() => {
+      addProSec();
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [productionsecretaryTotal, prosecprepTotal,
+    prosecwrapTotal]);
+
+  // production accountant
+  // function to calculate production accountant shoot on change
   useEffect(() => {
     const addproacc = () => {
       setProductionaccountantTotal(parseFloat(production_accountant_quantity || 0) * 
@@ -550,9 +953,66 @@ const ProductionStaff = (props) => {
     };
     // eslint-disable-next-line
   }, [production_accountant_quantity, production_accountant_units_number, 
-    production_accountant_rate]);
+  production_accountant_rate]);
+
+  // function to calculate production accountant prep on change
+  useEffect(() => {
+    const addproaccprep = () => {
+      setProaccprepTotal(parseFloat(production_acc_qty_prep || 0) * 
+      parseFloat(production_acc_uno_prep || 0) * 
+      parseFloat(production_acc_rt_prep || 0))
+    }
+    const timer = setTimeout(() => {
+      addproaccprep();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [production_acc_qty_prep, production_acc_uno_prep,
+  production_acc_rt_prep]);
+
+  // function to calculate production accountant wrap on change
+  useEffect(() => {
+    const addproaccwrap = () => {
+      setProaccwrapTotal(parseFloat(production_acc_qty_wrap || 0) * 
+      parseFloat(production_acc_uno_wrap || 0) * 
+      parseFloat(production_acc_rt_wrap || 0))
+    }
+    const timer = setTimeout(() => {
+      addproaccwrap();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [production_acc_qty_wrap, production_acc_uno_wrap,
+  production_acc_rt_wrap]);
+
+  // function to add all production accountant on change 
+  useEffect(() => {
+    const addProAcc = () => {
+      setProaccallTotal(
+      parseFloat(productionaccountantTotal || 0) +
+      parseFloat(proaccprepTotal || 0) +
+      parseFloat(proaccwrapTotal || 0) 
+      )
+    }
+    const timer = setTimeout(() => {
+      addProAcc();
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [productionaccountantTotal, proaccprepTotal,
+    proaccwrapTotal]);
   
-  // function to calculate production accountant assistant on change
+  // production accountant assistant
+  // function to calculate production accountant assistant shoot on change
   useEffect(() => {
     const addaccass = () => {
       setProductionaccountantassistantTotal(parseFloat(production_accountant_assistant_quantity || 0) * 
@@ -568,9 +1028,66 @@ const ProductionStaff = (props) => {
     };
     // eslint-disable-next-line
   }, [production_accountant_assistant_quantity, production_accountant_assistant_units_number, 
-    production_accountant_assistant_rate]);
+  production_accountant_assistant_rate]);
 
-  // function to calculate scriptsupervisor continuity on change
+  // function to calculate production accountant assistant prep on change
+  useEffect(() => {
+    const addaccassprep = () => {
+      setProaccassprepTotal(parseFloat(production_acc_ass_qty_prep || 0) * 
+      parseFloat(production_acc_ass_uno_prep || 0) * 
+      parseFloat(production_acc_ass_rt_prep || 0))
+    }
+    const timer = setTimeout(() => {
+      addaccassprep();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [production_acc_ass_qty_prep, production_acc_ass_uno_prep,
+  production_acc_ass_rt_prep]);
+
+  // function to calculate production accountant assistant wrap on change
+  useEffect(() => {
+    const addaccasswrap = () => {
+      setProaccasswrapTotal(parseFloat(production_acc_ass_qty_wrap || 0) * 
+      parseFloat(production_acc_ass_uno_wrap || 0) * 
+      parseFloat(production_acc_ass_rt_wrap || 0))
+    }
+    const timer = setTimeout(() => {
+      addaccasswrap();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [production_acc_ass_qty_wrap, production_acc_ass_uno_wrap,
+  production_acc_ass_rt_wrap]);
+
+  // function to add all production accountant assistant on change 
+  useEffect(() => {
+    const addProAccAss = () => {
+      setProaccassallTotal(
+      parseFloat(productionaccountantassistantTotal || 0) +
+      parseFloat(proaccassprepTotal || 0) +
+      parseFloat(proaccasswrapTotal || 0) 
+      )
+    }
+    const timer = setTimeout(() => {
+      addProAccAss();
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [productionaccountantassistantTotal, proaccassprepTotal,
+    proaccasswrapTotal]);
+
+  // scriptsupervisor continuity
+  // function to calculate scriptsupervisor continuity shoot on change
   useEffect(() => {
     const addsupcon = () => {
       setScriptsupervisorcontinuityTotal(parseFloat(scriptsupervisor_continuity_quantity || 0) * 
@@ -586,9 +1103,66 @@ const ProductionStaff = (props) => {
     };
     // eslint-disable-next-line
   }, [scriptsupervisor_continuity_quantity, scriptsupervisor_continuity_units_number, 
-    scriptsupervisor_continuity_rate]);
+  scriptsupervisor_continuity_rate]);
+
+  // function to calculate scriptsupervisor continuity prep on change
+  useEffect(() => {
+    const addsupconprep = () => {
+      setScriptsupconprepTotal(parseFloat(scriptsupervisor_con_qty_prep || 0) * 
+      parseFloat(scriptsupervisor_con_uno_prep || 0) * 
+      parseFloat(scriptsupervisor_con_rt_prep || 0))
+    }
+    const timer = setTimeout(() => {
+      addsupconprep();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [scriptsupervisor_con_qty_prep, scriptsupervisor_con_uno_prep,
+  scriptsupervisor_con_rt_prep]);
+
+  // function to calculate scriptsupervisor continuity wrap on change
+  useEffect(() => {
+    const addsupconwrap = () => {
+      setScriptsupconwrapTotal(parseFloat(scriptsupervisor_con_qty_wrap || 0) * 
+      parseFloat(scriptsupervisor_con_uno_wrap || 0) * 
+      parseFloat(scriptsupervisor_con_rt_wrap || 0))
+    }
+    const timer = setTimeout(() => {
+      addsupconwrap();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [scriptsupervisor_con_qty_wrap, scriptsupervisor_con_uno_wrap,
+  scriptsupervisor_con_rt_wrap]);
+
+  // function to add all scriptsupervisor continuity on change 
+  useEffect(() => {
+    const addScrCon = () => {
+      setScriptsupconallTotal(
+      parseFloat(scriptsupervisorcontinuityTotal || 0) +
+      parseFloat(scriptsupconprepTotal || 0) +
+      parseFloat(scriptsupconwrapTotal || 0) 
+      )
+    }
+    const timer = setTimeout(() => {
+      addScrCon();
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [scriptsupervisorcontinuityTotal, scriptsupconprepTotal,
+    scriptsupconwrapTotal]);
   
-  // function to calculate unit manager on change
+  // payroll
+  // function to calculate payroll shoot on change
   useEffect(() => {
     const addpayrol = () => {
       setPayrollTotal(parseFloat(payroll_quantity || 0) * 
@@ -604,9 +1178,63 @@ const ProductionStaff = (props) => {
     };
     // eslint-disable-next-line
   }, [payroll_quantity, payroll_units_number, 
-    payroll_rate]);
+  payroll_rate]);
 
-  // function to calculate other production on change
+  // function to calculate payroll prep on change
+  useEffect(() => {
+    const addpayrolprep = () => {
+      setPayrollprepTotal(parseFloat(payroll_qty_prep || 0) * 
+      parseFloat(payroll_uno_prep || 0) * 
+      parseFloat(payroll_rt_prep || 0))
+    }
+    const timer = setTimeout(() => {
+      addpayrolprep();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [payroll_qty_prep, payroll_uno_prep, payroll_rt_prep]);
+
+  // function to calculate payroll wrap on change
+  useEffect(() => {
+    const addpayrolwrap = () => {
+      setPayrollwrapTotal(parseFloat(payroll_qty_wrap || 0) * 
+      parseFloat(payroll_uno_wrap || 0) * 
+      parseFloat(payroll_rt_wrap || 0))
+    }
+    const timer = setTimeout(() => {
+      addpayrolwrap();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [payroll_qty_wrap, payroll_uno_wrap, payroll_rt_wrap]);
+
+  // function to add all payroll on change 
+  useEffect(() => {
+    const addPayRol = () => {
+      setPayrollallTotal(
+      parseFloat(payrollTotal || 0) +
+      parseFloat(payrollprepTotal || 0) +
+      parseFloat(payrollwrapTotal || 0) 
+      )
+    }
+    const timer = setTimeout(() => {
+      addPayRol();
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [payrollTotal, payrollprepTotal, payrollwrapTotal]);
+
+  // other production
+  // function to calculate other production shoot on change
   useEffect(() => {
     const addothpro = () => {
       setOtherproductionTotal(parseFloat(other_production_quantity || 0) * 
@@ -622,9 +1250,63 @@ const ProductionStaff = (props) => {
     };
     // eslint-disable-next-line
   }, [other_production_quantity, other_production_units_number, 
-    other_production_rate]);
+  other_production_rate]);
 
-  // function to calculate directors assistant on change
+  // function to calculate other production prep on change
+  useEffect(() => {
+    const addothproprep = () => {
+      setOtherproprepTotal(parseFloat(other_pro_qty_prep || 0) * 
+      parseFloat(other_pro_uno_prep || 0) * 
+      parseFloat(other_pro_rt_prep || 0))
+    }
+    const timer = setTimeout(() => {
+      addothproprep();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [other_pro_qty_prep, other_pro_uno_prep, other_pro_rt_prep]);
+
+  // function to calculate other production wrap on change
+  useEffect(() => {
+    const addothprowrap = () => {
+      setOtherproprepTotal(parseFloat(other_pro_qty_wrap || 0) * 
+      parseFloat(other_pro_uno_wrap || 0) * 
+      parseFloat(other_pro_rt_wrap || 0))
+    }
+    const timer = setTimeout(() => {
+      addothprowrap();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [other_pro_qty_wrap, other_pro_uno_wrap, other_pro_rt_wrap]);
+
+  // function to add all other production on change 
+  useEffect(() => {
+    const addOthPro = () => {
+      setOtherproallTotal(
+      parseFloat(otherproductionTotal || 0) +
+      parseFloat(otherproprepTotal || 0) +
+      parseFloat(otherprowrapTotal || 0) 
+      )
+    }
+    const timer = setTimeout(() => {
+      addOthPro();
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [otherproductionTotal, otherproprepTotal, otherprowrapTotal]);
+
+  // directors assistant
+  // function to calculate directors assistant shoot on change
   useEffect(() => {
     const adddirass = () => {
       setDirectorsassistantTotal(parseFloat(directors_assistant_quantity || 0) * 
@@ -640,9 +1322,65 @@ const ProductionStaff = (props) => {
     };
     // eslint-disable-next-line
   }, [directors_assistant_quantity, directors_assistant_units_number, 
-    directors_assistant_rate]);
+  directors_assistant_rate]);
 
-  // function to calculate 1st assistant director on change
+  // function to calculate directors assistant prep on change
+  useEffect(() => {
+    const adddirassprep = () => {
+      setDirectorsassprepTotal(parseFloat(directors_ass_qty_prep || 0) * 
+      parseFloat(directors_ass_uno_prep || 0) * 
+      parseFloat(directors_ass_rt_prep || 0))
+    }
+    const timer = setTimeout(() => {
+      adddirassprep();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [directors_ass_qty_prep, directors_ass_uno_prep, directors_ass_rt_prep]);
+
+  // function to calculate directors assistant wrap on change
+  useEffect(() => {
+    const adddirasswrap = () => {
+      setDirectorsasswrapTotal(parseFloat(directors_ass_qty_wrap || 0) * 
+      parseFloat(directors_ass_uno_wrap || 0) * 
+      parseFloat(directors_ass_rt_wrap || 0))
+    }
+    const timer = setTimeout(() => {
+      adddirasswrap();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [directors_ass_qty_wrap, directors_ass_uno_wrap,
+  directors_ass_rt_wrap]);
+
+  // function to add all directors assistant on change 
+  useEffect(() => {
+    const addDirAss = () => {
+      setDirectorsassallTotal(
+      parseFloat(directorsassistantTotal || 0) +
+      parseFloat(directorsassprepTotal || 0) +
+      parseFloat(directorsasswrapTotal || 0) 
+      )
+    }
+    const timer = setTimeout(() => {
+      addDirAss();
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [directorsassistantTotal, directorsassprepTotal,
+    directorsasswrapTotal]);
+
+  // 1st assistant director
+  // function to calculate 1st assistant director shoot on change
   useEffect(() => {
     const addasdir1 = () => {
       setAssistantdirector1stTotal(parseFloat(assistant_director_1st_quantity || 0) * 
@@ -658,9 +1396,66 @@ const ProductionStaff = (props) => {
     };
     // eslint-disable-next-line
   }, [assistant_director_1st_quantity, assistant_director_1st_units_number, 
-    assistant_director_1st_rate]);
+  assistant_director_1st_rate]);
 
-  // function to calculate 2nd assistant director on change
+  // function to calculate 1st assistant director prep on change
+  useEffect(() => {
+    const addasdir1prep = () => {
+      setAssdirector1stprepTotal(parseFloat(ass_director_1st_qty_prep || 0) * 
+      parseFloat(ass_director_1st_uno_prep || 0) * 
+      parseFloat(ass_director_1st_rt_prep || 0))
+    }
+    const timer = setTimeout(() => {
+      addasdir1prep();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [ass_director_1st_qty_prep, ass_director_1st_uno_prep,
+  ass_director_1st_rt_prep]);
+
+  // function to calculate 1st assistant director wrap on change
+  useEffect(() => {
+    const addasdir1wrap = () => {
+      setAssdirector1stwrapTotal(parseFloat(ass_director_1st_qty_wrap || 0) * 
+      parseFloat(ass_director_1st_uno_wrap || 0) * 
+      parseFloat(ass_director_1st_rt_wrap || 0))
+    }
+    const timer = setTimeout(() => {
+      addasdir1wrap();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [ass_director_1st_qty_wrap, ass_director_1st_uno_wrap,
+  ass_director_1st_rt_wrap]);
+
+  // function to add all 1st assistant director on change 
+  useEffect(() => {
+    const addDirAss1 = () => {
+      setAssdirector1stallTotal(
+      parseFloat(assistantdirector1stTotal || 0) +
+      parseFloat(assdirector1stprepTotal || 0) +
+      parseFloat(assdirector1stwrapTotal || 0) 
+      )
+    }
+    const timer = setTimeout(() => {
+      addDirAss1();
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [assistantdirector1stTotal, assdirector1stprepTotal,
+    assdirector1stwrapTotal]);
+
+  // 2nd assistant director
+  // function to calculate 2nd assistant director shoot on change
   useEffect(() => {
     const addasdir2 = () => {
       setAssistantdirector2ndTotal(parseFloat(assistant_director_2nd_quantity || 0) * 
@@ -676,8 +1471,65 @@ const ProductionStaff = (props) => {
     };
     // eslint-disable-next-line
   }, [assistant_director_2nd_quantity, assistant_director_2nd_units_number, 
-    assistant_director_2nd_rate]);
+  assistant_director_2nd_rate]);
 
+  // function to calculate 2nd assistant director prep on change
+  useEffect(() => {
+    const addasdir2prep = () => {
+      setAssdirector2ndprepTotal(parseFloat(ass_director_2nd_qty_prep || 0) * 
+      parseFloat(ass_director_2nd_uno_prep || 0) * 
+      parseFloat(ass_director_2nd_rt_prep || 0))
+    }
+    const timer = setTimeout(() => {
+      addasdir2prep();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [ass_director_2nd_qty_prep, ass_director_2nd_uno_prep,
+  ass_director_2nd_rt_prep]);
+
+  // function to calculate 2nd assistant director wrap on change
+  useEffect(() => {
+    const addasdir2wrap = () => {
+      setAssdirector2ndwrapTotal(parseFloat(ass_director_2nd_qty_wrap || 0) * 
+      parseFloat(ass_director_2nd_uno_wrap || 0) * 
+      parseFloat(ass_director_2nd_rt_wrap || 0))
+    }
+    const timer = setTimeout(() => {
+      addasdir2wrap();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [ass_director_2nd_qty_wrap, ass_director_2nd_uno_wrap,
+  ass_director_2nd_rt_wrap]);
+
+  // function to add all 2nd assistant director on change 
+  useEffect(() => {
+    const addDirAss2 = () => {
+      setAssdirector2ndallTotal(
+      parseFloat(assistantdirector2ndTotal || 0) +
+      parseFloat(assdirector2ndprepTotal || 0) +
+      parseFloat(assdirector2ndwrapTotal || 0) 
+      )
+    }
+    const timer = setTimeout(() => {
+      addDirAss2();
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [assistantdirector2ndTotal, assdirector2ndprepTotal,
+    assdirector2ndwrapTotal]);
+
+  // 3rd assistant director start here now 17
   // function to calculate 3rd assistant director on change
   useEffect(() => {
     const addasdir3 = () => {

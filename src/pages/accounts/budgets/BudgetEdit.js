@@ -908,6 +908,14 @@ function BudgetEdit() {
     payroll_uno_wrap,
     payroll_una_wrap,
     payroll_rt_wrap,
+    other_pro_qty_prep,
+    other_pro_uno_prep,
+    other_pro_una_prep,
+    other_pro_rt_prep,
+    other_pro_qty_wrap,
+    other_pro_uno_wrap,
+    other_pro_una_wrap,
+    other_pro_rt_wrap,
     directors_ass_qty_prep,
     directors_ass_uno_prep,
     directors_ass_una_prep,
@@ -3841,6 +3849,14 @@ function BudgetEdit() {
           payroll_uno_wrap,
           payroll_una_wrap,
           payroll_rt_wrap,
+          other_pro_qty_prep,
+          other_pro_uno_prep,
+          other_pro_una_prep,
+          other_pro_rt_prep,
+          other_pro_qty_wrap,
+          other_pro_uno_wrap,
+          other_pro_una_wrap,
+          other_pro_rt_wrap,
           directors_ass_qty_prep,
           directors_ass_uno_prep,
           directors_ass_una_prep,
@@ -4059,6 +4075,14 @@ function BudgetEdit() {
             payroll_uno_wrap,
             payroll_una_wrap,
             payroll_rt_wrap,
+            other_pro_qty_prep,
+            other_pro_uno_prep,
+            other_pro_una_prep,
+            other_pro_rt_prep,
+            other_pro_qty_wrap,
+            other_pro_uno_wrap,
+            other_pro_una_wrap,
+            other_pro_rt_wrap,
             directors_ass_qty_prep,
             directors_ass_uno_prep,
             directors_ass_una_prep,
@@ -6007,6 +6031,14 @@ function BudgetEdit() {
     formData.append("payroll_uno_wrap", payroll_uno_wrap);
     formData.append("payroll_una_wrap", payroll_una_wrap);
     formData.append("payroll_rt_wrap", payroll_rt_wrap);
+    formData.append("other_pro_qty_prep", other_pro_qty_prep);
+    formData.append("other_pro_uno_prep", other_pro_uno_prep);
+    formData.append("other_pro_una_prep", other_pro_una_prep);
+    formData.append("other_pro_rt_prep", other_pro_rt_prep);
+    formData.append("other_pro_qty_wrap", other_pro_qty_wrap);
+    formData.append("other_pro_uno_wrap", other_pro_uno_wrap);
+    formData.append("other_pro_una_wrap", other_pro_una_wrap);
+    formData.append("other_pro_rt_wrap", other_pro_rt_wrap);
     formData.append("directors_ass_qty_prep", directors_ass_qty_prep);
     formData.append("directors_ass_uno_prep", directors_ass_uno_prep);
     formData.append("directors_ass_una_prep", directors_ass_una_prep);

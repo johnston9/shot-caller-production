@@ -113,6 +113,14 @@ payroll_qty_wrap,
 payroll_uno_wrap,
 payroll_una_wrap,
 payroll_rt_wrap,
+other_pro_qty_prep,
+other_pro_uno_prep,
+other_pro_una_prep,
+other_pro_rt_prep,
+other_pro_qty_wrap,
+other_pro_uno_wrap,
+other_pro_una_wrap,
+other_pro_rt_wrap,
 directors_ass_qty_prep,
 directors_ass_uno_prep,
 directors_ass_una_prep,
@@ -206,7 +214,7 @@ craft_services_rt_wrap,
 //   formData.append("assdirector3rdall_total", assdirector3rdallTotal);
 //   formData.append("craftservicesprep_total", craftservicesprepTotal);
 //   formData.append("craftserviceswrap_total", craftserviceswrapTotal);
-//   formData.append("craftservicesall_otal", craftservicesallTotal);
+//   formData.append("craftservicesall_total", craftservicesallTotal);
 // + 68 in submit2 already
 
 // production manager
