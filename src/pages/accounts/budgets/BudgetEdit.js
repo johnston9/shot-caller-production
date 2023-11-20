@@ -703,7 +703,7 @@ function BudgetEdit() {
     production_acc_ass_rt_prep: 0,
     production_acc_ass_qty_wrap: 0,
     production_acc_ass_uno_wrap: 0,
-    production_acc_ass_una_wrap: "",
+    production_acc_ass_una_wrap: "", 
     production_acc_ass_rt_wrap: 0,
     scriptsupervisor_continuity_quantity: 0,
     scriptsupervisor_continuity_units_number: 0,
