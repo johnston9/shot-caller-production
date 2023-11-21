@@ -6,7 +6,7 @@
   overtime_unit_cast, 
   days6th7th_unit_cast, 
   rehersals_unit_cast,
-
+  
   holidays_pro_sta, 
   overtime_pro_sta, 
   days6th7th_pro_sta, 
@@ -214,7 +214,7 @@
   //   formData.append("assdirector3rdall_total", assdirector3rdallTotal);
   //   formData.append("craftservicesprep_total", craftservicesprepTotal);
   //   formData.append("craftserviceswrap_total", craftserviceswrapTotal);
-  //   formData.append("craftservicesall_otal", craftservicesallTotal);
+  //   formData.append("craftservicesall_total", craftservicesallTotal);
   // + 68 in submit2 already
 
   // production manager
@@ -357,7 +357,7 @@
   // directors assistant all Total postData
   const [directorsassallTotal, setDirectorsassallTotal] = useState(0);
 
-  // assistant director 1st
+  // assistant director 1st 
   // assistant director 1st shoot Total postData
   const [assistantdirector1stTotal, setAssistantdirector1stTotal] = useState(0);
   // assistant director 1st prep Total postData
@@ -6464,12 +6464,20 @@ export default BudgetCreate
   });
 }; 
 
-// handleChange1 - replace(/\D/g,'')
+// handleChange1 - replace(/\D/g,'') - works but no decimal
 const handleChange1 = (event) => {
 setPostDataCamera({
 ...postDataCamera,
 [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
 });
+}; 
+
+// handleChange6 - replace(/[^0-9.]/g, '') - hopfully works best
+const handleChange6 = (event) => {
+  setPostDataCamera({
+  ...postDataCamera,
+  [event.target.name]: parseFloat(event.target.value.replace(/[^0-9.]/g, '') || 0 ),
+  });
 }; 
 
 // handleChange2 - const re = /\d+\.?\d*/ - doesn't work

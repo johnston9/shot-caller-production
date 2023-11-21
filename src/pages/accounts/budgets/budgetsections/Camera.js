@@ -36,7 +36,7 @@ const Camera = (props) => {
       stills_qty, stills_uno, stills_una, stills_rt,
     fringes_taxes_camera,} = postDataCamera;
 
-    // handleChange1 - replace(/\D/g,'')
+    // handleChange1 - replace(/\D/g,'') - works but no decimal
     const handleChange1 = (event) => {
       setPostDataCamera({
       ...postDataCamera,
@@ -44,13 +44,13 @@ const Camera = (props) => {
       });
     }; 
 
-    // handleChange1 - replace(/[^0-9.]/g, '')
+    // handleChange6 - replace(/[^0-9.]/g, '') - hopfully works best
     const handleChange6 = (event) => {
         setPostDataCamera({
         ...postDataCamera,
         [event.target.name]: parseFloat(event.target.value.replace(/[^0-9.]/g, '') || 0 ),
         });
-      }; 
+    }; 
 
     // handleChange3 - parseFloat(event.target.value) ?  
     const handleChange3 = (event) => {
