@@ -1899,12 +1899,46 @@ const Budget = (props) => {
     </Col>
     </Row>
     {/* Production Manager */}
-    <Row  >
+    <div>
+    <Row >
     <Col md={1} >
     <p className={`${styles.Underline}`}>07.10</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Production Manager</p>
+    <p className={`${styles.Bold} mb-2`}>Production Manager</p>
+    </Col>
+    </Row>
+    {/* Prep */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Prep</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_manager_qty_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_manager_uno_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_manager_una_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_manager_rt_prep || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{productionmanagerprep_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Shoot */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Shoot</p>
     </Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>{production_manager_quantity || 0}</p>
@@ -1922,13 +1956,84 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{productionmanager_total || 0}</p>
     </Col>
     </Row>
+    {/* Wrap */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Wrap</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_manager_qty_wrap || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_manager_uno_wrap || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_manager_una_wrap || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_manager_rt_wrap || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{productionmanagerwrap_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={9} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{productionmanagerall_total || 0}</p>
+    </Col>
+    </Row>
+    </div>
     {/* Production Supervisor */}
+    <div className='mt-3' >
     <Row  >
     <Col md={1} >
     <p className={`${styles.Underline}`}>07.20</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Production Supervisor</p>
+    <p className={`${styles.Bold} mb-2`}>Production Supervisor</p>
+    </Col>
+    </Row>
+    {/* Prep */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Prep</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_supervisor_qty_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_supervisor_uno_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_supervisor_una_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_supervisor_rt_prep || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{productionsupervisorprep_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Shoot */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Shoot</p>
     </Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>{production_supervisor_quantity || 0}</p>
@@ -1946,13 +2051,84 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{productionsupervisor_total || 0}</p>
     </Col>
     </Row>
+    {/* Prep */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Prep</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_supervisor_qty_wrap || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_supervisor_uno_wrap || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_supervisor_una_wrap || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_supervisor_rt_wrap || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{productionsupervisorwrap_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={9} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{productionsupervisorall_total || 0}</p>
+    </Col>
+    </Row>
+    </div>
     {/* Production Coordinator */}
+    <div className='mt-3'>
     <Row  >
     <Col md={1} >
     <p className={`${styles.Underline}`}>07.30</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Production Coordinator</p>
+    <p className={`${styles.Bold} mb-2`}>Production Coordinator</p>
+    </Col>
+    </Row>
+    {/* Prep */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Prep</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_coordinator_qty_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_coordinator_uno_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_coordinator_una_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_coordinator_rt_prep || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{productioncoordinatorprep_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Shoot */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Shoot</p>
     </Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>{production_coordinator_quantity || 0}</p>
@@ -1970,13 +2146,84 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{productioncoordinator_total || 0}</p>
     </Col>
     </Row>
-    {/* Unit Manager */}
+    {/* Wrap */}
     <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Wrap</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_coordinator_qty_wrap || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_coordinator_uno_wrap || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_coordinator_una_wrap || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_coordinator_rt_wrap || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{productioncoordinatorwrap_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={9} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{productioncoordinatorall_total || 0}</p>
+    </Col>
+    </Row>
+    </div>
+    {/* Unit Manager */}
+    <div className='mt-3'>
+    <Row >
     <Col md={1} >
     <p className={`${styles.Underline}`}>07.40</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Unit Manager</p>
+    <p className={`${styles.Bold} mb-2`}>Unit Manager</p>
+    </Col>
+    </Row>
+    {/* Prep */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Prep</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{unit_manager_qty_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{unit_manager_uno_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{unit_manager_una_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{unit_manager_rt_prep || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{unitmanagerprep_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Shoot */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Shoot</p>
     </Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>{unit_manager_quantity || 0}</p>
@@ -1994,13 +2241,84 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{unitmanager_total || 0}</p>
     </Col>
     </Row>
+    {/* Wrap */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Wrap</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{unit_manager_qty_wrap || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{unit_manager_uno_wrap || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{unit_manager_una_wrap || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{unit_manager_rt_wrap || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{unitmanagerwrap_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={9} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{unitmanagerall_total || 0}</p>
+    </Col>
+    </Row>
+    </div>
     {/* Location Manager */}
+    <div className='mt-3'>
     <Row  >
     <Col md={1} >
     <p className={`${styles.Underline}`}>07.50</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Location Manager</p>
+    <p className={`${styles.Bold} mb-2`}>Location Manager</p>
+    </Col>
+    </Row>
+    {/* Prep */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Prep</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{location_manager_qty_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{location_manager_uno_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{location_manager_una_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{location_manager_rt_prep || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{locationmanagerprep_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Shoot */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Shoot</p>
     </Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>{location_manager_quantity || 0}</p>
@@ -2018,13 +2336,84 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{locationmanager_total || 0}</p>
     </Col>
     </Row>
-    {/* Location Manager Assistant */}
+    {/* Wrap */}
     <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Wrap</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{location_manager_qty_wrap || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{location_manager_uno_wrap || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{location_manager_una_wrap || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{location_manager_rt_wrap || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{locationmanagerwrap_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={9} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{locationmanagerall_total || 0}</p>
+    </Col>
+    </Row>
+    </div>
+    {/* Location Manager Assistant */}
+    <div className='mt-3'>
+    <Row >
     <Col md={1} >
     <p className={`${styles.Underline}`}>07.60</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Location Manager Assistant</p>
+    <p className={`${styles.Bold} mb-2`}>Location Manager Assistant</p>
+    </Col>
+    </Row>
+    {/* Prep */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Prep</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{location_manager_ass_qty_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{location_manager_ass_uno_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{location_manager_ass_una_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{location_manager_ass_rt_prep || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{locmanassprep_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Shoot */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Shoot</p>
     </Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>{location_manager_assistant_quantity || 0}</p>
@@ -2042,13 +2431,84 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{locationmanagerassistant_total || 0}</p>
     </Col>
     </Row>
+    {/* Wrap */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Wrap</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{location_manager_ass_qty_wrap || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{location_manager_ass_uno_wrap || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{location_manager_ass_una_wrap || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{location_manager_ass_rt_wrap || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{locmanasswrap_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={9} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{locationmanagerall_total || 0}</p>
+    </Col>
+    </Row>
+    </div>
     {/* Production Assistants */}
-    <Row  >
+    <div className='mt-3'>
+    <Row >
     <Col md={1} >
     <p className={`${styles.Underline}`}>07.70</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Production Assistants</p>
+    <p className={`${styles.Bold} mb-2`}>Production Assistants</p>
+    </Col>
+    </Row>
+    {/* Prep */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Prep</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_ass_qty_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_ass_uno_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_ass_una_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_ass_rt_prep || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{proassprep_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Shoot */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Shoot</p>
     </Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>{production_assistants_quantity || 0}</p>
@@ -2066,13 +2526,84 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{productionassistants_total || 0}</p>
     </Col>
     </Row>
+    {/* Wrap */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Wrap</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_ass_qty_wrap || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_ass_uno_wrap || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_ass_una_wrap || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_ass_rt_wrap || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{proasswrap_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={9} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{proassall_total || 0}</p>
+    </Col>
+    </Row>
+    </div>
     {/* Production Secretary */}
+    <div className='mt-3'>
     <Row  >
     <Col md={1} >
     <p className={`${styles.Underline}`}>07.80</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Production Secretary</p>
+    <p className={`${styles.Bold} mb-2`}>Production Secretary</p>
+    </Col>
+    </Row>
+    {/* Prep */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Prep</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_sec_qty_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_sec_uno_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_sec_una_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_sec_rt_prep || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{prosecprep_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Shoot */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Shoot</p>
     </Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>{production_secretary_quantity || 0}</p>
@@ -2090,13 +2621,51 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{productionsecretary_total || 0}</p>
     </Col>
     </Row>
-    {/* Production Accountant */}
+    {/* Wrap */}
     <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Wrap</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_sec_qty_wrap || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_sec_uno_wrap || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_sec_una_wrap || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_sec_rt_wrap || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{prosecwrap_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={9} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{prosecall_total || 0}</p>
+    </Col>
+    </Row>
+    </div>
+    {/* Production Accountant */}
+    <div className='mt-3'>
+    <Row >
     <Col md={1} >
     <p className={`${styles.Underline}`}>07.90</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Production Accountant</p>
+    <p className={`${styles.Bold} mb-2`}>Production Accountant</p>
     </Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>{production_accountant_quantity || 0}</p>
@@ -2114,13 +2683,132 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{productionaccountant_total || 0}</p>
     </Col>
     </Row>
+    {/* Prep */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Prep</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_acc_qty_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_acc_uno_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_acc_una_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_acc_rt_prep || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{proaccprep_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Shoot */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Shoot</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_accountant_quantity || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_accountant_units_number || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_accountant_units_name || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_accountant_rate || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{productionaccountant_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Wrap */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Wrap</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_acc_qty_wrap || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_acc_uno_wrap || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_acc_una_wrap || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_acc_rt_wrap || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{proaccwrap_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={9} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{proaccall_total || 0}</p>
+    </Col>
+    </Row>
+    </div>
     {/* Production Accountant Assistant */}
-    <Row  >
+    <div className='mt-3'>
+    <Row >
     <Col md={1} >
     <p className={`${styles.Underline}`}>07.91</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Production Accountant Assistant</p>
+    <p className={`${styles.Bold} mb-2`}>Production Accountant Assistant</p>
+    </Col>
+    </Row>
+    {/* Prep */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Prep</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_acc_ass_qty_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_acc_ass_uno_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_acc_ass_una_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_acc_ass_rt_prep || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{proaccassprep_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Shoot */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Shoot</p>
     </Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>{production_accountant_assistant_quantity || 0}</p>
@@ -2138,13 +2826,84 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{productionaccountantassistant_total || 0}</p>
     </Col>
     </Row>
+    {/* Wrap */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Wrap</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_acc_ass_qty_wrap || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_acc_ass_uno_wrap || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_acc_ass_una_wrap || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_acc_ass_rt_wrap || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{proaccasswrap_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={9} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{proaccassall_total || 0}</p>
+    </Col>
+    </Row>
+    </div>
     {/* Script Supervisor / Continuity */}
-    <Row  >
+    <div className='mt-3'>
+    <Row >
     <Col md={1} >
     <p className={`${styles.Underline}`}>07.92</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Script Supervisor / Continuity</p>
+    <p className={`${styles.Bold} mb-2`}>Script Supervisor / Continuity</p>
+    </Col>
+    </Row>
+    {/* Prep */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Prep</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{scriptsupervisor_con_qty_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{scriptsupervisor_con_uno_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{scriptsupervisor_con_una_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{scriptsupervisor_con_rt_prep || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{scriptsupconprep_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Shoot */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Shoot</p>
     </Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>{scriptsupervisor_continuity_quantity || 0}</p>
@@ -2162,13 +2921,84 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{scriptsupervisorcontinuity_total || 0}</p>
     </Col>
     </Row>
+    {/* Wrap */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Wrap</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{scriptsupervisor_con_qty_wrap || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{scriptsupervisor_con_uno_wrap || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{scriptsupervisor_con_una_wrap || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{scriptsupervisor_con_rt_wrap || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{scriptsupconwrap_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={9} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{scriptsupconall_total || 0}</p>
+    </Col>
+    </Row>
+    </div>
     {/* Payroll */}
-    <Row  >
+    <div className='mt-3'>
+    <Row >
     <Col md={1} >
     <p className={`${styles.Underline}`}>07.93</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Payroll</p>
+    <p className={`${styles.Bold} mb-2`}>Payroll</p>
+    </Col>
+    </Row>
+    {/* Prep */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Prep</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{payroll_qty_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{payroll_uno_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{payroll_una_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{payroll_rt_prep || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{payrollprep_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Shoot */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Shoot</p>
     </Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>{payroll_quantity || 0}</p>
@@ -2186,13 +3016,84 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{payroll_total || 0}</p>
     </Col>
     </Row>
+    {/* Wrap */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Wrap</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{payroll_qty_wrap || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{payroll_uno_wrap || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{payroll_una_wrap || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{payroll_rt_wrap || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{payrollwrap_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={9} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{payrollall_total || 0}</p>
+    </Col>
+    </Row>
+    </div>
     {/* Other Production */}
-    <Row  >
+    <div className='mt-3'>
+    <Row >
     <Col md={1} >
     <p className={`${styles.Underline}`}>07.94</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Other - Production</p>
+    <p className={`${styles.Bold} mb-2`}>Other - Production</p>
+    </Col>
+    </Row>
+    {/* Prep  */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Prep</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{other_pro_qty_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{other_pro_uno_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{other_pro_una_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{other_pro_rt_prep || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{otherproprep_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Shoot */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Shoot</p>
     </Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>{other_production_quantity || 0}</p>
@@ -2210,13 +3111,84 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{otherproduction_total || 0}</p>
     </Col>
     </Row>
+    {/* Wrap  */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Wrap</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{other_pro_qty_wrap || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{other_pro_uno_wrap || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{other_pro_una_wrap || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{other_pro_rt_wrap || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{otherprowrap_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={9} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{otherproall_total || 0}</p>
+    </Col>
+    </Row>
+    </div>
     {/* Directors Assistant */}
-    <Row  >
+    <div className='mt-3'>
+    <Row >
     <Col md={1} >
     <p className={`${styles.Underline}`}>07.95</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Directors Assistant</p>
+    <p className={`${styles.Bold} mb-2`}>Directors Assistant</p>
+    </Col>
+    </Row>
+    {/* Prep */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Prep</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{directors_ass_qty_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{directors_ass_uno_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{directors_ass_una_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{directors_ass_rt_prep || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{directorsassprep_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Shoot */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Shoot</p>
     </Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>{directors_assistant_quantity || 0}</p>
@@ -2234,7 +3206,45 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{directorsassistant_total || 0}</p>
     </Col>
     </Row>
-    {/* 1st Assistant Director */}
+    {/* Wrap */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Wrap</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{directors_ass_qty_wrap || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{directors_ass_uno_wrap || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{directors_ass_una_wrap || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{directors_ass_rt_wrap || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{directorsasswrap_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={9} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{directorsassall_total || 0}</p>
+    </Col>
+    </Row>
+    </div>
+    {/* 1st Assistant Director start here Nov 23*/}
+    <div className='mt-3'>
     <Row  >
     <Col md={1} >
     <p className={`${styles.Underline}`}>07.96</p>
@@ -2258,7 +3268,21 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{assistantdirector1st_total || 0}</p>
     </Col>
     </Row>
+    {/* Total */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={9} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{directorsassall_total || 0}</p>
+    </Col>
+    </Row>
+    </div>
     {/* 2nd Assistant Director */}
+    <div className='mt-3'>
     <Row  >
     <Col md={1} >
     <p className={`${styles.Underline}`}>07.97</p>
@@ -2282,7 +3306,9 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{assistantdirector2nd_total || 0}</p>
     </Col>
     </Row>
+    </div>
     {/* 3rd Assistant Director */}
+    <div className='mt-3'>
     <Row  >
     <Col md={1} >
     <p className={`${styles.Underline}`}>07.98</p>
@@ -2306,7 +3332,9 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{assistantdirector3rd_total || 0}</p>
     </Col>
     </Row>
+    </div>
     {/* Craft Services */}
+    <div className='mt-3'>
     <Row  >
     <Col md={1} >
     <p className={`${styles.Underline}`}>07.99</p>
@@ -2330,8 +3358,9 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{craftservices_total || 0}</p>
     </Col>
     </Row>
+    </div>
     {/* Fringes Taxes */}
-    <Row>
+    <Row className='mt-3'>
     <Col md={1}>
     <p className={`${styles.Underline}`}>07.991</p>
     </Col>
