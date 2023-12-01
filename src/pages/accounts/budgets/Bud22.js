@@ -160,52 +160,6 @@
   craft_services_uno_wrap,
   craft_services_una_wrap,
   craft_services_rt_wrap,
-  // design
-  pro_designer_qty_prep,
-  pro_designer_uno_prep,
-  pro_designer_una_prep,
-  pro_designer_rt_prep,
-  pro_designer_qty_wrap,
-  pro_designer_uno_wrap,
-  pro_designer_una_wrap,
-  pro_designer_rt_wrap,
-  art_director_qty_prep,
-  art_director_uno_prep,
-  art_director_una_prep,
-  art_director_rt_prep,
-  art_director_qty_wrap,
-  art_director_uno_wrap,
-  art_director_una_wrap,
-  art_director_rt_wrap,
-  art_ass_qty_prep,
-  art_ass_uno_prep,
-  art_ass_una_prep,
-  art_ass_rt_prep,
-  art_ass_qty_wrap,
-  art_ass_uno_wrap,
-  art_ass_una_wrap,
-  art_ass_rt_wrap,
-  pro_ass_trainees_qty_prep,
-  pro_ass_trainees_uno_prep,
-  pro_ass_trainees_una_prep,
-  pro_ass_trainees_rt_prep,
-  pro_ass_trainees_qty_wrap,
-  pro_ass_trainees_uno_wrap,
-  pro_ass_trainees_una_wrap,
-  pro_ass_trainees_rt_wrap,
-  sketch_artists,
-  sketch_artists_unit,
-  storyboard_artists,
-  storyboard_artists_unit,
-  holidays_design,
-  holidays_unit_design,
-  overtime_design,
-  overtime_unit_design,
-  days6th7th_design,
-  days6th7th_unit_design,
-  box_rent_unit_design,
-  box_rent_design,
-  // prep wrap 
   // formData.append("productionmanagerprep_total", productionmanagerprepTotal);
   //   formData.append("productionmanagerwrap_total", productionmanagerwrapTotal);
   //   formData.append("productionmanagerall_total", productionmanagerallTotal);
@@ -260,190 +214,68 @@
   //   formData.append("craftservicesprep_total", craftservicesprepTotal);
   //   formData.append("craftserviceswrap_total", craftserviceswrapTotal);
   //   formData.append("craftservicesall_total", craftservicesallTotal);
+  // design
+  pro_designer_qty_prep,
+  pro_designer_uno_prep,
+  pro_designer_una_prep,
+  pro_designer_rt_prep,
+  pro_designer_qty_wrap,
+  pro_designer_uno_wrap,
+  pro_designer_una_wrap,
+  pro_designer_rt_wrap,
+  art_director_qty_prep,
+  art_director_uno_prep,
+  art_director_una_prep,
+  art_director_rt_prep,
+  art_director_qty_wrap,
+  art_director_uno_wrap,
+  art_director_una_wrap,
+  art_director_rt_wrap,
+  art_ass_qty_prep,
+  art_ass_uno_prep,
+  art_ass_una_prep,
+  art_ass_rt_prep,
+  art_ass_qty_wrap,
+  art_ass_uno_wrap,
+  art_ass_una_wrap,
+  art_ass_rt_wrap,
+  pro_ass_trainees_qty_prep,
+  pro_ass_trainees_uno_prep,
+  pro_ass_trainees_una_prep,
+  pro_ass_trainees_rt_prep,
+  pro_ass_trainees_qty_wrap,
+  pro_ass_trainees_uno_wrap,
+  pro_ass_trainees_una_wrap,
+  pro_ass_trainees_rt_wrap,
+  sketch_artists,
+  sketch_artists_unit,
+  storyboard_artists,
+  storyboard_artists_unit,
+  holidays_design,
+  holidays_unit_design,
+  overtime_design,
+  overtime_unit_design,
+  days6th7th_design,
+  days6th7th_unit_design,
+  box_rent_unit_design,
+  box_rent_design,
+  formData.append("prodesprepTotal", prodesprepTotal);
+  formData.append("prodeswrapTotal", prodeswrapTotal);
+  formData.append("prodesallTotal", prodesallTotal);
+  formData.append("artdirprepTotal", artdirprepTotal);
+  formData.append("artdirwrapTotal", artdirwrapTotal);
+  formData.append("artdirallTotal", artdirallTotal);
+  formData.append("artassprepTotal", artassprepTotal);
+  formData.append("artasswrapTotal", artasswrapTotal);
+  formData.append("artassallTotal", artassallTotal);
+  formData.append("proasstrainprepTotal", proasstrainprepTotal);
+  formData.append("proasstrainwrapTotal", proasstrainwrapTotal);
+  formData.append("proasstrainallTotal", proasstrainallTotal);
+  formData.append("graphicartprepTotal", graphicartprepTotal);
+  formData.append("graphicartwrapTotal", graphicartwrapTotal);
+  formData.append("graphicartallTotal", graphicartallTotal);
+  // prep wrap 
   // + 68 in submit2 already
-
-  // production manager
-  // production manager shoot Total postData
-  const [productionmanagerTotal, setProductionmanagerTotal] = useState(0);
-  // production manager prep Total postData
-  const [productionmanagerprepTotal, setProductionmanagerprepTotal] = useState(0);
-  // production manager wrap Total postData
-  const [productionmanagerwrapTotal, setProductionmanagerwrapTotal] = useState(0);
-  // production manager all Total postData
-  const [productionmanagerallTotal, setProductionmanagerallTotal] = useState(0);
-
-  // production supervisor
-  // production supervisor shoot Total postData
-  const [productionsupervisorTotal, setProductionsupervisorTotal] = useState(0);
-  // production supervisor prep Total postData
-  const [productionsupervisorprepTotal, setProductionsupervisorprepTotal] = useState(0);
-  // production supervisor wrap Total postData
-  const [productionsupervisorwrapTotal, setProductionsupervisorwrapTotal] = useState(0);
-  // production supervisor all Total postData
-  const [productionsupervisorallTotal, setProductionsupervisorallTotal] = useState(0);
-
-  // production coordinator
-  // production coordinator shoot Total postData
-  const [productioncoordinatorTotal, setProductioncoordinatorTotal] = useState(0);
-  // production coordinator prep Total postData
-  const [productioncoordinatorprepTotal, setProductioncoordinatorprepTotal] = useState(0);
-  // production coordinator wrap Total postData
-  const [productioncoordinatorwrapTotal, setProductioncoordinatorwrapTotal] = useState(0);
-  // production coordinator all Total postData
-  const [productioncoordinatorallTotal, setProductioncoordinatorallTotal] = useState(0);
-
-  // unit manager
-  // unit manager shoot Total postData
-  const [unitmanagerTotal, setUnitmanagerTotal] = useState(0);
-  // unit manager prep Total postData
-  const [unitmanagerprepTotal, setUnitmanagerprepTotal] = useState(0);
-  // unit manager wrap Total postData
-  const [unitmanagerwrapTotal, setUnitmanagerwrapTotal] = useState(0);
-  // unit manager all Total postData
-  const [unitmanagerallTotal, setUnitmanagerallTotal] = useState(0);
-
-  // location manager
-  // location manager shoot Total postData
-  const [locationmanagerTotal, setLocationmanagerTotal] = useState(0);
-  // location manager wrap Total postData
-  const [locationmanagerwrapTotal, setLocationmanagerwrapTotal] = useState(0);
-  // location manager prep Total postData
-  const [locationmanagerprepTotal, setLocationmanagerprepTotal] = useState(0);
-  // location manager all Total postData
-  const [locationmanagerallTotal, setLocationmanagerallTotal] = useState(0);
-
-  // location manager assistant
-  // location manager assistant shoot Total postData
-  const [locationmanagerassistantTotal, setLocationmanagerassistantTotal] = useState(0);
-  // location manager assistant prep Total postData
-  const [locmanassprepTotal, setLocmanassprepTotal] = useState(0);
-  // location manager assistant wrap Total postData
-  const [locmanasswrapTotal, setLocmanasswrapTotal] = useState(0);
-  // location manager assistant all Total postData
-  const [locmanassallTotal, setLocmanassallTotal] = useState(0);
-
-  // production assistants
-  // production assistants shoot Total postData
-  const [productionassistantsTotal, setProductionassistantsTotal] = useState(0);
-  // production assistants prep Total postData
-  const [proassprepTotal, setProassprepTotal] = useState(0);
-  // production assistants wrap Total postData
-  const [proasswrapTotal, setProasswrapTotal] = useState(0);
-  // production assistants all Total postData
-  const [proassallTotal, setProassallTotal] = useState(0);
-
-  // production 
-  // production secretary shoot Total postData
-  const [productionsecretaryTotal, setProductionsecretaryTotal] = useState(0);
-  // production secretary prep Total postData
-  const [prosecprepTotal, setProsecprepTotal] = useState(0);
-  // production secretary wrap Total postData
-  const [prosecwrapTotal, setProsecwrapTotal] = useState(0);
-  // production secretary all Total postData
-  const [prosecallTotal, setProsecallTotal] = useState(0);
-
-  // production accountant 
-  // production accountant shoot Total postData
-  const [productionaccountantTotal, setProductionaccountantTotal] = useState(0);
-  // production accountant prep Total postData
-  const [proaccprepTotal, setProaccprepTotal] = useState(0);
-  // production accountant wrap Total postData
-  const [proaccwrapTotal, setProaccwrapTotal] = useState(0);
-  // production accountant all Total postData
-  const [proaccallTotal, setProaccallTotal] = useState(0);
-
-  // production accountant assistant
-  // production accountant assistant shoot Total postData
-  const [productionaccountantassistantTotal, setProductionaccountantassistantTotal] = useState(0);
-  // production accountant assistant prep Total postData
-  const [proaccassprepTotal, setProaccassprepTotal] = useState(0);
-  // production accountant assistant wrap Total postData
-  const [proaccasswrapTotal, setProaccasswrapTotal] = useState(0);
-  // production accountant assistant all Total postData
-  const [proaccassallTotal, setProaccassallTotal] = useState(0);
-
-  // scriptsupervisor continuity con
-  // scriptsupervisor continuity shoot Total postData
-  const [scriptsupervisorcontinuityTotal, setScriptsupervisorcontinuityTotal] = useState(0);
-  // scriptsupervisor continuity prep Total postData
-  const [scriptsupconprepTotal, setScriptsupconprepTotal] = useState(0);
-  // scriptsupervisor continuity wrap Total postData
-  const [scriptsupconwrapTotal, setScriptsupconwrapTotal] = useState(0);
-  // scriptsupervisor continuity all Total postData
-  const [scriptsupconallTotal, setScriptsupconallTotal] = useState(0);
-
-  // payroll Total
-  // payroll shoot Total postData
-  const [payrollTotal, setPayrollTotal] = useState(0);
-  // payroll prep Total postData
-  const [payrollprepTotal, setPayrollprepTotal] = useState(0);
-  // payroll wrap Total postData
-  const [payrollwrapTotal, setPayrollwrapTotal] = useState(0);
-  // payroll all Total postData
-  const [payrollallTotal, setPayrollallTotal] = useState(0);
-
-  // other production
-  // other production shoot Total postData
-  const [otherproductionTotal, setOtherproductionTotal] = useState(0);
-  // other production prep Total postData
-  const [otherproprepTotal, setOtherproprepTotal] = useState(0);
-  // other production wrap Total postData
-  const [otherprowrapTotal, setOtherprowrapTotal] = useState(0);
-  // other production all Total postData
-  const [otherproallTotal, setOtherproallTotal] = useState(0);
-
-  // directors assistant
-  // directors assistant shoot Total postData
-  const [directorsassistantTotal, setDirectorsassistantTotal] = useState(0);
-  // directors assistant prep Total postData
-  const [directorsassprepTotal, setDirectorsassprepTotal] = useState(0);
-  // directors assistant wrap Total postData
-  const [directorsasswrapTotal, setDirectorsasswrapTotal] = useState(0);
-  // directors assistant all Total postData
-  const [directorsassallTotal, setDirectorsassallTotal] = useState(0);
-
-  // assistant director 1st 
-  // assistant director 1st shoot Total postData
-  const [assistantdirector1stTotal, setAssistantdirector1stTotal] = useState(0);
-  // assistant director 1st prep Total postData
-  const [assdirector1stprepTotal, setAssdirector1stprepTotal] = useState(0);
-  // assistant director 1st wrap Total postData
-  const [assdirector1stwrapTotal, setAssdirector1stwrapTotal] = useState(0);
-  // assistant director 1st all Total postData
-  const [assdirector1stallTotal, setAssdirector1stallTotal] = useState(0);
-
-  // assistant director 2nd
-  // assistant director 2nd shoot Total postData
-  const [assistantdirector2ndTotal, setAssistantdirector2ndTotal] = useState(0);
-  // assistant director 2nd prep Total postData
-  const [assdirector2ndprepTotal, setAssdirector2ndprepTotal] = useState(0);
-  // assistant director 2nd wrap Total postData
-  const [assdirector2ndwrapTotal, setAssdirector2ndwrapTotal] = useState(0);
-  // assistant director 2nd all Total postData
-  const [assdirector2ndallTotal, setAssdirector2ndallTotal] = useState(0);
-
-  // assistant director 3rd
-  // assistant director 3rd shoot Total postData
-  const [assistantdirector3rdTotal, setAssistantdirector3rdTotal] = useState(0);
-  // assistant director 3rd prep Total postData
-  const [assdirector3rdprepTotal, setAssdirector3rdprepTotal] = useState(0);
-  // assistant director 3rd wrap Total postData
-  const [assdirector3rdwrapTotal, setAssdirector3rdwrapTotal] = useState(0);
-  // assistant director 3rd all Total postData
-  const [assdirector3rdallTotal, setAssdirector3rdallTotal] = useState(0);
-
-  // craft services Total
-  // craft services shoot Total postData
-  const [craftservicesTotal, setCraftservicesTotal] = useState(0);
-  // craft services prep Total postData
-  const [craftservicesprepTotal, setCraftservicesprepTotal] = useState(0);
-  // craft services wrap Total postData
-  const [craftserviceswrapTotal, setCraftserviceswrapTotal] = useState(0);
-  // craft services all Total postData
-  const [craftservicesallTotal, setCraftservicesallTotal] = useState(0);
-
-  // Production Total postData 
-  const [productionstaffTotal, setProductionstaffTotal] = useState(0);
 
   // design totals
   // production designer
@@ -491,9 +323,6 @@
   const [graphicartwrapTotal, setGraphicartwrapTotal] = useState(0);
   // graphic artists all Total postData
   const [graphicartallTotal, setGraphicartallTotal] = useState(0);
-
-
-
   
 /* Component in the Account component to create Budgets */
 import React, { useEffect, useState } from "react";

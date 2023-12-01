@@ -16,7 +16,24 @@ const DesignLabour = (props) => {
         artassistantsTotal, setArtassistantsTotal,
         productionassistantstraineesTotal, setProductionassistantstraineesTotal,
         graphicartistsTotal, setGraphicartistsTotal,
-        designlabourTotal, setDesignlabourTotal} = props;
+        designlabourTotal, setDesignlabourTotal,
+        // new
+        prodesprepTotal, setProdesprepTotal,
+        prodeswrapTotal, setProdeswrapTotal,
+        prodesallTotal, setProdesallTotal,
+        artdirprepTotal, setArtdirprepTotal,
+        artdirwrapTotal, setArtdirwrapTotal,
+        artdirallTotal, setArtdirallTotal,
+        artassprepTotal, setArtassprepTotal,
+        artasswrapTotal, setArtasswrapTotal,
+        artassallTotal, setArtassallTotal,
+        proasstrainprepTotal, setProasstrainprepTotal,
+        proasstrainwrapTotal, setProasstrainwrapTotal,
+        proasstrainallTotal, setProasstrainallTotal,
+        graphicartprepTotal, setGraphicartprepTotal,
+        graphicartwrapTotal, setGraphicartwrapTotal,
+        graphicartallTotal, setGraphicartallTotal,
+    } = props;
     
     const {pro_designer_qty_prep, pro_designer_uno_prep,
         pro_designer_una_prep, pro_designer_rt_prep,
@@ -78,6 +95,7 @@ const DesignLabour = (props) => {
   };
 
   // Calculate Functions
+  // production designer
   // function to calculate production designer on change
   useEffect(() => {
     const addProdes = () => {

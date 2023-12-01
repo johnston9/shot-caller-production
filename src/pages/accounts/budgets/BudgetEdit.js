@@ -6274,6 +6274,74 @@ function BudgetEdit() {
     formData.append("craftservicesprep_total", craftservicesprepTotal);
     formData.append("craftserviceswrap_total", craftserviceswrapTotal);
     formData.append("craftservicesall_total", craftservicesallTotal);
+    formData.append("pro_designer_qty_prep", pro_designer_qty_prep);
+    formData.append("pro_designer_uno_prep", pro_designer_uno_prep);
+    formData.append("pro_designer_una_prep", pro_designer_una_prep);
+    formData.append("pro_designer_rt_prep", pro_designer_rt_prep);
+    formData.append("pro_designer_qty_wrap", pro_designer_qty_wrap);
+    formData.append("pro_designer_uno_wrap", pro_designer_uno_wrap);
+    formData.append("pro_designer_una_wrap", pro_designer_una_wrap);
+    formData.append("pro_designer_rt_wrap", pro_designer_rt_wrap);
+    formData.append("art_director_qty_prep", art_director_qty_prep);
+    formData.append("art_director_uno_prep", art_director_uno_prep);
+    formData.append("art_director_una_prep", art_director_una_prep);
+    formData.append("art_director_rt_prep", art_director_rt_prep);
+    formData.append("art_director_qty_wrap", art_director_qty_wrap);
+    formData.append("art_director_uno_wrap", art_director_uno_wrap);
+    formData.append("art_director_una_wrap", art_director_una_wrap);
+    formData.append("art_director_rt_wrap", art_director_rt_wrap);
+    formData.append("art_ass_qty_prep", art_ass_qty_prep);
+    formData.append("art_ass_uno_prep", art_ass_uno_prep);
+    formData.append("art_ass_una_prep", art_ass_una_prep);
+    formData.append("art_ass_rt_prep", art_ass_rt_prep);
+    formData.append("art_ass_qty_wrap", art_ass_qty_wrap);
+    formData.append("art_ass_uno_wrap", art_ass_uno_wrap);
+    formData.append("art_ass_una_wrap", art_ass_una_wrap);
+    formData.append("art_ass_rt_wrap", art_ass_rt_wrap);
+    formData.append("pro_ass_trainees_qty_prep", pro_ass_trainees_qty_prep);
+    formData.append("pro_ass_trainees_uno_prep", pro_ass_trainees_uno_prep);
+    formData.append("pro_ass_trainees_una_prep", pro_ass_trainees_una_prep);
+    formData.append("pro_ass_trainees_rt_prep", pro_ass_trainees_rt_prep);
+    formData.append("pro_ass_trainees_qty_wrap", pro_ass_trainees_qty_wrap);
+    formData.append("pro_ass_trainees_uno_wrap", pro_ass_trainees_uno_wrap);
+    formData.append("pro_ass_trainees_una_wrap", pro_ass_trainees_una_wrap);
+    formData.append("pro_ass_trainees_rt_wrap", pro_ass_trainees_rt_wrap);
+    formData.append("sketch_artists", sketch_artists);
+    formData.append("sketch_artists_unit", sketch_artists_unit);
+    formData.append("storyboard_artists", storyboard_artists);
+    formData.append("storyboard_artists_unit", storyboard_artists_unit);
+    formData.append("holidays_design", holidays_design);
+    formData.append("holidays_unit_design", holidays_unit_design);
+    formData.append("overtime_design", overtime_design);
+    formData.append("overtime_unit_design", overtime_unit_design);
+    formData.append("days6th7th_design", days6th7th_design);
+    formData.append("days6th7th_unit_design", days6th7th_unit_design);
+    formData.append("box_rent_design", box_rent_design);
+    formData.append("box_rent_unit_design", box_rent_unit_design);
+    formData.append("prodesprepTotal", prodesprepTotal);
+    formData.append("prodeswrapTotal", prodeswrapTotal);
+    formData.append("prodesallTotal", prodesallTotal);
+    formData.append("artdirprepTotal", artdirprepTotal);
+    formData.append("artdirwrapTotal", artdirwrapTotal);
+    formData.append("artdirallTotal", artdirallTotal);
+    formData.append("artassprepTotal", artassprepTotal);
+    formData.append("artasswrapTotal", artasswrapTotal);
+    formData.append("artassallTotal", artassallTotal);
+    formData.append("proasstrainprepTotal", proasstrainprepTotal);
+    formData.append("proasstrainwrapTotal", proasstrainwrapTotal);
+    formData.append("proasstrainallTotal", proasstrainallTotal);
+    formData.append("graphicartprepTotal", graphicartprepTotal);
+    formData.append("graphicartwrapTotal", graphicartwrapTotal);
+    formData.append("graphicartallTotal", graphicartallTotal);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
     // formData.append("staaaaars", staaaaars);
     // formData.append("staaaaars", staaaaars);
     // formData.append("staaaaars", staaaaars);
@@ -7499,7 +7567,39 @@ function BudgetEdit() {
       setGraphicartistsTotal={setGraphicartistsTotal}
       designlabourTotal={designlabourTotal}
       setDesignlabourTotal={setDesignlabourTotal}
-      setShow={setShowDesign}  /> 
+      setShow={setShowDesign}  
+      // new
+      prodesprepTotal={prodesprepTotal}
+      setProdesprepTotal={setProdesprepTotal}
+      prodeswrapTotal={prodeswrapTotal}
+      setProdeswrapTotal={setProdeswrapTotal}
+      prodesallTotal={prodesallTotal}
+      setProdesallTotal={setProdesallTotal}
+      artdirprepTotal={artdirprepTotal}
+      setArtdirprepTotal={setArtdirprepTotal}
+      artdirwrapTotal={artdirwrapTotal}
+      setArtdirwrapTotal={setArtdirwrapTotal}
+      artdirallTotal={artdirallTotal}
+      setArtdirallTotal={setArtdirallTotal}
+      artassprepTotal={artassprepTotal}
+      setArtassprepTotal={setArtassprepTotal}
+      artasswrapTotal={artasswrapTotal}
+      setArtasswrapTotal={setArtasswrapTotal}
+      artassallTotal={artassallTotal}
+      setArtassallTotal={setArtassallTotal}
+      proasstrainprepTotal={proasstrainprepTotal}
+      setProasstrainprepTotal={setProasstrainprepTotal}
+      proasstrainwrapTotal={proasstrainwrapTotal}
+      setProasstrainwrapTotal={setProasstrainwrapTotal}
+      proasstrainallTotal={proasstrainallTotal}
+      setProasstrainallTotal={setProasstrainallTotal}
+      graphicartprepTotal={graphicartprepTotal}
+      setGraphicartprepTotal={setGraphicartprepTotal}
+      graphicartwrapTotal={graphicartwrapTotal}
+      setGraphicartwrapTotal={setGraphicartwrapTotal}
+      graphicartallTotal={graphicartallTotal}
+      setGraphicartallTotal={setGraphicartallTotal}
+      /> 
     ) }
     {/* construction */}
     {!showCon ? (
