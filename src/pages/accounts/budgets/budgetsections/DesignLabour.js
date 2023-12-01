@@ -18,7 +18,29 @@ const DesignLabour = (props) => {
         graphicartistsTotal, setGraphicartistsTotal,
         designlabourTotal, setDesignlabourTotal} = props;
     
-    const {fringes_taxes_design,
+    const {pro_designer_qty_prep, pro_designer_uno_prep,
+        pro_designer_una_prep, pro_designer_rt_prep,
+        pro_designer_qty_wrap, pro_designer_uno_wrap,
+        pro_designer_una_wrap, pro_designer_rt_wrap,
+        art_director_qty_prep, art_director_uno_prep,
+        art_director_una_prep, art_director_rt_prep,
+        art_director_qty_wrap, art_director_uno_wrap,
+        art_director_una_wrap, art_director_rt_wrap,
+        art_ass_qty_prep, art_ass_uno_prep,
+        art_ass_una_prep, art_ass_rt_prep,
+        art_ass_qty_wrap, art_ass_uno_wrap,
+        art_ass_una_wrap, art_ass_rt_wrap,
+        pro_ass_trainees_qty_prep, pro_ass_trainees_uno_prep,
+        pro_ass_trainees_una_prep, pro_ass_trainees_rt_prep,
+        pro_ass_trainees_qty_wrap, pro_ass_trainees_uno_wrap,
+        pro_ass_trainees_una_wrap, pro_ass_trainees_rt_wrap,
+        sketch_artists, sketch_artists_unit,
+        storyboard_artists, storyboard_artists_unit,
+        holidays_design, holidays_unit_design,
+        overtime_design, overtime_unit_design,
+        days6th7th_design, days6th7th_unit_design,
+        box_rent_unit_design, box_rent_design,
+        fringes_taxes_design,
         production_designer_quantity, production_designer_units_number,
         production_designer_units_name, production_designer_rate,
         art_director_quantity, art_director_units_number,
@@ -30,14 +52,22 @@ const DesignLabour = (props) => {
         graphic_artists_quantity, graphic_artists_units_number,
         graphic_artists_units_name, graphic_artists_rate, other_design,
             } = postDataDesign;
-    
-    // Design handleChange 
+  
+  // handleChange1 - replace(/\D/g,'') - works but no decimal
   const handleChangeDesign = (event) => {
-    setPostDataDesign({
-      ...postDataDesign,
-      [event.target.name]: parseFloat(event.target.value || 0 ),
+    setPostDataProduction({
+    ...postDataProduction,
+    [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
     });
-  }; 
+  };          
+            
+  // Design handleChange - parseFloat
+//   const handleChangeDesign = (event) => {
+//     setPostDataDesign({
+//       ...postDataDesign,
+//       [event.target.name]: parseFloat(event.target.value || 0 ),
+//     });
+//   }; 
 
   // Design handleChange Text 
   const handleChangeDesignText = (event) => {

@@ -5,8 +5,7 @@
   holidays_unit_cast, 
   overtime_unit_cast, 
   days6th7th_unit_cast, 
-  rehersals_unit_cast,
-  
+  rehersals_unit_cast, 
   holidays_pro_sta, 
   overtime_pro_sta, 
   days6th7th_pro_sta, 
@@ -161,6 +160,52 @@
   craft_services_uno_wrap,
   craft_services_una_wrap,
   craft_services_rt_wrap,
+  // design
+  pro_designer_qty_prep,
+  pro_designer_uno_prep,
+  pro_designer_una_prep,
+  pro_designer_rt_prep,
+  pro_designer_qty_wrap,
+  pro_designer_uno_wrap,
+  pro_designer_una_wrap,
+  pro_designer_rt_wrap,
+  art_director_qty_prep,
+  art_director_uno_prep,
+  art_director_una_prep,
+  art_director_rt_prep,
+  art_director_qty_wrap,
+  art_director_uno_wrap,
+  art_director_una_wrap,
+  art_director_rt_wrap,
+  art_ass_qty_prep,
+  art_ass_uno_prep,
+  art_ass_una_prep,
+  art_ass_rt_prep,
+  art_ass_qty_wrap,
+  art_ass_uno_wrap,
+  art_ass_una_wrap,
+  art_ass_rt_wrap,
+  pro_ass_trainees_qty_prep,
+  pro_ass_trainees_uno_prep,
+  pro_ass_trainees_una_prep,
+  pro_ass_trainees_rt_prep,
+  pro_ass_trainees_qty_wrap,
+  pro_ass_trainees_uno_wrap,
+  pro_ass_trainees_una_wrap,
+  pro_ass_trainees_rt_wrap,
+  sketch_artists,
+  sketch_artists_unit,
+  storyboard_artists,
+  storyboard_artists_unit,
+  holidays_design,
+  holidays_unit_design,
+  overtime_design,
+  overtime_unit_design,
+  days6th7th_design,
+  days6th7th_unit_design,
+  box_rent_unit_design,
+  box_rent_design,
+  // prep wrap 
   // formData.append("productionmanagerprep_total", productionmanagerprepTotal);
   //   formData.append("productionmanagerwrap_total", productionmanagerwrapTotal);
   //   formData.append("productionmanagerall_total", productionmanagerallTotal);
@@ -399,6 +444,53 @@
 
   // Production Total postData 
   const [productionstaffTotal, setProductionstaffTotal] = useState(0);
+
+  // design totals
+  // production designer
+  // production designer shoot Total postData
+  const [productiondesignerTotal, setProductiondesignerTotal] = useState(0);
+  // production designer prep Total postData
+  const [prodesprepTotal, setProdesprepTotal] = useState(0);
+  // production designer wrap Total postData
+  const [prodeswrapTotal, setProdeswrapTotal] = useState(0);
+  // production designer all Total postData
+  const [prodesallTotal, setProdesallTotal] = useState(0);
+
+  // art director shoot Total postData
+  const [artdirectorTotal, setArtdirectorTotal] = useState(0);
+  // art director prep Total postData
+  const [artdirprepTotal, setArtdirprepTotal] = useState(0);
+  // art director wrap Total postData
+  const [artdirwrapTotal, setArtdirwrapTotal] = useState(0);
+  // art director all Total postData
+  const [artdirallTotal, setArtdirallTotal] = useState(0);
+
+  // art assistants shoot Total postData
+  const [artassistantsTotal, setArtassistantsTotal] = useState(0);
+  // art assistants prep Total postData
+  const [artassprepTotal, setArtassprepTotal] = useState(0);
+  // art assistants wrap Total postData
+  const [artasswrapTotal, setArtasswrapTotal] = useState(0);
+  // art assistants all Total postData
+  const [artassallTotal, setArtassallTotal] = useState(0);
+
+  // production assistants / trainees shoot Total postData
+  const [productionassistantstraineesTotal, setProductionassistantstraineesTotal] = useState(0);
+  // production assistants / trainees prep Total postData
+  const [proasstrainprepTotal, setProasstrainprepTotal] = useState(0);
+  // production assistants / trainees wrap Total postData
+  const [proasstrainwrapTotal, setProasstrainwrapTotal] = useState(0);
+  // production assistants / trainees all Total postData
+  const [proasstrainallTotal, setProasstrainallTotal] = useState(0);
+
+  // graphic artists shoot Total postData
+  const [graphicartistsTotal, setGraphicartistsTotal] = useState(0);
+  // graphic artists prep Total postData
+  const [graphicartprepTotal, setGraphicartprepTotal] = useState(0);
+  // graphic artists wrap Total postData
+  const [graphicartwrapTotal, setGraphicartwrapTotal] = useState(0);
+  // graphic artists all Total postData
+  const [graphicartallTotal, setGraphicartallTotal] = useState(0);
 
 
 

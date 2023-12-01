@@ -344,7 +344,7 @@ const ProductionStaff = (props) => {
     ...postDataProduction,
     [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
     });
-  }; 
+  };
 
   // Production handleChange Text 
   const handleChangeProText = (event) => {

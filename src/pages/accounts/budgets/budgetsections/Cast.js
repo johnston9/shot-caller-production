@@ -21,6 +21,11 @@ const Cast = (props) => {
          
   // Cast postData values
   const {
+    // new
+    rehersals_cast, rehersals_unit_cast,
+    overtime_cast, overtime_unit_cast,
+    days6th7th_cast, days6th7th_unit_cast,
+    holidays_cast, holidays_unit_cast,
     principals_quantity, principals_units_number,
     principals_units_name, principals_rate,
     actors_quantity, actors_units_number, 
@@ -37,13 +42,21 @@ const Cast = (props) => {
     other_cast, fringes_taxes_cast, rights_payments_cast,
   } = postDataCast;
 
-  // Cast handleChange 
+  // handleChange1 - replace(/\D/g,'') - works but no decimal
   const handleChangeCast = (event) => {
-    setPostDataCast({
-      ...postDataCast,
-      [event.target.name]: parseFloat(event.target.value || 0 ),
+    setPostDataProduction({
+    ...postDataProduction,
+    [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
     });
-  }; 
+  };
+
+  // Cast handleChange2 - parseFloat
+  // const handleChangeCast2 = (event) => {
+  //   setPostDataCast({
+  //     ...postDataCast,
+  //     [event.target.name]: parseFloat(event.target.value || 0 ),
+  //   });
+  // }; 
 
   // Cast handleChange Text 
   const handleChangeCastText = (event) => {
@@ -170,6 +183,10 @@ const Cast = (props) => {
       parseFloat(extras_casting || 0) +
       parseFloat(other_cast || 0) +
       parseFloat(rights_payments_cast || 0) +
+      parseFloat(rehersals_cast || 0) +
+      parseFloat(overtime_cast || 0) +
+      parseFloat(days6th7th_cast || 0) +
+      parseFloat(holidays_cast || 0) +
       parseFloat(fringes_taxes_cast || 0) 
       )
     }
@@ -184,7 +201,9 @@ const Cast = (props) => {
   }, [principalsTotal, actorsTotal, stuntcoordinatorsTotal,
     stuntperformersTotal, otherperformersTotal, extrasTotal,
     casting_director, extras_casting, other_cast,
-    rights_payments_cast, fringes_taxes_cast ]);
+    rights_payments_cast, fringes_taxes_cast,
+    rehersals_cast, overtime_cast,
+    days6th7th_cast, holidays_cast,]);
 
   return (
     <div className="mt-5">
@@ -858,13 +877,244 @@ const Cast = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Other */}
-    <Row>
+    {/* Rehersals */}
+    <Row className="mt-3">
     <Col md={1} >
     <p className={`${styles.Underline}`}>06.90</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Other / Cast</p>
+    <p className={`${styles.Bold}`}>Rehersals</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="rehersals_unit_cast" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="rehersals_unit_cast"
+        value={rehersals_unit_cast}
+        onChange={handleChangeCastText}
+            />
+    </Form.Group>
+    {errors?.rehersals_unit_cast?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="rehersals_cast" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="rehersals_cast"
+        value={rehersals_cast}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.rehersals_cast?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* 6th/7th Days */}
+    <Row className="mt-3">
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>06.91</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Bold}`}>6th/7th Days</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="days6th7th_unit_cast" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="days6th7th_unit_cast"
+        value={days6th7th_unit_cast}
+        onChange={handleChangeCastText}
+            />
+    </Form.Group>
+    {errors?.days6th7th_unit_cast?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="days6th7th_cast" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="days6th7th_cast"
+        value={days6th7th_cast}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.days6th7th_cast?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Overtime */}
+    <Row className="mt-3">
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>06.92</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Bold}`}>Overtime</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="overtime_unit_cast" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="overtime_unit_cast"
+        value={overtime_unit_cast}
+        onChange={handleChangeCastText}
+            />
+    </Form.Group>
+    {errors?.overtime_unit_cast?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="overtime_cast" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="overtime_cast"
+        value={overtime_cast}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.overtime_cast?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Holidays */}
+    <Row className="mt-3">
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>06.93</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Bold}`}>Holidays</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="holidays_unit_cast" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="holidays_unit_cast"
+        value={holidays_unit_cast}
+        onChange={handleChangeCastText}
+            />
+    </Form.Group>
+    {errors?.holidays_unit_cast?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="holidays_cast" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="holidays_cast"
+        value={holidays_cast}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.holidays_cast?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Rights Payments - Cast */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>06.94</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Rights Payments - Cast</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} className="text-center" >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="rights_payments_cast" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="rights_payments_cast"
+        value={rights_payments_cast}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.rights_payments_cast?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Other */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>06.95</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Other</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -896,10 +1146,10 @@ const Cast = (props) => {
     {/* Fringes Taxes - Cast */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>06.91</p>
+    <p className={`${styles.Underline}`}>06.96</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Fringes Taxes - Cast</p>
+    <p className={`${styles.Underline}`}>Fringes & Taxes</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -922,41 +1172,6 @@ const Cast = (props) => {
             />
     </Form.Group>
     {errors?.fringes_taxes_cast?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    </Row>
-    {/* Rights Payments - Cast */}
-    <Row>
-    <Col md={1} >
-    <p className={`${styles.Underline}`}>06.92</p>
-    </Col>
-    <Col md={6} >
-    <p className={`${styles.Underline}`}>Rights Payments - Cast</p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={1} className="text-center" >
-    <p className={`${styles.Underline}`}></p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={2} >
-    <Form.Group controlId="rights_payments_cast" 
-        className={`${styles.Width95} text-center mb-1`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="rights_payments_cast"
-        value={rights_payments_cast}
-        onChange={handleChangeCast}
-            />
-    </Form.Group>
-    {errors?.rights_payments_cast?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>

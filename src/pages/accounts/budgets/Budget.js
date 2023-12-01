@@ -71,6 +71,10 @@ const Budget = (props) => {
     music_rights_addl_songs, other_music, fringes_taxes_music,
     stars_music_total,
     // cast
+    rehersals_cast, rehersals_unit_cast,
+    overtime_cast, overtime_unit_cast,
+    days6th7th_cast, days6th7th_unit_cast,
+    holidays_cast, holidays_unit_cast,
     principals_quantity, principals_units_number,
     principals_units_name, principals_rate, principals_total,
     actors_quantity, actors_units_number, 
@@ -86,182 +90,180 @@ const Budget = (props) => {
     casting_director, extras_casting,
     other_cast, fringes_taxes_cast, rights_payments_cast, cast_total,
     // production staff
-    // new
-  holidays_pro_sta, 
-  overtime_pro_sta, 
-  days6th7th_pro_sta, 
-  box_rent_pro_sta,
-  other_pro_sta,
-  holidays_unit_pro_sta, 
-  overtime_unit_pro_sta, 
-  days6th7th_unit_pro_sta, 
-  other_unit_pro_sta,
-  box_rent_unit_pro_sta,
-  production_manager_qty_prep,
-  production_manager_uno_prep,
-  production_manager_una_prep,
-  production_manager_rt_prep,
-  production_manager_qty_wrap,
-  production_manager_uno_wrap,
-  production_manager_una_wrap,
-  production_manager_rt_wrap,
-  production_supervisor_qty_prep,
-  production_supervisor_uno_prep,
-  production_supervisor_una_prep,
-  production_supervisor_rt_prep,
-  production_supervisor_qty_wrap,
-  production_supervisor_uno_wrap,
-  production_supervisor_una_wrap,
-  production_supervisor_rt_wrap,
-  production_coordinator_qty_prep,
-  production_coordinator_uno_prep,
-  production_coordinator_una_prep,
-  production_coordinator_rt_prep,
-  production_coordinator_qty_wrap,
-  production_coordinator_uno_wrap,
-  production_coordinator_una_wrap,
-  production_coordinator_rt_wrap,
-  unit_manager_qty_prep,
-  unit_manager_uno_prep,
-  unit_manager_una_prep,
-  unit_manager_rt_prep,
-  unit_manager_qty_wrap,
-  unit_manager_uno_wrap,
-  unit_manager_una_wrap,
-  unit_manager_rt_wrap,
-  location_manager_qty_prep,
-  location_manager_uno_prep,
-  location_manager_una_prep,
-  location_manager_rt_prep,
-  location_manager_qty_wrap,
-  location_manager_uno_wrap,
-  location_manager_una_wrap,
-  location_manager_rt_wrap,
-  location_manager_ass_qty_prep,
-  location_manager_ass_uno_prep,
-  location_manager_ass_una_prep,
-  location_manager_ass_rt_prep,
-  location_manager_ass_qty_wrap,
-  location_manager_ass_uno_wrap,
-  location_manager_ass_una_wrap,
-  location_manager_ass_rt_wrap,
-  production_ass_qty_prep,
-  production_ass_uno_prep,
-  production_ass_una_prep,
-  production_ass_rt_prep,
-  production_ass_qty_wrap,
-  production_ass_uno_wrap,
-  production_ass_una_wrap,
-  production_ass_rt_wrap,
-  production_sec_qty_prep,
-  production_sec_uno_prep,
-  production_sec_una_prep,
-  production_sec_rt_prep,
-  production_sec_qty_wrap,
-  production_sec_uno_wrap,
-  production_sec_una_wrap,
-  production_sec_rt_wrap,
-  production_acc_qty_prep,
-  production_acc_uno_prep,
-  production_acc_una_prep,
-  production_acc_rt_prep,
-  production_acc_qty_wrap,
-  production_acc_uno_wrap,
-  production_acc_una_wrap,
-  production_acc_rt_wrap,
-  production_acc_ass_qty_prep,
-  production_acc_ass_uno_prep,
-  production_acc_ass_una_prep,
-  production_acc_ass_rt_prep,
-  production_acc_ass_qty_wrap,
-  production_acc_ass_uno_wrap,
-  production_acc_ass_una_wrap,
-  production_acc_ass_rt_wrap,
-  scriptsupervisor_con_qty_prep,
-  scriptsupervisor_con_uno_prep,
-  scriptsupervisor_con_una_prep,
-  scriptsupervisor_con_rt_prep,
-  scriptsupervisor_con_qty_wrap,
-  scriptsupervisor_con_uno_wrap,
-  scriptsupervisor_con_una_wrap,
-  scriptsupervisor_con_rt_wrap,
-  payroll_qty_prep,
-  payroll_uno_prep,
-  payroll_una_prep,
-  payroll_rt_prep,
-  payroll_qty_wrap,
-  payroll_uno_wrap,
-  payroll_una_wrap,
-  payroll_rt_wrap,
-  other_pro_qty_prep,
-  other_pro_uno_prep,
-  other_pro_una_prep,
-  other_pro_rt_prep,
-  other_pro_qty_wrap,
-  other_pro_uno_wrap,
-  other_pro_una_wrap,
-  other_pro_rt_wrap,
-  directors_ass_qty_prep,
-  directors_ass_uno_prep,
-  directors_ass_una_prep,
-  directors_ass_rt_prep,
-  directors_ass_qty_wrap,
-  directors_ass_uno_wrap,
-  directors_ass_una_wrap,
-  directors_ass_rt_wrap,
-  ass_director_1st_qty_prep,
-  ass_director_1st_uno_prep,
-  ass_director_1st_una_prep,
-  ass_director_1st_rt_prep,
-  ass_director_1st_qty_wrap,
-  ass_director_1st_uno_wrap,
-  ass_director_1st_una_wrap,
-  ass_director_1st_rt_wrap,
-  ass_director_2nd_qty_prep,
-  ass_director_2nd_uno_prep,
-  ass_director_2nd_una_prep,
-  ass_director_2nd_rt_prep,
-  ass_director_2nd_qty_wrap,
-  ass_director_2nd_uno_wrap,
-  ass_director_2nd_una_wrap,
-  ass_director_2nd_rt_wrap,
-  ass_director_3rd_qty_prep,
-  ass_director_3rd_uno_prep,
-  ass_director_3rd_una_prep,
-  ass_director_3rd_rt_prep,
-  ass_director_3rd_qty_wrap,
-  ass_director_3rd_uno_wrap,
-  ass_director_3rd_una_wrap,
-  ass_director_3rd_rt_wrap,
-  craft_services_qty_prep,
-  craft_services_uno_prep,
-  craft_services_una_prep,
-  craft_services_rt_prep,
-  craft_services_qty_wrap,
-  craft_services_uno_wrap,
-  craft_services_una_wrap,
-  craft_services_rt_wrap,
-  // new totals
-  productionmanagerprep_total, productionmanagerwrap_total,
-  productionmanagerall_total, productionsupervisorprep_total,
-  productionsupervisorwrap_total, productionsupervisorall_total,
-  productioncoordinatorprep_total, productioncoordinatorwrap_total,
-  productioncoordinatorall_total, unitmanagerprep_total,
-  unitmanagerwrap_total, unitmanagerall_total, locationmanagerprep_total,
-  locationmanagerwrap_total, locationmanagerall_total, locmanassprep_total,
-  locmanasswrap_total, locmanassall_total, proassprep_total,
-  proasswrap_total, proassall_total, prosecprep_total, prosecwrap_total,
-  prosecall_total, proaccprep_total, proaccwrap_total, proaccall_total,
-  proaccassprep_total, proaccasswrap_total, proaccassall_total,
-  scriptsupconprep_total, scriptsupconwrap_total, scriptsupconall_total,
-  payrollprep_total, payrollwrap_total, payrollall_total,
-  otherproprep_total, otherprowrap_total, otherproall_total,
-  directorsassprep_total, directorsasswrap_total, directorsassall_total,
-  assdirector1stprep_total, assdirector1stwrap_total, assdirector1stall_total,
-  assdirector2ndprep_total, assdirector2ndwrap_total, assdirector2ndall_total,
-  assdirector3rdprep_total, assdirector3rdwrap_total, assdirector3rdall_total,
-  craftservicesprep_total, craftserviceswrap_total, craftservicesall_total,
-    // old
+    holidays_pro_sta, 
+    overtime_pro_sta, 
+    days6th7th_pro_sta, 
+    box_rent_pro_sta,
+    other_pro_sta,
+    holidays_unit_pro_sta, 
+    overtime_unit_pro_sta, 
+    days6th7th_unit_pro_sta, 
+    other_unit_pro_sta,
+    box_rent_unit_pro_sta,
+    production_manager_qty_prep,
+    production_manager_uno_prep,
+    production_manager_una_prep,
+    production_manager_rt_prep,
+    production_manager_qty_wrap,
+    production_manager_uno_wrap,
+    production_manager_una_wrap,
+    production_manager_rt_wrap,
+    production_supervisor_qty_prep,
+    production_supervisor_uno_prep,
+    production_supervisor_una_prep,
+    production_supervisor_rt_prep,
+    production_supervisor_qty_wrap,
+    production_supervisor_uno_wrap,
+    production_supervisor_una_wrap,
+    production_supervisor_rt_wrap,
+    production_coordinator_qty_prep,
+    production_coordinator_uno_prep,
+    production_coordinator_una_prep,
+    production_coordinator_rt_prep,
+    production_coordinator_qty_wrap,
+    production_coordinator_uno_wrap,
+    production_coordinator_una_wrap,
+    production_coordinator_rt_wrap,
+    unit_manager_qty_prep,
+    unit_manager_uno_prep,
+    unit_manager_una_prep,
+    unit_manager_rt_prep,
+    unit_manager_qty_wrap,
+    unit_manager_uno_wrap,
+    unit_manager_una_wrap,
+    unit_manager_rt_wrap,
+    location_manager_qty_prep,
+    location_manager_uno_prep,
+    location_manager_una_prep,
+    location_manager_rt_prep,
+    location_manager_qty_wrap,
+    location_manager_uno_wrap,
+    location_manager_una_wrap,
+    location_manager_rt_wrap,
+    location_manager_ass_qty_prep,
+    location_manager_ass_uno_prep,
+    location_manager_ass_una_prep,
+    location_manager_ass_rt_prep,
+    location_manager_ass_qty_wrap,
+    location_manager_ass_uno_wrap,
+    location_manager_ass_una_wrap,
+    location_manager_ass_rt_wrap,
+    production_ass_qty_prep,
+    production_ass_uno_prep,
+    production_ass_una_prep,
+    production_ass_rt_prep,
+    production_ass_qty_wrap,
+    production_ass_uno_wrap,
+    production_ass_una_wrap,
+    production_ass_rt_wrap,
+    production_sec_qty_prep,
+    production_sec_uno_prep,
+    production_sec_una_prep,
+    production_sec_rt_prep,
+    production_sec_qty_wrap,
+    production_sec_uno_wrap,
+    production_sec_una_wrap,
+    production_sec_rt_wrap,
+    production_acc_qty_prep,
+    production_acc_uno_prep,
+    production_acc_una_prep,
+    production_acc_rt_prep,
+    production_acc_qty_wrap,
+    production_acc_uno_wrap,
+    production_acc_una_wrap,
+    production_acc_rt_wrap,
+    production_acc_ass_qty_prep,
+    production_acc_ass_uno_prep,
+    production_acc_ass_una_prep,
+    production_acc_ass_rt_prep,
+    production_acc_ass_qty_wrap,
+    production_acc_ass_uno_wrap,
+    production_acc_ass_una_wrap,
+    production_acc_ass_rt_wrap,
+    scriptsupervisor_con_qty_prep,
+    scriptsupervisor_con_uno_prep,
+    scriptsupervisor_con_una_prep,
+    scriptsupervisor_con_rt_prep,
+    scriptsupervisor_con_qty_wrap,
+    scriptsupervisor_con_uno_wrap,
+    scriptsupervisor_con_una_wrap,
+    scriptsupervisor_con_rt_wrap,
+    payroll_qty_prep,
+    payroll_uno_prep,
+    payroll_una_prep,
+    payroll_rt_prep,
+    payroll_qty_wrap,
+    payroll_uno_wrap,
+    payroll_una_wrap,
+    payroll_rt_wrap,
+    other_pro_qty_prep,
+    other_pro_uno_prep,
+    other_pro_una_prep,
+    other_pro_rt_prep,
+    other_pro_qty_wrap,
+    other_pro_uno_wrap,
+    other_pro_una_wrap,
+    other_pro_rt_wrap,
+    directors_ass_qty_prep,
+    directors_ass_uno_prep,
+    directors_ass_una_prep,
+    directors_ass_rt_prep,
+    directors_ass_qty_wrap,
+    directors_ass_uno_wrap,
+    directors_ass_una_wrap,
+    directors_ass_rt_wrap,
+    ass_director_1st_qty_prep,
+    ass_director_1st_uno_prep,
+    ass_director_1st_una_prep,
+    ass_director_1st_rt_prep,
+    ass_director_1st_qty_wrap,
+    ass_director_1st_uno_wrap,
+    ass_director_1st_una_wrap,
+    ass_director_1st_rt_wrap,
+    ass_director_2nd_qty_prep,
+    ass_director_2nd_uno_prep,
+    ass_director_2nd_una_prep,
+    ass_director_2nd_rt_prep,
+    ass_director_2nd_qty_wrap,
+    ass_director_2nd_uno_wrap,
+    ass_director_2nd_una_wrap,
+    ass_director_2nd_rt_wrap,
+    ass_director_3rd_qty_prep,
+    ass_director_3rd_uno_prep,
+    ass_director_3rd_una_prep,
+    ass_director_3rd_rt_prep,
+    ass_director_3rd_qty_wrap,
+    ass_director_3rd_uno_wrap,
+    ass_director_3rd_una_wrap,
+    ass_director_3rd_rt_wrap,
+    craft_services_qty_prep,
+    craft_services_uno_prep,
+    craft_services_una_prep,
+    craft_services_rt_prep,
+    craft_services_qty_wrap,
+    craft_services_uno_wrap,
+    craft_services_una_wrap,
+    craft_services_rt_wrap,
+    // new totals
+    productionmanagerprep_total, productionmanagerwrap_total,
+    productionmanagerall_total, productionsupervisorprep_total,
+    productionsupervisorwrap_total, productionsupervisorall_total,
+    productioncoordinatorprep_total, productioncoordinatorwrap_total,
+    productioncoordinatorall_total, unitmanagerprep_total,
+    unitmanagerwrap_total, unitmanagerall_total, locationmanagerprep_total,
+    locationmanagerwrap_total, locationmanagerall_total, locmanassprep_total,
+    locmanasswrap_total, locmanassall_total, proassprep_total,
+    proasswrap_total, proassall_total, prosecprep_total, prosecwrap_total,
+    prosecall_total, proaccprep_total, proaccwrap_total, proaccall_total,
+    proaccassprep_total, proaccasswrap_total, proaccassall_total,
+    scriptsupconprep_total, scriptsupconwrap_total, scriptsupconall_total,
+    payrollprep_total, payrollwrap_total, payrollall_total,
+    otherproprep_total, otherprowrap_total, otherproall_total,
+    directorsassprep_total, directorsasswrap_total, directorsassall_total,
+    assdirector1stprep_total, assdirector1stwrap_total, assdirector1stall_total,
+    assdirector2ndprep_total, assdirector2ndwrap_total, assdirector2ndall_total,
+    assdirector3rdprep_total, assdirector3rdwrap_total, assdirector3rdall_total,
+    craftservicesprep_total, craftserviceswrap_total, craftservicesall_total,
     fringes_taxes_production, production_manager_quantity,
     production_manager_units_number, production_manager_units_name,
     production_manager_rate, production_supervisor_quantity,
@@ -305,6 +307,28 @@ const Budget = (props) => {
     assistantdirector1st_total, assistantdirector2nd_total,
     assistantdirector3rd_total, craftservices_total, productionstaff_total,
     // design
+    pro_designer_qty_prep, pro_designer_uno_prep,
+    pro_designer_una_prep, pro_designer_rt_prep,
+    pro_designer_qty_wrap, pro_designer_uno_wrap,
+    pro_designer_una_wrap, pro_designer_rt_wrap,
+    art_director_qty_prep, art_director_uno_prep,
+    art_director_una_prep, art_director_rt_prep,
+    art_director_qty_wrap, art_director_uno_wrap,
+    art_director_una_wrap, art_director_rt_wrap,
+    art_ass_qty_prep, art_ass_uno_prep,
+    art_ass_una_prep, art_ass_rt_prep,
+    art_ass_qty_wrap, art_ass_uno_wrap,
+    art_ass_una_wrap, art_ass_rt_wrap,
+    pro_ass_trainees_qty_prep, pro_ass_trainees_uno_prep,
+    pro_ass_trainees_una_prep, pro_ass_trainees_rt_prep,
+    pro_ass_trainees_qty_wrap, pro_ass_trainees_uno_wrap,
+    pro_ass_trainees_una_wrap, pro_ass_trainees_rt_wrap,
+    sketch_artists, sketch_artists_unit,
+    storyboard_artists, storyboard_artists_unit,
+    holidays_design, holidays_unit_design,
+    overtime_design, overtime_unit_design,
+    days6th7th_design, days6th7th_unit_design,
+    box_rent_unit_design, box_rent_design,
     fringes_taxes_design,
     production_designer_quantity, production_designer_units_number,
     production_designer_units_name, production_designer_rate,
@@ -1643,7 +1667,6 @@ const Budget = (props) => {
     <p className="mb-0">Total</p>
     </Col>
     </Row>
-    {/* Values */}
     {/* Principals */}
     <Row  >
     <Col md={1} >
@@ -1812,13 +1835,97 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{extras_casting || 0} </p>
     </Col>
     </Row>
-    {/* Other - Cast */}
-    <Row>
+    {/* Rehersals */}
+    <Row className='mt-3'>
     <Col md={1}>
     <p className={`${styles.Underline}`}>06.90</p>
     </Col>
+    <Col md={7}>
+    <p className={`${styles.Underline}`}>Rehersals</p>
+    </Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>{rehersals_unit_cast} </p>
+    </Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{rehersals_cast || 0} </p>
+    </Col>
+    </Row>
+    {/* 6th/7th Days */}
+    <Row className='mt-3'>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>06.91</p>
+    </Col>
+    <Col md={7}>
+    <p className={`${styles.Underline}`}>6th/7th Days</p>
+    </Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>{days6th7th_unit_cast} </p>
+    </Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{days6th7th_cast || 0} </p>
+    </Col>
+    </Row>
+    {/* Overtime */}
+    <Row className='mt-3'>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>06.92</p>
+    </Col>
+    <Col md={7}>
+    <p className={`${styles.Underline}`}>Overtime</p>
+    </Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>{overtime_unit_cast} </p>
+    </Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{overtime_cast || 0} </p>
+    </Col>
+    </Row>
+    {/* Holidays */}
+    <Row className='mt-3'>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>06.93</p>
+    </Col>
+    <Col md={7}>
+    <p className={`${styles.Underline}`}>Holidays</p>
+    </Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>{holidays_unit_cast} </p>
+    </Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{holidays_cast || 0} </p>
+    </Col>
+    </Row>
+    {/* Rights Payments - Cast */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>06.94</p>
+    </Col>
     <Col md={9}>
-    <p className={`${styles.Underline}`}>Other - Cast</p>
+    <p className={`${styles.Underline}`}>Rights Payments - Cast</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{rights_payments_cast || 0} </p>
+    </Col>
+    </Row>
+    {/* Other - Cast */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>06.95</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Other</p>
     </Col>
     <Col md={2}>
     <p className={`${styles.Underline}`}>{other_cast || 0} </p>
@@ -1827,25 +1934,13 @@ const Budget = (props) => {
     {/* Fringes Taxes - Cast */}
     <Row>
     <Col md={1}>
-    <p className={`${styles.Underline}`}>06.91</p>
+    <p className={`${styles.Underline}`}>06.96</p>
     </Col>
     <Col md={9}>
     <p className={`${styles.Underline}`}>Fringes and Taxes, Government/Unions</p>
     </Col>
     <Col md={2}>
     <p className={`${styles.Underline}`}>{fringes_taxes_cast || 0} </p>
-    </Col>
-    </Row>
-    {/* Rights Payments - Cast */}
-    <Row>
-    <Col md={1}>
-    <p className={`${styles.Underline}`}>06.92</p>
-    </Col>
-    <Col md={9}>
-    <p className={`${styles.Underline}`}>Rights Payments - Cast</p>
-    </Col>
-    <Col md={2}>
-    <p className={`${styles.Underline}`}>{rights_payments_cast || 0} </p>
     </Col>
     </Row>
     {/* Cast Total */}
@@ -3623,10 +3718,100 @@ const Budget = (props) => {
     </Col>
     </Row>
     </div>
-    {/* Fringes Taxes */}
+    {/* 6th/7th Days */}
     <Row className='mt-3'>
     <Col md={1}>
     <p className={`${styles.Underline}`}>07.991</p>
+    </Col>
+    <Col md={7}>
+    <p className={`${styles.Underline}`}>6th/7th Days</p>
+    </Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>{days6th7th_unit_pro_sta} </p>
+    </Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{days6th7th_pro_sta || 0} </p>
+    </Col>
+    </Row>
+    {/* Overtime */}
+    <Row className='mt-3'>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>07.992</p>
+    </Col>
+    <Col md={7}>
+    <p className={`${styles.Underline}`}>Overtime</p>
+    </Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>{overtime_unit_pro_sta} </p>
+    </Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{overtime_pro_sta || 0} </p>
+    </Col>
+    </Row>
+    {/* Holidays */}
+    <Row className='mt-3'>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>07.993</p>
+    </Col>
+    <Col md={7}>
+    <p className={`${styles.Underline}`}>Holidays</p>
+    </Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>{holidays_unit_pro_sta} </p>
+    </Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{holidays_pro_sta || 0} </p>
+    </Col>
+    </Row>
+    {/* Other */}
+    <Row className='mt-3'>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>07.994</p>
+    </Col>
+    <Col md={7}>
+    <p className={`${styles.Underline}`}>Other</p>
+    </Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>{other_unit_pro_sta} </p>
+    </Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{other_pro_sta || 0} </p>
+    </Col>
+    </Row>
+    {/* Box Rentals */}
+    <Row className='mt-3'>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>07.995</p>
+    </Col>
+    <Col md={7}>
+    <p className={`${styles.Underline}`}>Box Rentals</p>
+    </Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>{box_rent_unit_pro_sta} </p>
+    </Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{box_rent_pro_sta || 0} </p>
+    </Col>
+    </Row>
+    {/* Fringes Taxes */}
+    <Row className='mt-3'>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>07.996</p>
     </Col>
     <Col md={9}>
     <p className={`${styles.Underline}`}>Fringes and Taxes, Government/Unions</p>
