@@ -302,7 +302,7 @@
   // art assistants prep Total postData
   const [artassprepTotal, setArtassprepTotal] = useState(0);
   // art assistants wrap Total postData
-  const [artasswrapTotal, setArtasswrapTotal] = useState(0);
+  const [artasswrapTotal, setArtasswrapTotal] = useState(0);  
   // art assistants all Total postData
   const [artassallTotal, setArtassallTotal] = useState(0);
 

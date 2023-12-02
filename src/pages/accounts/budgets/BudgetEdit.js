@@ -1325,7 +1325,7 @@ function BudgetEdit() {
     production_assistants_trainees_units_name, production_assistants_trainees_rate,
     graphic_artists_quantity, graphic_artists_units_number,
     graphic_artists_units_name, graphic_artists_rate, other_design,
-        } = postDataDesign;
+    } = postDataDesign;
 
   // production designer
   // production designer shoot Total postData

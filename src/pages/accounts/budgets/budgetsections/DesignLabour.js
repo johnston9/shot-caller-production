@@ -95,8 +95,9 @@ const DesignLabour = (props) => {
   };
 
   // Calculate Functions
+
   // production designer
-  // function to calculate production designer on change
+  // function to calculate production designer shoot on change
   useEffect(() => {
     const addProdes = () => {
       setProductiondesignerTotal(parseFloat(production_designer_quantity || 0) * 
@@ -112,9 +113,65 @@ const DesignLabour = (props) => {
     };
     // eslint-disable-next-line
   }, [production_designer_quantity, production_designer_units_number, 
-    production_designer_rate]);
+  production_designer_rate]);
 
-  // function to calculate art director on change
+  // function to calculate production designer prep on change
+  useEffect(() => {
+    const addProdesprep = () => {
+      setProdesprepTotal(parseFloat(pro_designer_qty_prep || 0) * 
+      parseFloat(pro_designer_uno_prep || 0) * 
+      parseFloat(pro_designer_rt_prep || 0))
+    }
+    const timer = setTimeout(() => {
+        addProdesprep();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [pro_designer_qty_prep, pro_designer_uno_prep, 
+  pro_designer_rt_prep]);
+
+  // function to calculate production designer wrap on change
+  useEffect(() => {
+    const addProdeswrap = () => {
+      setProdeswrapTotal(parseFloat(pro_designer_qty_wrap || 0) * 
+      parseFloat(pro_designer_uno_wrap || 0) * 
+      parseFloat(pro_designer_rt_wrap || 0))
+    }
+    const timer = setTimeout(() => {
+        addProdeswrap();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [pro_designer_qty_wrap, pro_designer_uno_wrap,
+  pro_designer_rt_wrap]);
+
+  // function to add all production designer on change 
+  useEffect(() => {
+    const addProDes = () => {
+      setProdesallTotal(
+      parseFloat(productiondesignerTotal || 0) +
+      parseFloat(prodesprepTotal || 0) +
+      parseFloat(prodeswrapTotal || 0) 
+      )
+    }
+    const timer = setTimeout(() => {
+        addProDes();
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [productiondesignerTotal, prodesprepTotal, prodeswrapTotal]);
+
+  // art director
+  // function to calculate art director shoot on change
   useEffect(() => {
     const addArtdir = () => {
       setArtdirectorTotal(parseFloat(art_director_quantity || 0) * 
@@ -130,9 +187,65 @@ const DesignLabour = (props) => {
     };
     // eslint-disable-next-line
   }, [art_director_quantity, art_director_units_number, 
-    art_director_rate]);
+  art_director_rate]);
 
-  // function to calculate art assistants on change
+  // function to calculate art director prep on change
+  useEffect(() => {
+    const addArtdirprep = () => {
+      setArtdirprepTotal(parseFloat(art_director_qty_prep || 0) * 
+      parseFloat(art_director_uno_prep || 0) * 
+      parseFloat(art_director_rt_prep || 0))
+    }
+    const timer = setTimeout(() => {
+        addArtdirprep();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [art_director_qty_prep, art_director_uno_prep, 
+  art_director_rt_prep]);
+
+  // function to calculate art director wrap on change
+  useEffect(() => {
+    const addArtdirwrap = () => {
+      setArtdirwrapTotal(parseFloat(art_director_qty_wrap || 0) * 
+      parseFloat(art_director_uno_wrap || 0) * 
+      parseFloat(art_director_rt_wrap || 0))
+    }
+    const timer = setTimeout(() => {
+        addArtdirwrap();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [art_director_qty_wrap, art_director_uno_wrap,
+  art_director_rt_wrap]);
+
+  // function to add all art director on change 
+  useEffect(() => {
+    const addArtDir = () => {
+      setArtdirallTotal(
+      parseFloat(artdirectorTotal || 0) +
+      parseFloat(artdirprepTotal || 0) +
+      parseFloat(artdirwrapTotal || 0) 
+      )
+    }
+    const timer = setTimeout(() => {
+        addArtDir();
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [artdirectorTotal, artdirprepTotal, artdirwrapTotal]);
+
+  // art assistants
+  // function to calculate art assistants shoot on change
   useEffect(() => {
     const addArtass = () => {
       setArtassistantsTotal(parseFloat(art_assistants_quantity || 0) * 
@@ -148,9 +261,63 @@ const DesignLabour = (props) => {
     };
     // eslint-disable-next-line
   }, [art_assistants_quantity, art_assistants_units_number, 
-    art_assistants_rate]);
+  art_assistants_rate]);
 
-  // function to calculate production assistants/trainees on change
+  // function to calculate art assistants prep on change
+  useEffect(() => {
+    const addArtassprep = () => {
+      setArtassprepTotal(parseFloat(art_ass_qty_prep || 0) * 
+      parseFloat(art_ass_uno_prep || 0) * 
+      parseFloat(art_ass_rt_prep || 0))
+    }
+    const timer = setTimeout(() => {
+        addArtassprep();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [art_ass_qty_prep, art_ass_uno_prep, art_ass_rt_prep]);
+
+  // function to calculate art assistants wrap on change
+  useEffect(() => { 
+    const addArtasswrap = () => {
+      setArtasswrapTotal(parseFloat(art_ass_qty_wrap || 0) * 
+      parseFloat(art_ass_uno_wrap || 0) * 
+      parseFloat(art_ass_rt_wrap || 0))
+    }
+    const timer = setTimeout(() => {   
+        addArtasswrap();  
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [art_ass_qty_wrap, art_ass_uno_wrap, art_ass_rt_wrap]);
+
+  // function to add all art assistants on change 
+  useEffect(() => {
+    const addArtAss = () => {
+      setArtassallTotal(
+      parseFloat(artassistantsTotal || 0) +
+      parseFloat(artassprepTotal || 0) +
+      parseFloat(artasswrapTotal || 0) 
+      )
+    }
+    const timer = setTimeout(() => {
+        addArtAss();
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [artassistantsTotal, artassprepTotal, artasswrapTotal]);
+
+  // production assistants/trainees
+  // function to calculate production assistants/trainees shoot on change
   useEffect(() => {
     const addProasstra = () => {
       setProductionassistantstraineesTotal(parseFloat(production_assistants_trainees_quantity || 0) * 
@@ -166,12 +333,69 @@ const DesignLabour = (props) => {
     };
     // eslint-disable-next-line
   }, [production_assistants_trainees_quantity, production_assistants_trainees_units_number, 
-    production_assistants_trainees_rate]);
+  production_assistants_trainees_rate]);
 
+  // function to calculate production assistants/trainees prep on change
+  useEffect(() => {
+    const addProasstraprep = () => {
+      setProasstrainprepTotal(parseFloat(pro_ass_trainees_qty_prep || 0) * 
+      parseFloat(pro_ass_trainees_uno_prep || 0) * 
+      parseFloat(pro_ass_trainees_rt_prep || 0))
+    }
+    const timer = setTimeout(() => {
+        addProasstraprep();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [pro_ass_trainees_qty_prep, pro_ass_trainees_uno_prep, 
+  pro_ass_trainees_rt_prep]);
+
+  // function to calculate production assistants/trainees wrap on change
+  useEffect(() => {
+    const addProasstrawrap = () => {
+      setProasstrainwrapTotal(parseFloat(pro_ass_trainees_qty_wrap || 0) * 
+      parseFloat(pro_ass_trainees_uno_wrap || 0) * 
+      parseFloat(pro_ass_trainees_rt_wrap || 0))
+    }
+    const timer = setTimeout(() => {
+        addProasstrawrap();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [pro_ass_trainees_qty_wrap, pro_ass_trainees_uno_wrap,
+  pro_ass_trainees_rt_wrap]);
+
+  // function to add all production assistants/trainees on change 
+  useEffect(() => {
+    const addProAssTra = () => {
+      setProasstrainallTotal(
+      parseFloat(productionassistantstraineesTotal || 0) +
+      parseFloat(proasstrainprepTotal || 0) +
+      parseFloat(proasstrainwrapTotal || 0) 
+      )
+    }
+    const timer = setTimeout(() => {
+        addProAssTra();
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [productionassistantstraineesTotal, proasstrainprepTotal,
+    proasstrainwrapTotal]);
+
+  // graphic artists
   // function to calculate graphic artists on change
   useEffect(() => {
     const addGraart = () => {
-        setGraphicartistsTotal(parseFloat(graphic_artists_quantity || 0) * 
+      setGraphicartistsTotal(parseFloat(graphic_artists_quantity || 0) * 
       parseFloat(graphic_artists_units_number || 0) * 
       parseFloat(graphic_artists_rate || 0))
     }
@@ -184,7 +408,7 @@ const DesignLabour = (props) => {
     };
     // eslint-disable-next-line
   }, [graphic_artists_quantity, graphic_artists_units_number, 
-    graphic_artists_rate]);
+  graphic_artists_rate]);
 
   // function to add all design on change
   useEffect(() => {
@@ -196,6 +420,12 @@ const DesignLabour = (props) => {
       parseFloat(productionassistantstraineesTotal || 0) +
       parseFloat(graphicartistsTotal || 0) +
       parseFloat(fringes_taxes_design || 0) +
+      parseFloat(sketch_artists || 0) +
+      parseFloat(storyboard_artists || 0) +
+      parseFloat(holidays_design || 0) +
+      parseFloat(overtime_design || 0) +
+      parseFloat(days6th7th_design || 0) +
+      parseFloat(box_rent_design || 0) +
       parseFloat(other_design || 0)
       )
     }
@@ -209,7 +439,8 @@ const DesignLabour = (props) => {
     // eslint-disable-next-line
   }, [other_design, graphicartistsTotal, productionassistantstraineesTotal,
     artassistantsTotal, artdirectorTotal, productiondesignerTotal,
-    fringes_taxes_design,]);
+    fringes_taxes_design, sketch_artists, storyboard_artists,
+    holidays_design, overtime_design, days6th7th_design, box_rent_design]);
 
   return (
     <div className="mt-5">
@@ -250,12 +481,116 @@ const DesignLabour = (props) => {
     </Col>
     </Row>
     {/* Production Designer */}
+    <div>
     <Row>
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.10</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>Production Designer</p>
+    </Col>
+    </Row>
+    {/* Prep */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Prep</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="pro_designer_qty_prep" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="pro_designer_qty_prep"
+        value={pro_designer_qty_prep}
+        onChange={handleChangeDesign}
+            />
+    </Form.Group>
+    {errors?.pro_designer_qty_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="pro_designer_uno_prep" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="pro_designer_uno_prep"
+        value={pro_designer_uno_prep}
+        onChange={handleChangeDesign}
+            />
+    </Form.Group>
+    {errors?.pro_designer_uno_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="pro_designer_una_prep" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="pro_designer_una_prep"
+        value={pro_designer_una_prep}
+        onChange={handleChangeDesignText}
+            />
+    </Form.Group>
+    {errors?.pro_designer_una_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="pro_designer_rt_prep" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="pro_designer_rt_prep"
+        value={pro_designer_rt_prep}
+        onChange={handleChangeDesign}
+            />
+    </Form.Group>
+    {errors?.pro_designer_rt_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="prodesprepTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="prodesprepTotal"
+        value={prodesprepTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.prodesprepTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Shoot */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Shoot</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="production_designer_quantity" 
@@ -343,13 +678,238 @@ const DesignLabour = (props) => {
     ))}
     </Col>
     </Row>
+    {/* Wrap */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Wrap</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="pro_designer_qty_wrap" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="pro_designer_qty_wrap"
+        value={pro_designer_qty_wrap}
+        onChange={handleChangeDesign}
+            />
+    </Form.Group>
+    {errors?.pro_designer_qty_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="pro_designer_uno_wrap" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="pro_designer_uno_wrap"
+        value={pro_designer_uno_wrap}
+        onChange={handleChangeDesign}
+            />
+    </Form.Group>
+    {errors?.pro_designer_uno_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="pro_designer_una_wrap" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="pro_designer_una_wrap"
+        value={pro_designer_una_wrap}
+        onChange={handleChangeDesignText}
+            />
+    </Form.Group>
+    {errors?.pro_designer_una_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="pro_designer_rt_wrap" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="pro_designer_rt_wrap"
+        value={pro_designer_rt_wrap}
+        onChange={handleChangeDesign}
+            />
+    </Form.Group>
+    {errors?.pro_designer_rt_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="prodeswrapTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="prodeswrapTotal"
+        value={prodeswrapTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.prodeswrapTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={9} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="prodesallTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="prodesallTotal"
+        value={prodesallTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.prodesallTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    </div>
     {/* Art Director */}
+    <div>
     <Row>
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.20</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>Art Director</p>
+    </Col>
+    </Row>
+    {/* Prep */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Prep</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="art_director_qty_prep" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="art_director_qty_prep"
+        value={art_director_qty_prep}
+        onChange={handleChangeDesign}
+            />
+    </Form.Group>
+    {errors?.art_director_qty_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="art_director_uno_prep" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="art_director_uno_prep"
+        value={art_director_uno_prep}
+        onChange={handleChangeDesign}
+            />
+    </Form.Group>
+    {errors?.art_director_uno_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="art_director_una_prep" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="art_director_una_prep"
+        value={art_director_una_prep}
+        onChange={handleChangeDesignText}
+            />
+    </Form.Group>
+    {errors?.art_director_una_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="art_director_rt_prep" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="art_director_rt_prep"
+        value={art_director_rt_prep}
+        onChange={handleChangeDesign}
+            />
+    </Form.Group>
+    {errors?.art_director_rt_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="artdirprepTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="artdirprepTotal"
+        value={artdirprepTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.artdirprepTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Shoot */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Shoot</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="art_director_quantity" 
@@ -437,13 +997,238 @@ const DesignLabour = (props) => {
     ))}
     </Col>
     </Row>
+    {/* Wrap */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Wrap</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="art_director_qty_wrap" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="art_director_qty_wrap"
+        value={art_director_qty_wrap}
+        onChange={handleChangeDesign}
+            />
+    </Form.Group>
+    {errors?.art_director_qty_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="art_director_uno_wrap" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="art_director_uno_wrap"
+        value={art_director_uno_wrap}
+        onChange={handleChangeDesign}
+            />
+    </Form.Group>
+    {errors?.art_director_uno_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="art_director_una_wrap" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="art_director_una_wrap"
+        value={art_director_una_wrap}
+        onChange={handleChangeDesignText}
+            />
+    </Form.Group>
+    {errors?.art_director_una_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="art_director_rt_wrap" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="art_director_rt_wrap"
+        value={art_director_rt_wrap}
+        onChange={handleChangeDesign}
+            />
+    </Form.Group>
+    {errors?.art_director_rt_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="artdirwrapTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="artdirwrapTotal"
+        value={artdirwrapTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.artdirwrapTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={9} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="artdirallTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="artdirallTotal"
+        value={artdirallTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.artdirallTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    </div>
     {/* Art Assistants */}
+    <div>
     <Row>
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.30</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>Art Assistants</p>
+    </Col>
+    </Row>
+    {/* Prep */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Prep</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="art_ass_qty_prep" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="art_ass_qty_prep"
+        value={art_ass_qty_prep}
+        onChange={handleChangeDesign}
+            />
+    </Form.Group>
+    {errors?.art_ass_qty_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="art_ass_uno_prep" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="art_ass_uno_prep"
+        value={art_ass_uno_prep}
+        onChange={handleChangeDesign}
+            />
+    </Form.Group>
+    {errors?.art_ass_uno_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="art_ass_una_prep" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="art_ass_una_prep"
+        value={art_ass_una_prep}
+        onChange={handleChangeDesignText}
+            />
+    </Form.Group>
+    {errors?.art_ass_una_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="art_ass_rt_prep" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="art_ass_rt_prep"
+        value={art_ass_rt_prep}
+        onChange={handleChangeDesign}
+            />
+    </Form.Group>
+    {errors?.art_ass_rt_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="artassprepTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="artassprepTotal"
+        value={artassprepTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.artassprepTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Shoot */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Shoot</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="art_assistants_quantity" 
@@ -531,13 +1316,238 @@ const DesignLabour = (props) => {
     ))}
     </Col>
     </Row>
+    {/* Wrap */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Wrap</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="art_ass_qty_wrap" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="art_ass_qty_wrap"
+        value={art_ass_qty_wrap}
+        onChange={handleChangeDesign}
+            />
+    </Form.Group>
+    {errors?.art_ass_qty_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="art_ass_uno_wrap" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="art_ass_uno_wrap"
+        value={art_ass_uno_wrap}
+        onChange={handleChangeDesign}
+            />
+    </Form.Group>
+    {errors?.art_ass_uno_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="art_ass_una_wrap" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="art_ass_una_wrap"
+        value={art_ass_una_wrap}
+        onChange={handleChangeDesignText}
+            />
+    </Form.Group>
+    {errors?.art_ass_una_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="art_ass_rt_wrap" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="art_ass_rt_wrap"
+        value={art_ass_rt_wrap}
+        onChange={handleChangeDesign}
+            />
+    </Form.Group>
+    {errors?.art_ass_rt_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="artasswrapTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="artasswrapTotal"
+        value={artasswrapTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.artasswrapTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={9} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="artassallTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="artassallTotal"
+        value={artassallTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.artassallTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    </div>
     {/* Production Assistants/Trainees */}
+    <div>
     <Row>
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.40</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>Production Assistants / Trainees</p>
+    </Col>
+    </Row>
+    {/* Prep */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Prep</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="pro_ass_trainees_qty_prep" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="pro_ass_trainees_qty_prep"
+        value={pro_ass_trainees_qty_prep}
+        onChange={handleChangeDesign}
+            />
+    </Form.Group>
+    {errors?.pro_ass_trainees_qty_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="pro_ass_trainees_uno_prep" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="pro_ass_trainees_uno_prep"
+        value={pro_ass_trainees_uno_prep}
+        onChange={handleChangeDesign}
+            />
+    </Form.Group>
+    {errors?.pro_ass_trainees_uno_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="pro_ass_trainees_una_prep" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="pro_ass_trainees_una_prep"
+        value={pro_ass_trainees_una_prep}
+        onChange={handleChangeDesignText}
+            />
+    </Form.Group>
+    {errors?.pro_ass_trainees_una_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="pro_ass_trainees_rt_prep" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="pro_ass_trainees_rt_prep"
+        value={pro_ass_trainees_rt_prep}
+        onChange={handleChangeDesign}
+            />
+    </Form.Group>
+    {errors?.pro_ass_trainees_rt_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="proasstrainprepTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="proasstrainprepTotal"
+        value={proasstrainprepTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.proasstrainprepTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Shoot */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Shoot</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="production_assistants_trainees_quantity" 
@@ -625,7 +1635,129 @@ const DesignLabour = (props) => {
     ))}
     </Col>
     </Row>
+    {/* Wrap */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Wrap</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="pro_ass_trainees_qty_wrap" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="pro_ass_trainees_qty_wrap"
+        value={pro_ass_trainees_qty_wrap}
+        onChange={handleChangeDesign}
+            />
+    </Form.Group>
+    {errors?.pro_ass_trainees_qty_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="pro_ass_trainees_uno_wrap" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="pro_ass_trainees_uno_wrap"
+        value={pro_ass_trainees_uno_wrap}
+        onChange={handleChangeDesign}
+            />
+    </Form.Group>
+    {errors?.pro_ass_trainees_uno_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="pro_ass_trainees_una_wrap" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="pro_ass_trainees_una_wrap"
+        value={pro_ass_trainees_una_wrap}
+        onChange={handleChangeDesignText}
+            />
+    </Form.Group>
+    {errors?.pro_ass_trainees_una_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="pro_ass_trainees_rt_wrap" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="pro_ass_trainees_rt_wrap"
+        value={pro_ass_trainees_rt_wrap}
+        onChange={handleChangeDesign}
+            />
+    </Form.Group>
+    {errors?.pro_ass_trainees_rt_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="proasstrainwrapTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="proasstrainwrapTotal"
+        value={proasstrainwrapTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.proasstrainwrapTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={9} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="proasstrainallTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="proasstrainallTotal"
+        value={proasstrainallTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.proasstrainallTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    </div>
     {/* Graphic Artists */}
+    <div>
     <Row>
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.50</p>
@@ -719,7 +1851,10 @@ const DesignLabour = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Other */}
+    </div>
+    {/* supervising art director / illustrator - 1 box
+        art department coordinator / set designer - all 3 */}
+    {/* Other*/}
     <Row>
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.60</p>
