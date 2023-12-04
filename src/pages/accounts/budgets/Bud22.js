@@ -259,6 +259,31 @@
   days6th7th_unit_design,
   box_rent_unit_design,
   box_rent_design,
+  // new
+  graphic_art_qty_prep, graphic_art_uno_prep,
+  graphic_art_una_prep, graphic_art_rt_prep,
+  supervart_qty, supervart_uno,
+  supervart_una, supervart_rt,
+  supervart_qty_prep, supervart_uno_prep,
+  supervart_una_prep, supervart_rt_prep,
+  set_design_qty, set_design_uno,
+  set_design_una, set_design_rt,
+  set_design_qty_prep, set_design_uno_prep,
+  set_design_una_prep, set_design_rt_prep,
+  junior_draught_qty, junior_draught_uno,
+  junior_draught_una, junior_draught_rt,
+  junior_draught_qty_prep, junior_draught_uno_prep,
+  junior_draught_una_prep, junior_draught_rt_prep,
+  standby_art_qty, standby_art_uno,
+  standby_art_una, standby_art_rt,
+  standby_art_qty_prep, standby_art_uno_prep,
+  standby_art_una_prep, standby_art_rt_prep,
+  art_dep_coor_qty, art_dep_coor_uno,
+  art_dep_coor_una, art_dep_coor_rt,
+  art_dep_coor_qty_prep, art_dep_coor_uno_prep,
+  art_dep_coor_una_prep, art_dep_coor_rt_prep,
+  art_dep_coor_qty_wrap, art_dep_coor_uno_wrap,
+  art_dep_coor_una_wrap, art_dep_coor_rt_wrap,
   formData.append("prodesprepTotal", prodesprepTotal);
   formData.append("prodeswrapTotal", prodeswrapTotal);
   formData.append("prodesallTotal", prodesallTotal);
@@ -319,10 +344,51 @@
   const [graphicartistsTotal, setGraphicartistsTotal] = useState(0);
   // graphic artists prep Total postData
   const [graphicartprepTotal, setGraphicartprepTotal] = useState(0);
-  // graphic artists wrap Total postData
-  const [graphicartwrapTotal, setGraphicartwrapTotal] = useState(0);
   // graphic artists all Total postData
   const [graphicartallTotal, setGraphicartallTotal] = useState(0);
+
+  // new
+  // supervising art director
+  // supervising art director shoot Total postData
+  const [supartdirTotal, setSupartdirTotal] = useState(0);
+  // supervising art director prep Total postData
+  const [supartdirprepTotal, setSupartdirprepTotal] = useState(0);
+  // supervising art director all Total postData
+  const [supartdirallTotal, setSupartdirpallTotal] = useState(0);
+
+  // Set Designer/Draughtsperson
+  // Set Designer/Draughtsperson shoot Total postData
+  const [setdesTotal, setSetdesTotal] = useState(0);
+  // Set Designer/Draughtsperson prep Total postData
+  const [setdesprepTotal, setSetdesprepTotal] = useState(0);
+  // Set Designer/Draughtsperson all Total postData
+  const [setdesallTotal, setSetdesallTotal] = useState(0);
+
+  // Junior Draughtsperson
+  // Junior Draughtsperson shoot Total postData
+  const [jundraughtTotal, setJundraughtTotal] = useState(0);
+  // Junior Draughtsperson shoot Total postData
+  const [jundraprepTotal, setJundraprepTotal] = useState(0);
+  // Junior Draughtsperson shoot Total postData
+  const [jundraallTotal, setJundraallTotal] = useState(0);
+
+  // standby art
+  // standby art shoot Total postData
+  const [standbyartTotal, setStandbyartTotal] = useState(0);
+  // standby art prep Total postData
+  const [stbyartprepTotal, setStbyartprepTotal] = useState(0);
+  // standby art all Total postData
+  const [stbyartallTotal, setStbyartallTotal] = useState(0);
+
+  // art dep coordinator
+  // art dep coordinator shoot Total postData
+  const [artcoorTotal, setArtcoorTotal] = useState(0);
+  // art dep coordinator prep Total postData
+  const [artcoorprepTotal, setArtcoorprepTotal] = useState(0);
+  // art dep coordinator wrap Total postData
+  const [artcoorwrapTotal, setArtcoorwrapTotal] = useState(0);
+  // art dep coordinator all Total postData
+  const [artcoorallTotal, setArtcoorallTotal] = useState(0);
   
 /* Component in the Account component to create Budgets */
 import React, { useEffect, useState } from "react";

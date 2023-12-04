@@ -496,10 +496,10 @@ function BudgetEdit() {
     overtime_cast: 0, 
     days6th7th_cast: 0, 
     rehersals_cast: 0,
-    holidays_unit_cast: 0, 
-    overtime_unit_cast: 0, 
-    days6th7th_unit_cast: 0, 
-    rehersals_unit_cast: 0,
+    holidays_unit_cast: "", 
+    overtime_unit_cast: "", 
+    days6th7th_unit_cast: "", 
+    rehersals_unit_cast: "",
     principals_quantity: 0,
     principals_units_number: 0,
     principals_units_name: "",
@@ -1273,25 +1273,98 @@ function BudgetEdit() {
     graphic_artists_quantity: 0,
     graphic_artists_units_number: 0,
     graphic_artists_units_name: "",
-    graphic_artists_rate: 0,
+    graphic_artists_rate_: 0,
+    graphic_art_qty_prep: 0,
+    graphic_art_uno_prep: 0,
+    graphic_art_una_prep: "",
+    graphic_art_rt_prep: 0,
     sketch_artists: 0,
-    sketch_artists_unit: 0,
+    sketch_artists_unit: "",
     storyboard_artists: 0,
-    storyboard_artists_unit: 0,
+    storyboard_artists_unit: "",
     holidays_design: 0,
-    holidays_unit_design: 0,
+    holidays_unit_design: "",
     overtime_design: 0,
-    overtime_unit_design: 0,
+    overtime_unit_design: "",
     days6th7th_design: 0,
-    days6th7th_unit_design: 0,
-    box_rent_unit_design: 0,
+    days6th7th_unit_design: "",
+    box_rent_unit_design: "",
     box_rent_design: 0,
     other_design: 0,
+    // new new
+    supervart_qty: 0,
+    supervart_uno: 0,
+    supervart_una: "",
+    supervart_rt: 0,
+    supervart_qty_prep: 0,
+    supervart_uno_prep: 0,
+    supervart_una_prep: "",
+    supervart_rt_prep: 0, 
+    standby_art_qty: 0,
+    standby_art_uno: 0,
+    standby_art_una: "",
+    standby_art_rt: 0,
+    standby_art_qty_prep: 0,
+    standby_art_uno_prep: 0,
+    standby_art_una_prep: "",
+    standby_art_rt_prep: 0,
+    set_design_qty: 0,
+    set_design_uno: 0,
+    set_design_una: "",
+    set_design_rt: 0,
+    set_design_qty_prep: 0,
+    set_design_uno_prep: 0,
+    set_design_una_prep: "",
+    set_design_rt_prep: 0,
+    junior_draught_qty: 0,
+    junior_draught_uno: 0,
+    junior_draught_una: "",
+    junior_draught_rt: 0,
+    junior_draught_qty_prep: 0,
+    junior_draught_uno_prep: 0,
+    junior_draught_una_prep: "",
+    junior_draught_rt_prep: 0,
+    art_dep_coor_qty: 0,
+    art_dep_coor_uno: 0,
+    art_dep_coor_una: "",
+    art_dep_coor_rt: 0,
+    art_dep_coor_qty_prep: 0,
+    art_dep_coor_uno_prep: 0,
+    art_dep_coor_una_prep: "",
+    art_dep_coor_rt_prep: 0,
+    art_dep_coor_qty_wrap: 0,
+    art_dep_coor_uno_wrap: 0,
+    art_dep_coor_una_wrap: "",
+    art_dep_coor_rt_wrap: 0,
   });
 
   // Design Labour values
   const {
     // new
+    graphic_art_qty_prep, graphic_art_uno_prep,
+    graphic_art_una_prep, graphic_art_rt_prep,
+    supervart_qty, supervart_uno,
+    supervart_una, supervart_rt,
+    supervart_qty_prep, supervart_uno_prep,
+    supervart_una_prep, supervart_rt_prep,
+    art_dep_coor_qty, art_dep_coor_uno,
+    art_dep_coor_una, art_dep_coor_rt,
+    art_dep_coor_qty_prep, art_dep_coor_uno_prep,
+    art_dep_coor_una_prep, art_dep_coor_rt_prep,
+    art_dep_coor_qty_wrap, art_dep_coor_uno_wrap,
+    art_dep_coor_una_wrap, art_dep_coor_rt_wrap,
+    set_design_qty, set_design_uno,
+    set_design_una, set_design_rt,
+    set_design_qty_prep, set_design_uno_prep,
+    set_design_una_prep, set_design_rt_prep,
+    junior_draught_qty, junior_draught_uno,
+    junior_draught_una, junior_draught_rt,
+    junior_draught_qty_prep, junior_draught_uno_prep,
+    junior_draught_una_prep, junior_draught_rt_prep,
+    standby_art_qty, standby_art_uno,
+    standby_art_una, standby_art_rt,
+    standby_art_qty_prep, standby_art_uno_prep,
+    standby_art_una_prep, standby_art_rt_prep,
     pro_designer_qty_prep, pro_designer_uno_prep,
     pro_designer_una_prep, pro_designer_rt_prep,
     pro_designer_qty_wrap, pro_designer_uno_wrap,
@@ -1368,10 +1441,51 @@ function BudgetEdit() {
   const [graphicartistsTotal, setGraphicartistsTotal] = useState(0);
   // graphic artists prep Total postData
   const [graphicartprepTotal, setGraphicartprepTotal] = useState(0);
-  // graphic artists wrap Total postData
-  const [graphicartwrapTotal, setGraphicartwrapTotal] = useState(0);
   // graphic artists all Total postData
   const [graphicartallTotal, setGraphicartallTotal] = useState(0);
+
+  // new
+  // supervising art director
+  // supervising art director shoot Total postData
+  const [supartdirTotal, setSupartdirTotal] = useState(0);
+  // supervising art director prep Total postData
+  const [supartdirprepTotal, setSupartdirprepTotal] = useState(0);
+  // supervising art director all Total postData
+  const [supartdirallTotal, setSupartdirpallTotal] = useState(0);
+
+  // Set Designer/Draughtsperson
+  // Set Designer/Draughtsperson shoot Total postData
+  const [setdesTotal, setSetdesTotal] = useState(0);
+  // Set Designer/Draughtsperson prep Total postData
+  const [setdesprepTotal, setSetdesprepTotal] = useState(0);
+  // Set Designer/Draughtsperson all Total postData
+  const [setdesallTotal, setSetdesallTotal] = useState(0);
+
+  // Junior Draughtsperson
+  // Junior Draughtsperson shoot Total postData
+  const [jundraughtTotal, setJundraughtTotal] = useState(0);
+  // Junior Draughtsperson shoot Total postData
+  const [jundraprepTotal, setJundraprepTotal] = useState(0);
+  // Junior Draughtsperson shoot Total postData
+  const [jundraallTotal, setJundraallTotal] = useState(0);
+
+  // standby art
+  // standby art shoot Total postData
+  const [standbyartTotal, setStandbyartTotal] = useState(0);
+  // standby art prep Total postData
+  const [stbyartprepTotal, setStbyartprepTotal] = useState(0);
+  // standby art all Total postData
+  const [stbyartallTotal, setStbyartallTotal] = useState(0);
+
+  // art dep coordinator
+  // art dep coordinator shoot Total postData
+  const [artcoorTotal, setArtcoorTotal] = useState(0);
+  // art dep coordinator prep Total postData
+  const [artcoorprepTotal, setArtcoorprepTotal] = useState(0);
+  // art dep coordinator wrap Total postData
+  const [artcoorwrapTotal, setArtcoorwrapTotal] = useState(0);
+  // art dep coordinator all Total postData
+  const [artcoorallTotal, setArtcoorallTotal] = useState(0);
 
   // Design Labour Total postData 
   const [designlabourTotal, setDesignlabourTotal] = useState(0);
@@ -4296,7 +4410,31 @@ function BudgetEdit() {
             craft_services_rate});
           setProductionstaffTotal(productionstaff_total);
         // design
-        const {pro_designer_qty_prep, pro_designer_uno_prep,
+        const {graphic_art_qty_prep, graphic_art_uno_prep,
+          graphic_art_una_prep, graphic_art_rt_prep,
+          supervart_qty, supervart_uno,
+          supervart_una, supervart_rt,
+          supervart_qty_prep, supervart_uno_prep,
+          supervart_una_prep, supervart_rt_prep,
+          art_dep_coor_qty, art_dep_coor_uno,
+          art_dep_coor_una, art_dep_coor_rt,
+          art_dep_coor_qty_prep, art_dep_coor_uno_prep,
+          art_dep_coor_una_prep, art_dep_coor_rt_prep,
+          art_dep_coor_qty_wrap, art_dep_coor_uno_wrap,
+          art_dep_coor_una_wrap, art_dep_coor_rt_wrap,
+          set_design_qty, set_design_uno,
+          set_design_una, set_design_rt,
+          set_design_qty_prep, set_design_uno_prep,
+          set_design_una_prep, set_design_rt_prep,
+          junior_draught_qty, junior_draught_uno,
+          junior_draught_una, junior_draught_rt,
+          junior_draught_qty_prep, junior_draught_uno_prep,
+          junior_draught_una_prep, junior_draught_rt_prep,
+          standby_art_qty, standby_art_uno,
+          standby_art_una, standby_art_rt,
+          standby_art_qty_prep, standby_art_uno_prep,
+          standby_art_una_prep, standby_art_rt_prep,
+          pro_designer_qty_prep, pro_designer_uno_prep,
           pro_designer_una_prep, pro_designer_rt_prep,
           pro_designer_qty_wrap, pro_designer_uno_wrap,
           pro_designer_una_wrap, pro_designer_rt_wrap,
@@ -4330,7 +4468,31 @@ function BudgetEdit() {
           graphic_artists_quantity, graphic_artists_units_number,
           graphic_artists_units_name, graphic_artists_rate, other_design,
           designlabour_total} = data.results[0];
-        setPostDataDesign({pro_designer_qty_prep, pro_designer_uno_prep,
+        setPostDataDesign({graphic_art_qty_prep, graphic_art_uno_prep,
+          graphic_art_una_prep, graphic_art_rt_prep,
+          supervart_qty, supervart_uno,
+          supervart_una, supervart_rt,
+          supervart_qty_prep, supervart_uno_prep,
+          supervart_una_prep, supervart_rt_prep,
+          art_dep_coor_qty, art_dep_coor_uno,
+          art_dep_coor_una, art_dep_coor_rt,
+          art_dep_coor_qty_prep, art_dep_coor_uno_prep,
+          art_dep_coor_una_prep, art_dep_coor_rt_prep,
+          art_dep_coor_qty_wrap, art_dep_coor_uno_wrap,
+          art_dep_coor_una_wrap, art_dep_coor_rt_wrap,
+          set_design_qty, set_design_uno,
+          set_design_una, set_design_rt,
+          set_design_qty_prep, set_design_uno_prep,
+          set_design_una_prep, set_design_rt_prep,
+          junior_draught_qty, junior_draught_uno,
+          junior_draught_una, junior_draught_rt,
+          junior_draught_qty_prep, junior_draught_uno_prep,
+          junior_draught_una_prep, junior_draught_rt_prep,
+          standby_art_qty, standby_art_uno,
+          standby_art_una, standby_art_rt,
+          standby_art_qty_prep, standby_art_uno_prep,
+          standby_art_una_prep, standby_art_rt_prep,
+          pro_designer_qty_prep, pro_designer_uno_prep,
           pro_designer_una_prep, pro_designer_rt_prep,
           pro_designer_qty_wrap, pro_designer_uno_wrap,
           pro_designer_una_wrap, pro_designer_rt_wrap,
@@ -6331,10 +6493,9 @@ function BudgetEdit() {
     formData.append("proasstrainwrapTotal", proasstrainwrapTotal);
     formData.append("proasstrainallTotal", proasstrainallTotal);
     formData.append("graphicartprepTotal", graphicartprepTotal);
-    formData.append("graphicartwrapTotal", graphicartwrapTotal);
     formData.append("graphicartallTotal", graphicartallTotal);
     // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars); 
     // formData.append("staaaaars", staaaaars);
     // formData.append("staaaaars", staaaaars);
     // formData.append("staaaaars", staaaaars);
@@ -7568,7 +7729,6 @@ function BudgetEdit() {
       designlabourTotal={designlabourTotal}
       setDesignlabourTotal={setDesignlabourTotal}
       setShow={setShowDesign}  
-      // new
       prodesprepTotal={prodesprepTotal}
       setProdesprepTotal={setProdesprepTotal}
       prodeswrapTotal={prodeswrapTotal}
@@ -7595,10 +7755,40 @@ function BudgetEdit() {
       setProasstrainallTotal={setProasstrainallTotal}
       graphicartprepTotal={graphicartprepTotal}
       setGraphicartprepTotal={setGraphicartprepTotal}
-      graphicartwrapTotal={graphicartwrapTotal}
-      setGraphicartwrapTotal={setGraphicartwrapTotal}
       graphicartallTotal={graphicartallTotal}
       setGraphicartallTotal={setGraphicartallTotal}
+      supartdirTotal={supartdirTotal}
+      setSupartdirTotal={setSupartdirTotal}
+      supartdirprepTotal={supartdirprepTotal}
+      setSupartdirprepTotal={setSupartdirprepTotal}
+      supartdirallTotal={supartdirallTotal}
+      setSupartdirpallTotal={setSupartdirpallTotal}
+      setdesTotal={setdesTotal}
+      setSetdesTotal={setSetdesTotal}
+      setdesprepTotal={setdesprepTotal}
+      setSetdesprepTotal={setSetdesprepTotal}
+      setdesallTotal={setdesallTotal}
+      setSetdesallTotal={setSetdesallTotal}
+      jundraughtTotal={jundraughtTotal}
+      setJundraughtTotal={setJundraughtTotal}
+      jundraprepTotal={jundraprepTotal}
+      setJundraprepTotal={setJundraprepTotal}
+      jundraallTotal={jundraallTotal}
+      setJundraallTotal={setJundraallTotal}
+      standbyartTotal={standbyartTotal}
+      setStandbyartTotal={setStandbyartTotal}
+      stbyartprepTotal={stbyartprepTotal}
+      setStbyartprepTotal={setStbyartprepTotal}
+      stbyartallTotal={stbyartallTotal}
+      setStbyartallTotal={setStbyartallTotal}
+      artcoorTotal={artcoorTotal}
+      setArtcoorTotal={setArtcoorTotal}
+      artcoorprepTotal={artcoorprepTotal}
+      setArtcoorprepTotal={setArtcoorprepTotal}
+      artcoorwrapTotal={artcoorwrapTotal}
+      setArtcoorwrapTotal={setArtcoorwrapTotal}
+      artcoorallTotal={artcoorallTotal}
+      setArtcoorallTotal={setArtcoorallTotal}
       /> 
     ) }
     {/* construction */}
