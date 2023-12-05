@@ -428,8 +428,8 @@ const DesignLabour = (props) => {
   }, [productionassistantstraineesTotal, proasstrainprepTotal,
     proasstrainwrapTotal]);
 
-  // graphic artists start here add new prep and all
-  // function to calculate graphic artists on change
+  // graphic artists
+  // function to calculate graphic artists shoot on change
   useEffect(() => {
     const addGraart = () => {
       setGraphicartistsTotal(parseFloat(graphic_artists_quantity || 0) * 
@@ -447,83 +447,332 @@ const DesignLabour = (props) => {
   }, [graphic_artists_quantity, graphic_artists_units_number, 
   graphic_artists_rate]);
 
-  // new start here
-  // supervising art director
-  // function to calculate supervising art director shoot on change
+  // function to calculate graphic artists prep on change
   useEffect(() => {
-    const addArtdirsup = () => {
-      setSupartdirTotal(parseFloat(art_director_quantity || 0) * 
-      parseFloat(art_director_units_number || 0) * 
-      parseFloat(art_director_rate || 0))
+    const addGraartprep = () => {
+      setGraphicartprepTotal(parseFloat(graphic_art_qty_prep || 0) * 
+      parseFloat(graphic_art_uno_prep || 0) * 
+      parseFloat(graphic_art_rt_prep || 0))
     }
     const timer = setTimeout(() => {
-        addArtdirsup();
+        addGraartprep();
     }, 2000);
 
     return () => {
       clearTimeout(timer);
     };
     // eslint-disable-next-line
-  }, [art_director_quantity, art_director_units_number, 
-  art_director_rate]);
+  }, [graphic_art_qty_prep, graphic_art_uno_prep,
+  graphic_art_rt_prep]);
 
-  // function to calculate art director prep on change
+  // function to add all graphic artists on change 
   useEffect(() => {
-    const addArtdirprep = () => {
-      setArtdirprepTotal(parseFloat(art_director_qty_prep || 0) * 
-      parseFloat(art_director_uno_prep || 0) * 
-      parseFloat(art_director_rt_prep || 0))
-    }
-    const timer = setTimeout(() => {
-        addArtdirprep();
-    }, 2000);
-
-    return () => {
-      clearTimeout(timer);
-    };
-    // eslint-disable-next-line
-  }, [art_director_qty_prep, art_director_uno_prep, 
-  art_director_rt_prep]);
-
-  // function to calculate art director wrap on change
-  useEffect(() => {
-    const addArtdirwrap = () => {
-      setArtdirwrapTotal(parseFloat(art_director_qty_wrap || 0) * 
-      parseFloat(art_director_uno_wrap || 0) * 
-      parseFloat(art_director_rt_wrap || 0))
-    }
-    const timer = setTimeout(() => {
-        addArtdirwrap();
-    }, 2000);
-
-    return () => {
-      clearTimeout(timer);
-    };
-    // eslint-disable-next-line
-  }, [art_director_qty_wrap, art_director_uno_wrap,
-  art_director_rt_wrap]);
-
-  // function to add all art director on change 
-  useEffect(() => {
-    const addArtDir = () => {
-      setArtdirallTotal(
-      parseFloat(artdirectorTotal || 0) +
-      parseFloat(artdirprepTotal || 0) +
-      parseFloat(artdirwrapTotal || 0) 
+    const addGraArti = () => {
+      setGraphicartallTotal(
+      parseFloat(graphicartistsTotal || 0) +
+      parseFloat(graphicartprepTotal || 0) 
       )
     }
     const timer = setTimeout(() => {
-        addArtDir();
+        addGraArti();
     }, 1000);
 
     return () => {
       clearTimeout(timer);
     };
     // eslint-disable-next-line
-  }, [artdirectorTotal, artdirprepTotal, artdirwrapTotal]);
-  // end new
+  }, [graphicartistsTotal, graphicartprepTotal]);
 
-  // function to add all design on change
+  // supervising art director
+  // function to calculate supervising art director shoot on change
+  useEffect(() => {
+    const addArtsup = () => {
+      setSupartdirTotal(parseFloat(supervart_qty || 0) * 
+      parseFloat(supervart_uno || 0) * 
+      parseFloat(supervart_rt || 0))
+    }
+    const timer = setTimeout(() => {
+        addArtsup();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [supervart_qty, supervart_uno, supervart_rt]);
+
+  // function to calculate supervising art director prep on change
+  useEffect(() => {
+    const addArtsupprep = () => {
+      setSupartdirprepTotal(parseFloat(supervart_qty_prep || 0) * 
+      parseFloat(supervart_uno_prep || 0) * 
+      parseFloat(supervart_rt_prep || 0))
+    }
+    const timer = setTimeout(() => {
+        addArtsupprep();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [supervart_qty_prep, supervart_uno_prep, supervart_rt_prep]);
+
+  // function to add all supervising art director on change 
+  useEffect(() => {
+    const addArtSuper = () => {
+      setSupartdirpallTotal(
+      parseFloat(supartdirTotal || 0) +
+      parseFloat(supartdirprepTotal || 0) 
+      )
+    }
+    const timer = setTimeout(() => {
+        addArtSuper();
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [supartdirTotal, supartdirprepTotal]);
+
+  // Set Designer/Draughtsperson
+  // function to calculate Set Designer/Draughtsperson shoot on change
+  useEffect(() => {
+    const addSetdes = () => {
+      setSetdesTotal(parseFloat(set_design_qty || 0) * 
+      parseFloat(set_design_uno || 0) * 
+      parseFloat(set_design_rt || 0))
+    }
+    const timer = setTimeout(() => {
+        addSetdes();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [set_design_qty, set_design_uno, set_design_rt]);
+
+  // function to calculate Set Designer/Draughtsperson prep on change
+  useEffect(() => {
+    const addSetdesprep = () => {
+      setSetdesprepTotal(parseFloat(set_design_qty_prep || 0) * 
+      parseFloat(set_design_uno_prep || 0) * 
+      parseFloat(set_design_rt_prep || 0))
+    }
+    const timer = setTimeout(() => {
+        addSetdesprep();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [set_design_qty_prep, set_design_uno_prep, 
+    set_design_rt_prep]);
+
+  // function to add all Set Designer/Draughtsperson on change 
+  useEffect(() => {
+    const addSetDesi = () => {
+      setSetdesallTotal(
+      parseFloat(setdesTotal || 0) +
+      parseFloat(setdesprepTotal || 0) 
+      )
+    }
+    const timer = setTimeout(() => {
+        addSetDesi();
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [setdesTotal, setdesprepTotal]);
+
+  // Junior Draughtsperson
+  // function to calculate Junior Draughtsperson shoot on change
+  useEffect(() => {
+    const addJundra = () => {
+      setJundraughtTotal(parseFloat(junior_draught_qty || 0) * 
+      parseFloat(junior_draught_uno || 0) * 
+      parseFloat(junior_draught_rt || 0))
+    }
+    const timer = setTimeout(() => {
+        addJundra();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [junior_draught_qty, junior_draught_uno, junior_draught_rt]);
+
+  // function to calculate Junior Draughtsperson prep on change
+  useEffect(() => {
+    const addJundraprep = () => {
+      setJundraprepTotal(parseFloat(junior_draught_qty_prep || 0) * 
+      parseFloat(junior_draught_uno_prep || 0) * 
+      parseFloat(junior_draught_rt_prep || 0))
+    }
+    const timer = setTimeout(() => {
+        addJundraprep();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [junior_draught_qty_prep, junior_draught_uno_prep,
+    junior_draught_rt_prep]);
+
+  // function to add all Junior Draughtsperson on change 
+  useEffect(() => {
+    const addJunDrai = () => {
+      setJundraallTotal(
+      parseFloat(jundraughtTotal || 0) +
+      parseFloat(jundraprepTotal || 0) 
+      )
+    }
+    const timer = setTimeout(() => {
+        addJunDrai();
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [jundraughtTotal, jundraprepTotal]);
+
+  // standby art
+  // function to calculate standby art shoot on change
+  useEffect(() => {
+    const addStbyart = () => {
+      setStandbyartTotal(parseFloat(standby_art_qty || 0) * 
+      parseFloat(standby_art_uno || 0) * 
+      parseFloat(standby_art_rt || 0))
+    }
+    const timer = setTimeout(() => {
+        addStbyart();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [standby_art_qty, standby_art_uno, standby_art_rt]);
+
+  // function to calculate standby art prep on change
+  useEffect(() => {
+    const addStbyartprep = () => {
+      setStbyartprepTotal(parseFloat(standby_art_qty_prep || 0) * 
+      parseFloat(standby_art_uno_prep || 0) * 
+      parseFloat(standby_art_rt_prep || 0))
+    }
+    const timer = setTimeout(() => {
+        addStbyartprep();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [standby_art_qty_prep, standby_art_uno_prep,
+    standby_art_rt_prep]);
+
+  // function to add all standby art on change 
+  useEffect(() => {
+    const addStByArti = () => {
+      setStbyartallTotal(
+      parseFloat(standbyartTotal || 0) +
+      parseFloat(stbyartprepTotal || 0) 
+      )
+    }
+    const timer = setTimeout(() => {
+        addStByArti();
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [standbyartTotal, stbyartprepTotal]);
+
+  // art dep coordinator addArtcoor
+  // function to calculate art dep coordinator shoot on change
+  useEffect(() => {
+    const addArtcoor = () => {
+      setArtcoorTotal(parseFloat(art_dep_coor_qty || 0) * 
+      parseFloat(art_dep_coor_uno || 0) * 
+      parseFloat(art_dep_coor_rt || 0))
+    }
+    const timer = setTimeout(() => {
+        addArtcoor();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [art_dep_coor_qty, art_dep_coor_uno, art_dep_coor_rt]);
+
+  // function to calculate art dep coordinator prep on change
+  useEffect(() => {
+    const addArtcoorprep = () => {
+      setArtcoorprepTotal(parseFloat(art_dep_coor_qty_prep || 0) * 
+      parseFloat(art_dep_coor_uno_prep || 0) * 
+      parseFloat(art_dep_coor_rt_prep || 0))
+    }
+    const timer = setTimeout(() => {
+        addArtcoorprep();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [art_dep_coor_qty_prep, art_dep_coor_uno_prep,
+    art_dep_coor_rt_prep]);
+
+  // function to calculate art dep coordinator wrap on change
+  useEffect(() => {
+    const addArtcoorwrap = () => {
+      setArtcoorwrapTotal(parseFloat(art_dep_coor_qty_wrap || 0) * 
+      parseFloat(art_dep_coor_uno_wrap || 0) * 
+      parseFloat(art_dep_coor_rt_wrap || 0))
+    }
+    const timer = setTimeout(() => {
+        addArtcoorwrap();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [art_dep_coor_qty_wrap, art_dep_coor_uno_wrap,
+    art_dep_coor_rt_wrap]);
+
+  // function to add all art dep coordinator on change 
+  useEffect(() => {
+    const addArtCoori = () => {
+      setArtcoorallTotal(
+      parseFloat(artcoorTotal || 0) +
+      parseFloat(artcoorprepTotal || 0) +
+      parseFloat(artcoorwrapTotal || 0) 
+      )
+    }
+    const timer = setTimeout(() => {
+        addArtCoori();
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [artcoorTotal, artcoorprepTotal, artcoorwrapTotal]);
+
+  // START HERE
+  // function to add all design on change 
   useEffect(() => {
     const addDesign = () => {
       setDesignlabourTotal(
@@ -1091,6 +1340,32 @@ const DesignLabour = (props) => {
         {message}
         </Alert>
     ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="supartdirallTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="supartdirallTotal"
+        value={supartdirallTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.supartdirallTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={9} > 
+    <p className={`${styles.Underline}`}>Total</p>
     </Col>
     <Col md={2} >
     <Form.Group controlId="supartdirallTotal" 
@@ -2173,7 +2448,7 @@ const DesignLabour = (props) => {
     </Col>
     </Row>
     {/* Total */}
-    <Row>
+    <Row>   
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
@@ -2199,12 +2474,780 @@ const DesignLabour = (props) => {
     </Col>
     </Row>
     </div>
-    {/* Junior Draughtsperson 08.70 */}
+    {/* Junior Draughtsperson */}
+    <div>
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>08.70</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Junior Draughtsperson</p>
+    </Col>
+    </Row>
+    {/* Prep */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Prep</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="junior_draught_qty_prep" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="junior_draught_qty_prep"
+        value={junior_draught_qty_prep}
+        onChange={handleChangeDesign}
+            />
+    </Form.Group>
+    {errors?.junior_draught_qty_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="junior_draught_uno_prep" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="junior_draught_uno_prep"
+        value={junior_draught_uno_prep}
+        onChange={handleChangeDesign}
+            />
+    </Form.Group>
+    {errors?.junior_draught_uno_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="junior_draught_una_prep" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="junior_draught_una_prep"
+        value={junior_draught_una_prep}
+        onChange={handleChangeDesignText}
+            />
+    </Form.Group>
+    {errors?.junior_draught_una_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="junior_draught_rt_prep" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="junior_draught_rt_prep"
+        value={junior_draught_rt_prep}
+        onChange={handleChangeDesign}
+            />
+    </Form.Group>
+    {errors?.junior_draught_rt_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="jundraprepTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="jundraprepTotal"
+        value={jundraprepTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.jundraprepTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Shoot */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Shoot</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="junior_draught_qty" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="junior_draught_qty"
+        value={junior_draught_qty}
+        onChange={handleChangeDesign}
+            />
+    </Form.Group>
+    {errors?.junior_draught_qty?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="junior_draught_uno" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="junior_draught_uno"
+        value={junior_draught_uno}
+        onChange={handleChangeDesign}
+            />
+    </Form.Group>
+    {errors?.junior_draught_uno?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="junior_draught_una" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="junior_draught_una"
+        value={junior_draught_una}
+        onChange={handleChangeDesignText}
+            />
+    </Form.Group>
+    {errors?.junior_draught_una?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="junior_draught_rt" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="junior_draught_rt"
+        value={junior_draught_rt}
+        onChange={handleChangeDesign}
+            />
+    </Form.Group>
+    {errors?.junior_draught_rt?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="jundraughtTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="jundraughtTotal"
+        value={jundraughtTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.jundraughtTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>    
+    {/* Total */}
+    <Row>   
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={9} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="jundraallTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="jundraallTotal"
+        value={jundraallTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.jundraallTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    </div>
+    {/* Graphic Artists */}
+    <div>
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>08.80</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Graphic Artists</p>
+    </Col>
+    </Row>
+    {/* Prep */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Prep</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="graphic_art_qty_prep" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="graphic_art_qty_prep"
+        value={graphic_art_qty_prep}
+        onChange={handleChangeDesign}
+            />
+    </Form.Group>
+    {errors?.graphic_art_qty_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="graphic_art_uno_prep" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="graphic_art_uno_prep"
+        value={graphic_art_uno_prep}
+        onChange={handleChangeDesign}
+            />
+    </Form.Group>
+    {errors?.graphic_art_uno_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="graphic_art_una_prep" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="graphic_art_una_prep"
+        value={graphic_art_una_prep}
+        onChange={handleChangeDesignText}
+            />
+    </Form.Group>
+    {errors?.graphic_art_una_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="graphic_art_rt_prep" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="graphic_art_rt_prep"
+        value={graphic_art_rt_prep}
+        onChange={handleChangeDesign}
+            />
+    </Form.Group>
+    {errors?.graphic_art_rt_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="graphicartprepTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="graphicartprepTotal"
+        value={graphicartprepTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.graphicartprepTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Shoot */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Shoot</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="graphic_artists_quantity" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="graphic_artists_quantity"
+        value={graphic_artists_quantity}
+        onChange={handleChangeDesign}
+            />
+    </Form.Group>
+    {errors?.graphic_artists_quantity?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="graphic_artists_units_number" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="graphic_artists_units_number"
+        value={graphic_artists_units_number}
+        onChange={handleChangeDesign}
+            />
+    </Form.Group>
+    {errors?.graphic_artists_units_number?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="graphic_artists_units_name" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="graphic_artists_units_name"
+        value={graphic_artists_units_name}
+        onChange={handleChangeDesignText}
+            />
+    </Form.Group>
+    {errors?.graphic_artists_units_name?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="graphic_artists_rate" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="graphic_artists_rate"
+        value={graphic_artists_rate}
+        onChange={handleChangeDesign}
+            />
+    </Form.Group>
+    {errors?.graphic_artists_rate?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="graphicartistsTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="graphicartistsTotal"
+        value={graphicartistsTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.graphicartistsTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row>   
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={9} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="graphicartallTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="graphicartallTotal"
+        value={graphicartallTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.graphicartallTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    </div>
+    {/* Art Department Coordinator */}
+    <div>
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>08.90</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Art Department Coordinator</p>
+    </Col>
+    </Row>
+    {/* Prep */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Prep</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="art_dep_coor_qty_prep" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="art_dep_coor_qty_prep"
+        value={art_dep_coor_qty_prep}
+        onChange={handleChangeDesign}
+            />
+    </Form.Group>
+    {errors?.art_dep_coor_qty_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="art_dep_coor_uno_prep" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="art_dep_coor_uno_prep"
+        value={art_dep_coor_uno_prep}
+        onChange={handleChangeDesign}
+            />
+    </Form.Group>
+    {errors?.art_dep_coor_uno_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="art_dep_coor_una_prep" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="art_dep_coor_una_prep"
+        value={art_dep_coor_una_prep}
+        onChange={handleChangeDesignText}
+            />
+    </Form.Group>
+    {errors?.art_dep_coor_una_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="art_dep_coor_rt_prep" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="art_dep_coor_rt_prep"
+        value={art_dep_coor_rt_prep}
+        onChange={handleChangeDesign}
+            />
+    </Form.Group>
+    {errors?.art_dep_coor_rt_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="artcoorprepTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="artcoorprepTotal"
+        value={artcoorprepTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.artcoorprepTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Shoot */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Shoot</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="art_dep_coor_qty" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="art_dep_coor_qty"
+        value={art_dep_coor_qty}
+        onChange={handleChangeDesign}
+            />
+    </Form.Group>
+    {errors?.art_dep_coor_qty?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="art_dep_coor_uno" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="art_dep_coor_uno"
+        value={art_dep_coor_uno}
+        onChange={handleChangeDesign}
+            />
+    </Form.Group>
+    {errors?.art_dep_coor_uno?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="art_dep_coor_una" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="art_dep_coor_una"
+        value={art_dep_coor_una}
+        onChange={handleChangeDesignText}
+            />
+    </Form.Group>
+    {errors?.art_dep_coor_una?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="art_dep_coor_rt" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="art_dep_coor_rt"
+        value={art_dep_coor_rt}
+        onChange={handleChangeDesign}
+            />
+    </Form.Group>
+    {errors?.art_dep_coor_rt?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="artcoorTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="artcoorTotal"
+        value={artcoorTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.artcoorTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Wrap */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Wrap</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="art_dep_coor_qty_wrap" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="art_dep_coor_qty_wrap"
+        value={art_dep_coor_qty_wrap}
+        onChange={handleChangeDesign}
+            />
+    </Form.Group>
+    {errors?.art_dep_coor_qty_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="art_dep_coor_uno_wrap" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="art_dep_coor_uno_wrap"
+        value={art_dep_coor_uno_wrap}
+        onChange={handleChangeDesign}
+            />
+    </Form.Group>
+    {errors?.art_dep_coor_uno_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="art_dep_coor_una_wrap" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="art_dep_coor_una_wrap"
+        value={art_dep_coor_una_wrap}
+        onChange={handleChangeDesignText}
+            />
+    </Form.Group>
+    {errors?.art_dep_coor_una_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="art_dep_coor_rt_wrap" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="art_dep_coor_rt_wrap"
+        value={art_dep_coor_rt_wrap}
+        onChange={handleChangeDesign}
+            />
+    </Form.Group>
+    {errors?.art_dep_coor_rt_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="artcoorwrapTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="artcoorwrapTotal"
+        value={artcoorwrapTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.artcoorwrapTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row>   
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={9} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="artcoorallTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="artcoorallTotal"
+        value={artcoorallTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.artcoorallTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    </div>
     {/* Production Assistants/Trainees */}
     <div>
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>08.40</p>
+    <p className={`${styles.Underline}`}>08.91</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>Production Assistants / Trainees</p>
@@ -2519,109 +3562,255 @@ const DesignLabour = (props) => {
     </Col>
     </Row>
     </div>
-    {/* Graphic Artists 08.80  */}
-    <div>
+    {/* Concept Artist/Illustrator */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>08.50</p>
+    <p className={`${styles.Underline}`}>08.92</p>
     </Col>
-    <Col md={5} >
-    <p className={`${styles.Underline}`}>Graphic Artists</p>
+    <Col md={6} >
+    <p className={`${styles.Bold}`}>Concept Artist / Illustrator</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
-    <Form.Group controlId="graphic_artists_quantity" 
+    <Form.Group controlId="sketch_artists_unit" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="graphic_artists_quantity"
-        value={graphic_artists_quantity}
-        onChange={handleChangeDesign}
+        name="sketch_artists_unit"
+        value={sketch_artists_unit}
+        onChange={handleChangeProText}
             />
     </Form.Group>
-    {errors?.graphic_artists_quantity?.map((message, idx) => (
+    {errors?.sketch_artists_unit?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
-    <Col className="px-1 mx-0" md={1} >
-    <Form.Group controlId="graphic_artists_units_number" 
-        className={`${styles.Width95} text-center mb-1`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="graphic_artists_units_number"
-        value={graphic_artists_units_number}
-        onChange={handleChangeDesign}
-            />
-    </Form.Group>
-    {errors?.graphic_artists_units_number?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    <Col className="px-1 mx-0" md={1} >
-    <Form.Group controlId="graphic_artists_units_name" 
-        className={`${styles.Width95} text-center mb-1`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="graphic_artists_units_name"
-        value={graphic_artists_units_name}
-        onChange={handleChangeDesignText}
-            />
-    </Form.Group>
-    {errors?.graphic_artists_units_name?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    <Col className="px-1 mx-0" md={1} >
-    <Form.Group controlId="graphic_artists_rate" 
-        className={`${styles.Width95} text-center mb-1`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="graphic_artists_rate"
-        value={graphic_artists_rate}
-        onChange={handleChangeDesign}
-            />
-    </Form.Group>
-    {errors?.graphic_artists_rate?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
+    <Col md={1} >
+    <p></p>
     </Col>
     <Col md={2} >
-    <Form.Group controlId="graphicartistsTotal" 
+    <Form.Group controlId="sketch_artists" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="graphicartistsTotal"
-        value={graphicartistsTotal}
-        readOnly
+        name="sketch_artists"
+        value={sketch_artists}
+        onChange={handleChangePro}
             />
     </Form.Group>
-    {errors?.graphicartistsTotal?.map((message, idx) => (
+    {errors?.sketch_artists?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     </Row>
-    </div>
-    {/* Art Department Coordinator 08.90 */}
-    {/* Illustrator */}
     {/* Story Board Artist */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>08.93</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Bold}`}>Story Board Artist</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="storyboard_artists_unit" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="storyboard_artists_unit"
+        value={storyboard_artists_unit}
+        onChange={handleChangeProText}
+            />
+    </Form.Group>
+    {errors?.storyboard_artists_unit?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="storyboard_artists" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="storyboard_artists"
+        value={storyboard_artists}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.storyboard_artists?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* 6th/7th Days */}
+    <Row className="mt-3">
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>08.94</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Bold}`}>6th/7th Days</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="days6th7th_unit_design" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="days6th7th_unit_design"
+        value={days6th7th_unit_design}
+        onChange={handleChangeProText}
+            />
+    </Form.Group>
+    {errors?.days6th7th_unit_design?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="days6th7th_design" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="days6th7th_design"
+        value={days6th7th_design}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.days6th7th_design?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Overtime */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>08.95</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Bold}`}>Overtime</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="overtime_unit_design" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="overtime_unit_design"
+        value={overtime_unit_design}
+        onChange={handleChangeProText}
+            />
+    </Form.Group>
+    {errors?.overtime_unit_design?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="overtime_design" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="overtime_design"
+        value={overtime_design}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.overtime_design?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Holidays */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>08.96</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Bold}`}>Holidays</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="holidays_unit_design" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="holidays_unit_design"
+        value={holidays_unit_design}
+        onChange={handleChangeProText}
+            />
+    </Form.Group>
+    {errors?.holidays_unit_design?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="holidays_design" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="holidays_design"
+        value={holidays_design}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.holidays_design?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row> 
     {/* Other*/}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>08.60</p>
+    <p className={`${styles.Underline}`}>08.97</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Other</p>
@@ -2650,10 +3839,59 @@ const DesignLabour = (props) => {
     ))}
     </Col>
     </Row>
+    {/* Box Rentals */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>08.98</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Bold}`}>Box Rentals</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="box_rent_unit_design" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="box_rent_unit_design"
+        value={box_rent_unit_design}
+        onChange={handleChangeProText}
+            />
+    </Form.Group>
+    {errors?.box_rent_unit_design?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="box_rent_design" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="box_rent_design"
+        value={box_rent_design}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.box_rent_design?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
     {/* Fringes and Taxes */}
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>08.70</p>
+    <p className={`${styles.Underline}`}>08.99</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Fringes and Taxes</p>

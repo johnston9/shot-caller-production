@@ -260,30 +260,54 @@
   box_rent_unit_design,
   box_rent_design,
   // new
-  graphic_art_qty_prep, graphic_art_uno_prep,
-  graphic_art_una_prep, graphic_art_rt_prep,
-  supervart_qty, supervart_uno,
-  supervart_una, supervart_rt,
-  supervart_qty_prep, supervart_uno_prep,
-  supervart_una_prep, supervart_rt_prep,
-  set_design_qty, set_design_uno,
-  set_design_una, set_design_rt,
-  set_design_qty_prep, set_design_uno_prep,
-  set_design_una_prep, set_design_rt_prep,
-  junior_draught_qty, junior_draught_uno,
-  junior_draught_una, junior_draught_rt,
-  junior_draught_qty_prep, junior_draught_uno_prep,
-  junior_draught_una_prep, junior_draught_rt_prep,
-  standby_art_qty, standby_art_uno,
-  standby_art_una, standby_art_rt,
-  standby_art_qty_prep, standby_art_uno_prep,
-  standby_art_una_prep, standby_art_rt_prep,
-  art_dep_coor_qty, art_dep_coor_uno,
-  art_dep_coor_una, art_dep_coor_rt,
-  art_dep_coor_qty_prep, art_dep_coor_uno_prep,
-  art_dep_coor_una_prep, art_dep_coor_rt_prep,
-  art_dep_coor_qty_wrap, art_dep_coor_uno_wrap,
-  art_dep_coor_una_wrap, art_dep_coor_rt_wrap,
+  graphic_art_qty_prep, 
+  graphic_art_uno_prep,
+  graphic_art_una_prep, 
+  graphic_art_rt_prep,
+  supervart_qty, 
+  supervart_uno,
+  supervart_una, 
+  supervart_rt,
+  supervart_qty_prep, 
+  supervart_uno_prep,
+  supervart_una_prep, 
+  supervart_rt_prep,
+  set_design_qty, 
+  set_design_uno,
+  set_design_una, 
+  set_design_rt,
+  set_design_qty_prep, 
+  set_design_uno_prep,
+  set_design_una_prep, 
+  set_design_rt_prep,
+  junior_draught_qty, 
+  junior_draught_uno,
+  junior_draught_una, 
+  junior_draught_rt,
+  junior_draught_qty_prep, 
+  junior_draught_uno_prep,
+  junior_draught_una_prep, 
+  junior_draught_rt_prep,
+  standby_art_qty, 
+  standby_art_uno,
+  standby_art_una, 
+  standby_art_rt,
+  standby_art_qty_prep, 
+  standby_art_uno_prep,
+  standby_art_una_prep, 
+  standby_art_rt_prep,
+  art_dep_coor_qty, 
+  art_dep_coor_uno,
+  art_dep_coor_una, 
+  art_dep_coor_rt,
+  art_dep_coor_qty_prep, 
+  art_dep_coor_uno_prep,
+  art_dep_coor_una_prep, 
+  art_dep_coor_rt_prep,
+  art_dep_coor_qty_wrap, 
+  art_dep_coor_uno_wrap,
+  art_dep_coor_una_wrap, 
+  art_dep_coor_rt_wrap,
   formData.append("prodesprepTotal", prodesprepTotal);
   formData.append("prodeswrapTotal", prodeswrapTotal);
   formData.append("prodesallTotal", prodesallTotal);
@@ -299,6 +323,22 @@
   formData.append("graphicartprepTotal", graphicartprepTotal);
   formData.append("graphicartwrapTotal", graphicartwrapTotal);
   formData.append("graphicartallTotal", graphicartallTotal);
+  formData.append("supartdirTotal", supartdirTotal);
+  formData.append("supartdirprepTotal", supartdirprepTotal);
+  formData.append("supartdirallTotal", supartdirallTotal);
+  formData.append("setdesTotal", setdesTotal);
+  formData.append("setdesprepTotal", setdesprepTotal);
+  formData.append("setdesallTotal", setdesallTotal); 
+  formData.append("jundraughtTotal", jundraughtTotal);
+  formData.append("jundraprepTotal", jundraprepTotal);
+  formData.append("jundraallTotal", jundraallTotal);
+  formData.append("standbyartTotal", standbyartTotal);
+  formData.append("stbyartprepTotal", stbyartprepTotal);
+  formData.append("stbyartallTotal", stbyartallTotal);
+  formData.append("artcoorTotal", artcoorTotal);
+  formData.append("artcoorprepTotal", artcoorprepTotal);
+  formData.append("artcoorwrapTotal", artcoorwrapTotal);
+  formData.append("artcoorallTotal", artcoorallTotal);
   // prep wrap 
   // + 68 in submit2 already
 
