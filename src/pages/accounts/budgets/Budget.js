@@ -307,18 +307,52 @@ const Budget = (props) => {
     assistantdirector1st_total, assistantdirector2nd_total,
     assistantdirector3rd_total, craftservices_total, productionstaff_total,
     // design
+    production_designer_quantity, production_designer_units_number,
+    production_designer_units_name, production_designer_rate,
     pro_designer_qty_prep, pro_designer_uno_prep,
     pro_designer_una_prep, pro_designer_rt_prep,
     pro_designer_qty_wrap, pro_designer_uno_wrap,
     pro_designer_una_wrap, pro_designer_rt_wrap,
+    supervart_qty, supervart_uno,
+    supervart_una, supervart_rt,
+    supervart_qty_prep, supervart_uno_prep,
+    supervart_una_prep, supervart_rt_prep,
+    art_director_quantity, art_director_units_number,
+    art_director_units_name, art_director_rate,
     art_director_qty_prep, art_director_uno_prep,
     art_director_una_prep, art_director_rt_prep,
     art_director_qty_wrap, art_director_uno_wrap,
     art_director_una_wrap, art_director_rt_wrap,
+    standby_art_qty, standby_art_uno,
+    standby_art_una, standby_art_rt,
+    standby_art_qty_prep, standby_art_uno_prep,
+    standby_art_una_prep, standby_art_rt_prep,
+    art_assistants_quantity, art_assistants_units_number,
+    art_assistants_units_name, art_assistants_rate,
     art_ass_qty_prep, art_ass_uno_prep,
     art_ass_una_prep, art_ass_rt_prep,
     art_ass_qty_wrap, art_ass_uno_wrap,
     art_ass_una_wrap, art_ass_rt_wrap,
+    set_design_qty, set_design_uno,
+    set_design_una, set_design_rt,
+    set_design_qty_prep, set_design_uno_prep,
+    set_design_una_prep, set_design_rt_prep,
+    junior_draught_qty, junior_draught_uno,
+    junior_draught_una, junior_draught_rt,
+    junior_draught_qty_prep, junior_draught_uno_prep,
+    junior_draught_una_prep, junior_draught_rt_prep,
+    graphic_artists_quantity, graphic_artists_units_number,
+    graphic_artists_units_name, graphic_artists_rate,
+    graphic_art_qty_prep, graphic_art_uno_prep,
+    graphic_art_una_prep, graphic_art_rt_prep,
+    art_dep_coor_qty, art_dep_coor_uno,
+    art_dep_coor_una, art_dep_coor_rt,
+    art_dep_coor_qty_prep, art_dep_coor_uno_prep,
+    art_dep_coor_una_prep, art_dep_coor_rt_prep,
+    art_dep_coor_qty_wrap, art_dep_coor_uno_wrap,
+    art_dep_coor_una_wrap, art_dep_coor_rt_wrap,
+    production_assistants_trainees_quantity, production_assistants_trainees_units_number,
+    production_assistants_trainees_units_name, production_assistants_trainees_rate,
     pro_ass_trainees_qty_prep, pro_ass_trainees_uno_prep,
     pro_ass_trainees_una_prep, pro_ass_trainees_rt_prep,
     pro_ass_trainees_qty_wrap, pro_ass_trainees_uno_wrap,
@@ -329,19 +363,19 @@ const Budget = (props) => {
     overtime_design, overtime_unit_design,
     days6th7th_design, days6th7th_unit_design,
     box_rent_unit_design, box_rent_design,
-    fringes_taxes_design,
-    production_designer_quantity, production_designer_units_number,
-    production_designer_units_name, production_designer_rate,
-    art_director_quantity, art_director_units_number,
-    art_director_units_name, art_director_rate,
-    art_assistants_quantity, art_assistants_units_number,
-    art_assistants_units_name, art_assistants_rate,
-    production_assistants_trainees_quantity, production_assistants_trainees_units_number,
-    production_assistants_trainees_units_name, production_assistants_trainees_rate,
-    graphic_artists_quantity, graphic_artists_units_number,
-    graphic_artists_units_name, graphic_artists_rate, other_design,
-    productiondesigner_total, artdirector_total, artassistants_total,
-    productionassistantstrainees_total, graphicartists_total, designlabour_total,
+    other_design, fringes_taxes_design,
+    productiondesigner_total, prodesprep_total, prodeswrap_total, prodesall_total,
+    supartdir_total, supartdirprep_total, supartdirall_total,
+    artdirector_total, artdirprep_total, artdirwrap_total, artdirall_total,
+    standbyart_total, stbyartprep_total, stbyartall_total,
+    artassistants_total, artassprep_total, artasswrap_total, artassall_total,
+    setdes_total, setdesprep_total, setdesall_total,
+    jundraught_total, jundraprep_total, jundraall_total,
+    artcoor_total, artcoorprep_total, artcoorwrap_total, artcoorall_total,
+    productionassistantstrainees_total, proasstrainprep_total,
+    proasstrainwrap_total, proasstrainall_total,
+    graphicartists_total, graphicartprep_total, graphicartall_total,
+    designlabour_total,
     // construction
     fringes_taxes_construction,
     constructioncoordinator_quantity, constructioncoordinator_units_number,
@@ -2559,7 +2593,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>Total</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{locationmanagerall_total || 0}</p>
+    <p className={`${styles.Underline}`}>{locmanassall_total || 0}</p>
     </Col>
     </Row>
     </div>
@@ -3871,12 +3905,46 @@ const Budget = (props) => {
     </Col>
     </Row>
     {/* Production Designer */}
-    <Row  >
+    <div className='mt-3'>
+    <Row >
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.10</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>Production Designer</p>
+    </Col>
+    </Row>
+    {/* Prep */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Prep</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{pro_designer_qty_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{pro_designer_uno_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{pro_designer_una_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{pro_designer_rt_prep || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{prodesprep_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Shoot */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Shoot</p>
     </Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>{production_designer_quantity || 0}</p>
@@ -3894,13 +3962,158 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{productiondesigner_total || 0}</p>
     </Col>
     </Row>
-    {/* Art Director */}
-    <Row  >
+    {/* Wrap */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Wrap</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{pro_designer_qty_wrap || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{pro_designer_uno_wrap || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{pro_designer_una_wrap || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{pro_designer_rt_wrap || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{prodeswrap_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={9} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{prodesall_total || 0}</p>
+    </Col>
+    </Row>
+    </div>
+    {/* Supervising Art Director */}
+    <div className='mt-3'>
+    <Row >
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.20</p>
     </Col>
     <Col md={5} >
+    <p className={`${styles.Underline}`}>Supervising Art Director</p>
+    </Col>
+    </Row>
+    {/* Prep */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Prep</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{supervart_qty_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{supervart_uno_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{supervart_una_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{supervart_rt_prep || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{supartdirprep_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Shoot */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Shoot</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{supervart_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{supervart_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{supervart_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{supervart_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{supartdir_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={9} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{supartdirall_total || 0}</p>
+    </Col>
+    </Row>
+    </div>
+    {/* Art Director */}
+    <div className='mt-3'>
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>08.30</p>
+    </Col>
+    <Col md={5} >
     <p className={`${styles.Underline}`}>Art Director</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{art_director_quantity || 0}</p>
+    </Col>
+    </Row>
+    {/* Prep */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Prep</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{art_director_qty_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{art_director_uno_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{art_director_una_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{art_director_rt_prep || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{artdirprep_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Shoot */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Shoot</p>
     </Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>{art_director_quantity || 0}</p>
@@ -3918,13 +4131,155 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{artdirector_total || 0}</p>
     </Col>
     </Row>
-    {/* Art Assistants */}
-    <Row  >
+    {/* Wrap */}
+    <Row >
     <Col md={1} >
-    <p className={`${styles.Underline}`}>08.30</p>
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Wrap</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{art_director_qty_wrap || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{art_director_uno_wrap || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{art_director_una_wrap || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{art_director_rt_wrap || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{artdirwrap_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={9} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{artdirall_total || 0}</p>
+    </Col>
+    </Row>
+    </div>
+    {/* Standby Art Director */}
+    <div className='mt-3'>
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>08.40</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Standby Art Director</p>
+    </Col>
+    </Row>
+    {/* Prep */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Prep</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{standby_art_qty_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{standby_art_uno_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{standby_art_una_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{standby_art_rt_prep || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{stbyartprep_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Shoot */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Shoot</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{standby_art_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{standby_art_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{standby_art_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{standby_art_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{standbyart_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={9} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{stbyartall_total || 0}</p>
+    </Col>
+    </Row>
+    </div>
+    {/* Art Assistants */}
+    <div className='mt-3'>
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>08.50</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>Art Assistants</p>
+    </Col>
+    </Row>
+    {/* Prep */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Prep</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{art_ass_qty_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{art_ass_uno_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{art_ass_una_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{art_ass_rt_prep || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{artassprep_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Shoot */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Shoot</p>
     </Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>{art_assistants_quantity || 0}</p>
@@ -3941,38 +4296,227 @@ const Budget = (props) => {
     <Col md={2} >
     <p className={`${styles.Underline}`}>{artassistants_total || 0}</p>
     </Col>
-    </Row>
-    {/* Production Assistants/Trainees */}
-    <Row  >
+    </Row> 
+    {/* Wrap */}
+    <Row >
     <Col md={1} >
-    <p className={`${styles.Underline}`}>08.40</p>
+    <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Production Assistants / Trainees</p>
+    <p className={`${styles.Underline}`}>Wrap</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{production_assistants_trainees_quantity || 0}</p>
+    <p className={`${styles.Underline}`}>{art_ass_qty_wrap || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{production_assistants_trainees_units_number || 0}</p>
+    <p className={`${styles.Underline}`}>{art_ass_uno_wrap || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{production_assistants_trainees_units_name || 0}</p>
+    <p className={`${styles.Underline}`}>{art_ass_una_wrap || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{production_assistants_trainees_rate || 0}</p>
+    <p className={`${styles.Underline}`}>{art_ass_rt_wrap || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{productionassistantstrainees_total || 0}</p>
+    <p className={`${styles.Underline}`}>{artasswrap_total || 0}</p>
     </Col>
     </Row>
-    {/* Graphic Artists */}
-    <Row  >
+    {/* Total */}
+    <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>08.50</p>
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={9} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{artassall_total || 0}</p>
+    </Col>
+    </Row>
+    </div>
+    {/* Set Designer/Draughtsperson */}
+    <div className='mt-3'>
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>08.60</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Set Designer / Draughtsperson</p>
+    </Col>
+    </Row>
+    {/* Prep */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Prep</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{set_design_qty_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{set_design_uno_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{set_design_una_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{set_design_rt_prep || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{setdesprep_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Shoot */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Shoot</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{set_design_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{set_design_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{set_design_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{set_design_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{setdes_total || 0}</p>
+    </Col>
+    </Row> 
+    {/* Total */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={9} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{setdesall_total || 0}</p>
+    </Col>
+    </Row>
+    </div>
+    {/* Junior Draughtsperson */}
+    <div className='mt-3'>
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>08.70</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>JuniorDraughtsperson</p>
+    </Col>
+    </Row>
+    {/* Prep */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Prep</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{junior_draught_qty_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{junior_draught_uno_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{junior_draught_una_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{junior_draught_rt_prep || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{jundraprep_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Shoot */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Shoot</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{junior_draught_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{junior_draught_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{junior_draught_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{junior_draught_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{jundraught_total || 0}</p>
+    </Col>
+    </Row> 
+    {/* Total */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={9} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{jundraall_total || 0}</p>
+    </Col>
+    </Row>
+    </div>
+    {/* Graphic Artists */}
+    <div className='mt-3'>
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>08.80</p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>Graphic Artists</p>
+    </Col>
+    </Row>
+    {/* Prep */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Prep</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{graphic_art_qty_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{graphic_art_uno_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{graphic_art_una_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{graphic_art_rt_prep || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{graphicartprep_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Shoot */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Shoot</p>
     </Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>{graphic_artists_quantity || 0}</p>
@@ -3990,6 +4534,212 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{graphicartists_total || 0}</p>
     </Col>
     </Row>
+    {/* Total */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={9} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{graphicartall_total || 0}</p>
+    </Col>
+    </Row>
+    </div>
+    {/* Art Department Coordinator */}
+    <div className='mt-3'>
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>08.90</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Art Department Coordinator</p>
+    </Col>
+    </Row>
+    {/* Prep */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Prep</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{art_dep_coor_qty_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{art_dep_coor_uno_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{art_dep_coor_una_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{art_dep_coor_rt_prep || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{artcoorprep_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Shoot */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Shoot</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{art_dep_coor_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{art_dep_coor_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{art_dep_coor_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{art_dep_coor_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{artcoor_total || 0}</p>
+    </Col>
+    </Row> 
+    {/* Wrap */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Wrap</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{art_dep_coor_qty_wrap || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{art_dep_coor_uno_wrap || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{art_dep_coor_una_wrap || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{art_dep_coor_rt_wrap || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{artcoorwrap_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={9} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{artcoorall_total || 0}</p>
+    </Col>
+    </Row>
+    </div>
+    {/* Production Assistants/Trainees */}
+    <div className='mt-3'>
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>08.91</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Production Assistants / Trainees</p>
+    </Col>
+    </Row>
+    {/* Prep */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Prep</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{pro_ass_trainees_qty_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{pro_ass_trainees_uno_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{pro_ass_trainees_una_prep || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{pro_ass_trainees_rt_prep || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{proasstrainprep_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Shoot */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Shoot</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_assistants_trainees_quantity || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_assistants_trainees_units_number || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_assistants_trainees_units_name || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{production_assistants_trainees_rate || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{productionassistantstrainees_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Wrap */}
+    <Row >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Wrap</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{pro_ass_trainees_qty_wrap || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{pro_ass_trainees_uno_wrap || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{pro_ass_trainees_una_wrap || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{pro_ass_trainees_rt_wrap || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{proasstrainwrap_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={9} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{proasstrainall_total || 0}</p>
+    </Col>
+    </Row>
+    </div>
+    {/* Concept Artist/Illustrator */}
+    {/* Story Board Artist */}
+    {/* 6th/7th Days */}
     {/* Other - Design */}
     <Row>
     <Col md={1}>

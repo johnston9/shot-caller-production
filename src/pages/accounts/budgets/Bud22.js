@@ -305,40 +305,39 @@
   art_dep_coor_una_prep, 
   art_dep_coor_rt_prep,
   art_dep_coor_qty_wrap, 
-  art_dep_coor_uno_wrap,
+  art_dep_coor_uno_wrap, 
   art_dep_coor_una_wrap, 
   art_dep_coor_rt_wrap,
-  formData.append("prodesprepTotal", prodesprepTotal);
-  formData.append("prodeswrapTotal", prodeswrapTotal);
-  formData.append("prodesallTotal", prodesallTotal);
-  formData.append("artdirprepTotal", artdirprepTotal);
-  formData.append("artdirwrapTotal", artdirwrapTotal);
-  formData.append("artdirallTotal", artdirallTotal);
-  formData.append("artassprepTotal", artassprepTotal);
-  formData.append("artasswrapTotal", artasswrapTotal);
-  formData.append("artassallTotal", artassallTotal);
-  formData.append("proasstrainprepTotal", proasstrainprepTotal);
-  formData.append("proasstrainwrapTotal", proasstrainwrapTotal);
-  formData.append("proasstrainallTotal", proasstrainallTotal);
-  formData.append("graphicartprepTotal", graphicartprepTotal);
-  formData.append("graphicartwrapTotal", graphicartwrapTotal);
-  formData.append("graphicartallTotal", graphicartallTotal);
-  formData.append("supartdirTotal", supartdirTotal);
-  formData.append("supartdirprepTotal", supartdirprepTotal);
-  formData.append("supartdirallTotal", supartdirallTotal);
-  formData.append("setdesTotal", setdesTotal);
-  formData.append("setdesprepTotal", setdesprepTotal);
-  formData.append("setdesallTotal", setdesallTotal); 
-  formData.append("jundraughtTotal", jundraughtTotal);
-  formData.append("jundraprepTotal", jundraprepTotal);
-  formData.append("jundraallTotal", jundraallTotal);
-  formData.append("standbyartTotal", standbyartTotal);
-  formData.append("stbyartprepTotal", stbyartprepTotal);
-  formData.append("stbyartallTotal", stbyartallTotal);
-  formData.append("artcoorTotal", artcoorTotal);
-  formData.append("artcoorprepTotal", artcoorprepTotal);
-  formData.append("artcoorwrapTotal", artcoorwrapTotal);
-  formData.append("artcoorallTotal", artcoorallTotal);
+  formData.append("prodesprep_total", prodesprepTotal);
+  formData.append("prodeswrap_total", prodeswrapTotal);
+  formData.append("prodesall_total", prodesallTotal);
+  formData.append("artdirprep_total", artdirprepTotal);
+  formData.append("artdirwrap_total", artdirwrapTotal);
+  formData.append("artdirall_total", artdirallTotal);
+  formData.append("artassprep_total", artassprepTotal);
+  formData.append("artasswrap_total", artasswrapTotal);
+  formData.append("artassall_total", artassallTotal);
+  formData.append("proasstrainprep_total", proasstrainprepTotal);
+  formData.append("proasstrainwrap_total", proasstrainwrapTotal);
+  formData.append("proasstrainall_total", proasstrainallTotal);
+  formData.append("graphicartprep_total", graphicartprepTotal);
+  formData.append("graphicartall_total", graphicartallTotal);
+  formData.append("supartdir_total", supartdirTotal);
+  formData.append("supartdirprep_total", supartdirprepTotal);
+  formData.append("supartdirall_total", supartdirallTotal);
+  formData.append("standbyart_total", standbyartTotal);
+  formData.append("stbyartprep_total", stbyartprepTotal);
+  formData.append("stbyartall_total", stbyartallTotal);
+  formData.append("setdes_total", setdesTotal);
+  formData.append("setdesprep_total", setdesprepTotal);
+  formData.append("setdesall_total", setdesallTotal); 
+  formData.append("jundraught_total", jundraughtTotal);
+  formData.append("jundraprep_total", jundraprepTotal);
+  formData.append("jundraall_total", jundraallTotal);
+  formData.append("artcoor_total", artcoorTotal);
+  formData.append("artcoorprep_total", artcoorprepTotal);
+  formData.append("artcoorwrap_total", artcoorwrapTotal);
+  formData.append("artcoorall_total", artcoorallTotal);
   // prep wrap 
   // + 68 in submit2 already
 

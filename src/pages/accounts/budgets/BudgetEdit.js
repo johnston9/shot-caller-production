@@ -1341,18 +1341,32 @@ function BudgetEdit() {
   // Design Labour values
   const {
     // new
-    graphic_art_qty_prep, graphic_art_uno_prep,
-    graphic_art_una_prep, graphic_art_rt_prep,
+    production_designer_quantity, production_designer_units_number,
+    production_designer_units_name, production_designer_rate,
+    pro_designer_qty_prep, pro_designer_uno_prep,
+    pro_designer_una_prep, pro_designer_rt_prep,
+    pro_designer_qty_wrap, pro_designer_uno_wrap,
+    pro_designer_una_wrap, pro_designer_rt_wrap,
     supervart_qty, supervart_uno,
     supervart_una, supervart_rt,
     supervart_qty_prep, supervart_uno_prep,
     supervart_una_prep, supervart_rt_prep,
-    art_dep_coor_qty, art_dep_coor_uno,
-    art_dep_coor_una, art_dep_coor_rt,
-    art_dep_coor_qty_prep, art_dep_coor_uno_prep,
-    art_dep_coor_una_prep, art_dep_coor_rt_prep,
-    art_dep_coor_qty_wrap, art_dep_coor_uno_wrap,
-    art_dep_coor_una_wrap, art_dep_coor_rt_wrap,
+    art_director_quantity, art_director_units_number,
+    art_director_units_name, art_director_rate,
+    art_director_qty_prep, art_director_uno_prep,
+    art_director_una_prep, art_director_rt_prep,
+    art_director_qty_wrap, art_director_uno_wrap,
+    art_director_una_wrap, art_director_rt_wrap,
+    standby_art_qty, standby_art_uno,
+    standby_art_una, standby_art_rt,
+    standby_art_qty_prep, standby_art_uno_prep,
+    standby_art_una_prep, standby_art_rt_prep,
+    art_assistants_quantity, art_assistants_units_number,
+    art_assistants_units_name, art_assistants_rate,
+    art_ass_qty_prep, art_ass_uno_prep,
+    art_ass_una_prep, art_ass_rt_prep,
+    art_ass_qty_wrap, art_ass_uno_wrap,
+    art_ass_una_wrap, art_ass_rt_wrap,
     set_design_qty, set_design_uno,
     set_design_una, set_design_rt,
     set_design_qty_prep, set_design_uno_prep,
@@ -1361,22 +1375,18 @@ function BudgetEdit() {
     junior_draught_una, junior_draught_rt,
     junior_draught_qty_prep, junior_draught_uno_prep,
     junior_draught_una_prep, junior_draught_rt_prep,
-    standby_art_qty, standby_art_uno,
-    standby_art_una, standby_art_rt,
-    standby_art_qty_prep, standby_art_uno_prep,
-    standby_art_una_prep, standby_art_rt_prep,
-    pro_designer_qty_prep, pro_designer_uno_prep,
-    pro_designer_una_prep, pro_designer_rt_prep,
-    pro_designer_qty_wrap, pro_designer_uno_wrap,
-    pro_designer_una_wrap, pro_designer_rt_wrap,
-    art_director_qty_prep, art_director_uno_prep,
-    art_director_una_prep, art_director_rt_prep,
-    art_director_qty_wrap, art_director_uno_wrap,
-    art_director_una_wrap, art_director_rt_wrap,
-    art_ass_qty_prep, art_ass_uno_prep,
-    art_ass_una_prep, art_ass_rt_prep,
-    art_ass_qty_wrap, art_ass_uno_wrap,
-    art_ass_una_wrap, art_ass_rt_wrap,
+    graphic_artists_quantity, graphic_artists_units_number,
+    graphic_artists_units_name, graphic_artists_rate,
+    graphic_art_qty_prep, graphic_art_uno_prep,
+    graphic_art_una_prep, graphic_art_rt_prep,
+    art_dep_coor_qty, art_dep_coor_uno,
+    art_dep_coor_una, art_dep_coor_rt,
+    art_dep_coor_qty_prep, art_dep_coor_uno_prep,
+    art_dep_coor_una_prep, art_dep_coor_rt_prep,
+    art_dep_coor_qty_wrap, art_dep_coor_uno_wrap,
+    art_dep_coor_una_wrap, art_dep_coor_rt_wrap,
+    production_assistants_trainees_quantity, production_assistants_trainees_units_number,
+    production_assistants_trainees_units_name, production_assistants_trainees_rate,
     pro_ass_trainees_qty_prep, pro_ass_trainees_uno_prep,
     pro_ass_trainees_una_prep, pro_ass_trainees_rt_prep,
     pro_ass_trainees_qty_wrap, pro_ass_trainees_uno_wrap,
@@ -1387,17 +1397,7 @@ function BudgetEdit() {
     overtime_design, overtime_unit_design,
     days6th7th_design, days6th7th_unit_design,
     box_rent_unit_design, box_rent_design,
-    fringes_taxes_design,
-    production_designer_quantity, production_designer_units_number,
-    production_designer_units_name, production_designer_rate,
-    art_director_quantity, art_director_units_number,
-    art_director_units_name, art_director_rate,
-    art_assistants_quantity, art_assistants_units_number,
-    art_assistants_units_name, art_assistants_rate,
-    production_assistants_trainees_quantity, production_assistants_trainees_units_number,
-    production_assistants_trainees_units_name, production_assistants_trainees_rate,
-    graphic_artists_quantity, graphic_artists_units_number,
-    graphic_artists_units_name, graphic_artists_rate, other_design,
+    other_design, fringes_taxes_design,
     } = postDataDesign;
 
   // production designer
@@ -4410,18 +4410,32 @@ function BudgetEdit() {
             craft_services_rate});
           setProductionstaffTotal(productionstaff_total);
         // design
-        const {graphic_art_qty_prep, graphic_art_uno_prep,
-          graphic_art_una_prep, graphic_art_rt_prep,
+        const {production_designer_quantity, production_designer_units_number,
+          production_designer_units_name, production_designer_rate,
+          pro_designer_qty_prep, pro_designer_uno_prep,
+          pro_designer_una_prep, pro_designer_rt_prep,
+          pro_designer_qty_wrap, pro_designer_uno_wrap,
+          pro_designer_una_wrap, pro_designer_rt_wrap,
           supervart_qty, supervart_uno,
           supervart_una, supervart_rt,
           supervart_qty_prep, supervart_uno_prep,
           supervart_una_prep, supervart_rt_prep,
-          art_dep_coor_qty, art_dep_coor_uno,
-          art_dep_coor_una, art_dep_coor_rt,
-          art_dep_coor_qty_prep, art_dep_coor_uno_prep,
-          art_dep_coor_una_prep, art_dep_coor_rt_prep,
-          art_dep_coor_qty_wrap, art_dep_coor_uno_wrap,
-          art_dep_coor_una_wrap, art_dep_coor_rt_wrap,
+          art_director_quantity, art_director_units_number,
+          art_director_units_name, art_director_rate,
+          art_director_qty_prep, art_director_uno_prep,
+          art_director_una_prep, art_director_rt_prep,
+          art_director_qty_wrap, art_director_uno_wrap,
+          art_director_una_wrap, art_director_rt_wrap,
+          standby_art_qty, standby_art_uno,
+          standby_art_una, standby_art_rt,
+          standby_art_qty_prep, standby_art_uno_prep,
+          standby_art_una_prep, standby_art_rt_prep,
+          art_assistants_quantity, art_assistants_units_number,
+          art_assistants_units_name, art_assistants_rate,
+          art_ass_qty_prep, art_ass_uno_prep,
+          art_ass_una_prep, art_ass_rt_prep,
+          art_ass_qty_wrap, art_ass_uno_wrap,
+          art_ass_una_wrap, art_ass_rt_wrap,
           set_design_qty, set_design_uno,
           set_design_una, set_design_rt,
           set_design_qty_prep, set_design_uno_prep,
@@ -4430,22 +4444,18 @@ function BudgetEdit() {
           junior_draught_una, junior_draught_rt,
           junior_draught_qty_prep, junior_draught_uno_prep,
           junior_draught_una_prep, junior_draught_rt_prep,
-          standby_art_qty, standby_art_uno,
-          standby_art_una, standby_art_rt,
-          standby_art_qty_prep, standby_art_uno_prep,
-          standby_art_una_prep, standby_art_rt_prep,
-          pro_designer_qty_prep, pro_designer_uno_prep,
-          pro_designer_una_prep, pro_designer_rt_prep,
-          pro_designer_qty_wrap, pro_designer_uno_wrap,
-          pro_designer_una_wrap, pro_designer_rt_wrap,
-          art_director_qty_prep, art_director_uno_prep,
-          art_director_una_prep, art_director_rt_prep,
-          art_director_qty_wrap, art_director_uno_wrap,
-          art_director_una_wrap, art_director_rt_wrap,
-          art_ass_qty_prep, art_ass_uno_prep,
-          art_ass_una_prep, art_ass_rt_prep,
-          art_ass_qty_wrap, art_ass_uno_wrap,
-          art_ass_una_wrap, art_ass_rt_wrap,
+          graphic_artists_quantity, graphic_artists_units_number,
+          graphic_artists_units_name, graphic_artists_rate,
+          graphic_art_qty_prep, graphic_art_uno_prep,
+          graphic_art_una_prep, graphic_art_rt_prep,
+          art_dep_coor_qty, art_dep_coor_uno,
+          art_dep_coor_una, art_dep_coor_rt,
+          art_dep_coor_qty_prep, art_dep_coor_uno_prep,
+          art_dep_coor_una_prep, art_dep_coor_rt_prep,
+          art_dep_coor_qty_wrap, art_dep_coor_uno_wrap,
+          art_dep_coor_una_wrap, art_dep_coor_rt_wrap,
+          production_assistants_trainees_quantity, production_assistants_trainees_units_number,
+          production_assistants_trainees_units_name, production_assistants_trainees_rate,
           pro_ass_trainees_qty_prep, pro_ass_trainees_uno_prep,
           pro_ass_trainees_una_prep, pro_ass_trainees_rt_prep,
           pro_ass_trainees_qty_wrap, pro_ass_trainees_uno_wrap,
@@ -4456,30 +4466,34 @@ function BudgetEdit() {
           overtime_design, overtime_unit_design,
           days6th7th_design, days6th7th_unit_design,
           box_rent_unit_design, box_rent_design,
-          fringes_taxes_design,
-          production_designer_quantity, production_designer_units_number,
-          production_designer_units_name, production_designer_rate,
-          art_director_quantity, art_director_units_number,
-          art_director_units_name, art_director_rate,
-          art_assistants_quantity, art_assistants_units_number,
-          art_assistants_units_name, art_assistants_rate,
-          production_assistants_trainees_quantity, production_assistants_trainees_units_number,
-          production_assistants_trainees_units_name, production_assistants_trainees_rate,
-          graphic_artists_quantity, graphic_artists_units_number,
-          graphic_artists_units_name, graphic_artists_rate, other_design,
+          other_design, fringes_taxes_design,
           designlabour_total} = data.results[0];
-        setPostDataDesign({graphic_art_qty_prep, graphic_art_uno_prep,
-          graphic_art_una_prep, graphic_art_rt_prep,
+        setPostDataDesign({production_designer_quantity, production_designer_units_number,
+          production_designer_units_name, production_designer_rate,
+          pro_designer_qty_prep, pro_designer_uno_prep,
+          pro_designer_una_prep, pro_designer_rt_prep,
+          pro_designer_qty_wrap, pro_designer_uno_wrap,
+          pro_designer_una_wrap, pro_designer_rt_wrap,
           supervart_qty, supervart_uno,
           supervart_una, supervart_rt,
           supervart_qty_prep, supervart_uno_prep,
           supervart_una_prep, supervart_rt_prep,
-          art_dep_coor_qty, art_dep_coor_uno,
-          art_dep_coor_una, art_dep_coor_rt,
-          art_dep_coor_qty_prep, art_dep_coor_uno_prep,
-          art_dep_coor_una_prep, art_dep_coor_rt_prep,
-          art_dep_coor_qty_wrap, art_dep_coor_uno_wrap,
-          art_dep_coor_una_wrap, art_dep_coor_rt_wrap,
+          art_director_quantity, art_director_units_number,
+          art_director_units_name, art_director_rate,
+          art_director_qty_prep, art_director_uno_prep,
+          art_director_una_prep, art_director_rt_prep,
+          art_director_qty_wrap, art_director_uno_wrap,
+          art_director_una_wrap, art_director_rt_wrap,
+          standby_art_qty, standby_art_uno,
+          standby_art_una, standby_art_rt,
+          standby_art_qty_prep, standby_art_uno_prep,
+          standby_art_una_prep, standby_art_rt_prep,
+          art_assistants_quantity, art_assistants_units_number,
+          art_assistants_units_name, art_assistants_rate,
+          art_ass_qty_prep, art_ass_uno_prep,
+          art_ass_una_prep, art_ass_rt_prep,
+          art_ass_qty_wrap, art_ass_uno_wrap,
+          art_ass_una_wrap, art_ass_rt_wrap,
           set_design_qty, set_design_uno,
           set_design_una, set_design_rt,
           set_design_qty_prep, set_design_uno_prep,
@@ -4488,22 +4502,18 @@ function BudgetEdit() {
           junior_draught_una, junior_draught_rt,
           junior_draught_qty_prep, junior_draught_uno_prep,
           junior_draught_una_prep, junior_draught_rt_prep,
-          standby_art_qty, standby_art_uno,
-          standby_art_una, standby_art_rt,
-          standby_art_qty_prep, standby_art_uno_prep,
-          standby_art_una_prep, standby_art_rt_prep,
-          pro_designer_qty_prep, pro_designer_uno_prep,
-          pro_designer_una_prep, pro_designer_rt_prep,
-          pro_designer_qty_wrap, pro_designer_uno_wrap,
-          pro_designer_una_wrap, pro_designer_rt_wrap,
-          art_director_qty_prep, art_director_uno_prep,
-          art_director_una_prep, art_director_rt_prep,
-          art_director_qty_wrap, art_director_uno_wrap,
-          art_director_una_wrap, art_director_rt_wrap,
-          art_ass_qty_prep, art_ass_uno_prep,
-          art_ass_una_prep, art_ass_rt_prep,
-          art_ass_qty_wrap, art_ass_uno_wrap,
-          art_ass_una_wrap, art_ass_rt_wrap,
+          graphic_artists_quantity, graphic_artists_units_number,
+          graphic_artists_units_name, graphic_artists_rate,
+          graphic_art_qty_prep, graphic_art_uno_prep,
+          graphic_art_una_prep, graphic_art_rt_prep,
+          art_dep_coor_qty, art_dep_coor_uno,
+          art_dep_coor_una, art_dep_coor_rt,
+          art_dep_coor_qty_prep, art_dep_coor_uno_prep,
+          art_dep_coor_una_prep, art_dep_coor_rt_prep,
+          art_dep_coor_qty_wrap, art_dep_coor_uno_wrap,
+          art_dep_coor_una_wrap, art_dep_coor_rt_wrap,
+          production_assistants_trainees_quantity, production_assistants_trainees_units_number,
+          production_assistants_trainees_units_name, production_assistants_trainees_rate,
           pro_ass_trainees_qty_prep, pro_ass_trainees_uno_prep,
           pro_ass_trainees_una_prep, pro_ass_trainees_rt_prep,
           pro_ass_trainees_qty_wrap, pro_ass_trainees_uno_wrap,
@@ -4514,18 +4524,7 @@ function BudgetEdit() {
           overtime_design, overtime_unit_design,
           days6th7th_design, days6th7th_unit_design,
           box_rent_unit_design, box_rent_design,
-          fringes_taxes_design,
-          production_designer_quantity, production_designer_units_number,
-          production_designer_units_name, production_designer_rate,
-          art_director_quantity, art_director_units_number,
-          art_director_units_name, art_director_rate,
-          art_assistants_quantity, art_assistants_units_number,
-          art_assistants_units_name, art_assistants_rate,
-          production_assistants_trainees_quantity, production_assistants_trainees_units_number,
-          production_assistants_trainees_units_name, production_assistants_trainees_rate,
-          graphic_artists_quantity, graphic_artists_units_number,
-          graphic_artists_units_name, graphic_artists_rate, other_design,
-        });
+          other_design, fringes_taxes_design,});
         setDesignlabourTotal(designlabour_total);
         // construction
         const {fringes_taxes_construction,
@@ -6480,20 +6479,20 @@ function BudgetEdit() {
     formData.append("days6th7th_unit_design", days6th7th_unit_design);
     formData.append("box_rent_design", box_rent_design);
     formData.append("box_rent_unit_design", box_rent_unit_design);
-    formData.append("prodesprepTotal", prodesprepTotal);
-    formData.append("prodeswrapTotal", prodeswrapTotal);
-    formData.append("prodesallTotal", prodesallTotal);
-    formData.append("artdirprepTotal", artdirprepTotal);
-    formData.append("artdirwrapTotal", artdirwrapTotal);
-    formData.append("artdirallTotal", artdirallTotal);
-    formData.append("artassprepTotal", artassprepTotal);
-    formData.append("artasswrapTotal", artasswrapTotal);
-    formData.append("artassallTotal", artassallTotal);
-    formData.append("proasstrainprepTotal", proasstrainprepTotal);
-    formData.append("proasstrainwrapTotal", proasstrainwrapTotal);
-    formData.append("proasstrainallTotal", proasstrainallTotal);
-    formData.append("graphicartprepTotal", graphicartprepTotal);
-    formData.append("graphicartallTotal", graphicartallTotal);
+    formData.append("prodesprep_total", prodesprepTotal);
+    formData.append("prodeswrap_total", prodeswrapTotal);
+    formData.append("prodesall_total", prodesallTotal);
+    formData.append("artdirprep_total", artdirprepTotal);
+    formData.append("artdirwrap_total", artdirwrapTotal);
+    formData.append("artdirall_total", artdirallTotal);
+    formData.append("artassprep_total", artassprepTotal);
+    formData.append("artasswrap_total", artasswrapTotal);
+    formData.append("artassall_total", artassallTotal);
+    formData.append("proasstrainprep_total", proasstrainprepTotal);
+    formData.append("proasstrainwrap_total", proasstrainwrapTotal);
+    formData.append("proasstrainall_total", proasstrainallTotal);
+    formData.append("graphicartprep_total", graphicartprepTotal);
+    formData.append("graphicartall_total", graphicartallTotal);
     formData.append("graphic_art_qty_prep", graphic_art_qty_prep);
     formData.append("graphic_art_uno_prep", graphic_art_uno_prep); 
     formData.append("graphic_art_una_prep", graphic_art_una_prep);
@@ -6542,22 +6541,22 @@ function BudgetEdit() {
     formData.append("art_dep_coor_uno_wrap", art_dep_coor_uno_wrap);
     formData.append("art_dep_coor_una_wrap", art_dep_coor_una_wrap);
     formData.append("art_dep_coor_rt_wrap", art_dep_coor_rt_wrap);
-    formData.append("supartdirTotal", supartdirTotal);
-    formData.append("supartdirprepTotal", supartdirprepTotal);
-    formData.append("supartdirallTotal", supartdirallTotal);
-    formData.append("setdesTotal", setdesTotal);
-    formData.append("setdesprepTotal", setdesprepTotal);
-    formData.append("setdesallTotal", setdesallTotal); 
-    formData.append("jundraughtTotal", jundraughtTotal);
-    formData.append("jundraprepTotal", jundraprepTotal);
-    formData.append("jundraallTotal", jundraallTotal);
-    formData.append("standbyartTotal", standbyartTotal);
-    formData.append("stbyartprepTotal", stbyartprepTotal);
-    formData.append("stbyartallTotal", stbyartallTotal);
-    formData.append("artcoorTotal", artcoorTotal);
-    formData.append("artcoorprepTotal", artcoorprepTotal);
-    formData.append("artcoorwrapTotal", artcoorwrapTotal);
-    formData.append("artcoorallTotal", artcoorallTotal);
+    formData.append("supartdir_total", supartdirTotal);
+    formData.append("supartdirprep_total", supartdirprepTotal);
+    formData.append("supartdirall_total", supartdirallTotal);
+    formData.append("standbyart_total", standbyartTotal);
+    formData.append("stbyartprep_total", stbyartprepTotal);
+    formData.append("stbyartall_total", stbyartallTotal);
+    formData.append("setdes_total", setdesTotal);
+    formData.append("setdesprep_total", setdesprepTotal);
+    formData.append("setdesall_total", setdesallTotal); 
+    formData.append("jundraught_total", jundraughtTotal);
+    formData.append("jundraprep_total", jundraprepTotal);
+    formData.append("jundraall_total", jundraallTotal);
+    formData.append("artcoor_total", artcoorTotal);
+    formData.append("artcoorprep_total", artcoorprepTotal);
+    formData.append("artcoorwrap_total", artcoorwrapTotal);
+    formData.append("artcoorall_total", artcoorallTotal);
     // formData.append("staaaaars", staaaaars);
     // formData.append("staaaaars", staaaaars);
     // formData.append("staaaaars", staaaaars);

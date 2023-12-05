@@ -771,16 +771,21 @@ const DesignLabour = (props) => {
     // eslint-disable-next-line
   }, [artcoorTotal, artcoorprepTotal, artcoorwrapTotal]);
 
-  // START HERE
+  // START HERE  
   // function to add all design on change 
   useEffect(() => {
     const addDesign = () => {
       setDesignlabourTotal(
-      parseFloat(productiondesignerTotal || 0) +
-      parseFloat(artdirectorTotal || 0) +
-      parseFloat(artassistantsTotal || 0) +
-      parseFloat(productionassistantstraineesTotal || 0) +
-      parseFloat(graphicartistsTotal || 0) +
+      parseFloat(prodesallTotal || 0) +
+      parseFloat(artdirallTotal || 0) +
+      parseFloat(artassallTotal || 0) +
+      parseFloat(proasstrainallTotal || 0) +
+      parseFloat(graphicartallTotal || 0) +
+      parseFloat(supartdirallTotal || 0) +
+      parseFloat(setdesallTotal || 0) +
+      parseFloat(jundraallTotal || 0) +
+      parseFloat(stbyartallTotal || 0) +
+      parseFloat(artcoorallTotal || 0) +
       parseFloat(fringes_taxes_design || 0) +
       parseFloat(sketch_artists || 0) +
       parseFloat(storyboard_artists || 0) +
@@ -799,10 +804,13 @@ const DesignLabour = (props) => {
       clearTimeout(timer);
     };
     // eslint-disable-next-line
-  }, [other_design, graphicartistsTotal, productionassistantstraineesTotal,
-    artassistantsTotal, artdirectorTotal, productiondesignerTotal,
+  }, [graphicartallTotal, proasstrainallTotal,
+    artassallTotal, artdirallTotal, prodesallTotal,
+    supartdirallTotal, setdesallTotal, jundraallTotal,
+    stbyartallTotal, artcoorallTotal,
     fringes_taxes_design, sketch_artists, storyboard_artists,
-    holidays_design, overtime_design, days6th7th_design, box_rent_design]);
+    holidays_design, overtime_design, days6th7th_design,
+    other_design, box_rent_design]);
 
   return (
     <div className="mt-5">
