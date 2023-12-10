@@ -9,6 +9,10 @@
   border-bottom: 1px solid #999;
 }
 
+.Underline3 {
+  border-bottom: 3px solid #999;
+}
+
 .BoldBlack {
   font-weight: 700;
   color: #000;
