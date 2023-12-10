@@ -3823,7 +3823,8 @@ function BudgetEdit() {
   // end totals------------------------
 
   const buttons = (
-    <div className="text-center mt-3">    
+    <div className="text-center mt-5">    
+    <hr className={`${styles.Break} mx-5 px-5 my-5 mb-2`}/>
       <Button
         className={`${btnStyles.Button} ${btnStyles.Blue} px-5 mr-3`}
         onClick={() => history.goBack()}
@@ -7536,12 +7537,13 @@ function BudgetEdit() {
     </Col>
     </Row>
     </div>
-    </Col>
+    </Col> 
     </Row>
     {/* "A"  "B" and "C" and "D" total */}
     {abovebelowabcanddTotal}
     {contin}
     {grandtotal}
+    <hr className={`${styles.Break} mt-5 mb-2`}/>
     {/* info */}
     {!showInfo ? (
       ""

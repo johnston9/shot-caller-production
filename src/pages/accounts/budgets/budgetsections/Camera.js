@@ -36,56 +36,13 @@ const Camera = (props) => {
       stills_qty, stills_uno, stills_una, stills_rt,
     fringes_taxes_camera,} = postDataCamera;
 
-    // handleChange1 - replace(/\D/g,'') - works but no decimal
-    const handleChange1 = (event) => {
+    // handleChange - replace(/\D/g,'') - works but no decimal
+    const handleChange = (event) => {
       setPostDataCamera({
       ...postDataCamera,
       [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
       });
     }; 
-
-    // handleChange6 - replace(/[^0-9.]/g, '') - hopfully works best
-    const handleChange6 = (event) => {
-        setPostDataCamera({
-        ...postDataCamera,
-        [event.target.name]: parseFloat(event.target.value.replace(/[^0-9.]/g, '') || 0 ),
-        });
-    }; 
-
-    // handleChange3 - parseFloat(event.target.value) ?  
-    const handleChange3 = (event) => {
-        setPostDataCamera({
-        ...postDataCamera,
-        [event.target.name]: parseFloat(event.target.value) ? parseFloat(event.target.value) : '',
-        });
-    }; 
-
-    // handleChange - Use parseFloat only - - doesn't work first go
-    const handleChange = (event) => {
-        setPostDataCamera({
-        ...postDataCamera,
-        [event.target.name]: parseFloat(event.target.value) || 0,
-        });
-    }; 
-
-    // handleChange2 - const re = /\d+\.?\d*/ - doesn't work
-    const handleChange2 = (event) => {
-        const re = new RegExp('/\d+\.?\d*/');
-        if (re.test(event.target.value)) {
-          setPostDataCamera({
-          ...postDataCamera,
-          [event.target.name]: event.target.value,
-          });
-        }
-    }; 
-
-    // handleChange4 - Use text="number" in imput box
-    const handleChange4 = (event) => {
-        setPostDataCamera({
-        ...postDataCamera,
-        [event.target.name]: parseFloat(event.target.value) || 0,
-        });
-    };      
 
     // handleChange Text 
     const handleChangeText = (event) => {
@@ -94,6 +51,49 @@ const Camera = (props) => {
       [event.target.name]: event.target.value,
       });
     };
+
+    // handleChange3 - parseFloat(event.target.value) ?  
+    // const handleChange3 = (event) => {
+    //     setPostDataCamera({
+    //     ...postDataCamera,
+    //     [event.target.name]: parseFloat(event.target.value) ? parseFloat(event.target.value) : '',
+    //     });
+    // }; 
+
+    // handleChange4 - Use text="number" in input box
+    // const handleChange4 = (event) => {
+    //     setPostDataCamera({
+    //     ...postDataCamera,
+    //     [event.target.name]: parseFloat(event.target.value) || 0,
+    //     });
+    // }; 
+
+    // handleChange7 - Use parseFloat only - - doesn't work first go
+    // const handleChange7 = (event) => {
+    //     setPostDataCamera({
+    //     ...postDataCamera,
+    //     [event.target.name]: parseFloat(event.target.value) || 0,
+    //     });
+    // };
+
+    // handleChange2 - const re = /\d+\.?\d*/ - doesn't work
+    // const handleChange2 = (event) => {
+    //     const re = new RegExp('/\d+\.?\d*/');
+    //     if (re.test(event.target.value)) {
+    //       setPostDataCamera({
+    //       ...postDataCamera,
+    //       [event.target.name]: event.target.value,
+    //       });
+    //     }
+    // };
+
+    // handleChange6 - replace(/[^0-9.]/g, '') - hopfully works best
+    // const handleChange6 = (event) => {
+    //     setPostDataCamera({
+    //     ...postDataCamera,
+    //     [event.target.name]: parseFloat(event.target.value.replace(/[^0-9.]/g, '') || 0 ),
+    //     });
+    // };
 
     // Calculate Functions
     // function to calculate dop on change
@@ -367,7 +367,7 @@ const Camera = (props) => {
         className={styles.Input}
         name="dop_uno"
         value={dop_uno}
-        onChange={handleChange1}
+        onChange={handleChange}
             />
     </Form.Group>
     {errors?.dop_uno?.map((message, idx) => (
@@ -401,7 +401,7 @@ const Camera = (props) => {
         className={styles.Input}
         name="dop_rt"
         value={dop_rt}
-        onChange={handleChange3}
+        onChange={handleChange}
             />
     </Form.Group>
     {errors?.dop_rt?.map((message, idx) => (
@@ -461,7 +461,7 @@ const Camera = (props) => {
         className={styles.Input}
         name="camera_op_uno"
         value={camera_op_uno}
-        onChange={handleChange1}
+        onChange={handleChange}
             />
     </Form.Group>
     {errors?.camera_op_uno?.map((message, idx) => (
@@ -495,7 +495,7 @@ const Camera = (props) => {
         className={styles.Input}
         name="camera_op_rt"
         value={camera_op_rt}
-        onChange={handleChange2}
+        onChange={handleChange}
             />
     </Form.Group>
     {errors?.camera_op_rt?.map((message, idx) => (
@@ -538,7 +538,7 @@ const Camera = (props) => {
         className={styles.Input}
         name="cam_ac1_qty"
         value={cam_ac1_qty}
-        onChange={handleChange3}
+        onChange={handleChange}
             />
     </Form.Group>
     {errors?.cam_ac1_qty?.map((message, idx) => (
@@ -555,7 +555,7 @@ const Camera = (props) => {
         className={styles.Input}
         name="cam_ac1_uno"
         value={cam_ac1_uno}
-        onChange={handleChange4}
+        onChange={handleChange}
             />
     </Form.Group>
     {errors?.cam_ac1_uno?.map((message, idx) => (
@@ -589,7 +589,7 @@ const Camera = (props) => {
         className={styles.Input}
         name="cam_ac1_rt"
         value={cam_ac1_rt}
-        onChange={handleChange3}
+        onChange={handleChange}
             />
     </Form.Group>
     {errors?.cam_ac1_rt?.map((message, idx) => (

@@ -50,16 +50,32 @@ const DesignLabour = (props) => {
         artcoorallTotal, setArtcoorallTotal,
     } = props;
     
-    const {supervart_qty, supervart_uno,
+    const {production_designer_quantity, production_designer_units_number,
+        production_designer_units_name, production_designer_rate,
+        pro_designer_qty_prep, pro_designer_uno_prep,
+        pro_designer_una_prep, pro_designer_rt_prep,
+        pro_designer_qty_wrap, pro_designer_uno_wrap,
+        pro_designer_una_wrap, pro_designer_rt_wrap,
+        supervart_qty, supervart_uno,
         supervart_una, supervart_rt,
         supervart_qty_prep, supervart_uno_prep,
         supervart_una_prep, supervart_rt_prep,
-        art_dep_coor_qty, art_dep_coor_uno,
-        art_dep_coor_una, art_dep_coor_rt,
-        art_dep_coor_qty_prep, art_dep_coor_uno_prep,
-        art_dep_coor_una_prep, art_dep_coor_rt_prep,
-        art_dep_coor_qty_wrap, art_dep_coor_uno_wrap,
-        art_dep_coor_una_wrap, art_dep_coor_rt_wrap,
+        art_director_quantity, art_director_units_number,
+        art_director_units_name, art_director_rate,
+        art_director_qty_prep, art_director_uno_prep,
+        art_director_una_prep, art_director_rt_prep,
+        art_director_qty_wrap, art_director_uno_wrap,
+        art_director_una_wrap, art_director_rt_wrap,
+        standby_art_qty, standby_art_uno,
+        standby_art_una, standby_art_rt,
+        standby_art_qty_prep, standby_art_uno_prep,
+        standby_art_una_prep, standby_art_rt_prep,
+        art_assistants_quantity, art_assistants_units_number,
+        art_assistants_units_name, art_assistants_rate,
+        art_ass_qty_prep, art_ass_uno_prep,
+        art_ass_una_prep, art_ass_rt_prep,
+        art_ass_qty_wrap, art_ass_uno_wrap,
+        art_ass_una_wrap, art_ass_rt_wrap,
         set_design_qty, set_design_uno,
         set_design_una, set_design_rt,
         set_design_qty_prep, set_design_uno_prep,
@@ -68,22 +84,18 @@ const DesignLabour = (props) => {
         junior_draught_una, junior_draught_rt,
         junior_draught_qty_prep, junior_draught_uno_prep,
         junior_draught_una_prep, junior_draught_rt_prep,
-        standby_art_qty, standby_art_uno,
-        standby_art_una, standby_art_rt,
-        standby_art_qty_prep, standby_art_uno_prep,
-        standby_art_una_prep, standby_art_rt_prep,
-        pro_designer_qty_prep, pro_designer_uno_prep,
-        pro_designer_una_prep, pro_designer_rt_prep,
-        pro_designer_qty_wrap, pro_designer_uno_wrap,
-        pro_designer_una_wrap, pro_designer_rt_wrap,
-        art_director_qty_prep, art_director_uno_prep,
-        art_director_una_prep, art_director_rt_prep,
-        art_director_qty_wrap, art_director_uno_wrap,
-        art_director_una_wrap, art_director_rt_wrap,
-        art_ass_qty_prep, art_ass_uno_prep,
-        art_ass_una_prep, art_ass_rt_prep,
-        art_ass_qty_wrap, art_ass_uno_wrap,
-        art_ass_una_wrap, art_ass_rt_wrap,
+        graphic_artists_quantity, graphic_artists_units_number,
+        graphic_artists_units_name, graphic_artists_rate,
+        graphic_art_qty_prep, graphic_art_uno_prep,
+        graphic_art_una_prep, graphic_art_rt_prep,
+        art_dep_coor_qty, art_dep_coor_uno,
+        art_dep_coor_una, art_dep_coor_rt,
+        art_dep_coor_qty_prep, art_dep_coor_uno_prep,
+        art_dep_coor_una_prep, art_dep_coor_rt_prep,
+        art_dep_coor_qty_wrap, art_dep_coor_uno_wrap,
+        art_dep_coor_una_wrap, art_dep_coor_rt_wrap,
+        production_assistants_trainees_quantity, production_assistants_trainees_units_number,
+        production_assistants_trainees_units_name, production_assistants_trainees_rate,
         pro_ass_trainees_qty_prep, pro_ass_trainees_uno_prep,
         pro_ass_trainees_una_prep, pro_ass_trainees_rt_prep,
         pro_ass_trainees_qty_wrap, pro_ass_trainees_uno_wrap,
@@ -94,28 +106,18 @@ const DesignLabour = (props) => {
         overtime_design, overtime_unit_design,
         days6th7th_design, days6th7th_unit_design,
         box_rent_unit_design, box_rent_design,
-        fringes_taxes_design,
-        production_designer_quantity, production_designer_units_number,
-        production_designer_units_name, production_designer_rate,
-        art_director_quantity, art_director_units_number,
-        art_director_units_name, art_director_rate,
-        art_assistants_quantity, art_assistants_units_number,
-        art_assistants_units_name, art_assistants_rate,
-        production_assistants_trainees_quantity, production_assistants_trainees_units_number,
-        production_assistants_trainees_units_name, production_assistants_trainees_rate,
-        graphic_artists_quantity, graphic_artists_units_number,
-        graphic_artists_units_name, graphic_artists_rate, other_design,
+        other_design, fringes_taxes_design,
     } = postDataDesign;
   
   // handleChange1 - replace(/\D/g,'') - works but no decimal
   const handleChangeDesign = (event) => {
-    setPostDataProduction({
-    ...postDataProduction,
+    setPostDataDesign({
+    ...postDataDesign,
     [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
     });
   };          
             
-  // Design handleChange - parseFloat
+//   Design handleChange - parseFloat
 //   const handleChangeDesign = (event) => {
 //     setPostDataDesign({
 //       ...postDataDesign,
@@ -851,13 +853,13 @@ const DesignLabour = (props) => {
     </Col>
     </Row>
     {/* Production Designer */}
-    <div>
+    <div className="mt-3">
     <Row>
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.10</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Production Designer</p>
+    <p className={`${styles.Bold} mb-2`}>Production Designer</p>
     </Col>
     </Row>
     {/* Prep */}
@@ -1170,13 +1172,13 @@ const DesignLabour = (props) => {
     </Row>
     </div>
     {/* Supervising Art Director */}
-    <div>
+    <div className="mt-3">
     <Row>
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.20</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Supervising Art Director</p>
+    <p className={`${styles.Bold} mb-2`}>Supervising Art Director</p>
     </Col>
     </Row>
     {/* Prep */}
@@ -1237,7 +1239,7 @@ const DesignLabour = (props) => {
         {message}
         </Alert>
     ))}
-    </Col>
+    </Col>  
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="supervart_rt_prep" 
         className={`${styles.Width95} text-center mb-1`} >
@@ -1297,7 +1299,7 @@ const DesignLabour = (props) => {
         {message}
         </Alert>
     ))}
-    </Col>
+    </Col>  
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="supervart_uno" 
         className={`${styles.Width95} text-center mb-1`} >
@@ -1350,17 +1352,17 @@ const DesignLabour = (props) => {
     ))}
     </Col>
     <Col md={2} >
-    <Form.Group controlId="supartdirallTotal" 
+    <Form.Group controlId="supartdirTotal" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="supartdirallTotal"
-        value={supartdirallTotal}
+        name="supartdirTotal"
+        value={supartdirTotal}
         readOnly
             />
     </Form.Group>
-    {errors?.supartdirallTotal?.map((message, idx) => (
+    {errors?.supartdirTotal?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
@@ -1395,13 +1397,13 @@ const DesignLabour = (props) => {
     </Row>
     </div>
     {/* Art Director */}
-    <div>
+    <div className="mt-3">
     <Row>
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.30</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Art Director</p>
+    <p className={`${styles.Bold} mb-2`}>Art Director</p>
     </Col>
     </Row>
     {/* Prep */}
@@ -1714,13 +1716,13 @@ const DesignLabour = (props) => {
     </Row>
     </div>
     {/* Standby Art Director */}
-    <div>
+    <div className="mt-3">
     <Row>
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.40</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Standby Art Director</p>
+    <p className={`${styles.Bold} mb-2`}>Standby Art Director</p>
     </Col>
     </Row>
     {/* Prep */}
@@ -1939,13 +1941,13 @@ const DesignLabour = (props) => {
     </Row>
     </div>
     {/* Art Assistants */}
-    <div>
+    <div className="mt-3">
     <Row>
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.50</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Art Assistants</p>
+    <p className={`${styles.Bold} mb-2`}>Art Assistants</p>
     </Col>
     </Row>
     {/* Prep */}
@@ -2258,13 +2260,13 @@ const DesignLabour = (props) => {
     </Row>
     </div>
     {/* Set Designer/Draughtsperson */}
-    <div>
+    <div className="mt-3">
     <Row>
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.60</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Set Designer/Draughtsperson</p>
+    <p className={`${styles.Bold} mb-2`}>Set Designer/Draughtsperson</p>
     </Col>
     </Row>
     {/* Prep */}
@@ -2483,13 +2485,13 @@ const DesignLabour = (props) => {
     </Row>
     </div>
     {/* Junior Draughtsperson */}
-    <div>
+    <div className="mt-3">
     <Row>
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.70</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Junior Draughtsperson</p>
+    <p className={`${styles.Bold} mb-2`}>Junior Draughtsperson</p>
     </Col>
     </Row>
     {/* Prep */}
@@ -2708,13 +2710,13 @@ const DesignLabour = (props) => {
     </Row>
     </div>
     {/* Graphic Artists */}
-    <div>
+    <div className="mt-3">
     <Row>
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.80</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Graphic Artists</p>
+    <p className={`${styles.Bold} mb-2`}>Graphic Artists</p>
     </Col>
     </Row>
     {/* Prep */}
@@ -2933,13 +2935,13 @@ const DesignLabour = (props) => {
     </Row>
     </div>
     {/* Art Department Coordinator */}
-    <div>
+    <div className="mt-3">
     <Row>
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.90</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Art Department Coordinator</p>
+    <p className={`${styles.Bold} mb-2`}>Art Department Coordinator</p>
     </Col>
     </Row>
     {/* Prep */}
@@ -3252,13 +3254,13 @@ const DesignLabour = (props) => {
     </Row>
     </div>
     {/* Production Assistants/Trainees */}
-    <div>
+    <div className="mt-3">
     <Row>
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.91</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Production Assistants / Trainees</p>
+    <p className={`${styles.Bold} mb-2`}>Production Assistants / Trainees</p>
     </Col>
     </Row>
     {/* Prep */}
@@ -3571,7 +3573,7 @@ const DesignLabour = (props) => {
     </Row>
     </div>
     {/* Concept Artist/Illustrator */}
-    <Row>
+    <Row className="mt-3">
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.92</p>
     </Col>
@@ -3589,7 +3591,7 @@ const DesignLabour = (props) => {
         className={styles.Input}
         name="sketch_artists_unit"
         value={sketch_artists_unit}
-        onChange={handleChangeProText}
+        onChange={handleChangeDesignText}
             />
     </Form.Group>
     {errors?.sketch_artists_unit?.map((message, idx) => (
@@ -3609,7 +3611,7 @@ const DesignLabour = (props) => {
         className={styles.Input}
         name="sketch_artists"
         value={sketch_artists}
-        onChange={handleChangePro}
+        onChange={handleChangeDesign}
             />
     </Form.Group>
     {errors?.sketch_artists?.map((message, idx) => (
@@ -3620,7 +3622,7 @@ const DesignLabour = (props) => {
     </Col>
     </Row>
     {/* Story Board Artist */}
-    <Row>
+    <Row className="mt-3">
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.93</p>
     </Col>
@@ -3638,7 +3640,7 @@ const DesignLabour = (props) => {
         className={styles.Input}
         name="storyboard_artists_unit"
         value={storyboard_artists_unit}
-        onChange={handleChangeProText}
+        onChange={handleChangeDesignText}
             />
     </Form.Group>
     {errors?.storyboard_artists_unit?.map((message, idx) => (
@@ -3658,7 +3660,7 @@ const DesignLabour = (props) => {
         className={styles.Input}
         name="storyboard_artists"
         value={storyboard_artists}
-        onChange={handleChangePro}
+        onChange={handleChangeDesign}
             />
     </Form.Group>
     {errors?.storyboard_artists?.map((message, idx) => (
@@ -3687,7 +3689,7 @@ const DesignLabour = (props) => {
         className={styles.Input}
         name="days6th7th_unit_design"
         value={days6th7th_unit_design}
-        onChange={handleChangeProText}
+        onChange={handleChangeDesignText}
             />
     </Form.Group>
     {errors?.days6th7th_unit_design?.map((message, idx) => (
@@ -3707,7 +3709,7 @@ const DesignLabour = (props) => {
         className={styles.Input}
         name="days6th7th_design"
         value={days6th7th_design}
-        onChange={handleChangePro}
+        onChange={handleChangeDesign}
             />
     </Form.Group>
     {errors?.days6th7th_design?.map((message, idx) => (
@@ -3736,7 +3738,7 @@ const DesignLabour = (props) => {
         className={styles.Input}
         name="overtime_unit_design"
         value={overtime_unit_design}
-        onChange={handleChangeProText}
+        onChange={handleChangeDesignText}
             />
     </Form.Group>
     {errors?.overtime_unit_design?.map((message, idx) => (
@@ -3756,7 +3758,7 @@ const DesignLabour = (props) => {
         className={styles.Input}
         name="overtime_design"
         value={overtime_design}
-        onChange={handleChangePro}
+        onChange={handleChangeDesign}
             />
     </Form.Group>
     {errors?.overtime_design?.map((message, idx) => (
@@ -3785,7 +3787,7 @@ const DesignLabour = (props) => {
         className={styles.Input}
         name="holidays_unit_design"
         value={holidays_unit_design}
-        onChange={handleChangeProText}
+        onChange={handleChangeDesignText}
             />
     </Form.Group>
     {errors?.holidays_unit_design?.map((message, idx) => (
@@ -3805,7 +3807,7 @@ const DesignLabour = (props) => {
         className={styles.Input}
         name="holidays_design"
         value={holidays_design}
-        onChange={handleChangePro}
+        onChange={handleChangeDesign}
             />
     </Form.Group>
     {errors?.holidays_design?.map((message, idx) => (
@@ -3815,13 +3817,13 @@ const DesignLabour = (props) => {
     ))}
     </Col>
     </Row> 
-    {/* Other*/}
+    {/* Other */}
     <Row>
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.97</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Other</p>
+    <p className={`${styles.Bold}`}>Other</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     </Col>
@@ -3866,7 +3868,7 @@ const DesignLabour = (props) => {
         className={styles.Input}
         name="box_rent_unit_design"
         value={box_rent_unit_design}
-        onChange={handleChangeProText}
+        onChange={handleChangeDesignText}
             />
     </Form.Group>
     {errors?.box_rent_unit_design?.map((message, idx) => (
@@ -3886,7 +3888,7 @@ const DesignLabour = (props) => {
         className={styles.Input}
         name="box_rent_design"
         value={box_rent_design}
-        onChange={handleChangePro}
+        onChange={handleChangeDesign}
             />
     </Form.Group>
     {errors?.box_rent_design?.map((message, idx) => (
@@ -3902,7 +3904,7 @@ const DesignLabour = (props) => {
     <p className={`${styles.Underline}`}>08.99</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Fringes and Taxes</p>
+    <p className={`${styles.Bold}`}>Fringes and Taxes</p>
     </Col>
     <Col md={1} >
     <p></p>

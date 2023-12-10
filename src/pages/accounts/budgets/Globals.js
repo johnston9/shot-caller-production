@@ -1,4 +1,5 @@
 /* Globals component on the Budget Edit Page */
+// eslint-disable-next-line
 import React, { useState } from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";

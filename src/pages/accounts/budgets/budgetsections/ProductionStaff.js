@@ -546,7 +546,7 @@ const ProductionStaff = (props) => {
   // function to calculate production coordinator wrap on change
   useEffect(() => {
     const addprocoorwrap = () => {
-      setProductioncoordinatorprepTotal(parseFloat(production_coordinator_qty_wrap || 0) * 
+      setProductioncoordinatorwrapTotal(parseFloat(production_coordinator_qty_wrap || 0) * 
       parseFloat(production_coordinator_uno_wrap || 0) * 
       parseFloat(production_coordinator_rt_wrap || 0))
     }
@@ -1288,7 +1288,7 @@ const ProductionStaff = (props) => {
   // function to calculate other production wrap on change
   useEffect(() => {
     const addothprowrap = () => {
-      setOtherproprepTotal(parseFloat(other_pro_qty_wrap || 0) * 
+      setOtherprowrapTotal(parseFloat(other_pro_qty_wrap || 0) * 
       parseFloat(other_pro_uno_wrap || 0) * 
       parseFloat(other_pro_rt_wrap || 0))
     }

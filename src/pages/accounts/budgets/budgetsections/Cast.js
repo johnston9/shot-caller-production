@@ -44,8 +44,8 @@ const Cast = (props) => {
 
   // handleChange1 - replace(/\D/g,'') - works but no decimal
   const handleChangeCast = (event) => {
-    setPostDataProduction({
-    ...postDataProduction,
+    setPostDataCast({
+    ...postDataCast,
     [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
     });
   };
@@ -249,7 +249,7 @@ const Cast = (props) => {
     <p className={`${styles.Underline}`}>06.10</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Principals</p>
+    <p className={`${styles.Bold} mb-2`}>Principals</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="principals_quantity" 
@@ -343,7 +343,7 @@ const Cast = (props) => {
     <p className={`${styles.Underline}`}>06.20</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Actors</p>
+    <p className={`${styles.Bold} mb-2`}>Actors</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="actors_quantity" 
@@ -437,7 +437,7 @@ const Cast = (props) => {
     <p className={`${styles.Underline}`}>06.30</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Stunt Coordinators</p>
+    <p className={`${styles.Bold} mb-2`}>Stunt Coordinators</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="stuntcoordinators_quantity" 
@@ -531,7 +531,7 @@ const Cast = (props) => {
     <p className={`${styles.Underline}`}>06.40</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Stunt Performers</p>
+    <p className={`${styles.Bold} mb-2`}>Stunt Performers</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="stuntperformers_quantity" 
@@ -625,7 +625,7 @@ const Cast = (props) => {
     <p className={`${styles.Underline}`}>06.50</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Other Performers</p>
+    <p className={`${styles.Bold} mb-2`}>Other Performers</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="otherperformers_quantity" 
@@ -719,7 +719,7 @@ const Cast = (props) => {
     <p className={`${styles.Underline}`}>06.60</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Extras</p>
+    <p className={`${styles.Bold} mb-2`}>Extras</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="extras_quantity" 
@@ -813,7 +813,7 @@ const Cast = (props) => {
     <p className={`${styles.Underline}`}>06.70</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Casting Director</p>
+    <p className={`${styles.Bold} mb-2`}>Casting Director</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -848,7 +848,7 @@ const Cast = (props) => {
     <p className={`${styles.Underline}`}>06.80</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Extras Casting</p>
+    <p className={`${styles.Bold} mb-2`}>Extras Casting</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -883,7 +883,7 @@ const Cast = (props) => {
     <p className={`${styles.Underline}`}>06.90</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Bold}`}>Rehersals</p>
+    <p className={`${styles.Bold} mb-2`}>Rehersals</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -927,12 +927,12 @@ const Cast = (props) => {
     </Col>
     </Row>
     {/* 6th/7th Days */}
-    <Row className="mt-3">
+    <Row >
     <Col md={1} >
     <p className={`${styles.Underline}`}>06.91</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Bold}`}>6th/7th Days</p>
+    <p className={`${styles.Bold} mb-2`}>6th/7th Days</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -976,12 +976,12 @@ const Cast = (props) => {
     </Col>
     </Row>
     {/* Overtime */}
-    <Row className="mt-3">
+    <Row >
     <Col md={1} >
     <p className={`${styles.Underline}`}>06.92</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Bold}`}>Overtime</p>
+    <p className={`${styles.Bold} mb-2`}>Overtime</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -1025,12 +1025,12 @@ const Cast = (props) => {
     </Col>
     </Row>
     {/* Holidays */}
-    <Row className="mt-3">
+    <Row >
     <Col md={1} >
     <p className={`${styles.Underline}`}>06.93</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Bold}`}>Holidays</p>
+    <p className={`${styles.Bold} mb-2`}>Holidays</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -1079,7 +1079,7 @@ const Cast = (props) => {
     <p className={`${styles.Underline}`}>06.94</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Rights Payments - Cast</p>
+    <p className={`${styles.Bold} mb-2`}>Rights Payments - Cast</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -1114,7 +1114,7 @@ const Cast = (props) => {
     <p className={`${styles.Underline}`}>06.95</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Other</p>
+    <p className={`${styles.Bold} mb-2`}>Other</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -1149,7 +1149,7 @@ const Cast = (props) => {
     <p className={`${styles.Underline}`}>06.96</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Fringes & Taxes</p>
+    <p className={`${styles.Bold} mb-2`}>Fringes & Taxes</p>
     </Col>
     <Col md={1} >
     <p></p>

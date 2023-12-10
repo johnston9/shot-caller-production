@@ -1870,7 +1870,7 @@ const Budget = (props) => {
     </Col>
     </Row>
     {/* Rehersals */}
-    <Row className='mt-3'>
+    <Row >
     <Col md={1}>
     <p className={`${styles.Underline}`}>06.90</p>
     </Col>
@@ -1888,7 +1888,7 @@ const Budget = (props) => {
     </Col>
     </Row>
     {/* 6th/7th Days */}
-    <Row className='mt-3'>
+    <Row >
     <Col md={1}>
     <p className={`${styles.Underline}`}>06.91</p>
     </Col>
@@ -1906,7 +1906,7 @@ const Budget = (props) => {
     </Col>
     </Row>
     {/* Overtime */}
-    <Row className='mt-3'>
+    <Row >
     <Col md={1}>
     <p className={`${styles.Underline}`}>06.92</p>
     </Col>
@@ -1924,7 +1924,7 @@ const Budget = (props) => {
     </Col>
     </Row>
     {/* Holidays */}
-    <Row className='mt-3'>
+    <Row >
     <Col md={1}>
     <p className={`${styles.Underline}`}>06.93</p>
     </Col>
@@ -3771,7 +3771,7 @@ const Budget = (props) => {
     </Col>
     </Row>
     {/* Overtime */}
-    <Row className='mt-3'>
+    <Row >
     <Col md={1}>
     <p className={`${styles.Underline}`}>07.992</p>
     </Col>
@@ -3789,7 +3789,7 @@ const Budget = (props) => {
     </Col>
     </Row>
     {/* Holidays */}
-    <Row className='mt-3'>
+    <Row >
     <Col md={1}>
     <p className={`${styles.Underline}`}>07.993</p>
     </Col>
@@ -3807,7 +3807,7 @@ const Budget = (props) => {
     </Col>
     </Row>
     {/* Other */}
-    <Row className='mt-3'>
+    <Row >
     <Col md={1}>
     <p className={`${styles.Underline}`}>07.994</p>
     </Col>
@@ -3825,7 +3825,7 @@ const Budget = (props) => {
     </Col>
     </Row>
     {/* Box Rentals */}
-    <Row className='mt-3'>
+    <Row >
     <Col md={1}>
     <p className={`${styles.Underline}`}>07.995</p>
     </Col>
@@ -3843,7 +3843,7 @@ const Budget = (props) => {
     </Col>
     </Row>
     {/* Fringes Taxes */}
-    <Row className='mt-3'>
+    <Row >
     <Col md={1}>
     <p className={`${styles.Underline}`}>07.996</p>
     </Col>
@@ -4738,24 +4738,129 @@ const Budget = (props) => {
     </Row>
     </div>
     {/* Concept Artist/Illustrator */}
+    <Row className='mt-3'>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>08.92</p>
+    </Col>
+    <Col md={7}>
+    <p className={`${styles.Underline}`}>Concept Artist / Illustrator</p>
+    </Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>{sketch_artists_unit} </p>
+    </Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{sketch_artists || 0} </p>
+    </Col>
+    </Row>
     {/* Story Board Artist */}
-    {/* 6th/7th Days */}
+    <Row className='mt-3'>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>08.93</p>
+    </Col>
+    <Col md={7}>
+    <p className={`${styles.Underline}`}>Story Board Artist</p>
+    </Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>{storyboard_artists_unit} </p>
+    </Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{storyboard_artists || 0} </p>
+    </Col>
+    </Row>
+    {/* 6th / 7th Days */}
+    <Row className='mt-3'>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>08.94</p>
+    </Col>
+    <Col md={7}>
+    <p className={`${styles.Underline}`}>6th/7th Days</p>
+    </Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>{days6th7th_unit_design} </p>
+    </Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{days6th7th_design || 0} </p>
+    </Col>
+    </Row>
+    {/* Overtime */}
+    <Row >
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>08.95</p>
+    </Col>
+    <Col md={7}>
+    <p className={`${styles.Underline}`}>Overtime</p>
+    </Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>{overtime_unit_design} </p>
+    </Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{overtime_design || 0} </p>
+    </Col>
+    </Row>
+    {/* Holidays */}
+    <Row >
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>08.96</p>
+    </Col>
+    <Col md={7}>
+    <p className={`${styles.Underline}`}>Holidays</p>
+    </Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>{holidays_unit_design} </p>
+    </Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{holidays_design || 0} </p>
+    </Col>
+    </Row>
     {/* Other - Design */}
     <Row>
     <Col md={1}>
-    <p className={`${styles.Underline}`}>08.60</p>
+    <p className={`${styles.Underline}`}>08.97</p>
     </Col>
     <Col md={9}>
-    <p className={`${styles.Underline}`}>OTHER - DESIGN</p>
+    <p className={`${styles.Underline}`}>Other</p>
     </Col>
     <Col md={2}>
     <p className={`${styles.Underline}`}>{other_design || 0} </p>
     </Col>
     </Row>
+    {/* Box Rentals */}
+    <Row >
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>08.98</p>
+    </Col>
+    <Col md={7}>
+    <p className={`${styles.Underline}`}>Box Rentals</p>
+    </Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>{box_rent_unit_design} </p>
+    </Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{box_rent_design || 0} </p>
+    </Col>
+    </Row>
     {/* Fringes Taxes */}
     <Row>
     <Col md={1}>
-    <p className={`${styles.Underline}`}>08.70</p>
+    <p className={`${styles.Underline}`}>08.99</p>
     </Col>
     <Col md={9}>
     <p className={`${styles.Underline}`}>Fringes and Taxes, Government/Unions</p>
