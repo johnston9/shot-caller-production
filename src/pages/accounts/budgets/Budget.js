@@ -784,7 +784,7 @@ const Budget = (props) => {
       budget={budget} /> 
     ) }
     {/* BUDGET ALL */}
-    <div className='px-3'>
+    <div className={`${styles.BoldBlack}`}>
     <div className='mt-3 pl-5'>
     <Row className={ `${styles.OverviewBlue} mx-1 my-3 py-3 text-center`}>
     <Col md={12}>
@@ -981,11 +981,11 @@ const Budget = (props) => {
     </Row>
     {/* RIGHTS --------------------------------------- ------ */}
     <div>
-    <Row>
+    <Row >
     <Col md={1}>
     <p className="mb-2">01.00</p>
     </Col>
-    <Col md={8} >
+    <Col md={8} >   
     <p className={ `${styles.BoldBlack} pb-0 mb-0`}>RIGHTS</p>
     </Col>
     </Row>
@@ -1011,7 +1011,7 @@ const Budget = (props) => {
     </Col>
     </Row>
     {/* Story */}
-    <Row>
+    <Row className={`${styles.Underline2}`}>
     <Col md={1}>
     <p className={`${styles.Underline}`}>01.10</p>
     </Col>
@@ -1023,7 +1023,7 @@ const Budget = (props) => {
     </Col>
     </Row>
     {/* miscellaneous */}
-    <Row>
+    <Row className={`${styles.Underline2}`}>
     <Col md={1}>
     <p className={`${styles.Underline}`}>01.20</p>
     </Col>
@@ -1051,7 +1051,7 @@ const Budget = (props) => {
     <div className='mt-5'>
     <Row>
     <Col md={1}>
-    <p className="mb-2">02.00</p>
+    <p className={`${styles.Underline}`}>02.00</p>
     </Col>
     <Col md={10}>
     <p className={ `${styles.BoldBlack}`}>PRE-PRODUCTION AND DEVELOPMENT</p>
@@ -1079,7 +1079,7 @@ const Budget = (props) => {
     </Col>
     </Row>
     {/* research */}
-    <Row>
+    <Row className={`${styles.Underline2}`}>
     <Col md={1}>
     <p className={`${styles.Underline}`}>02.10</p>
     </Col>
@@ -1090,7 +1090,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{research_development || 0} </p>
     </Col>
     </Row>
-    <Row>
+    <Row className={`${styles.Underline2}`}>
     <Col md={1}>
     <p className={`${styles.Underline}`}>02.20</p>
     </Col>
@@ -1101,7 +1101,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{prelim_budget || 0 } </p>
     </Col>
     </Row>
-    <Row>
+    <Row className={`${styles.Underline2}`}>
     <Col md={1}>
     <p className={`${styles.Underline}`}>02.30</p>
     </Col>
@@ -1112,8 +1112,8 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{consultant_expenses || 0 } </p>
     </Col>
     </Row>
-    <Row>
-    <Col md={1}>
+    <Row className={`${styles.Underline2}`}>
+    <Col md={1}> 
     <p className={`${styles.Underline}`}>02.40</p>
     </Col>
     <Col md={9}>
@@ -1123,7 +1123,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{office_expenses || 0} </p>
     </Col>
     </Row>
-    <Row>
+    <Row className={`${styles.Underline2}`}>
     <Col md={1}>
     <p className={`${styles.Underline}`}>02.50</p>
     </Col>
@@ -1134,7 +1134,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{staff || 0 } </p>
     </Col>
     </Row>
-    <Row>
+    <Row className={`${styles.Underline2}`}>
     <Col md={1}>
     <p className={`${styles.Underline}`}>02.60</p>
     </Col>
@@ -1145,7 +1145,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{travel_expenses_development || 0 } </p>
     </Col>
     </Row>
-    <Row>
+    <Row className={`${styles.Underline2}`}>
     <Col md={1}>
     <p className={`${styles.Underline}`}>02.70</p>
     </Col>
@@ -1156,7 +1156,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{living_expenses_development || 0} </p>
     </Col>
     </Row>
-    <Row>
+    <Row className={`${styles.Underline2}`}>
     <Col md={1}>
     <p className={`${styles.Underline}`}>02.80</p>
     </Col>
@@ -1167,7 +1167,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>{other_development || 0 } </p>
     </Col>
     </Row>
-    <Row>
+    <Row className={`${styles.Underline2}`}>
     <Col md={1}>
     <p className={`${styles.Underline}`}>02.90</p>
     </Col>
@@ -1194,7 +1194,7 @@ const Budget = (props) => {
     <div className='mt-5'>
     <Row>
     <Col xs={1}>
-    <p className='mb-2'>03.00</p>
+    <p className={`${styles.Underline}`}>03.00</p>
     </Col>
     <Col xs={10}>
     <p className={ `${styles.BoldBlack} mb-2`}>SCENARIO</p>
@@ -1224,85 +1224,164 @@ const Budget = (props) => {
     <p className="mb-0">Total</p>
     </Col>
     </Row>
-    {/* Values */}
-    <Row  >
+    {/* Writers */}
+    <Row className={`${styles.Underline2}`}>
     <Col md={1} >
     <p className={`${styles.Underline}`}>03.10</p>
-    <p className={`${styles.Underline}`}>03.20</p>
-    <p className={`${styles.Underline}`}>03.30</p>
-    <p className={`${styles.Underline}`}>03.40</p>
-    <p className={`${styles.Underline}`}>03.50</p>
-    <p className={`${styles.Underline}`}>03.60</p>
-    <p className={`${styles.Underline}`}>03.70</p>
-    <p className={`${styles.Underline}`}>03.80</p>
-    <p className={`${styles.Underline}`}>03.90</p>
-    <p></p>
     </Col>
     <Col md={5} >
     <p className={`${styles.Underline}`}>Writers</p>
-    <p className={`${styles.Underline}`}>Consultants</p>
-    <p className={`${styles.Underline}`}>Editors</p>
-    <p className={`${styles.Underline}`}>Admin</p>
-    <p className={`${styles.Underline}`}>Office Cost/Expenses</p>
-    <p className={`${styles.Underline}`}>Travel Expenses</p>
-    <p className={`${styles.Underline}`}>Living Expenses</p>
-    <p className={`${styles.Underline}`}>Other</p>
-    <p className={`${styles.Underline}`}>Fringes and Taxes</p>
     </Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>{writers_quantity || 0}</p>
-    <p className={`${styles.Underline}`}>{consultants_quantity || 0}</p>
-    <p className={`${styles.Underline}`}>{editors_scenario_quantity || 0}</p>
-    <p className={`${styles.Underline}`}>{admin_scenario_quantity || 0}</p>
-    <p className={`${styles.Underline}`}></p>
-    <p className={`${styles.Underline}`}></p>
-    <p className={`${styles.Underline}`}></p>
-    <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>{writers_units_number || 0}</p>
-    <p className={`${styles.Underline}`}>{consultants_units_number || 0}</p>
-    <p className={`${styles.Underline}`}>{editors_scenario_units_number || 0}</p>
-    <p className={`${styles.Underline}`}>{admin_scenario_units_number || 0}</p>
-    <p className={`${styles.Underline}`}></p>
-    <p className={`${styles.Underline}`}></p>
-    <p className={`${styles.Underline}`}></p>
-    <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>{writers_units_name || 0}</p>
-    <p className={`${styles.Underline}`}>{consultants_units_name || 0}</p>
-    <p className={`${styles.Underline}`}>{editors_scenario_units_name || 0}</p>
-    <p className={`${styles.Underline}`}>{admin_scenario_units_name || 0}</p>
-    <p className={`${styles.Underline}`}></p>
-    <p className={`${styles.Underline}`}></p>
-    <p className={`${styles.Underline}`}></p>
-    <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>{writers_rate || 0}</p>
-    <p className={`${styles.Underline}`}>{consultants_rate || 0}</p>
-    <p className={`${styles.Underline}`}>{editors_scenario_rate || 0}</p>
-    <p className={`${styles.Underline}`}>{admin_scenario_rate || 0}</p>
-    <p className={`${styles.Underline}`}></p>
-    <p className={`${styles.Underline}`}></p>
-    <p className={`${styles.Underline}`}></p>
-    <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={2} >
     <p className={`${styles.Underline}`}>{writers_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Consultants */}
+    <Row className={`${styles.Underline2}`}>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>03.20</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Consultants</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{consultants_quantity || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{consultants_units_number || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{consultants_units_name || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{consultants_rate || 0}</p>
+    </Col>
+    <Col md={2} >
     <p className={`${styles.Underline}`}>{consultants_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Editors */}
+    <Row className={`${styles.Underline2}`}>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>03.30</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Editors</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{editors_scenario_quantity || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{editors_scenario_units_number || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{editors_scenario_units_name || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{editors_scenario_rate || 0}</p>
+    </Col>
+    <Col md={2} >
     <p className={`${styles.Underline}`}>{editors_scenario_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Admin */}
+    <Row className={`${styles.Underline2}`}>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>03.40</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Admin</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{admin_scenario_quantity || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{admin_scenario_units_number || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{admin_scenario_units_name || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{admin_scenario_rate || 0}</p>
+    </Col>
+    <Col md={2} >
     <p className={`${styles.Underline}`}>{admin_scenario_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Office Cost/Expenses */}
+    <Row className={`${styles.Underline2}`}>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>03.50</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Office Cost/Expenses</p>
+    </Col>
+    <Col md={2} >
     <p className={`${styles.Underline}`}>{office_expenses_scenario || 0}</p>
+    </Col>
+    </Row>
+    {/* Travel Expenses*/}
+    <Row className={`${styles.Underline2}`}>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>03.60</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Travel Expenses</p>
+    </Col>
+    <Col md={2} >
     <p className={`${styles.Underline}`}>{travel_expenses_scenario || 0}</p>
+    </Col>
+    </Row>
+    {/* Living Expenses*/}
+    <Row className={`${styles.Underline2}`}>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>03.70</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Living Expenses</p>
+    </Col>
+    <Col md={2} >
     <p className={`${styles.Underline}`}>{living_expenses_scenario || 0}</p>
+    </Col>
+    </Row>
+    {/* Other*/}
+    <Row className={`${styles.Underline2}`}>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>03.80</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Other</p>
+    </Col>
+    <Col md={2} >
     <p className={`${styles.Underline}`}>{other_scenario || 0}</p>
+    </Col>
+    </Row>
+    {/* Fringes and Taxes*/}
+    <Row className={`${styles.Underline2}`}>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>03.90</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Fringes & Taxes</p>
+    </Col>
+    <Col md={2} >
     <p className={`${styles.Underline}`}>{fringes_taxes_scenario || 0}</p>
     </Col>
     </Row>
     {/* total */}
-    <Row >
+    <Row className='mt-3' >
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     <p></p>
@@ -1321,25 +1400,27 @@ const Budget = (props) => {
     <div className='mt-5'>
     <Row>
     <Col xs={1}>
-    <p className='mb-2'>04.00</p>
+    <p className={`${styles.Underline}`}>04.00</p>
     </Col>
     <Col xs={10}>
     <p className={ `${styles.BoldBlack} MB-2`}>PRODUCERS AND DIRECTORS</p>
     </Col>
     </Row>
-    {/* TITLES */}
     <Row className={ `${styles.Overview} mb-2 py-1`} >
     <Col md={1} >
     <p className="mb-0">ACCT</p>
     </Col>
-    <Col md={6} >
+    <Col md={5} >
     <p className="mb-0">Description</p>
     </Col>
     <Col md={1} >
     <p className="mb-0">#</p>
     </Col>
+    <Col className="px-0 mx-0" md={1} >
+    <p></p>
+    </Col>
     <Col md={1} >
-    <p className="mb-0">Unit</p>
+    <p className="mb-0"></p>
     </Col>
     <Col md={1} >
     <p className="mb-0">Price</p>
@@ -1348,81 +1429,198 @@ const Budget = (props) => {
     <p className="mb-0">Total</p>
     </Col>
     </Row>
-    {/* Values */}
-    <Row >
+    {/* Executive Producers */}
+    <Row className={`${styles.Underline2}`}>
     <Col md={1} >
     <p className={`${styles.Underline}`}>04.10</p>
-    <p className={`${styles.Underline}`}>04.20</p>
-    <p className={`${styles.Underline}`}>04.30</p>
-    <p className={`${styles.Underline}`}>04.40</p>
-    <p className={`${styles.Underline}`}>04.50</p>
-    <p className={`${styles.Underline}`}>04.60</p>
-    <p className={`${styles.Underline}`}>04.70</p>
-    <p className={`${styles.Underline}`}>04.80</p>
-    <p className={`${styles.Underline}`}>04.90</p>
-    <p className={`${styles.Underline}`}>04.91</p>
-    <p className={`${styles.Underline}`}>04.92</p>
     </Col>
-    <Col md={6} >
+    <Col md={5} >
     <p className={`${styles.Underline}`}>Executive Producers</p>
-    <p className={`${styles.Underline}`}>Producers</p>
-    <p className={`${styles.Underline}`}>Line Producers</p>
-    <p className={`${styles.Underline}`}>Co-Producers</p>
-    <p className={`${styles.Underline}`}>Associate Producers</p>
-    <p className={`${styles.Underline}`}>Directors</p>
-    <p className={`${styles.Underline}`}>2nd Unit Directors</p>
-    <p className={`${styles.Underline}`}>Travel Expenses</p>
-    <p className={`${styles.Underline}`}>Living Expenses</p>
-    <p className={`${styles.Underline}`}>Other</p>
-    <p className={`${styles.Underline}`}>Fringes and Taxes</p>
     </Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>{executive_producers_quantity || 0}</p>
-    <p className={`${styles.Underline}`}>{producers_quantity || 0}</p>
-    <p className={`${styles.Underline}`}>{line_producers_quantity || 0}</p>
-    <p className={`${styles.Underline}`}>{co_producers_quantity || 0}</p>
-    <p className={`${styles.Underline}`}>{associate_producers_quantity || 0}</p>
-    <p className={`${styles.Underline}`}>{directors_quantity || 0}</p>
-    <p className={`${styles.Underline}`}>{unit2_directors_quantity || 0}</p>
-    <p className={`${styles.Underline}`}></p>
-    <p className={`${styles.Underline}`}></p>
-    <p className={`${styles.Underline}`}></p>
-    <p className={`${styles.Underline}`}></p>
     </Col>
-    <Col md={1} >
-    <p className={`${styles.Underline}`}></p>
-    <p className={`${styles.Underline}`}></p>
-    <p className={`${styles.Underline}`}></p>
-    <p className={`${styles.Underline}`}></p>
-    <p className={`${styles.Underline}`}></p>
-    <p className={`${styles.Underline}`}></p>
-    <p className={`${styles.Underline}`}></p>
+    <Col md={2} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>{executive_producers_rate || 0}</p>
-    <p className={`${styles.Underline}`}>{producers_rate || 0}</p>
-    <p className={`${styles.Underline}`}>{line_producers_rate || 0}</p>
-    <p className={`${styles.Underline}`}>{co_producers_rate || 0}</p>
-    <p className={`${styles.Underline}`}>{associate_producers_rate || 0}</p>
-    <p className={`${styles.Underline}`}>{directors_rate || 0}</p>
-    <p className={`${styles.Underline}`}>{unit2_directors_rate || 0}</p>
-    <p className={`${styles.Underline}`}></p>
-    <p className={`${styles.Underline}`}></p>
-    <p className={`${styles.Underline}`}></p>
-    <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={2} >
     <p className={`${styles.Underline}`}>{executive_producers_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Producers */}
+    <Row className={`${styles.Underline2}`}>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>04.20</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Producers</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{producers_quantity || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{producers_rate || 0}</p>
+    </Col>
+    <Col md={2} >
     <p className={`${styles.Underline}`}>{producers_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Line Producers */}
+    <Row className={`${styles.Underline2}`}>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>04.30</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Line Producers</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{line_producers_quantity || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{line_producers_rate || 0}</p>
+    </Col>
+    <Col md={2} >
     <p className={`${styles.Underline}`}>{line_producers_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Co-Producers */}
+    <Row className={`${styles.Underline2}`}>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>04.40</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Co-Producers</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{co_producers_quantity || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{co_producers_rate || 0}</p>
+    </Col>
+    <Col md={2} >
     <p className={`${styles.Underline}`}>{co_producers_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Associate Producers */}
+    <Row className={`${styles.Underline2}`}>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>04.50</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Associate Producers</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{associate_producers_quantity || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{associate_producers_rate || 0}</p>
+    </Col>
+    <Col md={2} >
     <p className={`${styles.Underline}`}>{associate_producers_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Directors */}
+    <Row className={`${styles.Underline2}`}>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>04.60</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Directors</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{directors_quantity || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{directors_rate || 0}</p>
+    </Col>
+    <Col md={2} >
     <p className={`${styles.Underline}`}>{directors_total || 0}</p>
+    </Col>
+    </Row>
+    {/* 2nd Unit Directors */}
+    <Row className={`${styles.Underline2}`}>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>04.70</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>2nd Unit Directors</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{unit2_directors_quantity || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{unit2_directors_rate || 0}</p>
+    </Col>
+    <Col md={2} >
     <p className={`${styles.Underline}`}>{unit2_directors_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Travel Expenses */}
+    <Row className={`${styles.Underline2}`}>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>04.80</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Travel Expenses</p>
+    </Col>
+    <Col md={2} >
     <p className={`${styles.Underline}`}>{travel_expenses_producers_dirs || 0}</p>
+    </Col>
+    </Row>
+    {/* Living Expenses */}
+    <Row className={`${styles.Underline2}`}>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>04.90</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Living Expenses</p>
+    </Col>
+    <Col md={2} >
     <p className={`${styles.Underline}`}>{living_expenses_producers_dirs || 0}</p>
+    </Col>
+    </Row>
+    {/* Other */}
+    <Row className={`${styles.Underline2}`}>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>04.91</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Other</p>
+    </Col>
+    <Col md={2} >
     <p className={`${styles.Underline}`}>{other_producers_dirs || 0}</p>
+    </Col>
+    </Row>
+    {/* Fringes & Taxes */}
+    <Row className={`${styles.Underline2}`}>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>04.92</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.Underline}`}>Fringes & Taxes</p>
+    </Col>
+    <Col md={2} >
     <p className={`${styles.Underline}`}>{fringes_taxes_producers_dirs || 0}</p>
     </Col>
     </Row>
@@ -1473,160 +1671,175 @@ const Budget = (props) => {
     <p className="mb-0">Total</p>
     </Col>
     </Row>
-    {/* Stars */}
     <Row>
+    <Col xs={1}>
+    <p className='mb-2'></p>
+    </Col>
+    <Col xs={6}>
+    <p className={ `${styles.BoldBlackU} mb-2`}>STARS</p>
+    </Col>
+    </Row>
+    {/* Stars */}
+    <Row className={`${styles.Underline2}`}>
     <Col md={1}>
     <p className={`${styles.Underline}`}>05.10</p>
     </Col>
     <Col md={9}>
-    <p className={`${styles.Underline}`}>Stars</p>
+    <p className={`${styles.BoldBlack}`}>Stars</p>
     </Col>
     <Col md={2}>
     <p className={`${styles.Underline}`}>{stars || 0} </p>
     </Col>
     </Row>
     {/* Stars Rights Payments */}
-    <Row>
+    <Row className={`${styles.Underline2}`}>
     <Col md={1}>
-    <p className={`${styles.Underline}`}>05.20</p>
+    <p className={`${styles.Underline}`}>05.20</p>  
     </Col>
     <Col md={9}>
-    <p className={`${styles.Underline}`}>Stars Rights Payments</p>
+    <p className={`${styles.BoldBlack}`}>Rights Payments</p>
     </Col>
     <Col md={2}>
     <p className={`${styles.Underline}`}>{stars_rights_payments || 0} </p>
     </Col>
     </Row>
     {/* Stars - Travel Expenses */}
-    <Row>
+    <Row className={`${styles.Underline2}`}>
     <Col md={1}>
     <p className={`${styles.Underline}`}>05.30</p>
     </Col>
     <Col md={9}>
-    <p className={`${styles.Underline}`}>Stars - Travel Expenses</p>
+    <p className={`${styles.BoldBlack}`}>Travel Expenses</p>
     </Col>
     <Col md={2}>
     <p className={`${styles.Underline}`}>{travel_expenses_stars || 0} </p>
     </Col>
     </Row>
     {/* Stars - Living Expenses */}
-    <Row>
+    <Row className={`${styles.Underline2}`}>
     <Col md={1}>
     <p className={`${styles.Underline}`}>05.40</p>
     </Col>
     <Col md={9}>
-    <p className={`${styles.Underline}`}>Stars - Living Expenses</p>
+    <p className={`${styles.BoldBlack}`}>Living Expenses</p>
     </Col>
     <Col md={2}>
     <p className={`${styles.Underline}`}>{living_expenses_stars || 0} </p>
     </Col>
     </Row>
     {/* Stars - Other */}
-    <Row>
+    <Row className={`${styles.Underline2}`}>
     <Col md={1}>
     <p className={`${styles.Underline}`}>05.50</p>
     </Col>
     <Col md={9}>
-    <p className={`${styles.Underline}`}>Stars - Other</p>
+    <p className={`${styles.BoldBlack}`}>Other</p>
     </Col>
     <Col md={2}>
     <p className={`${styles.Underline}`}>{other_stars || 0} </p>
     </Col>
     </Row>
     {/* Stars - Fringes Taxes */}
-    <Row>
+    <Row className={`${styles.Underline2}`}>
     <Col md={1}>
     <p className={`${styles.Underline}`}>05.60</p>
     </Col>
     <Col md={9}>
-    <p className={`${styles.Underline}`}>Stars - Fringes / Taxes</p>
+    <p className={`${styles.BoldBlack}`}>Fringes/Taxes</p>
     </Col>
     <Col md={2}>
     <p className={`${styles.Underline}`}>{fringes_taxes_stars || 0} </p>
     </Col>
     </Row>
+    <Row className='mt-3' >
+    <Col xs={1}>
+    <p className='mb-2'></p>
+    </Col>
+    <Col xs={6}>
+    <p className={ `${styles.BoldBlackU} mb-2`}>MUSIC</p>
+    </Col>
+    </Row>
     {/* Music */}
-    <Row className='mt-3'>
+    <Row className={`${styles.Underline2}`}>
     <Col md={1}>
     <p className={`${styles.Underline}`}>05.70</p>
     </Col>
-    <Col md={6}>
-    <p className={`${styles.Underline}`}>
-    Music: all-in package includes Composer, Musicians, 
+    <Col md={9}>
+    <p className={`${styles.BoldBlack}`}>
+    Music: All-in package includes Composer, Musicians, 
     Score, and Recording Session</p>
     </Col>
-    <Col md={3}></Col>
     <Col md={2}>
     <p className={`${styles.Underline}`}>{music || 0} </p>
     </Col>
     </Row>
     {/* Music Supervisor */}
-    <Row>
+    <Row className={`${styles.Underline2}`}>
     <Col md={1}>
     <p className={`${styles.Underline}`}>05.80</p>
     </Col>
     <Col md={9}>
-    <p className={`${styles.Underline}`}>Music Supervisor</p>
+    <p className={`${styles.BoldBlack}`}>Music Supervisor</p>
     </Col>
     <Col md={2}>
     <p className={`${styles.Underline}`}>{music_supervisor || 0} </p>
     </Col>
     </Row>
     {/* Music - Travel Expenses */}
-    <Row>
+    <Row className={`${styles.Underline2}`}>
     <Col md={1}>
     <p className={`${styles.Underline}`}>05.90</p>
     </Col>
     <Col md={9}>
-    <p className={`${styles.Underline}`}>Music - Travel Expenses</p>
+    <p className={`${styles.BoldBlack}`}>Travel Expenses</p>
     </Col>
     <Col md={2}>
     <p className={`${styles.Underline}`}>{travel_expenses_music || 0} </p>
     </Col>
     </Row>
     {/* Music - Living Expenses */}
-    <Row>
+    <Row className={`${styles.Underline2}`}>
     <Col md={1}>
     <p className={`${styles.Underline}`}>05.91</p>
     </Col>
     <Col md={9}>
-    <p className={`${styles.Underline}`}>Music - Living Expenses</p>
+    <p className={`${styles.BoldBlack}`}>Living Expenses</p>
     </Col>
     <Col md={2}>
     <p className={`${styles.Underline}`}>{living_expenses_music || 0} </p>
     </Col>
     </Row>
     {/* Add'l Music Rights - Songs, etc. */}
-    <Row>
+    <Row className={`${styles.Underline2}`}>
     <Col md={1}>
     <p className={`${styles.Underline}`}>05.92</p>
     </Col>
     <Col md={9}>
-    <p className={`${styles.Underline}`}>Add'l Music Rights - Songs, etc.</p>
+    <p className={`${styles.BoldBlack}`}>Add'l Music Rights - Songs, etc.</p>
     </Col>
     <Col md={2}>
     <p className={`${styles.Underline}`}>{music_rights_addl_songs || 0} </p>
     </Col>
     </Row>
     {/* Music - Other */}
-    <Row>
+    <Row className={`${styles.Underline2}`}>
     <Col md={1}>
     <p className={`${styles.Underline}`}>05.93</p>
     </Col>
     <Col md={9}>
-    <p className={`${styles.Underline}`}>Music - Other</p>
+    <p className={`${styles.BoldBlack}`}>Music</p>
     </Col>
     <Col md={2}>
     <p className={`${styles.Underline}`}>{other_music || 0} </p>
     </Col>
     </Row>
     {/* Music - Fringes and Taxes */}
-    <Row>
+    <Row className={`${styles.Underline2}`}>
     <Col md={1}>
     <p className={`${styles.Underline}`}>05.94</p>
     </Col>
     <Col md={9}>
-    <p className={`${styles.Underline}`}>Music - Fringes and Taxes</p>
+    <p className={`${styles.BoldBlack}`}>Fringes and Taxes</p>
     </Col>
     <Col md={2}>
     <p className={`${styles.Underline}`}>{fringes_taxes_music || 0} </p>
@@ -4968,7 +5181,7 @@ const Budget = (props) => {
     </Col>
     </Row>
     {/* Carpenters */}
-    <Row  >
+    <Row >
     <Col md={1} >
     <p className={`${styles.Underline}`}>09.30</p>
     </Col>
