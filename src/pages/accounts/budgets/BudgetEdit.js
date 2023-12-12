@@ -3184,7 +3184,7 @@ function BudgetEdit() {
   };
 
   const contin = (
-    <div>
+    <div className="mt-2">
     {/* Contingency */}
     <Row>
     <Col md={1} >
@@ -3202,9 +3202,9 @@ function BudgetEdit() {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col md={2} >
+    <Col md={2} className="mt-1" >
     <Form.Group controlId="contingency" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center my-0 py-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -3290,7 +3290,7 @@ function BudgetEdit() {
   const abovethelinetotal = (
     <div className="my-2 pl-3">
     <Row>
-    <Col className={ `${styles.Overview}  my-0 py-2`} md={10} >
+    <Col className={ `${styles.Overview}  my-0 py-0`} md={10} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL ABOVE THE LINE</p>
     </Col>
     <Col md={2} >
@@ -3482,15 +3482,15 @@ function BudgetEdit() {
   const blabourncoststotal = (
     <div className="mt-3 pl-3">
     <Row>
-    <Col className={ `${styles.Overview}  my-0 py-2`} md={10} >
+    <Col className={ `${styles.Overview}  my-0 py-0`} md={10} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>B LABOUR AND COSTS TOTAL</p>
     </Col>
-    <Col md={2} >
+    <Col md={2} className="mb-1">
     <Form.Group controlId="bLabourandCostsTotal" 
           className={`${styles.Width95} text-center pt-1 mb-0`} >
           <Form.Control 
           type="text"
-          className={styles.Input}
+          className={styles.Input1}
           name="bLabourandCostsTotal"
           value={bLabourandCostsTotal}
           readOnly
@@ -3590,15 +3590,15 @@ function BudgetEdit() {
   const belowbandcTotal = (
     <div className="mt-3 pl-3">
     <Row>
-    <Col className={ `${styles.Overview}  my-0 py-2`} md={10} >
+    <Col className={ `${styles.Overview}  my-0 py-0`} md={10} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>BELOW THE LINE "B" AND "C" TOTAL</p>
     </Col>
-    <Col md={2} >
+    <Col md={2} className="mb-1" >
     <Form.Group controlId="belowBandCTotal" 
           className={`${styles.Width95} text-center pt-1 mb-0`} >
           <Form.Control 
           type="text"
-          className={styles.Input}
+          className={styles.Input1}
           name="belowBandCTotal"
           value={belowBandCTotal}
           readOnly
@@ -3641,15 +3641,15 @@ function BudgetEdit() {
   const abovebelowabcTotal = (
     <div className="mt-3 pl-3">
     <Row>
-    <Col className={ `${styles.Overview}  my-0 py-2`} md={10} >
+    <Col className={ `${styles.Overview}  my-0 py-0`} md={10} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>ABOVE AND BELOW THE LINE "A", "B" AND "C" TOTAL</p>
     </Col>
-    <Col md={2} >
+    <Col md={2} className="mb-1">
     <Form.Group controlId="aboveBelowABCTotal" 
           className={`${styles.Width95} text-center pt-1 mb-0`} >
           <Form.Control 
           type="text"
-          className={styles.Input}
+          className={styles.Input1}
           name="aboveBelowABCTotal"
           value={aboveBelowABCTotal}
           readOnly
@@ -3745,15 +3745,15 @@ function BudgetEdit() {
   const abovebelowabcanddTotal = (
     <div className="mt-3 pl-3">
     <Row>
-    <Col className={ `${styles.Overview}  my-0 py-2`} md={10} >
+    <Col className={ `${styles.Overview}  my-0 py-0`} md={10} >
     <p className={ `${styles.Bold} pb-0 mb-0`}> "A", "B", "C" & "D" TOTAL</p>
     </Col>
-    <Col md={2} >
+    <Col md={2} className="mb-1" >
     <Form.Group controlId="aboveBelowABCandDTotal" 
           className={`${styles.Width95} text-center pt-1 mb-0`} >
           <Form.Control 
           type="text"
-          className={styles.Input}
+          className={styles.Input1}
           name="aboveBelowABCandDTotal"
           value={aboveBelowABCandDTotal}
           readOnly
@@ -3796,15 +3796,15 @@ function BudgetEdit() {
   const grandtotal = (
     <div className="my-2 pl-3">
     <Row>
-    <Col className={ `${styles.Overview}  my-0 py-2`} md={10} >
+    <Col className={ `${styles.Overview}  my-0 py-0`} md={10} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>GRAND TOTAL</p>
     </Col>
-    <Col md={2} >
+    <Col md={2} className="mb-1">
     <Form.Group controlId="grandTotal" 
           className={`${styles.Width95} text-center pt-1 mb-0`} >
           <Form.Control 
           type="text"
-          className={styles.Input}
+          className={styles.Input1}
           name="grandTotal"
           value={grandTotal}
           readOnly
@@ -6685,7 +6685,7 @@ function BudgetEdit() {
     <Form className="mt-1 px-3" onSubmit={handleSubmit}>
     {prepare}
     {/* above total */}
-    <Row className={ `${styles.OverviewBlue} mx-1 mt-5 py-1`}>
+    <Row className={ `${styles.OverviewBlue} mx-1 mt-5 py-0`}>
     <Col md={10}>
     <p className={ `pb-0 mb-0 ml-3 ${styles.BoldBlack}`}>ABOVE THE LINE</p>
     </Col>
@@ -6779,7 +6779,7 @@ function BudgetEdit() {
     </Col>
     </Row>  
     {/* below B labour + total */}
-    <Row className={ `${styles.OverviewBlue} mx-1 mb-0 mt-2 py-1`}>
+    <Row className={ `${styles.OverviewBlue} mx-1 mb-0 mt-0 py-0`}>
     <Col md={10}>
     <p className={ `mb-0 ml-3 ${styles.BoldBlack}`}>
       BELOW THE LINE "B" PRODUCTION - LABOUR</p>
@@ -7030,7 +7030,7 @@ function BudgetEdit() {
     </Col>
     </Row> 
     {/* below B costs + total */}
-    <Row className={ `${styles.OverviewBlue} mx-1 mb-0 mt-2 py-1`}>
+    <Row className={ `${styles.OverviewBlue} mx-1 mb-0 mt-0 py-0`}>
     <Col md={10}>
     <p className={ `mb-0 ml-3 ${styles.BoldBlack}`}>
       BELOW THE LINE "B" PRODUCTION - COSTS</p>
@@ -7340,9 +7340,8 @@ function BudgetEdit() {
     </div>
     </Col>
     </Row>
-    {blabourncoststotal}
     {/* Post Production "C" & total*/}
-    <Row className={ `${styles.OverviewBlue} mx-1 mb-0 mt-2 py-1`}>
+    <Row className={ `${styles.OverviewBlue} mx-1 mb-0 mt-0 py-0`}>
     <Col md={10}>
     <p className={ `mb-0 ml-3 ${styles.BoldBlack}`}>
       "C" POST PRODUCTION </p>
@@ -7464,12 +7463,8 @@ function BudgetEdit() {
     </div>
     </Col>
     </Row>
-    {/* below B and C total  */}
-    {belowbandcTotal}
-    {/* Above "A" / Below "B" and "C"  total */}
-    {abovebelowabcTotal}
     {/* Other "D" & total */}
-    <Row className={ `${styles.OverviewBlue} mx-1 mb-0 mt-2 py-1`}>
+    <Row className={ `${styles.OverviewBlue} mx-1 mb-0 mt-0 py-0`}>
     <Col md={10}>
     <p className={ `mb-0 ml-3 ${styles.BoldBlack}`}>
       "D" OTHER </p>
@@ -7539,11 +7534,21 @@ function BudgetEdit() {
     </div>
     </Col> 
     </Row>
+    {blabourncoststotal}
+    {/* below B and C total  */}
+    {belowbandcTotal}
+    {/* Above "A" / Below "B" and "C"  total */}
+    {abovebelowabcTotal}
     {/* "A"  "B" and "C" and "D" total */}
     {abovebelowabcanddTotal}
     {contin}
     {grandtotal}
-    <hr className={`${styles.Break} mt-5 mb-2`}/>
+    <Row>
+    <Col md={4} ></Col>
+    <Col md={4} >
+    <hr className={`${styles.Break} mx-5 px-5 mt-5 mb-2`}/>
+    </Col>
+    </Row>
     {/* info */}
     {!showInfo ? (
       ""

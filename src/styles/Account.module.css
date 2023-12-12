@@ -1,3 +1,20 @@
+.WhiteBack {
+  background-color: #fff;
+}
+
+.BlackBack {
+  background-color: #000;
+  color: #fff;
+}
+
+.BlackBack p {
+  color: #fff;
+}
+
+.BlackBack {
+  color: #fff;
+}
+
 .Underline {
   font-weight: 700;
   color: #000;
@@ -41,12 +58,12 @@
 }
 
 .Button {
-  color: aqua;
+  color: rgb(9, 210, 241);
   cursor: pointer;
 }
 
 .Button:hover {
-  color: rgb(34, 153, 153);
+  color: rgb(41, 119, 119);
 }
 
 .Close {
@@ -122,13 +139,30 @@
 
 .Input {
     background: #ffffff;
-    border: 1px solid #f0f1f9;
+    /* border: 1px solid #f0f1f9; */
+    border: 1px solid #e0e2ef;
     box-sizing: border-box;
     border-radius: 2px;
     color: #7177a1;
     padding: 0px 10px;
     height: 20px !important;
     text-align: center;
+    color: #000;
+    font-weight: 700;
+}
+
+.Input1 {
+  background: #ffffff;
+  /* border: 1px solid #f0f1f9; */
+  border: 1px solid #e0e2ef;
+  box-sizing: border-box;
+  border-radius: 2px;
+  /* color: #7177a1; */
+  color: #000;
+  padding: 0px 10px;
+  height: 20px !important;
+  text-align: center;
+  font-weight: 700;
 }
 
 .SubTitle {
@@ -167,6 +201,10 @@
 
   .Break {
     border-top: 10px solid #d0d9db;
+  }
+
+  .Break1 {
+    border-top: 1px solid #d0d9db;
   }
 
   .BreakAbove {
