@@ -828,10 +828,6 @@ const DesignLabour = (props) => {
     <Col md={2} >
     </Col>
     </Row>
-    {/* <div className={`mt-0 text-center ${styles.SubTitle }`}>
-      <span className={`float-right pt-2 ${styles.Bold } ${styles.Close }`} onClick={() => setShow(false) } >Close</span> 
-      <h3 className={`pl-5 mb-0 text-center py-1 ${styles.Bold }`} >ART DEPT</h3>
-      </div> */}
     <div className="px-2" >
     <Row className={`${styles.BlackBackd} mt-3`}>
     <Col md={1} >
