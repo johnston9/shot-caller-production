@@ -1,36 +1,65 @@
 .Box {
-  margin-top: 5px;
+  margin-top: 0;
   width: 70px;
   border: 1px solid #d0d9db;
   background: #ffffff;
-    /* border: 1px solid #f0f1f9; */
-    /* border: 1px solid #e0e2ef; */
-    box-sizing: border-box;
-    border-radius: 2px;
-    color: #7177a1;
-    padding: 0px 10px;
-    height: 20px !important;
-    text-align: center;
-    color: #000;
-    font-weight: 700;
+  box-sizing: border-box;
+  border-radius: 2px;
+  color: #7177a1;
+  padding: 0px 10px;
+  height: 20px !important;
+  text-align: center;
+  color: #000;
+  font-weight: 700;
+  margin-bottom: 0;
 }
 
 .Box2 {
-  margin-top: 5px;
-  /* width: 140px; */
+  margin-top: 0;
+  margin-bottom: 0;
   width: 95%;
   border: 1px solid #d0d9db;
   background: #e9ecef;
-    /* border: 1px solid #f0f1f9; */
-    /* border: 1px solid #e0e2ef; */
-    box-sizing: border-box;
-    border-radius: 2px;
-    color: #7177a1;
-    padding: 0px 10px;
-    height: 20px !important;
-    text-align: center;
-    color: #000;
-    font-weight: 700;
+  box-sizing: border-box;
+  border-radius: 2px;
+  color: #7177a1;
+  padding: 0px 10px;
+  height: 20px !important;
+  text-align: center;
+  color: #000;
+  font-weight: 700;
+}
+
+.Box3 {
+  margin-top: 3px;
+  margin-bottom: 3px;
+  width: 95%;
+  border: 1px solid #d0d9db;
+  background: #e9ecef;
+  box-sizing: border-box;
+  border-radius: 2px;
+  color: #7177a1;
+  padding: 0px 10px;
+  height: 20px !important;
+  text-align: center;
+  color: #000;
+  font-weight: 700;
+}
+
+.Box4 {
+  margin-top: 3px;
+  margin-bottom: 3px;
+  width: 95%;
+  border: 1px solid #d0d9db;
+  background: #e9ecef;
+  box-sizing: border-box;
+  border-radius: 2px;
+  color: #7177a1;
+  padding: 0px 10px;
+  height: 20px !important;
+  text-align: center;
+  color: #000;
+  font-weight: 700;
 }
 
 .WhiteBack {
@@ -46,15 +75,18 @@
   color: #fff;
 }
 
-.BlackBack {
-  color: #fff;
-}
-
 .Underline {
   font-weight: 700;
   color: #000;
-  margin-bottom: 2px;
-  margin-top: 2px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.Underline7 {
+  margin-bottom: 0px;
+  margin-top: 0px;
+  color: #000;
+  font-weight: 400;
 }
 
 .Underline6 {
