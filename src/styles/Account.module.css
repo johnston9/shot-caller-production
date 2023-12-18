@@ -5,7 +5,6 @@
   background: #ffffff;
   box-sizing: border-box;
   border-radius: 2px;
-  color: #7177a1;
   padding: 0px 10px;
   height: 20px !important;
   text-align: center;
@@ -22,7 +21,6 @@
   background: #e9ecef;
   box-sizing: border-box;
   border-radius: 2px;
-  color: #7177a1;
   padding: 0px 10px;
   height: 20px !important;
   text-align: center;
@@ -30,6 +28,23 @@
   font-weight: 700;
 }
 
+/* normal for single */
+.Box5 {
+  margin-top: 3px;
+  margin-bottom: 3px;
+  width: 70px;
+  border: 1px solid #d0d9db;
+  background: #fff;
+  box-sizing: border-box;
+  border-radius: 2px;
+  color: #7177a1;
+  padding: 0px 10px;
+  height: 20px !important;
+  text-align: center;
+  color: #000;
+  font-weight: 700;
+}
+/* total */
 .Box3 {
   margin-top: 3px;
   margin-bottom: 3px;
