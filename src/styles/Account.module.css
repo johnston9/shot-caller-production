@@ -1,37 +1,7 @@
-.Box {
-  margin-top: 0;
-  width: 70px;
-  border: 1px solid #d0d9db;
-  background: #ffffff;
-  box-sizing: border-box;
-  border-radius: 2px;
-  padding: 0px 10px;
-  height: 20px !important;
-  text-align: center;
-  color: #000;
-  font-weight: 700;
-  margin-bottom: 0;
-}
-
-.Box2 {
-  margin-top: 0;
-  margin-bottom: 0;
-  width: 95%;
-  border: 1px solid #d0d9db;
-  background: #e9ecef;
-  box-sizing: border-box;
-  border-radius: 2px;
-  padding: 0px 10px;
-  height: 20px !important;
-  text-align: center;
-  color: #000;
-  font-weight: 700;
-}
-
 /* normal for single */
 .Box5 {
   margin-top: 3px;
-  margin-bottom: 3px;
+  margin-bottom: 0;
   width: 70px;
   border: 1px solid #d0d9db;
   background: #fff;
@@ -61,6 +31,39 @@
   font-weight: 700;
 }
 
+/* normal for treble */
+.Box {
+  margin-top: 3px;
+  width: 70px;
+  border: 1px solid #d0d9db;
+  background: #ffffff;
+  box-sizing: border-box;
+  border-radius: 2px;
+  padding: 0px 10px;
+  height: 20px !important;
+  text-align: center;
+  color: #000;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+/* total for treble */
+.Box2 {
+  margin-top: 3px;
+  margin-bottom: 0;
+  width: 95%;
+  border: 1px solid #d0d9db;
+  background: #e9ecef;
+  box-sizing: border-box;
+  border-radius: 2px;
+  padding: 0px 10px;
+  height: 20px !important;
+  text-align: center;
+  color: #000;
+  font-weight: 700;
+}
+
+/* end total for treble */
 .Box4 {
   margin-top: 3px;
   margin-bottom: 3px;
@@ -299,6 +302,7 @@
 
   .Break1 {
     border-top: 1px solid #d0d9db;
+    margin-top: 2px;
   }
 
   .BreakAbove {
