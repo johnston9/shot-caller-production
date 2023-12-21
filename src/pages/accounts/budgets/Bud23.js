@@ -1,25 +1,4 @@
-    <Row >
-    <Col md={1}>
-    <p className={`${styles.Underline}`}>02.90</p>
-    </Col>
-    <Col md={9}>
-    <p className={`${styles.Underline}`}>Fringes and Taxes</p>
-    </Col>
-    <Col md={2}>
-    <div className={`${styles.Box3} 
-      py-0 d-flex align-items-center justify-content-center`}>
-    <p className={`${styles.Underline}`}>{fringes_taxes_development || 0 } </p>
-    </div>
-    </Col>
-    </Row>
-    {/* hr */}
-    <div>
-    <Row>
-    <Col >
-    <hr className={`${styles.Break1} mt-0 mb-0`}/>
-    </Col>
-    </Row>
-    <Row className='mt-3 mb-1'>
+<Row className='mt-3 mb-1'>
     <Col md={1}>
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
@@ -33,7 +12,6 @@
     </div>
     </Col>
     </Row>
-    </div>
 
 holidays_cast, 
 overtime_cast, 
