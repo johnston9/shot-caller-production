@@ -6436,6 +6436,23 @@ function BudgetEdit() {
     formData.append("craftservicesprep_total", craftservicesprepTotal);
     formData.append("craftserviceswrap_total", craftserviceswrapTotal);
     formData.append("craftservicesall_total", craftservicesallTotal);
+
+    try {
+      const { data } = await axiosReq.put(`/budgets/${budgetId}/`, formData);
+      console.log(`submit2 ${data}`);
+      handleSubmit3(event);
+    } catch (err) {
+      console.log(err);
+      if (err.response?.status !== 401) {
+        setErrors(err.response?.data);
+      }
+    }
+  };
+
+  // Submit3
+  const handleSubmit3 = async (event) => {
+    event.preventDefault();
+    const formData = new FormData();
     formData.append("pro_designer_qty_prep", pro_designer_qty_prep);
     formData.append("pro_designer_uno_prep", pro_designer_uno_prep);
     formData.append("pro_designer_una_prep", pro_designer_una_prep);
@@ -6558,76 +6575,10 @@ function BudgetEdit() {
     formData.append("artcoorprep_total", artcoorprepTotal);
     formData.append("artcoorwrap_total", artcoorwrapTotal);
     formData.append("artcoorall_total", artcoorallTotal);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars); 
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars); 
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
 
     try {
       const { data } = await axiosReq.put(`/budgets/${budgetId}/`, formData);
-      console.log(`submit2 ${data}`);
+      console.log(`submit3 ${data}`);
       history.goBack();
     } catch (err) {
       console.log(err);
