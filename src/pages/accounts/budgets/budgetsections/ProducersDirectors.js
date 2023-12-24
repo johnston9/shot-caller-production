@@ -44,8 +44,8 @@ const ProducersDirectors = (props) => {
   // ProducersDirs handleChange
   const handleChangeProducersDirs = (event) => {
     setPostDataProducersDirs({
-      ...postDataProducersDirs,
-      [event.target.name]: parseFloat(event.target.value || 0 ),
+    ...postDataProducersDirs,
+    [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
     });
   };
 
@@ -197,10 +197,10 @@ const ProducersDirectors = (props) => {
     <div>
     <Row className="mt-5" >
     <Col md={1} >
-    <p className="mb-2">04.00</p>
+    <p className={`${styles.Underline}`}>04.00</p>
     </Col>
     <Col md={9} >
-    <p className={ `${styles.BoldBlack} mb-2`}>
+    <p className={ `${styles.BoldBlack} mb-1`}>
       PRODUCERS AND DIRECTORS</p>
     </Col>
     <Col md={2}>
@@ -233,7 +233,7 @@ const ProducersDirectors = (props) => {
     </Col>
     </Row>
     {/* Executive Producers */}
-    <Row>
+    <Row className="pt-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}>04.10</p>
     </Col>
@@ -299,8 +299,14 @@ const ProducersDirectors = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Producers */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Producers */}
+    <Row className="pt-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}>04.20</p>
     </Col>
@@ -366,8 +372,14 @@ const ProducersDirectors = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Line Producers */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Line Producers */}
+    <Row className="pt-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}>04.30</p>
     </Col>
@@ -433,8 +445,14 @@ const ProducersDirectors = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Co Producers */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Co Producers */}
+    <Row className="pt-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}>04.40</p>
     </Col>
@@ -500,8 +518,14 @@ const ProducersDirectors = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Associate Producers */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Associate Producers */}
+    <Row className="pt-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}>04.50</p>
     </Col>
@@ -567,8 +591,14 @@ const ProducersDirectors = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Directors */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Directors */}
+    <Row className="pt-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}>04.60</p>
     </Col>
@@ -634,8 +664,14 @@ const ProducersDirectors = (props) => {
     ))}
     </Col>
     </Row>
-    {/* 2nd Unit Directors */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* 2nd Unit Directors */}
+    <Row className="pt-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}>04.70</p>
     </Col>
@@ -701,8 +737,14 @@ const ProducersDirectors = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Travel Expenses */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Travel Expenses */}
+    <Row className="pt-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}>04.80</p>
     </Col>
@@ -736,8 +778,14 @@ const ProducersDirectors = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Living Expenses */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Living Expenses */}
+    <Row className="pt-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}>04.90</p>
     </Col>
@@ -771,8 +819,14 @@ const ProducersDirectors = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Other */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Other */}
+    <Row className="pt-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}>04.91</p>
     </Col>
@@ -806,8 +860,14 @@ const ProducersDirectors = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Fringes and Taxes */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Fringes and Taxes */}
+    <Row className="pt-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}>04.92</p>
     </Col>
@@ -839,6 +899,12 @@ const ProducersDirectors = (props) => {
         {message}
         </Alert>
     ))}
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
     </Col>
     </Row>
     {/* Producers Dirs Total */}

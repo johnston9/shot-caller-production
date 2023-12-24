@@ -33,9 +33,9 @@ const Info = (props) => {
     const handleChangeLength = (event) => {
         setPostDataLength({
         ...postDataLength,
-        [event.target.name]: parseFloat(event.target.value || 0 ),
+        [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
         });
-    }; 
+    };
 
     // function to add all lengths on change
     useEffect(() => {
@@ -64,7 +64,7 @@ const Info = (props) => {
     <Col md={1}>
     </Col>
     <Col md={9}>
-    <p className={ `${styles.BoldBlack} mb-2`}>INFO</p>
+    <p className={ `${styles.BoldBlack} mb-1`}>INFO</p>
     </Col>
     <Col md={2}>
     <span className={`${styles.Close } mb-2`} 
@@ -84,7 +84,7 @@ const Info = (props) => {
     {/* DETAILS COLUMN */}
     <Col md={6} >
     {/* title */}
-    <Row >
+    <Row className="pt-1">
     <Col md={6}>
     <p className={`${styles.Underline}`}>Title</p>
     </Col>
@@ -106,8 +106,14 @@ const Info = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Series */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Series */}
+    <Row className="pt-1">
     <Col md={6}>
     <p className={`${styles.Underline}`}>Series</p>
     </Col>
@@ -129,8 +135,14 @@ const Info = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Prodco */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Prodco */}
+    <Row className="pt-1">
     <Col md={6}>
     <p className={`${styles.Underline}`}>Prodco</p>
     </Col>
@@ -152,8 +164,14 @@ const Info = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Writers */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Writers */}
+    <Row className="pt-1">
     <Col md={6}>
     <p className={`${styles.Underline}`}>Writers</p>
     </Col>
@@ -175,8 +193,14 @@ const Info = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Format */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Format */}
+    <Row className="pt-1">
     <Col md={6}>
     <p className={`${styles.Underline}`}>Format</p>
     </Col>
@@ -198,8 +222,14 @@ const Info = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Location */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Location */}
+    <Row className="pt-1">
     <Col md={6}>
     <p className={`${styles.Underline}`}>Location</p>
     </Col>
@@ -221,11 +251,17 @@ const Info = (props) => {
     ))}
     </Col>
     </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
     </Col>
     {/* LENGTH COLUMN */}
     <Col md={6} >
     {/* Research */}
-    <Row>
+    <Row className="pt-1">
     <Col md={4}>
     <p className={`${styles.Underline}`}>Development</p>
     </Col>
@@ -250,8 +286,14 @@ const Info = (props) => {
     <p className={`${styles.Underline}`}>Weeks</p>
     </Col>
     </Row>
-    {/* Prep */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Prep */}
+    <Row className="pt-1">
     <Col md={4}>
     <p className={`${styles.Underline}`}>Pre-production</p>
     </Col>
@@ -276,8 +318,14 @@ const Info = (props) => {
     <p className={`${styles.Underline}`}>Weeks</p>
     </Col>
     </Row>
-    {/* Shoot */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Shoot */}
+    <Row className="pt-1">
     <Col md={4}>
     <p className={`${styles.Underline}`}>Shoot</p>
     </Col>
@@ -302,8 +350,14 @@ const Info = (props) => {
     <p className={`${styles.Underline}`}>Weeks</p>
     </Col>
     </Row>
-    {/* Wrap */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Wrap */}
+    <Row className="pt-1" >
     <Col md={4}>
     <p className={`${styles.Underline}`}>Wrap</p>
     </Col>
@@ -328,10 +382,16 @@ const Info = (props) => {
     <p className={`${styles.Underline}`}>Weeks</p>
     </Col>
     </Row>
-    {/* Post */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Post */}
+    <Row className="pt-1">
     <Col md={4}>
-    <p>Post Production</p>
+    <p className={`${styles.Underline}`}>Post Production</p>
     </Col>
     <Col md={4}>
     <Form.Group controlId="post" 
@@ -354,8 +414,14 @@ const Info = (props) => {
     <p className={`${styles.Underline}`}>Weeks</p>
     </Col>
     </Row>
-    {/* Length Total */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Length Total */}
+    <Row className="pt-1">
     <Col md={4}>
     <p className={`${styles.Underline}`}>TOTAL</p>
     </Col>
@@ -378,6 +444,12 @@ const Info = (props) => {
     </Col>
     <Col md={4}>
     <p className={`${styles.Underline}`}>Weeks</p>
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
     </Col>
     </Row>
     </Col>

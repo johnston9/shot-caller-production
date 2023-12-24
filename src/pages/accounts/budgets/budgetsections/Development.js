@@ -19,11 +19,11 @@ const Development = (props) => {
 
     // Development handleChange
     const handleChangeDevelopment = (event) => {
-      setPostDataDevelopment({
+        setPostDataDevelopment({
         ...postDataDevelopment,
-        [event.target.name]: parseFloat(event.target.value || 0 ),
-      });
-    };
+        [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
+        });
+      };
 
     // function to add all development on change
     useEffect(() => {
@@ -57,10 +57,10 @@ const Development = (props) => {
     <div className="mt-5">
     <Row >
     <Col md={1} >
-    <p className="mb-2">02.00</p>
+    <p className={`${styles.Underline}`}>02.00</p>
     </Col>
     <Col md={9} >
-    <p className={ `${styles.BoldBlack} mb-2`}>PRE-PRODUCTION AND DEVELOPMENT</p>
+    <p className={ `${styles.BoldBlack} mb-1`}>PRE-PRODUCTION AND DEVELOPMENT</p>
     </Col>
     <Col md={2}>
     <span className={`${styles.Close }`} 
@@ -126,8 +126,14 @@ const Development = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Preliminary Breakdown/Budget */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Preliminary Breakdown/Budget */}
+    <Row className="pt-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}>02.20</p>
     </Col>
@@ -161,8 +167,14 @@ const Development = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Consultant Expenses */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0 `}/>
+    </Col>
+    </Row>
+    {/* Consultant Expenses */}
+    <Row className="pt-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}>02.30</p>
     </Col>
@@ -196,8 +208,14 @@ const Development = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Office Expenses */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Office Expenses */}
+    <Row className="pt-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}>02.40</p>
     </Col>
@@ -231,8 +249,14 @@ const Development = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Staff */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Staff */}
+    <Row className="pt-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}>02.50</p>
     </Col>
@@ -266,8 +290,14 @@ const Development = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Travel Expenses Development */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Travel Expenses Development */}
+    <Row className="pt-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}>02.60</p>
     </Col>
@@ -301,8 +331,14 @@ const Development = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Living Expenses Development */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Living Expenses Development */}
+    <Row className="pt-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}>02.70</p>
     </Col>
@@ -336,8 +372,14 @@ const Development = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Other Development */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Other Development */}
+    <Row className="pt-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}>02.80</p>
     </Col>
@@ -371,8 +413,14 @@ const Development = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Fringes and Taxes */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Fringes and Taxes */}
+    <Row className="pt-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}>02.90</p>
     </Col>
@@ -404,6 +452,12 @@ const Development = (props) => {
         {message}
         </Alert>
     ))}
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Development Total */}

@@ -6089,7 +6089,7 @@ const Budget = (props) => {
     </Col>
     </Row>
     {/* Supervising Art Director */}
-    <div className='mt-3'>
+    <div >
     <Row >
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.20</p>
@@ -6101,25 +6101,35 @@ const Budget = (props) => {
     {/* Prep */}
     <Row >
     <Col md={1} >
-    <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Prep</p>
+    <p className={`${styles.Underline7}`}>Prep</p>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} 
+    py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{supervart_qty_prep || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{supervart_uno_prep || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{supervart_una_prep || 0}</p>
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{supervart_una_prep}</p>
+    </div>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{supervart_rt_prep || 0}</p>
+    </div>
     </Col>
     <Col md={2} >
+    <div className={`${styles.Box2} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{supartdirprep_total || 0}</p>
+    </div>
     </Col>
     </Row>
     {/* Shoot */}
@@ -6128,26 +6138,36 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Shoot</p>
+    <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{supervart_qty || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{supervart_uno || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{supervart_una || 0}</p>
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{supervart_una}</p>
+    </div>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{supervart_rt || 0}</p>
+    </div>
     </Col>
     <Col md={2} >
+    <div className={`${styles.Box2} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{supartdir_total || 0}</p>
+    </div>
     </Col>
     </Row>
     {/* Total */}
-    <Row>
+    <Row >
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
@@ -6155,7 +6175,10 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>Total</p>
     </Col>
     <Col md={2} >
+    <div className={`${styles.Box4} 
+      py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{supartdirall_total || 0}</p>
+    </div>
     </Col>
     </Row>
     </div>
@@ -6166,7 +6189,7 @@ const Budget = (props) => {
     </Col>
     </Row>
     {/* Art Director */}
-    <div className='mt-3'>
+    <div >
     <Row >
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.30</p>
@@ -6174,32 +6197,39 @@ const Budget = (props) => {
     <Col md={5} >
     <p className={`${styles.Underline}`}>Art Director</p>
     </Col>
-    <Col md={1} >
-    <p className={`${styles.Underline}`}>{art_director_quantity || 0}</p>
-    </Col>
     </Row>
     {/* Prep */}
     <Row >
     <Col md={1} >
-    <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Prep</p>
+    <p className={`${styles.Underline7}`}>Prep</p>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} 
+    py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{art_director_qty_prep || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{art_director_uno_prep || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{art_director_una_prep || 0}</p>
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{art_director_una_prep}</p>
+    </div>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{art_director_rt_prep || 0}</p>
+    </div>
     </Col>
     <Col md={2} >
+    <div className={`${styles.Box2} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{artdirprep_total || 0}</p>
+    </div>
     </Col>
     </Row>
     {/* Shoot */}
@@ -6208,22 +6238,32 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Shoot</p>
+    <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{art_director_quantity || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{art_director_units_number || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{art_director_units_name || 0}</p>
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{art_director_units_name}</p>
+    </div>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{art_director_rate || 0}</p>
+    </div>
     </Col>
     <Col md={2} >
+    <div className={`${styles.Box2} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{artdirector_total || 0}</p>
+    </div>
     </Col>
     </Row>
     {/* Wrap */}
@@ -6232,26 +6272,41 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Wrap</p>
+    <p className={`${styles.Underline7}`}>Wrap</p>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{art_director_qty_wrap || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{art_director_uno_wrap || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{art_director_una_wrap || 0}</p>
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{art_director_una_wrap}</p>
+    </div>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{art_director_rt_wrap || 0}</p>
+    </div>
     </Col>
     <Col md={2} >
+    <div className={`${styles.Box2} 
+      py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{artdirwrap_total || 0}</p>
+    </div>
     </Col>
     </Row>
     {/* Total */}
-    <Row>
+    <Row >
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
@@ -6259,7 +6314,10 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>Total</p>
     </Col>
     <Col md={2} >
+    <div className={`${styles.Box4} 
+      py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{artdirall_total || 0}</p>
+    </div>
     </Col>
     </Row>
     </div>
@@ -6270,7 +6328,7 @@ const Budget = (props) => {
     </Col>
     </Row>
     {/* Standby Art Director */}
-    <div className='mt-3'>
+    <div >
     <Row >
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.40</p>
@@ -6282,25 +6340,35 @@ const Budget = (props) => {
     {/* Prep */}
     <Row >
     <Col md={1} >
-    <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Prep</p>
+    <p className={`${styles.Underline7}`}>Prep</p>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} 
+    py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{standby_art_qty_prep || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{standby_art_uno_prep || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{standby_art_una_prep || 0}</p>
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{standby_art_una_prep}</p>
+    </div>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{standby_art_rt_prep || 0}</p>
+    </div>
     </Col>
     <Col md={2} >
+    <div className={`${styles.Box2} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{stbyartprep_total || 0}</p>
+    </div>
     </Col>
     </Row>
     {/* Shoot */}
@@ -6309,26 +6377,36 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Shoot</p>
+    <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{standby_art_qty || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{standby_art_uno || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{standby_art_una || 0}</p>
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{standby_art_una}</p>
+    </div>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{standby_art_rt || 0}</p>
+    </div>
     </Col>
     <Col md={2} >
+    <div className={`${styles.Box2} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{standbyart_total || 0}</p>
+    </div>
     </Col>
     </Row>
     {/* Total */}
-    <Row>
+    <Row >
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
@@ -6336,7 +6414,10 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>Total</p>
     </Col>
     <Col md={2} >
+    <div className={`${styles.Box4} 
+      py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{stbyartall_total || 0}</p>
+    </div>
     </Col>
     </Row>
     </div>
@@ -6347,7 +6428,7 @@ const Budget = (props) => {
     </Col>
     </Row>
     {/* Art Assistants */}
-    <div className='mt-3'>
+    <div >
     <Row >
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.50</p>
@@ -6359,25 +6440,35 @@ const Budget = (props) => {
     {/* Prep */}
     <Row >
     <Col md={1} >
-    <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Prep</p>
+    <p className={`${styles.Underline7}`}>Prep</p>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} 
+    py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{art_ass_qty_prep || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{art_ass_uno_prep || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{art_ass_una_prep || 0}</p>
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{art_ass_una_prep}</p>
+    </div>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{art_ass_rt_prep || 0}</p>
+    </div>
     </Col>
     <Col md={2} >
+    <div className={`${styles.Box2} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{artassprep_total || 0}</p>
+    </div>
     </Col>
     </Row>
     {/* Shoot */}
@@ -6386,50 +6477,75 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Shoot</p>
+    <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{art_assistants_quantity || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{art_assistants_units_number || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{art_assistants_units_name || 0}</p>
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{art_assistants_units_name}</p>
+    </div>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{art_assistants_rate || 0}</p>
+    </div>
     </Col>
     <Col md={2} >
+    <div className={`${styles.Box2} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{artassistants_total || 0}</p>
+    </div>
     </Col>
-    </Row> 
+    </Row>
     {/* Wrap */}
     <Row >
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Wrap</p>
+    <p className={`${styles.Underline7}`}>Wrap</p>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{art_ass_qty_wrap || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{art_ass_uno_wrap || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{art_ass_una_wrap || 0}</p>
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{art_ass_una_wrap}</p>
+    </div>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{art_ass_rt_wrap || 0}</p>
+    </div>
     </Col>
     <Col md={2} >
+    <div className={`${styles.Box2} 
+      py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{artasswrap_total || 0}</p>
+    </div>
     </Col>
     </Row>
     {/* Total */}
-    <Row>
+    <Row >
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
@@ -6437,7 +6553,10 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>Total</p>
     </Col>
     <Col md={2} >
+    <div className={`${styles.Box4} 
+      py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{artassall_total || 0}</p>
+    </div>
     </Col>
     </Row>
     </div>
@@ -6448,37 +6567,47 @@ const Budget = (props) => {
     </Col>
     </Row>
     {/* Set Designer/Draughtsperson */}
-    <div className='mt-3'>
+    <div >
     <Row >
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.60</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Set Designer / Draughtsperson</p>
+    <p className={`${styles.Underline}`}>Set Designer/Draughtsperson</p>
     </Col>
     </Row>
     {/* Prep */}
     <Row >
     <Col md={1} >
-    <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Prep</p>
+    <p className={`${styles.Underline7}`}>Prep</p>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} 
+    py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{set_design_qty_prep || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{set_design_uno_prep || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{set_design_una_prep || 0}</p>
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{set_design_una_prep}</p>
+    </div>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{set_design_rt_prep || 0}</p>
+    </div>
     </Col>
     <Col md={2} >
+    <div className={`${styles.Box2} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{setdesprep_total || 0}</p>
+    </div>
     </Col>
     </Row>
     {/* Shoot */}
@@ -6487,26 +6616,36 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Shoot</p>
+    <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{set_design_qty || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{set_design_uno || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{set_design_una || 0}</p>
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{set_design_una}</p>
+    </div>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{set_design_rt || 0}</p>
+    </div>
     </Col>
     <Col md={2} >
+    <div className={`${styles.Box2} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{setdes_total || 0}</p>
+    </div>
     </Col>
-    </Row> 
+    </Row>
     {/* Total */}
-    <Row>
+    <Row >
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
@@ -6514,7 +6653,10 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>Total</p>
     </Col>
     <Col md={2} >
+    <div className={`${styles.Box4} 
+      py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{setdesall_total || 0}</p>
+    </div>
     </Col>
     </Row>
     </div>
@@ -6525,37 +6667,47 @@ const Budget = (props) => {
     </Col>
     </Row>
     {/* Junior Draughtsperson */}
-    <div className='mt-3'>
+    <div >
     <Row >
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.70</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>JuniorDraughtsperson</p>
+    <p className={`${styles.Underline}`}>Junior Draughtsperson</p>
     </Col>
     </Row>
     {/* Prep */}
     <Row >
     <Col md={1} >
-    <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Prep</p>
+    <p className={`${styles.Underline7}`}>Prep</p>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} 
+    py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{junior_draught_qty_prep || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{junior_draught_uno_prep || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{junior_draught_una_prep || 0}</p>
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{junior_draught_una_prep}</p>
+    </div>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{junior_draught_rt_prep || 0}</p>
+    </div>
     </Col>
     <Col md={2} >
+    <div className={`${styles.Box2} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{jundraprep_total || 0}</p>
+    </div>
     </Col>
     </Row>
     {/* Shoot */}
@@ -6564,26 +6716,36 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Shoot</p>
+    <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{junior_draught_qty || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{junior_draught_uno || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{junior_draught_una || 0}</p>
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{junior_draught_una}</p>
+    </div>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{junior_draught_rt || 0}</p>
+    </div>
     </Col>
     <Col md={2} >
+    <div className={`${styles.Box2} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{jundraught_total || 0}</p>
+    </div>
     </Col>
-    </Row> 
+    </Row>
     {/* Total */}
-    <Row>
+    <Row >
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
@@ -6591,7 +6753,10 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>Total</p>
     </Col>
     <Col md={2} >
+    <div className={`${styles.Box4} 
+      py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{jundraall_total || 0}</p>
+    </div>
     </Col>
     </Row>
     </div>
@@ -6602,7 +6767,7 @@ const Budget = (props) => {
     </Col>
     </Row>
     {/* Graphic Artists */}
-    <div className='mt-3'>
+    <div >
     <Row >
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.80</p>
@@ -6614,25 +6779,35 @@ const Budget = (props) => {
     {/* Prep */}
     <Row >
     <Col md={1} >
-    <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Prep</p>
+    <p className={`${styles.Underline7}`}>Prep</p>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} 
+    py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{graphic_art_qty_prep || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{graphic_art_uno_prep || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{graphic_art_una_prep || 0}</p>
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{graphic_art_una_prep}</p>
+    </div>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{graphic_art_rt_prep || 0}</p>
+    </div>
     </Col>
     <Col md={2} >
+    <div className={`${styles.Box2} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{graphicartprep_total || 0}</p>
+    </div>
     </Col>
     </Row>
     {/* Shoot */}
@@ -6641,26 +6816,36 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Shoot</p>
+    <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{graphic_artists_quantity || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{graphic_artists_units_number || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{graphic_artists_units_name || 0}</p>
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{graphic_artists_units_name}</p>
+    </div>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{graphic_artists_rate || 0}</p>
+    </div>
     </Col>
     <Col md={2} >
+    <div className={`${styles.Box2} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{graphicartists_total || 0}</p>
+    </div>
     </Col>
     </Row>
     {/* Total */}
-    <Row>
+    <Row >
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
@@ -6668,7 +6853,10 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>Total</p>
     </Col>
     <Col md={2} >
+    <div className={`${styles.Box4} 
+      py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{graphicartall_total || 0}</p>
+    </div>
     </Col>
     </Row>
     </div>
@@ -6679,7 +6867,7 @@ const Budget = (props) => {
     </Col>
     </Row>
     {/* Art Department Coordinator */}
-    <div className='mt-3'>
+    <div >
     <Row >
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.90</p>
@@ -6691,25 +6879,35 @@ const Budget = (props) => {
     {/* Prep */}
     <Row >
     <Col md={1} >
-    <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Prep</p>
+    <p className={`${styles.Underline7}`}>Prep</p>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} 
+    py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{art_dep_coor_qty_prep || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{art_dep_coor_uno_prep || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{art_dep_coor_una_prep || 0}</p>
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{art_dep_coor_una_prep}</p>
+    </div>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{art_dep_coor_rt_prep || 0}</p>
+    </div>
     </Col>
     <Col md={2} >
+    <div className={`${styles.Box2} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{artcoorprep_total || 0}</p>
+    </div>
     </Col>
     </Row>
     {/* Shoot */}
@@ -6718,50 +6916,75 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Shoot</p>
+    <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{art_dep_coor_qty || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{art_dep_coor_uno || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{art_dep_coor_una || 0}</p>
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{art_dep_coor_una}</p>
+    </div>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{art_dep_coor_rt || 0}</p>
+    </div>
     </Col>
     <Col md={2} >
+    <div className={`${styles.Box2} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{artcoor_total || 0}</p>
+    </div>
     </Col>
-    </Row> 
+    </Row>
     {/* Wrap */}
     <Row >
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Wrap</p>
+    <p className={`${styles.Underline7}`}>Wrap</p>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{art_dep_coor_qty_wrap || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{art_dep_coor_uno_wrap || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{art_dep_coor_una_wrap || 0}</p>
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{art_dep_coor_una_wrap}</p>
+    </div>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{art_dep_coor_rt_wrap || 0}</p>
+    </div>
     </Col>
     <Col md={2} >
+    <div className={`${styles.Box2} 
+      py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{artcoorwrap_total || 0}</p>
+    </div>
     </Col>
     </Row>
     {/* Total */}
-    <Row>
+    <Row >
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
@@ -6769,7 +6992,10 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>Total</p>
     </Col>
     <Col md={2} >
+    <div className={`${styles.Box4} 
+      py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{artcoorall_total || 0}</p>
+    </div>
     </Col>
     </Row>
     </div>
@@ -6780,37 +7006,47 @@ const Budget = (props) => {
     </Col>
     </Row>
     {/* Production Assistants/Trainees */}
-    <div className='mt-3'>
+    <div >
     <Row >
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.91</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Production Assistants / Trainees</p>
+    <p className={`${styles.Underline}`}>Production Assistants/Trainees</p>
     </Col>
     </Row>
     {/* Prep */}
     <Row >
     <Col md={1} >
-    <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Prep</p>
+    <p className={`${styles.Underline7}`}>Prep</p>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} 
+    py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{pro_ass_trainees_qty_prep || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{pro_ass_trainees_uno_prep || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{pro_ass_trainees_una_prep || 0}</p>
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{pro_ass_trainees_una_prep}</p>
+    </div>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{pro_ass_trainees_rt_prep || 0}</p>
+    </div>
     </Col>
     <Col md={2} >
+    <div className={`${styles.Box2} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{proasstrainprep_total || 0}</p>
+    </div>
     </Col>
     </Row>
     {/* Shoot */}
@@ -6819,22 +7055,32 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Shoot</p>
+    <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{production_assistants_trainees_quantity || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{production_assistants_trainees_units_number || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{production_assistants_trainees_units_name || 0}</p>
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{production_assistants_trainees_units_name}</p>
+    </div>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{production_assistants_trainees_rate || 0}</p>
+    </div>
     </Col>
     <Col md={2} >
+    <div className={`${styles.Box2} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{productionassistantstrainees_total || 0}</p>
+    </div>
     </Col>
     </Row>
     {/* Wrap */}
@@ -6843,26 +7089,41 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Wrap</p>
+    <p className={`${styles.Underline7}`}>Wrap</p>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{pro_ass_trainees_qty_wrap || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{pro_ass_trainees_uno_wrap || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{pro_ass_trainees_una_wrap || 0}</p>
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{pro_ass_trainees_una_wrap}</p>
+    </div>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{pro_ass_trainees_rt_wrap || 0}</p>
+    </div>
     </Col>
     <Col md={2} >
+    <div className={`${styles.Box2} 
+      py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{proasstrainwrap_total || 0}</p>
+    </div>
     </Col>
     </Row>
     {/* Total */}
-    <Row>
+    <Row >
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
@@ -6870,7 +7131,10 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>Total</p>
     </Col>
     <Col md={2} >
+    <div className={`${styles.Box4} 
+      py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{proasstrainall_total || 0}</p>
+    </div>
     </Col>
     </Row>
     </div>
@@ -6881,21 +7145,27 @@ const Budget = (props) => {
     </Col>
     </Row>
     {/* Concept Artist/Illustrator */}
-    <Row className='mt-3'>
+    <Row >
     <Col md={1}>
     <p className={`${styles.Underline}`}>08.92</p>
     </Col>
     <Col md={7}>
-    <p className={`${styles.Underline}`}>Concept Artist / Illustrator</p>
+    <p className={`${styles.BoldBlack}`}>Concept Artist/Illustrator</p>
     </Col>
     <Col md={1}>
+    <div className={`${styles.Box5} 
+      py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{sketch_artists_unit} </p>
+    </div>
     </Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={2}>
+    <div className={`${styles.Box3} 
+      py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{sketch_artists || 0} </p>
+    </div>
     </Col>
     </Row>
     {/* hr */}
@@ -6905,21 +7175,27 @@ const Budget = (props) => {
     </Col>
     </Row>
     {/* Story Board Artist */}
-    <Row className='mt-3'>
+    <Row >
     <Col md={1}>
     <p className={`${styles.Underline}`}>08.93</p>
     </Col>
     <Col md={7}>
-    <p className={`${styles.Underline}`}>Story Board Artist</p>
+    <p className={`${styles.BoldBlack}`}>Story Board Artist</p>
     </Col>
     <Col md={1}>
+    <div className={`${styles.Box5} 
+      py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{storyboard_artists_unit} </p>
+    </div>
     </Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={2}>
+    <div className={`${styles.Box3} 
+      py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{storyboard_artists || 0} </p>
+    </div>
     </Col>
     </Row>
     {/* hr */}
@@ -6929,21 +7205,27 @@ const Budget = (props) => {
     </Col>
     </Row>
     {/* 6th / 7th Days */}
-    <Row className='mt-3'>
+    <Row >
     <Col md={1}>
     <p className={`${styles.Underline}`}>08.94</p>
     </Col>
     <Col md={7}>
-    <p className={`${styles.Underline}`}>6th/7th Days</p>
+    <p className={`${styles.BoldBlack}`}>6th/7th Days</p>
     </Col>
     <Col md={1}>
+    <div className={`${styles.Box5} 
+      py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{days6th7th_unit_design} </p>
+    </div>
     </Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={2}>
+    <div className={`${styles.Box3} 
+      py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{days6th7th_design || 0} </p>
+    </div>
     </Col>
     </Row>
     {/* hr */}
@@ -6958,16 +7240,22 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>08.95</p>
     </Col>
     <Col md={7}>
-    <p className={`${styles.Underline}`}>Overtime</p>
+    <p className={`${styles.BoldBlack}`}>Overtime</p>
     </Col>
     <Col md={1}>
+    <div className={`${styles.Box5} 
+      py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{overtime_unit_design} </p>
+    </div>
     </Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={2}>
+    <div className={`${styles.Box3} 
+      py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{overtime_design || 0} </p>
+    </div>
     </Col>
     </Row>
     {/* hr */}
@@ -6982,16 +7270,22 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>08.96</p>
     </Col>
     <Col md={7}>
-    <p className={`${styles.Underline}`}>Holidays</p>
+    <p className={`${styles.BoldBlack}`}>Holidays</p>
     </Col>
     <Col md={1}>
+    <div className={`${styles.Box5} 
+      py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{holidays_unit_design} </p>
+    </div>
     </Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={2}>
+    <div className={`${styles.Box3} 
+      py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{holidays_design || 0} </p>
+    </div>
     </Col>
     </Row>
     {/* hr */}
@@ -7001,15 +7295,18 @@ const Budget = (props) => {
     </Col>
     </Row>
     {/* Other - Design */}
-    <Row>
+    <Row >
     <Col md={1}>
     <p className={`${styles.Underline}`}>08.97</p>
     </Col>
     <Col md={9}>
-    <p className={`${styles.Underline}`}>Other</p>
+    <p className={`${styles.BoldBlack}`}>Other</p>
     </Col>
     <Col md={2}>
+    <div className={`${styles.Box3} 
+      py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{other_design || 0} </p>
+    </div>
     </Col>
     </Row>
     {/* hr */}
@@ -7024,16 +7321,22 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>08.98</p>
     </Col>
     <Col md={7}>
-    <p className={`${styles.Underline}`}>Box Rentals</p>
+    <p className={`${styles.BoldBlack}`}>Box Rentals</p>
     </Col>
     <Col md={1}>
+    <div className={`${styles.Box5} 
+      py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{box_rent_unit_design} </p>
+    </div>
     </Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={2}>
+    <div className={`${styles.Box3} 
+      py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{box_rent_design || 0} </p>
+    </div>
     </Col>
     </Row>
     {/* hr */}
@@ -7043,15 +7346,18 @@ const Budget = (props) => {
     </Col>
     </Row>
     {/* Fringes Taxes */}
-    <Row>
+    <Row >
     <Col md={1}>
-    <p className={`${styles.Underline}`}>08.99</p>
+    <p className={`${styles.Underline}`}>08.98</p>
     </Col>
     <Col md={9}>
-    <p className={`${styles.Underline}`}>Fringes and Taxes, Government/Unions</p>
+    <p className={`${styles.BoldBlack}`}>Fringes Taxes</p>
     </Col>
     <Col md={2}>
+    <div className={`${styles.Box3} 
+      py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{fringes_taxes_design || 0} </p>
+    </div>
     </Col>
     </Row>
     {/* hr */}
@@ -7061,7 +7367,7 @@ const Budget = (props) => {
     </Col>
     </Row>
     {/* Design Total */}
-    <Row className='mt-3' >
+    <Row className='mt-3 mb-1' >
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     <p></p>
@@ -7072,7 +7378,10 @@ const Budget = (props) => {
     <Col md={3} >
     </Col>
     <Col md={2} >
+    <div className={`${styles.Box4} 
+      py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline} mb-0`}>{designlabour_total || 0}</p>
+    </div>
     </Col>
     </Row>
     {/* hr */}
@@ -7084,7 +7393,7 @@ const Budget = (props) => {
     </div>
     <p>from edit</p>
     {/* CONSTRUCTION LABOUR ---------------------------------- */}
-    <div className='mt-5'>
+    <div className='mt-4'>
     <Row>
     <Col xs={1}>
     <p className='mb-2'>09.00</p>

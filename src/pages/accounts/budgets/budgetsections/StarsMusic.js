@@ -25,10 +25,10 @@ const StarsMusic = (props) => {
   // StarsMusic handleChange
   const handleChangeStarsMusic = (event) => {
     setPostDataStarsMusic({
-      ...postDataStarsMusic,
-      [event.target.name]: parseFloat(event.target.value || 0 ),
+    ...postDataStarsMusic,
+    [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
     });
-  }; 
+  };
 
   // function to add all StarsMusic on change
   useEffect(() => {
@@ -67,7 +67,7 @@ const StarsMusic = (props) => {
     <div>
     <Row className="mt-5" >
     <Col md={1} >
-    <p className="mb-2">05.00</p>
+    <p className={`${styles.Underline}`}>05.00</p>
     </Col>
     <Col md={9} >
     <p className={ `${styles.BoldBlack} mb-2`}>STARS / MUSIC</p>
@@ -102,7 +102,7 @@ const StarsMusic = (props) => {
     </Col>
     </Row>
     {/* Stars */}
-    <Row>
+    <Row className="pt-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}>05.10</p>
     </Col>
@@ -136,8 +136,14 @@ const StarsMusic = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Rights */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Rights */}
+    <Row className="pt-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}>05.20</p>
     </Col>
@@ -171,8 +177,14 @@ const StarsMusic = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Travel Expenses Stars */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Travel Expenses Stars */}
+    <Row className="pt-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}>05.30</p>
     </Col>
@@ -206,8 +218,14 @@ const StarsMusic = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Living Expenses Stars */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Living Expenses Stars */}
+    <Row className="pt-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}>05.40</p>
     </Col>
@@ -241,8 +259,14 @@ const StarsMusic = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Stars - Other */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Stars - Other */}
+    <Row className="pt-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}>05.50</p>
     </Col>
@@ -276,8 +300,14 @@ const StarsMusic = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Stars - Fringes Taxes */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Stars - Fringes Taxes */}
+    <Row className="pt-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}>05.60</p>
     </Col>
@@ -311,8 +341,14 @@ const StarsMusic = (props) => {
     ))}
     </Col>
     </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
     {/* Music */}
-    <Row >
+    <Row className="pt-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}>05.70</p>
     </Col>
@@ -347,8 +383,14 @@ const StarsMusic = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Music Supervisor */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Music Supervisor */}
+    <Row className="pt-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}>05.80</p>
     </Col>
@@ -382,8 +424,14 @@ const StarsMusic = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Travel Expenses */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Travel Expenses */}
+    <Row className="pt-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}>05.90</p>
     </Col>
@@ -417,8 +465,14 @@ const StarsMusic = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Living Expenses */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Living Expenses */}
+    <Row className="pt-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}>05.91</p>
     </Col>
@@ -452,8 +506,14 @@ const StarsMusic = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Add'l Music Rights (Songs, etc.) */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Add'l Music Rights (Songs, etc.) */}
+    <Row className="pt-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}>05.92</p>
     </Col>
@@ -487,8 +547,14 @@ const StarsMusic = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Music Other */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Music Other */}
+    <Row className="pt-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}>05.93</p>
     </Col>
@@ -522,8 +588,14 @@ const StarsMusic = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Music - Fringes and Taxes */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Music - Fringes and Taxes */}
+    <Row className="pt-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}>05.94</p>
     </Col>
@@ -555,6 +627,12 @@ const StarsMusic = (props) => {
         {message}
         </Alert>
     ))}
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
     </Col>
     </Row>
     {/* Stars / Music Total */}

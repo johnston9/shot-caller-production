@@ -18,10 +18,10 @@ const Rights = (props) => {
     // Rights handleChange
   const handleChangeRights = (event) => {
     setPostDataRights({
-      ...postDataRights,
-      [event.target.name]: parseFloat(event.target.value || 0 ),
+    ...postDataRights,
+    [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
     });
-  }; 
+};
 
   // function to add all rights on change
   useEffect(() => {
@@ -43,7 +43,7 @@ const Rights = (props) => {
     <div className="mt-5">
     <Row >
     <Col md={1} >
-    <p className="mb-0">01.00</p>
+    <p className={`${styles.Underline}`}>01.00</p>
     </Col>
     <Col md={9} >
     <p className={ `${styles.BoldBlack} mb-2`}>RIGHTS</p>
@@ -78,12 +78,12 @@ const Rights = (props) => {
     </Col>
     </Row>
     {/* Story Rights */}
-    <Row className="mb-0 pb-0">
+    <Row className="pt-1">
     <Col className="mb-0 pb-0" md={1} >
-    <p className="mb-0 pb-0">01.10</p>
+    <p className={`${styles.Underline}`}>01.10</p>
     </Col>
     <Col className="mb-0 pb-0" md={6} >
-    <p className={`${styles.Bold} mb-2`} >Story Rights</p>
+    <p className={`${styles.BoldBlack}`} >Story Rights</p>
     </Col>
     <Col className="mb-0 pb-0" md={1} >
     <p className="mb-0 pb-0"></p>
@@ -112,13 +112,19 @@ const Rights = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Miscellaneous */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Miscellaneous */}
+    <Row className="pt-1">
     <Col md={1} >
-    <p>01.20</p>
+    <p className={`${styles.Underline}`}>01.20</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Bold} mb-2`}>Miscellaneous</p>
+    <p className={`${styles.BoldBlack}`}>Miscellaneous</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -131,7 +137,7 @@ const Rights = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="miscellaneous" 
-        className={`${styles.Width95} text-center`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -145,6 +151,12 @@ const Rights = (props) => {
         {message}
         </Alert>
     ))}
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
     </Col>
     </Row>
     {/* Rights Total */}

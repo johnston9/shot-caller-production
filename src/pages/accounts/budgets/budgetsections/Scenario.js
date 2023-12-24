@@ -33,10 +33,10 @@ const Scenario = (props) => {
   // Scenario handleChange 
   const handleChangeScenario = (event) => {
     setPostDataScenario({
-      ...postDataScenario,
-      [event.target.name]: parseFloat(event.target.value || 0 ),
+    ...postDataScenario,
+    [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
     });
-  }; 
+  };
 
   // Scenario handleChange Text 
   const handleChangeScenarioText = (event) => {
@@ -146,10 +146,10 @@ const Scenario = (props) => {
     <div className="mt-5">
     <Row >
     <Col md={1} >
-    <p className="mb-2">03.00</p>
+    <p className={`${styles.Underline}`}>03.00</p>
     </Col>
     <Col md={9} >
-    <p className={ `${styles.BoldBlack} mb-2`}>SCENARIO</p>
+    <p className={ `${styles.BoldBlack} mb-1`}>SCENARIO</p>
     </Col>
     <Col md={2}>
     <span className={`${styles.Close }`} 
@@ -181,7 +181,7 @@ const Scenario = (props) => {
     </Col>
     </Row>
     {/* Writers */}
-    <Row>
+    <Row className="pt-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}>03.10</p>
     </Col>
@@ -190,7 +190,7 @@ const Scenario = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="writers_quantity" 
-        className={`${styles.Width100} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -274,8 +274,14 @@ const Scenario = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Consultants */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Consultants */}
+    <Row className="pt-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}>03.20</p>
     </Col>
@@ -368,8 +374,14 @@ const Scenario = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Editors */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Editors */}
+    <Row className="pt-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}>03.30</p>
     </Col>
@@ -462,8 +474,14 @@ const Scenario = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Admin */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Admin */}
+    <Row className="pt-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}>03.40</p>
     </Col>
@@ -556,8 +574,14 @@ const Scenario = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Office Cost/Expenses Scenario */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Office Cost/Expenses Scenario */}
+    <Row className="pt-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}>03.50</p>
     </Col>
@@ -591,8 +615,14 @@ const Scenario = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Travel Expenses Scenario */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Travel Expenses Scenario */}
+    <Row className="pt-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}>03.60</p>
     </Col>
@@ -626,8 +656,14 @@ const Scenario = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Living Expenses */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Living Expenses */}
+    <Row className="pt-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}>03.70</p>
     </Col>
@@ -661,8 +697,14 @@ const Scenario = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Other */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Other */}
+    <Row className="pt-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}>03.80</p>
     </Col>
@@ -696,8 +738,14 @@ const Scenario = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Fringes and Taxes */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Fringes and Taxes */}
+    <Row className="pt-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}>03.90</p>
     </Col>
@@ -729,6 +777,12 @@ const Scenario = (props) => {
         {message}
         </Alert>
     ))}
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
     </Col>
     </Row>
     {/* Scenario Total */}

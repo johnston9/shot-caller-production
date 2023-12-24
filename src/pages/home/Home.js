@@ -222,10 +222,9 @@ const Home = () => {
         <Row className="mb-3 mt-5">
         {/* Workspaces */}
         <Col xs={12} md={6} >
-        <Row className="d-flex align-items-center justify-content-center">
         <div onClick={() => history.push('/workspaces')}
-          className={`${styles.FeatureLink} d-flex align-items-center 
-          justify-content-center`}>
+          className={`${styles.FeatureLink}`}>
+        <Row >
         <Col xs={3} >
         <div className="text-center" >
         <Image 
@@ -243,15 +242,14 @@ const Home = () => {
         including Breakdowns and Department Workspaces.
         </p>
         </Col>
-        </div>
         </Row>
+        </div>
         </Col>
         {/* Moodboards and Script*/}
         <Col xs={12} md={6} >
-        <Row className="d-flex align-items-center justify-content-center">
         <div onClick={() => history.push('/moodboards')}
-          className={`${styles.FeatureLink} d-flex align-items-center 
-           justify-content-center`}>
+          className={`${styles.FeatureLink} `}>
+        <Row >
         <Col xs={9} className="text-center" >
         <h4>Moodboards and Indexshots</h4>
         <p >
@@ -270,17 +268,16 @@ const Home = () => {
           className={`round ${styles.FeaturesImage}`} />
         </div>
         </Col>
-        </div>
         </Row>
+        </div>
         </Col>
         </Row>
         <Row className="my-3">
         {/*  Storyboard and Shotlists */}
         <Col xs={12} md={6}>
-        <Row className="d-flex align-items-center justify-content-center">
         <div onClick={() => history.push('/shotstory')}
-          className={`${styles.FeatureLink} d-flex align-items-center
-          justify-content-center`}>
+          className={`${styles.FeatureLink} `}>
+        <Row >
         <Col xs={3} >
         <div className="text-center" >
         <Image 
@@ -297,15 +294,14 @@ const Home = () => {
         Storyboard and the Scene Script.
         </p>
         </Col>
-        </div>
         </Row>
+        </div>
         </Col>
         {/* Characters and Locations */}
         <Col xs={12} md={6}>
-        <Row className="d-flex align-items-center justify-content-center">
         <div onClick={() => history.push('/charslocates')}
-          className={`${styles.FeatureLink} d-flex align-items-center 
-          justify-content-center`}>
+          className={`${styles.FeatureLink}`}>
+        <Row >
         <Col xs={9} className="text-center" >
         <h4>Characters and Locations</h4>
         <p >
@@ -322,8 +318,8 @@ const Home = () => {
           className={`round ${styles.FeaturesImage}`} />
         </div>
         </Col>
-        </div>
         </Row>
+        </div>
         </Col>
         </Row>
         </div>
@@ -334,12 +330,11 @@ const Home = () => {
         </div>
         <div className="px-5">
         <Row className="mb-3 mt-5">
-        {/* Cast and Crew */}
+        {/* Budgeting */}
         <Col xs={12} md={6} >
-        <Row className="d-flex align-items-center justify-content-center">
         <div onClick={() => history.push('/castcrew')}
-          className={`${styles.FeatureLink} d-flex align-items-center 
-          justify-content-center`}>
+          className={`${styles.FeatureLink} `}>
+        <Row >
         <Col xs={3} >
         <div className="text-center" >
         <Image 
@@ -350,24 +345,23 @@ const Home = () => {
         </div>
         </Col>
         <Col xs={9} className="text-center" >
-        <h4>Cast and Crew</h4>
+        <h4>Budgeting</h4>
         <p >
-        Manage the Cast and Crew with all the necessary Info Requirements
+        Use the compact and compartmentalized Budgeting software to create elegant Budgets
         </p>
         </Col>
-        </div>
         </Row>
+        </div>
         </Col>
-        {/* Schedule */}
+        {/* Scheduling */}
         <Col xs={12} md={6}>
-        <Row className="d-flex align-items-center justify-content-center">
         <div onClick={() => history.push('/schedule')}
-          className={`${styles.FeatureLink} d-flex align-items-center 
-          justify-content-center`}>
+          className={`${styles.FeatureLink}`}>
+        <Row >
         <Col xs={9} className="text-center" >
-        <h4>Create Schedules</h4>
+        <h4>Scheduling</h4>
         <p >
-        Create Schedules and Stripboards in a flash automatically 
+        Use the Scheduling app to create Schedules and Stripboards in a flash, automatically 
         adding all details from the Scene Breakdown 
         </p>
         </Col>
@@ -380,17 +374,16 @@ const Home = () => {
           className={`round ${styles.FeaturesImage}`} />
         </div>
         </Col>
-        </div>
         </Row>
+        </div>
         </Col>
         </Row>
         <Row className="my-3">
         {/* Callsheets */}
         <Col xs={12} md={6} >
-        <Row className="d-flex align-items-center justify-content-center">
         <div onClick={() => history.push('/callsheets')}
-          className={`${styles.FeatureLink} d-flex align-items-center 
-          justify-content-center`}>
+          className={`${styles.FeatureLink} `}>
+        <Row >
         <Col xs={3} >
         <div className="text-center" >
         <Image 
@@ -407,20 +400,18 @@ const Home = () => {
         and Google Maps for Locations
         </p>
         </Col>
-        </div>
         </Row>
+        </div>
         </Col>
-        {/* Mobile */}
-        <Col xs={12} md={6}>
-        <Row className="d-flex align-items-center justify-content-center">
-        <div onClick={() => history.push('/mobile')}
-          className={`${styles.FeatureLink} d-flex align-items-center 
-          justify-content-center`}>
+        {/* Cast and Crew */}
+        <Col xs={12} md={6} >
+        <div onClick={() => history.push('/castcrew')}
+          className={`${styles.FeatureLink} `}>
+        <Row >
         <Col xs={9} className="text-center" >
-        <h4>Mobile View</h4>
+        <h4>Cast and Crew</h4>
         <p >
-        Use all Features in Mobile View and find all Info fast 
-        using the Quick Find Feature
+        Manage the Cast and Crew Information and Functionality
         </p>
         </Col>
         <Col xs={3} >
@@ -432,8 +423,44 @@ const Home = () => {
           className={`round ${styles.FeaturesImage}`} />
         </div>
         </Col>
-        </div>
         </Row>
+        </div>
+        </Col>
+        </Row>
+        <Row className="my-3">
+        {/* Mobile */}
+        <Col className="d-none d-md-block" md={2}></Col>
+        <Col xs={12} md={8}>
+        <div onClick={() => history.push('/mobile')}
+          className={`${styles.FeatureLink} `}>
+        <Row>
+        <Col xs={2} >
+        <div className="text-center" >
+        <Image 
+          height={height}
+          width={height}
+          src={features} alt="image" 
+          className={`round ${styles.FeaturesImage}`} />
+        </div>
+        </Col>
+        <Col xs={8} className="text-center" >
+        <h4>Mobile View</h4>
+        <p >
+        Use all Features in Mobile View and find all Info fast 
+        using the Quick Find Feature
+        </p>
+        </Col>
+        <Col xs={2} >
+        <div className="text-center" >
+        <Image 
+          height={height}
+          width={height}
+          src={features} alt="image" 
+          className={`round ${styles.FeaturesImage}`} />
+        </div>
+        </Col>
+        </Row>
+        </div>
         </Col>
         </Row>
         </div>
