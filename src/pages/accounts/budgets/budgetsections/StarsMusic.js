@@ -70,7 +70,7 @@ const StarsMusic = (props) => {
     <p className={`${styles.Underline}`}>05.00</p>
     </Col>
     <Col md={9} >
-    <p className={ `${styles.BoldBlack} mb-2`}>STARS / MUSIC</p>
+    <p className={ `${styles.BoldBlack} mb-1`}>STARS / MUSIC</p>
     </Col>
     <Col md={2}>
     <span className={`${styles.Close }`} 
@@ -102,7 +102,7 @@ const StarsMusic = (props) => {
     </Col>
     </Row>
     {/* Stars */}
-    <Row className="pt-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>05.10</p>
     </Col>
@@ -120,7 +120,7 @@ const StarsMusic = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="stars" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -143,7 +143,7 @@ const StarsMusic = (props) => {
     </Col>
     </Row>
     {/* Rights */}
-    <Row className="pt-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>05.20</p>
     </Col>
@@ -161,7 +161,7 @@ const StarsMusic = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="stars_rights_payments" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -184,7 +184,7 @@ const StarsMusic = (props) => {
     </Col>
     </Row>
     {/* Travel Expenses Stars */}
-    <Row className="pt-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>05.30</p>
     </Col>
@@ -202,7 +202,7 @@ const StarsMusic = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="travel_expenses_stars" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -225,7 +225,7 @@ const StarsMusic = (props) => {
     </Col>
     </Row>
     {/* Living Expenses Stars */}
-    <Row className="pt-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>05.40</p>
     </Col>
@@ -243,7 +243,7 @@ const StarsMusic = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="living_expenses_stars" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -266,7 +266,7 @@ const StarsMusic = (props) => {
     </Col>
     </Row>
     {/* Stars - Other */}
-    <Row className="pt-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>05.50</p>
     </Col>
@@ -284,7 +284,7 @@ const StarsMusic = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="other_stars" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -307,7 +307,7 @@ const StarsMusic = (props) => {
     </Col>
     </Row>
     {/* Stars - Fringes Taxes */}
-    <Row className="pt-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>05.60</p>
     </Col>
@@ -325,7 +325,7 @@ const StarsMusic = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="fringes_taxes_stars" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -348,7 +348,7 @@ const StarsMusic = (props) => {
     </Col>
     </Row>
     {/* Music */}
-    <Row className="pt-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>05.70</p>
     </Col>
@@ -367,7 +367,7 @@ const StarsMusic = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="music" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -390,7 +390,7 @@ const StarsMusic = (props) => {
     </Col>
     </Row>
     {/* Music Supervisor */}
-    <Row className="pt-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>05.80</p>
     </Col>
@@ -408,7 +408,7 @@ const StarsMusic = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="music_supervisor" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -431,7 +431,7 @@ const StarsMusic = (props) => {
     </Col>
     </Row>
     {/* Travel Expenses */}
-    <Row className="pt-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>05.90</p>
     </Col>
@@ -449,7 +449,7 @@ const StarsMusic = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="travel_expenses_music" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -472,7 +472,7 @@ const StarsMusic = (props) => {
     </Col>
     </Row>
     {/* Living Expenses */}
-    <Row className="pt-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>05.91</p>
     </Col>
@@ -490,7 +490,7 @@ const StarsMusic = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="living_expenses_music" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -513,7 +513,7 @@ const StarsMusic = (props) => {
     </Col>
     </Row>
     {/* Add'l Music Rights (Songs, etc.) */}
-    <Row className="pt-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>05.92</p>
     </Col>
@@ -531,7 +531,7 @@ const StarsMusic = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="music_rights_addl_songs" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -554,7 +554,7 @@ const StarsMusic = (props) => {
     </Col>
     </Row>
     {/* Music Other */}
-    <Row className="pt-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>05.93</p>
     </Col>
@@ -572,7 +572,7 @@ const StarsMusic = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="other_music" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -595,7 +595,7 @@ const StarsMusic = (props) => {
     </Col>
     </Row>
     {/* Music - Fringes and Taxes */}
-    <Row className="pt-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>05.94</p>
     </Col>
@@ -613,7 +613,7 @@ const StarsMusic = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="fringes_taxes_music" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}

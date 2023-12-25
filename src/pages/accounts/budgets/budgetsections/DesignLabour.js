@@ -829,7 +829,7 @@ const DesignLabour = (props) => {
     </Col>
     </Row>
     <div className="px-2" >
-    <Row className={`${styles.BlackBackd} mt-3`}>
+    <Row className={` mt-3`}>
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.00</p>
     </Col>
@@ -874,16 +874,16 @@ const DesignLabour = (props) => {
     </Col>
     </Row>
     {/* Prep */}
-    <Row >
+    <Row className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Prep</p>
+    <p className={`${styles.Underline7}`}>Prep</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="pro_designer_qty_prep" 
-        className={`${styles.Width95} mb-1 text-center`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -900,7 +900,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="pro_designer_uno_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -917,7 +917,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="pro_designer_una_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -934,7 +934,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="pro_designer_rt_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -951,7 +951,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="prodesprepTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -968,16 +968,16 @@ const DesignLabour = (props) => {
     </Col>
     </Row>
     {/* Shoot */}
-    <Row >
+    <Row className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Shoot</p>
+    <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="production_designer_quantity" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -994,7 +994,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="production_designer_units_number" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1011,7 +1011,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="production_designer_units_name" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1028,7 +1028,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="production_designer_rate" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1045,7 +1045,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="productiondesignerTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1062,16 +1062,16 @@ const DesignLabour = (props) => {
     </Col>
     </Row>
     {/* Wrap */}
-    <Row >
+    <Row className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Wrap</p>
+    <p className={`${styles.Underline7}`}>Wrap</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="pro_designer_qty_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1088,7 +1088,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="pro_designer_uno_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1105,7 +1105,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="pro_designer_una_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1122,7 +1122,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="pro_designer_rt_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1139,7 +1139,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="prodeswrapTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1156,7 +1156,7 @@ const DesignLabour = (props) => {
     </Col>
     </Row>
     {/* Total */}
-    <Row >
+    <Row className="py-0 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
@@ -1185,7 +1185,7 @@ const DesignLabour = (props) => {
     {/* hr */}
     <Row>
     <Col >
-    <hr className={`${styles.Break1} mt-2 mb-0`}/>
+    <hr className={`${styles.Break1} mt-1 mb-0`}/>
     </Col>
     </Row>
     {/* Supervising Art Director */}
@@ -1199,16 +1199,16 @@ const DesignLabour = (props) => {
     </Col>
     </Row>
     {/* Prep */}
-    <Row>
+    <Row className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Prep</p>
+    <p className={`${styles.Underline7}`}>Prep</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="supervart_qty_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1225,7 +1225,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="supervart_uno_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1242,7 +1242,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="supervart_una_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1259,7 +1259,7 @@ const DesignLabour = (props) => {
     </Col>  
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="supervart_rt_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1276,7 +1276,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="supartdirprepTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1293,16 +1293,16 @@ const DesignLabour = (props) => {
     </Col>
     </Row>
     {/* Shoot */}
-    <Row>
+    <Row className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Shoot</p>
+    <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="supervart_qty" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1319,7 +1319,7 @@ const DesignLabour = (props) => {
     </Col>  
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="supervart_uno" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1336,7 +1336,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="supervart_una" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1353,7 +1353,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="supervart_rt" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1370,7 +1370,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="supartdirTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1387,7 +1387,7 @@ const DesignLabour = (props) => {
     </Col>
     </Row>
     {/* Total */}
-    <Row >
+    <Row className="py-0 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
@@ -1416,7 +1416,7 @@ const DesignLabour = (props) => {
     {/* hr */}
     <Row>
     <Col >
-    <hr className={`${styles.Break1} mt-2 mb-0`}/>
+    <hr className={`${styles.Break1} mt-1 mb-0`}/>
     </Col>
     </Row>
     {/* Art Director */}
@@ -1430,16 +1430,16 @@ const DesignLabour = (props) => {
     </Col>
     </Row>
     {/* Prep */}
-    <Row>
+    <Row className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Prep</p>
+    <p className={`${styles.Underline7}`}>Prep</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="art_director_qty_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1456,7 +1456,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="art_director_uno_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1473,7 +1473,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="art_director_una_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1490,7 +1490,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="art_director_rt_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1507,7 +1507,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="artdirprepTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1524,16 +1524,16 @@ const DesignLabour = (props) => {
     </Col>
     </Row>
     {/* Shoot */}
-    <Row>
+    <Row className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Shoot</p>
+    <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="art_director_quantity" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1550,7 +1550,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="art_director_units_number" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1567,7 +1567,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="art_director_units_name" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1584,7 +1584,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="art_director_rate" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1601,7 +1601,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="artdirectorTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1618,16 +1618,16 @@ const DesignLabour = (props) => {
     </Col>
     </Row>
     {/* Wrap */}
-    <Row>
+    <Row className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Wrap</p>
+    <p className={`${styles.Underline7}`}>Wrap</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="art_director_qty_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1644,7 +1644,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="art_director_uno_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1661,7 +1661,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="art_director_una_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1678,7 +1678,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="art_director_rt_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1695,7 +1695,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="artdirwrapTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1712,7 +1712,7 @@ const DesignLabour = (props) => {
     </Col>
     </Row>
     {/* Total */}
-    <Row >
+    <Row className="py-0 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
@@ -1741,7 +1741,7 @@ const DesignLabour = (props) => {
     {/* hr */}
     <Row>
     <Col >
-    <hr className={`${styles.Break1} mt-2 mb-0`}/>
+    <hr className={`${styles.Break1} mt-1 mb-0`}/>
     </Col>
     </Row>
     {/* Standby Art Director */}
@@ -1755,16 +1755,16 @@ const DesignLabour = (props) => {
     </Col>
     </Row>
     {/* Prep */}
-    <Row>
+    <Row className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Prep</p>
+    <p className={`${styles.Underline7}`}>Prep</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="standby_art_qty_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1781,7 +1781,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="standby_art_uno_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1798,7 +1798,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="standby_art_una_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1815,7 +1815,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="standby_art_rt_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1832,7 +1832,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="stbyartprepTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1849,16 +1849,16 @@ const DesignLabour = (props) => {
     </Col>
     </Row>
     {/* Shoot */}
-    <Row>
+    <Row className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Shoot</p>
+    <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="standby_art_qty" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1875,7 +1875,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="standby_art_uno" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1892,7 +1892,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="standby_art_una" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1909,7 +1909,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="standby_art_rt" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1926,7 +1926,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="standbyartTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1943,7 +1943,7 @@ const DesignLabour = (props) => {
     </Col>
     </Row>
     {/* Total */}
-    <Row>
+    <Row className="py-0 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
@@ -1972,7 +1972,7 @@ const DesignLabour = (props) => {
     {/* hr */}
     <Row>
     <Col >
-    <hr className={`${styles.Break1} mt-2 mb-0`}/>
+    <hr className={`${styles.Break1} mt-1 mb-0`}/>
     </Col>
     </Row>
     {/* Art Assistants */}
@@ -1986,16 +1986,16 @@ const DesignLabour = (props) => {
     </Col>
     </Row>
     {/* Prep */}
-    <Row>
+    <Row className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Prep</p>
+    <p className={`${styles.Underline7}`}>Prep</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="art_ass_qty_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2012,7 +2012,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="art_ass_uno_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2029,7 +2029,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="art_ass_una_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2046,7 +2046,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="art_ass_rt_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2063,7 +2063,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="artassprepTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2080,16 +2080,16 @@ const DesignLabour = (props) => {
     </Col>
     </Row>
     {/* Shoot */}
-    <Row>
+    <Row className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Shoot</p>
+    <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="art_assistants_quantity" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2106,7 +2106,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="art_assistants_units_number" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2123,7 +2123,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="art_assistants_units_name" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2140,7 +2140,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="art_assistants_rate" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2157,7 +2157,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="artassistantsTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2174,16 +2174,16 @@ const DesignLabour = (props) => {
     </Col>
     </Row>
     {/* Wrap */}
-    <Row>
+    <Row className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Wrap</p>
+    <p className={`${styles.Underline7}`}>Wrap</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="art_ass_qty_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2200,7 +2200,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="art_ass_uno_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2217,7 +2217,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="art_ass_una_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2234,7 +2234,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="art_ass_rt_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2251,7 +2251,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="artasswrapTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2268,7 +2268,7 @@ const DesignLabour = (props) => {
     </Col>
     </Row>
     {/* Total */}
-    <Row>
+    <Row className="py-0 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
@@ -2297,7 +2297,7 @@ const DesignLabour = (props) => {
     {/* hr */}
     <Row>
     <Col >
-    <hr className={`${styles.Break1} mt-2 mb-0`}/>
+    <hr className={`${styles.Break1} mt-1 mb-0`}/>
     </Col>
     </Row>
     {/* Set Designer/Draughtsperson */}
@@ -2311,16 +2311,16 @@ const DesignLabour = (props) => {
     </Col>
     </Row>
     {/* Prep */}
-    <Row>
+    <Row className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Prep</p>
+    <p className={`${styles.Underline7}`}>Prep</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="set_design_qty_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2337,7 +2337,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="set_design_uno_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2354,7 +2354,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="set_design_una_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2371,7 +2371,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="set_design_rt_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2388,7 +2388,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="setdesprepTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2405,16 +2405,16 @@ const DesignLabour = (props) => {
     </Col>
     </Row>
     {/* Shoot */}
-    <Row>
+    <Row className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Shoot</p>
+    <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="set_design_qty" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2431,7 +2431,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="set_design_uno" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2448,7 +2448,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="set_design_una" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2465,7 +2465,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="set_design_rt" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2482,7 +2482,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="setdesTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2499,7 +2499,7 @@ const DesignLabour = (props) => {
     </Col>
     </Row>
     {/* Total */}
-    <Row>   
+    <Row className="py-0 d-flex align-items-center">   
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
@@ -2528,7 +2528,7 @@ const DesignLabour = (props) => {
     {/* hr */}
     <Row>
     <Col >
-    <hr className={`${styles.Break1} mt-2 mb-0`}/>
+    <hr className={`${styles.Break1} mt-1 mb-0`}/>
     </Col>
     </Row>
     {/* Junior Draughtsperson */}
@@ -2542,16 +2542,16 @@ const DesignLabour = (props) => {
     </Col>
     </Row>
     {/* Prep */}
-    <Row>
+    <Row className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Prep</p>
+    <p className={`${styles.Underline7}`}>Prep</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="junior_draught_qty_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2568,7 +2568,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="junior_draught_uno_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2585,7 +2585,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="junior_draught_una_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2602,7 +2602,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="junior_draught_rt_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2619,7 +2619,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="jundraprepTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2636,16 +2636,16 @@ const DesignLabour = (props) => {
     </Col>
     </Row>
     {/* Shoot */}
-    <Row>
+    <Row className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Shoot</p>
+    <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="junior_draught_qty" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2662,7 +2662,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="junior_draught_uno" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2679,7 +2679,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="junior_draught_una" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2696,7 +2696,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="junior_draught_rt" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2713,7 +2713,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="jundraughtTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2730,7 +2730,7 @@ const DesignLabour = (props) => {
     </Col>
     </Row>    
     {/* Total */}
-    <Row>   
+    <Row className="py-0 d-flex align-items-center">   
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
@@ -2759,7 +2759,7 @@ const DesignLabour = (props) => {
     {/* hr */}
     <Row>
     <Col >
-    <hr className={`${styles.Break1} mt-2 mb-0`}/>
+    <hr className={`${styles.Break1} mt-1 mb-0`}/>
     </Col>
     </Row>
     {/* Graphic Artists */}
@@ -2773,16 +2773,16 @@ const DesignLabour = (props) => {
     </Col>
     </Row>
     {/* Prep */}
-    <Row>
+    <Row className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Prep</p>
+    <p className={`${styles.Underline7}`}>Prep</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="graphic_art_qty_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2799,7 +2799,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="graphic_art_uno_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2816,7 +2816,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="graphic_art_una_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2833,7 +2833,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="graphic_art_rt_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2850,7 +2850,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="graphicartprepTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2867,16 +2867,16 @@ const DesignLabour = (props) => {
     </Col>
     </Row>
     {/* Shoot */}
-    <Row>
+    <Row className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Shoot</p>
+    <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="graphic_artists_quantity" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2893,7 +2893,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="graphic_artists_units_number" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2910,7 +2910,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="graphic_artists_units_name" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2927,7 +2927,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="graphic_artists_rate" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2944,7 +2944,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="graphicartistsTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2961,7 +2961,7 @@ const DesignLabour = (props) => {
     </Col>
     </Row>
     {/* Total */}
-    <Row>   
+    <Row className="py-0 d-flex align-items-center">   
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
@@ -2990,7 +2990,7 @@ const DesignLabour = (props) => {
     {/* hr */}
     <Row>
     <Col >
-    <hr className={`${styles.Break1} mt-2 mb-0`}/>
+    <hr className={`${styles.Break1} mt-1 mb-0`}/>
     </Col>
     </Row>
     {/* Art Department Coordinator */}
@@ -3004,16 +3004,16 @@ const DesignLabour = (props) => {
     </Col>
     </Row>
     {/* Prep */}
-    <Row>
+    <Row className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Prep</p>
+    <p className={`${styles.Underline7}`}>Prep</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="art_dep_coor_qty_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -3030,7 +3030,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="art_dep_coor_uno_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -3047,7 +3047,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="art_dep_coor_una_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -3064,7 +3064,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="art_dep_coor_rt_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -3081,7 +3081,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="artcoorprepTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -3098,16 +3098,16 @@ const DesignLabour = (props) => {
     </Col>
     </Row>
     {/* Shoot */}
-    <Row>
+    <Row className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Shoot</p>
+    <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="art_dep_coor_qty" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -3124,7 +3124,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="art_dep_coor_uno" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -3141,7 +3141,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="art_dep_coor_una" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -3158,7 +3158,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="art_dep_coor_rt" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -3175,7 +3175,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="artcoorTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -3192,16 +3192,16 @@ const DesignLabour = (props) => {
     </Col>
     </Row>
     {/* Wrap */}
-    <Row>
+    <Row className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Wrap</p>
+    <p className={`${styles.Underline7}`}>Wrap</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="art_dep_coor_qty_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -3218,7 +3218,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="art_dep_coor_uno_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -3235,7 +3235,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="art_dep_coor_una_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -3252,7 +3252,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="art_dep_coor_rt_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -3269,7 +3269,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="artcoorwrapTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -3286,7 +3286,7 @@ const DesignLabour = (props) => {
     </Col>
     </Row>
     {/* Total */}
-    <Row>   
+    <Row className="py-0 d-flex align-items-center">   
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
@@ -3315,7 +3315,7 @@ const DesignLabour = (props) => {
     {/* hr */}
     <Row>
     <Col >
-    <hr className={`${styles.Break1} mt-2 mb-0`}/>
+    <hr className={`${styles.Break1} mt-1 mb-0`}/>
     </Col>
     </Row>
     {/* Production Assistants/Trainees */}
@@ -3329,16 +3329,16 @@ const DesignLabour = (props) => {
     </Col>
     </Row>
     {/* Prep */}
-    <Row>
+    <Row className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Prep</p>
+    <p className={`${styles.Underline7}`}>Prep</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="pro_ass_trainees_qty_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -3355,7 +3355,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="pro_ass_trainees_uno_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -3372,7 +3372,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="pro_ass_trainees_una_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -3389,7 +3389,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="pro_ass_trainees_rt_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -3406,7 +3406,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="proasstrainprepTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -3428,11 +3428,11 @@ const DesignLabour = (props) => {
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Shoot</p>
+    <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="production_assistants_trainees_quantity" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -3449,7 +3449,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="production_assistants_trainees_units_number" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -3466,7 +3466,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="production_assistants_trainees_units_name" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -3483,7 +3483,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="production_assistants_trainees_rate" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -3500,7 +3500,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="productionassistantstraineesTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -3522,11 +3522,11 @@ const DesignLabour = (props) => {
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Wrap</p>
+    <p className={`${styles.Underline7}`}>Wrap</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="pro_ass_trainees_qty_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -3543,7 +3543,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="pro_ass_trainees_uno_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -3560,7 +3560,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="pro_ass_trainees_una_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -3577,7 +3577,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="pro_ass_trainees_rt_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -3594,7 +3594,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="proasstrainwrapTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -3611,7 +3611,7 @@ const DesignLabour = (props) => {
     </Col>
     </Row>
     {/* Total */}
-    <Row>
+    <Row className="py-0 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
@@ -3640,11 +3640,11 @@ const DesignLabour = (props) => {
     {/* hr */}
     <Row>
     <Col >
-    <hr className={`${styles.Break1} mt-2 mb-0`}/>
+    <hr className={`${styles.Break1} mt-1 mb-0`}/>
     </Col>
     </Row>
     {/* Concept Artist/Illustrator */}
-    <Row className="py-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.92</p>
     </Col>
@@ -3654,7 +3654,7 @@ const DesignLabour = (props) => {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col className="px-1 mx-0 mt-1" md={1} >
+    <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="sketch_artists_unit" 
         className={`${styles.Width95} text-center py-0 my-0`} >
         <Form.Control 
@@ -3674,7 +3674,7 @@ const DesignLabour = (props) => {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col md={2} className="mt-1">
+    <Col md={2}>
     <Form.Group controlId="sketch_artists" 
         className={`${styles.Width95} text-center py-0 my-0`} >
         <Form.Control 
@@ -3699,7 +3699,7 @@ const DesignLabour = (props) => {
     </Col>
     </Row>
     {/* Story Board Artist */}
-    <Row className="py-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline} mb-0`}>08.93</p>
     </Col>
@@ -3709,7 +3709,7 @@ const DesignLabour = (props) => {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col className="px-1 mx-0 mt-1" md={1} >
+    <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="storyboard_artists_unit" 
         className={`${styles.Width95} text-center py-0 my-0`} >
         <Form.Control 
@@ -3729,7 +3729,7 @@ const DesignLabour = (props) => {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col md={2} className="mt-1" >
+    <Col md={2} >
     <Form.Group controlId="storyboard_artists" 
         className={`${styles.Width95} text-center py-0 my-0`} >
         <Form.Control 
@@ -3754,7 +3754,7 @@ const DesignLabour = (props) => {
     </Col>
     </Row>
     {/* 6th/7th Days */}
-    <Row className="py-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.94</p>
     </Col>
@@ -3764,7 +3764,7 @@ const DesignLabour = (props) => {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col className="px-1 mx-0 mt-1" md={1} >
+    <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="days6th7th_unit_design" 
         className={`${styles.Width95} text-center my-0 py-0`} >
         <Form.Control 
@@ -3784,7 +3784,7 @@ const DesignLabour = (props) => {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col md={2} className="mt-1" >
+    <Col md={2} >
     <Form.Group controlId="days6th7th_design" 
         className={`${styles.Width95} text-center my-0 py-0`} >
         <Form.Control 
@@ -3809,7 +3809,7 @@ const DesignLabour = (props) => {
     </Col>
     </Row>
     {/* Overtime */}
-    <Row className="py-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.95</p>
     </Col>
@@ -3819,7 +3819,7 @@ const DesignLabour = (props) => {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col className="px-1 mx-0 mt-1" md={1} >
+    <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="overtime_unit_design" 
         className={`${styles.Width95} text-center my-0 py-0`} >
         <Form.Control 
@@ -3839,7 +3839,7 @@ const DesignLabour = (props) => {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col md={2} className="mt-1">
+    <Col md={2} >
     <Form.Group controlId="overtime_design" 
         className={`${styles.Width95} text-center my-0 py-0`} >
         <Form.Control 
@@ -3864,7 +3864,7 @@ const DesignLabour = (props) => {
     </Col>
     </Row>
     {/* Holidays */}
-    <Row className="py-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.96</p>
     </Col>
@@ -3874,7 +3874,7 @@ const DesignLabour = (props) => {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col className="px-1 mx-0 mt-1" md={1} >
+    <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="holidays_unit_design" 
         className={`${styles.Width95} text-center my-0 py-0`} >
         <Form.Control 
@@ -3894,7 +3894,7 @@ const DesignLabour = (props) => {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col md={2} className="mt-1" >
+    <Col md={2} >
     <Form.Group controlId="holidays_design" 
         className={`${styles.Width95} text-center my-0 py-0`} >
         <Form.Control 
@@ -3919,7 +3919,7 @@ const DesignLabour = (props) => {
     </Col>
     </Row>
     {/* Other */}
-    <Row className="py-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.97</p>
     </Col>
@@ -3932,7 +3932,7 @@ const DesignLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     </Col>
-    <Col md={2} className="mt-1" >
+    <Col md={2} >
     <Form.Group controlId="other_design" 
         className={`${styles.Width95} text-center my-0 py-0`} >
         <Form.Control 
@@ -3957,7 +3957,7 @@ const DesignLabour = (props) => {
     </Col>
     </Row>
     {/* Box Rentals */}
-    <Row className="py-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.98</p>
     </Col>
@@ -3967,7 +3967,7 @@ const DesignLabour = (props) => {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col className="px-1 mx-0 mt-1" md={1} >
+    <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="box_rent_unit_design" 
         className={`${styles.Width95} text-center my-0 py-0`} >
         <Form.Control 
@@ -3987,7 +3987,7 @@ const DesignLabour = (props) => {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col md={2} className="mt-1">
+    <Col md={2} >
     <Form.Group controlId="box_rent_design" 
         className={`${styles.Width95} text-center my-0 py-0`} >
         <Form.Control 
@@ -4012,7 +4012,7 @@ const DesignLabour = (props) => {
     </Col>
     </Row>
     {/* Fringes and Taxes */}
-    <Row className="py-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.99</p>
     </Col>
@@ -4028,7 +4028,7 @@ const DesignLabour = (props) => {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col md={2} className="mt-1">
+    <Col md={2}>
     <Form.Group controlId="fringes_taxes_design" 
         className={`${styles.Width95} text-center my-0 py-0`} >
         <Form.Control 

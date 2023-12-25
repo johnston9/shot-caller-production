@@ -58,7 +58,7 @@ const Info = (props) => {
     }, [research, prep, shoot, wrap, post ]);
 
   return (
-    <div className="mt-5">
+    <div className="mt-5 px-3">
     {/* Title */}
     <Row >
     <Col md={1}>
@@ -84,13 +84,13 @@ const Info = (props) => {
     {/* DETAILS COLUMN */}
     <Col md={6} >
     {/* title */}
-    <Row className="pt-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={6}>
     <p className={`${styles.Underline}`}>Title</p>
     </Col>
     <Col md={6}>
     <Form.Group controlId="title" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -113,13 +113,13 @@ const Info = (props) => {
     </Col>
     </Row>
     {/* Series */}
-    <Row className="pt-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={6}>
     <p className={`${styles.Underline}`}>Series</p>
     </Col>
     <Col md={6}>
     <Form.Group controlId="series" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -142,13 +142,13 @@ const Info = (props) => {
     </Col>
     </Row>
     {/* Prodco */}
-    <Row className="pt-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={6}>
     <p className={`${styles.Underline}`}>Prodco</p>
     </Col>
     <Col md={6}>
     <Form.Group controlId="prodco" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -171,13 +171,13 @@ const Info = (props) => {
     </Col>
     </Row>
     {/* Writers */}
-    <Row className="pt-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={6}>
     <p className={`${styles.Underline}`}>Writers</p>
     </Col>
     <Col md={6}>
     <Form.Group controlId="writer" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -200,13 +200,13 @@ const Info = (props) => {
     </Col>
     </Row>
     {/* Format */}
-    <Row className="pt-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={6}>
     <p className={`${styles.Underline}`}>Format</p>
     </Col>
     <Col md={6}>
     <Form.Group controlId="format" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -229,13 +229,13 @@ const Info = (props) => {
     </Col>
     </Row>
     {/* Location */}
-    <Row className="pt-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={6}>
     <p className={`${styles.Underline}`}>Location</p>
     </Col>
     <Col md={6}>
     <Form.Group controlId="location" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -261,13 +261,13 @@ const Info = (props) => {
     {/* LENGTH COLUMN */}
     <Col md={6} >
     {/* Research */}
-    <Row className="pt-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={4}>
     <p className={`${styles.Underline}`}>Development</p>
     </Col>
     <Col md={4}>
     <Form.Group controlId="research" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -293,13 +293,13 @@ const Info = (props) => {
     </Col>
     </Row>
     {/* Prep */}
-    <Row className="pt-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={4}>
     <p className={`${styles.Underline}`}>Pre-production</p>
     </Col>
     <Col md={4}>
     <Form.Group controlId="prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -325,13 +325,13 @@ const Info = (props) => {
     </Col>
     </Row>
     {/* Shoot */}
-    <Row className="pt-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={4}>
     <p className={`${styles.Underline}`}>Shoot</p>
     </Col>
     <Col md={4}>
     <Form.Group controlId="shoot" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -357,13 +357,13 @@ const Info = (props) => {
     </Col>
     </Row>
     {/* Wrap */}
-    <Row className="pt-1" >
+    <Row className="py-1 d-flex align-items-center">
     <Col md={4}>
     <p className={`${styles.Underline}`}>Wrap</p>
     </Col>
     <Col md={4}>
     <Form.Group controlId="wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -389,13 +389,13 @@ const Info = (props) => {
     </Col>
     </Row>
     {/* Post */}
-    <Row className="pt-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={4}>
     <p className={`${styles.Underline}`}>Post Production</p>
     </Col>
     <Col md={4}>
     <Form.Group controlId="post" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -421,13 +421,13 @@ const Info = (props) => {
     </Col>
     </Row>
     {/* Length Total */}
-    <Row className="pt-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={4}>
     <p className={`${styles.Underline}`}>TOTAL</p>
     </Col>
     <Col md={4}>
     <Form.Group controlId="postDataLengthTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}

@@ -40,13 +40,13 @@ const Rights = (props) => {
   }, [story_rights, miscellaneous ]);
 
   return (
-    <div className="mt-5">
+    <div className="mt-5 px-3">
     <Row >
     <Col md={1} >
     <p className={`${styles.Underline}`}>01.00</p>
     </Col>
     <Col md={9} >
-    <p className={ `${styles.BoldBlack} mb-2`}>RIGHTS</p>
+    <p className={ `${styles.BoldBlack} mb-1`}>RIGHTS</p>
     </Col>
     <Col md={2}>
     <span className={`${styles.Close }`} 
@@ -78,7 +78,7 @@ const Rights = (props) => {
     </Col>
     </Row>
     {/* Story Rights */}
-    <Row className="pt-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col className="mb-0 pb-0" md={1} >
     <p className={`${styles.Underline}`}>01.10</p>
     </Col>
@@ -96,7 +96,7 @@ const Rights = (props) => {
     </Col>
     <Col className="mb-0 pb-0" md={2} >
     <Form.Group controlId="story_rights" 
-        className={`${styles.Width95} text-center mb-1 pb-0`} >
+        className={`${styles.Width95} text-center mb-0 pb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -119,7 +119,7 @@ const Rights = (props) => {
     </Col>
     </Row>
     {/* Miscellaneous */}
-    <Row className="pt-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>01.20</p>
     </Col>
@@ -137,7 +137,7 @@ const Rights = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="miscellaneous" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}

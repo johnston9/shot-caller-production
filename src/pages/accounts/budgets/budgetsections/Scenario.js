@@ -181,7 +181,7 @@ const Scenario = (props) => {
     </Col>
     </Row>
     {/* Writers */}
-    <Row className="pt-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>03.10</p>
     </Col>
@@ -190,7 +190,7 @@ const Scenario = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="writers_quantity" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -207,7 +207,7 @@ const Scenario = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="writers_units_number" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -224,7 +224,7 @@ const Scenario = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="writers_units_name" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -241,7 +241,7 @@ const Scenario = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="writers_rate" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -258,7 +258,7 @@ const Scenario = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="writersTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -281,7 +281,7 @@ const Scenario = (props) => {
     </Col>
     </Row>
     {/* Consultants */}
-    <Row className="pt-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>03.20</p>
     </Col>
@@ -290,7 +290,7 @@ const Scenario = (props) => {
     </Col>
     <Col className="px-1 mx-0"  md={1} >
     <Form.Group controlId="consultants_quantity" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -307,7 +307,7 @@ const Scenario = (props) => {
     </Col>
     <Col className="px-1 mx-0"  md={1} >
     <Form.Group controlId="consultants_units_number" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -324,7 +324,7 @@ const Scenario = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="consultants_units_name" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -341,7 +341,7 @@ const Scenario = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="consultants_rate" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -358,7 +358,7 @@ const Scenario = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="consultantsTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -381,7 +381,7 @@ const Scenario = (props) => {
     </Col>
     </Row>
     {/* Editors */}
-    <Row className="pt-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>03.30</p>
     </Col>
@@ -390,7 +390,7 @@ const Scenario = (props) => {
     </Col>
     <Col className="px-1 mx-0"  md={1} >
     <Form.Group controlId="editors_scenario_quantity" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -407,7 +407,7 @@ const Scenario = (props) => {
     </Col>
     <Col className="px-1 mx-0"  md={1} >
     <Form.Group controlId="editors_scenario_units_number" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -424,7 +424,7 @@ const Scenario = (props) => {
     </Col>
     <Col className="px-1 mx-0"  md={1} >
     <Form.Group controlId="editors_scenario_units_name" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -441,7 +441,7 @@ const Scenario = (props) => {
     </Col>
     <Col className="px-1 mx-0"  md={1} >
     <Form.Group controlId="editors_scenario_rate" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -458,7 +458,7 @@ const Scenario = (props) => {
     </Col>
     <Col  md={2} >
     <Form.Group controlId="editorsscenarioTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -481,7 +481,7 @@ const Scenario = (props) => {
     </Col>
     </Row>
     {/* Admin */}
-    <Row className="pt-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>03.40</p>
     </Col>
@@ -490,7 +490,7 @@ const Scenario = (props) => {
     </Col>
     <Col className="px-1 mx-0"  md={1} >
     <Form.Group controlId="admin_scenario_quantity" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -507,7 +507,7 @@ const Scenario = (props) => {
     </Col>
     <Col className="px-1 mx-0"  md={1} >
     <Form.Group controlId="admin_scenario_units_number" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -524,7 +524,7 @@ const Scenario = (props) => {
     </Col>
     <Col className="px-1 mx-0"  md={1} >
     <Form.Group controlId="admin_scenario_units_name" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -541,7 +541,7 @@ const Scenario = (props) => {
     </Col>
     <Col className="px-1 mx-0"  md={1} >
     <Form.Group controlId="admin_scenario_rate" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -558,7 +558,7 @@ const Scenario = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="adminScenarioTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -581,7 +581,7 @@ const Scenario = (props) => {
     </Col>
     </Row>
     {/* Office Cost/Expenses Scenario */}
-    <Row className="pt-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>03.50</p>
     </Col>
@@ -599,7 +599,7 @@ const Scenario = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="office_expenses_scenario" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -622,7 +622,7 @@ const Scenario = (props) => {
     </Col>
     </Row>
     {/* Travel Expenses Scenario */}
-    <Row className="pt-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>03.60</p>
     </Col>
@@ -640,7 +640,7 @@ const Scenario = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="travel_expenses_scenario" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -663,7 +663,7 @@ const Scenario = (props) => {
     </Col>
     </Row>
     {/* Living Expenses */}
-    <Row className="pt-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>03.70</p>
     </Col>
@@ -681,7 +681,7 @@ const Scenario = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="living_expenses_scenario" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -704,7 +704,7 @@ const Scenario = (props) => {
     </Col>
     </Row>
     {/* Other */}
-    <Row className="pt-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>03.80</p>
     </Col>
@@ -722,7 +722,7 @@ const Scenario = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="other_scenario" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -745,7 +745,7 @@ const Scenario = (props) => {
     </Col>
     </Row>
     {/* Fringes and Taxes */}
-    <Row className="pt-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>03.90</p>
     </Col>
@@ -763,7 +763,7 @@ const Scenario = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="fringes_taxes_scenario" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}

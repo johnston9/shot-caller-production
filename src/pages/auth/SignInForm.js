@@ -57,7 +57,7 @@ const SignInForm = () => {
   }
 
   return (
-      <Container className={styles.SignupBox} >
+      <div className={styles.SignupBox} >
         <TopBox title="Sign In" />
         <Row className={styles.Row}>
           <Col className="my-3 pr-0 pl-3 pl-md-4"
@@ -134,7 +134,7 @@ const SignInForm = () => {
             />
           </Col>
         </Row>
-    </Container>
+    </div>
   );
 };
 

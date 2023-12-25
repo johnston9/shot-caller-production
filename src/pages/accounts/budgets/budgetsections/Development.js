@@ -54,7 +54,7 @@ const Development = (props) => {
     fringes_taxes_development ]);
 
   return (
-    <div className="mt-5">
+    <div className="mt-5 px-3">
     <Row >
     <Col md={1} >
     <p className={`${styles.Underline}`}>02.00</p>
@@ -92,7 +92,7 @@ const Development = (props) => {
     </Col>
     </Row>
     {/* Research */}
-    <Row>
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>02.10</p>
     </Col>
@@ -110,7 +110,7 @@ const Development = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="research_development" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -133,7 +133,7 @@ const Development = (props) => {
     </Col>
     </Row>
     {/* Preliminary Breakdown/Budget */}
-    <Row className="pt-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>02.20</p>
     </Col>
@@ -151,7 +151,7 @@ const Development = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="prelim_budget" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -174,7 +174,7 @@ const Development = (props) => {
     </Col>
     </Row>
     {/* Consultant Expenses */}
-    <Row className="pt-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>02.30</p>
     </Col>
@@ -192,7 +192,7 @@ const Development = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="consultant_expenses" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -215,7 +215,7 @@ const Development = (props) => {
     </Col>
     </Row>
     {/* Office Expenses */}
-    <Row className="pt-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>02.40</p>
     </Col>
@@ -233,7 +233,7 @@ const Development = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="office_expenses" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -256,7 +256,7 @@ const Development = (props) => {
     </Col>
     </Row>
     {/* Staff */}
-    <Row className="pt-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>02.50</p>
     </Col>
@@ -274,7 +274,7 @@ const Development = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="staff" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -297,7 +297,7 @@ const Development = (props) => {
     </Col>
     </Row>
     {/* Travel Expenses Development */}
-    <Row className="pt-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>02.60</p>
     </Col>
@@ -315,7 +315,7 @@ const Development = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="travel_expenses_development" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -338,7 +338,7 @@ const Development = (props) => {
     </Col>
     </Row>
     {/* Living Expenses Development */}
-    <Row className="pt-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>02.70</p>
     </Col>
@@ -356,7 +356,7 @@ const Development = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="living_expenses_development" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -379,7 +379,7 @@ const Development = (props) => {
     </Col>
     </Row>
     {/* Other Development */}
-    <Row className="pt-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>02.80</p>
     </Col>
@@ -397,7 +397,7 @@ const Development = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="other_development" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -420,7 +420,7 @@ const Development = (props) => {
     </Col>
     </Row>
     {/* Fringes and Taxes */}
-    <Row className="pt-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>02.90</p>
     </Col>
@@ -438,7 +438,7 @@ const Development = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="fringes_taxes_development" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}

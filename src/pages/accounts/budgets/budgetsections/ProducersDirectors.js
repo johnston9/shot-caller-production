@@ -233,7 +233,7 @@ const ProducersDirectors = (props) => {
     </Col>
     </Row>
     {/* Executive Producers */}
-    <Row className="pt-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>04.10</p>
     </Col>
@@ -243,7 +243,7 @@ const ProducersDirectors = (props) => {
     {/* Quantity */}
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="executive_producers_quantity" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -265,7 +265,7 @@ const ProducersDirectors = (props) => {
     {/* Price */}
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="executive_producers_rate" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -283,7 +283,7 @@ const ProducersDirectors = (props) => {
     {/* total */}
     <Col md={2} >
     <Form.Group controlId="execProducersTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -306,7 +306,7 @@ const ProducersDirectors = (props) => {
     </Col>
     </Row>
     {/* Producers */}
-    <Row className="pt-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>04.20</p>
     </Col>
@@ -316,7 +316,7 @@ const ProducersDirectors = (props) => {
     {/* Quantity */}
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="producers_quantity" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -338,7 +338,7 @@ const ProducersDirectors = (props) => {
     {/* Price */}
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="producers_rate" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -356,7 +356,7 @@ const ProducersDirectors = (props) => {
     {/* total */}
     <Col md={2} >
     <Form.Group controlId="producersTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -379,7 +379,7 @@ const ProducersDirectors = (props) => {
     </Col>
     </Row>
     {/* Line Producers */}
-    <Row className="pt-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>04.30</p>
     </Col>
@@ -389,7 +389,7 @@ const ProducersDirectors = (props) => {
     {/* Quantity */}
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="line_producers_quantity" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -411,7 +411,7 @@ const ProducersDirectors = (props) => {
     {/* Price */}
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="line_producers_rate" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -429,7 +429,7 @@ const ProducersDirectors = (props) => {
     {/* total */}
     <Col md={2} >
     <Form.Group controlId="lineProducersTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -452,7 +452,7 @@ const ProducersDirectors = (props) => {
     </Col>
     </Row>
     {/* Co Producers */}
-    <Row className="pt-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>04.40</p>
     </Col>
@@ -462,7 +462,7 @@ const ProducersDirectors = (props) => {
     {/* Quantity */}
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="co_producers_quantity" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -484,7 +484,7 @@ const ProducersDirectors = (props) => {
     {/* Price */}
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="co_producers_rate" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -502,7 +502,7 @@ const ProducersDirectors = (props) => {
     {/* total */}
     <Col md={2} >
     <Form.Group controlId="coProducersTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -525,7 +525,7 @@ const ProducersDirectors = (props) => {
     </Col>
     </Row>
     {/* Associate Producers */}
-    <Row className="pt-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>04.50</p>
     </Col>
@@ -535,7 +535,7 @@ const ProducersDirectors = (props) => {
     {/* Quantity */}
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="associate_producers_quantity" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -557,7 +557,7 @@ const ProducersDirectors = (props) => {
     {/* Price */}
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="associate_producers_rate" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -575,7 +575,7 @@ const ProducersDirectors = (props) => {
     {/* total */}
     <Col md={2} >
     <Form.Group controlId="assocProducersTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -598,7 +598,7 @@ const ProducersDirectors = (props) => {
     </Col>
     </Row>
     {/* Directors */}
-    <Row className="pt-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>04.60</p>
     </Col>
@@ -608,7 +608,7 @@ const ProducersDirectors = (props) => {
     {/* Quantity */}
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="directors_quantity" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -630,7 +630,7 @@ const ProducersDirectors = (props) => {
     {/* Price */}
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="directors_rate" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -648,7 +648,7 @@ const ProducersDirectors = (props) => {
     {/* total */}
     <Col md={2} >
     <Form.Group controlId="directorsTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -671,7 +671,7 @@ const ProducersDirectors = (props) => {
     </Col>
     </Row>
     {/* 2nd Unit Directors */}
-    <Row className="pt-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>04.70</p>
     </Col>
@@ -681,7 +681,7 @@ const ProducersDirectors = (props) => {
     {/* Quantity */}
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="unit2_directors_quantity" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -703,7 +703,7 @@ const ProducersDirectors = (props) => {
     {/* Price */}
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="unit2_directors_rate" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -721,7 +721,7 @@ const ProducersDirectors = (props) => {
     {/* total */}
     <Col md={2} >
     <Form.Group controlId="unit2DirectorsTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -744,7 +744,7 @@ const ProducersDirectors = (props) => {
     </Col>
     </Row>
     {/* Travel Expenses */}
-    <Row className="pt-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>04.80</p>
     </Col>
@@ -762,7 +762,7 @@ const ProducersDirectors = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="travel_expenses_producers_dirs" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -785,7 +785,7 @@ const ProducersDirectors = (props) => {
     </Col>
     </Row>
     {/* Living Expenses */}
-    <Row className="pt-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>04.90</p>
     </Col>
@@ -803,7 +803,7 @@ const ProducersDirectors = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="living_expenses_producers_dirs" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -826,7 +826,7 @@ const ProducersDirectors = (props) => {
     </Col>
     </Row>
     {/* Other */}
-    <Row className="pt-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>04.91</p>
     </Col>
@@ -844,7 +844,7 @@ const ProducersDirectors = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="other_producers_dirs" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -867,7 +867,7 @@ const ProducersDirectors = (props) => {
     </Col>
     </Row>
     {/* Fringes and Taxes */}
-    <Row className="pt-1">
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>04.92</p>
     </Col>
@@ -885,7 +885,7 @@ const ProducersDirectors = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="fringes_taxes_producers_dirs" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
