@@ -4067,7 +4067,7 @@ const ProductionStaff = (props) => {
     <Col >
     <hr className={`${styles.Break1} mt-1 mb-0`}/>
     </Col>
-    </Row>
+    </Row>    
     {/* Production Secretary */}
     <div className="mt-1">
     <Row>
@@ -4079,16 +4079,16 @@ const ProductionStaff = (props) => {
     </Col>
     </Row>
     {/* Prep */}
-    <Row>
+    <Row  className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Prep</p>
+    <p className={`${styles.Underline7}`}>Prep</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="production_sec_qty_prep" 
-        className={`${styles.Width100} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -4105,7 +4105,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="production_sec_uno_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -4122,7 +4122,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="production_sec_una_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -4139,7 +4139,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="production_sec_rt_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -4156,7 +4156,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="prosecprepTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -4173,16 +4173,16 @@ const ProductionStaff = (props) => {
     </Col>
     </Row>
     {/* Shoot */}
-    <Row>
+    <Row  className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Shoot</p>
+    <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="production_secretary_quantity" 
-        className={`${styles.Width100} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -4199,7 +4199,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="production_secretary_units_number" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -4216,7 +4216,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="production_secretary_units_name" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -4233,7 +4233,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="production_secretary_rate" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -4250,7 +4250,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="productionsecretaryTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -4267,16 +4267,16 @@ const ProductionStaff = (props) => {
     </Col>
     </Row>
     {/* Wrap */}
-    <Row>
+    <Row  className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Wrap</p>
+    <p className={`${styles.Underline7}`}>Wrap</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="production_sec_qty_wrap" 
-        className={`${styles.Width100} text-center mb-1`} >
+        className={`${styles.Width100} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -4293,7 +4293,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="production_sec_uno_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -4310,7 +4310,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="production_sec_una_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -4327,7 +4327,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="production_sec_rt_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -4344,7 +4344,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="prosecwrapTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -4361,7 +4361,7 @@ const ProductionStaff = (props) => {
     </Col>
     </Row>
     {/* Total */}
-    <Row>
+    <Row  className="py-0 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
@@ -4394,26 +4394,26 @@ const ProductionStaff = (props) => {
     </Col>
     </Row>
     {/* Production Accountant*/}
-    <div className="mt-3">
+    <div className="mt-1">
     <Row>
     <Col md={1} >
     <p className={`${styles.Underline}`}>07.90</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Bold} mb-2`}>Production Accountant</p>
+    <p className={`${styles.BoldBlack}`}>Production Accountant</p>
     </Col>
     </Row>
     {/* Prep */}
-    <Row>
+    <Row  className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Prep</p>
+    <p className={`${styles.Underline7}`}>Prep</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="production_acc_qty_prep" 
-        className={`${styles.Width100} text-center mb-1`} >
+        className={`${styles.Width100} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -4430,7 +4430,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="production_acc_uno_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -4447,7 +4447,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="production_acc_una_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -4464,7 +4464,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="production_acc_rt_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -4481,7 +4481,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="proaccprepTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -4498,16 +4498,16 @@ const ProductionStaff = (props) => {
     </Col>
     </Row>
     {/* Shoot */}
-    <Row>
+    <Row  className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Shoot</p>
+    <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="production_accountant_quantity" 
-        className={`${styles.Width100} text-center mb-1`} >
+        className={`${styles.Width100} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -4524,7 +4524,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="production_accountant_units_number" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -4541,7 +4541,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="production_accountant_units_name" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -4558,7 +4558,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="production_accountant_rate" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -4575,7 +4575,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="productionaccountantTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -4592,16 +4592,16 @@ const ProductionStaff = (props) => {
     </Col>
     </Row>
     {/* Wrap */}
-    <Row>
+    <Row  className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Wrap</p>
+    <p className={`${styles.Underline7}`}>Wrap</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="production_acc_qty_wrap" 
-        className={`${styles.Width100} text-center mb-1`} >
+        className={`${styles.Width100} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -4618,7 +4618,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="production_acc_uno_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -4635,7 +4635,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="production_acc_una_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -4652,7 +4652,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="production_acc_rt_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -4669,7 +4669,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="proaccwrapTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -4686,7 +4686,7 @@ const ProductionStaff = (props) => {
     </Col>
     </Row>
     {/* Total */}
-    <Row>
+    <Row  className="py-0 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
@@ -4719,26 +4719,26 @@ const ProductionStaff = (props) => {
     </Col>
     </Row>
     {/* Production Accountant Assistant */}
-    <div className="mt-3">
+    <div className="mt-1">
     <Row>
     <Col md={1} >
     <p className={`${styles.Underline}`}>07.91</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Bold} mb-2`}>Production Accountant Assistant</p>
+    <p className={`${styles.BoldBlack}`}>Production Accountant Assistant</p>
     </Col>
     </Row>
     {/* Prep */}
-    <Row>
+    <Row  className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Prep</p>
+    <p className={`${styles.Underline7}`}>Prep</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="production_acc_ass_qty_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -4755,7 +4755,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="production_acc_ass_uno_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -4772,7 +4772,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="production_acc_ass_una_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -4789,7 +4789,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="production_acc_ass_rt_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -4806,7 +4806,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="proaccassprepTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -4823,16 +4823,16 @@ const ProductionStaff = (props) => {
     </Col>
     </Row>
     {/* Shoot */}
-    <Row>
+    <Row  className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Shoot</p>
+    <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="production_accountant_assistant_quantity" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -4849,7 +4849,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="production_accountant_assistant_units_number" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -4866,7 +4866,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="production_accountant_assistant_units_name" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -4883,7 +4883,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="production_accountant_assistant_rate" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -4900,7 +4900,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="productionaccountantassistantTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -4917,16 +4917,16 @@ const ProductionStaff = (props) => {
     </Col>
     </Row>
     {/* Wrap */}
-    <Row>
+    <Row  className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Wrap</p>
+    <p className={`${styles.Underline7}`}>Wrap</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="production_acc_ass_qty_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -4943,7 +4943,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="production_acc_ass_uno_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -4960,7 +4960,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="production_acc_ass_una_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -4977,7 +4977,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="production_acc_ass_rt_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -4994,7 +4994,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="proaccasswrapTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -5011,7 +5011,7 @@ const ProductionStaff = (props) => {
     </Col>
     </Row>
     {/* Total */}
-    <Row>
+    <Row  className="py-0 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
@@ -5044,26 +5044,26 @@ const ProductionStaff = (props) => {
     </Col>
     </Row>
     {/* Script Supervisor / Continuity */}
-    <div className="mt-3">
+    <div className="mt-1">
     <Row>
     <Col md={1} >
     <p className={`${styles.Underline}`}>07.92</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Bold} mb-2`}>Script Supervisor / Continuity</p>
+    <p className={`${styles.BoldBlack}`}>Script Supervisor / Continuity</p>
     </Col>
     </Row>
     {/* Prep */}
-    <Row>
+    <Row  className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Prep</p>
+    <p className={`${styles.Underline7}`}>Prep</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="scriptsupervisor_con_qty_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -5080,7 +5080,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="scriptsupervisor_con_uno_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -5097,7 +5097,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="scriptsupervisor_con_una_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -5114,7 +5114,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="scriptsupervisor_con_rt_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -5131,7 +5131,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="scriptsupconprepTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -5148,16 +5148,16 @@ const ProductionStaff = (props) => {
     </Col>
     </Row>
     {/* Shoot */}
-    <Row>
+    <Row  className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Shoot</p>
+    <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="scriptsupervisor_continuity_quantity" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -5174,7 +5174,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="scriptsupervisor_continuity_units_number" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -5191,7 +5191,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="scriptsupervisor_continuity_units_name" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -5208,7 +5208,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="scriptsupervisor_continuity_rate" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -5225,7 +5225,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="scriptsupervisorcontinuityTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -5242,16 +5242,16 @@ const ProductionStaff = (props) => {
     </Col>
     </Row>
     {/* Wrap */}
-    <Row>
+    <Row  className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Wrap</p>
+    <p className={`${styles.Underline7}`}>Wrap</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="scriptsupervisor_con_qty_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -5268,7 +5268,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="scriptsupervisor_con_uno_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -5285,7 +5285,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="scriptsupervisor_con_una_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -5302,7 +5302,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="scriptsupervisor_con_rt_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -5319,7 +5319,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="scriptsupconwrapTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -5336,7 +5336,7 @@ const ProductionStaff = (props) => {
     </Col>
     </Row>
     {/* Total */}
-    <Row>
+    <Row  className="py-0 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
@@ -5369,26 +5369,26 @@ const ProductionStaff = (props) => {
     </Col>
     </Row>
     {/* Payroll */}
-    <div className="mt-3">
+    <div className="mt-1">
     <Row>
     <Col md={1} >
     <p className={`${styles.Underline}`}>07.93</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Bold} mb-2`}>Payroll</p>
+    <p className={`${styles.BoldBlack}`}>Payroll</p>
     </Col>
     </Row>
     {/* Prep */}
-    <Row>
+    <Row  className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Prep</p>
+    <p className={`${styles.Underline7}`}>Prep</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="payroll_qty_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -5405,7 +5405,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="payroll_uno_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -5422,7 +5422,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="payroll_una_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -5439,7 +5439,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="payroll_rt_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -5456,7 +5456,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="payrollprepTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -5473,16 +5473,16 @@ const ProductionStaff = (props) => {
     </Col>
     </Row>
     {/* Shoot */}
-    <Row>
+    <Row className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Shoot</p>
+    <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="payroll_quantity" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -5499,7 +5499,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="payroll_units_number" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -5516,7 +5516,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="payroll_units_name" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -5533,7 +5533,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="payroll_rate" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -5550,7 +5550,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="payrollTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -5567,16 +5567,16 @@ const ProductionStaff = (props) => {
     </Col>
     </Row>
     {/* Wrap */}
-    <Row>
+    <Row  className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Wrap</p>
+    <p className={`${styles.Underline7}`}>Wrap</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="payroll_qty_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -5593,7 +5593,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="payroll_uno_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -5610,7 +5610,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="payroll_una_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -5627,7 +5627,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="payroll_rt_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -5644,7 +5644,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="payrollwrapTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -5661,7 +5661,7 @@ const ProductionStaff = (props) => {
     </Col>
     </Row>
     {/* Total */}
-    <Row>
+    <Row  className="py-0 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
@@ -5694,26 +5694,26 @@ const ProductionStaff = (props) => {
     </Col>
     </Row>
     {/* Other Production */}
-    <div className="mt-3">
+    <div className="mt-1">
     <Row>
     <Col md={1} >
     <p className={`${styles.Underline}`}>07.94</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Bold} mb-2`}>Other Production</p>
+    <p className={`${styles.BoldBlack}`}>Other Production</p>
     </Col>
     </Row>
     {/* Prep */}
-    <Row>
+    <Row  className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Prep</p>
+    <p className={`${styles.Underline7}`}>Prep</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="other_pro_qty_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -5730,7 +5730,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="other_pro_uno_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -5747,7 +5747,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="other_pro_una_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -5764,7 +5764,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="other_pro_rt_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -5781,7 +5781,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="otherproprepTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -5798,16 +5798,16 @@ const ProductionStaff = (props) => {
     </Col>
     </Row>
     {/* Shoot */}
-    <Row>
+    <Row  className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Shoot</p>
+    <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="other_production_quantity" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -5824,7 +5824,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="other_production_units_number" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -5841,7 +5841,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="other_production_units_name" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -5858,7 +5858,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="other_production_rate" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -5875,7 +5875,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="otherproductionTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -5892,16 +5892,16 @@ const ProductionStaff = (props) => {
     </Col>
     </Row>
     {/* Wrap */}
-    <Row>
+    <Row  className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Wrap</p>
+    <p className={`${styles.Underline7}`}>Wrap</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="other_pro_qty_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -5918,7 +5918,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="other_pro_uno_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -5935,7 +5935,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="other_pro_una_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -5952,7 +5952,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="other_pro_rt_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -5969,7 +5969,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="otherprowrapTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -5986,7 +5986,7 @@ const ProductionStaff = (props) => {
     </Col>
     </Row>
     {/* Total */}
-    <Row>
+    <Row  className="py-0 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
@@ -6019,26 +6019,26 @@ const ProductionStaff = (props) => {
     </Col>
     </Row>
     {/* Directors Assistant */}
-    <div className="mt-3">
+    <div className="mt-1">
     <Row>
     <Col md={1} >
     <p className={`${styles.Underline}`}>07.95</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Bold} mb-2`}>Director's Assistant</p>
+    <p className={`${styles.BoldBlack}`}>Director's Assistant</p>
     </Col>
     </Row>
     {/* Prep */}
-    <Row>
+    <Row  className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Prep</p>
+    <p className={`${styles.Underline7}`}>Prep</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="directors_ass_qty_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -6055,7 +6055,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="directors_ass_uno_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -6072,7 +6072,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="directors_ass_una_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -6089,7 +6089,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="directors_ass_rt_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -6106,7 +6106,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="directorsassprepTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -6123,16 +6123,16 @@ const ProductionStaff = (props) => {
     </Col>
     </Row>
     {/* Shoot */}
-    <Row>
+    <Row  className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Shoot</p>
+    <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="directors_assistant_quantity" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -6149,7 +6149,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="directors_assistant_units_number" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -6166,7 +6166,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="directors_assistant_units_name" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -6183,7 +6183,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="directors_assistant_rate" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -6200,7 +6200,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="directorsassistantTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -6217,16 +6217,16 @@ const ProductionStaff = (props) => {
     </Col>
     </Row>
     {/* Wrap */}
-    <Row>
+    <Row  className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Wrap</p>
+    <p className={`${styles.Underline7}`}>Wrap</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="directors_ass_qty_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -6243,7 +6243,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="directors_ass_uno_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -6260,7 +6260,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="directors_ass_una_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -6277,7 +6277,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="directors_ass_rt_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -6294,7 +6294,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="directorsasswrapTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -6311,7 +6311,7 @@ const ProductionStaff = (props) => {
     </Col>
     </Row>
     {/* Total */}
-    <Row>
+    <Row  className="py-0 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
@@ -6344,26 +6344,26 @@ const ProductionStaff = (props) => {
     </Col>
     </Row>
     {/* 1st Assistant Director */}
-    <div className="mt-3">
+    <div className="mt-1">
     <Row>
     <Col md={1} >
     <p className={`${styles.Underline}`}>07.96</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Bold} mb-2`}>1st Assistant Director</p>
+    <p className={`${styles.BoldBlack}`}>1st Assistant Director</p>
     </Col>
     </Row>
     {/* Prep */}
-    <Row>
+    <Row  className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Prep</p>
+    <p className={`${styles.Underline7}`}>Prep</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
-    <Form.Group controlId="ass_director_1st_qty_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+    <Form.Group controlId="ass_director_1st_qty_prep"
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -6380,7 +6380,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="ass_director_1st_uno_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -6397,7 +6397,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="ass_director_1st_una_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -6414,7 +6414,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="ass_director_1st_rt_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -6431,7 +6431,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="assdirector1stprepTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -6448,12 +6448,12 @@ const ProductionStaff = (props) => {
     </Col>
     </Row>
     {/* Shoot */}
-    <Row>
+    <Row  className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Shoot</p>
+    <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="assistant_director_1st_quantity" 
@@ -6542,16 +6542,16 @@ const ProductionStaff = (props) => {
     </Col>
     </Row>
     {/* Wrap */}
-    <Row>
+    <Row  className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Wrap</p>
+    <p className={`${styles.Underline7}`}>Wrap</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="ass_director_1st_qty_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -6568,7 +6568,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="ass_director_1st_uno_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -6585,7 +6585,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="ass_director_1st_una_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -6602,7 +6602,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="ass_director_1st_rt_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -6619,7 +6619,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="assdirector1stwrapTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -6636,12 +6636,12 @@ const ProductionStaff = (props) => {
     </Col>
     </Row>
     {/* Total */}
-    <Row>
+    <Row  className="py-0 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={9} > 
-    <p className={`${styles.Underline}`}>Total</p>
+    <p className={`${styles.Underline7}`}>Total</p>
     </Col>
     <Col md={2} >
     <Form.Group controlId="assdirector1stallTotal" 
@@ -6669,26 +6669,26 @@ const ProductionStaff = (props) => {
     </Col>
     </Row>
     {/* 2nd Assistant Director */}
-    <div className="mt-3">
+    <div className="mt-1">
     <Row>
     <Col md={1} >
     <p className={`${styles.Underline}`}>07.97</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Bold} mb-2`}>2nd Assistant Director</p>
+    <p className={`${styles.BoldBlack}`}>2nd Assistant Director</p>
     </Col>
     </Row>
     {/* Prep */}
-    <Row>
+    <Row  className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Prep</p>
+    <p className={`${styles.Underline7}`}>Prep</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="ass_director_2nd_qty_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -6705,7 +6705,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="ass_director_2nd_uno_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -6722,7 +6722,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="ass_director_2nd_una_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -6739,7 +6739,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="ass_director_2nd_rt_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -6756,7 +6756,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="assdirector2ndprepTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -6773,16 +6773,16 @@ const ProductionStaff = (props) => {
     </Col>
     </Row>
     {/* Shoot */}
-    <Row>
+    <Row  className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Shoot</p>
+    <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="assistant_director_2nd_quantity" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -6799,7 +6799,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="assistant_director_2nd_units_number" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -6816,7 +6816,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="assistant_director_2nd_units_name" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -6833,7 +6833,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="assistant_director_2nd_rate" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -6850,7 +6850,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="assistantdirector2ndTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -6867,16 +6867,16 @@ const ProductionStaff = (props) => {
     </Col>
     </Row>
     {/* Wrap */}
-    <Row>
+    <Row  className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Wrap</p>
+    <p className={`${styles.Underline7}`}>Wrap</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="ass_director_2nd_qty_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -6893,7 +6893,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="ass_director_2nd_uno_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -6910,7 +6910,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="ass_director_2nd_una_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -6927,7 +6927,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="ass_director_2nd_rt_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -6944,7 +6944,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="assdirector2ndwrapTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -6961,7 +6961,7 @@ const ProductionStaff = (props) => {
     </Col>
     </Row>
     {/* Total */}
-    <Row>
+    <Row  className="py-0 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
@@ -6994,26 +6994,26 @@ const ProductionStaff = (props) => {
     </Col>
     </Row>
     {/* 3rd Assistant Director */}
-    <div className="mt-3">
+    <div className="mt-1">
     <Row>
     <Col md={1} >
     <p className={`${styles.Underline}`}>07.98</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Bold} mb-2`}>3rd Assistant Director</p>
+    <p className={`${styles.BoldBlack}`}>3rd Assistant Director</p>
     </Col>
     </Row>
     {/* Prep */}
-    <Row>
+    <Row  className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Prep</p>
+    <p className={`${styles.Underline7}`}>Prep</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="ass_director_3rd_qty_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -7030,7 +7030,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="ass_director_3rd_uno_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -7047,7 +7047,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="ass_director_3rd_una_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -7064,7 +7064,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="ass_director_3rd_rt_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -7081,7 +7081,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="assdirector3rdprepTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -7098,16 +7098,16 @@ const ProductionStaff = (props) => {
     </Col>
     </Row>
     {/* Shoot */}
-    <Row>
+    <Row className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Shoot</p>
+    <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="assistant_director_3rd_quantity" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -7124,7 +7124,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="assistant_director_3rd_units_number" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -7141,7 +7141,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="assistant_director_3rd_units_name" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -7158,7 +7158,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="assistant_director_3rd_rate" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -7175,7 +7175,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="assistantdirector3rdTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -7192,16 +7192,16 @@ const ProductionStaff = (props) => {
     </Col>
     </Row>
     {/* Wrap */}
-    <Row>
+    <Row  className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Wrap</p>
+    <p className={`${styles.Underline7}`}>Wrap</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="ass_director_3rd_qty_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -7218,7 +7218,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="ass_director_3rd_uno_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -7235,7 +7235,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="ass_director_3rd_una_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -7252,7 +7252,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="ass_director_3rd_rt_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -7269,7 +7269,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="assdirector3rdwrapTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -7286,7 +7286,7 @@ const ProductionStaff = (props) => {
     </Col>
     </Row>
     {/* Total */}
-    <Row>
+    <Row  className="py-0 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
@@ -7319,26 +7319,26 @@ const ProductionStaff = (props) => {
     </Col>
     </Row>
     {/* Craft Services */}
-    <div className="mt-3">
+    <div className="mt-1">
     <Row>
     <Col md={1} >
     <p className={`${styles.Underline}`}>07.99</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Bold} mb-2`}>Craft Services</p>
+    <p className={`${styles.BoldBlack}`}>Craft Services</p>
     </Col>
     </Row>
     {/* Prep */}
-    <Row>
+    <Row className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Prep</p>
+    <p className={`${styles.Underline7}`}>Prep</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="craft_services_qty_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -7355,7 +7355,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="craft_services_uno_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -7372,7 +7372,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="craft_services_una_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -7389,7 +7389,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="craft_services_rt_prep" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -7406,7 +7406,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="craftservicesprepTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -7423,16 +7423,16 @@ const ProductionStaff = (props) => {
     </Col>
     </Row>
     {/* Shoot */}
-    <Row>
+    <Row  className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Shoot</p>
+    <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="craft_services_quantity" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -7449,7 +7449,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="craft_services_units_number" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -7466,7 +7466,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="craft_services_units_name" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -7483,7 +7483,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="craft_services_rate" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -7500,7 +7500,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="craftservicesTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -7517,16 +7517,16 @@ const ProductionStaff = (props) => {
     </Col>
     </Row>
     {/* Wrap */}
-    <Row>
+    <Row  className="py-0 d-flex align-items-center mb-1">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Wrap</p>
+    <p className={`${styles.Underline7}`}>Wrap</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="craft_services_qty_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -7543,7 +7543,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="craft_services_uno_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -7560,7 +7560,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="craft_services_una_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -7577,7 +7577,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="craft_services_rt_wrap" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -7594,7 +7594,7 @@ const ProductionStaff = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="craftserviceswrapTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -7611,7 +7611,7 @@ const ProductionStaff = (props) => {
     </Col>
     </Row>
     {/* Total */}
-    <Row>
+    <Row  className="py-0 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
@@ -7960,7 +7960,7 @@ const ProductionStaff = (props) => {
     </Col>
     </Row>
     {/* Production Staff Total */}
-    <Row className="mt-3">
+    <Row className="mt-3 mb-3 pb-2">
     <Col md={1} >
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
