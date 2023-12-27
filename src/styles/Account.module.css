@@ -8,12 +8,21 @@
   box-sizing: border-box;
   border-radius: 2px;
   color: #7177a1;
-  padding: 0px 10px;
+  padding: 2px 10px;
   height: 20px !important;
   text-align: center;
   color: #000;
   font-weight: 700;
 }
+
+.Box5 p {
+  margin-top: 2px !important;
+}
+
+.Box3 p {
+  margin-top: 3px !important;
+}
+
 /* total */
 .Box3 {
   margin-top: 3px;
