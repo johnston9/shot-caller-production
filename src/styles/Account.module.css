@@ -1,8 +1,12 @@
 /* normal for single */
+.Black {
+  color: #000;
+}
+
 .Box5 {
   margin-top: 3px;
   margin-bottom: 0;
-  width: 70px;
+  width: 100%;
   border: 1px solid #d0d9db;
   background: #fff;
   box-sizing: border-box;
@@ -27,7 +31,6 @@
 .Box3 {
   margin-top: 3px;
   margin-bottom: 3px;
-  width: 95%;
   border: 1px solid #d0d9db;
   background: #e9ecef;
   box-sizing: border-box;
@@ -43,8 +46,8 @@
 /* normal for treble */
 .Box {
   margin-top: 3px;
-  width: 70px;
   border: 1px solid #d0d9db;
+  width: 100%;
   background: #ffffff;
   box-sizing: border-box;
   border-radius: 2px;
@@ -60,7 +63,6 @@
 .Box2 {
   margin-top: 3px;
   margin-bottom: 0;
-  width: 95%;
   border: 1px solid #d0d9db;
   background: #e9ecef;
   box-sizing: border-box;
@@ -76,7 +78,6 @@
 .Box4 {
   margin-top: 3px;
   margin-bottom: 3px;
-  width: 95%;
   border: 1px solid #d0d9db;
   background: #e9ecef;
   box-sizing: border-box;
@@ -119,7 +120,8 @@
 .Underline6 {
   margin-bottom: 2px;
   margin-top: 2px;
-  font-weight: 400;
+  font-weight: 500;
+  color: #000;
 }
 
 .Underline2 {

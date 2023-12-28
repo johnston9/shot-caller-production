@@ -84,3 +84,18 @@
 </Col>
 </Row>
 </div>
+
+{/* ABOVE THE LINE - TOTAL */}
+<div className="mt-5 pl-3">
+<Row >
+<Col className={ `${styles.Overview} my-0 py-0`} md={10} >
+<p className={ `${styles.BoldBlack} pb-0 mb-0`}>TOTAL ABOVE THE LINE</p>
+</Col>
+<Col md={2} >
+<div className={`${styles.Box3} 
+  d-flex align-items-center justify-content-center`}>
+<p className={`${styles.BoldBlack}`}>{above_the_line_total || 0}</p>
+</div>
+</Col>
+</Row>
+</div>
