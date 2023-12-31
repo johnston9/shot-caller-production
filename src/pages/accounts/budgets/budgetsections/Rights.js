@@ -40,17 +40,28 @@ const Rights = (props) => {
   }, [story_rights, miscellaneous ]);
 
   return (
-    <div className="mt-5 px-3">
-    <Row >
+    <div className={`${styles.WhiteBack} mt-3 mb-5`}>
+    <Row className="mx-0" >
+    <Col md={12}
+        className={ `${styles.Overview} py-0 text-center`}>
+            <span className={`${styles.Close } py-1 mb-0 float-right `} 
+    onClick={() => setShow(false) } >Close</span>
+    <p className="pl-5 py-1">
+    RIGHTS SECTION
+    </p>
+    </Col>
+    <Col md={2} >
+    </Col>
+    </Row>
+    <div className="px-2" >
+    <Row className={`mt-3`}>
     <Col md={1} >
     <p className={`${styles.Underline}`}>01.00</p>
     </Col>
     <Col md={9} >
-    <p className={ `${styles.BoldBlack} mb-1`}>RIGHTS</p>
+    <p className={ `${styles.BoldBlack} py-1 mb-0`}>RIGHTS</p>
     </Col>
     <Col md={2}>
-    <span className={`${styles.Close }`} 
-    onClick={() => setShow(false) } >Close</span>
     </Col>
     </Row>
     {/* TITLES */}
@@ -160,7 +171,7 @@ const Rights = (props) => {
     </Col>
     </Row>
     {/* Rights Total */}
-    <Row className="mb-0 pb-0 mt-3">
+    <Row className="pb-2 mt-3">
     <Col md={1} >
     </Col>
     <Col className={ `${styles.Overview} mb-0 py-0`} md={6} >
@@ -193,6 +204,7 @@ const Rights = (props) => {
     ))}
     </Col>
     </Row>
+    </div>
     </div>
   )
 }

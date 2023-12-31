@@ -194,18 +194,29 @@ const ProducersDirectors = (props) => {
     other_producers_dirs, fringes_taxes_producers_dirs, ]);
     
   return (
-    <div>
-    <Row className="mt-5" >
+    <div className={`${styles.WhiteBack} mt-3 mb-5`}>
+    <Row className="mx-0" >
+    <Col md={12}
+        className={ `${styles.Overview} py-0 text-center`}>
+            <span className={`${styles.Close } py-1 mb-0 float-right `} 
+    onClick={() => setShow(false) } >Close</span>
+    <p className="pl-5 py-1">
+    PRODUCERS & DIRECTORS SECTION
+    </p>
+    </Col>
+    <Col md={2} >
+    </Col>
+    </Row>
+    <div className="px-2" >
+    <Row className="mt-3" >
     <Col md={1} >
     <p className={`${styles.Underline}`}>04.00</p>
     </Col>
     <Col md={9} >
     <p className={ `${styles.BoldBlack} mb-1`}>
-      PRODUCERS AND DIRECTORS</p>
+      PRODUCERS & DIRECTORS</p>
     </Col>
     <Col md={2}>
-    <span className={`${styles.Close }`} 
-    onClick={() => setShow(false) } >Close</span>
     </Col>
     </Row>
     {/* TITLES */}
@@ -908,7 +919,7 @@ const ProducersDirectors = (props) => {
     </Col>
     </Row>
     {/* Producers Dirs Total */}
-    <Row className="mt-3">
+    <Row className="mt-3 pb-2">
     <Col md={1} >
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
@@ -941,6 +952,7 @@ const ProducersDirectors = (props) => {
     ))}
     </Col>
     </Row>
+    </div>
     </div>
   )
 }

@@ -54,17 +54,28 @@ const Development = (props) => {
     fringes_taxes_development ]);
 
   return (
-    <div className="mt-5 px-3">
-    <Row >
+    <div className={`${styles.WhiteBack} mt-3 mb-5`}>
+    <Row className="mx-0" >
+    <Col md={12}
+        className={ `${styles.Overview} py-0 text-center`}>
+            <span className={`${styles.Close } py-1 mb-0 float-right `} 
+    onClick={() => setShow(false) } >Close</span>
+    <p className="pl-5 py-1">
+    DEVELOPMENT SECTION
+    </p>
+    </Col>
+    <Col md={2} >
+    </Col>
+    </Row>
+    <div className="px-2" >
+    <Row className={`mt-3`}>
     <Col md={1} >
     <p className={`${styles.Underline}`}>02.00</p>
     </Col>
     <Col md={9} >
-    <p className={ `${styles.BoldBlack} mb-1`}>PRE-PRODUCTION AND DEVELOPMENT</p>
+    <p className={ `${styles.BoldBlack} py-1 mb-0`}>PRE-PRODUCTION AND DEVELOPMENT</p>
     </Col>
     <Col md={2}>
-    <span className={`${styles.Close }`} 
-    onClick={() => setShow(false) } >Close</span>
     </Col>
     </Row>
     {/* TITLES */}
@@ -461,7 +472,7 @@ const Development = (props) => {
     </Col>
     </Row>
     {/* Development Total */}
-    <Row className="mt-3">
+    <Row className="mt-3 pb-2">
     <Col md={1} >
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
@@ -494,6 +505,7 @@ const Development = (props) => {
     ))}
     </Col>
     </Row>
+    </div>
     </div>
   )
 }

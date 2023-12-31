@@ -53,17 +53,28 @@ const Site = (props) => {
     site_other, police_control,]);
 
   return (
-    <div className="mt-5">
-    <Row >
+    <div className={`${styles.WhiteBack} mt-3 mb-5`}>
+    <Row className="mx-0" >
+    <Col md={12}
+        className={ `${styles.Overview} py-0 text-center`}>
+            <span className={`${styles.Close } py-1 mb-0 float-right `} 
+    onClick={() => setShow(false) } >Close</span>
+    <p className="pl-5 py-1">
+    SITE EXPENSES SECTION
+    </p>
+    </Col>
+    <Col md={2} >
+    </Col>
+    </Row>
+    <div className="px-2" >
+    <Row className={`mt-3`}>
     <Col md={1} >
-    <p className="mb-2">24.00</p>
+    <p className={`${styles.Underline}`}>24.00</p>
     </Col>
     <Col md={9} >
-    <p className={ `${styles.BoldBlack} mb-2`}>Site Expenses</p>
+    <p className={ `${styles.BoldBlack} mb-1`}>Site Expenses</p>
     </Col>
     <Col md={2}>
-    <span className={`${styles.Close }`} 
-    onClick={() => setShow(false) } >Close</span>
     </Col>
     </Row>
     {/* TITLES */}
@@ -91,7 +102,7 @@ const Site = (props) => {
     </Col>
     </Row>
     {/* Surveying/Scouting */}
-    <Row>
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>24.10</p>
     </Col>
@@ -109,7 +120,7 @@ const Site = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="surveying_scouting" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -125,8 +136,14 @@ const Site = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Site Rentals */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Site Rentals */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>24.20</p>
     </Col>
@@ -144,7 +161,7 @@ const Site = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="site_rentals" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -160,8 +177,14 @@ const Site = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Site Power */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Site Power */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>24.30</p>
     </Col>
@@ -179,7 +202,7 @@ const Site = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="site_power" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -195,8 +218,14 @@ const Site = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Site Access */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Site Access */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>24.40</p>
     </Col>
@@ -214,7 +243,7 @@ const Site = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="site_access" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -230,8 +259,14 @@ const Site = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Site Insurance */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Site Insurance */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>24.50</p>
     </Col>
@@ -249,7 +284,7 @@ const Site = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="site_insurance" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -265,8 +300,14 @@ const Site = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Repairs/Construction */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Repairs/Construction */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>24.60</p>
     </Col>
@@ -284,7 +325,7 @@ const Site = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="repairs_construction" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -300,8 +341,14 @@ const Site = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Security */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Security */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>24.70</p>
     </Col>
@@ -319,7 +366,7 @@ const Site = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="site_security" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -335,8 +382,14 @@ const Site = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Police Control */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Police Control */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>24.80</p>
     </Col>
@@ -354,7 +407,7 @@ const Site = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="police_control" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -370,8 +423,14 @@ const Site = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Other */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Other */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>24.90</p>
     </Col>
@@ -389,7 +448,7 @@ const Site = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="site_other" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -405,8 +464,14 @@ const Site = (props) => {
     ))}
     </Col>
     </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
     {/* Site Total */}
-    <Row className="mt-3">
+    <Row className="mt-3 pb-2">
     <Col md={1} >
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
@@ -439,6 +504,13 @@ const Site = (props) => {
     ))}
     </Col>
     </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    </div>
     </div>
   )
 }

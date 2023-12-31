@@ -814,8 +814,8 @@ const DesignLabour = (props) => {
     holidays_design, overtime_design, days6th7th_design,
     other_design, box_rent_design]);
 
-  return (
-    <div className={`${styles.WhiteBack} mt-3`}>
+  return ( 
+    <div className={`${styles.WhiteBack} mt-3 mb-5`}>
     <Row className="mx-0" >
     <Col md={12}
         className={ `${styles.Overview} py-0 text-center`}>
@@ -829,7 +829,7 @@ const DesignLabour = (props) => {
     </Col>
     </Row>
     <div className="px-2" >
-    <Row className={` mt-3`}>
+    <Row className={`mt-3`}>
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.00</p>
     </Col>

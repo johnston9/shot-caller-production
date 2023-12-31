@@ -3823,8 +3823,8 @@ function BudgetEdit() {
   // end totals------------------------
 
   const buttons = (
-    <div className="text-center mt-5">    
-    <hr className={`${styles.Break} mx-5 px-5 my-5 mb-2`}/>
+    <div className="text-center mt-3">    
+    <hr className={`${styles.Break} mx-5 px-5 mb-5 mb-2`}/>
       <Button
         className={`${btnStyles.Button} ${btnStyles.Blue} px-5 mr-3`}
         onClick={() => history.goBack()}

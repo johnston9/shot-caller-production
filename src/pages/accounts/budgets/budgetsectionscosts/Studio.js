@@ -49,17 +49,28 @@ const Studio = (props) => {
     studio_fx_equipment, studio_security, studio_other,]);
 
   return (
-    <div className="mt-5">
-    <Row >
+    <div className={`${styles.WhiteBack} mt-3 mb-5`}>
+    <Row className="mx-0" >
+    <Col md={12}
+        className={ `${styles.Overview} py-0 text-center`}>
+            <span className={`${styles.Close } py-1 mb-0 float-right `} 
+    onClick={() => setShow(false) } >Close</span>
+    <p className="pl-5 py-1">
+    STUDIO/BACKLOT EXPENSES SECTION
+    </p>
+    </Col>
+    <Col md={2} >
+    </Col>
+    </Row>
+    <div className="px-2" >
+    <Row className={`mt-3`} >
     <Col md={1} >
-    <p className="mb-2">23.00</p>
+    <p className={`${styles.Underline}`}>23.00</p>
     </Col>
     <Col md={9} >
-    <p className={ `${styles.BoldBlack} mb-2`}>Studio/Backlot Expenses</p>
+    <p className={ `${styles.BoldBlack} mb-1`}>Studio/Backlot Expenses</p>
     </Col>
     <Col md={2}>
-    <span className={`${styles.Close }`} 
-    onClick={() => setShow(false) } >Close</span>
     </Col>
     </Row>
     {/* TITLES */}
@@ -87,7 +98,7 @@ const Studio = (props) => {
     </Col>
     </Row>
     {/* Studio/Backlot Rentals */}
-    <Row>
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>23.10</p>
     </Col>
@@ -105,7 +116,7 @@ const Studio = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="studio_rentals" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -121,8 +132,14 @@ const Studio = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Power */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Power */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>23.20</p>
     </Col>
@@ -140,7 +157,7 @@ const Studio = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="power" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -156,8 +173,14 @@ const Studio = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Carpentry Shop Rentals */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Carpentry Shop Rentals */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>23.30</p>
     </Col>
@@ -175,7 +198,7 @@ const Studio = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="carpentry_rentals" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -191,8 +214,14 @@ const Studio = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Special Effects Equipment */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Special Effects Equipment */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>23.40</p>
     </Col>
@@ -210,7 +239,7 @@ const Studio = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="studio_fx_equipment" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -226,8 +255,14 @@ const Studio = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Security */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Security */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>23.50</p>
     </Col>
@@ -245,7 +280,7 @@ const Studio = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="studio_security" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -261,8 +296,14 @@ const Studio = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Other */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Other */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>23.60</p>
     </Col>
@@ -280,7 +321,7 @@ const Studio = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="studio_other" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -296,8 +337,14 @@ const Studio = (props) => {
     ))}
     </Col>
     </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
     {/* Studio Total */}
-    <Row className="mt-3">
+    <Row className="mt-3 pb-2">
     <Col md={1} >
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
@@ -330,6 +377,13 @@ const Studio = (props) => {
     ))}
     </Col>
     </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    </div>
     </div>
   )
 }

@@ -64,13 +64,26 @@ const StarsMusic = (props) => {
   ]);
 
   return (
-    <div>
-    <Row className="mt-5" >
+    <div className={`${styles.WhiteBack} mt-3 mb-5`}>
+    <Row className="mx-0" >
+    <Col md={12}
+        className={ `${styles.Overview} py-0 text-center`}>
+            <span className={`${styles.Close } py-1 mb-0 float-right `} 
+    onClick={() => setShow(false) } >Close</span>
+    <p className="pl-5 py-1">
+    STARS & MUSIC SECTION
+    </p>
+    </Col>
+    <Col md={2} >
+    </Col>
+    </Row>
+    <div className="px-2" >
+    <Row className="mt-3" >
     <Col md={1} >
     <p className={`${styles.Underline}`}>05.00</p>
     </Col>
     <Col md={9} >
-    <p className={ `${styles.BoldBlack} mb-1`}>STARS / MUSIC</p>
+    <p className={ `${styles.BoldBlack} mb-1`}>STARS & MUSIC</p>
     </Col>
     <Col md={2}>
     <span className={`${styles.Close }`} 
@@ -636,7 +649,7 @@ const StarsMusic = (props) => {
     </Col>
     </Row>
     {/* Stars / Music Total */}
-    <Row className="mt-3">
+    <Row className="mt-3 pb-2">
     <Col md={1} >
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
@@ -669,6 +682,7 @@ const StarsMusic = (props) => {
     ))}
     </Col>
     </Row>
+    </div>
     </div>
   )
 }

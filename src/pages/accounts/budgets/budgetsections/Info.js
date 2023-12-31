@@ -58,17 +58,28 @@ const Info = (props) => {
     }, [research, prep, shoot, wrap, post ]);
 
   return (
-    <div className="mt-5 px-3">
+    <div className={`${styles.WhiteBack} mt-3 mb-5`}>
+    <Row className="mx-0" >
+    <Col md={12}
+        className={ `${styles.Overview} py-0 text-center`}>
+            <span className={`${styles.Close } py-1 mb-0 float-right `} 
+    onClick={() => setShow(false) } >Close</span>
+    <p className="pl-5 py-1">
+    INFO/LENGTH SECTION
+    </p>
+    </Col>
+    <Col md={2} >
+    </Col>
+    </Row>
+    <div className="px-2" >
     {/* Title */}
-    <Row >
-    <Col md={1}>
+    <Row className="mt-3" >
+    <Col md={1}><p className={`${styles.Underline}`}>00.00</p>
     </Col>
     <Col md={9}>
-    <p className={ `${styles.BoldBlack} mb-1`}>INFO</p>
+    <p className={ `${styles.BoldBlack} py-1 mb-0`}>INFO</p>
     </Col>
     <Col md={2}>
-    <span className={`${styles.Close } mb-2`} 
-    onClick={() => setShow(false) } >Close</span>
     </Col>
     </Row>
     {/* TITLES */}
@@ -454,6 +465,7 @@ const Info = (props) => {
     </Row>
     </Col>
     </Row>
+    </div>
     </div>
   )
 }

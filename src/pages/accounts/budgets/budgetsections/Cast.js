@@ -206,8 +206,21 @@ const Cast = (props) => {
     days6th7th_cast, holidays_cast,]);
 
   return (
-    <div className="mt-5">
-    <Row >
+    <div className={`${styles.WhiteBack} mt-3 mb-5`}>
+    <Row className="mx-0" >
+    <Col md={12}
+        className={ `${styles.Overview} py-0 text-center`}>
+            <span className={`${styles.Close } py-1 mb-0 float-right `} 
+    onClick={() => setShow(false) } >Close</span>
+    <p className="pl-5 py-1">
+    CAST SECTION
+    </p>
+    </Col>
+    <Col md={2} >
+    </Col>
+    </Row>
+    <div className="px-2" >
+    <Row className={`mt-3`}>
     <Col md={1} >
     <p className={`${styles.Underline}`}>06.00</p>
     </Col>
@@ -215,8 +228,6 @@ const Cast = (props) => {
     <p className={ `${styles.BoldBlack} mb-1`}>CAST</p>
     </Col>
     <Col md={2}>
-    <span className={`${styles.Close }`} 
-    onClick={() => setShow(false) } >Close</span>
     </Col>
     </Row>
     {/* TITLES */}
@@ -1269,7 +1280,7 @@ const Cast = (props) => {
     </Col>
     </Row>
     {/* Cast Total */}
-    <Row className="mt-3">
+    <Row className="mt-3 pb-2">
     <Col md={1} >
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
@@ -1302,6 +1313,7 @@ const Cast = (props) => {
     ))}
     </Col>
     </Row>
+    </div>
     </div>
   )
 }
