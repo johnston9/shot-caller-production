@@ -17,11 +17,11 @@ const WardrobeSup = (props) => {
         ward_ship_brok, ward_repairs_clean, other_ward,
   } = postDataWardrobeSup;
 
-  // handleChange 
+  // handleChange - replace(/\D/g,'') - works but no decimal
   const handleChange = (event) => {
     setPostDataWardrobeSup({
     ...postDataWardrobeSup,
-    [event.target.name]: parseFloat(event.target.value || 0 ),
+    [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
     });
   };
 
@@ -49,17 +49,28 @@ const WardrobeSup = (props) => {
     ward_ship_brok, ward_repairs_clean, other_ward,]);
 
   return (
-    <div className="mt-5">
-    <Row >
+    <div className={`${styles.WhiteBack} mt-3 mb-5`}>
+    <Row className="mx-0" >
+    <Col md={12}
+        className={ `${styles.Overview} py-0 text-center`}>
+            <span className={`${styles.Close } py-1 mb-0 float-right `} 
+    onClick={() => setShow(false) } >Close</span>
+    <p className="pl-5 py-1">
+    WARDROBE SUPPLIES SECTION
+    </p>
+    </Col>
+    <Col md={2} >
+    </Col>
+    </Row>
+    <div className="px-2" >
+    <Row className={`mt-3`}>
     <Col md={1} >
-    <p className="mb-2">34.00</p>
+    <p className={`${styles.Underline}`}>34.00</p>
     </Col>
     <Col md={9} >
-    <p className={ `${styles.BoldBlack} mb-2`}>Wardrobe Supplies</p>
+    <p className={ `${styles.BoldBlack} mb-1`}>Wardrobe Supplies</p>
     </Col>
     <Col md={2}>
-    <span className={`${styles.Close }`} 
-    onClick={() => setShow(false) } >Close</span>
     </Col>
     </Row>
     {/* TITLES */}
@@ -70,24 +81,24 @@ const WardrobeSup = (props) => {
     <Col md={5} >
     <p className="mb-0">Description</p>
     </Col>
-    <Col md={1} >
+    <Col md={1} className="text-center" >
     <p className="mb-0">#</p>
     </Col>
-    <Col className="px-0 mx-0" md={1} >
+    <Col className="text-center" md={1} >
     <p># Unit</p>
     </Col>
-    <Col md={1} >
+    <Col md={1} className="text-center" >
     <p className="mb-0">Unit</p>
     </Col>
-    <Col md={1} >
+    <Col md={1} className="text-center" >
     <p className="mb-0">Price</p>
     </Col>
-    <Col md={2} >
+    <Col md={2} className="text-center" >
     <p className="mb-0">Total</p>
     </Col>
     </Row>
     {/* Rentals */}
-    <Row>
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>34.10</p>
     </Col>
@@ -105,7 +116,7 @@ const WardrobeSup = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="wardrobe_rentals" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -121,8 +132,14 @@ const WardrobeSup = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Purchases */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Purchases */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>34.20</p>
     </Col>
@@ -140,7 +157,7 @@ const WardrobeSup = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="wardrobe_purchases" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -156,8 +173,14 @@ const WardrobeSup = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Manufacture */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Manufacture */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>34.30</p>
     </Col>
@@ -175,7 +198,7 @@ const WardrobeSup = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="ward_manufact" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -191,8 +214,14 @@ const WardrobeSup = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Shipping/Brokerage */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Shipping/Brokerage */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>34.40</p>
     </Col>
@@ -210,7 +239,7 @@ const WardrobeSup = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="ward_ship_brok" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -226,8 +255,14 @@ const WardrobeSup = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Repairs/Cleaning */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Repairs/Cleaning */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>34.50</p>
     </Col>
@@ -245,7 +280,7 @@ const WardrobeSup = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="ward_repairs_clean" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -261,8 +296,14 @@ const WardrobeSup = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Other */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Other */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>34.60</p>
     </Col>
@@ -280,7 +321,7 @@ const WardrobeSup = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="other_ward" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -296,8 +337,14 @@ const WardrobeSup = (props) => {
     ))}
     </Col>
     </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
     {/* WARDROBE SUPPLIES Total */}
-    <Row className="mt-3">
+    <Row className="mt-3 pb-2">
     <Col md={1} >
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
@@ -330,7 +377,15 @@ const WardrobeSup = (props) => {
     ))}
     </Col>
     </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
     </div>
+    </div>
+    
   )
 }
 

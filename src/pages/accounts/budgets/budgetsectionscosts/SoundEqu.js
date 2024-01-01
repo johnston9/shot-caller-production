@@ -17,11 +17,11 @@ const SoundEqu = (props) => {
     wireless_mics, sound_purchases, walkie_talkies, other_sound,
   } = postDataSoundEqu;
 
-  // handleChange 
+  // handleChange - replace(/\D/g,'') - works but no decimal
   const handleChange = (event) => {
     setPostDataSoundEqu({
     ...postDataSoundEqu,
-    [event.target.name]: parseFloat(event.target.value || 0 ),
+    [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
     });
   };
 

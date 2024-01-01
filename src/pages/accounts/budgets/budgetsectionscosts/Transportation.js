@@ -18,13 +18,13 @@ const Transportation = (props) => {
         parking, licenses_permits, brokerage_insurance, other_transport,
   } = postDataTransportation;
 
-  // handleChange 
+  // handleChange - replace(/\D/g,'') - works but no decimal
   const handleChange = (event) => {
     setPostDataTransportation({
     ...postDataTransportation,
-    [event.target.name]: parseFloat(event.target.value || 0 ),
+    [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
     });
-  }; 
+  };
 
   // function to add all Transport on change
   useEffect(() => {

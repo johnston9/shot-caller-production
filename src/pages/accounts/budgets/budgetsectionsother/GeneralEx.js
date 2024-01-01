@@ -16,11 +16,11 @@ const GeneralEx = (props) => {
   const {legal, medical, licences, payroll, bank_charges, audit,
   } = postDataGeneralEx;
 
-  // handleChange 
+  // handleChange - replace(/\D/g,'') - works but no decimal
   const handleChange = (event) => {
     setPostDataGeneralEx({
     ...postDataGeneralEx,
-    [event.target.name]: parseFloat(event.target.value || 0 ),
+    [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
     });
   };
 

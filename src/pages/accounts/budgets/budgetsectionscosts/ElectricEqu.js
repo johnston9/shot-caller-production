@@ -18,11 +18,11 @@ const ElectricEqu = (props) => {
     generators, loss_damage_elec, other_electric,
   } = postDataElectricEqu;
 
-  // handleChange 
+  // handleChange - replace(/\D/g,'') - works but no decimal
   const handleChange = (event) => {
     setPostDataElectricEqu({
     ...postDataElectricEqu,
-    [event.target.name]: parseFloat(event.target.value || 0 ),
+    [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
     });
   };
 

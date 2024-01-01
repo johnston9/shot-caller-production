@@ -18,11 +18,11 @@ const CameraEqu = (props) => {
         video_teleprompter, camera_ship_brok, loss_damage_cam,
   } = postDataCameraEqu;
 
-  // handleChange 
+  // handleChange - replace(/\D/g,'') - works but no decimal
   const handleChange = (event) => {
     setPostDataCameraEqu({
     ...postDataCameraEqu,
-    [event.target.name]: parseFloat(event.target.value || 0 ),
+    [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
     });
   };
 

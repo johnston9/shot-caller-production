@@ -16,11 +16,11 @@ const Fx = (props) => {
   const {fx_rentals, fx_purchases, stunts_purchases_rentals,
         armaments_permits_fees, other_fx,} = postDataSpecEf;
 
-  // handleChange 
+  // handleChange - replace(/\D/g,'') - works but no decimal
   const handleChange = (event) => {
     setPostDataSpecEf({
     ...postDataSpecEf,
-    [event.target.name]: parseFloat(event.target.value || 0 ),
+    [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
     });
   };
 
@@ -47,17 +47,28 @@ const Fx = (props) => {
     armaments_permits_fees, other_fx]);
 
   return (
-    <div className="mt-5">
-    <Row >
+    <div className={`${styles.WhiteBack} mt-3 mb-5`}>
+    <Row className="mx-0" >
+    <Col md={12}
+        className={ `${styles.Overview} py-0 text-center`}>
+            <span className={`${styles.Close } py-1 mb-0 float-right `} 
+    onClick={() => setShow(false) } >Close</span>
+    <p className="pl-5 py-1">
+    SPECIAL EFFECTS SECTION
+    </p>
+    </Col>
+    <Col md={2} >
+    </Col>
+    </Row>
+    <div className="px-2" >
+    <Row className={`mt-3`}>
     <Col md={1} >
-    <p className="mb-2">32.00</p>
+    <p className={`${styles.Underline}`}>32.00</p>
     </Col>
     <Col md={9} >
-    <p className={ `${styles.BoldBlack} mb-2`}>Special Effects</p>
+    <p className={ `${styles.BoldBlack} mb-1`}>Special Effects</p>
     </Col>
     <Col md={2}>
-    <span className={`${styles.Close }`} 
-    onClick={() => setShow(false) } >Close</span>
     </Col>
     </Row>
     {/* TITLES */}
@@ -68,24 +79,24 @@ const Fx = (props) => {
     <Col md={5} >
     <p className="mb-0">Description</p>
     </Col>
-    <Col md={1} >
+    <Col md={1} className="text-center" >
     <p className="mb-0">#</p>
     </Col>
-    <Col className="px-0 mx-0" md={1} >
+    <Col className="text-center" md={1} >
     <p># Unit</p>
     </Col>
-    <Col md={1} >
+    <Col md={1} className="text-center" >
     <p className="mb-0">Unit</p>
     </Col>
-    <Col md={1} >
+    <Col md={1} className="text-center" >
     <p className="mb-0">Price</p>
     </Col>
-    <Col md={2} >
+    <Col md={2} className="text-center" >
     <p className="mb-0">Total</p>
     </Col>
     </Row>
     {/* Rentals */}
-    <Row>
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>32.10</p>
     </Col>
@@ -103,7 +114,7 @@ const Fx = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="fx_rentals" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -119,8 +130,14 @@ const Fx = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Purchases */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Purchases */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>32.20</p>
     </Col>
@@ -138,7 +155,7 @@ const Fx = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="fx_purchases" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -154,8 +171,14 @@ const Fx = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Stunts Purchases/Rentals */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Stunts Purchases/Rentals */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>32.30</p>
     </Col>
@@ -173,7 +196,7 @@ const Fx = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="stunts_purchases_rentals" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -189,8 +212,14 @@ const Fx = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Armaments & Permits/Fees */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Armaments & Permits/Fees */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>32.40</p>
     </Col>
@@ -208,7 +237,7 @@ const Fx = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="armaments_permits_fees" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -224,8 +253,14 @@ const Fx = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Other */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Other */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>32.50</p>
     </Col>
@@ -243,7 +278,7 @@ const Fx = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="other_fx" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -257,6 +292,12 @@ const Fx = (props) => {
         {message}
         </Alert>
     ))}
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
     </Col>
     </Row>
     {/* SPECIAL EFFECTS Total */}
@@ -293,6 +334,7 @@ const Fx = (props) => {
     ))}
     </Col>
     </Row>
+    </div>
     </div>
   )
 }

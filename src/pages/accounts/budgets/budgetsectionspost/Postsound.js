@@ -31,11 +31,11 @@ const Postsound = (props) => {
     lossdam_sound, fringes_taxes_post_sound, other_post_sound,
   } = postDataPostSound;
 
-  // handleChange 
+  // handleChange - replace(/\D/g,'') - works but no decimal
   const handleChange = (event) => {
     setPostDataPostSound({
     ...postDataPostSound,
-    [event.target.name]: parseFloat(event.target.value || 0 ),
+    [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
     });
   }; 
 

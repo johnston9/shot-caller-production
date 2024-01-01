@@ -17,11 +17,11 @@ const ConstructionMat = (props) => {
         painting_purchases, backdrops_murals, construction_other,
         scaffolding, warehouse_rental,} = postDataConstructionMat;
 
-  // handleChange 
+  // handleChange - replace(/\D/g,'') - works but no decimal
   const handleChange = (event) => {
     setPostDataConstructionMat({
     ...postDataConstructionMat,
-    [event.target.name]: parseFloat(event.target.value || 0 ),
+    [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
     });
   };
 
@@ -433,7 +433,7 @@ const ConstructionMat = (props) => {
     <Col md={1} >
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
-    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL CONSTRUCTION MATERIAL</p>
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL CONSTRUCTION MATERIALS</p>
     </Col>
     <Col md={1} >
     <p></p>

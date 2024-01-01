@@ -16,13 +16,13 @@ const TravelLiving = (props) => {
   const {fares, accomatation_hotels, per_diems, taxis_limos,
         shipping, other_trav_liv, customs_brokerage,} = postDataTraLiv;
 
-  // handleChange 
+  // handleChange - replace(/\D/g,'') - works but no decimal
   const handleChange = (event) => {
     setPostDataTraLiv({
     ...postDataTraLiv,
-    [event.target.name]: parseFloat(event.target.value || 0 ),
+    [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
     });
-  }; 
+  };
 
   // function to add all Travel & Living on change
   useEffect(() => {
@@ -132,13 +132,19 @@ const TravelLiving = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Accomatation/Hotels */}
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Accommodation/Hotels */}
     <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>26.20</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Accomatation/Hotels</p>
+    <p className={`${styles.Underline}`}>Accommodation/Hotels</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -165,6 +171,12 @@ const TravelLiving = (props) => {
         {message}
         </Alert>
     ))}
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
     </Col>
     </Row>
     {/* Per diems */}
@@ -202,13 +214,19 @@ const TravelLiving = (props) => {
     ))}
     </Col>
     </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
     {/* Taxis/Limousines */}
     <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>26.40</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Taxis/Limousines</p>
+    <p className={`${styles.Underline}`}>Taxis/Limousines/Car Allowances</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -235,6 +253,12 @@ const TravelLiving = (props) => {
         {message}
         </Alert>
     ))}
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
     </Col>
     </Row>
     {/* Shipping */}
@@ -272,6 +296,12 @@ const TravelLiving = (props) => {
     ))}
     </Col>
     </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
     {/* Customs Brokerage */}
     <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
@@ -305,6 +335,12 @@ const TravelLiving = (props) => {
         {message}
         </Alert>
     ))}
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
     </Col>
     </Row>
     {/* Other */}
@@ -342,6 +378,12 @@ const TravelLiving = (props) => {
     ))}
     </Col>
     </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
     {/* TRAVEL & LIVING Total */}
     <Row className="mt-3 pb-2">
     <Col md={1} >
@@ -374,6 +416,12 @@ const TravelLiving = (props) => {
         {message}
         </Alert>
     ))}
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
     </Col>
     </Row>
     </div>

@@ -22,13 +22,13 @@ const PostVisualEffects = (props) => {
     box_ren_vfx, fringes_taxes_vfx, other_post_vfx,
   } = postDataPostVFX;
 
-  // handleChange 
+  // handleChange - replace(/\D/g,'') - works but no decimal
   const handleChange = (event) => {
     setPostDataPostVFX({
     ...postDataPostVFX,
-    [event.target.name]: parseFloat(event.target.value || 0 ),
+    [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
     });
-  };
+  }; 
   
   // function to add all Visual Effects on change
   useEffect(() => {

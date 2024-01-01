@@ -17,11 +17,11 @@ const Insurance = (props) => {
     union_insurance, other_in,
   } = postDataInsurance;
 
-  // handleChange 
+  // handleChange - replace(/\D/g,'') - works but no decimal
   const handleChange = (event) => {
     setPostDataInsurance({
     ...postDataInsurance,
-    [event.target.name]: parseFloat(event.target.value || 0 ),
+    [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
     });
   };
 

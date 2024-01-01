@@ -33,13 +33,13 @@ const StaffFacilities = (props) => {
     post_ship, post_craft, fringes_taxes_post, post_other, post_consultant,
   } = postDataPostStaffFac;
 
-  // handleChange 
+  // handleChange - replace(/\D/g,'') - works but no decimal
   const handleChange = (event) => {
     setPostDataPostStaffFac({
     ...postDataPostStaffFac,
-    [event.target.name]: parseFloat(event.target.value || 0 ),
+    [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
     });
-}; 
+  }; 
 
   // handleChange Text 
   const handleChangeText = (event) => {

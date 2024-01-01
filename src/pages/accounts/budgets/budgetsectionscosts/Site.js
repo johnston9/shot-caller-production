@@ -17,13 +17,13 @@ const Site = (props) => {
         site_insurance, repairs_construction, site_security, site_other,
         police_control,} = postDataSite;
 
-  // handleChange 
+  // handleChange - replace(/\D/g,'') - works but no decimal
   const handleChange = (event) => {
     setPostDataSite({
     ...postDataSite,
-    [event.target.name]: parseFloat(event.target.value || 0 ),
+    [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
     });
-  }; 
+  };
 
   // function to add all Site on change
   useEffect(() => {

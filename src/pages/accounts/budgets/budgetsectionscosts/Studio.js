@@ -17,13 +17,13 @@ const Studio = (props) => {
     studio_fx_equipment, studio_security, studio_other,
     } = postDataStudio;
 
-  // handleChange 
+  // handleChange - replace(/\D/g,'') - works but no decimal
   const handleChange = (event) => {
     setPostDataStudio({
     ...postDataStudio,
-    [event.target.name]: parseFloat(event.target.value || 0 ),
+    [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
     });
-  }; 
+  };
 
   // function to add all Studio on change
   useEffect(() => {

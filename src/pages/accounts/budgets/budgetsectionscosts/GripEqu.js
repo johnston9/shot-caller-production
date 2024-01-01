@@ -18,11 +18,11 @@ const GripEqu = (props) => {
     grip_purchases, loss_damage_grip, other_grip,
   } = postDataGripEqu;
 
-  // handleChange 
+  // handleChange - replace(/\D/g,'') - works but no decimal
   const handleChange = (event) => {
     setPostDataGripEqu({
     ...postDataGripEqu,
-    [event.target.name]: parseFloat(event.target.value || 0 ),
+    [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
     });
   };
 

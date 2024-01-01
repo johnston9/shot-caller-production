@@ -3175,18 +3175,18 @@ function BudgetEdit() {
   const {contingency, completion_bond,
   } = postDataContingency;
 
-  // handleChange 
+  // handleChange - replace(/\D/g,'') - works but no decimal
   const handleChangeCon = (event) => {
     setPostDataContingency({
     ...postDataContingency,
-    [event.target.name]: parseFloat(event.target.value || 0 ),
+    [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
     });
-  };
+  }; 
 
   const contin = (
     <div className="mt-2">
     {/* Contingency */}
-    <Row>
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
@@ -3202,7 +3202,7 @@ function BudgetEdit() {
     <Col md={1} >
     <p></p>
     </Col>
-    <Col md={2} className="mt-1" >
+    <Col md={2} >
     <Form.Group controlId="contingency" 
         className={`${styles.Width95} text-center my-0 py-0`} >
         <Form.Control 
@@ -3220,8 +3220,14 @@ function BudgetEdit() {
     ))}
     </Col>
     </Row>
-    {/* Completion Bond */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Completion Bond */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
@@ -3239,7 +3245,7 @@ function BudgetEdit() {
     </Col>
     <Col md={2} >
     <Form.Group controlId="completion_bond" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -3253,6 +3259,12 @@ function BudgetEdit() {
         {message}
         </Alert>
     ))}
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
     </Col>
     </Row>
     </div>
@@ -3794,7 +3806,7 @@ function BudgetEdit() {
 
   // Grand input box
   const grandtotal = (
-    <div className="my-2 pl-3">
+    <div className="mt-4 pl-3">
     <Row>
     <Col className={ `${styles.Overview}  my-0 py-0`} md={10} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>GRAND TOTAL</p>
@@ -6636,11 +6648,16 @@ function BudgetEdit() {
     <Form className="mt-1 px-3" onSubmit={handleSubmit}>
     {prepare}
     {/* above total */}
-    <Row className={ `${styles.OverviewBlue} mx-1 mt-5 py-0`}>
+    <Row className={ `${styles.OverviewBlue} mx-1 mt-5 py-1`}>
     <Col md={10}>
-    <p className={ `pb-0 mb-0 ml-3 ${styles.BoldBlack}`}>ABOVE THE LINE</p>
+    <p className={ `pb-0 mb-0 ml-5 ${styles.BoldBlack}`}>ABOVE THE LINE</p>
     </Col>
-    <Col md={2}><p className="mb-0">{aboveTheLineTotal} </p></Col>
+    <Col md={2}>
+    <div className={`${styles.Box} 
+       d-flex align-items-center justify-content-center`}>
+      <p className={` mb-0 ${styles.BoldBlack}`}>{aboveTheLineTotal || 0} </p>
+    </div>
+    </Col>
     </Row>
     {/* sections above click buttons */}
     <Row className={`${styles.ButtonLine} mx-1`}>
@@ -6649,11 +6666,11 @@ function BudgetEdit() {
     <Row>
     <Col md={8}>
     <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
-          onClick={() => setShowInfo(showInfo => !showInfo)} > Info
+          onClick={() => setShowInfo(showInfo => !showInfo)} > Info/Length
         </p>
     </Col>
     <Col md={4}>
-    <p className="mb-0">{postDataLengthTotal} </p>
+    <p className="mb-0 float-right pr-5">{postDataLengthTotal || 0} </p>
     </Col>
     </Row>
     </div>
@@ -6667,7 +6684,7 @@ function BudgetEdit() {
     </p>
     </Col>
     <Col md={4}>
-    <p className="mb-0">{postDataRightsTotal} </p>
+    <p className="mb-0 float-right pr-5">{postDataRightsTotal || 0} </p>
     </Col>
     </Row>
     </div>
@@ -6681,7 +6698,7 @@ function BudgetEdit() {
     </p>
     </Col>
     <Col md={4}>
-    <p className="mb-0">{developmentTotal} </p>
+    <p className="mb-0 float-right pr-5">{developmentTotal || 0} </p>
     </Col>
     </Row>
     </div>
@@ -6695,7 +6712,7 @@ function BudgetEdit() {
     </p>
     </Col>
     <Col md={4}>
-    <p className="mb-0">{scenarioTotal} </p>
+    <p className="mb-0 float-right pr-5">{scenarioTotal || 0} </p>
     </Col>
     </Row>
     </div>
@@ -6709,7 +6726,7 @@ function BudgetEdit() {
     </p>
     </Col>
     <Col md={4}>
-    <p className="mb-0">{producersDirsTotal} </p>
+    <p className="mb-0 float-right pr-5">{producersDirsTotal || 0} </p>
     </Col>
     </Row>
     </div>
@@ -6723,19 +6740,24 @@ function BudgetEdit() {
     </p>
     </Col>
     <Col md={4}>
-    <p className="mb-0">{starsMusicTotal} </p>
+    <p className="mb-0 float-right pr-5">{starsMusicTotal || 0} </p>
     </Col>
     </Row>
     </div>
     </Col>
     </Row>  
     {/* below B labour + total */}
-    <Row className={ `${styles.OverviewBlue} mx-1 mb-0 mt-0 py-0`}>
+    <Row className={ `${styles.OverviewBlue} mx-1 mb-0 mt-2 py-1`}>
     <Col md={10}>
-    <p className={ `mb-0 ml-3 ${styles.BoldBlack}`}>
+    <p className={ `mb-0 ml-5 ${styles.BoldBlack}`}>
       BELOW THE LINE "B" PRODUCTION - LABOUR</p>
     </Col>
-    <Col md={2}><p className="mb-0">{belowTheLineBTotal} </p></Col>
+    <Col md={2}>
+    <div className={`${styles.Box} 
+       d-flex align-items-center justify-content-center`}>
+      <p className={` mb-0 ${styles.BoldBlack}`}>{belowTheLineBTotal || 0} </p>
+    </div>
+    </Col>
     </Row>
     {/* sections below B labour click buttons */}
     <Row className={`${styles.ButtonLine} mx-1`}>
@@ -6749,7 +6771,7 @@ function BudgetEdit() {
     </p>
     </Col>
     <Col md={4}>
-    <p className="mb-0">{castTotal} </p>
+    <p className="mb-0 float-right pr-5">{castTotal || 0} </p>
     </Col>
     </Row>
     </div>
@@ -6764,7 +6786,7 @@ function BudgetEdit() {
     </p>
     </Col>
     <Col md={4}>
-    <p className="mb-0">{productionstaffTotal} </p>
+    <p className="mb-0 float-right pr-5">{productionstaffTotal || 0} </p>
     </Col>
     </Row>
     </div>
@@ -6779,7 +6801,7 @@ function BudgetEdit() {
     </p>
     </Col>
     <Col md={4}>
-    <p className="mb-0">{designlabourTotal} </p>
+    <p className="mb-0 float-right pr-5">{designlabourTotal || 0} </p>
     </Col>
     </Row>
     </div>
@@ -6794,7 +6816,7 @@ function BudgetEdit() {
     </p>
     </Col>
     <Col md={4}>
-    <p className="mb-0">{constructionlabourTotal} </p>
+    <p className="mb-0 float-right pr-5">{constructionlabourTotal || 0} </p>
     </Col>
     </Row>
     </div>
@@ -6809,7 +6831,7 @@ function BudgetEdit() {
     </p>
     </Col>
     <Col md={4}>
-    <p className="mb-0">{dressinglabourTotal} </p>
+    <p className="mb-0 float-right pr-5">{dressinglabourTotal || 0} </p>
     </Col>
     </Row>
     </div>
@@ -6824,7 +6846,7 @@ function BudgetEdit() {
     </p>
     </Col>
     <Col md={4}>
-    <p className="mb-0">{fxlabourTotal} </p>
+    <p className="mb-0 float-right pr-5">{fxlabourTotal || 0} </p>
     </Col>
     </Row>
     </div>
@@ -6839,7 +6861,7 @@ function BudgetEdit() {
     </p>
     </Col>
     <Col md={4}>
-    <p className="mb-0">{propertylabourTotal} </p>
+    <p className="mb-0 float-right pr-5">{propertylabourTotal || 0} </p>
     </Col>
     </Row>
     </div>
@@ -6854,7 +6876,7 @@ function BudgetEdit() {
     </p>
     </Col>
     <Col md={4}>
-    <p className="mb-0">{wranglerlabourTotal} </p>
+    <p className="mb-0 float-right pr-5">{wranglerlabourTotal || 0} </p>
     </Col>
     </Row>
     </div>
@@ -6869,7 +6891,7 @@ function BudgetEdit() {
     </p>
     </Col>
     <Col md={4}>
-    <p className="mb-0">{wardrobelabourTotal} </p>
+    <p className="mb-0 float-right pr-5">{wardrobelabourTotal || 0} </p>
     </Col>
     </Row>
     </div>
@@ -6884,7 +6906,7 @@ function BudgetEdit() {
     </p>
     </Col>
     <Col md={4}>
-    <p className="mb-0">{makeuplabourTotal} </p>
+    <p className="mb-0 float-right pr-5">{makeuplabourTotal || 0} </p>
     </Col>
     </Row>
     </div>
@@ -6899,7 +6921,7 @@ function BudgetEdit() {
     </p>
     </Col>
     <Col md={4}>
-    <p className="mb-0">{cameralabourTotal} </p>
+    <p className="mb-0 float-right pr-5">{cameralabourTotal || 0} </p>
     </Col>
     </Row>
     </div>
@@ -6914,7 +6936,7 @@ function BudgetEdit() {
     </p>
     </Col>
     <Col md={4}>
-    <p className="mb-0">{electriclabourTotal} </p>
+    <p className="mb-0 float-right pr-5">{electriclabourTotal ||0} </p>
     </Col>
     </Row>
     </div>
@@ -6929,7 +6951,7 @@ function BudgetEdit() {
     </p>
     </Col>
     <Col md={4}>
-    <p className="mb-0">{griplabourTotal} </p>
+    <p className="mb-0 float-right pr-5">{griplabourTotal || 0} </p>
     </Col>
     </Row>
     </div>
@@ -6944,7 +6966,7 @@ function BudgetEdit() {
     </p>
     </Col>
     <Col md={4}>
-    <p className="mb-0">{soundlabourTotal} </p>
+    <p className="mb-0 float-right pr-5">{soundlabourTotal || 0} </p>
     </Col>
     </Row>
     </div>
@@ -6959,7 +6981,7 @@ function BudgetEdit() {
     </p>
     </Col>
     <Col md={4}>
-    <p className="mb-0">{transportlabourTotal} </p>
+    <p className="mb-0 float-right pr-5">{transportlabourTotal || 0} </p>
     </Col>
     </Row>
     </div>
@@ -6974,19 +6996,24 @@ function BudgetEdit() {
     </p>
     </Col>
     <Col md={4}>
-    <p className="mb-0">{tvspecificlabourTotal} </p>
+    <p className="mb-0 float-right pr-5">{tvspecificlabourTotal || 0} </p>
     </Col>
     </Row>
     </div>
     </Col>
     </Row> 
     {/* below B costs + total */}
-    <Row className={ `${styles.OverviewBlue} mx-1 mb-0 mt-0 py-0`}>
+    <Row className={ `${styles.OverviewBlue} mx-1 mb-0 mt-2 py-1`}>
     <Col md={10}>
     <p className={ `mb-0 ml-3 ${styles.BoldBlack}`}>
       BELOW THE LINE "B" PRODUCTION - COSTS</p>
     </Col>
-    <Col md={2}><p className="mb-0">{belowTheLineBCostsTotal} </p></Col>
+    <Col md={2}>
+    <div className={`${styles.Box} 
+       d-flex align-items-center justify-content-center`}>
+      <p className={` mb-0 ${styles.BoldBlack}`}>{belowTheLineBCostsTotal || 0} </p>
+    </div>
+    </Col>
     </Row>
     {/* sections below B costs click buttons */}
     <Row className={`${styles.ButtonLine} mx-1`}>
@@ -7000,7 +7027,7 @@ function BudgetEdit() {
     </p>
     </Col>
     <Col md={4}>
-    <p className="mb-0">{proOffTotal} </p>
+    <p className="mb-0 float-right pr-5">{proOffTotal || 0} </p>
     </Col>
     </Row>
     </div>
@@ -7015,7 +7042,7 @@ function BudgetEdit() {
     </p>
     </Col>
     <Col md={4}>
-    <p className="mb-0">{studioTotal} </p>
+    <p className="mb-0 float-right pr-5">{studioTotal || 0} </p>
     </Col>
     </Row>
     </div>
@@ -7030,7 +7057,7 @@ function BudgetEdit() {
     </p>
     </Col>
     <Col md={4}>
-    <p className="mb-0">{siteTotal} </p>
+    <p className="mb-0 float-right pr-5">{siteTotal || 0} </p>
     </Col>
     </Row>
     </div>
@@ -7045,7 +7072,7 @@ function BudgetEdit() {
     </p>
     </Col>
     <Col md={4}>
-    <p className="mb-0">{unitTotal} </p>
+    <p className="mb-0 float-right pr-5">{unitTotal || 0} </p>
     </Col>
     </Row>
     </div>
@@ -7060,7 +7087,7 @@ function BudgetEdit() {
     </p>
     </Col>
     <Col md={4}>
-    <p className="mb-0">{tralivTotal} </p>
+    <p className="mb-0 float-right pr-5">{tralivTotal || 0} </p>
     </Col>
     </Row>
     </div>
@@ -7075,7 +7102,7 @@ function BudgetEdit() {
     </p>
     </Col>
     <Col md={4}>
-    <p className="mb-0">{transportTotal} </p>
+    <p className="mb-0 float-right pr-5">{transportTotal || 0} </p>
     </Col>
     </Row>
     </div>
@@ -7090,7 +7117,7 @@ function BudgetEdit() {
     </p>
     </Col>
     <Col md={4}>
-    <p className="mb-0">{constructionMatTotal} </p>
+    <p className="mb-0 float-right pr-5">{constructionMatTotal || 0} </p>
     </Col>
     </Row>
     </div>
@@ -7105,7 +7132,7 @@ function BudgetEdit() {
     </p>
     </Col>
     <Col md={4}>
-    <p className="mb-0">{artSupTotal} </p>
+    <p className="mb-0 float-right pr-5">{artSupTotal || 0} </p>
     </Col>
     </Row>
     </div>
@@ -7120,7 +7147,7 @@ function BudgetEdit() {
     </p>
     </Col>
     <Col md={4}>
-    <p className="mb-0">{dressingTotal} </p>
+    <p className="mb-0 float-right pr-5">{dressingTotal || 0} </p>
     </Col>
     </Row>
     </div>
@@ -7135,7 +7162,7 @@ function BudgetEdit() {
     </p>
     </Col>
     <Col md={4}>
-    <p className="mb-0">{propsTotal} </p>
+    <p className="mb-0 float-right pr-5">{propsTotal || 0} </p>
     </Col>
     </Row>
     </div>
@@ -7150,7 +7177,7 @@ function BudgetEdit() {
     </p>
     </Col>
     <Col md={4}>
-    <p className="mb-0">{fxTotal} </p>
+    <p className="mb-0 float-right pr-5">{fxTotal || 0} </p>
     </Col>
     </Row>
     </div>
@@ -7165,7 +7192,7 @@ function BudgetEdit() {
     </p>
     </Col>
     <Col md={4}>
-    <p className="mb-0">{animalsTotal} </p>
+    <p className="mb-0 float-right pr-5">{animalsTotal || 0} </p>
     </Col>
     </Row>
     </div>
@@ -7180,7 +7207,7 @@ function BudgetEdit() {
     </p>
     </Col>
     <Col md={4}>
-    <p className="mb-0">{wardrobeTotal} </p>
+    <p className="mb-0 float-right pr-5">{wardrobeTotal || 0} </p>
     </Col>
     </Row>
     </div>
@@ -7191,11 +7218,11 @@ function BudgetEdit() {
     <Row>
     <Col md={8}>
     <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
-          onClick={() => setShowMakeSup(showMakeSup => !showMakeSup)} >Makeup Sup
+          onClick={() => setShowMakeSup(showMakeSup => !showMakeSup)} >Makeup Supplies
     </p>
     </Col>
     <Col md={4}>
-    <p className="mb-0">{makeupTotal} </p>
+    <p className="mb-0 float-right pr-5">{makeupTotal || 0} </p>
     </Col>
     </Row>
     </div>
@@ -7210,7 +7237,7 @@ function BudgetEdit() {
     </p>
     </Col>
     <Col md={4}>
-    <p className="mb-0">{cameraTotal} </p>
+    <p className="mb-0 float-right pr-5">{cameraTotal || 0} </p>
     </Col>
     </Row>
     </div>
@@ -7225,7 +7252,7 @@ function BudgetEdit() {
     </p>
     </Col>
     <Col md={4}>
-    <p className="mb-0">{electricTotal} </p>
+    <p className="mb-0 float-right pr-5">{electricTotal || 0} </p>
     </Col>
     </Row>
     </div>
@@ -7240,7 +7267,7 @@ function BudgetEdit() {
     </p>
     </Col>
     <Col md={4}>
-    <p className="mb-0">{gripTotal} </p>
+    <p className="mb-0 float-right pr-5">{gripTotal || 0} </p>
     </Col>
     </Row>
     </div>
@@ -7255,7 +7282,7 @@ function BudgetEdit() {
     </p>
     </Col>
     <Col md={4}>
-    <p className="mb-0">{soundTotal} </p>
+    <p className="mb-0 float-right pr-5">{soundTotal || 0} </p>
     </Col>
     </Row>
     </div>
@@ -7270,7 +7297,7 @@ function BudgetEdit() {
     </p>
     </Col>
     <Col md={4}>
-    <p className="mb-0">{secondUTotal} </p>
+    <p className="mb-0 float-right pr-5">{secondUTotal || 0} </p>
     </Col>
     </Row>
     </div>
@@ -7285,19 +7312,24 @@ function BudgetEdit() {
     </p>
     </Col>
     <Col md={4}>
-    <p className="mb-0">{stockLabTotal} </p>
+    <p className="mb-0 float-right pr-5">{stockLabTotal || 0} </p>
     </Col>
     </Row>
     </div>
     </Col>
     </Row>
     {/* Post Production "C" & total*/}
-    <Row className={ `${styles.OverviewBlue} mx-1 mb-0 mt-0 py-0`}>
+    <Row className={ `${styles.OverviewBlue} mx-1 mb-0 mt-2 py-1`}>
     <Col md={10}>
-    <p className={ `mb-0 ml-3 ${styles.BoldBlack}`}>
+    <p className={ `mb-0 ml-5 ${styles.BoldBlack}`}>
       "C" POST PRODUCTION </p>
     </Col>
-    <Col md={2}><p className="mb-0">{postProductionCTotal} </p></Col>
+    <Col md={2}>
+    <div className={`${styles.Box} 
+       d-flex align-items-center justify-content-center`}>
+      <p className={` mb-0 ${styles.BoldBlack}`}>{postProductionCTotal || 0} </p>
+    </div>
+      </Col>
     </Row>
     {/* sections post production "C" click buttons */}
     <Row className={`${styles.ButtonLine} mx-1`}>
@@ -7312,7 +7344,7 @@ function BudgetEdit() {
     </p>
     </Col>
     <Col md={4}>
-    <p className="mb-0">{postStaffFacTotal} </p>
+    <p className="mb-0 float-right pr-5">{postStaffFacTotal || 0} </p>
     </Col>
     </Row>
     </div>
@@ -7328,7 +7360,7 @@ function BudgetEdit() {
     </p>
     </Col>
     <Col md={4}>
-    <p className="mb-0">{editingTotal} </p>
+    <p className="mb-0 float-right pr-5">{editingTotal || 0} </p>
     </Col>
     </Row>
     </div>
@@ -7344,7 +7376,7 @@ function BudgetEdit() {
     </p>
     </Col>
     <Col md={4}>
-    <p className="mb-0">{postSoundTotal} </p>
+    <p className="mb-0 float-right pr-5">{postSoundTotal || 0} </p>
     </Col>
     </Row>
     </div>
@@ -7360,7 +7392,7 @@ function BudgetEdit() {
     </p>
     </Col>
     <Col md={4}>
-    <p className="mb-0">{postVfxTotal} </p>
+    <p className="mb-0 float-right pr-5">{postVfxTotal || 0} </p>
     </Col>
     </Row>
     </div>
@@ -7376,7 +7408,7 @@ function BudgetEdit() {
     </p>
     </Col>
     <Col md={4}>
-    <p className="mb-0">{postLabTotal} </p>
+    <p className="mb-0 float-right pr-5">{postLabTotal || 0} </p>
     </Col>
     </Row>
     </div>
@@ -7392,7 +7424,7 @@ function BudgetEdit() {
     </p>
     </Col>
     <Col md={4}>
-    <p className="mb-0">{postTitlesTotal} </p>
+    <p className="mb-0 float-right pr-5">{postTitlesTotal || 0} </p>
     </Col>
     </Row>
     </div>
@@ -7408,19 +7440,24 @@ function BudgetEdit() {
     </p>
     </Col>
     <Col md={4}>
-    <p className="mb-0">{postVersionTotal} </p>
+    <p className="mb-0 float-right pr-5">{postVersionTotal || 0} </p>
     </Col>
     </Row>
     </div>
     </Col>
     </Row>
     {/* Other "D" & total */}
-    <Row className={ `${styles.OverviewBlue} mx-1 mb-0 mt-0 py-0`}>
+    <Row className={ `${styles.OverviewBlue} mx-1 mb-0 mt-2 py-1`}>
     <Col md={10}>
     <p className={ `mb-0 ml-3 ${styles.BoldBlack}`}>
       "D" OTHER </p>
     </Col>
-    <Col md={2}><p className="mb-0">{otherDTotal} </p></Col>
+    <Col md={2}>
+    <div className={`${styles.Box} 
+       d-flex align-items-center justify-content-center`}>
+      <p className={` mb-0 ${styles.BoldBlack}`}>{otherDTotal || 0} </p>
+    </div>
+    </Col>
     </Row>
     {/* sections other "D" click buttons */}
     <Row className={`${styles.ButtonLine} mx-1`}>
@@ -7434,7 +7471,7 @@ function BudgetEdit() {
     </p>
     </Col>
     <Col md={4}>
-    <p className="mb-0">{pubTotal} </p>
+    <p className="mb-0 float-right pr-5">{pubTotal || 0} </p>
     </Col>
     </Row>
     </div>
@@ -7449,7 +7486,7 @@ function BudgetEdit() {
     </p>
     </Col>
     <Col md={4}>
-    <p className="mb-0">{insurTotal} </p>
+    <p className="mb-0 float-right pr-5">{insurTotal || 0} </p>
     </Col>
     </Row>
     </div>
@@ -7464,7 +7501,7 @@ function BudgetEdit() {
     </p>
     </Col>
     <Col md={4}>
-    <p className="mb-0">{genExTotal} </p>
+    <p className="mb-0 float-right pr-5">{genExTotal || 0} </p>
     </Col>
     </Row>
     </div>
@@ -7479,7 +7516,7 @@ function BudgetEdit() {
     </p>
     </Col>
     <Col md={4}>
-    <p className="mb-0">{indirCoTotal} </p>
+    <p className="mb-0 float-right pr-5">{indirCoTotal || 0} </p>
     </Col>
     </Row>
     </div>

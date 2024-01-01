@@ -18,13 +18,13 @@ const Versioning = (props) => {
     other_copies_ver,
   } = postDataPostVersion;
 
-  // handleChange 
+  // handleChange - replace(/\D/g,'') - works but no decimal
   const handleChange = (event) => {
     setPostDataPostVersion({
     ...postDataPostVersion,
-    [event.target.name]: parseFloat(event.target.value || 0 ),
+    [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
     });
-  };
+  }; 
   
   // function to add all Versioning on change
   useEffect(() => {

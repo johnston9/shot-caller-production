@@ -11754,7 +11754,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>28.00</p>
     </Col>
     <Col xs={10}>
-    <p className={ `${styles.BoldBlack}`}>CONSTRUCTION MATERIAL</p>
+    <p className={ `${styles.BoldBlack}`}>CONSTRUCTION MATERIALS</p>
     </Col>
     </Row>
     {/* Titles */}
@@ -11956,7 +11956,7 @@ const Budget = (props) => {
     <p></p>
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
-    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL CONSTRUCTION MATERIAL </p>
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL CONSTRUCTION MATERIALS </p>
     </Col>
     <Col md={3} >
     </Col>

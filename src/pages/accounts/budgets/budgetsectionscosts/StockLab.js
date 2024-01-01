@@ -18,11 +18,11 @@ const StockLab = (props) => {
     stills, loss_dam_lab, other_lab,
   } = postDataStockLab;
 
-  // handleChange 
+  // handleChange - replace(/\D/g,'') - works but no decimal
   const handleChange = (event) => {
     setPostDataStockLab({
     ...postDataStockLab,
-    [event.target.name]: parseFloat(event.target.value || 0 ),
+    [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
     });
   };
 

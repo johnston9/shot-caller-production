@@ -27,13 +27,14 @@ const Editing = (props) => {
     vfx_ed_system, post_edit_pur, lossdam_edit, fringes_taxes_post_edit,
   other_post_edit,} = postDataEdit;
 
-  // handleChange 
+  // handleChange - replace(/\D/g,'') - works but no decimal
   const handleChange = (event) => {
     setPostDataEdit({
     ...postDataEdit,
-    [event.target.name]: parseFloat(event.target.value || 0 ),
+    [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
     });
-}; 
+  };
+
 
   // handleChange Text 
   const handleChangeText = (event) => {

@@ -17,13 +17,13 @@ const Unit = (props) => {
         green_room, first_aid, outfitting,
         medical_insurance, unit_other,} = postDataUnit;
 
-  // handleChange 
+  // handleChange - replace(/\D/g,'') - works but no decimal
   const handleChange = (event) => {
     setPostDataUnit({
     ...postDataUnit,
-    [event.target.name]: parseFloat(event.target.value || 0 ),
+    [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
     });
-  }; 
+  };
 
   // function to add all Unit on change
   useEffect(() => {

@@ -17,11 +17,11 @@ const SecondU = (props) => {
     mat_sup_2U, aerial_unit, marine_unit, fringes_taxes_2U, other_2U,
   } = postDataSecondU;
 
-  // handleChange 
+  // handleChange - replace(/\D/g,'') - works but no decimal
   const handleChange = (event) => {
     setPostDataSecondU({
     ...postDataSecondU,
-    [event.target.name]: parseFloat(event.target.value || 0 ),
+    [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
     });
   };
 

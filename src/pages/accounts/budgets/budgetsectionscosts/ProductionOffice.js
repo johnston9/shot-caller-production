@@ -17,13 +17,13 @@ const ProductionOffice = (props) => {
     phones_net, courier_postage, office_other,
   } = postDataProOff;
 
-  // handleChange 
+  // handleChange - replace(/\D/g,'') - works but no decimal
   const handleChange = (event) => {
     setPostDataProOff({
     ...postDataProOff,
-    [event.target.name]: parseFloat(event.target.value || 0 ),
+    [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
     });
-  }; 
+  };
 
   // function to add all Production Office on change
   useEffect(() => {

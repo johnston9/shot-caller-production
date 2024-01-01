@@ -16,11 +16,11 @@ const IndirectCosts = (props) => {
   const {corporate_overhead, interim_financing, fiscal_sponsor_fee,
   } = postDataIndirectCo;
 
-  // handleChange 
+  // handleChange - replace(/\D/g,'') - works but no decimal
   const handleChange = (event) => {
     setPostDataIndirectCo({
     ...postDataIndirectCo,
-    [event.target.name]: parseFloat(event.target.value || 0 ),
+    [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
     });
   };
 
