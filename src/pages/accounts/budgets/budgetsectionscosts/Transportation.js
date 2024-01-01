@@ -59,17 +59,28 @@ const Transportation = (props) => {
     licenses_permits, brokerage_insurance, other_transport,]);
 
   return (
-    <div className="mt-5">
-    <Row >
+    <div className={`${styles.WhiteBack} mt-3 mb-5`}>
+    <Row className="mx-0" >
+    <Col md={12}
+        className={ `${styles.Overview} py-0 text-center`}>
+            <span className={`${styles.Close } py-1 mb-0 float-right `} 
+    onClick={() => setShow(false) } >Close</span>
+    <p className="pl-5 py-1">
+    TRANSPORTATION SECTION
+    </p>
+    </Col>
+    <Col md={2} >
+    </Col>
+    </Row>
+    <div className="px-2" >
+    <Row className={`mt-3`}>
     <Col md={1} >
-    <p className="mb-2">27.00</p>
+    <p className={`${styles.Underline}`}>27.00</p>
     </Col>
     <Col md={9} >
-    <p className={ `${styles.BoldBlack} mb-2`}>Transportation</p>
+    <p className={ `${styles.BoldBlack} mb-1`}>Transportation</p>
     </Col>
     <Col md={2}>
-    <span className={`${styles.Close }`} 
-    onClick={() => setShow(false) } >Close</span>
     </Col>
     </Row>
     {/* TITLES */}
@@ -80,24 +91,24 @@ const Transportation = (props) => {
     <Col md={5} >
     <p className="mb-0">Description</p>
     </Col>
-    <Col md={1} >
+    <Col md={1} className="text-center" >
     <p className="mb-0">#</p>
     </Col>
-    <Col className="px-0 mx-0" md={1} >
+    <Col className="text-center" md={1} >
     <p># Unit</p>
     </Col>
-    <Col md={1} >
+    <Col md={1} className="text-center" >
     <p className="mb-0">Unit</p>
     </Col>
-    <Col md={1} >
+    <Col md={1} className="text-center" >
     <p className="mb-0">Price</p>
     </Col>
-    <Col md={2} >
+    <Col md={2} className="text-center" >
     <p className="mb-0">Total</p>
     </Col>
     </Row>
     {/* Production Cars */}
-    <Row>
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>27.10</p>
     </Col>
@@ -115,7 +126,7 @@ const Transportation = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="production_cars" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -131,8 +142,14 @@ const Transportation = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Trucks/Vans */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Trucks/Vans */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>27.20</p>
     </Col>
@@ -150,7 +167,7 @@ const Transportation = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="trucks_vans" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -166,8 +183,14 @@ const Transportation = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Buses */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Buses */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>27.30</p>
     </Col>
@@ -185,7 +208,7 @@ const Transportation = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="buses" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -201,8 +224,14 @@ const Transportation = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Motorhomes */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Motorhomes */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>27.40</p>
     </Col>
@@ -220,7 +249,7 @@ const Transportation = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="motorhomes" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -236,8 +265,14 @@ const Transportation = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Talent Cars */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Talent Cars */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>27.50</p>
     </Col>
@@ -255,7 +290,7 @@ const Transportation = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="talent_cars" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -271,8 +306,14 @@ const Transportation = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Special Support Vehicles */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Special Support Vehicles */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>27.60</p>
     </Col>
@@ -290,7 +331,7 @@ const Transportation = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="support_vehicles" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -306,8 +347,14 @@ const Transportation = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Boats/Planes */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Boats/Planes */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>27.70</p>
     </Col>
@@ -325,7 +372,7 @@ const Transportation = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="boats_planes" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -341,8 +388,14 @@ const Transportation = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Fuel */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Fuel */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>27.80</p>
     </Col>
@@ -360,7 +413,7 @@ const Transportation = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="fuel" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -376,8 +429,14 @@ const Transportation = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Repairs */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Repairs */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>27.90</p>
     </Col>
@@ -395,7 +454,7 @@ const Transportation = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="repairs" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -411,8 +470,14 @@ const Transportation = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Taxis */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Taxis */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>27.91</p>
     </Col>
@@ -430,7 +495,7 @@ const Transportation = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="taxis" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -446,8 +511,14 @@ const Transportation = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Parking */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Parking */}
+    <Row className="py-1 d-flex align-items-center"> 
     <Col md={1} >
     <p className={`${styles.Underline}`}>27.92</p>
     </Col>
@@ -465,7 +536,7 @@ const Transportation = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="parking" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -481,8 +552,14 @@ const Transportation = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Special Licenses/Permits */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Special Licenses/Permits */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>27.93</p>
     </Col>
@@ -500,7 +577,7 @@ const Transportation = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="licenses_permits" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -516,8 +593,14 @@ const Transportation = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Brokerage/Insurance */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Brokerage/Insurance */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>27.94</p>
     </Col>
@@ -535,7 +618,7 @@ const Transportation = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="brokerage_insurance" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -551,8 +634,14 @@ const Transportation = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Other */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Other */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>27.95</p>
     </Col>
@@ -570,7 +659,7 @@ const Transportation = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="other_transport" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -586,8 +675,14 @@ const Transportation = (props) => {
     ))}
     </Col>
     </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
     {/* TRANSPORTATION Total */}
-    <Row className="mt-3">
+    <Row className="mt-3 pb-2">
     <Col md={1} >
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
@@ -620,6 +715,7 @@ const Transportation = (props) => {
     ))}
     </Col>
     </Row>
+    </div>
     </div>
   )
 }

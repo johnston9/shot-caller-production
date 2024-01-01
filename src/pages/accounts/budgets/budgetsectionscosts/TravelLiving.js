@@ -49,17 +49,28 @@ const TravelLiving = (props) => {
     shipping, other_trav_liv, customs_brokerage,]);
 
   return (
-    <div className="mt-5">
-    <Row >
+    <div className={`${styles.WhiteBack} mt-3 mb-5`}>
+    <Row className="mx-0" >
+    <Col md={12}
+        className={ `${styles.Overview} py-0 text-center`}>
+            <span className={`${styles.Close } py-1 mb-0 float-right `} 
+    onClick={() => setShow(false) } >Close</span>
+    <p className="pl-5 py-1">
+    TRAVEL & LIVING SECTION
+    </p>
+    </Col>
+    <Col md={2} >
+    </Col>
+    </Row>
+    <div className="px-2" >
+    <Row className={`mt-3`}>
     <Col md={1} >
-    <p className="mb-2">26.00</p>
+    <p className={`${styles.Underline}`}>26.00</p>
     </Col>
     <Col md={9} >
-    <p className={ `${styles.BoldBlack} mb-2`}>Travel & Living</p>
+    <p className={ `${styles.BoldBlack} mb-1`}>Travel & Living</p>
     </Col>
     <Col md={2}>
-    <span className={`${styles.Close }`} 
-    onClick={() => setShow(false) } >Close</span>
     </Col>
     </Row>
     {/* TITLES */}
@@ -70,24 +81,24 @@ const TravelLiving = (props) => {
     <Col md={5} >
     <p className="mb-0">Description</p>
     </Col>
-    <Col md={1} >
+    <Col md={1} className="text-center" >
     <p className="mb-0">#</p>
     </Col>
-    <Col className="px-0 mx-0" md={1} >
+    <Col className="text-center" md={1} >
     <p># Unit</p>
     </Col>
-    <Col md={1} >
+    <Col md={1} className="text-center" >
     <p className="mb-0">Unit</p>
     </Col>
-    <Col md={1} >
+    <Col md={1} className="text-center" >
     <p className="mb-0">Price</p>
     </Col>
-    <Col md={2} >
+    <Col md={2} className="text-center" >
     <p className="mb-0">Total</p>
     </Col>
     </Row>
     {/* Fares */}
-    <Row>
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>26.10</p>
     </Col>
@@ -105,7 +116,7 @@ const TravelLiving = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="fares" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -122,7 +133,7 @@ const TravelLiving = (props) => {
     </Col>
     </Row>
     {/* Accomatation/Hotels */}
-    <Row>
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>26.20</p>
     </Col>
@@ -140,7 +151,7 @@ const TravelLiving = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="accomatation_hotels" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -157,7 +168,7 @@ const TravelLiving = (props) => {
     </Col>
     </Row>
     {/* Per diems */}
-    <Row>
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>26.30</p>
     </Col>
@@ -175,7 +186,7 @@ const TravelLiving = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="per_diems" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -192,7 +203,7 @@ const TravelLiving = (props) => {
     </Col>
     </Row>
     {/* Taxis/Limousines */}
-    <Row>
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>26.40</p>
     </Col>
@@ -210,7 +221,7 @@ const TravelLiving = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="taxis_limos" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -227,7 +238,7 @@ const TravelLiving = (props) => {
     </Col>
     </Row>
     {/* Shipping */}
-    <Row>
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>26.50</p>
     </Col>
@@ -245,7 +256,7 @@ const TravelLiving = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="shipping" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -262,7 +273,7 @@ const TravelLiving = (props) => {
     </Col>
     </Row>
     {/* Customs Brokerage */}
-    <Row>
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>26.60</p>
     </Col>
@@ -280,7 +291,7 @@ const TravelLiving = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="customs_brokerage" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -297,7 +308,7 @@ const TravelLiving = (props) => {
     </Col>
     </Row>
     {/* Other */}
-    <Row>
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>26.70</p>
     </Col>
@@ -315,7 +326,7 @@ const TravelLiving = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="other_trav_liv" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -332,7 +343,7 @@ const TravelLiving = (props) => {
     </Col>
     </Row>
     {/* TRAVEL & LIVING Total */}
-    <Row className="mt-3">
+    <Row className="mt-3 pb-2">
     <Col md={1} >
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
@@ -365,6 +376,7 @@ const TravelLiving = (props) => {
     ))}
     </Col>
     </Row>
+    </div>
     </div>
   )
 }

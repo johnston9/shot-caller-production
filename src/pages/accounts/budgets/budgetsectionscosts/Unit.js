@@ -83,24 +83,24 @@ const Unit = (props) => {
     <Col md={5} >
     <p className="mb-0">Description</p>
     </Col>
-    <Col md={1} >
+    <Col md={1} className="text-center" >
     <p className="mb-0">#</p>
     </Col>
-    <Col className="px-0 mx-0" md={1} >
+    <Col className="text-center" md={1} >
     <p># Unit</p>
     </Col>
-    <Col md={1} >
+    <Col md={1} className="text-center" >
     <p className="mb-0">Unit</p>
     </Col>
-    <Col md={1} >
+    <Col md={1} className="text-center" >
     <p className="mb-0">Price</p>
     </Col>
-    <Col md={2} >
+    <Col md={2} className="text-center" >
     <p className="mb-0">Total</p>
     </Col>
     </Row>
     {/* Catering */}
-    <Row>
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>25.10</p>
     </Col>
@@ -118,7 +118,7 @@ const Unit = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="catering" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -141,7 +141,7 @@ const Unit = (props) => {
     </Col>
     </Row>
     {/* Craft Expenses */}
-    <Row>
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>25.20</p>
     </Col>
@@ -159,7 +159,7 @@ const Unit = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="craft_expenses" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -182,7 +182,7 @@ const Unit = (props) => {
     </Col>
     </Row>
     {/* Meal Penalty */}
-    <Row>
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>25.30</p>
     </Col>
@@ -200,7 +200,7 @@ const Unit = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="meal_penalty" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -223,7 +223,7 @@ const Unit = (props) => {
     </Col>
     </Row>
     {/* Support Area/Green Room */}
-    <Row>
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>25.40</p>
     </Col>
@@ -241,7 +241,7 @@ const Unit = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="green_room" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -264,7 +264,7 @@ const Unit = (props) => {
     </Col>
     </Row>
     {/* First Aid */}
-    <Row>
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>25.50</p>
     </Col>
@@ -282,7 +282,7 @@ const Unit = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="first_aid" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -305,7 +305,7 @@ const Unit = (props) => {
     </Col>
     </Row>
     {/* Special Crew Outfitting */}
-    <Row>
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>25.60</p>
     </Col>
@@ -323,7 +323,7 @@ const Unit = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="outfitting" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -346,7 +346,7 @@ const Unit = (props) => {
     </Col>
     </Row>
     {/* Medical/Insurance/Visa Expenses */}
-    <Row>
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>25.70</p>
     </Col>
@@ -364,7 +364,7 @@ const Unit = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="medical_insurance" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -387,7 +387,7 @@ const Unit = (props) => {
     </Col>
     </Row>
     {/* Other */}
-    <Row>
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>25.80</p>
     </Col>
@@ -405,7 +405,7 @@ const Unit = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="unit_other" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
