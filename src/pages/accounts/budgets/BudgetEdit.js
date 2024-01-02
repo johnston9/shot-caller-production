@@ -3184,7 +3184,7 @@ function BudgetEdit() {
   }; 
 
   const contin = (
-    <div className="mt-2">
+    <div className={`${styles.WhiteBack} mt-2`}>
     {/* Contingency */}
     <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
@@ -7397,14 +7397,14 @@ function BudgetEdit() {
     </Row>
     </div>
     </Col>
-    {/* Post Lab/Video Copies */}
+    {/* Post Lab/Copies */}
     <Col md={3} className='px-0 mx-0'>
     <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
     <Row>
     <Col md={8}>
     <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
       onClick={() => setShowPoLab(showPoLab => !showPoLab)} >
-    Lab/Video
+    Lab/Copies
     </p>
     </Col>
     <Col md={4}>

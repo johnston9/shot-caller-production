@@ -17885,7 +17885,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>49.20</p>
     </Col>
     <Col md={9} >
-    <p className={`${styles.Underline}`}>Tests - Other</p>
+    <p className={`${styles.Underline}`}>Tests miscellaneous</p>
     </Col>
     <Col md={2}>
     <div className={`${styles.Box3} 

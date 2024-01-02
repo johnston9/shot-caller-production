@@ -57,17 +57,28 @@ const Publicity = (props) => {
     promotion, pr, firnges_pub, other_pub, previews, website,]);
 
   return (
-    <div className="mt-5">
-    <Row >
+    <div className={`${styles.WhiteBack} mt-3 mb-5`}>
+    <Row className="mx-0" >
+    <Col md={12}
+        className={ `${styles.Overview} py-0 text-center`}>
+            <span className={`${styles.Close } py-1 mb-0 float-right `} 
+    onClick={() => setShow(false) } >Close</span>
+    <p className="pl-5 py-1">
+    PUBLICITY SECTION
+    </p>
+    </Col>
+    <Col md={2} >
+    </Col>
+    </Row>
+    <div className="px-2" >
+    <Row className={`mt-3`}>
     <Col md={1} >
-    <p className="mb-2">49.00</p>
+    <p className={`${styles.Underline}`}>49.00</p>
     </Col>
     <Col md={9} >
-    <p className={ `${styles.BoldBlack} mb-2`}>Publicity</p>
+    <p className={ `${styles.BoldBlack} mb-1`}>Publicity</p>
     </Col>
     <Col md={2}>
-    <span className={`${styles.Close }`} 
-    onClick={() => setShow(false) } >Close</span>
     </Col>
     </Row>
     {/* TITLES */}
@@ -78,24 +89,24 @@ const Publicity = (props) => {
     <Col md={5} >
     <p className="mb-0">Description</p>
     </Col>
-    <Col md={1} >
+    <Col md={1} className="text-center" >
     <p className="mb-0">#</p>
     </Col>
-    <Col className="px-0 mx-0" md={1} >
+    <Col className="text-center" md={1} >
     <p># Unit</p>
     </Col>
-    <Col md={1} >
+    <Col md={1} className="text-center" >
     <p className="mb-0">Unit</p>
     </Col>
-    <Col md={1} >
+    <Col md={1} className="text-center" >
     <p className="mb-0">Price</p>
     </Col>
-    <Col md={2} >
+    <Col md={2} className="text-center" >
     <p className="mb-0">Total</p>
     </Col>
     </Row>
     {/* Tests/Theatre Rental */}
-    <Row>
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>49.10</p>
     </Col>
@@ -113,7 +124,7 @@ const Publicity = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="tests_theater_ren" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -129,13 +140,19 @@ const Publicity = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Tests - Other */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Tests - miscellaneous */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>49.20</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Tests - Other</p>
+    <p className={`${styles.Underline}`}>Tests miscellaneous</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -148,7 +165,7 @@ const Publicity = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="tests_other" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -164,8 +181,14 @@ const Publicity = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Unit Publicist */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Unit Publicist */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>49.30</p>
     </Col>
@@ -183,7 +206,7 @@ const Publicity = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="unit_publicist" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -199,8 +222,14 @@ const Publicity = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Publicity/Press Expenses */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Publicity/Press Expenses */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>49.40</p>
     </Col>
@@ -218,7 +247,7 @@ const Publicity = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="pub_press_ex" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -234,8 +263,14 @@ const Publicity = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Photography */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Photography */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>49.50</p>
     </Col>
@@ -253,7 +288,7 @@ const Publicity = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="photography" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -269,8 +304,14 @@ const Publicity = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Electronic Press Kit EPK */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Electronic Press Kit EPK */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>49.60</p>
     </Col>
@@ -288,7 +329,7 @@ const Publicity = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="epk" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -304,8 +345,14 @@ const Publicity = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Advertising/Promotion */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Advertising/Promotion */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>49.70</p>
     </Col>
@@ -323,7 +370,7 @@ const Publicity = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="promotion" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -339,8 +386,14 @@ const Publicity = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Public Relations */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Public Relations */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>49.80</p>
     </Col>
@@ -358,7 +411,7 @@ const Publicity = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="pr" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -374,8 +427,14 @@ const Publicity = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Previews */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Previews */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>49.90</p>
     </Col>
@@ -393,7 +452,7 @@ const Publicity = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="previews" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -409,8 +468,14 @@ const Publicity = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Website */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Website */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>49.91</p>
     </Col>
@@ -428,7 +493,7 @@ const Publicity = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="website" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -444,45 +509,16 @@ const Publicity = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Fringes & Taxes */}
+    {/* hr */}
     <Row>
-    <Col md={1} >
-    <p className={`${styles.Underline}`}>49.92</p>
-    </Col>
-    <Col md={6} >
-    <p className={`${styles.Underline}`}>Fringes & Taxes</p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={2} >
-    <Form.Group controlId="firnges_pub" 
-        className={`${styles.Width95} text-center mb-1`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="firnges_pub"
-        value={firnges_pub}
-        onChange={handleChange}
-            />
-    </Form.Group>
-    {errors?.firnges_pub?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
     </Col>
     </Row>
     {/* Other */}
-    <Row>
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
-    <p className={`${styles.Underline}`}>49.93</p>
+    <p className={`${styles.Underline}`}>49.92</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Other</p>
@@ -498,7 +534,7 @@ const Publicity = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="other_pub" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -514,8 +550,55 @@ const Publicity = (props) => {
     ))}
     </Col>
     </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Fringes & Taxes */}
+    <Row className="py-1 d-flex align-items-center">
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>49.93</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Fringes & Taxes</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="firnges_pub" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="firnges_pub"
+        value={firnges_pub}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.firnges_pub?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
     {/* PUBLICITY Total */}
-    <Row className="mt-3">
+    <Row className="mt-3 pb-2">
     <Col md={1} >
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
@@ -548,6 +631,13 @@ const Publicity = (props) => {
     ))}
     </Col>
     </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    </div>
     </div>
   )
 }

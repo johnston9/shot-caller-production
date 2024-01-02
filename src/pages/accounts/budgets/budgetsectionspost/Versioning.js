@@ -55,17 +55,28 @@ const Versioning = (props) => {
     other_copies_ver,]);
 
   return (
-    <div className="mt-5">
-    <Row >
+    <div className={`${styles.WhiteBack} mt-3 mb-5`}>
+    <Row className="mx-0" >
+    <Col md={12}
+        className={ `${styles.Overview} py-0 text-center`}>
+            <span className={`${styles.Close } py-1 mb-0 float-right `} 
+    onClick={() => setShow(false) } >Close</span>
+    <p className="pl-5 py-1">
+    VERSIONING/CLOSED-CAPTIONING/DUBS/COPIES SECTION
+    </p>
+    </Col>
+    <Col md={2} >
+    </Col>
+    </Row>
+    <div className="px-2" >
+    <Row className={`mt-3`}>
     <Col md={1} >
-    <p className="mb-2">48.00</p>
+    <p className={`${styles.Underline}`}>48.00</p>
     </Col>
     <Col md={9} >
-    <p className={ `${styles.BoldBlack} mb-2`}>Versioning/Closed-captioning/Dubs/Copies</p>
+    <p className={ `${styles.BoldBlack} mb-1`}>Versioning/Closed-captioning/Dubs/Copies</p>
     </Col>
     <Col md={2}>
-    <span className={`${styles.Close }`} 
-    onClick={() => setShow(false) } >Close</span>
     </Col>
     </Row>
     {/* TITLES */}
@@ -76,24 +87,24 @@ const Versioning = (props) => {
     <Col md={5} >
     <p className="mb-0">Description</p>
     </Col>
-    <Col md={1} >
+    <Col md={1} className="text-center" >
     <p className="mb-0">#</p>
     </Col>
-    <Col className="px-0 mx-0" md={1} >
+    <Col className="text-center" md={1} >
     <p># Unit</p>
     </Col>
-    <Col md={1} >
+    <Col md={1} className="text-center" >
     <p className="mb-0">Unit</p>
     </Col>
-    <Col md={1} >
+    <Col md={1} className="text-center" >
     <p className="mb-0">Price</p>
     </Col>
-    <Col md={2} >
+    <Col md={2} className="text-center" >
     <p className="mb-0">Total</p>
     </Col>
     </Row>
     {/* Dubs */}
-    <Row>
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>48.10</p>
     </Col>
@@ -111,7 +122,7 @@ const Versioning = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="dubs" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -127,8 +138,14 @@ const Versioning = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Subtitles */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Subtitles */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>48.20</p>
     </Col>
@@ -146,7 +163,7 @@ const Versioning = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="subtitles" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -162,8 +179,14 @@ const Versioning = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Closed-Captioning */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Closed-Captioning */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>48.30</p>
     </Col>
@@ -181,7 +204,7 @@ const Versioning = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="closed_caption" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -197,8 +220,14 @@ const Versioning = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Versioning */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Versioning */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>48.40</p>
     </Col>
@@ -216,7 +245,7 @@ const Versioning = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="versioning" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -232,8 +261,14 @@ const Versioning = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Trailers */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Trailers */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>48.50</p>
     </Col>
@@ -251,7 +286,7 @@ const Versioning = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="trailers" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -267,8 +302,14 @@ const Versioning = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Ads */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Ads */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>48.60</p>
     </Col>
@@ -286,7 +327,7 @@ const Versioning = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="ads" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -302,8 +343,14 @@ const Versioning = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Transfers */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Transfers */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>48.70</p>
     </Col>
@@ -321,7 +368,7 @@ const Versioning = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="transfers_ver" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -337,8 +384,14 @@ const Versioning = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Prints */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Prints */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>48.80</p>
     </Col>
@@ -356,7 +409,7 @@ const Versioning = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="prints_ver" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -372,8 +425,14 @@ const Versioning = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Digital Copies */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Digital Copies */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>48.90</p>
     </Col>
@@ -391,7 +450,7 @@ const Versioning = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="dig_copies_ver" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -407,13 +466,19 @@ const Versioning = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Other Media Copies */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Other Media Copies */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>48.91</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Other Media Copies</p>
+    <p className={`${styles.Underline}`}>Versioning Other Media Copies</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -426,7 +491,7 @@ const Versioning = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="other_copies_ver" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -442,8 +507,14 @@ const Versioning = (props) => {
     ))}
     </Col>
     </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
     {/* VERSIONING/CLOSED-CAPTIONING/DUBS/COPIES Total */}
-    <Row className="mt-3">
+    <Row className="mt-3 pb-2">
     <Col md={1} >
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
@@ -476,6 +547,13 @@ const Versioning = (props) => {
     ))}
     </Col>
     </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    </div>
     </div>
   )
 }

@@ -53,17 +53,28 @@ const PostLabVideo = (props) => {
     transfers, other_media_delivery, distribution_copies, storage_post,]);
 
   return (
-    <div className="mt-5">
-    <Row >
+    <div className={`${styles.WhiteBack} mt-3 mb-5`}>
+    <Row className="mx-0" >
+    <Col md={12}
+        className={ `${styles.Overview} py-0 text-center`}>
+            <span className={`${styles.Close } py-1 mb-0 float-right `} 
+    onClick={() => setShow(false) } >Close</span>
+    <p className="pl-5 py-1">
+    POST LAB/ALL MEDIA TYPES COPIES SECTION
+    </p>
+    </Col>
+    <Col md={2} >
+    </Col>
+    </Row>
+    <div className="px-2" >
+    <Row className={`mt-3`}>
     <Col md={1} >
-    <p className="mb-2">46.00</p>
+    <p className={`${styles.Underline}`}>46.00</p>
     </Col>
     <Col md={9} >
-    <p className={ `${styles.BoldBlack} mb-2`}>Post Production Lab/Video Copies</p>
+    <p className={ `${styles.BoldBlack} mb-1`}>Post Lab/All Media Types Copies</p>
     </Col>
     <Col md={2}>
-    <span className={`${styles.Close }`} 
-    onClick={() => setShow(false) } >Close</span>
     </Col>
     </Row>
     {/* TITLES */}
@@ -74,24 +85,24 @@ const PostLabVideo = (props) => {
     <Col md={5} >
     <p className="mb-0">Description</p>
     </Col>
-    <Col md={1} >
+    <Col md={1} className="text-center" >
     <p className="mb-0">#</p>
     </Col>
-    <Col className="px-0 mx-0" md={1} >
+    <Col className="text-center" md={1} >
     <p># Unit</p>
     </Col>
-    <Col md={1} >
+    <Col md={1} className="text-center" >
     <p className="mb-0">Unit</p>
     </Col>
-    <Col md={1} >
+    <Col md={1} className="text-center" >
     <p className="mb-0">Price</p>
     </Col>
-    <Col md={2} >
+    <Col md={2} className="text-center" >
     <p className="mb-0">Total</p>
     </Col>
     </Row>
     {/* Stock */}
-    <Row>
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>46.10</p>
     </Col>
@@ -109,7 +120,7 @@ const PostLabVideo = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="stock" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -125,8 +136,14 @@ const PostLabVideo = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Neg Cutting */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Neg Cutting */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>46.20</p>
     </Col>
@@ -160,13 +177,19 @@ const PostLabVideo = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Colour Correct */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Colour Correct */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>46.30</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Colour Correct</p>
+    <p className={`${styles.Underline}`}>Colour Correction</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -179,7 +202,7 @@ const PostLabVideo = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="color_cor" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -195,8 +218,14 @@ const PostLabVideo = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Interpositive/Internegative */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Interpositive/Internegative */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>46.40</p>
     </Col>
@@ -214,7 +243,7 @@ const PostLabVideo = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="interpos_neg" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -230,8 +259,14 @@ const PostLabVideo = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Prints*/}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Prints*/}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>46.50</p>
     </Col>
@@ -249,7 +284,7 @@ const PostLabVideo = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="prints" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -265,8 +300,14 @@ const PostLabVideo = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Transfers */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Transfers */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>46.60</p>
     </Col>
@@ -284,7 +325,7 @@ const PostLabVideo = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="transfers" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -300,8 +341,14 @@ const PostLabVideo = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Distribution Copies */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Distribution Copies */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>46.70</p>
     </Col>
@@ -319,7 +366,7 @@ const PostLabVideo = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="distribution_copies" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -335,8 +382,14 @@ const PostLabVideo = (props) => {
     ))}
     </Col>
     </Row>
-    {/* All Media Types Copies */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* All Media Types Copies */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>46.80</p>
     </Col>
@@ -354,7 +407,7 @@ const PostLabVideo = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="other_media_delivery" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -370,8 +423,14 @@ const PostLabVideo = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Storage */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Storage */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>46.90</p>
     </Col>
@@ -389,7 +448,7 @@ const PostLabVideo = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="storage_post" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -405,12 +464,18 @@ const PostLabVideo = (props) => {
     ))}
     </Col>
     </Row>
-    {/* POST PRODUCTION LAB/VIDEO COPIES Total */}
-    <Row className="mt-3">
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* POST PRODUCTION LAB/ALL MEDIA COPIES Total */}
+    <Row className="mt-3 pb-2">
     <Col md={1} >
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
-    <p className={ `${styles.Bold} pb-0 mb-0`}>POST PRODUCTION LAB/VIDEO COPIES TOTAL</p>
+    <p className={ `${styles.Bold} pb-0 mb-0`}>POST LAB/ALL MEDIA TYPES COPIES TOTAL</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -439,6 +504,13 @@ const PostLabVideo = (props) => {
     ))}
     </Col>
     </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    </div>
     </div>
   )
 }
