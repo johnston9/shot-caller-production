@@ -207,17 +207,28 @@ const Postsound = (props) => {
         lossdam_sound, fringes_taxes_post_sound, other_post_sound,]);
 
   return (
-    <div className="mt-5">
-    <Row >
+    <div className={`${styles.WhiteBack} mt-3 mb-5`}>
+    <Row className="mx-0" >
+    <Col md={12}
+        className={ `${styles.Overview} py-0 text-center`}>
+            <span className={`${styles.Close } py-1 mb-0 float-right `} 
+    onClick={() => setShow(false) } >Close</span>
+    <p className="pl-5 py-1">
+    POST PRODUCTION SOUND SECTION
+    </p>
+    </Col>
+    <Col md={2} >
+    </Col>
+    </Row>
+    <div className="px-2" >
+    <Row className={`mt-3`}>
     <Col md={1} >
-    <p className="mb-2">44.00</p>
+    <p className={`${styles.Underline}`}>44.00</p>
     </Col>
     <Col md={9} >
-    <p className={ `${styles.BoldBlack} mb-2`}>Post Production Sound</p>
+    <p className={ `${styles.BoldBlack} mb-1`}>Post Production Sound</p>
     </Col>
     <Col md={2}>
-    <span className={`${styles.Close }`} 
-    onClick={() => setShow(false) } >Close</span>
     </Col>
     </Row>
     {/* TITLES */}
@@ -245,7 +256,7 @@ const Postsound = (props) => {
     </Col>
     </Row>
     {/* Sound Designer */}
-    <Row>
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>44.10</p>
     </Col>
@@ -254,7 +265,7 @@ const Postsound = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="sound_designer_qty" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -271,7 +282,7 @@ const Postsound = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="sound_designer_uno" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -288,7 +299,7 @@ const Postsound = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="sound_designer_una" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -305,7 +316,7 @@ const Postsound = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="sound_designer_rt" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -322,7 +333,7 @@ const Postsound = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="desSoundTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -338,8 +349,14 @@ const Postsound = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Sound Editor */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Sound Editor */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>44.20</p>
     </Col>
@@ -348,7 +365,7 @@ const Postsound = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="editor_sound_qty" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -365,7 +382,7 @@ const Postsound = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="editor_sound_uno" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -382,7 +399,7 @@ const Postsound = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="editor_sound_una" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -399,7 +416,7 @@ const Postsound = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="editor_sound_rt" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -416,7 +433,7 @@ const Postsound = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="editorSoundTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -432,8 +449,14 @@ const Postsound = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Music Editor */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Music Editor */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>44.30</p>
     </Col>
@@ -442,7 +465,7 @@ const Postsound = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="editor_music_qty" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -459,7 +482,7 @@ const Postsound = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="editor_music_uno" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -476,7 +499,7 @@ const Postsound = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="editor_music_una" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -493,7 +516,7 @@ const Postsound = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="editor_music_rt" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -510,7 +533,7 @@ const Postsound = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="editorMusicTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -526,8 +549,14 @@ const Postsound = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Assistant Sound Editors */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Assistant Sound Editors */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>44.40</p>
     </Col>
@@ -536,7 +565,7 @@ const Postsound = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="ed_sound_ass_qty" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -553,7 +582,7 @@ const Postsound = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="ed_sound_ass_uno" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -570,7 +599,7 @@ const Postsound = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="ed_sound_ass_una" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -587,7 +616,7 @@ const Postsound = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="ed_sound_ass_rt" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -604,7 +633,7 @@ const Postsound = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="soundEdAssTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -620,8 +649,14 @@ const Postsound = (props) => {
     ))}
     </Col>
     </Row>
-    {/* ADR Supervisor */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* ADR Supervisor */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>44.50</p>
     </Col>
@@ -630,7 +665,7 @@ const Postsound = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="adr_super_qty" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -647,7 +682,7 @@ const Postsound = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="adr_super_uno" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -664,7 +699,7 @@ const Postsound = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="adr_super_una" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -681,7 +716,7 @@ const Postsound = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="adr_super_rt" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -698,7 +733,7 @@ const Postsound = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="adrSupTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -714,8 +749,14 @@ const Postsound = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Foley Labour */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Foley Labour */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>44.60</p>
     </Col>
@@ -724,7 +765,7 @@ const Postsound = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="foley_labour_qty" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -741,7 +782,7 @@ const Postsound = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="foley_labour_uno" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -758,7 +799,7 @@ const Postsound = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="foley_labour_una" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -775,7 +816,7 @@ const Postsound = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="foley_labour_rt" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -792,7 +833,7 @@ const Postsound = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="folLabTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -808,8 +849,14 @@ const Postsound = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Sound Editing Rooms */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Sound Editing Rooms */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>44.70</p>
     </Col>
@@ -827,7 +874,7 @@ const Postsound = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="sound_edit_rooms" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -843,8 +890,14 @@ const Postsound = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Sound Editing Equipment */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Sound Editing Equipment */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>44.80</p>
     </Col>
@@ -862,7 +915,7 @@ const Postsound = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="sound_edit_equ" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -878,8 +931,14 @@ const Postsound = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Music Editing Equipment */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Music Editing Equipment */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>44.90</p>
     </Col>
@@ -897,7 +956,7 @@ const Postsound = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="music_edit_equ" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -913,8 +972,14 @@ const Postsound = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Sound Editing Purchases */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Sound Editing Purchases */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>44.91</p>
     </Col>
@@ -932,7 +997,7 @@ const Postsound = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="post_sound_edit_pur" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -948,8 +1013,14 @@ const Postsound = (props) => {
     ))}
     </Col>
     </Row>
-    {/* ADR */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* ADR */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>44.92</p>
     </Col>
@@ -967,7 +1038,7 @@ const Postsound = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="adr" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -983,8 +1054,14 @@ const Postsound = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Foley */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Foley */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>44.93</p>
     </Col>
@@ -1002,7 +1079,7 @@ const Postsound = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="foley" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1018,8 +1095,14 @@ const Postsound = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Pre-mix */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Pre-mix */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>44.94</p>
     </Col>
@@ -1037,7 +1120,7 @@ const Postsound = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="pre_mix" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1053,8 +1136,14 @@ const Postsound = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Mix */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Mix */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>44.95</p>
     </Col>
@@ -1072,7 +1161,7 @@ const Postsound = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="mix" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1088,8 +1177,14 @@ const Postsound = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Printmaster */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Printmaster */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>44.96</p>
     </Col>
@@ -1107,7 +1202,7 @@ const Postsound = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="printmaster" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1123,8 +1218,14 @@ const Postsound = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Transfers/Deliverables */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Transfers/Deliverables */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>44.97</p>
     </Col>
@@ -1142,7 +1243,7 @@ const Postsound = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="transfers_deliverables" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1158,8 +1259,14 @@ const Postsound = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Loss/Damage */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Loss/Damage */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>44.98</p>
     </Col>
@@ -1177,7 +1284,7 @@ const Postsound = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="lossdam_sound" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1193,45 +1300,16 @@ const Postsound = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Fringes & Taxes */}
+    {/* hr */}
     <Row>
-    <Col md={1} >
-    <p className={`${styles.Underline}`}>44.99</p>
-    </Col>
-    <Col md={6} >
-    <p className={`${styles.Underline}`}>Fringes & Taxes</p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={1} className="text-center" >
-    <p className={`${styles.Underline}`}>%</p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={2} >
-    <Form.Group controlId="fringes_taxes_post_sound" 
-        className={`${styles.Width95} text-center mb-1`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="fringes_taxes_post_sound"
-        value={fringes_taxes_post_sound}
-        onChange={handleChange}
-            />
-    </Form.Group>
-    {errors?.fringes_taxes_post_sound?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
     </Col>
     </Row>
     {/* Other */}
-    <Row>
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
-    <p className={`${styles.Underline}`}>44.991</p>
+    <p className={`${styles.Underline}`}>44.99</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Other</p>
@@ -1247,7 +1325,7 @@ const Postsound = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="other_post_sound" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1263,8 +1341,55 @@ const Postsound = (props) => {
     ))}
     </Col>
     </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Fringes & Taxes */}
+    <Row className="py-1 d-flex align-items-center">
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>44.991</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Fringes & Taxes</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} className="text-center" >
+    <p className={`${styles.Underline}`}>%</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="fringes_taxes_post_sound" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="fringes_taxes_post_sound"
+        value={fringes_taxes_post_sound}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.fringes_taxes_post_sound?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
     {/* POST PRODUCTION SOUND Total */}
-    <Row className="mt-3">
+    <Row className="mt-3 pb-2">
     <Col md={1} >
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
@@ -1297,6 +1422,13 @@ const Postsound = (props) => {
     ))}
     </Col>
     </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    </div>
     </div>
   )
 }

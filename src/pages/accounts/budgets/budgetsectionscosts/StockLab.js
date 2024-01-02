@@ -57,17 +57,28 @@ const StockLab = (props) => {
     stills, loss_dam_lab, other_lab,]);
 
   return (
-    <div className="mt-5">
-    <Row >
+    <div className={`${styles.WhiteBack} mt-3 mb-5`}>
+    <Row className="mx-0" >
+    <Col md={12}
+        className={ `${styles.Overview} py-0 text-center`}>
+            <span className={`${styles.Close } py-1 mb-0 float-right `} 
+    onClick={() => setShow(false) } >Close</span>
+    <p className="pl-5 py-1">
+    STOCK & LAB SECTION
+    </p>
+    </Col>
+    <Col md={2} >
+    </Col>
+    </Row>
+    <div className="px-2" >
+    <Row className={`mt-3`}>
     <Col md={1} >
-    <p className="mb-2">41.00</p>
+    <p className={`${styles.Underline}`}>41.00</p>
     </Col>
     <Col md={9} >
-    <p className={ `${styles.BoldBlack} mb-2`}>Production Stock & Lab</p>
+    <p className={ `${styles.BoldBlack} mb-1`}>Production Stock & Lab</p>
     </Col>
     <Col md={2}>
-    <span className={`${styles.Close }`} 
-    onClick={() => setShow(false) } >Close</span>
     </Col>
     </Row>
     {/* TITLES */}
@@ -78,24 +89,24 @@ const StockLab = (props) => {
     <Col md={5} >
     <p className="mb-0">Description</p>
     </Col>
-    <Col md={1} >
+    <Col md={1} className="text-center" >
     <p className="mb-0">#</p>
     </Col>
-    <Col className="px-0 mx-0" md={1} >
+    <Col className="text-center" md={1} >
     <p># Unit</p>
     </Col>
-    <Col md={1} >
+    <Col md={1} className="text-center" >
     <p className="mb-0">Unit</p>
     </Col>
-    <Col md={1} >
+    <Col md={1} className="text-center" >
     <p className="mb-0">Price</p>
     </Col>
-    <Col md={2} >
+    <Col md={2} className="text-center" >
     <p className="mb-0">Total</p>
     </Col>
     </Row>
     {/* Film Stock */}
-    <Row>
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>41.10</p>
     </Col>
@@ -113,7 +124,7 @@ const StockLab = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="film_stock" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -129,8 +140,14 @@ const StockLab = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Video Stock */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Video Stock */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>41.20</p>
     </Col>
@@ -148,7 +165,7 @@ const StockLab = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="video_stock" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -164,8 +181,14 @@ const StockLab = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Digital Stock */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Digital Stock */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>41.30</p>
     </Col>
@@ -183,7 +206,7 @@ const StockLab = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="digital_stock" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -199,8 +222,14 @@ const StockLab = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Transfer Stock */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Transfer Stock */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>41.40</p>
     </Col>
@@ -218,7 +247,7 @@ const StockLab = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="transfer_stock" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -234,8 +263,14 @@ const StockLab = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Hard Drives */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Hard Drives */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>41.50</p>
     </Col>
@@ -253,7 +288,7 @@ const StockLab = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="hard_drives" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -269,8 +304,14 @@ const StockLab = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Dailies */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Dailies */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>41.60</p>
     </Col>
@@ -288,7 +329,7 @@ const StockLab = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="dalies" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -304,8 +345,14 @@ const StockLab = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Telecine */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Telecine */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>41.70</p>
     </Col>
@@ -323,7 +370,7 @@ const StockLab = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="telecine" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -339,8 +386,14 @@ const StockLab = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Audio Stock */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Audio Stock */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>41.80</p>
     </Col>
@@ -358,7 +411,7 @@ const StockLab = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="audio_stock" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -374,8 +427,14 @@ const StockLab = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Magnetic Transfer */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Magnetic Transfer */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>41.90</p>
     </Col>
@@ -393,7 +452,7 @@ const StockLab = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="magnetic_transfer" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -409,8 +468,14 @@ const StockLab = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Stills */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Stills */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>41.91</p>
     </Col>
@@ -428,7 +493,7 @@ const StockLab = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="stills" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -444,8 +509,14 @@ const StockLab = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Loss & Damage */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Loss & Damage */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>41.92</p>
     </Col>
@@ -463,7 +534,7 @@ const StockLab = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="loss_dam_lab" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -479,8 +550,14 @@ const StockLab = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Other */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Other */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>41.93</p>
     </Col>
@@ -498,7 +575,7 @@ const StockLab = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="other_lab" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -514,8 +591,14 @@ const StockLab = (props) => {
     ))}
     </Col>
     </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
     {/* PRODUCTION STOCK & LAB Total */}
-    <Row className="mt-3">
+    <Row className="mt-3 pb-2">
     <Col md={1} >
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
@@ -548,6 +631,13 @@ const StockLab = (props) => {
     ))}
     </Col>
     </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    </div>
     </div>
   )
 }

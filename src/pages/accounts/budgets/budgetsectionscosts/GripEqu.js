@@ -53,17 +53,28 @@ const GripEqu = (props) => {
     grip_purchases, loss_damage_grip, other_grip,]);
 
   return (
-    <div className="mt-5">
-    <Row >
+    <div className={`${styles.WhiteBack} mt-3 mb-5`}>
+    <Row className="mx-0" >
+    <Col md={12}
+        className={ `${styles.Overview} py-0 text-center`}>
+            <span className={`${styles.Close } py-1 mb-0 float-right `} 
+    onClick={() => setShow(false) } >Close</span>
+    <p className="pl-5 py-1">
+    GRIP EQUIPMENT SECTION
+    </p>
+    </Col>
+    <Col md={2} >
+    </Col>
+    </Row>
+    <div className="px-2" >
+    <Row className={`mt-3`}>
     <Col md={1} >
-    <p className="mb-2">38.00</p>
+    <p className={`${styles.Underline}`}>38.00</p>
     </Col>
     <Col md={9} >
-    <p className={ `${styles.BoldBlack} mb-2`}>Grip Equipment</p>
+    <p className={ `${styles.BoldBlack} mb-1`}>Grip Equipment</p>
     </Col>
     <Col md={2}>
-    <span className={`${styles.Close }`} 
-    onClick={() => setShow(false) } >Close</span>
     </Col>
     </Row>
     {/* TITLES */}
@@ -74,24 +85,24 @@ const GripEqu = (props) => {
     <Col md={5} >
     <p className="mb-0">Description</p>
     </Col>
-    <Col md={1} >
+    <Col md={1} className="text-center" >
     <p className="mb-0">#</p>
     </Col>
-    <Col className="px-0 mx-0" md={1} >
+    <Col className="text-center" md={1} >
     <p># Unit</p>
     </Col>
-    <Col md={1} >
+    <Col md={1} className="text-center" >
     <p className="mb-0">Unit</p>
     </Col>
-    <Col md={1} >
+    <Col md={1} className="text-center" >
     <p className="mb-0">Price</p>
     </Col>
-    <Col md={2} >
+    <Col md={2} className="text-center" >
     <p className="mb-0">Total</p>
     </Col>
     </Row>
     {/* Basic Package Rentals */}
-    <Row>
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>38.10</p>
     </Col>
@@ -109,7 +120,7 @@ const GripEqu = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="basic_package_rent_grip" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -125,8 +136,14 @@ const GripEqu = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Daily Rentals */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Daily Rentals */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>38.20</p>
     </Col>
@@ -144,7 +161,7 @@ const GripEqu = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="daily_rentals_grip" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -160,8 +177,14 @@ const GripEqu = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Specialty Rentals */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Specialty Rentals */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>38.30</p>
     </Col>
@@ -179,7 +202,7 @@ const GripEqu = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="specialty_rent_grip" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -195,8 +218,14 @@ const GripEqu = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Crane Rentals */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Crane Rentals */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>38.40</p>
     </Col>
@@ -214,7 +243,7 @@ const GripEqu = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="crane_rentals" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -230,8 +259,14 @@ const GripEqu = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Scaffolding */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Scaffolding */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>38.50</p>
     </Col>
@@ -249,7 +284,7 @@ const GripEqu = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="scaffolding_grip" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -265,8 +300,14 @@ const GripEqu = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Purchases */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Purchases */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>38.60</p>
     </Col>
@@ -284,7 +325,7 @@ const GripEqu = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="grip_purchases" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -300,8 +341,14 @@ const GripEqu = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Loss & Damage */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Loss & Damage */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>38.70</p>
     </Col>
@@ -319,7 +366,7 @@ const GripEqu = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="loss_damage_grip" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -335,8 +382,14 @@ const GripEqu = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Other */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Other */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>38.80</p>
     </Col>
@@ -354,7 +407,7 @@ const GripEqu = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="other_grip" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -370,8 +423,14 @@ const GripEqu = (props) => {
     ))}
     </Col>
     </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
     {/* GRIP EQUIPMENT Total */}
-    <Row className="mt-3">
+    <Row className="mt-3 pb-2">
     <Col md={1} >
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
@@ -404,6 +463,13 @@ const GripEqu = (props) => {
     ))}
     </Col>
     </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    </div>
     </div>
   )
 }

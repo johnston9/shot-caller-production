@@ -83,17 +83,28 @@ const PostVisualEffects = (props) => {
     box_ren_vfx, fringes_taxes_vfx, other_post_vfx,]);
 
   return (
-    <div className="mt-5">
-    <Row >
+    <div className={`${styles.WhiteBack} mt-3 mb-5`}>
+    <Row className="mx-0" >
+    <Col md={12}
+        className={ `${styles.Overview} py-0 text-center`}>
+            <span className={`${styles.Close } py-1 mb-0 float-right `} 
+    onClick={() => setShow(false) } >Close</span>
+    <p className="pl-5 py-1">
+    POST VISUAL EFFECTS SECTION
+    </p>
+    </Col>
+    <Col md={2} >
+    </Col>
+    </Row>
+    <div className="px-2" >
+    <Row className={`mt-3`}>
     <Col md={1} >
-    <p className="mb-2">45.00</p>
+    <p className={`${styles.Underline}`}>45.00</p>
     </Col>
     <Col md={9} >
-    <p className={ `${styles.BoldBlack} mb-2`}>Visual Effects</p>
+    <p className={ `${styles.BoldBlack} mb-1`}>Post Production Visual Effects</p>
     </Col>
     <Col md={2}>
-    <span className={`${styles.Close }`} 
-    onClick={() => setShow(false) } >Close</span>
     </Col>
     </Row>
     {/* TITLES */}
@@ -104,24 +115,24 @@ const PostVisualEffects = (props) => {
     <Col md={5} >
     <p className="mb-0">Description</p>
     </Col>
-    <Col md={1} >
+    <Col md={1} className="text-center" >
     <p className="mb-0">#</p>
     </Col>
-    <Col className="px-0 mx-0" md={1} >
+    <Col className="text-center" md={1} >
     <p># Unit</p>
     </Col>
-    <Col md={1} >
+    <Col md={1} className="text-center" >
     <p className="mb-0">Unit</p>
     </Col>
-    <Col md={1} >
+    <Col md={1} className="text-center" >
     <p className="mb-0">Price</p>
     </Col>
-    <Col md={2} >
+    <Col md={2} className="text-center" >
     <p className="mb-0">Total</p>
     </Col>
     </Row>
     {/* VFX Producer */}
-    <Row>
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>45.10</p>
     </Col>
@@ -139,7 +150,7 @@ const PostVisualEffects = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="vfx_producer" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -155,8 +166,14 @@ const PostVisualEffects = (props) => {
     ))}
     </Col>
     </Row>
-    {/* VFX Supervisor */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* VFX Supervisor */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>45.20</p>
     </Col>
@@ -174,7 +191,7 @@ const PostVisualEffects = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="vfx_supervisor" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -190,8 +207,14 @@ const PostVisualEffects = (props) => {
     ))}
     </Col>
     </Row>
-    {/* VFX Coordinator */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* VFX Coordinator */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>45.30</p>
     </Col>
@@ -209,7 +232,7 @@ const PostVisualEffects = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="vfx_coordinator" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -225,8 +248,14 @@ const PostVisualEffects = (props) => {
     ))}
     </Col>
     </Row>
-    {/* VFX Storyboard */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* VFX Storyboard */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>45.40</p>
     </Col>
@@ -244,7 +273,7 @@ const PostVisualEffects = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="vfx_storyboard" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -260,8 +289,14 @@ const PostVisualEffects = (props) => {
     ))}
     </Col>
     </Row>
-    {/* VFX Pre Vis Team */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* VFX Pre Vis Team */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>45.50</p>
     </Col>
@@ -279,7 +314,7 @@ const PostVisualEffects = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="vfx_pre_vis_team" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -295,8 +330,14 @@ const PostVisualEffects = (props) => {
     ))}
     </Col>
     </Row>
-    {/* VFX Post Vis Team */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* VFX Post Vis Team */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>45.60</p>
     </Col>
@@ -314,7 +355,7 @@ const PostVisualEffects = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="vfx_post_vis_team" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -330,8 +371,14 @@ const PostVisualEffects = (props) => {
     ))}
     </Col>
     </Row>
-    {/* VFX Other Labour */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* VFX Other Labour */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>45.70</p>
     </Col>
@@ -349,7 +396,7 @@ const PostVisualEffects = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="vfx_post_other_lab" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -365,8 +412,14 @@ const PostVisualEffects = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Miniatures Build */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Miniatures Build */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>45.80</p>
     </Col>
@@ -384,7 +437,7 @@ const PostVisualEffects = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="miniatures_build" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -400,8 +453,14 @@ const PostVisualEffects = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Miniatures Shoot */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Miniatures Shoot */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>45.90</p>
     </Col>
@@ -419,7 +478,7 @@ const PostVisualEffects = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="miniatures_shoot" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -435,8 +494,14 @@ const PostVisualEffects = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Motion Capture */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Motion Capture */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>45.91</p>
     </Col>
@@ -454,7 +519,7 @@ const PostVisualEffects = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="motion_capture" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -470,8 +535,14 @@ const PostVisualEffects = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Cyberscanning */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Cyberscanning */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>45.92</p>
     </Col>
@@ -489,7 +560,7 @@ const PostVisualEffects = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="cyberscanning" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -505,8 +576,14 @@ const PostVisualEffects = (props) => {
     ))}
     </Col>
     </Row>
-    {/* VFX Rentals */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* VFX Rentals */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>45.93</p>
     </Col>
@@ -524,7 +601,7 @@ const PostVisualEffects = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="vfx_rentals" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -540,8 +617,14 @@ const PostVisualEffects = (props) => {
     ))}
     </Col>
     </Row>
-    {/* VFX Purchases */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* VFX Purchases */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>45.94</p>
     </Col>
@@ -559,7 +642,7 @@ const PostVisualEffects = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="vfx_purchases" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -575,8 +658,14 @@ const PostVisualEffects = (props) => {
     ))}
     </Col>
     </Row>
-    {/* VFX Vendor #1 */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* VFX Vendor #1 */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>45.95</p>
     </Col>
@@ -594,7 +683,7 @@ const PostVisualEffects = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="vfx_vendor_1" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -610,8 +699,14 @@ const PostVisualEffects = (props) => {
     ))}
     </Col>
     </Row>
-    {/* VFX Vendor #2 */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* VFX Vendor #2 */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>45.96</p>
     </Col>
@@ -629,7 +724,7 @@ const PostVisualEffects = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="vfx_vendor_2" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -645,8 +740,14 @@ const PostVisualEffects = (props) => {
     ))}
     </Col>
     </Row>
-    {/* VFX Vendor #3 */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* VFX Vendor #3 */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>45.97</p>
     </Col>
@@ -664,7 +765,7 @@ const PostVisualEffects = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="vfx_vendor_3" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -680,8 +781,14 @@ const PostVisualEffects = (props) => {
     ))}
     </Col>
     </Row>
-    {/* VFX Vendor #4 */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* VFX Vendor #4 */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>45.98</p>
     </Col>
@@ -699,7 +806,7 @@ const PostVisualEffects = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="vfx_vendor_4" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -715,8 +822,14 @@ const PostVisualEffects = (props) => {
     ))}
     </Col>
     </Row>
-    {/* VFX Vendor #5 */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* VFX Vendor #5 */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>45.99</p>
     </Col>
@@ -734,7 +847,7 @@ const PostVisualEffects = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="vfx_vendor_5" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -750,8 +863,14 @@ const PostVisualEffects = (props) => {
     ))}
     </Col>
     </Row>
-    {/* VFX Vendor #6 */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* VFX Vendor #6 */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>45.991</p>
     </Col>
@@ -769,7 +888,7 @@ const PostVisualEffects = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="vfx_vendor_6" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -785,8 +904,14 @@ const PostVisualEffects = (props) => {
     ))}
     </Col>
     </Row>
-    {/* VFX Vendor #7 */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* VFX Vendor #7 */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>45.992</p>
     </Col>
@@ -804,7 +929,7 @@ const PostVisualEffects = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="vfx_vendor_7" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -820,8 +945,14 @@ const PostVisualEffects = (props) => {
     ))}
     </Col>
     </Row>
-    {/* VFX Vendor #8 */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* VFX Vendor #8 */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>45.993</p>
     </Col>
@@ -839,7 +970,7 @@ const PostVisualEffects = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="vfx_vendor_8" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -855,8 +986,14 @@ const PostVisualEffects = (props) => {
     ))}
     </Col>
     </Row>
-    {/* VFX Vendor #9 */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* VFX Vendor #9 */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>45.994</p>
     </Col>
@@ -874,7 +1011,7 @@ const PostVisualEffects = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="vfx_vendor_9" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -890,8 +1027,14 @@ const PostVisualEffects = (props) => {
     ))}
     </Col>
     </Row>
-    {/* VFX Vendor #10 */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* VFX Vendor #10 */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>45.995</p>
     </Col>
@@ -909,7 +1052,7 @@ const PostVisualEffects = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="vfx_vendor_10" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -925,8 +1068,14 @@ const PostVisualEffects = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Other VFX Vendors Total */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Other VFX Vendors Total */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>45.996</p>
     </Col>
@@ -944,7 +1093,7 @@ const PostVisualEffects = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="vfx_vendors_x" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -960,8 +1109,14 @@ const PostVisualEffects = (props) => {
     ))}
     </Col>
     </Row>
-    {/* VFX Expenses*/}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* VFX Expenses*/}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>45.997</p>
     </Col>
@@ -979,7 +1134,7 @@ const PostVisualEffects = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="vfx_expenses" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -995,8 +1150,14 @@ const PostVisualEffects = (props) => {
     ))}
     </Col>
     </Row>
-    {/* VFX Travel & Living */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* VFX Travel & Living */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>45.998</p>
     </Col>
@@ -1014,7 +1175,7 @@ const PostVisualEffects = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="vfx_traliv" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1030,8 +1191,14 @@ const PostVisualEffects = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Box Rentals */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Box Rentals */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>45.999</p>
     </Col>
@@ -1049,7 +1216,7 @@ const PostVisualEffects = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="box_ren_vfx" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1065,8 +1232,14 @@ const PostVisualEffects = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Loss/Damage */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Loss/Damage */}
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>45.9991</p>
     </Col>
@@ -1084,7 +1257,7 @@ const PostVisualEffects = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="lossdam_vfx" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1100,45 +1273,16 @@ const PostVisualEffects = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Fringes & Taxes */}
+    {/* hr */}
     <Row>
-    <Col md={1} >
-    <p className={`${styles.Underline}`}>45.9992</p>
-    </Col>
-    <Col md={6} >
-    <p className={`${styles.Underline}`}>Fringes & Taxes</p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={1} >
-    <p className={`${styles.Underline}`}>%</p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={2} >
-    <Form.Group controlId="fringes_taxes_vfx" 
-        className={`${styles.Width95} text-center mb-1`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="fringes_taxes_vfx"
-        value={fringes_taxes_vfx}
-        onChange={handleChange}
-            />
-    </Form.Group>
-    {errors?.fringes_taxes_vfx?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
     </Col>
     </Row>
     {/* Other */}
-    <Row>
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
-    <p className={`${styles.Underline}`}>45.9993</p>
+    <p className={`${styles.Underline}`}>45.9992</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Other</p>
@@ -1154,7 +1298,7 @@ const PostVisualEffects = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="other_post_vfx" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1170,8 +1314,55 @@ const PostVisualEffects = (props) => {
     ))}
     </Col>
     </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    {/* Fringes & Taxes */}
+    <Row className="py-1 d-flex align-items-center">
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>45.9993</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>Fringes & Taxes</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>%</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="fringes_taxes_vfx" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="fringes_taxes_vfx"
+        value={fringes_taxes_vfx}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.fringes_taxes_vfx?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
     {/* VISUAL EFFECTS Total */}
-    <Row className="mt-3">
+    <Row className="mt-3 pb-2">
     <Col md={1} >
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
@@ -1204,6 +1395,13 @@ const PostVisualEffects = (props) => {
     ))}
     </Col>
     </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    </Col>
+    </Row>
+    </div>
     </div>
   )
 }

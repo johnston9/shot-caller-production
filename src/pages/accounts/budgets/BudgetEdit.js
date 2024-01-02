@@ -7233,7 +7233,7 @@ function BudgetEdit() {
     <Row>
     <Col md={8}>
     <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
-          onClick={() => setShowCamEqu(showCamEqu => !showCamEqu)} >Camera Eq
+          onClick={() => setShowCamEqu(showCamEqu => !showCamEqu)} >Camera Equipment
     </p>
     </Col>
     <Col md={4}>
@@ -7248,7 +7248,7 @@ function BudgetEdit() {
     <Row>
     <Col md={8}>
     <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
-          onClick={() => setShowElecEqu(showElecEqu => !showElecEqu)} >Electrical Eq
+          onClick={() => setShowElecEqu(showElecEqu => !showElecEqu)} >Electrical Equipment
     </p>
     </Col>
     <Col md={4}>
@@ -7263,7 +7263,7 @@ function BudgetEdit() {
     <Row>
     <Col md={8}>
     <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
-          onClick={() => setShowGripEqu(showGripEqu => !showGripEqu)} >Grip
+          onClick={() => setShowGripEqu(showGripEqu => !showGripEqu)} >Grip Equipment
     </p>
     </Col>
     <Col md={4}>
@@ -7278,7 +7278,7 @@ function BudgetEdit() {
     <Row>
     <Col md={8}>
     <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
-          onClick={() => setShowSoundEqu(showSoundEqu => !showSoundEqu)} >Sound
+          onClick={() => setShowSoundEqu(showSoundEqu => !showSoundEqu)} >Sound Equipment
     </p>
     </Col>
     <Col md={4}>
