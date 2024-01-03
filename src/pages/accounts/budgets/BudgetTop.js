@@ -38,157 +38,434 @@ const {above_the_line_total, below_the_lineB_total,
   return (
     <div className='mx-5 px-5 mb-5'>
     <h5 style={{ textTransform: 'uppercase'}} 
-    className={`mt-1 pl-5 py-3 text-center ${styles.SubTitle4 }`}>
+    className={`mt-1 pl-5 py-2 text-center ${styles.SubTitle4 }`}>
         Budget Topsheet
         <span style={{ textTransform: 'none'}} 
         className={`float-right ${styles.Close } pr-3`} 
         onClick={() => setShowTop(false) } >Close</span>
     </h5>
     <div className={`${styles.TopSheet}`}>
-    <div>
-    {/* details length */}
-    <Row className='px-3'>
+    {/* DETAILS LENGTH */}
+    <div className={ `my-0 py-0`}>
+    <Row className='px-5'>
     {/* details */}
-    <Col xs={12} md={6} >
+    <Col xs={12} md={6} className={ `${styles.RightBorder} my-0 py-0`}>
+    {/* Title */}
     <Row>
     <Col xs={4}>
-    <p className={`${styles.Underline}`}>Title</p>
-    <p className={`${styles.Underline}`}>Series</p>
-    <p className={`${styles.Underline}`}>Prodco</p>
-    <p className={`${styles.Underline}`}>Writers</p>
-    <p className={`${styles.Underline}`}>Format</p>
-    <p className={`${styles.Underline}`}>Location</p>
-    <p className={`${styles.Underline}`}>Dated</p>
+    <p className={`${styles.Underline6}`}>Title</p>
     </Col>
     <Col xs={2}>   
     </Col>
     <Col xs={6}>
-    <p className={`${styles.Underline}`}>{title || "-"}</p>
-    <p className={`${styles.Underline}`}>{series || "-"}</p>
-    <p className={`${styles.Underline}`}>{prodco || "-"}</p>
-    <p className={`${styles.Underline}`}>{writer || "-"}</p>
-    <p className={`${styles.Underline}`}>{format || "-"}</p>
-    <p className={`${styles.Underline}`}>{location || "-"}</p>
+    <p className={`${styles.Underline}`}>{title || ""}</p>
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* series */}
+    <Row>
+    <Col xs={4}>
+    <p className={`${styles.Underline6}`}>Series</p>
+    </Col>
+    <Col xs={2}>   
+    </Col>
+    <Col xs={6}>
+    <p className={`${styles.Underline}`}>{series || ""}</p>
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* prodco */}
+    <Row>
+    <Col xs={4}>
+    <p className={`${styles.Underline6}`}>Prodco</p>
+    </Col>
+    <Col xs={2}>   
+    </Col>
+    <Col xs={6}>
+    <p className={`${styles.Underline}`}>{prodco || ""}</p>
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* format */}
+    <Row>
+    <Col xs={4}>
+    <p className={`${styles.Underline6}`}>Format</p>
+    </Col>
+    <Col xs={2}>   
+    </Col>
+    <Col xs={6}>
+    <p className={`${styles.Underline}`}>{format || ""}</p>
+    </Col>
+    </Row> 
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* location */}
+    <Row>
+    <Col xs={4}>
+    <p className={`${styles.Underline6}`}>Location</p>
+    </Col>
+    <Col xs={2}>   
+    </Col>
+    <Col xs={6}>
+    <p className={`${styles.Underline}`}>{location || ""}</p>
+    </Col>
+    </Row> 
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Dated */}
+    <Row>
+    <Col xs={4}>
+    <p className={`${styles.Underline6}`}>Dated</p>
+    </Col>
+    <Col xs={2}>   
+    </Col>
+    <Col xs={6}>
     <p className={`${styles.Underline}`}>{dated || "-"}</p>
     </Col>
-    </Row>  
+    </Row> 
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
-    <Col xs={12} md={6} >
+    </Row>
+    </Col>
+    <Col xs={12} md={6} className='pl-5' >
+    {/* development */}
     <Row className='mt-3 mt-md-0'>
     <Col xs={7}>
-    <p className={`${styles.Underline}`}>Development</p>
-    <p className={`${styles.Underline}`}>Prep</p> 
-    <p className={`${styles.Underline}`}>Shoot</p> 
-    <p className={`${styles.Underline}`}>Wrap</p> 
-    <p className={`${styles.Underline}`}>Post</p>
-    <p className={`${styles.Underline}`}>Length Total</p>
+    <p className={`${styles.Underline6}`}>Development</p>
     </Col>
     <Col xs={2}>
-    <p className={`${styles.Underline}`}>{research || 0}</p>
-    <p className={`${styles.Underline}`}>{prep || 0}</p>
+    <p className={`${styles.Underline}`}>{research || 0}</p>  
+    </Col>
+    <Col xs={3}>
+    <p className={`${styles.Underline}`}>Weeks</p>
+    </Col>
+    </Row> 
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Prep */}
+    <Row >
+    <Col xs={7}>
+    <p className={`${styles.Underline6}`}>Prep</p> 
+    </Col>
+    <Col xs={2}>
+    <p className={`${styles.Underline}`}>{prep || 0}</p>   
+    </Col>
+    <Col xs={3}>
+    <p className={`${styles.Underline}`}>Weeks</p>
+    </Col>
+    </Row> 
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* shoot */}
+    <Row >
+    <Col xs={7}>
+    <p className={`${styles.Underline6}`}>Shoot</p> 
+    </Col>
+    <Col xs={2}>
     <p className={`${styles.Underline}`}>{shoot || 0}</p>
-    <p className={`${styles.Underline}`}>{wrap || 0}</p>
-    <p className={`${styles.Underline}`}>{post || 0}</p>
+    </Col>
+    <Col xs={3}>
+    <p className={`${styles.Underline}`}>Weeks</p>
+    </Col>
+    </Row> 
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    <Row >
+    <Col xs={7}>
+    <p className={`${styles.Underline6}`}>Wrap</p> 
+    </Col>
+    <Col xs={2}>
+    <p className={`${styles.Underline}`}>{wrap || 0}</p>  
+    </Col>
+    <Col xs={3}>
+    <p className={`${styles.Underline}`}>Weeks</p>
+    </Col>
+    </Row> 
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    <Row >
+    <Col xs={7}>
+    <p className={`${styles.Underline6}`}>Post</p>
+    </Col>
+    <Col xs={2}>
+    <p className={`${styles.Underline}`}>{post || 0}</p>  
+    </Col>
+    <Col xs={3}>
+    <p className={`${styles.Underline}`}>Weeks</p>
+    </Col>
+    </Row> 
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    <Row >
+    <Col xs={7}>
+    <p className={`${styles.Underline6}`}>Length Total</p>
+    </Col>
+    <Col xs={2}>
     <p className={`${styles.Underline}`}>{length_total}</p>   
     </Col>
     <Col xs={3}>
     <p className={`${styles.Underline}`}>Weeks</p>
-    <p className={`${styles.Underline}`}>Weeks</p>
-    <p className={`${styles.Underline}`}>Weeks</p>
-    <p className={`${styles.Underline}`}>Weeks</p>
-    <p className={`${styles.Underline}`}>Weeks</p>
-    <p className={`${styles.Underline}`}>Weeks</p>
     </Col>
-    </Row>      
+    </Row> 
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>     
     </Col>
     </Row>
+    </div>
     {/* prepared by */}
-    <div className='mt-1 px-3'>
+    <div className={ `mt-4 px-5`}>
+    <Row>
+    <Col md={6} className={ `${styles.RightBorder} my-0 py-0`} >
     <Row>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>
-    BUDGET PREPARED BY: {preparedby}
-    </p>
-    <p className={`${styles.Underline}`}>
-    PRELIMINARY OR FINAL: {prelimfin}
+    <p className={`${styles.Underline6}`}>
+    BUDGET PREPARED BY
     </p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>
-    BUDGET APPROVED BY: {approvedby}
-    </p>
-    <p className={`${styles.Underline}`}>
-    APPROVING COMPANY: {approvedbyco}
+    {preparedby}
     </p>
     </Col>
     </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    <Row>
+    <Col md={6} >
+    <p className={`${styles.Underline6}`}>
+    PRELIMINARY OR FINAL
+    </p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.Underline}`}>
+    {prelimfin}
+    </p>
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    </Col>
+    <Col md={6} className='pl-md-5'>
+    <Row>
+    <Col md={7} >
+    <p className={`${styles.Underline6}`}>
+    BUDGET APPROVED BY
+    </p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>
+    {approvedby}
+    </p>
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    <Row>
+    <Col md={7} >
+    <p className={`${styles.Underline6}`}>
+    APPROVING COMPANY
+    </p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>
+    {approvedbyco}
+    </p>
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    </Col>
+    </Row>
     </div>
-    </div>
+    <Row>
+    <Col md={6}></Col>
+    <Col md={6}></Col>
+    <Col md={6}></Col>
+    <Col md={6}></Col>
+    <Col md={6}></Col>
+    </Row>
     {/* ABOVE THE LINE */}
-    <div className='px-3'>
-    <Row className={ `${styles.OverviewBlue} mx-1 mb-2 mt-3 py-1 text-center`}>
+    <Row className={ `${styles.OverviewBlue} mx-0 mb-2 mt-4 py-1 text-center`}>
     <Col md={12}>
     <h5 className={ `${styles.BoldBlack}`}>ABOVE THE LINE</h5>
     </Col>
     </Row>
-    {/* RIGHTS */}
+    <div className='px-3'>
     <Row>
+    <Col md={6} className={ `${styles.RightBorder} my-0 py-0`}>
+    {/* RIGHTS */}
+    <Row className='px-3' >
     <Col md={1} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
-    <p className="mb-2">01.00</p>
+    <p className={`${styles.Underline}`}>01.00</p>
     </Col>
     <Col md={9} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`} >
     <p className={ `${styles.BoldBlack} pb-0 mb-0`}>RIGHTS</p>
     </Col>
     <Col md={2} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
-    <p className="mb-2">{rights_total}</p>
+    <div className={`${styles.Box7} 
+         d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{rights_total}</p>
+    </div>
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-1 mt-1`}/>
     </Col>
     </Row>
     {/* PRE-PRODUCTION AND DEVELOPMENT */}
-    <Row>
+    <Row className='px-3'>
     <Col md={1} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
-    <p className="mb-2">02.00</p>
+    <p className={`${styles.Underline}`}>02.00</p>
     </Col>
     <Col md={9} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`} >
     <p className={ `${styles.BoldBlack} pb-0 mb-0`}>PRE-PRODUCTION AND DEVELOPMENT</p>
     </Col>
     <Col md={2} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
-    <p className="mb-2">{development_total}</p>
+    <div className={`${styles.Box7} 
+         d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{development_total}</p>
+    </div>
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-1 mt-1`}/>
     </Col>
     </Row>
     {/* SCENARIO */}
-    <Row>
+    <Row className='px-3'>
     <Col md={1} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
-    <p className="mb-2">03.00</p>
+    <p className={`${styles.Underline}`}> 03.00</p>
     </Col>
     <Col md={9} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`} >
     <p className={ `${styles.BoldBlack} pb-0 mb-0`}>SCENARIO</p>
     </Col>
     <Col md={2} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
-    <p className="mb-2">{scenario_total}</p>
+    <div className={`${styles.Box7} 
+         d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{scenario_total}</p>
+    </div>
     </Col>
     </Row>
-    {/* PRODUCERS AND DIRECTORS */}
+    {/* hr */}
     <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-1 mt-1`}/>
+    </Col>
+    </Row>
+    </Col>
+    <Col md={6}>
+    {/* PRODUCERS AND DIRECTORS */}
+    <Row className='px-3'>
     <Col md={1} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
-    <p className="mb-2">04.00</p>
+    <p className={`${styles.Underline}`}>04.00</p>
     </Col>
     <Col md={9} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`} >
     <p className={ `${styles.BoldBlack} pb-0 mb-0`}>PRODUCERS AND DIRECTORS</p>
     </Col>
     <Col md={2} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
-    <p className="mb-2">{producers_dirs_total}</p>
+    <div className={`${styles.Box7} 
+         d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{producers_dirs_total}</p>
+   </div>
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-1 mt-1`}/>
     </Col>
     </Row>
     {/* STARS / MUSIC */}
-    <Row>
+    <Row className='px-3'>
     <Col md={1} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
-    <p className="mb-2">05.00</p>
+    <p className={`${styles.Underline}`}>05.00</p>
     </Col>
     <Col md={9} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`} >
     <p className={ `${styles.BoldBlack} pb-0 mb-0`}>STARS / MUSIC</p>
     </Col>
     <Col md={2} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
-    <p className="mb-2">{stars_music_total}</p>
+    <div className={`${styles.Box7} 
+         d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{stars_music_total}</p>
+    </div>
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break3} mb-1 mt-1`}/>
+    </Col>
+    </Row>
     </Col>
     </Row>
     {/* TOTAL - ABOVE THE LINE */}
@@ -201,7 +478,10 @@ const {above_the_line_total, below_the_lineB_total,
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - ABOVE THE LINE "A"</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Bold} mb-0`}>{above_the_line_total || 0}</p>
+    <div className={`${styles.Box7} 
+         d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.BoldBlack} mb-0`}>{above_the_line_total || 0}</p>
+    </div>
     </Col>
     </Row>
     </div>

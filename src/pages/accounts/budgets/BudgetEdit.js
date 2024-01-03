@@ -1340,7 +1340,6 @@ function BudgetEdit() {
 
   // Design Labour values
   const {
-    // new
     production_designer_quantity, production_designer_units_number,
     production_designer_units_name, production_designer_rate,
     pro_designer_qty_prep, pro_designer_uno_prep,
@@ -1494,6 +1493,73 @@ function BudgetEdit() {
 
   // Construction Labour postData
   const [postDataConstruction, setPostDataConstruction] = useState({
+    // new
+    days6th7th_unit_con: 0,
+    days6th7th_con: 0,
+    overtime_unit_con: 0,
+    overtime_con: 0,
+    holidays_unit_con: 0, 
+    holidays_con: 0,
+    box_rent_unit_con: 0,
+    box_rent_con: 0,
+    con_coor_qty_prep: 0,
+    con_coor_uno_prep: 0,
+    con_coor_una_prep: "",
+    con_coor_rt_prep: 0,
+    con_coor_qty_wrap: 0,
+    con_coor_uno_wrap: 0,
+    con_coor_una_wrap: "",
+    con_coor_rt_wrap: 0,
+    headcar_qty_prep: 0,
+    headcar_uno_prep: 0,
+    headcar_una_prep: "",
+    headcar_rt_prep: 0,
+    headcar_qty_wrap: 0,
+    headcar_uno_wrap: 0,
+    headcar_una_wrap: "",
+    headcar_rt_wrap: 0,
+    carpen_qty_prep: 0,
+    carpen_uno_prep: 0,
+    carpen_una_prep: "",
+    carpen_rt_prep: 0,
+    carpen_qty_wrap: 0,
+    carpen_uno_wrap: 0,
+    carpen_una_wrap: "",
+    carpen_rt_wrap: 0,
+    scenic_qty_prep: 0,
+    scenic_uno_prep: 0,
+    scenic_una_prep: "",
+    scenic_rt_prep: 0,
+    scenic_qty_wrap: 0,
+    scenic_uno_wrap: 0,
+    scenic_una_wrap: "",
+    scenic_rt_wrap: 0,
+    headpain_qty_prep: 0,
+    headpain_uno_prep: 0,
+    headpain_una_prep: "",
+    headpain_rt_prep: 0,
+    headpain_qty_wrap: 0,
+    headpain_uno_wrap: 0,
+    headpain_una_wrap: "",
+    headpain_rt_wrap: 0,
+    pain_qty_prep: 0,
+    pain_uno_prep: 0,
+    pain_una_prep: "",
+    pain_rt_prep: 0,
+    pain_qty_wrap: 0,
+    pain_uno_wrap: 0,
+    pain_una_wrap: "",
+    pain_rt_wrap: 0,
+    labo_qty_prep: 0,
+    labo_uno_prep: 0,
+    labo_una_prep: "",
+    labo_rt_prep: 0,
+    labo_qty_wrap: 0,
+    labo_uno_wrap: 0,
+    labo_una_wrap: "",
+    labo_rt_wrap: 0,
+    // old
+    other_construction: 0,
     fringes_taxes_construction: 0,
     constructioncoordinator_quantity: 0,
     constructioncoordinator_units_number: 0,
@@ -1523,11 +1589,27 @@ function BudgetEdit() {
     labourers_units_number: 0,
     labourers_units_name: "",
     labourers_rate: 0,
-    other_construction: 0,
   });
 
   // Construction Labour values
-  const {fringes_taxes_construction,
+  const {days6th7th_unit_con, days6th7th_con, overtime_unit_con, overtime_con,
+    holidays_unit_con, holidays_con, box_rent_unit_con, box_rent_con,
+    con_coor_qty_prep, con_coor_uno_prep, con_coor_una_prep, con_coor_rt_prep,
+    con_coor_qty_wrap, con_coor_uno_wrap, con_coor_una_wrap, con_coor_rt_wrap,
+    headcar_qty_prep, headcar_uno_prep, headcar_una_prep, headcar_rt_prep,
+    headcar_qty_wrap, headcar_uno_wrap, headcar_una_wrap, headcar_rt_wrap,
+    carpen_qty_prep, carpen_uno_prep, carpen_una_prep, carpen_rt_prep,
+    carpen_qty_wrap, carpen_uno_wrap, carpen_una_wrap, carpen_rt_wrap,
+    scenic_qty_prep, scenic_uno_prep, scenic_una_prep, scenic_rt_prep,
+    scenic_qty_wrap, scenic_uno_wrap, scenic_una_wrap, scenic_rt_wrap,
+    headpain_qty_prep, headpain_uno_prep, headpain_una_prep, headpain_rt_prep,
+    headpain_qty_wrap, headpain_uno_wrap, headpain_una_wrap, headpain_rt_wrap,
+    pain_qty_prep, pain_uno_prep, pain_una_prep, pain_rt_prep,
+    pain_qty_wrap, pain_uno_wrap, pain_una_wrap, pain_rt_wrap,
+    labo_qty_prep, labo_uno_prep, labo_una_prep, labo_rt_prep,
+    labo_qty_wrap, labo_uno_wrap, labo_una_wrap, labo_rt_wrap,
+    //old
+    fringes_taxes_construction,
     constructioncoordinator_quantity, constructioncoordinator_units_number,
     constructioncoordinator_units_name, constructioncoordinator_rate,
     headcarpenter_quantity, headcarpenter_units_number,
@@ -1545,26 +1627,76 @@ function BudgetEdit() {
   } = postDataConstruction;
 
   // Totals
-  // construction coordinator Total postData
+  
+  // construction coordinator
+  // construction coordinator shoot Total postData
   const [constructioncoordinatorTotal, setConstructioncoordinatorTotal] = useState(0);
+  // construction coordinator prep Total postData
+  const [concoorprepTotal, setConoorprepTotal] = useState(0);
+  // construction coordinator wrap Total postData
+  const [concoorwrapTotal, setConoorwrapTotal] = useState(0);
+  // construction coordinator all Total postData
+  const [concoorallTotal, setConoorallTotal] = useState(0);
 
-  // head carpenter Total postData
+  // head carpenter
+  // head carpenter shoot Total postData
   const [headcarpenterTotal, setHeadcarpenterTotal] = useState(0);
+  // head carpenter prep Total postData
+  const [headcarprepTotal, setHeadcarprepTotal] = useState(0);
+  // head carpenter wrap Total postData
+  const [headcarwrapTotal, setHeadcarwrapTotal] = useState(0);
+  // head carpenter all Total postData
+  const [headcarallTotal, setHeadcarallTotal] = useState(0);
 
-  // carpenters Total postData
+  // carpenters
+  // carpenters shoot Total postData
   const [carpentersTotal, setCarpentersTotal] = useState(0);
+  // carpenters prep Total postData
+  const [carpenprepTotal, setCarpenprepTotal] = useState(0);
+  // carpenters wrap Total postData
+  const [carpenwrapTotal, setCarpenwrapTotal] = useState(0);
+  // carpenters all Total postData
+  const [carpenallTotal, setCarpenallTotal] = useState(0);
 
-  // scenic painters Total postData
+  // scenic painters
+  // scenic painters shoot Total postData
   const [scenicpaintersTotal, setScenicpaintersTotal] = useState(0);
+  // scenic painters prep Total postData
+  const [scenicprepTotal, setScenicprepTotal] = useState(0);
+  // scenic painters wrap Total postData
+  const [scenicwrapTotal, setScenicwrapTotal] = useState(0);
+  // scenic painters all Total postData
+  const [scenicallTotal, setScenicallTotal] = useState(0);
 
-  // head painter Total postData
+  // head painter
+  // head painter shoot Total postData
   const [headpainterTotal, setHeadpainterTotal] = useState(0);
+  // head painter prep Total postData
+  const [headpainprepTotal, setHeadpainprepTotal] = useState(0);
+  // head painter wrap Total postData
+  const [headpainwrapTotal, setHeadpainwrapTotal] = useState(0);
+  // head painter all Total postData
+  const [headpainallTotal, setHeadpainallTotal] = useState(0);
 
-  // painters Total postData
+  // painters
+  // painters shoot Total postData
   const [paintersTotal, setPaintersTotal] = useState(0);
+  // painters prep Total postData
+  const [paintprepTotal, setPaintprepTotal] = useState(0);
+  // painters wrap Total postData
+  const [paintwrapTotal, setPaintwrapTotal] = useState(0);
+  // painters all Total postData
+  const [paintallTotal, setPaintallTotal] = useState(0);
 
-  // labourers Total postData
+  // labourers
+  // labourers shoot Total postData
   const [labourersTotal, setLabourersTotal] = useState(0);
+  // labourers prep Total postData
+  const [laboprepTotal, setLaboprepTotal] = useState(0);
+  // labourers wrap Total postData
+  const [labowrapTotal, setLabowrapTotal] = useState(0);
+  // labourers all Total postData
+  const [laboallTotal, setLaboallTotal] = useState(0);
 
   // construction Labour Total postData 
   const [constructionlabourTotal, setConstructionlabourTotal] = useState(0);
@@ -4541,6 +4673,22 @@ function BudgetEdit() {
         setDesignlabourTotal(designlabour_total);
         // construction
         const {fringes_taxes_construction,
+          days6th7th_unit_con, days6th7th_con, overtime_unit_con, overtime_con,
+          holidays_unit_con, holidays_con, box_rent_unit_con, box_rent_con,
+          con_coor_qty_prep, con_coor_uno_prep, con_coor_una_prep, con_coor_rt_prep,
+          con_coor_qty_wrap, con_coor_uno_wrap, con_coor_una_wrap, con_coor_rt_wrap,
+          headcar_qty_prep, headcar_uno_prep, headcar_una_prep, headcar_rt_prep,
+          headcar_qty_wrap, headcar_uno_wrap, headcar_una_wrap, headcar_rt_wrap,
+          carpen_qty_prep, carpen_uno_prep, carpen_una_prep, carpen_rt_prep,
+          carpen_qty_wrap, carpen_uno_wrap, carpen_una_wrap, carpen_rt_wrap,
+          scenic_qty_prep, scenic_uno_prep, scenic_una_prep, scenic_rt_prep,
+          scenic_qty_wrap, scenic_uno_wrap, scenic_una_wrap, scenic_rt_wrap,
+          headpain_qty_prep, headpain_uno_prep, headpain_una_prep, headpain_rt_prep,
+          headpain_qty_wrap, headpain_uno_wrap, headpain_una_wrap, headpain_rt_wrap,
+          pain_qty_prep, pain_uno_prep, pain_una_prep, pain_rt_prep,
+          pain_qty_wrap, pain_uno_wrap, pain_una_wrap, pain_rt_wrap,
+          labo_qty_prep, labo_uno_prep, labo_una_prep, labo_rt_prep,
+          labo_qty_wrap, labo_uno_wrap, labo_una_wrap, labo_rt_wrap,
           constructioncoordinator_quantity, constructioncoordinator_units_number,
           constructioncoordinator_units_name, constructioncoordinator_rate,
           headcarpenter_quantity, headcarpenter_units_number,
@@ -4557,6 +4705,22 @@ function BudgetEdit() {
           labourers_units_name, labourers_rate, other_construction,
           constructionlabour_total} = data.results[0];
         setPostDataConstruction({fringes_taxes_construction,
+          days6th7th_unit_con, days6th7th_con, overtime_unit_con, overtime_con,
+          holidays_unit_con, holidays_con, box_rent_unit_con, box_rent_con,
+          con_coor_qty_prep, con_coor_uno_prep, con_coor_una_prep, con_coor_rt_prep,
+          con_coor_qty_wrap, con_coor_uno_wrap, con_coor_una_wrap, con_coor_rt_wrap,
+          headcar_qty_prep, headcar_uno_prep, headcar_una_prep, headcar_rt_prep,
+          headcar_qty_wrap, headcar_uno_wrap, headcar_una_wrap, headcar_rt_wrap,
+          carpen_qty_prep, carpen_uno_prep, carpen_una_prep, carpen_rt_prep,
+          carpen_qty_wrap, carpen_uno_wrap, carpen_una_wrap, carpen_rt_wrap,
+          scenic_qty_prep, scenic_uno_prep, scenic_una_prep, scenic_rt_prep,
+          scenic_qty_wrap, scenic_uno_wrap, scenic_una_wrap, scenic_rt_wrap,
+          headpain_qty_prep, headpain_uno_prep, headpain_una_prep, headpain_rt_prep,
+          headpain_qty_wrap, headpain_uno_wrap, headpain_una_wrap, headpain_rt_wrap,
+          pain_qty_prep, pain_uno_prep, pain_una_prep, pain_rt_prep,
+          pain_qty_wrap, pain_uno_wrap, pain_una_wrap, pain_rt_wrap,
+          labo_qty_prep, labo_uno_prep, labo_una_prep, labo_rt_prep,
+          labo_qty_wrap, labo_uno_wrap, labo_una_wrap, labo_rt_wrap,
           constructioncoordinator_quantity, constructioncoordinator_units_number,
           constructioncoordinator_units_name, constructioncoordinator_rate,
           headcarpenter_quantity, headcarpenter_units_number,
@@ -6448,23 +6612,6 @@ function BudgetEdit() {
     formData.append("craftservicesprep_total", craftservicesprepTotal);
     formData.append("craftserviceswrap_total", craftserviceswrapTotal);
     formData.append("craftservicesall_total", craftservicesallTotal);
-
-    try {
-      const { data } = await axiosReq.put(`/budgets/${budgetId}/`, formData);
-      console.log(`submit2 ${data}`);
-      handleSubmit3(event);
-    } catch (err) {
-      console.log(err);
-      if (err.response?.status !== 401) {
-        setErrors(err.response?.data);
-      }
-    }
-  };
-
-  // Submit3
-  const handleSubmit3 = async (event) => {
-    event.preventDefault();
-    const formData = new FormData();
     formData.append("pro_designer_qty_prep", pro_designer_qty_prep);
     formData.append("pro_designer_uno_prep", pro_designer_uno_prep);
     formData.append("pro_designer_una_prep", pro_designer_una_prep);
@@ -6587,11 +6734,105 @@ function BudgetEdit() {
     formData.append("artcoorprep_total", artcoorprepTotal);
     formData.append("artcoorwrap_total", artcoorwrapTotal);
     formData.append("artcoorall_total", artcoorallTotal);
+    formData.append("days6th7th_unit_con", days6th7th_unit_con);
+    formData.append("days6th7th_con", days6th7th_con);
+    formData.append("overtime_unit_con", overtime_unit_con);
+    formData.append("overtime_con", overtime_con);
+    formData.append("holidays_unit_con", holidays_unit_con);
+    formData.append("holidays_con", holidays_con);
+    formData.append("box_rent_unit_con", box_rent_unit_con);
+    formData.append("box_rent_con", box_rent_con);
+    formData.append("con_coor_qty_prep", con_coor_qty_prep);
+    formData.append("con_coor_uno_prep", con_coor_uno_prep);
+    formData.append("con_coor_una_prep", con_coor_una_prep);
+    formData.append("con_coor_rt_prep", con_coor_rt_prep);
+    formData.append("con_coor_qty_wrap", con_coor_qty_wrap);
+    formData.append("con_coor_una_wrap", con_coor_uno_wrap);
+    formData.append("con_coor_uno_wrap", con_coor_uno_wrap);
+    formData.append("con_coor_una_wrap", con_coor_una_wrap);
+    formData.append("con_coor_rt_wrap", con_coor_rt_wrap);
+    formData.append("headcar_qty_prep", headcar_qty_prep);
+    formData.append("headcar_uno_prep", headcar_uno_prep);
+    formData.append("headcar_una_prep", headcar_una_prep);
+    formData.append("headcar_rt_prep", headcar_rt_prep);
+    formData.append("headcar_qty_wrap", headcar_qty_wrap);
+    formData.append("headcar_uno_wrap", headcar_uno_wrap);
+    formData.append("headcar_una_wrap", headcar_una_wrap);
+    formData.append("headcar_rt_wrap", headcar_rt_wrap);
+    formData.append("carpen_qty_prep", carpen_qty_prep);
+    formData.append("carpen_uno_prep", carpen_uno_prep);
+    formData.append("carpen_una_prep", carpen_una_prep);
+    formData.append("carpen_rt_prep", carpen_rt_prep);
+    formData.append("carpen_qty_wrap", carpen_qty_wrap);
+    formData.append("carpen_uno_wrap", carpen_uno_wrap);
+    formData.append("carpen_una_wrap", carpen_una_wrap);
+    formData.append("carpen_rt_wrap", carpen_rt_wrap);
+    formData.append("scenic_qty_prep", scenic_qty_prep);
+    formData.append("scenic_uno_prep", scenic_uno_prep);
+    formData.append("scenic_una_prep", scenic_una_prep);
+    formData.append("scenic_rt_prep", scenic_rt_prep);
+    formData.append("scenic_qty_wrap", scenic_qty_wrap);
+    formData.append("scenic_uno_wrap", scenic_uno_wrap);
+    formData.append("scenic_una_wrap", scenic_una_wrap);
+    formData.append("scenic_rt_wrap", scenic_rt_wrap);
+    formData.append("headpain_qty_prep", headpain_qty_prep);
+    formData.append("headpain_uno_prep", headpain_uno_prep);
+    formData.append("headpain_una_prep", headpain_una_prep);
+    formData.append("headpain_rt_prep", headpain_rt_prep);
+    formData.append("headpain_qty_wrap", headpain_qty_wrap);
+    formData.append("headpain_uno_wrap", headpain_uno_wrap);
+    formData.append("headpain_una_wrap", headpain_una_wrap);
+    formData.append("headpain_rt_wrap", headpain_rt_wrap);
+    formData.append("pain_qty_prep", pain_qty_prep);
+    formData.append("pain_uno_prep", pain_uno_prep);
+    formData.append("pain_una_prep", pain_una_prep);
+    formData.append("pain_rt_prep", pain_rt_prep);
+    formData.append("pain_qty_wrap", pain_qty_wrap);
+    formData.append("pain_uno_wrap", pain_uno_wrap);
+    formData.append("pain_una_wrap", pain_una_wrap);
+    formData.append("pain_rt_wrap", pain_rt_wrap);
+    formData.append("labo_qty_prep", labo_qty_prep);
+    formData.append("labo_uno_prep", labo_uno_prep);
+    formData.append("labo_una_prep", labo_una_prep);
+    formData.append("labo_rt_prep", labo_rt_prep);
+    formData.append("labo_qty_wrap", labo_qty_wrap);
+    formData.append("labo_uno_wrap", labo_uno_wrap);
+    formData.append("labo_una_wrap", labo_una_wrap);
+    formData.append("labo_rt_wrap", labo_rt_wrap);
+    formData.append("concoorprep_total", concoorprepTotal);
+    formData.append("concoorwrap_total", concoorwrapTotal);
+    formData.append("concoorall_total", concoorallTotal);
+    formData.append("headcarprep_total", headcarprepTotal);
+    formData.append("headcarwrap_total", headcarwrapTotal);
+    formData.append("headcarall_total", headcarallTotal);
+    formData.append("carpenprep_total", carpenprepTotal);
+    formData.append("carpenwrap_total", carpenwrapTotal);
+    formData.append("carpenall_total", carpenallTotal);
+    formData.append("scenicprep_total", scenicprepTotal);
+    formData.append("scenicwrap_total", scenicwrapTotal);
+    formData.append("scenicall_total", scenicallTotal);
+    formData.append("headpainprep_total", headpainprepTotal);
+    formData.append("headpainwrap_total", headpainwrapTotal);
+    formData.append("headpainall_total", headpainallTotal);
+    formData.append("paintprep_total", paintprepTotal);
+    formData.append("paintwrap_total", paintwrapTotal);
+    formData.append("paintall_total", paintallTotal);
+    formData.append("laboprep_total", laboprepTotal);
+    formData.append("labowrap_total", labowrapTotal);
+    formData.append("laboall_total", laboallTotal);
+    formData.append("staaaaaars", staaaaaars);
+    formData.append("staaaaaars", staaaaaars);
+    formData.append("staaaaaars", staaaaaars);
+    formData.append("staaaaaars", staaaaaars);
+    formData.append("staaaaaars", staaaaaars);
+    formData.append("staaaaaars", staaaaaars);
+    formData.append("staaaaaars", staaaaaars);
+    formData.append("staaaaaars", staaaaaars);
 
     try {
       const { data } = await axiosReq.put(`/budgets/${budgetId}/`, formData);
-      console.log(`submit3 ${data}`);
-      history.goBack();
+      console.log(`submit2 ${data}`);
+      handleSubmit3(event);
     } catch (err) {
       console.log(err);
       if (err.response?.status !== 401) {
@@ -6599,6 +6840,23 @@ function BudgetEdit() {
       }
     }
   };
+
+  // Submit3
+  // const handleSubmit3 = async (event) => {
+  //   event.preventDefault();
+  //   const formData = new FormData();
+
+  //   try {
+  //     const { data } = await axiosReq.put(`/budgets/${budgetId}/`, formData);
+  //     console.log(`submit3 ${data}`);
+  //     history.goBack();
+  //   } catch (err) {
+  //     console.log(err);
+  //     if (err.response?.status !== 401) {
+  //       setErrors(err.response?.data);
+  //     }
+  //   }
+  // };
 
   return (
     <div className="mt-3 ">
