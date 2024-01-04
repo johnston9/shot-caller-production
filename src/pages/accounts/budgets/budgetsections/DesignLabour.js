@@ -116,14 +116,6 @@ const DesignLabour = (props) => {
     [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
     });
   };          
-            
-//   Design handleChange - parseFloat
-//   const handleChangeDesign = (event) => {
-//     setPostDataDesign({
-//       ...postDataDesign,
-//       [event.target.name]: parseFloat(event.target.value || 0 ),
-//     });
-//   }; 
 
   // Design handleChange Text 
   const handleChangeDesignText = (event) => {
@@ -867,10 +859,10 @@ const DesignLabour = (props) => {
     <div className="mt-2"> 
     <Row >
     <Col md={1} >
-    <p className={`${styles.Underline} mb-0`}>08.10</p>
+    <p className={`${styles.Underline}`}>08.10</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.BoldBlack} mb-0`}>Production Designer</p>
+    <p className={`${styles.BoldBlack}`}>Production Designer</p>
     </Col>
     </Row>
     {/* Prep */}

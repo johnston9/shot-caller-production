@@ -6820,19 +6820,11 @@ function BudgetEdit() {
     formData.append("laboprep_total", laboprepTotal);
     formData.append("labowrap_total", labowrapTotal);
     formData.append("laboall_total", laboallTotal);
-    formData.append("staaaaaars", staaaaaars);
-    formData.append("staaaaaars", staaaaaars);
-    formData.append("staaaaaars", staaaaaars);
-    formData.append("staaaaaars", staaaaaars);
-    formData.append("staaaaaars", staaaaaars);
-    formData.append("staaaaaars", staaaaaars);
-    formData.append("staaaaaars", staaaaaars);
-    formData.append("staaaaaars", staaaaaars);
 
     try {
       const { data } = await axiosReq.put(`/budgets/${budgetId}/`, formData);
       console.log(`submit2 ${data}`);
-      handleSubmit3(event);
+      // handleSubmit3(event);
     } catch (err) {
       console.log(err);
       if (err.response?.status !== 401) {
@@ -8170,7 +8162,50 @@ function BudgetEdit() {
       setLabourersTotal={setLabourersTotal}
       constructionlabourTotal={constructionlabourTotal}
       setConstructionlabourTotal={setConstructionlabourTotal}
-      setShow={setShowCon}  /> 
+      setShow={setShowCon}  
+      concoorprepTotal={concoorprepTotal}
+      setConoorprepTotal={setConoorprepTotal}
+      concoorwrapTotal={concoorwrapTotal}
+      setConoorwrapTotal={setConoorwrapTotal}
+      concoorallTotal={concoorallTotal}
+      setConoorallTotal={setConoorallTotal}
+      headcarprepTotal={headcarprepTotal}
+      setHeadcarprepTotal={setHeadcarprepTotal}
+      headcarwrapTotal={headcarwrapTotal}
+      setHeadcarwrapTotal={setHeadcarwrapTotal}
+      headcarallTotal={headcarallTotal}
+      setHeadcarallTotal={setHeadcarallTotal}
+      carpenprepTotal={carpenprepTotal}
+      setCarpenprepTotal={setCarpenprepTotal}
+      carpenwrapTotal={carpenwrapTotal}
+      setCarpenwrapTotal={setCarpenwrapTotal}
+      carpenallTotal={carpenallTotal}
+      setCarpenallTotal={setCarpenallTotal}
+      scenicprepTotal={scenicprepTotal}
+      setScenicprepTotal={setScenicprepTotal}
+      scenicwrapTotal={scenicwrapTotal}
+      setScenicwrapTotal={setScenicwrapTotal}
+      scenicallTotal={scenicallTotal}
+      setScenicallTotal={setScenicallTotal}
+      headpainprepTotal={headpainprepTotal}
+      setHeadpainprepTotal={setHeadpainprepTotal}
+      headpainwrapTotal={headpainwrapTotal}
+      setHeadpainwrapTotal={setHeadpainwrapTotal}
+      headpainallTotal={headpainallTotal}
+      setHeadpainallTotal={setHeadpainallTotal}
+      paintprepTotal={paintprepTotal}
+      setPaintprepTotal={setPaintprepTotal}
+      paintwrapTotal={paintwrapTotal}
+      setPaintwrapTotal={setPaintwrapTotal}
+      paintallTotal={paintallTotal}
+      setPaintallTotal={setPaintallTotal}
+      laboprepTotal={laboprepTotal}
+      setLaboprepTotal={setLaboprepTotal}
+      labowrapTotal={labowrapTotal}
+      setLabowrapTotal={setLabowrapTotal}
+      laboallTotal={laboallTotal}
+      setLaboallTotal={setLaboallTotal}
+      /> 
     ) }
     {/* set dressing */}
     {!showDress ? (

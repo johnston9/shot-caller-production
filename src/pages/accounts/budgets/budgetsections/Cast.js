@@ -50,14 +50,6 @@ const Cast = (props) => {
     });
   };
 
-  // Cast handleChange2 - parseFloat
-  // const handleChangeCast2 = (event) => {
-  //   setPostDataCast({
-  //     ...postDataCast,
-  //     [event.target.name]: parseFloat(event.target.value || 0 ),
-  //   });
-  // }; 
-
   // Cast handleChange Text 
   const handleChangeCastText = (event) => {
     setPostDataCast({
