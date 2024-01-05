@@ -3910,48 +3910,10 @@ const DesignLabour = (props) => {
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
-    {/* Other */}
-    <Row className="py-1 d-flex align-items-center">
-    <Col md={1} >
-    <p className={`${styles.Underline}`}>08.97</p>
-    </Col>
-    <Col md={6} >
-    <p className={`${styles.BoldBlack}`}>Other</p>
-    </Col>
-    <Col className="px-1 mx-0" md={1} >
-    </Col>
-    <Col className="px-1 mx-0" md={1} >
-    </Col>
-    <Col className="px-1 mx-0" md={1} >
-    </Col>
-    <Col md={2} >
-    <Form.Group controlId="other_design" 
-        className={`${styles.Width95} text-center my-0 py-0`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="other_design"
-        value={other_design}
-        onChange={handleChangeDesign}
-            />
-    </Form.Group>
-    {errors?.other_design?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    </Row>
-    {/* hr */}
-    <Row>
-    <Col >
-    <hr className={`${styles.Break1} mt-0 mb-0`}/>
-    </Col>
-    </Row>
     {/* Box Rentals */}
     <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
-    <p className={`${styles.Underline}`}>08.98</p>
+    <p className={`${styles.Underline}`}>08.97</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.BoldBlack}`}>Box Rentals</p>
@@ -3991,6 +3953,44 @@ const DesignLabour = (props) => {
             />
     </Form.Group>
     {errors?.box_rent_design?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Other */}
+    <Row className="py-1 d-flex align-items-center">
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>08.98</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.BoldBlack}`}>Other</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="other_design" 
+        className={`${styles.Width95} text-center my-0 py-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="other_design"
+        value={other_design}
+        onChange={handleChangeDesign}
+            />
+    </Form.Group>
+    {errors?.other_design?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>

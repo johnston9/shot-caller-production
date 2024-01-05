@@ -7808,65 +7808,10 @@ const ProductionStaff = (props) => {
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
-    {/* Other */}
-    <Row className="py-1 d-flex align-items-center">
-    <Col md={1} >
-    <p className={`${styles.Underline}`}>07.994</p>
-    </Col>
-    <Col md={6} >
-    <p className={`${styles.BoldBlack}`}>Other</p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col className="px-1 mx-0" md={1} >
-    <Form.Group controlId="other_unit_pro_sta" 
-        className={`${styles.Width95} text-center py-0 my-0`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="other_unit_pro_sta"
-        value={other_unit_pro_sta}
-        onChange={handleChangeProText}
-            />
-    </Form.Group>
-    {errors?.other_unit_pro_sta?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={2} >
-    <Form.Group controlId="other_pro_sta" 
-        className={`${styles.Width95} text-center py-0 my-0`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="other_pro_sta"
-        value={other_pro_sta}
-        onChange={handleChangePro}
-            />
-    </Form.Group>
-    {errors?.other_pro_sta?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    </Row>
-    {/* hr */}
-    <Row>
-    <Col >
-    <hr className={`${styles.Break1} mt-0 mb-0`}/>
-    </Col>
-    </Row>
     {/* Box Rentals */}
     <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
-    <p className={`${styles.Underline}`}>07.995</p>
+    <p className={`${styles.Underline}`}>07.994</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.BoldBlack}`}>Box Rentals</p>
@@ -7906,6 +7851,61 @@ const ProductionStaff = (props) => {
             />
     </Form.Group>
     {errors?.box_rent_pro_sta?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Other */}
+    <Row className="py-1 d-flex align-items-center">
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>07.995</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.BoldBlack}`}>Other</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    {/* <Form.Group controlId="other_unit_pro_sta" 
+        className={`${styles.Width95} text-center py-0 my-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="other_unit_pro_sta"
+        value={other_unit_pro_sta}
+        onChange={handleChangeProText}
+            />
+    </Form.Group>
+    {errors?.other_unit_pro_sta?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))} */}
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="other_pro_sta" 
+        className={`${styles.Width95} text-center py-0 my-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="other_pro_sta"
+        value={other_pro_sta}
+        onChange={handleChangePro}
+            />
+    </Form.Group>
+    {errors?.other_pro_sta?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>

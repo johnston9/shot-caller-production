@@ -625,7 +625,8 @@ const Construction = (props) => {
     // eslint-disable-next-line
     }, [concoorallTotal, headcarallTotal, carpenallTotal, scenicallTotal,
         headpainallTotal, paintallTotal, laboallTotal, days6th7th_con,
-        overtime_con, holidays_con, box_rent_con,]);
+        overtime_con, holidays_con, box_rent_con, other_construction,
+        fringes_taxes_construction]);
 
   return (
     <div className={`${styles.WhiteBack} mt-3 mb-5`}>
@@ -2301,17 +2302,121 @@ const Construction = (props) => {
     <hr className={`${styles.Break1} mt-1 mb-0`}/>
     </Col>
     </Row>
-    {/* Painters start here */}
-    <Row>
+    {/* Painters */}
+    <div className="mt-1"> 
+    <Row >
     <Col md={1} >
     <p className={`${styles.Underline}`}>09.60</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Painters</p>
+    <p className={`${styles.BoldBlack}`}>Painters</p>
+    </Col>
+    </Row>
+    {/* Prep */}
+    <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline7}`}>Prep</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="pain_qty_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="pain_qty_prep"
+        value={pain_qty_prep}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.pain_qty_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="pain_uno_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="pain_uno_prep"
+        value={pain_uno_prep}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.pain_uno_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="pain_una_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="pain_una_prep"
+        value={pain_una_prep}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.pain_una_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="pain_rt_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="pain_rt_prep"
+        value={pain_rt_prep}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.pain_rt_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="paintprepTotal" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="paintprepTotal"
+        value={paintprepTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.paintprepTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Shoot */}
+    <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="painters_quantity" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2328,7 +2433,7 @@ const Construction = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="painters_units_number" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2345,7 +2450,7 @@ const Construction = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="painters_units_name" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2362,7 +2467,7 @@ const Construction = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="painters_rate" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2379,7 +2484,7 @@ const Construction = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="paintersTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2395,6 +2500,127 @@ const Construction = (props) => {
     ))}
     </Col>
     </Row>
+    {/* Wrap */}
+    <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline7}`}>Wrap</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="pain_qty_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="pain_qty_wrap"
+        value={pain_qty_wrap}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.pain_qty_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="pain_uno_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="pain_uno_wrap"
+        value={pain_uno_wrap}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.pain_uno_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="pain_una_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="pain_una_wrap"
+        value={pain_una_wrap}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.pain_una_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="pain_rt_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="pain_rt_wrap"
+        value={pain_rt_wrap}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.pain_rt_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="paintwrapTotal" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="paintwrapTotal"
+        value={paintwrapTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.paintwrapTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row className="py-0 d-flex align-items-center">
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={9} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="paintallTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="paintallTotal"
+        value={paintallTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.paintallTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    </div>
     {/* hr */}
     <Row>
     <Col >
@@ -2402,16 +2628,120 @@ const Construction = (props) => {
     </Col>
     </Row>
     {/* Labourers */}
-    <Row>
+    <div className="mt-1"> 
+    <Row >
     <Col md={1} >
     <p className={`${styles.Underline}`}>09.70</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Labourers</p>
+    <p className={`${styles.BoldBlack}`}>Labourers</p>
+    </Col>
+    </Row>
+    {/* Prep */}
+    <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline7}`}>Prep</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="labo_qty_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="labo_qty_prep"
+        value={labo_qty_prep}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.labo_qty_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="labo_uno_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="labo_uno_prep"
+        value={labo_uno_prep}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.labo_uno_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="labo_una_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="labo_una_prep"
+        value={labo_una_prep}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.labo_una_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="labo_rt_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="labo_rt_prep"
+        value={labo_rt_prep}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.labo_rt_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="laboprepTotal" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="laboprepTotal"
+        value={laboprepTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.laboprepTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Shoot */}
+    <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="labourers_quantity" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2428,7 +2758,7 @@ const Construction = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="labourers_units_number" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2445,7 +2775,7 @@ const Construction = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="labourers_units_name" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2462,7 +2792,7 @@ const Construction = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="labourers_rate" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2479,7 +2809,7 @@ const Construction = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="labourersTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2495,16 +2825,357 @@ const Construction = (props) => {
     ))}
     </Col>
     </Row>
+    {/* Wrap */}
+    <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline7}`}>Wrap</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="labo_qty_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="labo_qty_wrap"
+        value={labo_qty_wrap}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.labo_qty_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="labo_uno_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="labo_uno_wrap"
+        value={labo_uno_wrap}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.labo_uno_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="labo_una_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="labo_una_wrap"
+        value={labo_una_wrap}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.labo_una_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="labo_rt_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="labo_rt_wrap"
+        value={labo_rt_wrap}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.labo_rt_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="labowrapTotal" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="labowrapTotal"
+        value={labowrapTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.labowrapTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row className="py-0 d-flex align-items-center">
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={9} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="laboallTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="laboallTotal"
+        value={laboallTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.laboallTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    </div>
     {/* hr */}
     <Row>
     <Col >
-    <hr className={`${styles.Break1} mt-1 mb-0`}/>
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* 6th/7th Days */}
+    <Row className="py-1 d-flex align-items-center">
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>09.80</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.BoldBlack}`}>6th/7th Days</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="days6th7th_unit_con" 
+        className={`${styles.Width95} text-center my-0 py-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="days6th7th_unit_con"
+        value={days6th7th_unit_con}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.days6th7th_unit_con?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="days6th7th_con" 
+        className={`${styles.Width95} text-center my-0 py-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="days6th7th_con"
+        value={days6th7th_con}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.days6th7th_con?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Overtime */}
+    <Row className="py-1 d-flex align-items-center">
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>09.90</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.BoldBlack}`}>Overtime</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="overtime_unit_con" 
+        className={`${styles.Width95} text-center my-0 py-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="overtime_unit_con"
+        value={overtime_unit_con}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.overtime_unit_con?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="overtime_con" 
+        className={`${styles.Width95} text-center my-0 py-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="overtime_con"
+        value={overtime_con}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.overtime_con?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Holidays */}
+    <Row className="py-1 d-flex align-items-center">
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>09.91</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.BoldBlack}`}>Holidays</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="holidays_unit_con" 
+        className={`${styles.Width95} text-center my-0 py-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="holidays_unit_con"
+        value={holidays_unit_con}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.holidays_unit_con?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="holidays_con" 
+        className={`${styles.Width95} text-center my-0 py-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="holidays_con"
+        value={holidays_con}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.holidays_con?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Box Rentals */}
+    <Row className="py-1 d-flex align-items-center">
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>09.92</p>
+    </Col>
+    <Col md={6} >
+    <p className={`${styles.BoldBlack}`}>Box Rentals </p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="box_rent_unit_con" 
+        className={`${styles.Width95} text-center my-0 py-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="box_rent_unit_con"
+        value={box_rent_unit_con}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.box_rent_unit_con?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="box_rent_con" 
+        className={`${styles.Width95} text-center my-0 py-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="box_rent_con"
+        value={box_rent_con}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.box_rent_con?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Other */}
-    <Row>
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
-    <p className={`${styles.Underline}`}>09.80</p>
+    <p className={`${styles.Underline}`}>09.93</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Other</p>
@@ -2517,7 +3188,7 @@ const Construction = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="other_construction" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center my-0 py-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2536,13 +3207,13 @@ const Construction = (props) => {
     {/* hr */}
     <Row>
     <Col >
-    <hr className={`${styles.Break1} mt-1 mb-0`}/>
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Fringes and Taxes */}
-    <Row>
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
-    <p className={`${styles.Underline}`}>09.90</p>
+    <p className={`${styles.Underline}`}>09.94</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Fringes and Taxes</p>
@@ -2558,7 +3229,7 @@ const Construction = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="fringes_taxes_construction" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center my-0 py-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2577,7 +3248,7 @@ const Construction = (props) => {
     {/* hr */}
     <Row>
     <Col >
-    <hr className={`${styles.Break1} mt-1 mb-0`}/>
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Construction Total */}
@@ -2612,12 +3283,6 @@ const Construction = (props) => {
         {message}
         </Alert>
     ))}
-    </Col>
-    </Row>
-    {/* hr */}
-    <Row>
-    <Col >
-    <hr className={`${styles.Break1} mt-1 mb-0`}/>
     </Col>
     </Row>
     </div>

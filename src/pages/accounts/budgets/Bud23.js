@@ -9,80 +9,63 @@ box_rent,
 
 other,
 fringes_taxes,
-// Totals
-  
-  // construction coordinator
-  // construction coordinator shoot Total postData
-  const [constructioncoordinatorTotal, setConstructioncoordinatorTotal] = useState(0);
-  // construction coordinator prep Total postData
-  const [concoorprepTotal, setConoorprepTotal] = useState(0);
-  // construction coordinator wrap Total postData
-  const [concoorwrapTotal, setConoorwrapTotal] = useState(0);
-  // construction coordinator all Total postData
-  const [concoorallTotal, setConoorallTotal] = useState(0);
 
-  // head carpenter
-  // head carpenter shoot Total postData
-  const [headcarpenterTotal, setHeadcarpenterTotal] = useState(0);
-  // head carpenter prep Total postData
-  const [headcarprepTotal, setHeadcarprepTotal] = useState(0);
-  // head carpenter wrap Total postData
-  const [headcarwrapTotal, setHeadcarwrapTotal] = useState(0);
-  // head carpenter all Total postData
-  const [headcarallTotal, setHeadcarallTotal] = useState(0);
-
-  // carpenters
-  // carpenters shoot Total postData
-  const [carpentersTotal, setCarpentersTotal] = useState(0);
-  // carpenters prep Total postData
-  const [carpenprepTotal, setCarpenprepTotal] = useState(0);
-  // carpenters wrap Total postData
-  const [carpenwrapTotal, setCarpenwrapTotal] = useState(0);
-  // carpenters all Total postData
-  const [carpenallTotal, setCarpenallTotal] = useState(0);
-
-  // scenic painters
-  // scenic painters shoot Total postData
-  const [scenicpaintersTotal, setScenicpaintersTotal] = useState(0);
-  // scenic painters prep Total postData
-  const [scenicprepTotal, setScenicprepTotal] = useState(0);
-  // scenic painters wrap Total postData
-  const [scenicwrapTotal, setScenicwrapTotal] = useState(0);
-  // scenic painters all Total postData
-  const [scenicallTotal, setScenicallTotal] = useState(0);
-
-  // head painter
-  // head painter shoot Total postData
-  const [headpainterTotal, setHeadpainterTotal] = useState(0);
-  // head painter prep Total postData
-  const [headpainprepTotal, setHeadpainprepTotal] = useState(0);
-  // head painter wrap Total postData
-  const [headpainwrapTotal, setHeadpainwrapTotal] = useState(0);
-  // head painter all Total postData
-  const [headpainallTotal, setHeadpainallTotal] = useState(0);
-
-  // painters
-  // painters shoot Total postData
-  const [paintersTotal, setPaintersTotal] = useState(0);
-  // painters prep Total postData
-  const [paintprepTotal, setPaintprepTotal] = useState(0);
-  // painters wrap Total postData
-  const [paintwrapTotal, setPaintwrapTotal] = useState(0);
-  // painters all Total postData
-  const [paintallTotal, setPaintallTotal] = useState(0);
-
-  // labourers
-  // labourers shoot Total postData
-  const [labourersTotal, setLabourersTotal] = useState(0);
-  // labourers prep Total postData
-  const [laboprepTotal, setLaboprepTotal] = useState(0);
-  // labourers wrap Total postData
-  const [labowrapTotal, setLabowrapTotal] = useState(0);
-  // labourers all Total postData
-  const [laboallTotal, setLaboallTotal] = useState(0);
-
-  // construction Labour Total postData 
-  const [constructionlabourTotal, setConstructionlabourTotal] = useState(0);
+    days6th7th_unit_dres,
+    days6th7th_dres,
+    overtime_unit_dres,
+    overtime_dres,
+    holidays_unit_dres, 
+    holidays_dres,
+    box_rent_unit_dres,
+    box_rent_dres,
+    set_dec_qty_prep,
+    set_dec_uno_prep,
+    set_dec_una_prep,
+    set_dec_rt_prep,
+    set_dec_qty_wrap,
+    set_dec_uno_wrap,
+    set_dec_una_wrap,
+    set_dec_rt_wrap,
+    ass_set_d_qty_prep,
+    ass_set_d_uno_prep,
+    ass_set_d_una_prep,
+    ass_set_d_rt_prep,
+    ass_set_d_qty_wrap,
+    ass_set_d_uno_wrap,
+    ass_set_d_una_wrap,
+    ass_set_d_rt_wrap,
+    lead_man_qty_prep,
+    lead_man_uno_prep,
+    lead_man_una_prep,
+    lead_man_rt_prep,
+    lead_man_qty_wrap,
+    lead_man_uno_wrap,
+    lead_man_una_wrap,
+    lead_man_rt_wrap,
+    set_dres_qty_prep,
+    set_dres_uno_prep,
+    set_dres_una_prep,
+    set_dres_rt_prep,
+    set_dres_qty_wrap,
+    set_dres_uno_wrap,
+    set_dres_una_wrap,
+    set_dres_rt_wrap,
+    swing_g_qty_prep,
+    swing_g_uno_prep,
+    swing_g_una_prep,
+    swing_g_rt_prep,
+    swing_g_qty_wrap,
+    swing_g_uno_wrap,
+    swing_g_una_wrap,
+    swing_g_rt_wrap,
+    set_d_buy_qty_prep,
+    set_d_buy_uno_prep,
+    set_d_buy_una_prep,
+    set_d_buy_rt_prep,
+    set_d_buy_qty_wrap,
+    set_d_buy_uno_wrap,
+    set_d_buy_una_wrap,
+    set_d_buy_rt_wrap,
 
 // Budget Top Old
 {/* old */}
