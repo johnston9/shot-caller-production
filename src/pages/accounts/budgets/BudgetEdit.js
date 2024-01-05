@@ -1822,8 +1822,15 @@ function BudgetEdit() {
   } = postDataSetDressing;
 
   // Totals
-  // set decorator Total postData
+  // set decorator
+  // set decorator shoot Total postData
   const [decoratorsetTotal, setDecoratorsetTotal] = useState(0);
+  // set decorator prep Total postData
+  const [decsetprepTotal, setDecsetprepTotal] = useState(0);
+  // set decorator wrap Total postData
+  const [decsetwrapTotal, setDecsetwrapTotal] = useState(0);
+  // set decorator all Total postData
+  const [decsetallTotal, setDecsetallTotal] = useState(0);
 
   // assist set decorator Total postData
   const [assistdecoratorsetTotal, setAssistdecoratorsetTotal] = useState(0);
