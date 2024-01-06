@@ -1832,20 +1832,55 @@ function BudgetEdit() {
   // set decorator all Total postData
   const [decsetallTotal, setDecsetallTotal] = useState(0);
 
-  // assist set decorator Total postData
+  // set decorator
+  // assist set decorator shoot Total postData
   const [assistdecoratorsetTotal, setAssistdecoratorsetTotal] = useState(0);
+  // assist set decorator prep Total postData
+  const [assdsetprepTotal, setAssdsetprepTotal] = useState(0);
+  // assist set decorator wrap Total postData
+  const [assdsetwrapTotal, setAssdsetwrapTotal] = useState(0);
+  // assist set decorator all Total postData
+  const [assdsetallTotal, setAssdsetallTotal] = useState(0);
 
-  // lead man Total postData
+  // lead man
+  // lead man shoot Total postData
   const [leadmanTotal, setLeadmanTotal] = useState(0);
+  // lead man prep Total postData
+  const [leadmanprepTotal, setLeadmanprepTotal] = useState(0);
+  // lead man wrap Total postData
+  const [leadmanwrapTotal, setLeadmanwrapTotal] = useState(0);
+  // lead man all Total postData
+  const [leadmanallTotal, setLeadmanallTotal] = useState(0);
 
-  // dressers Total postData
+  // dressers
+  // dressers shoot Total postData
   const [dressersTotal, setDressersTotal] = useState(0);
+  // dressers prep Total postData
+  const [dressprepTotal, setDressprepTotal] = useState(0);
+  // dressers wrap Total postData
+  const [dresswrapTotal, setDresswrapTotal] = useState(0);
+  // dressers all Total postData
+  const [dressallTotal, setDressallTotal] = useState(0);
 
-  // swing gang Total postData
+   // swing gang
+  // swing gang shoot Total postData
   const [swinggangTotal, setSwinggangTotal] = useState(0);
+  // swing gang prep Total postData
+  const [swinggprepTotal, setSwinggprepTotal] = useState(0);
+  // swing gang wrap Total postData
+  const [swinggwrapTotal, setSwinggwrapTotal] = useState(0);
+  // swing gang all Total postData
+  const [swinggallTotal, setSwinggallTotal] = useState(0);
 
-  // set dressing buyer Total postData
+  // set dressing
+  // set dressing buyer shoot Total postData
   const [dressingbuyerTotal, setDressingbuyerTotal] = useState(0);
+  // set dressing buyer prep Total postData
+  const [dressbuyprepTotal, setDressbuyprepTotal] = useState(0);
+  // set dressing buyer wrap Total postData
+  const [dressbuywrapTotal, setDressbuywrapTotal] = useState(0);
+  // set dressing buyer all Total postData
+  const [dressbuyallTotal, setDressbuyallTotal] = useState(0);
 
   // Set Dressing Labour Total postData 
   const [dressinglabourTotal, setDressinglabourTotal] = useState(0);
@@ -6927,6 +6962,80 @@ function BudgetEdit() {
     formData.append("laboprep_total", laboprepTotal);
     formData.append("labowrap_total", labowrapTotal);
     formData.append("laboall_total", laboallTotal);
+    formData.append("days6th7th_unit_dres", days6th7th_unit_dres);
+    formData.append("days6th7th_dres", days6th7th_dres);
+    formData.append("overtime_unit_dres", overtime_unit_dres);
+    formData.append("overtime_dres", overtime_dres);
+    formData.append("holidays_unit_dres", holidays_unit_dres);
+    formData.append("holidays_dres", holidays_dres);
+    formData.append("box_rent_unit_dres", box_rent_unit_dres);
+    formData.append("box_rent_dres", box_rent_dres);
+    formData.append("set_dec_qty_prep", set_dec_qty_prep);
+    formData.append("set_dec_uno_prep", set_dec_uno_prep);
+    formData.append("set_dec_una_prep", set_dec_una_prep);
+    formData.append("set_dec_rt_prep", set_dec_rt_prep);
+    formData.append("set_dec_qty_wrap", set_dec_qty_wrap);
+    formData.append("set_dec_uno_wrap", set_dec_uno_wrap);
+    formData.append("set_dec_una_wrap", set_dec_una_wrap);
+    formData.append("set_dec_rt_wrap", set_dec_rt_wrap);
+    formData.append("ass_set_d_qty_prep", ass_set_d_qty_prep);
+    formData.append("ass_set_d_uno_prep", ass_set_d_uno_prep);
+    formData.append("ass_set_d_una_prep", ass_set_d_una_prep);
+    formData.append("ass_set_d_rt_prep", ass_set_d_rt_prep);
+    formData.append("ass_set_d_qty_wrap", ass_set_d_qty_wrap);
+    formData.append("ass_set_d_uno_wrap", ass_set_d_uno_wrap);
+    formData.append("ass_set_d_una_wrap", ass_set_d_una_wrap);
+    formData.append("ass_set_d_rt_wrap", ass_set_d_rt_wrap);
+    formData.append("lead_man_qty_prep", lead_man_qty_prep);
+    formData.append("lead_man_uno_prep", lead_man_uno_prep);
+    formData.append("lead_man_una_prep", lead_man_una_prep);
+    formData.append("lead_man_rt_prep", lead_man_rt_prep);
+    formData.append("lead_man_qty_wrap", lead_man_qty_wrap);
+    formData.append("lead_man_uno_wrap", lead_man_uno_wrap);
+    formData.append("lead_man_una_wrap", lead_man_una_wrap);
+    formData.append("lead_man_rt_wrap", lead_man_rt_wrap);
+    formData.append("set_dres_qty_prep", set_dres_qty_prep);
+    formData.append("set_dres_uno_prep", set_dres_uno_prep);
+    formData.append("set_dres_una_prep", set_dres_una_prep);
+    formData.append("set_dres_rt_prep", set_dres_rt_prep);
+    formData.append("set_dres_qty_wrap", set_dres_qty_wrap);
+    formData.append("set_dres_uno_wrap", set_dres_uno_wrap);
+    formData.append("set_dres_una_wrap", set_dres_una_wrap);
+    formData.append("set_dres_rt_wrap", set_dres_rt_wrap);
+    formData.append("swing_g_qty_prep", swing_g_qty_prep);
+    formData.append("swing_g_uno_prep", swing_g_uno_prep);
+    formData.append("swing_g_una_prep", swing_g_una_prep);
+    formData.append("swing_g_rt_prep", swing_g_rt_prep);
+    formData.append("swing_g_qty_wrap", swing_g_qty_wrap);
+    formData.append("swing_g_uno_wrap", swing_g_uno_wrap);
+    formData.append("swing_g_una_wrap", swing_g_una_wrap);
+    formData.append("swing_g_rt_wrap", swing_g_rt_wrap);
+    formData.append("set_d_buy_qty_prep", set_d_buy_qty_prep);
+    formData.append("set_d_buy_uno_prep", set_d_buy_uno_prep);
+    formData.append("set_d_buy_una_prep", set_d_buy_una_prep);
+    formData.append("set_d_buy_rt_prep", set_d_buy_rt_prep);
+    formData.append("set_d_buy_qty_wrap", set_d_buy_qty_wrap);
+    formData.append("set_d_buy_uno_wrap", set_d_buy_uno_wrap);
+    formData.append("set_d_buy_una_wrap", set_d_buy_una_wrap);
+    formData.append("set_d_buy_rt_wrap", set_d_buy_rt_wrap);
+    formData.append("decsetprep_total", decsetprepTotal);
+    formData.append("decsetwrap_total", decsetwrapTotal);
+    formData.append("decsetall_total", decsetallTotal);
+    formData.append("assdsetprep_total", assdsetprepTotal);
+    formData.append("assdsetwrap_total", assdsetwrapTotal);
+    formData.append("assdsetall_total", assdsetallTotal);
+    formData.append("leadmanprep_total", leadmanprepTotal);
+    formData.append("leadmanwrap_total", leadmanwrapTotal);
+    formData.append("leadmanall_total", leadmanallTotal);
+    formData.append("dressprep_total", dressprepTotal);
+    formData.append("dresswrap_total", dresswrapTotal);
+    formData.append("dressall_total", dressallTotal);
+    formData.append("swinggprep_total", swinggprepTotal);
+    formData.append("swinggwrap_total", swinggwrapTotal);
+    formData.append("swinggall_total", swinggallTotal);
+    formData.append("dressbuyprep_total", dressbuyprepTotal);
+    formData.append("dressbuywrap_total", dressbuywrapTotal);
+    formData.append("dressbuyall_total", dressbuyallTotal);
 
     try {
       const { data } = await axiosReq.put(`/budgets/${budgetId}/`, formData);

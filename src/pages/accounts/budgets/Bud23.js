@@ -66,6 +66,69 @@ fringes_taxes,
     set_d_buy_uno_wrap,
     set_d_buy_una_wrap,
     set_d_buy_rt_wrap,
+    // Totals
+  // set decorator
+  // set decorator shoot Total postData
+  const [decoratorsetTotal, setDecoratorsetTotal] = useState(0);
+  // set decorator prep Total postData
+  const [decsetprepTotal, setDecsetprepTotal] = useState(0);
+  // set decorator wrap Total postData
+  const [decsetwrapTotal, setDecsetwrapTotal] = useState(0);
+  // set decorator all Total postData
+  const [decsetallTotal, setDecsetallTotal] = useState(0);
+
+  // set decorator
+  // assist set decorator shoot Total postData
+  const [assistdecoratorsetTotal, setAssistdecoratorsetTotal] = useState(0);
+  // assist set decorator prep Total postData
+  const [assdsetprepTotal, setAssdsetprepTotal] = useState(0);
+  // assist set decorator wrap Total postData
+  const [assdsetwrapTotal, setAssdsetwrapTotal] = useState(0);
+  // assist set decorator all Total postData
+  const [assdsetallTotal, setAssdsetallTotal] = useState(0);
+
+  // lead man
+  // lead man shoot Total postData
+  const [leadmanTotal, setLeadmanTotal] = useState(0);
+  // lead man prep Total postData
+  const [leadmanprepTotal, setLeadmanprepTotal] = useState(0);
+  // lead man wrap Total postData
+  const [leadmanwrapTotal, setLeadmanwrapTotal] = useState(0);
+  // lead man all Total postData
+  const [leadmanallTotal, setLeadmanallTotal] = useState(0);
+
+  // dressers
+  // dressers shoot Total postData
+  const [dressersTotal, setDressersTotal] = useState(0);
+  // dressers prep Total postData
+  const [dressprepTotal, setDressprepTotal] = useState(0);
+  // dressers wrap Total postData
+  const [dresswrapTotal, setDresswrapTotal] = useState(0);
+  // dressers all Total postData
+  const [dressallTotal, setDressallTotal] = useState(0);
+
+   // swing gang
+  // swing gang shoot Total postData
+  const [swinggangTotal, setSwinggangTotal] = useState(0);
+  // swing gang prep Total postData
+  const [swinggprepTotal, setSwinggprepTotal] = useState(0);
+  // swing gang wrap Total postData
+  const [swinggwrapTotal, setSwinggwrapTotal] = useState(0);
+  // swing gang all Total postData
+  const [swinggallTotal, setSwinggallTotal] = useState(0);
+
+  // set dressing
+  // set dressing buyer shoot Total postData
+  const [dressingbuyerTotal, setDressingbuyerTotal] = useState(0);
+  // set dressing buyer prep Total postData
+  const [dressbuyprepTotal, setDressbuyprepTotal] = useState(0);
+  // set dressing buyer wrap Total postData
+  const [dressbuywrapTotal, setDressbuywrapTotal] = useState(0);
+  // set dressing buyer all Total postData
+  const [dressbuyallTotal, setDressbuyallTotal] = useState(0);
+
+  // Set Dressing Labour Total postData 
+  const [dressinglabourTotal, setDressinglabourTotal] = useState(0);
 
 // Budget Top Old
 {/* old */}
