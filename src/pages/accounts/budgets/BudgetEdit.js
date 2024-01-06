@@ -7040,7 +7040,7 @@ function BudgetEdit() {
     try {
       const { data } = await axiosReq.put(`/budgets/${budgetId}/`, formData);
       console.log(`submit2 ${data}`);
-      // handleSubmit3(event);
+      // handleSubmit3(event); 6466
     } catch (err) {
       console.log(err);
       if (err.response?.status !== 401) {
@@ -8444,7 +8444,43 @@ function BudgetEdit() {
       setDressingbuyerTotal={setDressingbuyerTotal}
       dressinglabourTotal={dressinglabourTotal}
       setDressinglabourTotal={setDressinglabourTotal}
-      setShow={setShowDress}  /> 
+      setShow={setShowDress}  
+      decsetprepTotal={decsetprepTotal}
+      setDecsetprepTotal={setDecsetprepTotal}
+      decsetwrapTotal={decsetwrapTotal}
+      setDecsetwrapTotal={setDecsetwrapTotal}
+      decsetallTotal={decsetallTotal}
+      setDecsetallTotal={setDecsetallTotal}
+      assdsetprepTotal={assdsetprepTotal}
+      setAssdsetprepTotal={setAssdsetprepTotal}
+      assdsetwrapTotal={assdsetwrapTotal}
+      setAssdsetwrapTotal={setAssdsetwrapTotal}
+      assdsetallTotal={assdsetallTotal}
+      setAssdsetallTotal={setAssdsetallTotal}
+      leadmanprepTotal={leadmanprepTotal}
+      setLeadmanprepTotal={setLeadmanprepTotal}
+      leadmanwrapTotal={leadmanwrapTotal}
+      setLeadmanwrapTotal={setLeadmanwrapTotal}
+      leadmanallTotal={leadmanallTotal}
+      setLeadmanallTotal={setLeadmanallTotal}
+      dressprepTotal={dressprepTotal}
+      setDressprepTotal={setDressprepTotal}
+      dresswrapTotal={dresswrapTotal}
+      setDresswrapTotal={setDresswrapTotal}
+      dressallTotal={dressallTotal}
+      setDressallTotal={setDressallTotal}
+      swinggprepTotal={swinggprepTotal}
+      setSwinggprepTotal={setSwinggprepTotal}
+      swinggwrapTotal={swinggwrapTotal}
+      setSwinggwrapTotal={setSwinggwrapTotal}
+      swinggallTotal={swinggallTotal}
+      setSwinggallTotal={setSwinggallTotal}
+      dressbuyprepTotal={dressbuyprepTotal}
+      setDressbuyprepTotal={setDressbuyprepTotal}
+      dressbuywrapTotal={dressbuywrapTotal}
+      setDressbuywrapTotal={setDressbuywrapTotal}
+      dressbuyallTotal={dressbuyallTotal}
+      setDressbuyallTotal={setDressbuyallTotal} /> 
     ) }
     {/* fx */}
     {!showFx ? (

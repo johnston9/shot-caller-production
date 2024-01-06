@@ -77,7 +77,101 @@ fringes_taxes,
   // set decorator all Total postData
   const [decsetallTotal, setDecsetallTotal] = useState(0);
 
-  // set decorator
+  <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>10.10</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Set Decorator</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="set_decorator_quantity" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="set_decorator_quantity"
+        value={set_decorator_quantity}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.set_decorator_quantity?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="set_decorator_units_number" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="set_decorator_units_number"
+        value={set_decorator_units_number}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.set_decorator_units_number?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="set_decorator_units_name" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="set_decorator_units_name"
+        value={set_decorator_units_name}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.set_decorator_units_name?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="set_decorator_rate" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="set_decorator_rate"
+        value={set_decorator_rate}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.set_decorator_rate?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="decoratorsetTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="decoratorsetTotal"
+        value={decoratorsetTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.decoratorsetTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+  </Row>
+
+  // assist set decorator
   // assist set decorator shoot Total postData
   const [assistdecoratorsetTotal, setAssistdecoratorsetTotal] = useState(0);
   // assist set decorator prep Total postData

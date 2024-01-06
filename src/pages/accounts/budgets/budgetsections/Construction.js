@@ -81,7 +81,7 @@ const Construction = (props) => {
         ...postDataConstruction,
         [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
         });
-      };
+    };
 
     // Construction handleChange Text 
     const handleChangeText = (event) => {
@@ -92,6 +92,7 @@ const Construction = (props) => {
     };
 
   // Calculate Functions
+
   // construction coordinator
   // function to calculate construction coordinator shoot on change
   useEffect(() => {
@@ -648,7 +649,7 @@ const Construction = (props) => {
     <p className={`${styles.Underline}`}>09.00</p>
     </Col>
     <Col md={9} >
-    <p className={ `${styles.BoldBlack} mb-1`}>Construction Labour</p>
+    <p className={ `${styles.BoldBlack}`}>Construction Labour</p>
     </Col>
     <Col md={2}>
     </Col>
