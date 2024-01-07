@@ -1983,6 +1983,40 @@ function BudgetEdit() {
 
   // Special Effects Labour postData
   const [postDataSpecialEffects, setPostDataSpecialEffects] = useState({
+    days6th7th_unit_fx: 0,
+    days6th7th_fx: 0,
+    overtime_unit_fx: 0,
+    overtime_fx: 0,
+    holidays_unit_fx: 0, 
+    holidays_fx: 0,
+    box_rent_unit_fx: 0,
+    box_rent_fx: 0,
+    other_solo_fx: 0,
+    fx_sup_qty_prep: 0,
+    fx_sup_uno_prep: 0,
+    fx_sup_una_prep: "",
+    fx_sup_rt_prep: 0,
+    fx_sup_qty_wrap: 0,
+    fx_sup_uno_wrap: 0,
+    fx_sup_una_wrap: "",
+    fx_sup_rt_wrap: 0,
+    ass_fx_qty_prep: 0,
+    ass_fx_uno_prep: 0,
+    ass_fx_una_prep: "",
+    ass_fx_rt_prep: 0,
+    ass_fx_qty_wrap: 0,
+    ass_fx_uno_wrap: 0,
+    ass_fx_una_wrap: "",
+    ass_fx_rt_wrap: 0,
+    ot_fx_l_qty_prep: 0,
+    ot_fx_l_uno_prep: 0,
+    ot_fx_l_una_prep: "",
+    ot_fx_l_rt_prep: 0,
+    ot_fx_l_qty_wrap: 0,
+    ot_fx_l_uno_wrap: 0,
+    ot_fx_l_una_wrap: "",
+    ot_fx_l_rt_wrap: 0,
+    // old
     fringes_taxes_fx: 0,
     fx_supervisor_quantity: 0,
     fx_supervisor_units_number: 0,
@@ -1999,7 +2033,16 @@ function BudgetEdit() {
   });
 
   // Special Effects Labour values
-  const {fringes_taxes_fx,
+  const {days6th7th_unit_fx, days6th7th_fx, overtime_unit_fx, overtime_fx,
+    holidays_unit_fx,  holidays_fx, box_rent_unit_fx, box_rent_fx, other_solo_fx,
+    fx_sup_qty_prep, fx_sup_uno_prep, fx_sup_una_prep, fx_sup_rt_prep,
+    fx_sup_qty_wrap, fx_sup_uno_wrap, fx_sup_una_wrap, fx_sup_rt_wrap,
+    ass_fx_qty_prep, ass_fx_uno_prep, ass_fx_una_prep, ass_fx_rt_prep,
+    ass_fx_qty_wrap, ass_fx_uno_wrap, ass_fx_una_wrap, ass_fx_rt_wrap,
+    ot_fx_l_qty_prep, ot_fx_l_uno_prep, ot_fx_l_una_prep, ot_fx_l_rt_prep,
+    ot_fx_l_qty_wrap, ot_fx_l_uno_wrap, ot_fx_l_una_wrap, ot_fx_l_rt_wrap,
+    // old
+    fringes_taxes_fx,
     fx_supervisor_quantity, fx_supervisor_units_number,
     fx_supervisor_units_name, fx_supervisor_rate,
     assist_fx_quantity, assist_fx_units_number,
@@ -2009,14 +2052,35 @@ function BudgetEdit() {
   } = postDataSpecialEffects;
 
   // Totals
-  // fx supervisor Total postData 
+  // fx supervisor
+  // fx supervisor shoot Total postData 
   const [fxsupervisorTotal, setFxsupervisorTotal] = useState(0);
+  // fx supervisor prep Total postData 
+  const [fxsupprepTotal, setFxsupprepTotal] = useState(0);
+  // fx supervisor wrap Total postData 
+  const [fxsupwrapTotal, setFxsupwrapTotal] = useState(0);
+  // fx supervisor all Total postData 
+  const [fxsupallTotal, setFxsupallTotal] = useState(0);
 
-  // assistant fx Total postData
+  // assistant fx
+  // assistant fx shoot Total postData
   const [assistfxTotal, setAssistfxTotal] = useState(0);
+  // assistant fx prep Total postData
+  const [assfxprepTotal, setAssfxprepTotal] = useState(0);
+  // assistant fx wrap Total postData
+  const [assfxwrapTotal, setAssfxwrapTotal] = useState(0);
+  // assistant fx all Total postData
+  const [assfxallTotal, setAssfxallTotal] = useState(0);
 
-  // other fx labour Total postData
+  // other fx
+  // other fx shoot labour Total postData
   const [otherfxlabourTotal, setOtherfxlabourTotal] = useState(0);
+  // other fx prep labour Total postData
+  const [othfxlabprepTotal, setOthfxlabprepTotal] = useState(0);
+  // other fx wrap labour Total postData
+  const [othfxlabwrapTotal, setOthfxlabwrapTotal] = useState(0);
+  // other fx all labour Total postData
+  const [othfxlaballTotal, setOthfxlaballTotal] = useState(0);
 
   // FX Labour Total postData 
   const [fxlabourTotal, setFxlabourTotal] = useState(0);
@@ -4948,7 +5012,15 @@ function BudgetEdit() {
           other_wrangling_labour_units_name, other_wrangling_labour_rate,});
         setWranglerlabourTotal(wranglerlabour_total);
         // fx
-        const {fringes_taxes_fx,
+        const {days6th7th_unit_fx, days6th7th_fx, overtime_unit_fx, overtime_fx,
+          holidays_unit_fx,  holidays_fx, box_rent_unit_fx, box_rent_fx, other_solo_fx,
+          fx_sup_qty_prep, fx_sup_uno_prep, fx_sup_una_prep, fx_sup_rt_prep,
+          fx_sup_qty_wrap, fx_sup_uno_wrap, fx_sup_una_wrap, fx_sup_rt_wrap,
+          ass_fx_qty_prep, ass_fx_uno_prep, ass_fx_una_prep, ass_fx_rt_prep,
+          ass_fx_qty_wrap, ass_fx_uno_wrap, ass_fx_una_wrap, ass_fx_rt_wrap,
+          ot_fx_l_qty_prep, ot_fx_l_uno_prep, ot_fx_l_una_prep, ot_fx_l_rt_prep,
+          ot_fx_l_qty_wrap, ot_fx_l_uno_wrap, ot_fx_l_una_wrap, ot_fx_l_rt_wrap,
+          fringes_taxes_fx,
           fx_supervisor_quantity, fx_supervisor_units_number,
           fx_supervisor_units_name, fx_supervisor_rate,
           assist_fx_quantity, assist_fx_units_number,
@@ -4957,6 +5029,14 @@ function BudgetEdit() {
           other_fx_labour_units_name, other_fx_labour_rate,
           fxlabour_total} = data.results[0];
         setPostDataSpecialEffects({fringes_taxes_fx,
+          days6th7th_unit_fx, days6th7th_fx, overtime_unit_fx, overtime_fx,
+          holidays_unit_fx,  holidays_fx, box_rent_unit_fx, box_rent_fx, other_solo_fx,
+          fx_sup_qty_prep, fx_sup_uno_prep, fx_sup_una_prep, fx_sup_rt_prep,
+          fx_sup_qty_wrap, fx_sup_uno_wrap, fx_sup_una_wrap, fx_sup_rt_wrap,
+          ass_fx_qty_prep, ass_fx_uno_prep, ass_fx_una_prep, ass_fx_rt_prep,
+          ass_fx_qty_wrap, ass_fx_uno_wrap, ass_fx_una_wrap, ass_fx_rt_wrap,
+          ot_fx_l_qty_prep, ot_fx_l_uno_prep, ot_fx_l_una_prep, ot_fx_l_rt_prep,
+          ot_fx_l_qty_wrap, ot_fx_l_uno_wrap, ot_fx_l_una_wrap, ot_fx_l_rt_wrap,
             fx_supervisor_quantity, fx_supervisor_units_number,
             fx_supervisor_units_name, fx_supervisor_rate,
             assist_fx_quantity, assist_fx_units_number,
@@ -7036,6 +7116,46 @@ function BudgetEdit() {
     formData.append("dressbuyprep_total", dressbuyprepTotal);
     formData.append("dressbuywrap_total", dressbuywrapTotal);
     formData.append("dressbuyall_total", dressbuyallTotal);
+    formData.append("days6th7th_unit_fx", days6th7th_unit_fx);
+    formData.append("days6th7th_fx", days6th7th_fx);
+    formData.append("overtime_unit_fx", overtime_unit_fx);
+    formData.append("overtime_fx", overtime_fx);
+    formData.append("holidays_unit_fx", holidays_unit_fx);
+    formData.append("holidays_fx", holidays_fx);
+    formData.append("box_rent_unit_fx", box_rent_unit_fx);
+    formData.append("box_rent_fx", box_rent_fx);
+    formData.append("other_solo_fx", other_solo_fx);
+    formData.append("fx_sup_qty_prep", fx_sup_qty_prep);
+    formData.append("fx_sup_uno_prep", fx_sup_uno_prep);
+    formData.append("fx_sup_una_prep", fx_sup_una_prep);
+    formData.append("fx_sup_rt_prep", fx_sup_rt_prep);
+    formData.append("fx_sup_qty_wrap", fx_sup_qty_wrap);
+    formData.append("fx_sup_uno_wrap", fx_sup_uno_wrap);
+    formData.append("fx_sup_una_wrap", fx_sup_una_wrap);
+    formData.append("fx_sup_rt_wrap", fx_sup_rt_wrap);
+    formData.append("staaaaars", staaaaars);
+    formData.append("staaaaars", staaaaars);
+    formData.append("staaaaars", staaaaars);
+    formData.append("staaaaars", staaaaars);
+    formData.append("staaaaars", staaaaars);
+    formData.append("staaaaars", staaaaars);
+    formData.append("staaaaars", staaaaars);
+    formData.append("staaaaars", staaaaars);
+    formData.append("staaaaars", staaaaars);
+    formData.append("staaaaars", staaaaars);
+    formData.append("staaaaars", staaaaars);
+    formData.append("staaaaars", staaaaars);
+    formData.append("staaaaars", staaaaars);
+    formData.append("staaaaars", staaaaars);
+    formData.append("staaaaars", staaaaars);
+    formData.append("staaaaars", staaaaars);
+    formData.append("staaaaars", staaaaars);
+    formData.append("staaaaars", staaaaars);
+    formData.append("staaaaars", staaaaars);
+    formData.append("staaaaars", staaaaars);
+    formData.append("staaaaars", staaaaars);
+    formData.append("staaaaars", staaaaars);
+    formData.append("staaaaars", staaaaars);
 
     try {
       const { data } = await axiosReq.put(`/budgets/${budgetId}/`, formData);

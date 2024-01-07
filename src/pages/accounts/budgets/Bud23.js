@@ -6,223 +6,73 @@ holidays_unit,
 holidays, 
 box_rent_unit,
 box_rent,
-
 other,
 fringes_taxes,
+// new
+days6th7th_unit_fx,
+days6th7th_fx,
+overtime_unit_fx,
+overtime_fx,
+holidays_unit_fx, 
+holidays_fx,
+box_rent_unit_fx,
+box_rent_fx,
+other_solo_fx,
+fx_sup_qty_prep,
+fx_sup_uno_prep,
+fx_sup_una_prep,
+fx_sup_rt_prep,
+fx_sup_qty_wrap,
+fx_sup_uno_wrap,
+fx_sup_una_wrap,
+fx_sup_rt_wrap,
+ass_fx_qty_prep,
+ass_fx_uno_prep,
+ass_fx_una_prep,
+ass_fx_rt_prep,
+ass_fx_qty_wrap,
+ass_fx_uno_wrap,
+ass_fx_una_wrap,
+ass_fx_rt_wrap,
+ot_fx_l_qty_prep,
+ot_fx_l_uno_prep,
+ot_fx_l_una_prep,
+ot_fx_l_rt_prep,
+ot_fx_l_qty_wrap,
+ot_fx_l_uno_wrap,
+ot_fx_l_una_wrap,
+ot_fx_l_rt_wrap,
 
-    days6th7th_unit_dres,
-    days6th7th_dres,
-    overtime_unit_dres,
-    overtime_dres,
-    holidays_unit_dres, 
-    holidays_dres,
-    box_rent_unit_dres,
-    box_rent_dres,
-    set_dec_qty_prep,
-    set_dec_uno_prep,
-    set_dec_una_prep,
-    set_dec_rt_prep,
-    set_dec_qty_wrap,
-    set_dec_uno_wrap,
-    set_dec_una_wrap,
-    set_dec_rt_wrap,
-    ass_set_d_qty_prep,
-    ass_set_d_uno_prep,
-    ass_set_d_una_prep,
-    ass_set_d_rt_prep,
-    ass_set_d_qty_wrap,
-    ass_set_d_uno_wrap,
-    ass_set_d_una_wrap,
-    ass_set_d_rt_wrap,
-    lead_man_qty_prep,
-    lead_man_uno_prep,
-    lead_man_una_prep,
-    lead_man_rt_prep,
-    lead_man_qty_wrap,
-    lead_man_uno_wrap,
-    lead_man_una_wrap,
-    lead_man_rt_wrap,
-    set_dres_qty_prep,
-    set_dres_uno_prep,
-    set_dres_una_prep,
-    set_dres_rt_prep,
-    set_dres_qty_wrap,
-    set_dres_uno_wrap,
-    set_dres_una_wrap,
-    set_dres_rt_wrap,
-    swing_g_qty_prep,
-    swing_g_uno_prep,
-    swing_g_una_prep,
-    swing_g_rt_prep,
-    swing_g_qty_wrap,
-    swing_g_uno_wrap,
-    swing_g_una_wrap,
-    swing_g_rt_wrap,
-    set_d_buy_qty_prep,
-    set_d_buy_uno_prep,
-    set_d_buy_una_prep,
-    set_d_buy_rt_prep,
-    set_d_buy_qty_wrap,
-    set_d_buy_uno_wrap,
-    set_d_buy_una_wrap,
-    set_d_buy_rt_wrap,
     // Totals
-  // set decorator
-  // set decorator shoot Total postData
-  const [decoratorsetTotal, setDecoratorsetTotal] = useState(0);
-  // set decorator prep Total postData
-  const [decsetprepTotal, setDecsetprepTotal] = useState(0);
-  // set decorator wrap Total postData
-  const [decsetwrapTotal, setDecsetwrapTotal] = useState(0);
-  // set decorator all Total postData
-  const [decsetallTotal, setDecsetallTotal] = useState(0);
+  // fx supervisor
+  // fx supervisor shoot Total postData 
+  const [fxsupervisorTotal, setFxsupervisorTotal] = useState(0);
+  // fx supervisor prep Total postData 
+  const [fxsupprepTotal, setFxsupprepTotal] = useState(0);
+  // fx supervisor wrap Total postData 
+  const [fxsupwrapTotal, setFxsupwrapTotal] = useState(0);
+  // fx supervisor all Total postData 
+  const [fxsupallTotal, setFxsupallTotal] = useState(0);
 
-  <Row>
-    <Col md={1} >
-    <p className={`${styles.Underline}`}>10.10</p>
-    </Col>
-    <Col md={5} >
-    <p className={`${styles.Underline}`}>Set Decorator</p>
-    </Col>
-    <Col className="px-1 mx-0" md={1} >
-    <Form.Group controlId="set_decorator_quantity" 
-        className={`${styles.Width95} text-center mb-1`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="set_decorator_quantity"
-        value={set_decorator_quantity}
-        onChange={handleChange}
-            />
-    </Form.Group>
-    {errors?.set_decorator_quantity?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    <Col className="px-1 mx-0" md={1} >
-    <Form.Group controlId="set_decorator_units_number" 
-        className={`${styles.Width95} text-center mb-1`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="set_decorator_units_number"
-        value={set_decorator_units_number}
-        onChange={handleChange}
-            />
-    </Form.Group>
-    {errors?.set_decorator_units_number?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    <Col className="px-1 mx-0" md={1} >
-    <Form.Group controlId="set_decorator_units_name" 
-        className={`${styles.Width95} text-center mb-1`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="set_decorator_units_name"
-        value={set_decorator_units_name}
-        onChange={handleChangeText}
-            />
-    </Form.Group>
-    {errors?.set_decorator_units_name?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    <Col className="px-1 mx-0" md={1} >
-    <Form.Group controlId="set_decorator_rate" 
-        className={`${styles.Width95} text-center mb-1`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="set_decorator_rate"
-        value={set_decorator_rate}
-        onChange={handleChange}
-            />
-    </Form.Group>
-    {errors?.set_decorator_rate?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    <Col md={2} >
-    <Form.Group controlId="decoratorsetTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="decoratorsetTotal"
-        value={decoratorsetTotal}
-        readOnly
-            />
-    </Form.Group>
-    {errors?.decoratorsetTotal?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-  </Row>
+  // assistant fx
+  // assistant fx shoot Total postData
+  const [assistfxTotal, setAssistfxTotal] = useState(0);
+  // assistant fx prep Total postData
+  const [assfxprepTotal, setAssfxprepTotal] = useState(0);
+  // assistant fx wrap Total postData
+  const [assfxwrapTotal, setAssfxwrapTotal] = useState(0);
+  // assistant fx all Total postData
+  const [assfxallTotal, setAssfxallTotal] = useState(0);
 
-  // assist set decorator
-  // assist set decorator shoot Total postData
-  const [assistdecoratorsetTotal, setAssistdecoratorsetTotal] = useState(0);
-  // assist set decorator prep Total postData
-  const [assdsetprepTotal, setAssdsetprepTotal] = useState(0);
-  // assist set decorator wrap Total postData
-  const [assdsetwrapTotal, setAssdsetwrapTotal] = useState(0);
-  // assist set decorator all Total postData
-  const [assdsetallTotal, setAssdsetallTotal] = useState(0);
-
-  // lead man
-  // lead man shoot Total postData
-  const [leadmanTotal, setLeadmanTotal] = useState(0);
-  // lead man prep Total postData
-  const [leadmanprepTotal, setLeadmanprepTotal] = useState(0);
-  // lead man wrap Total postData
-  const [leadmanwrapTotal, setLeadmanwrapTotal] = useState(0);
-  // lead man all Total postData
-  const [leadmanallTotal, setLeadmanallTotal] = useState(0);
-
-  // dressers
-  // dressers shoot Total postData
-  const [dressersTotal, setDressersTotal] = useState(0);
-  // dressers prep Total postData
-  const [dressprepTotal, setDressprepTotal] = useState(0);
-  // dressers wrap Total postData
-  const [dresswrapTotal, setDresswrapTotal] = useState(0);
-  // dressers all Total postData
-  const [dressallTotal, setDressallTotal] = useState(0);
-
-   // swing gang
-  // swing gang shoot Total postData
-  const [swinggangTotal, setSwinggangTotal] = useState(0);
-  // swing gang prep Total postData
-  const [swinggprepTotal, setSwinggprepTotal] = useState(0);
-  // swing gang wrap Total postData
-  const [swinggwrapTotal, setSwinggwrapTotal] = useState(0);
-  // swing gang all Total postData
-  const [swinggallTotal, setSwinggallTotal] = useState(0);
-
-  // set dressing
-  // set dressing buyer shoot Total postData
-  const [dressingbuyerTotal, setDressingbuyerTotal] = useState(0);
-  // set dressing buyer prep Total postData
-  const [dressbuyprepTotal, setDressbuyprepTotal] = useState(0);
-  // set dressing buyer wrap Total postData
-  const [dressbuywrapTotal, setDressbuywrapTotal] = useState(0);
-  // set dressing buyer all Total postData
-  const [dressbuyallTotal, setDressbuyallTotal] = useState(0);
-
-  // Set Dressing Labour Total postData 
-  const [dressinglabourTotal, setDressinglabourTotal] = useState(0);
+  // other fx
+  // other fx shoot labour Total postData
+  const [otherfxlabourTotal, setOtherfxlabourTotal] = useState(0);
+  // other fx prep labour Total postData
+  const [othfxlabprepTotal, setOthfxlabprepTotal] = useState(0);
+  // other fx wrap labour Total postData
+  const [othfxlabwrapTotal, setOthfxlabwrapTotal] = useState(0);
+  // other fx all labour Total postData
+  const [othfxlaballTotal, setOthfxlaballTotal] = useState(0);
 
 // Budget Top Old
 {/* old */}

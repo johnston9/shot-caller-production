@@ -708,7 +708,7 @@ const SetDressingLabour = (props) => {
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Shoot</p>
+    <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="set_decorator_quantity" 
@@ -923,17 +923,121 @@ const SetDressingLabour = (props) => {
     <hr className={`${styles.Break1} mt-1 mb-0`}/>
     </Col>
     </Row>
-    {/* Assistant Set Decorator start here */}
-    <Row>
+    {/* Assistant Set Decorator */}
+    <div className="mt-1"> 
+    <Row >
     <Col md={1} >
     <p className={`${styles.Underline}`}>10.20</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Assistant Set Decorator</p>
+    <p className={`${styles.BoldBlack}`}>Assistant Set Decorator</p>
+    </Col>
+    </Row>
+    {/* Prep */}
+    <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline7}`}>Prep</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="ass_set_d_qty_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="ass_set_d_qty_prep"
+        value={ass_set_d_qty_prep}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.ass_set_d_qty_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="ass_set_d_uno_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="ass_set_d_uno_prep"
+        value={ass_set_d_uno_prep}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.ass_set_d_uno_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="ass_set_d_una_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="ass_set_d_una_prep"
+        value={ass_set_d_una_prep}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.ass_set_d_una_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="ass_set_d_rt_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="ass_set_d_rt_prep"
+        value={ass_set_d_rt_prep}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.ass_set_d_rt_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="assdsetprepTotal" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="assdsetprepTotal"
+        value={assdsetprepTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.assdsetprepTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Shoot */}
+    <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="assist_set_decorator_quantity" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -950,7 +1054,7 @@ const SetDressingLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="assist_set_decorator_units_number" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -967,7 +1071,7 @@ const SetDressingLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="assist_set_decorator_units_name" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -984,7 +1088,7 @@ const SetDressingLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="assist_set_decorator_rate" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1001,7 +1105,7 @@ const SetDressingLabour = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="assistdecoratorsetTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1017,6 +1121,127 @@ const SetDressingLabour = (props) => {
     ))}
     </Col>
     </Row>
+    {/* Wrap */}
+    <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline7}`}>Wrap</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="ass_set_d_qty_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="ass_set_d_qty_wrap"
+        value={ass_set_d_qty_wrap}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.ass_set_d_qty_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="ass_set_d_uno_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="ass_set_d_uno_wrap"
+        value={ass_set_d_uno_wrap}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.ass_set_d_uno_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="ass_set_d_una_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="ass_set_d_una_wrap"
+        value={ass_set_d_una_wrap}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.ass_set_d_una_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="ass_set_d_rt_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="ass_set_d_rt_wrap"
+        value={ass_set_d_rt_wrap}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.ass_set_d_rt_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="assdsetwrapTotal" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="assdsetwrapTotal"
+        value={assdsetwrapTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.assdsetwrapTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row className="py-0 d-flex align-items-center">
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={9} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="assdsetallTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="assdsetallTotal"
+        value={assdsetallTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.assdsetallTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    </div>
     {/* hr */}
     <Row>
     <Col >
@@ -1024,16 +1249,120 @@ const SetDressingLabour = (props) => {
     </Col>
     </Row>
     {/* Lead Man */}
-    <Row>
+    <div className="mt-1"> 
+    <Row >
     <Col md={1} >
     <p className={`${styles.Underline}`}>10.30</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Lead Man</p>
+    <p className={`${styles.BoldBlack}`}>Lead Man</p>
+    </Col>
+    </Row>
+    {/* Prep */}
+    <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline7}`}>Prep</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="lead_man_qty_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="lead_man_qty_prep"
+        value={lead_man_qty_prep}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.lead_man_qty_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="lead_man_uno_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="lead_man_uno_prep"
+        value={lead_man_uno_prep}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.lead_man_uno_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="lead_man_una_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="lead_man_una_prep"
+        value={lead_man_una_prep}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.lead_man_una_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="lead_man_rt_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="lead_man_rt_prep"
+        value={lead_man_rt_prep}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.lead_man_rt_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="leadmanprepTotal" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="leadmanprepTotal"
+        value={leadmanprepTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.leadmanprepTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Shoot */}
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="lead_man_quantity" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1050,7 +1379,7 @@ const SetDressingLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="lead_man_units_number" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1067,7 +1396,7 @@ const SetDressingLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="lead_man_units_name" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1084,7 +1413,7 @@ const SetDressingLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="lead_man_rate" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1101,7 +1430,7 @@ const SetDressingLabour = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="leadmanTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1117,6 +1446,127 @@ const SetDressingLabour = (props) => {
     ))}
     </Col>
     </Row>
+    {/* Wrap */}
+    <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline7}`}>Wrap</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="lead_man_qty_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="lead_man_qty_wrap"
+        value={lead_man_qty_wrap}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.lead_man_qty_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="lead_man_uno_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="lead_man_uno_wrap"
+        value={lead_man_uno_wrap}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.lead_man_uno_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="lead_man_una_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="lead_man_una_wrap"
+        value={lead_man_una_wrap}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.lead_man_una_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="lead_man_rt_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="lead_man_rt_wrap"
+        value={lead_man_rt_wrap}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.lead_man_rt_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="leadmanwrapTotal" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="leadmanwrapTotal"
+        value={leadmanwrapTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.leadmanwrapTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row className="py-0 d-flex align-items-center">
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={9} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="leadmanallTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="leadmanallTotal"
+        value={leadmanallTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.leadmanallTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    </div>
     {/* hr */}
     <Row>
     <Col >
@@ -1124,16 +1574,120 @@ const SetDressingLabour = (props) => {
     </Col>
     </Row>
     {/* Set Dressers */}
-    <Row>
+    <div className="mt-1"> 
+    <Row >
     <Col md={1} >
     <p className={`${styles.Underline}`}>10.40</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Set Dressers</p>
+    <p className={`${styles.BoldBlack}`}>Set Dressers</p>
+    </Col>
+    </Row>
+    {/* Prep */}
+    <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline7}`}>Prep</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="set_dres_qty_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="set_dres_qty_prep"
+        value={set_dres_qty_prep}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.set_dres_qty_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="set_dres_uno_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="set_dres_uno_prep"
+        value={set_dres_uno_prep}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.set_dres_uno_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="set_dres_una_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="set_dres_una_prep"
+        value={set_dres_una_prep}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.set_dres_una_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="set_dres_rt_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="set_dres_rt_prep"
+        value={set_dres_rt_prep}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.set_dres_rt_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="dressprepTotal" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="dressprepTotal"
+        value={dressprepTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.dressprepTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Shoot */}
+    <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="set_dressers_quantity" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1150,7 +1704,7 @@ const SetDressingLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="set_dressers_units_number" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1167,7 +1721,7 @@ const SetDressingLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="set_dressers_units_name" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1184,7 +1738,7 @@ const SetDressingLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="set_dressers_rate" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1201,7 +1755,7 @@ const SetDressingLabour = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="dressersTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1217,6 +1771,127 @@ const SetDressingLabour = (props) => {
     ))}
     </Col>
     </Row>
+    {/* Wrap */}
+    <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline7}`}>Wrap</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="set_dres_qty_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="set_dres_qty_wrap"
+        value={set_dres_qty_wrap}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.set_dres_qty_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="set_dres_uno_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="set_dres_uno_wrap"
+        value={set_dres_uno_wrap}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.set_dres_uno_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="set_dres_una_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="set_dres_una_wrap"
+        value={set_dres_una_wrap}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.set_dres_una_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="set_dres_rt_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="set_dres_rt_wrap"
+        value={set_dres_rt_wrap}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.set_dres_rt_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="dresswrapTotal" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="dresswrapTotal"
+        value={dresswrapTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.dresswrapTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row className="py-0 d-flex align-items-center">
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={9} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="dressallTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="dressallTotal"
+        value={dressallTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.dressallTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    </div>
     {/* hr */}
     <Row>
     <Col >
@@ -1224,16 +1899,120 @@ const SetDressingLabour = (props) => {
     </Col>
     </Row>
     {/* Swing Gang */}
-    <Row>
+    <div className="mt-1"> 
+    <Row >
     <Col md={1} >
     <p className={`${styles.Underline}`}>10.50</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Swing Gang</p>
+    <p className={`${styles.BoldBlack}`}>Swing Gang</p>
+    </Col>
+    </Row>
+    {/* Prep */}
+    <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline7}`}>Prep</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="swing_g_qty_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="swing_g_qty_prep"
+        value={swing_g_qty_prep}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.swing_g_qty_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="swing_g_uno_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="swing_g_uno_prep"
+        value={swing_g_uno_prep}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.swing_g_uno_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="swing_g_una_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="swing_g_una_prep"
+        value={swing_g_una_prep}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.swing_g_una_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="swing_g_rt_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="swing_g_rt_prep"
+        value={swing_g_rt_prep}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.swing_g_rt_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="swinggprepTotal" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="swinggprepTotal"
+        value={swinggprepTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.swinggprepTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Shoot */}
+    <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="swing_gang_quantity" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1250,7 +2029,7 @@ const SetDressingLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="swing_gang_units_number" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1267,7 +2046,7 @@ const SetDressingLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="swing_gang_units_name" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1284,7 +2063,7 @@ const SetDressingLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="swing_gang_rate" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1301,7 +2080,7 @@ const SetDressingLabour = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="swinggangTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1317,6 +2096,127 @@ const SetDressingLabour = (props) => {
     ))}
     </Col>
     </Row>
+    {/* Wrap */}
+    <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline7}`}>Wrap</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="swing_g_qty_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="swing_g_qty_wrap"
+        value={swing_g_qty_wrap}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.swing_g_qty_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="swing_g_uno_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="swing_g_uno_wrap"
+        value={swing_g_uno_wrap}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.swing_g_uno_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="swing_g_una_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="swing_g_una_wrap"
+        value={swing_g_una_wrap}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.swing_g_una_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="swing_g_rt_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="swing_g_rt_wrap"
+        value={swing_g_rt_wrap}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.swing_g_rt_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="swinggwrapTotal" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="swinggwrapTotal"
+        value={swinggwrapTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.swinggwrapTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row className="py-0 d-flex align-items-center">
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={9} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="swinggallTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="swinggallTotal"
+        value={swinggallTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.swinggallTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    </div>
     {/* hr */}
     <Row>
     <Col >
@@ -1324,16 +2224,120 @@ const SetDressingLabour = (props) => {
     </Col>
     </Row>
     {/* Set Dressing Buyer */}
-    <Row>
+    <div className="mt-1"> 
+    <Row >
     <Col md={1} >
     <p className={`${styles.Underline}`}>10.60</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Set Dressing Buyer</p>
+    <p className={`${styles.BoldBlack}`}>Set Dressing Buyer</p>
+    </Col>
+    </Row>
+    {/* Prep */}
+    <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline7}`}>Prep</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="set_d_buy_qty_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="set_d_buy_qty_prep"
+        value={set_d_buy_qty_prep}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.set_d_buy_qty_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="set_d_buy_uno_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="set_d_buy_uno_prep"
+        value={set_d_buy_uno_prep}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.set_d_buy_uno_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="set_d_buy_una_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="set_d_buy_una_prep"
+        value={set_d_buy_una_prep}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.set_d_buy_una_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="set_d_buy_rt_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="set_d_buy_rt_prep"
+        value={set_d_buy_rt_prep}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.set_d_buy_rt_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="dressbuyprepTotal" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="dressbuyprepTotal"
+        value={dressbuyprepTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.dressbuyprepTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Shoot */}
+    <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="set_dressing_buyer_quantity" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1350,7 +2354,7 @@ const SetDressingLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="set_dressing_buyer_units_number" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1367,7 +2371,7 @@ const SetDressingLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="set_dressing_buyer_units_name" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1384,7 +2388,7 @@ const SetDressingLabour = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="set_dressing_buyer_rate" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1401,7 +2405,7 @@ const SetDressingLabour = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="dressingbuyerTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1417,6 +2421,127 @@ const SetDressingLabour = (props) => {
     ))}
     </Col>
     </Row>
+    {/* Wrap */}
+    <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline7}`}>Wrap</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="set_d_buy_qty_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="set_d_buy_qty_wrap"
+        value={set_d_buy_qty_wrap}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.set_d_buy_qty_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="set_d_buy_uno_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="set_d_buy_uno_wrap"
+        value={set_d_buy_uno_wrap}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.set_d_buy_uno_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="set_d_buy_una_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="set_d_buy_una_wrap"
+        value={set_d_buy_una_wrap}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.set_d_buy_una_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="set_d_buy_rt_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="set_d_buy_rt_wrap"
+        value={set_d_buy_rt_wrap}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.set_d_buy_rt_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="dressbuywrapTotal" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="dressbuywrapTotal"
+        value={dressbuywrapTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.dressbuywrapTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row className="py-0 d-flex align-items-center">
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={9} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="dressbuyallTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="dressbuyallTotal"
+        value={dressbuyallTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.dressbuyallTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    </div>
     {/* hr */}
     <Row>
     <Col >
@@ -1644,7 +2769,7 @@ const SetDressingLabour = (props) => {
     </Col>
     </Row>
     {/* Other Dressing*/}
-    <Row>
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>10.92</p>
     </Col>
@@ -1659,7 +2784,7 @@ const SetDressingLabour = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="other_set_dressing" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1682,7 +2807,7 @@ const SetDressingLabour = (props) => {
     </Col>
     </Row>
     {/* Fringes and Taxes */}
-    <Row>
+    <Row className="py-1 d-flex align-items-center">
     <Col md={1} >
     <p className={`${styles.Underline}`}>10.93</p>
     </Col>
@@ -1700,7 +2825,7 @@ const SetDressingLabour = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="fringes_taxes_dressing" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
