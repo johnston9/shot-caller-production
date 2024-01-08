@@ -7133,17 +7133,31 @@ function BudgetEdit() {
     formData.append("fx_sup_uno_wrap", fx_sup_uno_wrap);
     formData.append("fx_sup_una_wrap", fx_sup_una_wrap);
     formData.append("fx_sup_rt_wrap", fx_sup_rt_wrap);
-    formData.append("staaaaars", staaaaars);
-    formData.append("staaaaars", staaaaars);
-    formData.append("staaaaars", staaaaars);
-    formData.append("staaaaars", staaaaars);
-    formData.append("staaaaars", staaaaars);
-    formData.append("staaaaars", staaaaars);
-    formData.append("staaaaars", staaaaars);
-    formData.append("staaaaars", staaaaars);
-    formData.append("staaaaars", staaaaars);
-    formData.append("staaaaars", staaaaars);
-    formData.append("staaaaars", staaaaars);
+    formData.append("ass_fx_qty_prep", ass_fx_qty_prep);
+    formData.append("ass_fx_uno_prep", ass_fx_uno_prep);
+    formData.append("ass_fx_una_prep", ass_fx_una_prep);
+    formData.append("ass_fx_rt_prep", ass_fx_rt_prep);
+    formData.append("ass_fx_qty_wrap", ass_fx_qty_wrap);
+    formData.append("ass_fx_uno_wrap", ass_fx_uno_wrap);
+    formData.append("ass_fx_una_wrap", ass_fx_una_wrap);
+    formData.append("ass_fx_rt_wrap", ass_fx_rt_wrap);
+    formData.append("ot_fx_l_qty_prep", ot_fx_l_qty_prep);
+    formData.append("ot_fx_l_uno_prep", ot_fx_l_uno_prep);
+    formData.append("ot_fx_l_una_prep", ot_fx_l_una_prep);
+    formData.append("ot_fx_l_rt_prep", ot_fx_l_rt_prep);
+    formData.append("ot_fx_l_qty_wrap", ot_fx_l_qty_wrap);
+    formData.append("ot_fx_l_uno_wrap", ot_fx_l_uno_wrap);
+    formData.append("ot_fx_l_una_wrap", ot_fx_l_una_wrap);
+    formData.append("ot_fx_l_rt_wrap", ot_fx_l_rt_wrap);
+    formData.append("fxsupprep_total", fxsupprepTotal);
+    formData.append("fxsupwrap_total", fxsupwrapTotal);
+    formData.append("fxsupall_total", fxsupallTotal);
+    formData.append("assfxprep_total", assfxprepTotal);
+    formData.append("assfxwrap_total", assfxwrapTotal);
+    formData.append("assfxall_total", assfxallTotal);
+    formData.append("othfxlabprep_total", othfxlabprepTotal);
+    formData.append("othfxlabwrap_total", othfxlabwrapTotal);
+    formData.append("othfxlaball_total", othfxlaballTotal);
     formData.append("staaaaars", staaaaars);
     formData.append("staaaaars", staaaaars);
     formData.append("staaaaars", staaaaars);
@@ -8617,7 +8631,26 @@ function BudgetEdit() {
       setOtherfxlabourTotal={setOtherfxlabourTotal}
       fxlabourTotal={fxlabourTotal}
       setFxlabourTotal={setFxlabourTotal}
-      setShow={setShowFx}  /> 
+      setShow={setShowFx}  
+      fxsupprepTotal={fxsupprepTotal}
+      setFxsupprepTotal={setFxsupprepTotal}
+      fxsupwrapTotal={fxsupwrapTotal}
+      setFxsupwrapTotal={setFxsupwrapTotal}
+      fxsupallTotal={fxsupallTotal}
+      setFxsupallTotal={setFxsupallTotal}
+      assfxprepTotal={assfxprepTotal}
+      setAssfxprepTotal={setAssfxprepTotal}
+      assfxwrapTotal={assfxwrapTotal}
+      setAssfxwrapTotal={setAssfxwrapTotal}
+      assfxallTotal={assfxallTotal}
+      setAssfxallTotal={setAssfxallTotal}
+      othfxlabprepTotal={othfxlabprepTotal}
+      setOthfxlabprepTotal={setOthfxlabprepTotal}
+      othfxlabwrapTotal={othfxlabwrapTotal}
+      setOthfxlabwrapTotal={setOthfxlabwrapTotal}
+      othfxlaballTotal={othfxlaballTotal}
+      setOthfxlaballTotal={setOthfxlaballTotal}
+      /> 
     ) }
     {/* property */}
     {!showProps ? (

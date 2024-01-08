@@ -14,9 +14,30 @@ const SpecialEffects = (props) => {
         fxsupervisorTotal, setFxsupervisorTotal,
         assistfxTotal, setAssistfxTotal,
         otherfxlabourTotal, setOtherfxlabourTotal,
-        fxlabourTotal, setFxlabourTotal, setShow} = props;
+        fxlabourTotal, setFxlabourTotal, setShow,
+        fxsupprepTotal, setFxsupprepTotal,
+        fxsupwrapTotal, setFxsupwrapTotal,
+        fxsupallTotal, setFxsupallTotal,
+        assfxprepTotal, setAssfxprepTotal,
+        assfxwrapTotal, setAssfxwrapTotal,
+        assfxallTotal, setAssfxallTotal,
+        othfxlabprepTotal, setOthfxlabprepTotal,
+        othfxlabwrapTotal, setOthfxlabwrapTotal,
+        othfxlaballTotal, setOthfxlaballTotal,
+    } = props;
     
-    const {fx_supervisor_quantity, fx_supervisor_units_number,
+    const {days6th7th_unit_fx, days6th7th_fx, overtime_unit_fx, overtime_fx,
+        holidays_unit_fx,  holidays_fx, box_rent_unit_fx, box_rent_fx, other_solo_fx,
+        fx_sup_qty_prep, fx_sup_uno_prep, fx_sup_una_prep, fx_sup_rt_prep,
+        fx_sup_qty_wrap, fx_sup_uno_wrap, fx_sup_una_wrap, fx_sup_rt_wrap,
+        ass_fx_qty_prep, ass_fx_uno_prep, ass_fx_una_prep, ass_fx_rt_prep,
+        ass_fx_qty_wrap, ass_fx_uno_wrap, ass_fx_una_wrap, ass_fx_rt_wrap,
+        ot_fx_l_qty_prep, ot_fx_l_uno_prep, ot_fx_l_una_prep, ot_fx_l_rt_prep,
+        ot_fx_l_qty_wrap, ot_fx_l_uno_wrap, ot_fx_l_una_wrap, ot_fx_l_rt_wrap,
+        fxsupprep_total, fxsupwrap_total, fxsupall_total,
+        assfxprep_total, assfxwrap_total, assfxall_total,
+        othfxlabprep_total, othfxlabwrap_total, othfxlaball_total,
+        fx_supervisor_quantity, fx_supervisor_units_number,
         fx_supervisor_units_name, fx_supervisor_rate,
         assist_fx_quantity, assist_fx_units_number,
         assist_fx_units_name, assist_fx_rate,
@@ -28,9 +49,9 @@ const SpecialEffects = (props) => {
     const handleChange = (event) => {
         setPostDataSpecialEffects({
         ...postDataSpecialEffects,
-        [event.target.name]: parseFloat(event.target.value || 0 ),
+        [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
         });
-    }; 
+    };
 
     // handleChange Text 
     const handleChangeText = (event) => {
@@ -41,7 +62,9 @@ const SpecialEffects = (props) => {
     };
 
     // Calculate Functions
-    // function to calculate fx supervisor on change
+
+    // fx supervisor
+    // function to calculate fx supervisor shoot on change
     useEffect(() => {
         const addSpeeff = () => {
         setFxsupervisorTotal(parseFloat(fx_supervisor_quantity || 0) * 
@@ -57,7 +80,24 @@ const SpecialEffects = (props) => {
         };
         // eslint-disable-next-line
     }, [fx_supervisor_quantity, fx_supervisor_units_number,
-        fx_supervisor_rate]);
+    fx_supervisor_rate]);
+
+    // function to calculate fx supervisor prep on change
+    useEffect(() => {
+        const addSpeeffprep = () => {
+        setFxsupervisorTotal(parseFloat(fx_supervisor_quantity || 0) * 
+        parseFloat(fx_supervisor_units_number || 0) * 
+        parseFloat(fx_supervisor_rate || 0))
+        }
+        const timer = setTimeout(() => {
+            addSpeeffprep();
+        }, 2000);
+
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, []);
     
     // function to calculate assistant fx on change
     useEffect(() => {
