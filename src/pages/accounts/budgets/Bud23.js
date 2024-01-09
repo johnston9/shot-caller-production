@@ -75,3 +75,19 @@ fringes_taxes,
     </Row>
     // below
 
+// pro staff other unit
+{/* <Form.Group controlId="other_unit_pro_sta" 
+        className={`${styles.Width95} text-center py-0 my-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="other_unit_pro_sta"
+        value={other_unit_pro_sta}
+        onChange={handleChangeProText}
+            />
+    </Form.Group>
+    {errors?.other_unit_pro_sta?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))} */}

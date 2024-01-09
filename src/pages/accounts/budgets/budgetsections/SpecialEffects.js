@@ -312,7 +312,7 @@ const SpecialEffects = (props) => {
     </Col>
     </Row>
     <div className="px-2">
-    {/* title test */}
+    {/* name new */}
     <Row className={`mt-3`}>
     <Col md={1} ></Col>
     <Col md={1} >
@@ -323,10 +323,9 @@ const SpecialEffects = (props) => {
     </Col>
     <Col md={1}>
     </Col>
-    <Col md={1} ></Col>
     </Row>
-    {/* TITLES test */}
-    <Row className={ `mb-2 py-0`} >
+    {/* TITLES NEW */}
+    <Row className={`mb-2 py-0`} >
     <Col md={1} ></Col>
     <Col className={ `${styles.Overview} py-1`} md={1} >
     <p className="mb-0">ACCT</p>
@@ -351,7 +350,7 @@ const SpecialEffects = (props) => {
     </Col>
     <Col md={1}></Col>
     </Row>
-    {/* FX Supervisor test */}
+    {/* FX Supervisor */}
     <div className="mt-1"> 
     <Row >
     <Col md={1} ></Col>
@@ -458,7 +457,6 @@ const SpecialEffects = (props) => {
     ))}
     </Col>
     <Col md={1}></Col>
-    <Col md={1} ></Col>
     </Row>
     {/* Shoot */}
     <Row className="py-0 d-flex align-items-center mb-1">
@@ -652,7 +650,7 @@ const SpecialEffects = (props) => {
     </Row>
     {/* Total */}
     <Row className="py-0 d-flex align-items-center">
-        <Col md={1}></Col>
+    <Col md={1}></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
@@ -678,9 +676,10 @@ const SpecialEffects = (props) => {
     </Col>
     </Row>
     </div>
-    {/* hr test b*/}
+    {/* hr */}
     <Row>
-    <Col md={{offset: 1, span:10}} >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-1 mb-0`}/>
     </Col>
     </Row>
@@ -1344,9 +1343,9 @@ const SpecialEffects = (props) => {
     <hr className={`${styles.Break1} mt-1 mb-0`}/>
     </Col>
     </Row>
-    {/* 6th/7th Days test */}
+    {/* 6th/7th Days */}
     <Row className="py-1 d-flex align-items-center">
-        <Col md={1}></Col>
+    <Col md={1}></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>13.40</p>
     </Col>
@@ -1394,9 +1393,10 @@ const SpecialEffects = (props) => {
     ))}
     </Col>
     </Row>
-    {/* hr test b*/}
+    {/* hr test */}
     <Row>
-    <Col md={{offset: 1, span:10}} >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>

@@ -807,13 +807,13 @@ const DesignLabour = (props) => {
     other_design, box_rent_design]);
 
   return ( 
-    <div className={`${styles.WhiteBack} mt-3 mb-5`}>
+    <div className={`${styles.WhiteBack} mx-5 mt-3 mb-5`}>
     <Row className="mx-0" >
     <Col md={12}
         className={ `${styles.Overview} py-0 text-center`}>
-            <span className={`${styles.Close } py-1 mb-0 float-right `} 
+            <span className={`${styles.Close } py-2 mb-0 float-right `} 
     onClick={() => setShow(false) } >Close</span>
-    <p className="pl-5 py-1">
+    <p className="pl-5 py-2">
     DESIGN LABOUR SECTION
     </p>
     </Col>
@@ -822,42 +822,46 @@ const DesignLabour = (props) => {
     </Row>
     <div className="px-2" >
     <Row className={`mt-3`}>
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.00</p>
     </Col>
-    <Col md={9} >
-    <p className={ `${styles.BoldBlack} py-1 mb-0`}>Design Labour</p>
+    <Col md={6} >
+    <p className={ `${styles.BoldBlack} py-1 mb-0`}>DESIGN LABOUR</p>
     </Col>
     <Col md={2}>
     </Col>
     </Row>
     {/* TITLES */}
-    <Row className={ `${styles.Overview} mx-0 mb-2 py-1`} >
-    <Col md={1} className="mx-0 px-0" >
+    <Row className={`mb-2 py-0`} >
+    <Col md={1} ></Col>
+    <Col className={ `${styles.Overview} py-1`} md={1} >
     <p className="mb-0">ACCT</p>
     </Col>
-    <Col md={5} className="mx-0 px-0"  >
+    <Col className={ `${styles.Overview} py-1`} md={3} >
     <p className="mb-0">Description</p>
     </Col>
-    <Col md={1} className="text-center" >
+    <Col className={`${styles.Overview} text-center py-1`} md={1} >
     <p className="mb-0">#</p>
     </Col>
-    <Col className="text-center" md={1} >
+    <Col className={`${styles.Overview} text-center py-1`} md={1} >
     <p># Unit</p>
     </Col>
-    <Col md={1} className="text-center" >
+    <Col md={1} className={`${styles.Overview} text-center py-1`} >
     <p className="mb-0">Unit</p>
     </Col>
-    <Col md={1} className="text-center" >
+    <Col md={1} className={`${styles.Overview} text-center py-1`} >
     <p className="mb-0">Price</p>
     </Col>
-    <Col md={2} className="text-center" >
+    <Col md={2} className={`${styles.Overview} text-center py-1`} >
     <p className="mb-0">Total</p>
     </Col>
+    <Col md={1}></Col>
     </Row>
     {/* Production Designer */}
     <div className="mt-2"> 
     <Row >
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.10</p>
     </Col>
@@ -867,10 +871,11 @@ const DesignLabour = (props) => {
     </Row>
     {/* Prep */}
     <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
-    <Col md={5} >
+    <Col md={3} >
     <p className={`${styles.Underline7}`}>Prep</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
@@ -961,10 +966,11 @@ const DesignLabour = (props) => {
     </Row>
     {/* Shoot */}
     <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
-    <Col md={5} >
+    <Col md={3} >
     <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
@@ -1055,10 +1061,11 @@ const DesignLabour = (props) => {
     </Row>
     {/* Wrap */}
     <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
-    <Col md={5} >
+    <Col md={3} >
     <p className={`${styles.Underline7}`}>Wrap</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
@@ -1149,10 +1156,11 @@ const DesignLabour = (props) => {
     </Row>
     {/* Total */}
     <Row className="py-0 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
-    <Col md={9} > 
+    <Col md={7} > 
     <p className={`${styles.Underline}`}>Total</p>
     </Col>
     <Col md={2} >
@@ -1176,13 +1184,14 @@ const DesignLabour = (props) => {
     </div>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={{offset: 1, span:10}} >
     <hr className={`${styles.Break1} mt-1 mb-0`}/>
     </Col>
     </Row>
     {/* Supervising Art Director */}
     <div className="mt-1">
     <Row >
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.20</p>
     </Col>
@@ -1192,10 +1201,11 @@ const DesignLabour = (props) => {
     </Row>
     {/* Prep */}
     <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
-    <Col md={5} >
+    <Col md={3} >
     <p className={`${styles.Underline7}`}>Prep</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
@@ -1286,10 +1296,11 @@ const DesignLabour = (props) => {
     </Row>
     {/* Shoot */}
     <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
-    <Col md={5} >
+    <Col md={3} >
     <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
@@ -1380,10 +1391,11 @@ const DesignLabour = (props) => {
     </Row>
     {/* Total */}
     <Row className="py-0 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
-    <Col md={9} > 
+    <Col md={7} > 
     <p className={`${styles.Underline}`}>Total</p>
     </Col>
     <Col md={2} >
@@ -1407,13 +1419,14 @@ const DesignLabour = (props) => {
     </div>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={{offset: 1, span:10}} >
     <hr className={`${styles.Break1} mt-1 mb-0`}/>
     </Col>
     </Row>
     {/* Art Director */}
     <div className="mt-1">
     <Row >
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.30</p>
     </Col>
@@ -1423,10 +1436,11 @@ const DesignLabour = (props) => {
     </Row>
     {/* Prep */}
     <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
-    <Col md={5} >
+    <Col md={3} >
     <p className={`${styles.Underline7}`}>Prep</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
@@ -1517,10 +1531,11 @@ const DesignLabour = (props) => {
     </Row>
     {/* Shoot */}
     <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
-    <Col md={5} >
+    <Col md={3} >
     <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
@@ -1611,10 +1626,11 @@ const DesignLabour = (props) => {
     </Row>
     {/* Wrap */}
     <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
-    <Col md={5} >
+    <Col md={3} >
     <p className={`${styles.Underline7}`}>Wrap</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
@@ -1705,10 +1721,11 @@ const DesignLabour = (props) => {
     </Row>
     {/* Total */}
     <Row className="py-0 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
-    <Col md={9} > 
+    <Col md={7} > 
     <p className={`${styles.Underline}`}>Total</p>
     </Col>
     <Col md={2} >
@@ -1732,13 +1749,14 @@ const DesignLabour = (props) => {
     </div>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={{offset: 1, span:10}} >
     <hr className={`${styles.Break1} mt-1 mb-0`}/>
     </Col>
     </Row>
     {/* Standby Art Director */}
     <div className="mt-1">
     <Row>
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.40</p>
     </Col>
@@ -1748,10 +1766,11 @@ const DesignLabour = (props) => {
     </Row>
     {/* Prep */}
     <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
-    <Col md={5} >
+    <Col md={3} >
     <p className={`${styles.Underline7}`}>Prep</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
@@ -1842,10 +1861,11 @@ const DesignLabour = (props) => {
     </Row>
     {/* Shoot */}
     <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
-    <Col md={5} >
+    <Col md={3} >
     <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
@@ -1936,10 +1956,11 @@ const DesignLabour = (props) => {
     </Row>
     {/* Total */}
     <Row className="py-0 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
-    <Col md={9} > 
+    <Col md={7} > 
     <p className={`${styles.Underline}`}>Total</p>
     </Col>
     <Col md={2} >
@@ -1963,13 +1984,14 @@ const DesignLabour = (props) => {
     </div>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={{offset: 1, span:10}} >
     <hr className={`${styles.Break1} mt-1 mb-0`}/>
     </Col>
     </Row>
     {/* Art Assistants */}
     <div className="mt-1">
     <Row>
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.50</p>
     </Col>
@@ -1979,10 +2001,11 @@ const DesignLabour = (props) => {
     </Row>
     {/* Prep */}
     <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
-    <Col md={5} >
+    <Col md={3} >
     <p className={`${styles.Underline7}`}>Prep</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
@@ -2073,10 +2096,11 @@ const DesignLabour = (props) => {
     </Row>
     {/* Shoot */}
     <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
-    <Col md={5} >
+    <Col md={3} >
     <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
@@ -2167,10 +2191,11 @@ const DesignLabour = (props) => {
     </Row>
     {/* Wrap */}
     <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
-    <Col md={5} >
+    <Col md={3} >
     <p className={`${styles.Underline7}`}>Wrap</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
@@ -2261,10 +2286,11 @@ const DesignLabour = (props) => {
     </Row>
     {/* Total */}
     <Row className="py-0 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
-    <Col md={9} > 
+    <Col md={7} > 
     <p className={`${styles.Underline}`}>Total</p>
     </Col>
     <Col md={2} >
@@ -2288,26 +2314,28 @@ const DesignLabour = (props) => {
     </div>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={{offset: 1, span:10}} >
     <hr className={`${styles.Break1} mt-1 mb-0`}/>
     </Col>
     </Row>
     {/* Set Designer/Draughtsperson */}
     <div className="mt-1">
     <Row>
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.60</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.BoldBlack} mb-0`}>Set Designer/Draughtsperson</p>
+    <p className={`${styles.BoldBlack}`}>Set Designer/Draughtsperson</p>
     </Col>
     </Row>
     {/* Prep */}
     <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
-    <Col md={5} >
+    <Col md={3} >
     <p className={`${styles.Underline7}`}>Prep</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
@@ -2398,10 +2426,11 @@ const DesignLabour = (props) => {
     </Row>
     {/* Shoot */}
     <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
-    <Col md={5} >
+    <Col md={3} >
     <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
@@ -2491,11 +2520,12 @@ const DesignLabour = (props) => {
     </Col>
     </Row>
     {/* Total */}
-    <Row className="py-0 d-flex align-items-center">   
+    <Row className="py-0 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
-    <Col md={9} > 
+    <Col md={7} > 
     <p className={`${styles.Underline}`}>Total</p>
     </Col>
     <Col md={2} >
@@ -2519,13 +2549,14 @@ const DesignLabour = (props) => {
     </div>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={{offset: 1, span:10}} >
     <hr className={`${styles.Break1} mt-1 mb-0`}/>
     </Col>
     </Row>
     {/* Junior Draughtsperson */}
     <div className="mt-1">
     <Row>
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.70</p>
     </Col>
@@ -2535,10 +2566,11 @@ const DesignLabour = (props) => {
     </Row>
     {/* Prep */}
     <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
-    <Col md={5} >
+    <Col md={3} >
     <p className={`${styles.Underline7}`}>Prep</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
@@ -2629,10 +2661,11 @@ const DesignLabour = (props) => {
     </Row>
     {/* Shoot */}
     <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
-    <Col md={5} >
+    <Col md={3} >
     <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
@@ -2722,11 +2755,12 @@ const DesignLabour = (props) => {
     </Col>
     </Row>    
     {/* Total */}
-    <Row className="py-0 d-flex align-items-center">   
+    <Row className="py-0 d-flex align-items-center"> 
+    <Col md={1} ></Col>  
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
-    <Col md={9} > 
+    <Col md={7} > 
     <p className={`${styles.Underline}`}>Total</p>
     </Col>
     <Col md={2} >
@@ -2750,26 +2784,28 @@ const DesignLabour = (props) => {
     </div>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={{offset: 1, span:10}} >
     <hr className={`${styles.Break1} mt-1 mb-0`}/>
     </Col>
     </Row>
     {/* Graphic Artists */}
     <div className="mt-1">
     <Row>
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.80</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.BoldBlack} mb-0`}>Graphic Artists</p>
+    <p className={`${styles.BoldBlack}`}>Graphic Artists</p>
     </Col>
     </Row>
     {/* Prep */}
     <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
-    <Col md={5} >
+    <Col md={3} >
     <p className={`${styles.Underline7}`}>Prep</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
@@ -2860,10 +2896,11 @@ const DesignLabour = (props) => {
     </Row>
     {/* Shoot */}
     <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
-    <Col md={5} >
+    <Col md={3} >
     <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
@@ -2953,11 +2990,12 @@ const DesignLabour = (props) => {
     </Col>
     </Row>
     {/* Total */}
-    <Row className="py-0 d-flex align-items-center">   
+    <Row className="py-0 d-flex align-items-center"> 
+    <Col md={1} ></Col>  
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
-    <Col md={9} > 
+    <Col md={7} > 
     <p className={`${styles.Underline}`}>Total</p>
     </Col>
     <Col md={2} >
@@ -2981,13 +3019,14 @@ const DesignLabour = (props) => {
     </div>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={{offset: 1, span:10}} >
     <hr className={`${styles.Break1} mt-1 mb-0`}/>
     </Col>
     </Row>
     {/* Art Department Coordinator */}
     <div className="mt-1">
     <Row>
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.90</p>
     </Col>
@@ -2997,10 +3036,11 @@ const DesignLabour = (props) => {
     </Row>
     {/* Prep */}
     <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
-    <Col md={5} >
+    <Col md={3} >
     <p className={`${styles.Underline7}`}>Prep</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
@@ -3091,10 +3131,11 @@ const DesignLabour = (props) => {
     </Row>
     {/* Shoot */}
     <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
-    <Col md={5} >
+    <Col md={3} >
     <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
@@ -3185,10 +3226,11 @@ const DesignLabour = (props) => {
     </Row>
     {/* Wrap */}
     <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
-    <Col md={5} >
+    <Col md={3} >
     <p className={`${styles.Underline7}`}>Wrap</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
@@ -3278,11 +3320,12 @@ const DesignLabour = (props) => {
     </Col>
     </Row>
     {/* Total */}
-    <Row className="py-0 d-flex align-items-center">   
+    <Row className="py-0 d-flex align-items-center">  
+    <Col md={1} ></Col> 
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
-    <Col md={9} > 
+    <Col md={7} > 
     <p className={`${styles.Underline}`}>Total</p>
     </Col>
     <Col md={2} >
@@ -3306,13 +3349,14 @@ const DesignLabour = (props) => {
     </div>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={{offset: 1, span:10}} >
     <hr className={`${styles.Break1} mt-1 mb-0`}/>
     </Col>
     </Row>
     {/* Production Assistants/Trainees */}
     <div className="mt-1">
     <Row>
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.91</p>
     </Col>
@@ -3322,10 +3366,11 @@ const DesignLabour = (props) => {
     </Row>
     {/* Prep */}
     <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
-    <Col md={5} >
+    <Col md={3} >
     <p className={`${styles.Underline7}`}>Prep</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
@@ -3415,11 +3460,12 @@ const DesignLabour = (props) => {
     </Col>
     </Row>
     {/* Shoot */}
-    <Row>
+    <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
-    <Col md={5} >
+    <Col md={3} >
     <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
@@ -3509,11 +3555,12 @@ const DesignLabour = (props) => {
     </Col>
     </Row>
     {/* Wrap */}
-    <Row>
+    <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
-    <Col md={5} >
+    <Col md={3} >
     <p className={`${styles.Underline7}`}>Wrap</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
@@ -3604,10 +3651,11 @@ const DesignLabour = (props) => {
     </Row>
     {/* Total */}
     <Row className="py-0 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     </Col>
-    <Col md={9} > 
+    <Col md={7} > 
     <p className={`${styles.Underline}`}>Total</p>
     </Col>
     <Col md={2} >
@@ -3631,16 +3679,17 @@ const DesignLabour = (props) => {
     </div>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={{offset: 1, span:10}} >
     <hr className={`${styles.Break1} mt-1 mb-0`}/>
     </Col>
     </Row>
     {/* Concept Artist/Illustrator */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.92</p>
     </Col>
-    <Col md={6} >
+    <Col md={4} >
     <p className={`${styles.BoldBlack}`}>Concept Artist / Illustrator</p>
     </Col>
     <Col md={1} >
@@ -3686,16 +3735,17 @@ const DesignLabour = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={{offset: 1, span:10}} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Story Board Artist */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline} mb-0`}>08.93</p>
     </Col>
-    <Col md={6} >
+    <Col md={4} >
     <p className={`${styles.BoldBlack} mb-0`}>Story Board Artist</p>
     </Col>
     <Col md={1} >
@@ -3741,16 +3791,17 @@ const DesignLabour = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={{offset: 1, span:10}} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* 6th/7th Days */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.94</p>
     </Col>
-    <Col md={6} >
+    <Col md={4} >
     <p className={`${styles.BoldBlack}`}>6th/7th Days</p>
     </Col>
     <Col md={1} >
@@ -3796,16 +3847,17 @@ const DesignLabour = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={{offset: 1, span:10}} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Overtime */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.95</p>
     </Col>
-    <Col md={6} >
+    <Col md={4} >
     <p className={`${styles.BoldBlack}`}>Overtime</p>
     </Col>
     <Col md={1} >
@@ -3851,16 +3903,17 @@ const DesignLabour = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={{offset: 1, span:10}} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Holidays */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.96</p>
     </Col>
-    <Col md={6} >
+    <Col md={4} >
     <p className={`${styles.BoldBlack}`}>Holidays</p>
     </Col>
     <Col md={1} >
@@ -3906,16 +3959,17 @@ const DesignLabour = (props) => {
     </Row> 
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={{offset: 1, span:10}} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Box Rentals */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.97</p>
     </Col>
-    <Col md={6} >
+    <Col md={4} >
     <p className={`${styles.BoldBlack}`}>Box Rentals</p>
     </Col>
     <Col md={1} >
@@ -3961,16 +4015,17 @@ const DesignLabour = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={{offset: 1, span:10}} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Other */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.98</p>
     </Col>
-    <Col md={6} >
+    <Col md={4} >
     <p className={`${styles.BoldBlack}`}>Other</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
@@ -3999,16 +4054,17 @@ const DesignLabour = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={{offset: 1, span:10}} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Fringes and Taxes */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>08.99</p>
     </Col>
-    <Col md={6} >
+    <Col md={4} >
     <p className={`${styles.BoldBlack}`}>Fringes and Taxes</p>
     </Col>
     <Col md={1} >
@@ -4040,22 +4096,17 @@ const DesignLabour = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={{offset: 1, span:10}} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Design Total */}
     <Row className="mt-3 pb-2">
+    <Col md={1} ></Col>
     <Col md={1} >
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL DESIGN</p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={1} >
-    <p></p>
     </Col>
     <Col md={1} >
     <p></p>
