@@ -55,21 +55,23 @@ const Rights = (props) => {
     </Row>
     <div className="px-2" >
     <Row className={`mt-3`}>
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>01.00</p>
     </Col>
     <Col md={9} >
-    <p className={ `${styles.BoldBlack} py-1 mb-0`}>RIGHTS</p>
+    <p className={ `${styles.BoldBlack} mb-1`}>RIGHTS</p>
     </Col>
     <Col md={2}>
     </Col>
     </Row>
     {/* TITLES */}
-    <Row className={ `${styles.Overview} mb-2 py-1`} >
+    <Row className={ `${styles.Overview} mb-2 py-0`} >
+    <Col md={1} className={`${styles.WhiteBack}`}></Col>
     <Col md={1} >
     <p className="mb-0">ACCT</p>
     </Col>
-    <Col md={5} >
+    <Col md={3} >
     <p className="mb-0">Description</p>
     </Col>
     <Col md={1} className="text-center" >
@@ -87,13 +89,15 @@ const Rights = (props) => {
     <Col md={2} className="text-center" >
     <p className="mb-0">Total</p>
     </Col>
+    <Col md={1} className={`${styles.WhiteBack} py-0 my-0`}></Col>
     </Row>
     {/* Story Rights */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col className="mb-0 pb-0" md={1} >
     <p className={`${styles.Underline}`}>01.10</p>
     </Col>
-    <Col className="mb-0 pb-0" md={6} >
+    <Col className="mb-0 pb-0" md={4} >
     <p className={`${styles.BoldBlack}`} >Story Rights</p>
     </Col>
     <Col className="mb-0 pb-0" md={1} >
@@ -125,16 +129,17 @@ const Rights = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
-    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    <Col md={{offset: 1, span:10}} >
+    <hr className={`${styles.Break1} mt-1 mb-0`}/>
     </Col>
     </Row>
     {/* Miscellaneous */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>01.20</p>
     </Col>
-    <Col md={6} >
+    <Col md={4} >
     <p className={`${styles.BoldBlack}`}>Miscellaneous</p>
     </Col>
     <Col md={1} >
@@ -166,15 +171,16 @@ const Rights = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
-    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    <Col md={{offset: 1, span:10}} >
+    <hr className={`${styles.Break1} mt-1 mb-0`}/>
     </Col>
     </Row>
     {/* Rights Total */}
     <Row className="pb-2 mt-3">
+    <Col md={1} ></Col>
     <Col md={1} >
     </Col>
-    <Col className={ `${styles.Overview} mb-0 py-0`} md={6} >
+    <Col className={ `${styles.Overview} mb-0 py-0`} md={4} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL RIGHTS</p>
     </Col>
     <Col md={1} >

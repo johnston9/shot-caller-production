@@ -69,7 +69,7 @@ const SetDressingLabour = (props) => {
         other_set_dressing, fringes_taxes_dressing,
     } = postDataSetDressing;
 
-    // handleChange 
+    // handleChange
     const handleChange = (event) => {
         setPostDataSetDressing({
         ...postDataSetDressing,
@@ -557,13 +557,13 @@ const SetDressingLabour = (props) => {
             <span className={`${styles.Close } py-1 mb-0 float-right `} 
     onClick={() => setShow(false) } >Close</span>
     <p className="pl-5 py-1">
-    SET DRESSING SECTION
+    SET DRESSING LABOUR SECTION
     </p>
     </Col>
     <Col md={2} >
     </Col>
     </Row>
-    <div className="px-2" >
+    <div className="px-2">
     <Row className={`mt-3`}>
     <Col md={1} >
     <p className={`${styles.Underline}`}>10.00</p>

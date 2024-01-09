@@ -69,21 +69,23 @@ const Development = (props) => {
     </Row>
     <div className="px-2" >
     <Row className={`mt-3`}>
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>02.00</p>
     </Col>
     <Col md={9} >
-    <p className={ `${styles.BoldBlack} py-1 mb-0`}>PRE-PRODUCTION AND DEVELOPMENT</p>
+    <p className={ `${styles.BoldBlack} mb-2`}>PRE-PRODUCTION AND DEVELOPMENT</p>
     </Col>
     <Col md={2}>
     </Col>
     </Row>
     {/* TITLES */}
-    <Row className={ `${styles.Overview} mb-2 py-1`} >
+    <Row className={ `${styles.Overview} mb-2 py-0`} >
+    <Col md={1} className={`${styles.WhiteBack}`}></Col>
     <Col md={1} >
     <p className="mb-0">ACCT</p>
     </Col>
-    <Col md={5} >
+    <Col md={3} >
     <p className="mb-0">Description</p>
     </Col>
     <Col md={1} className="text-center" >
@@ -101,13 +103,15 @@ const Development = (props) => {
     <Col md={2} className="text-center" >
     <p className="mb-0">Total</p>
     </Col>
+    <Col md={1} className={`${styles.WhiteBack} py-0 my-0`}></Col>
     </Row>
     {/* Research */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>02.10</p>
     </Col>
-    <Col md={6} >
+    <Col md={4} >
     <p className={`${styles.Underline}`}>Research</p>
     </Col>
     <Col md={1} >
@@ -139,16 +143,17 @@ const Development = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
-    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    <Col md={{offset: 1, span:10}} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Preliminary Breakdown/Budget */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>02.20</p>
     </Col>
-    <Col md={6} >
+    <Col md={4} >
     <p className={`${styles.Underline}`}>Preliminary Breakdown/Budget</p>
     </Col>
     <Col md={1} >
@@ -180,16 +185,17 @@ const Development = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
-    <hr className={`${styles.Break3} mb-0 mt-0 `}/>
+    <Col md={{offset: 1, span:10}} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Consultant Expenses */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>02.30</p>
     </Col>
-    <Col md={6} >
+    <Col md={4} >
     <p className={`${styles.Underline}`}>Consultant Expenses</p>
     </Col>
     <Col md={1} >
@@ -221,16 +227,17 @@ const Development = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
-    <hr className={`${styles.Break3} mt-0 mb-0`}/>
+    <Col md={{offset: 1, span:10}} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Office Expenses */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>02.40</p>
     </Col>
-    <Col md={6} >
+    <Col md={4} >
     <p className={`${styles.Underline}`}>Office Expenses</p>
     </Col>
     <Col md={1} >
@@ -262,16 +269,17 @@ const Development = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={{offset: 1, span:10}} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Staff */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>02.50</p>
     </Col>
-    <Col md={6} >
+    <Col md={4} >
     <p className={`${styles.Underline}`}>Staff</p>
     </Col>
     <Col md={1} >
@@ -303,16 +311,17 @@ const Development = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={{offset: 1, span:10}} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Travel Expenses Development */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>02.60</p>
     </Col>
-    <Col md={6} >
+    <Col md={4} >
     <p className={`${styles.Underline}`}>Travel Expenses</p>
     </Col>
     <Col md={1} >
@@ -344,16 +353,17 @@ const Development = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={{offset: 1, span:10}} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Living Expenses Development */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>02.70</p>
     </Col>
-    <Col md={6} >
+    <Col md={4} >
     <p className={`${styles.Underline}`}>Living Expenses Development</p>
     </Col>
     <Col md={1} >
@@ -385,16 +395,17 @@ const Development = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={{offset: 1, span:10}} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Other Development */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>02.80</p>
     </Col>
-    <Col md={6} >
+    <Col md={4} >
     <p className={`${styles.Underline}`}>Other</p>
     </Col>
     <Col md={1} >
@@ -426,16 +437,17 @@ const Development = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={{offset: 1, span:10}} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Fringes and Taxes */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>02.90</p>
     </Col>
-    <Col md={6} >
+    <Col md={4} >
     <p className={`${styles.Underline}`}>Fringes and Taxes</p>
     </Col>
     <Col md={1} >
@@ -467,22 +479,17 @@ const Development = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={{offset: 1, span:10}} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Development Total */}
     <Row className="mt-3 pb-2">
+    <Col md={1} ></Col>
     <Col md={1} >
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL PRE-PRODUCTION AND DEVELOPMENT</p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={1} >
-    <p></p>
     </Col>
     <Col md={1} >
     <p></p>

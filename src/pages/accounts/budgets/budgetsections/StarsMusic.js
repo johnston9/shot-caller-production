@@ -79,23 +79,21 @@ const StarsMusic = (props) => {
     </Row>
     <div className="px-2" >
     <Row className="mt-3" >
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>05.00</p>
     </Col>
     <Col md={9} >
     <p className={ `${styles.BoldBlack} mb-1`}>STARS & MUSIC</p>
     </Col>
-    <Col md={2}>
-    <span className={`${styles.Close }`} 
-    onClick={() => setShow(false) } >Close</span>
-    </Col>
     </Row>
     {/* TITLES */}
-    <Row className={ `${styles.Overview} mb-2 py-1`} >
+    <Row className={ `${styles.Overview} mb-2 py-0`} >
+    <Col md={1} className={`${styles.WhiteBack}`}></Col>
     <Col md={1} >
     <p className="mb-0">ACCT</p>
     </Col>
-    <Col md={5} >
+    <Col md={3} >
     <p className="mb-0">Description</p>
     </Col>
     <Col md={1} className="text-center" >
@@ -113,13 +111,15 @@ const StarsMusic = (props) => {
     <Col md={2} className="text-center" >
     <p className="mb-0">Total</p>
     </Col>
+    <Col md={1} className={`${styles.WhiteBack} py-0 my-0`}></Col>
     </Row>
     {/* Stars */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>05.10</p>
     </Col>
-    <Col md={6} >
+    <Col md={4} >
     <p className={`${styles.Underline}`}>Stars</p>
     </Col>
     <Col md={1} >
@@ -151,16 +151,17 @@ const StarsMusic = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
-    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    <Col md={{offset: 1, span:10}} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Rights */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>05.20</p>
     </Col>
-    <Col md={6} >
+    <Col md={4} >
     <p className={`${styles.Underline}`}>Stars Rights Payments</p>
     </Col>
     <Col md={1} >
@@ -192,16 +193,17 @@ const StarsMusic = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
-    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    <Col md={{offset: 1, span:10}} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Travel Expenses Stars */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>05.30</p>
     </Col>
-    <Col md={6} >
+    <Col md={4} >
     <p className={`${styles.Underline}`}>Travel Expenses Stars</p>
     </Col>
     <Col md={1} >
@@ -233,16 +235,17 @@ const StarsMusic = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
-    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    <Col md={{offset: 1, span:10}} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Living Expenses Stars */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>05.40</p>
     </Col>
-    <Col md={6} >
+    <Col md={4} >
     <p className={`${styles.Underline}`}>Living Expenses Stars</p>
     </Col>
     <Col md={1} >
@@ -274,16 +277,17 @@ const StarsMusic = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
-    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    <Col md={{offset: 1, span:10}} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Stars - Other */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>05.50</p>
     </Col>
-    <Col md={6} >
+    <Col md={4} >
     <p className={`${styles.Underline}`}>Stars - Other </p>
     </Col>
     <Col md={1} >
@@ -315,16 +319,17 @@ const StarsMusic = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
-    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    <Col md={{offset: 1, span:10}} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Stars - Fringes Taxes */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>05.60</p>
     </Col>
-    <Col md={6} >
+    <Col md={4} >
     <p className={`${styles.Underline}`}>Stars - Fringes Taxes</p>
     </Col>
     <Col md={1} >
@@ -356,27 +361,19 @@ const StarsMusic = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
-    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    <Col md={{offset: 1, span:10}} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Music */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>05.70</p>
     </Col>
-    <Col md={6} >
+    <Col md={7} >
     <p className={`${styles.Underline}`}>Music: all-in package includes Composer, Musicians, 
       Score, and Recording Session</p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={1} >
-    <p></p>
     </Col>
     <Col md={2} >
     <Form.Group controlId="music" 
@@ -398,16 +395,17 @@ const StarsMusic = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
-    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    <Col md={{offset: 1, span:10}} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Music Supervisor */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>05.80</p>
     </Col>
-    <Col md={6} >
+    <Col md={4} >
     <p className={`${styles.Underline}`}>Music Supervisor </p>
     </Col>
     <Col md={1} >
@@ -439,16 +437,17 @@ const StarsMusic = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
-    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    <Col md={{offset: 1, span:10}} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Travel Expenses */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>05.90</p>
     </Col>
-    <Col md={6} >
+    <Col md={4} >
     <p className={`${styles.Underline}`}>Music - Travel Expenses </p>
     </Col>
     <Col md={1} >
@@ -480,16 +479,17 @@ const StarsMusic = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
-    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    <Col md={{offset: 1, span:10}} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Living Expenses */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>05.91</p>
     </Col>
-    <Col md={6} >
+    <Col md={4} >
     <p className={`${styles.Underline}`}>Music - Living Expenses </p>
     </Col>
     <Col md={1} >
@@ -521,16 +521,17 @@ const StarsMusic = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
-    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    <Col md={{offset: 1, span:10}} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Add'l Music Rights (Songs, etc.) */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>05.92</p>
     </Col>
-    <Col md={6} >
+    <Col md={4} >
     <p className={`${styles.Underline}`}>Add'l Music Rights - Songs, etc. </p>
     </Col>
     <Col md={1} >
@@ -562,16 +563,17 @@ const StarsMusic = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
-    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    <Col md={{offset: 1, span:10}} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Music Other */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>05.93</p>
     </Col>
-    <Col md={6} >
+    <Col md={4} >
     <p className={`${styles.Underline}`}>Music - Other </p>
     </Col>
     <Col md={1} >
@@ -603,16 +605,17 @@ const StarsMusic = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
-    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    <Col md={{offset: 1, span:10}} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Music - Fringes and Taxes */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>05.94</p>
     </Col>
-    <Col md={6} >
+    <Col md={4} >
     <p className={`${styles.Underline}`}>Music - Fringes and Taxes</p>
     </Col>
     <Col md={1} >
@@ -644,8 +647,8 @@ const StarsMusic = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
-    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    <Col md={{offset: 1, span:10}} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Stars / Music Total */}
@@ -655,13 +658,7 @@ const StarsMusic = (props) => {
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL STARS / MUSIC</p>
     </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={1} >
+    <Col md={2} >
     <p></p>
     </Col>
     <Col md={2} >

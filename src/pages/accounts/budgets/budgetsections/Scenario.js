@@ -158,21 +158,23 @@ const Scenario = (props) => {
     </Row>
     <div className="px-2" >
     <Row className={`mt-3`}>
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>03.00</p>
     </Col>
     <Col md={9} >
-    <p className={ `${styles.BoldBlack} mb-0 py-1`}>SCENARIO</p>
+    <p className={ `${styles.BoldBlack} mb-1`}>SCENARIO</p>
     </Col>
-    <Col md={2}>
+    <Col md={1}>
     </Col>
     </Row>
     {/* TITLES */}
-    <Row className={ `${styles.Overview} mb-2 py-1`} >
+    <Row className={ `${styles.Overview} mb-2 py-0`} >
+    <Col md={1} className={`${styles.WhiteBack}`}></Col>
     <Col md={1} >
     <p className="mb-0">ACCT</p>
     </Col>
-    <Col md={5} >
+    <Col md={3} >
     <p className="mb-0">Description</p>
     </Col>
     <Col md={1} className="text-center" >
@@ -190,13 +192,15 @@ const Scenario = (props) => {
     <Col md={2} className="text-center" >
     <p className="mb-0">Total</p>
     </Col>
+    <Col md={1} className={`${styles.WhiteBack} py-0 my-0`}></Col>
     </Row>
     {/* Writers */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>03.10</p>
     </Col>
-    <Col md={5} >
+    <Col md={3} >
     <p className={`${styles.Underline}`}>Writers</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
@@ -287,16 +291,17 @@ const Scenario = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
-    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    <Col md={{offset: 1, span:10}} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Consultants */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>03.20</p>
     </Col>
-    <Col md={5} >
+    <Col md={3} >
     <p className={`${styles.Underline}`}>Consultants</p>
     </Col>
     <Col className="px-1 mx-0"  md={1} >
@@ -387,16 +392,17 @@ const Scenario = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
-    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    <Col md={{offset: 1, span:10}} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Editors */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>03.30</p>
     </Col>
-    <Col md={5} >
+    <Col md={3} >
     <p className={`${styles.Underline}`}>Editors</p>
     </Col>
     <Col className="px-1 mx-0"  md={1} >
@@ -487,16 +493,17 @@ const Scenario = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
-    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    <Col md={{offset: 1, span:10}} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Admin */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>03.40</p>
     </Col>
-    <Col md={5} >
+    <Col md={3} >
     <p className={`${styles.Underline}`}>Admin</p>
     </Col>
     <Col className="px-1 mx-0"  md={1} >
@@ -587,16 +594,17 @@ const Scenario = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
-    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    <Col md={{offset: 1, span:10}} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Office Cost/Expenses Scenario */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>03.50</p>
     </Col>
-    <Col md={6} >
+    <Col md={4} >
     <p className={`${styles.Underline}`}>Office Cost/Expenses Scenario</p>
     </Col>
     <Col md={1} >
@@ -628,16 +636,17 @@ const Scenario = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
-    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    <Col md={{offset: 1, span:10}} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Travel Expenses Scenario */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>03.60</p>
     </Col>
-    <Col md={6} >
+    <Col md={4} >
     <p className={`${styles.Underline}`}>Travel Expenses</p>
     </Col>
     <Col md={1} >
@@ -669,16 +678,17 @@ const Scenario = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
-    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    <Col md={{offset: 1, span:10}} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Living Expenses */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>03.70</p>
     </Col>
-    <Col md={6} >
+    <Col md={4} >
     <p className={`${styles.Underline}`}>Living Expenses</p>
     </Col>
     <Col md={1} >
@@ -710,23 +720,18 @@ const Scenario = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
-    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    <Col md={{offset: 1, span:10}} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Other */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>03.80</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Other</p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={1} >
-    <p></p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -751,16 +756,17 @@ const Scenario = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
-    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    <Col md={{offset: 1, span:10}} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Fringes and Taxes */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>03.90</p>
     </Col>
-    <Col md={6} >
+    <Col md={4} >
     <p className={`${styles.Underline}`}>Fringes and Taxes</p>
     </Col>
     <Col md={1} >
@@ -792,22 +798,17 @@ const Scenario = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
-    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    <Col md={{offset: 1, span:10}} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Scenario Total */}
     <Row className="mt-3 pb-2">
+    <Col md={1} ></Col>
     <Col md={1} >
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL SCENARIO</p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={1} >
-    <p></p>
     </Col>
     <Col md={1} >
     <p></p>

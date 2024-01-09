@@ -7158,18 +7158,18 @@ function BudgetEdit() {
     formData.append("othfxlabprep_total", othfxlabprepTotal);
     formData.append("othfxlabwrap_total", othfxlabwrapTotal);
     formData.append("othfxlaball_total", othfxlaballTotal);
-    formData.append("staaaaars", staaaaars);
-    formData.append("staaaaars", staaaaars);
-    formData.append("staaaaars", staaaaars);
-    formData.append("staaaaars", staaaaars);
-    formData.append("staaaaars", staaaaars);
-    formData.append("staaaaars", staaaaars);
-    formData.append("staaaaars", staaaaars);
-    formData.append("staaaaars", staaaaars);
-    formData.append("staaaaars", staaaaars);
-    formData.append("staaaaars", staaaaars);
-    formData.append("staaaaars", staaaaars);
-    formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
 
     try {
       const { data } = await axiosReq.put(`/budgets/${budgetId}/`, formData);
