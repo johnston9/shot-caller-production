@@ -1217,12 +1217,12 @@ const Budget = (props) => {
     {/* TOTAL - BELOW "B" and "C" */}
     <Row className='mt-3 mb-3' >
     <Col className={ `${styles.Overview} my-0 py-0`} md={10} >
-    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - BELOW "B" and "C" </p>
+    <p className={ `${styles.BoldBlack} pb-0 mb-0`}>TOTAL - BELOW "B" and "C" </p>
     </Col>
     <Col md={2} >
     <div className={`${styles.Box3} 
          d-flex align-items-center justify-content-center`}>
-    <p className={`${styles.BoldB} mb-0`}>{belowB_andC_total || 0}</p>
+    <p className={`${styles.BoldBlack} mb-0`}>{belowB_andC_total || 0}</p>
     </div>
     </Col>
     </Row>
