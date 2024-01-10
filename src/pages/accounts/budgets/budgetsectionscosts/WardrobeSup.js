@@ -49,13 +49,13 @@ const WardrobeSup = (props) => {
     ward_ship_brok, ward_repairs_clean, other_ward,]);
 
   return (
-    <div className={`${styles.WhiteBack} mt-3 mb-5`}>
+    <div className={`${styles.WhiteBack} mx-5 mt-3 mb-5`}>
     <Row className="mx-0" >
     <Col md={12}
         className={ `${styles.Overview} py-0 text-center`}>
-            <span className={`${styles.Close } py-1 mb-0 float-right `} 
+            <span className={`${styles.Close } py-2 mb-0 float-right `} 
     onClick={() => setShow(false) } >Close</span>
-    <p className="pl-5 py-1">
+    <p className="pl-5 py-2">
     WARDROBE SUPPLIES SECTION
     </p>
     </Col>
@@ -64,45 +64,47 @@ const WardrobeSup = (props) => {
     </Row>
     <div className="px-2" >
     <Row className={`mt-3`}>
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>34.00</p>
     </Col>
     <Col md={9} >
-    <p className={ `${styles.BoldBlack} mb-1`}>Wardrobe Supplies</p>
-    </Col>
-    <Col md={2}>
+    <p className={ `${styles.BoldBlack} mb-1`}>WARDROBE SUPPLIES</p>
     </Col>
     </Row>
     {/* TITLES */}
-    <Row className={ `${styles.Overview} mb-2 py-1`} >
-    <Col md={1} >
+    <Row className={`mb-2 py-0`} >
+    <Col md={1} ></Col>
+    <Col className={ `${styles.Overview} py-1`} md={1} >
     <p className="mb-0">ACCT</p>
     </Col>
-    <Col md={5} >
+    <Col className={ `${styles.Overview} py-1`} md={3} >
     <p className="mb-0">Description</p>
     </Col>
-    <Col md={1} className="text-center" >
+    <Col className={`${styles.Overview} text-center py-1`} md={1} >
     <p className="mb-0">#</p>
     </Col>
-    <Col className="text-center" md={1} >
+    <Col className={`${styles.Overview} text-center py-1`} md={1} >
     <p># Unit</p>
     </Col>
-    <Col md={1} className="text-center" >
+    <Col md={1} className={`${styles.Overview} text-center py-1`} >
     <p className="mb-0">Unit</p>
     </Col>
-    <Col md={1} className="text-center" >
+    <Col md={1} className={`${styles.Overview} text-center py-1`} >
     <p className="mb-0">Price</p>
     </Col>
-    <Col md={2} className="text-center" >
+    <Col md={2} className={`${styles.Overview} text-center py-1`} >
     <p className="mb-0">Total</p>
     </Col>
+    <Col md={1}></Col>
     </Row>
     {/* Rentals */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>34.10</p>
     </Col>
-    <Col md={6} >
+    <Col md={4} >
     <p className={`${styles.Underline}`}>Rentals</p>
     </Col>
     <Col md={1} >
@@ -134,16 +136,18 @@ const WardrobeSup = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
-    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Purchases */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>34.20</p>
     </Col>
-    <Col md={6} >
+    <Col md={4} >
     <p className={`${styles.Underline}`}>Purchases</p>
     </Col>
     <Col md={1} >
@@ -175,16 +179,18 @@ const WardrobeSup = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
-    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Manufacture */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>34.30</p>
     </Col>
-    <Col md={6} >
+    <Col md={4} >
     <p className={`${styles.Underline}`}>Manufacture</p>
     </Col>
     <Col md={1} >
@@ -216,16 +222,18 @@ const WardrobeSup = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
-    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Shipping/Brokerage */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>34.40</p>
     </Col>
-    <Col md={6} >
+    <Col md={4} >
     <p className={`${styles.Underline}`}>Shipping/Brokerage</p>
     </Col>
     <Col md={1} >
@@ -257,16 +265,18 @@ const WardrobeSup = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
-    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Repairs/Cleaning */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>34.50</p>
     </Col>
-    <Col md={6} >
+    <Col md={4} >
     <p className={`${styles.Underline}`}>Repairs/Cleaning</p>
     </Col>
     <Col md={1} >
@@ -298,16 +308,18 @@ const WardrobeSup = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
-    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Other */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>34.60</p>
     </Col>
-    <Col md={6} >
+    <Col md={4} >
     <p className={`${styles.Underline}`}>Other</p>
     </Col>
     <Col md={1} >
@@ -339,22 +351,18 @@ const WardrobeSup = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
-    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* WARDROBE SUPPLIES Total */}
     <Row className="mt-3 pb-2">
+    <Col md={1} ></Col>
     <Col md={1} >
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL WARDROBE SUPPLIES</p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={1} >
-    <p></p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -375,12 +383,6 @@ const WardrobeSup = (props) => {
         {message}
         </Alert>
     ))}
-    </Col>
-    </Row>
-    {/* hr */}
-    <Row>
-    <Col >
-    <hr className={`${styles.Break3} mb-0 mt-0`}/>
     </Col>
     </Row>
     </div>

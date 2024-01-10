@@ -99,7 +99,7 @@ const Animals = (props) => {
     <p className="mb-0">Total</p>
     </Col>
     <Col md={1}></Col>
-    </Row>
+    </Row> 
     {/* Rentals */}
     <Row className="py-1 d-flex align-items-center">
     <Col md={1} ></Col>

@@ -79,7 +79,7 @@ const Transportation = (props) => {
     <p className={`${styles.Underline}`}>27.00</p>
     </Col>
     <Col md={9} >
-    <p className={ `${styles.BoldBlack} mb-1`}>Transportation</p>
+    <p className={ `${styles.BoldBlack} mb-1`}>TRANSPORTATION</p>
     </Col>
     <Col md={2}>
     </Col>

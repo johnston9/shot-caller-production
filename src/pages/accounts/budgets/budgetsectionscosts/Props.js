@@ -74,7 +74,7 @@ const Props = (props) => {
     <p className={`${styles.Underline}`}>31.00</p>
     </Col>
     <Col md={9} >
-    <p className={ `${styles.BoldBlack} mb-1`}>Props</p>
+    <p className={ `${styles.BoldBlack} mb-1`}>PROPS</p>
     </Col>
     <Col md={2}>
     </Col>

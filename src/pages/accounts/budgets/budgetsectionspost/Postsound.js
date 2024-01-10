@@ -207,13 +207,13 @@ const Postsound = (props) => {
         lossdam_sound, fringes_taxes_post_sound, other_post_sound,]);
 
   return (
-    <div className={`${styles.WhiteBack} mt-3 mb-5`}>
+    <div className={`${styles.WhiteBack} mx-5 mt-3 mb-5`}>
     <Row className="mx-0" >
     <Col md={12}
         className={ `${styles.Overview} py-0 text-center`}>
-            <span className={`${styles.Close } py-1 mb-0 float-right `} 
+            <span className={`${styles.Close } py-2 mb-0 float-right `} 
     onClick={() => setShow(false) } >Close</span>
-    <p className="pl-5 py-1">
+    <p className="pl-5 py-2">
     POST PRODUCTION SOUND SECTION
     </p>
     </Col>
@@ -222,45 +222,47 @@ const Postsound = (props) => {
     </Row>
     <div className="px-2" >
     <Row className={`mt-3`}>
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>44.00</p>
     </Col>
     <Col md={9} >
-    <p className={ `${styles.BoldBlack} mb-1`}>Post Production Sound</p>
-    </Col>
-    <Col md={2}>
+    <p className={ `${styles.BoldBlack} mb-1`}>POST PRODUCTION SOUND</p>
     </Col>
     </Row>
     {/* TITLES */}
-    <Row className={ `${styles.Overview} mb-2 py-1`} >
-    <Col md={1} >
+    <Row className={`mb-2 py-0`} >
+    <Col md={1} ></Col>
+    <Col className={ `${styles.Overview} py-1`} md={1} >
     <p className="mb-0">ACCT</p>
     </Col>
-    <Col md={5} >
+    <Col className={ `${styles.Overview} py-1`} md={3} >
     <p className="mb-0">Description</p>
     </Col>
-    <Col md={1} className="text-center" >
+    <Col className={`${styles.Overview} text-center py-1`} md={1} >
     <p className="mb-0">#</p>
     </Col>
-    <Col className="text-center" md={1} >
+    <Col className={`${styles.Overview} text-center py-1`} md={1} >
     <p># Unit</p>
     </Col>
-    <Col md={1} className="text-center" >
+    <Col md={1} className={`${styles.Overview} text-center py-1`} >
     <p className="mb-0">Unit</p>
     </Col>
-    <Col md={1} className="text-center" >
+    <Col md={1} className={`${styles.Overview} text-center py-1`} >
     <p className="mb-0">Price</p>
     </Col>
-    <Col md={2} className="text-center" >
+    <Col md={2} className={`${styles.Overview} text-center py-1`} >
     <p className="mb-0">Total</p>
     </Col>
-    </Row>
+    <Col md={1}></Col>
+    </Row> 
     {/* Sound Designer */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>44.10</p>
     </Col>
-    <Col md={5} >
+    <Col md={3} >
     <p className={`${styles.Underline}`}>Sound Designer</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
@@ -351,16 +353,18 @@ const Postsound = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
-    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Sound Editor */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>44.20</p>
     </Col>
-    <Col md={5} >
+    <Col md={3} >
     <p className={`${styles.Underline}`}>Sound Editor</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
@@ -451,16 +455,18 @@ const Postsound = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
-    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Music Editor */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>44.30</p>
     </Col>
-    <Col md={5} >
+    <Col md={3} >
     <p className={`${styles.Underline}`}>Music Editor</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
@@ -551,16 +557,18 @@ const Postsound = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
-    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Assistant Sound Editors */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>44.40</p>
     </Col>
-    <Col md={5} >
+    <Col md={3} >
     <p className={`${styles.Underline}`}>Assistant Sound Editors</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
@@ -651,16 +659,18 @@ const Postsound = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
-    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* ADR Supervisor */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>44.50</p>
     </Col>
-    <Col md={5} >
+    <Col md={3} >
     <p className={`${styles.Underline}`}>ADR Supervisor</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
@@ -751,16 +761,18 @@ const Postsound = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
-    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Foley Labour */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>44.60</p>
     </Col>
-    <Col md={5} >
+    <Col md={3} >
     <p className={`${styles.Underline}`}>Foley Labour</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
@@ -851,23 +863,19 @@ const Postsound = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
-    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Sound Editing Rooms */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>44.70</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Sound Editing Rooms</p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={1} >
-    <p></p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -892,23 +900,19 @@ const Postsound = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
-    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Sound Editing Equipment */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>44.80</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Sound Editing Equipment</p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={1} >
-    <p></p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -933,23 +937,19 @@ const Postsound = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
-    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Music Editing Equipment */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>44.90</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Music Editing Equipment</p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={1} >
-    <p></p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -974,23 +974,19 @@ const Postsound = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
-    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Sound Editing Purchases */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>44.91</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Sound Editing Purchases</p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={1} >
-    <p></p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -1015,23 +1011,19 @@ const Postsound = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
-    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* ADR */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>44.92</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>ADR</p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={1} >
-    <p></p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -1056,23 +1048,19 @@ const Postsound = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
-    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Foley */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>44.93</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Foley</p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={1} >
-    <p></p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -1097,23 +1085,19 @@ const Postsound = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
-    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Pre-mix */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>44.94</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Pre-mix</p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={1} >
-    <p></p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -1138,23 +1122,19 @@ const Postsound = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
-    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Mix */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>44.95</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Mix</p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={1} >
-    <p></p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -1179,23 +1159,19 @@ const Postsound = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
-    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Printmaster */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>44.96</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Printmaster</p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={1} >
-    <p></p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -1220,23 +1196,19 @@ const Postsound = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
-    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Transfers/Deliverables */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>44.97</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Transfers/Deliverables</p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={1} >
-    <p></p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -1261,23 +1233,19 @@ const Postsound = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
-    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Loss/Damage */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>44.98</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Loss/Damage</p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={1} >
-    <p></p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -1302,23 +1270,19 @@ const Postsound = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
-    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Other */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>44.99</p>
     </Col>
     <Col md={6} >
     <p className={`${styles.Underline}`}>Other</p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={1} >
-    <p></p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -1343,16 +1307,18 @@ const Postsound = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
-    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Fringes & Taxes */}
     <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>44.991</p>
     </Col>
-    <Col md={6} >
+    <Col md={4} >
     <p className={`${styles.Underline}`}>Fringes & Taxes</p>
     </Col>
     <Col md={1} >
@@ -1384,22 +1350,18 @@ const Postsound = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
-    <hr className={`${styles.Break3} mb-0 mt-0`}/>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* POST PRODUCTION SOUND Total */}
     <Row className="mt-3 pb-2">
+    <Col md={1} ></Col>
     <Col md={1} >
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>POST PRODUCTION SOUND TOTAL</p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={1} >
-    <p></p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -1420,12 +1382,6 @@ const Postsound = (props) => {
         {message}
         </Alert>
     ))}
-    </Col>
-    </Row>
-    {/* hr */}
-    <Row>
-    <Col >
-    <hr className={`${styles.Break3} mb-0 mt-0`}/>
     </Col>
     </Row>
     </div>
