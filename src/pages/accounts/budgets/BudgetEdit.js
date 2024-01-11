@@ -1889,6 +1889,55 @@ function BudgetEdit() {
 
   // Property Labour postData 
   const [postDataProperty, setPostDataProperty] = useState({
+    days6th7th_unit_prop: 0,
+    days6th7th_prop: 0,
+    overtime_unit_prop: 0,
+    overtime_prop: 0,
+    holidays_unit_prop: 0, 
+    holidays_prop: 0,
+    box_rent_unit_prop: 0,
+    box_rent_prop: 0,
+    pro_mas_qty_prep: 0,
+    pro_mas_uno_prep: 0,
+    pro_mas_una_prep: "",
+    pro_mas_rt_prep: 0,
+    pro_mas_qty_wrap: 0,
+    pro_mas_uno_wrap: 0,
+    pro_mas_una_wrap: "",
+    pro_mas_rt_wrap: 0,
+    as_pro_ma_qty_prep: 0,
+    as_pro_ma_uno_prep: 0,
+    as_pro_ma_una_prep: "",
+    as_pro_ma_rt_prep: 0,
+    as_pro_ma_qty_wrap: 0,
+    as_pro_ma_uno_wrap: 0,
+    as_pro_ma_una_wrap: "",
+    as_pro_ma_rt_wrap: 0,
+    on_set_prop_qty_prep: 0,
+    on_set_prop_uno_prep: 0,
+    on_set_prop_una_prep: "",
+    on_set_prop_rt_prep: 0,
+    on_set_prop_qty_wrap: 0,
+    on_set_prop_uno_wrap: 0,
+    on_set_prop_una_wrap: "",
+    on_set_prop_rt_wrap: 0,
+    prop_buy_qty_prep: 0,
+    prop_buy_uno_prep: 0,
+    prop_buy_una_prep: "",
+    prop_buy_rt_prep: 0,
+    prop_buy_qty_wrap: 0,
+    prop_buy_uno_wrap: 0,
+    prop_buy_una_wrap: "",
+    prop_buy_rt_wrap: 0,
+    armor_qty_prep: 0,
+    armor_uno_prep: 0,
+    armor_una_prep: "",
+    armor_rt_prep: 0,
+    armor_qty_wrap: 0,
+    armor_uno_wrap: 0,
+    armor_una_wrap: "",
+    armor_rt_wrap: 0,
+    // old _prep wrap
     fringes_taxes_property: 0,
     property_master_quantity: 0,
     property_master_units_number: 0,
@@ -1914,7 +1963,23 @@ function BudgetEdit() {
   });
 
   // Property Labour postData values
-  const {fringes_taxes_property,
+  const {days6th7th_unit_prop, days6th7th_prop, 
+    overtime_unit_prop, overtime_prop,
+    holidays_unit_prop, holidays_prop, box_rent_unit_prop, box_rent_prop,
+    pro_mas_qty_prep, pro_mas_uno_prep, pro_mas_una_prep, pro_mas_rt_prep,
+    pro_mas_qty_wrap, pro_mas_uno_wrap, pro_mas_una_wrap, pro_mas_rt_wrap,
+    as_pro_ma_qty_prep, as_pro_ma_uno_prep, as_pro_ma_una_prep, as_pro_ma_rt_prep,
+    as_pro_ma_qty_wrap, as_pro_ma_uno_wrap, as_pro_ma_una_wrap, as_pro_ma_rt_wrap,
+    on_set_prop_qty_prep, on_set_prop_uno_prep, 
+    on_set_prop_una_prep, on_set_prop_rt_prep,
+    on_set_prop_qty_wrap, on_set_prop_uno_wrap, 
+    on_set_prop_una_wrap, on_set_prop_rt_wrap, 
+    prop_buy_qty_prep, prop_buy_uno_prep, prop_buy_una_prep, prop_buy_rt_prep,
+    prop_buy_qty_wrap, prop_buy_uno_wrap, prop_buy_una_wrap, prop_buy_rt_wrap,
+    armor_qty_prep, armor_uno_prep, armor_una_prep, armor_rt_prep,
+    armor_qty_wrap, armor_uno_wrap, armor_una_wrap, armor_rt_wrap,
+    // old
+    fringes_taxes_property,
     property_master_quantity, property_master_units_number,
     property_master_units_name, property_master_rate,
     assist_property_master_quantity, assist_property_master_units_number,
@@ -1928,20 +1993,56 @@ function BudgetEdit() {
     other_property,} = postDataProperty;
   
   // Totals
-  // property master Total postData
+
+  // property master
+  // property master shoot Total postData
   const [propertymasterTotal, setPropertymasterTotal] = useState(0);
+  // property master prep Total postData
+  const [propmasprepTotal, setPropmasprepTotal] = useState(0);
+  // property master wrap Total postData
+  const [propmaswrapTotal, setPropmaswrapTotal] = useState(0);
+  // property master all Total postData
+  const [propmasallTotal, setPropmasallTotal] = useState(0);
 
-  // assist property master Total postData
+  // assist property master
+  // assist property master shoot Total postData
   const [assistpropertymasterTotal, setAssistpropertymasterTotal] = useState(0);
+  // assist property master prep Total postData
+  const [aspropmaprepTotal, setAspropmaprepTotal] = useState(0);
+  // assist property master wrap Total postData
+  const [aspropmawrapTotal, setAspropmawrapTotal] = useState(0);
+  // assist property master all Total postData
+  const [aspropmaallTotal, setAspropmaallTotal] = useState(0);
 
-  // on set props person Total postData
+  // on set props person
+  // on set props person shoot Total postData
   const [onsetpropspersonTotal, setOnsetpropspersonTotal] = useState(0);
+  // on set props person prep Total postData
+  const [onsetpropprepTotal, setOnsetpropprepTotal] = useState(0);
+  // on set props person wrap Total postData
+  const [onsetpropwrapTotal, setOnsetpropwrapTotal] = useState(0);
+  // on set props person all Total postData
+  const [onsetpropallTotal, setOnsetpropallTotal] = useState(0);
 
-  // property buyer Total postData
+  // property buyer
+  // property buyer shoot Total postData
   const [propertybuyerTotal, setPropertybuyerTotal] = useState(0);
+  // property buyer prep Total postData
+  const [propbuyprepTotal, setPropbuyprepTotal] = useState(0);
+  // property buyer wrap Total postData
+  const [propbuywrapTotal, setPropbuywrapTotal] = useState(0);
+  // property buyer all Total postData
+  const [propbuyallTotal, setPropbuyallTotal] = useState(0);
 
-  // armorer Total postData
+  // armorer
+  // armorer shoot Total postData
   const [armorerTotal, setArmorerTotal] = useState(0);
+  // armorer prep Total postData
+  const [armorprepTotal, setArmorprepTotal] = useState(0);
+  // armorer wrap Total postData
+  const [armorwrapTotal, setArmorwrapTotal] = useState(0);
+  // armorer all Total postData
+  const [armorallTotal, setArmorallTotal] = useState(0);
 
   // Property Labour Total postData 
   const [propertylabourTotal, setPropertylabourTotal] = useState(0);
@@ -4973,7 +5074,22 @@ function BudgetEdit() {
             other_set_dressing,});
         setDressinglabourTotal(dressinglabour_total);
         // property
-        const {fringes_taxes_property,
+        const {days6th7th_unit_prop, days6th7th_prop, 
+          overtime_unit_prop, overtime_prop,
+          holidays_unit_prop, holidays_prop, box_rent_unit_prop, box_rent_prop,
+          pro_mas_qty_prep, pro_mas_uno_prep, pro_mas_una_prep, pro_mas_rt_prep,
+          pro_mas_qty_wrap, pro_mas_uno_wrap, pro_mas_una_wrap, pro_mas_rt_wrap,
+          as_pro_ma_qty_prep, as_pro_ma_uno_prep, as_pro_ma_una_prep, as_pro_ma_rt_prep,
+          as_pro_ma_qty_wrap, as_pro_ma_uno_wrap, as_pro_ma_una_wrap, as_pro_ma_rt_wrap,
+          on_set_prop_qty_prep, on_set_prop_uno_prep, 
+          on_set_prop_una_prep, on_set_prop_rt_prep,
+          on_set_prop_qty_wrap, on_set_prop_uno_wrap, 
+          on_set_prop_una_wrap, on_set_prop_rt_wrap, 
+          prop_buy_qty_prep, prop_buy_uno_prep, prop_buy_una_prep, prop_buy_rt_prep,
+          prop_buy_qty_wrap, prop_buy_uno_wrap, prop_buy_una_wrap, prop_buy_rt_wrap,
+          armor_qty_prep, armor_uno_prep, armor_una_prep, armor_rt_prep,
+          armor_qty_wrap, armor_uno_wrap, armor_una_wrap, armor_rt_wrap,
+          fringes_taxes_property,
           property_master_quantity, property_master_units_number,
           property_master_units_name, property_master_rate,
           assist_property_master_quantity, assist_property_master_units_number,
@@ -4985,7 +5101,22 @@ function BudgetEdit() {
           armorer_quantity, armorer_units_number,
           armorer_units_name, armorer_rate,
           other_property, propertylabour_total} = data.results[0];
-        setPostDataProperty({fringes_taxes_property,
+        setPostDataProperty({days6th7th_unit_prop, days6th7th_prop, 
+          overtime_unit_prop, overtime_prop,
+          holidays_unit_prop, holidays_prop, box_rent_unit_prop, box_rent_prop,
+          pro_mas_qty_prep, pro_mas_uno_prep, pro_mas_una_prep, pro_mas_rt_prep,
+          pro_mas_qty_wrap, pro_mas_uno_wrap, pro_mas_una_wrap, pro_mas_rt_wrap,
+          as_pro_ma_qty_prep, as_pro_ma_uno_prep, as_pro_ma_una_prep, as_pro_ma_rt_prep,
+          as_pro_ma_qty_wrap, as_pro_ma_uno_wrap, as_pro_ma_una_wrap, as_pro_ma_rt_wrap,
+          on_set_prop_qty_prep, on_set_prop_uno_prep, 
+          on_set_prop_una_prep, on_set_prop_rt_prep,
+          on_set_prop_qty_wrap, on_set_prop_uno_wrap, 
+          on_set_prop_una_wrap, on_set_prop_rt_wrap, 
+          prop_buy_qty_prep, prop_buy_uno_prep, prop_buy_una_prep, prop_buy_rt_prep,
+          prop_buy_qty_wrap, prop_buy_uno_wrap, prop_buy_una_wrap, prop_buy_rt_wrap,
+          armor_qty_prep, armor_uno_prep, armor_una_prep, armor_rt_prep,
+          armor_qty_wrap, armor_uno_wrap, armor_una_wrap, armor_rt_wrap,
+          fringes_taxes_property,
           property_master_quantity, property_master_units_number,
           property_master_units_name, property_master_rate,
           assist_property_master_quantity, assist_property_master_units_number,
@@ -7158,10 +7289,69 @@ function BudgetEdit() {
     formData.append("othfxlabprep_total", othfxlabprepTotal);
     formData.append("othfxlabwrap_total", othfxlabwrapTotal);
     formData.append("othfxlaball_total", othfxlaballTotal);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
+    formData.append("days6th7th_unit_prop", days6th7th_unit_prop);
+    formData.append("days6th7th_prop", days6th7th_prop);
+    formData.append("overtime_unit_prop", overtime_unit_prop);
+    formData.append("overtime_prop", overtime_prop);
+    formData.append("holidays_unit_prop", holidays_unit_prop);
+    formData.append("holidays_prop", holidays_prop);
+    formData.append("box_rent_unit_prop", box_rent_unit_prop);
+    formData.append("box_rent_prop", box_rent_prop);
+    formData.append("pro_mas_qty_prep", pro_mas_qty_prep);
+    formData.append("pro_mas_uno_prep", pro_mas_uno_prep);
+    formData.append("pro_mas_una_prep", pro_mas_una_prep);
+    formData.append("pro_mas_rt_prep", pro_mas_rt_prep);
+    formData.append("pro_mas_qty_wrap", pro_mas_qty_wrap);
+    formData.append("pro_mas_uno_wrap", pro_mas_uno_wrap);
+    formData.append("pro_mas_una_wrap", pro_mas_una_wrap);
+    formData.append("pro_mas_rt_wrap", pro_mas_rt_wrap);
+    formData.append("as_pro_ma_qty_prep", as_pro_ma_qty_prep);
+    formData.append("as_pro_ma_uno_prep", as_pro_ma_uno_prep);
+    formData.append("as_pro_ma_una_prep", as_pro_ma_una_prep);
+    formData.append("as_pro_ma_rt_prep", as_pro_ma_rt_prep);
+    formData.append("as_pro_ma_qty_wrap", as_pro_ma_qty_wrap);
+    formData.append("as_pro_ma_uno_wrap", as_pro_ma_uno_wrap);
+    formData.append("as_pro_ma_una_wrap", as_pro_ma_una_wrap);
+    formData.append("as_pro_ma_rt_wrap", as_pro_ma_rt_wrap);
+    formData.append("on_set_prop_qty_prep", on_set_prop_qty_prep);
+    formData.append("on_set_prop_uno_prep", on_set_prop_uno_prep);
+    formData.append("on_set_prop_una_prep", on_set_prop_una_prep);
+    formData.append("on_set_prop_rt_prep", on_set_prop_rt_prep);
+    formData.append("on_set_prop_qty_wrap", on_set_prop_qty_wrap);
+    formData.append("on_set_prop_uno_wrap", on_set_prop_uno_wrap);
+    formData.append("on_set_prop_una_wrap", on_set_prop_una_wrap);
+    formData.append("on_set_prop_rt_wrap", on_set_prop_rt_wrap);
+    formData.append("prop_buy_qty_prep", prop_buy_qty_prep);
+    formData.append("prop_buy_uno_prep", prop_buy_uno_prep);
+    formData.append("prop_buy_una_prep", prop_buy_una_prep);
+    formData.append("prop_buy_rt_prep", prop_buy_rt_prep);
+    formData.append("prop_buy_qty_wrap", prop_buy_qty_wrap);
+    formData.append("prop_buy_uno_wrap", prop_buy_uno_wrap);
+    formData.append("prop_buy_una_wrap", prop_buy_una_wrap);
+    formData.append("prop_buy_rt_wrap", prop_buy_rt_wrap);
+    formData.append("armor_qty_prep", armor_qty_prep);
+    formData.append("armor_uno_prep", armor_uno_prep);
+    formData.append("armor_una_prep", armor_una_prep);
+    formData.append("armor_rt_prep", armor_rt_prep);
+    formData.append("armor_qty_wrap", armor_qty_wrap);
+    formData.append("armor_uno_wrap", armor_uno_wrap);
+    formData.append("armor_una_wrap", armor_una_wrap);
+    formData.append("armor_rt_wrap", armor_rt_wrap);
+    formData.append("propmasprep_total", propmasprepTotal);
+    formData.append("propmaswrap_total", propmaswrapTotal);
+    formData.append("propmasall_total", propmasallTotal);
+    formData.append("aspropmaprep_total", aspropmaprepTotal);
+    formData.append("aspropmawrap_total", aspropmawrapTotal);
+    formData.append("aspropmaall_total", aspropmaallTotal);
+    formData.append("onsetpropprep_total", onsetpropprepTotal);
+    formData.append("onsetpropwrap_total", onsetpropwrapTotal);
+    formData.append("onsetpropall_total", onsetpropallTotal);
+    formData.append("propbuyprep_total", propbuyprepTotal);
+    formData.append("propbuywrap_total", propbuywrapTotal);
+    formData.append("propbuyall_total", propbuyallTotal);
+    formData.append("armorprep_total", armorprepTotal);
+    formData.append("armorwrap_total", armorwrapTotal);
+    formData.append("armorall_total", armorallTotal);
     // formData.append("staaaaars", staaaaars);
     // formData.append("staaaaars", staaaaars);
     // formData.append("staaaaars", staaaaars);
@@ -7174,7 +7364,7 @@ function BudgetEdit() {
     try {
       const { data } = await axiosReq.put(`/budgets/${budgetId}/`, formData);
       console.log(`submit2 ${data}`);
-      // handleSubmit3(event); 6466
+      // handleSubmit3(event); 
     } catch (err) {
       console.log(err);
       if (err.response?.status !== 401) {
@@ -8671,7 +8861,38 @@ function BudgetEdit() {
       setArmorerTotal={setArmorerTotal}
       propertylabourTotal={propertylabourTotal}
       setPropertylabourTotal={setPropertylabourTotal}
-      setShow={setShowProps}  /> 
+      setShow={setShowProps}
+      propmasprepTotal={propmasprepTotal}
+      setPropmasprepTotal={setPropmasprepTotal}
+      propmaswrapTotal={propmaswrapTotal}
+      setPropmaswrapTotal={setPropmaswrapTotal}
+      propmasallTotal={propmasallTotal}
+      setPropmasallTotal={setPropmasallTotal}
+      aspropmaprepTotal={aspropmaprepTotal}
+      setAspropmaprepTotal={setAspropmaprepTotal}
+      aspropmawrapTotal={aspropmawrapTotal}
+      setAspropmawrapTotal={setAspropmawrapTotal}
+      aspropmaallTotal={aspropmaallTotal}
+      setAspropmaallTotal={setAspropmaallTotal}
+      onsetpropprepTotal={onsetpropprepTotal}
+      setOnsetpropprepTotal={setOnsetpropprepTotal}
+      onsetpropwrapTotal={onsetpropwrapTotal}
+      setOnsetpropwrapTotal={setOnsetpropwrapTotal}
+      onsetpropallTotal={onsetpropallTotal}
+      setOnsetpropallTotal={setOnsetpropallTotal}
+      propbuyprepTotal={propbuyprepTotal}
+      setPropbuyprepTotal={setPropbuyprepTotal}
+      propbuywrapTotal={propbuywrapTotal}
+      setPropbuywrapTotal={setPropbuywrapTotal}
+      propbuyallTotal={propbuyallTotal}
+      setPropbuyallTotal={setPropbuyallTotal}
+      armorprepTotal={armorprepTotal}
+      setArmorprepTotal={setArmorprepTotal}
+      armorwrapTotal={armorwrapTotal}
+      setArmorwrapTotal={setArmorwrapTotal}
+      armorallTotal={armorallTotal}
+      setArmorallTotal={setArmorallTotal}
+      /> 
     ) }
     {/* wrangling */}
     {!showWrang ? (
