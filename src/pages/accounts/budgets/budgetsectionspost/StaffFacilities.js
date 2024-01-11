@@ -185,8 +185,6 @@ const StaffFacilities = (props) => {
     POST PRODUCTION STAFF/FACILITIES SECTION
     </p>
     </Col>
-    <Col md={2} >
-    </Col>
     </Row>
     <div className="px-2" >
     <Row className={`mt-3`}>

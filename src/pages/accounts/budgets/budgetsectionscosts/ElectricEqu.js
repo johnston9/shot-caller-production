@@ -62,8 +62,6 @@ const ElectricEqu = (props) => {
     ELECTRICAL EQUIPMENT SECTION
     </p>
     </Col>
-    <Col md={2} >
-    </Col>
     </Row>
     <div className="px-2" >
     <Row className={`mt-3`}>

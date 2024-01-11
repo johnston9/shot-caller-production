@@ -49,7 +49,7 @@ const TravelLiving = (props) => {
     shipping, other_trav_liv, customs_brokerage,]);
 
   return (
-    <div className={`${styles.WhiteBack} MX-5 mt-3 mb-5`}>
+    <div className={`${styles.WhiteBack} mx-5 mt-3 mb-5`}>
     <Row className="mx-0" >
     <Col md={12}
         className={ `${styles.Overview} py-0 text-center`}>
@@ -58,8 +58,6 @@ const TravelLiving = (props) => {
     <p className="pl-5 py-2">
     TRAVEL & LIVING SECTION
     </p>
-    </Col>
-    <Col md={2} >
     </Col>
     </Row>
     <div className="px-2" >
@@ -70,8 +68,6 @@ const TravelLiving = (props) => {
     </Col>
     <Col md={9} >
     <p className={ `${styles.BoldBlack} mb-1`}>TRAVEL & LIVING</p>
-    </Col>
-    <Col md={2}>
     </Col>
     </Row>
     {/* TITLES */}

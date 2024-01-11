@@ -64,8 +64,6 @@ const Props = (props) => {
     PROPS SECTION
     </p>
     </Col>
-    <Col md={2} >
-    </Col>
     </Row>
     <div className="px-2" >
     <Row className={`mt-3`}>
@@ -75,8 +73,6 @@ const Props = (props) => {
     </Col>
     <Col md={9} >
     <p className={ `${styles.BoldBlack} mb-1`}>PROPS</p>
-    </Col>
-    <Col md={2}>
     </Col>
     </Row>
     {/* TITLES */}

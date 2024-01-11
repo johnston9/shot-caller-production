@@ -1755,8 +1755,6 @@ const ProductionStaff = (props) => {
     PRODUCTION STAFF LABOUR SECTION
     </p>
     </Col>
-    <Col md={2} >
-    </Col>
     </Row>
     <div className="px-2" >
     <Row className={` mt-3`}>

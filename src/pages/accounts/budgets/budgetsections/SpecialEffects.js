@@ -308,8 +308,6 @@ const SpecialEffects = (props) => {
     SPECIAL EFFECT LABOUR SECTION
     </p>
     </Col>
-    <Col md={2} >
-    </Col>
     </Row>
     <div className="px-2">
     {/* name new */}

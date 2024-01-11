@@ -59,8 +59,6 @@ const Studio = (props) => {
     STUDIO/BACKLOT EXPENSES SECTION
     </p>
     </Col>
-    <Col md={2} >
-    </Col>
     </Row>
     <div className="px-2" >
     <Row className={`mt-3`} >
@@ -70,8 +68,6 @@ const Studio = (props) => {
     </Col>
     <Col md={9} >
     <p className={ `${styles.BoldBlack} mb-1`}>Studio/Backlot Expenses</p>
-    </Col>
-    <Col md={2}>
     </Col>
     </Row>
     {/* TITLES */}
