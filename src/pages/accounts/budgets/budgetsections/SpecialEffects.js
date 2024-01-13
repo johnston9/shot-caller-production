@@ -305,7 +305,7 @@ const SpecialEffects = (props) => {
             <span className={`${styles.Close } py-2 mb-0 float-right `} 
     onClick={() => setShow(false) } >Close</span>
     <p className="pl-5 py-2">
-    SPECIAL EFFECT LABOUR SECTION
+    SPECIAL EFFECTS LABOUR SECTION
     </p>
     </Col>
     </Row>
@@ -317,7 +317,7 @@ const SpecialEffects = (props) => {
     <p className={`${styles.Underline}`}>13.00</p>
     </Col>
     <Col md={9} >
-    <p className={ `${styles.BoldBlack} mb-1`}>FX LABOUR</p>
+    <p className={ `${styles.BoldBlack} mb-1`}>SPECIAL EFFECT LABOUR</p>
     </Col>
     <Col md={1}>
     </Col>
@@ -349,7 +349,7 @@ const SpecialEffects = (props) => {
     <Col md={1}></Col>
     </Row>
     {/* FX Supervisor */}
-    <div className="mt-1"> 
+    <div className="mt-2"> 
     <Row >
     <Col md={1} ></Col>
     <Col md={1} >
@@ -358,7 +358,6 @@ const SpecialEffects = (props) => {
     <Col md={9} >
     <p className={`${styles.BoldBlack}`}>FX Supervisor</p>
     </Col>
-    <Col md={1} ></Col>
     </Row>
     {/* Prep */} 
     <Row className="py-0 d-flex align-items-center mb-1">
@@ -1005,7 +1004,7 @@ const SpecialEffects = (props) => {
     </Col>
     </Row>
     </div>
-    {/* hr test b*/}
+    {/* hr */}
     <Row>
     <Col md={{offset: 1, span:10}} >
     <hr className={`${styles.Break1} mt-1 mb-0`}/>

@@ -579,11 +579,11 @@ function BudgetEdit() {
     days6th7th_pro_sta: 0, 
     other_pro_sta: 0,
     box_rent_pro_sta: 0,
-    holidays_unit_pro_sta: 0, 
-    overtime_unit_pro_sta: 0, 
-    days6th7th_unit_pro_sta: 0, 
-    other_unit_pro_sta: 0,
-    box_rent_unit_pro_sta: 0,
+    holidays_unit_pro_sta: "", 
+    overtime_unit_pro_sta: "", 
+    days6th7th_unit_pro_sta: "", 
+    other_unit_pro_sta: "",
+    box_rent_unit_pro_sta: "",
     fringes_taxes_production: 0,
     production_manager_quantity: 0,
     production_manager_units_number: 0,
@@ -1494,13 +1494,13 @@ function BudgetEdit() {
   // Construction Labour postData
   const [postDataConstruction, setPostDataConstruction] = useState({
     // new
-    days6th7th_unit_con: 0,
+    days6th7th_unit_con: "",
     days6th7th_con: 0,
-    overtime_unit_con: 0,
+    overtime_unit_con: "",
     overtime_con: 0,
-    holidays_unit_con: 0, 
+    holidays_unit_con: "", 
     holidays_con: 0,
-    box_rent_unit_con: 0,
+    box_rent_unit_con: "",
     box_rent_con: 0,
     con_coor_qty_prep: 0,
     con_coor_uno_prep: 0,
@@ -1705,13 +1705,13 @@ function BudgetEdit() {
 
   // Set Dressing Labour postData 
   const [postDataSetDressing, setPostDataSetDressing] = useState({
-    days6th7th_unit_dres: 0,
+    days6th7th_unit_dres: "",
     days6th7th_dres: 0,
-    overtime_unit_dres: 0,
+    overtime_unit_dres: "",
     overtime_dres: 0,
-    holidays_unit_dres: 0, 
+    holidays_unit_dres: "", 
     holidays_dres: 0,
-    box_rent_unit_dres: 0,
+    box_rent_unit_dres: "",
     box_rent_dres: 0,
     set_dec_qty_prep: 0,
     set_dec_uno_prep: 0,
@@ -1889,13 +1889,13 @@ function BudgetEdit() {
 
   // Property Labour postData 
   const [postDataProperty, setPostDataProperty] = useState({
-    days6th7th_unit_prop: 0,
+    days6th7th_unit_prop: "",
     days6th7th_prop: 0,
-    overtime_unit_prop: 0,
+    overtime_unit_prop: "",
     overtime_prop: 0,
-    holidays_unit_prop: 0, 
+    holidays_unit_prop: "", 
     holidays_prop: 0,
-    box_rent_unit_prop: 0,
+    box_rent_unit_prop: "",
     box_rent_prop: 0,
     pro_mas_qty_prep: 0,
     pro_mas_uno_prep: 0,
@@ -2051,6 +2051,32 @@ function BudgetEdit() {
 
   // Wrangling Labour postData 
   const [postDataWrangling, setPostDataWrangling] = useState({
+    days6th7th_unit_wran: "",
+    days6th7th_wran: 0,
+    overtime_unit_wran: "",
+    overtime_wran: 0,
+    holidays_unit_wran: "", 
+    holidays_wran: 0,
+    box_rent_unit_wran: "",
+    box_rent_wran: 0,
+    other_solo_wran: 0,
+    he_wran_qty_prep: 0,
+    he_wran_uno_prep: 0,
+    he_wran_una_prep: "",
+    he_wran_rt_prep: 0,
+    he_wran_qty_wrap: 0,
+    he_wran_uno_wrap: 0,
+    he_wran_una_wrap: "",
+    he_wran_rt_wrap: 0,
+    oth_wran_qty_prep: 0,
+    oth_wran_uno_prep: 0,
+    oth_wran_una_prep: "",
+    oth_wran_rt_prep: 0,
+    oth_wran_qty_wrap: 0,
+    oth_wran_uno_wrap: 0,
+    oth_wran_una_wrap: "",
+    oth_wran_rt_wrap: 0,
+    // old
     fringes_taxes_wrangling: 0,
     head_wrangler_quantity: 0,
     head_wrangler_units_number: 0,
@@ -2063,7 +2089,15 @@ function BudgetEdit() {
   });
 
   // Wrangling Labour values
-  const {fringes_taxes_wrangling,
+  const {days6th7th_unit_wran, days6th7th_wran,
+    overtime_unit_wran, overtime_wran, holidays_unit_wran, 
+    holidays_wran, box_rent_unit_wran, box_rent_wran, other_solo_wran,
+    he_wran_qty_prep, he_wran_uno_prep, he_wran_una_prep, he_wran_rt_prep,
+    he_wran_qty_wrap, he_wran_uno_wrap, he_wran_una_wrap, he_wran_rt_wrap,
+    oth_wran_qty_prep, oth_wran_uno_prep, oth_wran_una_prep, oth_wran_rt_prep,
+    oth_wran_qty_wrap, oth_wran_uno_wrap, oth_wran_una_wrap, oth_wran_rt_wrap,
+    // old
+    fringes_taxes_wrangling,
     head_wrangler_quantity, head_wrangler_units_number,
     head_wrangler_units_name, head_wrangler_rate,
     other_wrangling_labour_quantity, other_wrangling_labour_units_number,
@@ -2071,11 +2105,26 @@ function BudgetEdit() {
   } = postDataWrangling;
 
   // Totals
-  // head wrangler Total postData
-  const [headwranglerTotal, setHeadwranglerTotal] = useState(0);
 
-  // other wrangling labour Total postData
+  // head wrangler
+  // head wrangler shoot Total postData
+  const [headwranglerTotal, setHeadwranglerTotal] = useState(0);
+  // head wrangler prep Total postData
+  const [hewranprepTotal, setHewranprepTotal] = useState(0);
+  // head wrangler wrap Total postData
+  const [hewranwrapTotal, setHewranwrapTotal] = useState(0);
+  // head wrangler all Total postData
+  const [hewranallTotal, setHewranallTotal] = useState(0);
+
+  // other wrangling labour
+  // other wrangling labour shoot Total postData
   const [otherwranglinglabourTotal, setOtherwranglinglabourTotal] = useState(0);
+  // other wrangling labour prep Total postData
+  const [othwranlabprepTotal, setOtwranlabprepTotal] = useState(0);
+  // other wrangling labour wrap Total postData
+  const [othwranlabwrapTotal, setOtwranlabwrapTotal] = useState(0);
+  // other wrangling labour all Total postData
+  const [othwranlaballTotal, setOtwranlaballTotal] = useState(0);
 
   // Wrangling Labour Total postData 
   const [wranglerlabourTotal, setWranglerlabourTotal] = useState(0);
@@ -5130,13 +5179,27 @@ function BudgetEdit() {
           other_property});
         setPropertylabourTotal(propertylabour_total);
         // wrangling
-        const {fringes_taxes_wrangling,
+        const {days6th7th_unit_wran, days6th7th_wran,
+          overtime_unit_wran, overtime_wran, holidays_unit_wran, 
+          holidays_wran, box_rent_unit_wran, box_rent_wran, other_solo_wran,
+          he_wran_qty_prep, he_wran_uno_prep, he_wran_una_prep, he_wran_rt_prep,
+          he_wran_qty_wrap, he_wran_uno_wrap, he_wran_una_wrap, he_wran_rt_wrap,
+          oth_wran_qty_prep, oth_wran_uno_prep, oth_wran_una_prep, oth_wran_rt_prep,
+          oth_wran_qty_wrap, oth_wran_uno_wrap, oth_wran_una_wrap, oth_wran_rt_wrap,
+          fringes_taxes_wrangling,
           head_wrangler_quantity, head_wrangler_units_number,
           head_wrangler_units_name, head_wrangler_rate,
           other_wrangling_labour_quantity, other_wrangling_labour_units_number,
           other_wrangling_labour_units_name, other_wrangling_labour_rate,
           wranglerlabour_total,} = data.results[0];
-        setPostDataWrangling({fringes_taxes_wrangling,
+        setPostDataWrangling({days6th7th_unit_wran, days6th7th_wran,
+          overtime_unit_wran, overtime_wran, holidays_unit_wran, 
+          holidays_wran, box_rent_unit_wran, box_rent_wran, other_solo_wran,
+          he_wran_qty_prep, he_wran_uno_prep, he_wran_una_prep, he_wran_rt_prep,
+          he_wran_qty_wrap, he_wran_uno_wrap, he_wran_una_wrap, he_wran_rt_wrap,
+          oth_wran_qty_prep, oth_wran_uno_prep, oth_wran_una_prep, oth_wran_rt_prep,
+          oth_wran_qty_wrap, oth_wran_uno_wrap, oth_wran_una_wrap, oth_wran_rt_wrap,
+          fringes_taxes_wrangling,
           head_wrangler_quantity, head_wrangler_units_number,
           head_wrangler_units_name, head_wrangler_rate,
           other_wrangling_labour_quantity, other_wrangling_labour_units_number,
@@ -7352,6 +7415,62 @@ function BudgetEdit() {
     formData.append("armorprep_total", armorprepTotal);
     formData.append("armorwrap_total", armorwrapTotal);
     formData.append("armorall_total", armorallTotal);
+    formData.append("days6th7th_unit_wran", days6th7th_unit_wran);
+    formData.append("days6th7th_wran", days6th7th_wran);
+    formData.append("overtime_unit_wran", overtime_unit_wran);
+    formData.append("overtime_wran", overtime_wran);
+    formData.append("holidays_unit_wran", holidays_unit_wran);
+    formData.append("holidays_wran", holidays_wran);
+    formData.append("box_rent_unit_wran", box_rent_unit_wran);
+    formData.append("box_rent_wran", box_rent_wran);
+    formData.append("other_solo_wran", other_solo_wran);
+    formData.append("he_wran_qty_prep", he_wran_qty_prep);
+    formData.append("he_wran_uno_prep", he_wran_uno_prep);
+    formData.append("he_wran_una_prep", he_wran_una_prep);
+    formData.append("he_wran_rt_prep", he_wran_rt_prep);
+    formData.append("he_wran_qty_wrap", he_wran_qty_wrap);
+    formData.append("he_wran_uno_wrap", he_wran_uno_wrap);
+    formData.append("he_wran_una_wrap", he_wran_una_wrap);
+    formData.append("he_wran_rt_wrap", he_wran_rt_wrap);
+    formData.append("oth_wran_qty_prep", oth_wran_qty_prep);
+    formData.append("oth_wran_uno_prep", oth_wran_uno_prep);
+    formData.append("oth_wran_una_prep", oth_wran_una_prep);
+    formData.append("oth_wran_rt_prep", oth_wran_rt_prep);
+    formData.append("oth_wran_qty_wrap", oth_wran_qty_wrap);
+    formData.append("oth_wran_uno_wrap", oth_wran_uno_wrap);
+    formData.append("oth_wran_una_wrap", oth_wran_una_wrap);
+    formData.append("oth_wran_rt_wrap", oth_wran_rt_wrap);
+    formData.append("hewranprep_total", hewranprepTotal);
+    formData.append("hewranwrap_total", hewranwrapTotal);
+    formData.append("hewranall_total", hewranallTotal);
+    formData.append("othwranlabprep_total", othwranlabprepTotal);
+    formData.append("othwranlabwrap_total", othwranlabwrapTotal);
+    formData.append("othwranlaball_total", othwranlaballTotal);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
     // formData.append("staaaaars", staaaaars);
     // formData.append("staaaaars", staaaaars);
     // formData.append("staaaaars", staaaaars);
@@ -7626,21 +7745,6 @@ function BudgetEdit() {
     </Row>
     </div>
     </Col>
-    {/* FX */}
-    <Col md={3} className='px-0 mx-0'>
-    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
-    <Row>
-    <Col md={8}>
-    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
-          onClick={() => setShowFx(showFx => !showFx)} >FX Labour
-    </p>
-    </Col>
-    <Col md={4}>
-    <p className="mb-0 float-right pr-5">{fxlabourTotal || 0} </p>
-    </Col>
-    </Row>
-    </div>
-    </Col>
     {/* property */}
     <Col md={3} className='px-0 mx-0'>
     <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
@@ -7667,6 +7771,21 @@ function BudgetEdit() {
     </Col>
     <Col md={4}>
     <p className="mb-0 float-right pr-5">{wranglerlabourTotal || 0} </p>
+    </Col>
+    </Row>
+    </div>
+    </Col>
+    {/* FX */}
+    <Col md={3} className='px-0 mx-0'>
+    <div className={`p-0 m-0 ${styles.BorderRightLeft}`}>
+    <Row>
+    <Col md={8}>
+    <p className={`pl-2 py-0 mb-0 ${styles.Button}`}
+          onClick={() => setShowFx(showFx => !showFx)} >Special Effects Labour
+    </p>
+    </Col>
+    <Col md={4}>
+    <p className="mb-0 float-right pr-5">{fxlabourTotal || 0} </p>
     </Col>
     </Row>
     </div>
@@ -8806,42 +8925,6 @@ function BudgetEdit() {
       dressbuyallTotal={dressbuyallTotal}
       setDressbuyallTotal={setDressbuyallTotal} /> 
     ) }
-    {/* fx */}
-    {!showFx ? (
-      ""
-    ) : (
-      <SpecialEffects
-      postDataSpecialEffects={postDataSpecialEffects}
-      setPostDataSpecialEffects={setPostDataSpecialEffects}
-      fxsupervisorTotal={fxsupervisorTotal}
-      setFxsupervisorTotal={setFxsupervisorTotal}
-      assistfxTotal={assistfxTotal}
-      setAssistfxTotal={setAssistfxTotal}
-      otherfxlabourTotal={otherfxlabourTotal}
-      setOtherfxlabourTotal={setOtherfxlabourTotal}
-      fxlabourTotal={fxlabourTotal}
-      setFxlabourTotal={setFxlabourTotal}
-      setShow={setShowFx}  
-      fxsupprepTotal={fxsupprepTotal}
-      setFxsupprepTotal={setFxsupprepTotal}
-      fxsupwrapTotal={fxsupwrapTotal}
-      setFxsupwrapTotal={setFxsupwrapTotal}
-      fxsupallTotal={fxsupallTotal}
-      setFxsupallTotal={setFxsupallTotal}
-      assfxprepTotal={assfxprepTotal}
-      setAssfxprepTotal={setAssfxprepTotal}
-      assfxwrapTotal={assfxwrapTotal}
-      setAssfxwrapTotal={setAssfxwrapTotal}
-      assfxallTotal={assfxallTotal}
-      setAssfxallTotal={setAssfxallTotal}
-      othfxlabprepTotal={othfxlabprepTotal}
-      setOthfxlabprepTotal={setOthfxlabprepTotal}
-      othfxlabwrapTotal={othfxlabwrapTotal}
-      setOthfxlabwrapTotal={setOthfxlabwrapTotal}
-      othfxlaballTotal={othfxlaballTotal}
-      setOthfxlaballTotal={setOthfxlaballTotal}
-      /> 
-    ) }
     {/* property */}
     {!showProps ? (
       ""
@@ -8907,7 +8990,56 @@ function BudgetEdit() {
       setOtherwranglinglabourTotal={setOtherwranglinglabourTotal}
       wranglerlabourTotal={wranglerlabourTotal}
       setWranglerlabourTotal={setWranglerlabourTotal}
-      setShow={setShowWrang}  /> 
+      setShow={setShowWrang}
+      hewranprepTotal={hewranprepTotal}
+      setHewranprepTotal={setHewranprepTotal}
+      hewranwrapTotal={hewranwrapTotal}
+      setHewranwrapTotal={setHewranwrapTotal}
+      hewranallTotal={hewranallTotal}
+      setHewranallTotal={setHewranallTotal}
+      othwranlabprepTotal={othwranlabprepTotal}
+      setOtwranlabprepTotal={setOtwranlabprepTotal}
+      othwranlabwrapTotal={othwranlabwrapTotal}
+      setOtwranlabwrapTotal={setOtwranlabwrapTotal}
+      othwranlaballTotal={othwranlaballTotal}
+      setOtwranlaballTotal={setOtwranlaballTotal}
+      /> 
+    ) }
+    {/* fx */}
+    {!showFx ? (
+      ""
+    ) : (
+      <SpecialEffects
+      postDataSpecialEffects={postDataSpecialEffects}
+      setPostDataSpecialEffects={setPostDataSpecialEffects}
+      fxsupervisorTotal={fxsupervisorTotal}
+      setFxsupervisorTotal={setFxsupervisorTotal}
+      assistfxTotal={assistfxTotal}
+      setAssistfxTotal={setAssistfxTotal}
+      otherfxlabourTotal={otherfxlabourTotal}
+      setOtherfxlabourTotal={setOtherfxlabourTotal}
+      fxlabourTotal={fxlabourTotal}
+      setFxlabourTotal={setFxlabourTotal}
+      setShow={setShowFx}  
+      fxsupprepTotal={fxsupprepTotal}
+      setFxsupprepTotal={setFxsupprepTotal}
+      fxsupwrapTotal={fxsupwrapTotal}
+      setFxsupwrapTotal={setFxsupwrapTotal}
+      fxsupallTotal={fxsupallTotal}
+      setFxsupallTotal={setFxsupallTotal}
+      assfxprepTotal={assfxprepTotal}
+      setAssfxprepTotal={setAssfxprepTotal}
+      assfxwrapTotal={assfxwrapTotal}
+      setAssfxwrapTotal={setAssfxwrapTotal}
+      assfxallTotal={assfxallTotal}
+      setAssfxallTotal={setAssfxallTotal}
+      othfxlabprepTotal={othfxlabprepTotal}
+      setOthfxlabprepTotal={setOthfxlabprepTotal}
+      othfxlabwrapTotal={othfxlabwrapTotal}
+      setOthfxlabwrapTotal={setOthfxlabwrapTotal}
+      othfxlaballTotal={othfxlaballTotal}
+      setOthfxlaballTotal={setOthfxlaballTotal}
+      /> 
     ) }
     {/* wardrobe */}
     {!showWardrobe ? (

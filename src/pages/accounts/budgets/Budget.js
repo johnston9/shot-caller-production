@@ -491,6 +491,16 @@ const Budget = (props) => {
     other_property, propertymaster_total, assistpropertymaster_total,
     onsetpropsperson_total, propertybuyer_total, propertylabour_total,
     // wrangling
+    // days6th7th_unit_wran, days6th7th_wran,
+    // overtime_unit_wran, overtime_wran, holidays_unit_wran, 
+    // holidays_wran, box_rent_unit_wran, box_rent_wran, other_solo_wran,
+    // he_wran_qty_prep, he_wran_uno_prep, he_wran_una_prep, he_wran_rt_prep,
+    // he_wran_qty_wrap, he_wran_uno_wrap, he_wran_una_wrap, he_wran_rt_wrap,
+    // oth_wran_qty_prep, oth_wran_uno_prep, oth_wran_una_prep, oth_wran_rt_prep,
+    // oth_wran_qty_wrap, oth_wran_uno_wrap, oth_wran_una_wrap, oth_wran_rt_wrap,
+    // hewranprep_total, hewranwrap_total, hewranall_total,
+    // othwranlabprep_total, othwranlabwrap_total, othwranlaball_total,
+    // old
     head_wrangler_quantity, head_wrangler_units_number,
     head_wrangler_units_name, head_wrangler_rate,
     other_wrangling_labour_quantity, other_wrangling_labour_units_number,
@@ -8452,7 +8462,7 @@ const Budget = (props) => {
     <p className='mb-2'>13.00</p>
     </Col>
     <Col xs={10}>
-    <p className={ `${styles.BoldBlack} mb-2`}>FX LABOUR</p>
+    <p className={ `${styles.BoldBlack} mb-2`}>SFX LABOUR</p>
     </Col>
     </Row>
     {/* Titles */}
@@ -10403,7 +10413,7 @@ const Budget = (props) => {
     </Col>
     <Col md={2} >
     <div className={`${styles.Box3} 
-  py-0 d-flex align-items-center justify-content-center`}>
+     py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.BoldBlack} `}>{below_the_lineB_total || 0}</p>
     </div>
     </Col>
