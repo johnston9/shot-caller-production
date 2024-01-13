@@ -491,7 +491,47 @@ function BudgetEdit() {
   
   // Cast postData
   const [postDataCast, setPostDataCast] = useState({
-    // new
+    prin_2_qty: 0,
+    prin_2_uno: 0,
+    prin_2_una: "",
+    prin_2_rt: 0,
+    prin_3_qty: 0,
+    prin_3_uno: 0,
+    prin_3_una: "",
+    prin_3_rt: 0,
+    actors_2_qty: 0,
+    actors_2_uno: 0,
+    actors_2_una: "",
+    actors_2_rt: 0,
+    actors_3_qty: 0,
+    actors_3_uno: 0,
+    actors_3_una: "",
+    actors_3_rt: 0,
+    actors_4_qty: 0,
+    actors_4_uno: 0,
+    actors_4_una: "",
+    actors_4_rt: 0,
+    actors_5_qty: 0,
+    actors_5_uno: 0,
+    actors_5_una: "",
+    actors_5_rt: 0,
+    actors_6_qty: 0,
+    actors_6_uno: 0,
+    actors_6_una: "",
+    actors_6_rt: 0,
+    actors_7_qty: 0,
+    actors_7_uno: 0,
+    actors_7_una: "",
+    actors_7_rt: 0,
+    actors_week_qty: 0,
+    actors_week_uno: 0,
+    actors_week_una: "",
+    actors_week_rt: 0,
+    actors_day_qty: 0,
+    actors_day_uno: 0,
+    actors_day_una: "",
+    actors_day_rt: 0,
+    // old
     holidays_cast: 0, 
     overtime_cast: 0, 
     days6th7th_cast: 0, 
@@ -533,6 +573,17 @@ function BudgetEdit() {
 
   // Cast postData values _unit
   const {
+    prin_2_qty, prin_2_uno, prin_2_una, prin_2_rt,
+    prin_3_qty, prin_3_uno, prin_3_una, prin_3_rt,
+    actors_2_qty, actors_2_uno, actors_2_una, actors_2_rt,
+    actors_3_qty, actors_3_uno, actors_3_una, actors_3_rt, 
+    actors_4_qty, actors_4_uno, actors_4_una, actors_4_rt,
+    actors_5_qty, actors_5_uno, actors_5_una, actors_5_rt,
+    actors_6_qty, actors_6_uno, actors_6_una, actors_6_rt,
+    actors_7_qty, actors_7_uno, actors_7_una, actors_7_rt,
+    actors_week_qty, actors_week_uno, actors_week_una, actors_week_rt,
+    actors_day_qty, actors_day_uno, actors_day_una, actors_day_rt,
+    //old
     rehersals_cast, rehersals_unit_cast,
     overtime_cast, overtime_unit_cast,
     days6th7th_cast, days6th7th_unit_cast,
@@ -553,15 +604,37 @@ function BudgetEdit() {
     other_cast, fringes_taxes_cast, rights_payments_cast,
   } = postDataCast;
 
-  // Principals Total postData
+  // Principals 1 Total postData
   const [principalsTotal, setPrincipalsTotal] = useState(0);
+  // Principals 2 Total postData
+  const [princ2Total, setPrinc2Total] = useState(0);
+  // Principals 3 Total postData
+  const [princ3Total, setPrinc3Total] = useState(0);
+
   // Actors Total postData 
   const [actorsTotal, setActorsTotal] = useState(0);
-  // Editors Total postData
+  // Actor 2 Total postData 
+  const [actor2Total, setActor2Total] = useState(0);
+  // Actors 3 Total postData 
+  const [actor3Total, setActor3Total] = useState(0);
+  // Actors 4 Total postData 
+  const [actor4Total, setActor4Total] = useState(0);
+  // Actors 5 Total postData 
+  const [actor5Total, setActor5Total] = useState(0);
+  // Actors 6 Total postData 
+  const [actor6Total, setActor6Total] = useState(0);
+  // Actors 7 Total postData 
+  const [actor7Total, setActor7Total] = useState(0);
+  // Actors week Total postData 
+  const [actorweekTotal, setActorweekTotal] = useState(0);
+  // Actors day Total postData 
+  const [actordayTotal, setActordayTotal] = useState(0);
+
+  // Stunt Coor Total postData
   const [stuntcoordinatorsTotal, setStuntcoordinatorsTotal] = useState(0);
-  // Admin Total postData
+  // Stunts Total postData
   const [stuntperformersTotal, setStuntperformersTotal] = useState(0);
-  // Admin Total postData
+  // Other per Total postData
   const [otherperformersTotal, setOtherperformersTotal] = useState(0);
   // Extras Total postData
   const [extrasTotal, setExtrasTotal] = useState(0);
@@ -4396,7 +4469,17 @@ function BudgetEdit() {
           fringes_taxes_music});
           setStarsMusicTotal(stars_music_total);
         // cast
-        const {holidays_cast, overtime_cast, 
+        const {prin_2_qty, prin_2_uno, prin_2_una, prin_2_rt,
+          prin_3_qty, prin_3_uno, prin_3_una, prin_3_rt,
+          actors_2_qty, actors_2_uno, actors_2_una, actors_2_rt,
+          actors_3_qty, actors_3_uno, actors_3_una, actors_3_rt, 
+          actors_4_qty, actors_4_uno, actors_4_una, actors_4_rt,
+          actors_5_qty, actors_5_uno, actors_5_una, actors_5_rt,
+          actors_6_qty, actors_6_uno, actors_6_una, actors_6_rt,
+          actors_7_qty, actors_7_uno, actors_7_una, actors_7_rt,
+          actors_week_qty, actors_week_uno, actors_week_una, actors_week_rt,
+          actors_day_qty, actors_day_uno, actors_day_una, actors_day_rt,
+          holidays_cast, overtime_cast, 
           days6th7th_cast, rehersals_cast,
           holidays_unit_cast, overtime_unit_cast, 
           days6th7th_unit_cast, rehersals_unit_cast,
@@ -4414,7 +4497,17 @@ function BudgetEdit() {
           extras_units_name, extras_rate,
           casting_director, extras_casting, cast_total,
           other_cast, fringes_taxes_cast, rights_payments_cast,} = data.results[0];
-          setPostDataCast({holidays_cast, overtime_cast, 
+          setPostDataCast({prin_2_qty, prin_2_uno, prin_2_una, prin_2_rt,
+            prin_3_qty, prin_3_uno, prin_3_una, prin_3_rt,
+            actors_2_qty, actors_2_uno, actors_2_una, actors_2_rt,
+            actors_3_qty, actors_3_uno, actors_3_una, actors_3_rt, 
+            actors_4_qty, actors_4_uno, actors_4_una, actors_4_rt,
+            actors_5_qty, actors_5_uno, actors_5_una, actors_5_rt,
+            actors_6_qty, actors_6_uno, actors_6_una, actors_6_rt,
+            actors_7_qty, actors_7_uno, actors_7_una, actors_7_rt,
+            actors_week_qty, actors_week_uno, actors_week_una, actors_week_rt,
+            actors_day_qty, actors_day_uno, actors_day_una, actors_day_rt,
+          holidays_cast, overtime_cast, 
           days6th7th_cast, rehersals_cast,
           holidays_unit_cast, overtime_unit_cast, 
           days6th7th_unit_cast, rehersals_unit_cast,
@@ -7446,30 +7539,56 @@ function BudgetEdit() {
     formData.append("othwranlabprep_total", othwranlabprepTotal);
     formData.append("othwranlabwrap_total", othwranlabwrapTotal);
     formData.append("othwranlaball_total", othwranlaballTotal);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
+    formData.append("prin_2_qty", prin_2_qty);
+    formData.append("prin_2_uno", prin_2_uno);
+    formData.append("prin_2_una", prin_2_una);
+    formData.append("prin_2_rt", prin_2_rt);
+    formData.append("prin_3_qty", prin_3_qty);
+    formData.append("prin_3_uno", prin_3_uno);
+    formData.append("prin_3_una", prin_3_una);
+    formData.append("prin_3_rt", prin_3_rt);
+    formData.append("actors_2_qty", actors_2_qty);
+    formData.append("actors_2_uno", actors_2_uno);
+    formData.append("actors_2_una", actors_2_una);
+    formData.append("actors_2_rt", actors_2_rt);
+    formData.append("actors_3_qty", actors_3_qty);
+    formData.append("actors_3_uno", actors_3_uno);
+    formData.append("actors_3_una", actors_3_una);
+    formData.append("actors_3_rt", actors_3_rt);
+    formData.append("actors_4_qty", actors_4_qty);
+    formData.append("actors_4_uno", actors_4_uno);
+    formData.append("actors_4_una", actors_4_una);
+    formData.append("actors_4_rt", actors_4_rt);
+    formData.append("actors_5_qty", actors_5_qty);
+    formData.append("actors_5_uno", actors_5_uno);
+    formData.append("actors_5_una", actors_5_una);
+    formData.append("actors_5_rt", actors_5_rt);
+    formData.append("actors_6_qty", actors_6_qty);
+    formData.append("actors_6_uno", actors_6_uno);
+    formData.append("actors_6_una", actors_6_una);
+    formData.append("actors_6_rt", actors_6_rt);
+    formData.append("actors_7_qty", actors_7_qty);
+    formData.append("actors_7_uno", actors_7_uno);
+    formData.append("actors_7_una", actors_7_una);
+    formData.append("actors_7_rt", actors_7_rt);
+    formData.append("actors_week_qty", actors_week_qty);
+    formData.append("actors_week_uno", actors_week_uno);
+    formData.append("actors_week_una", actors_week_una);
+    formData.append("actors_week_rt", actors_week_rt);
+    formData.append("actors_day_qty", actors_day_qty);
+    formData.append("actors_day_uno", actors_day_uno);
+    formData.append("actors_day_una", actors_day_una);
+    formData.append("actors_day_rt", actors_day_rt);
+    formData.append("princ2_total", princ2Total);
+    formData.append("princ3_total", princ3Total);
+    formData.append("actor2_total", actor2Total);
+    formData.append("actor3_total", actor3Total);
+    formData.append("actor4_total", actor4Total);
+    formData.append("actor5_total", actor5Total);
+    formData.append("actor6_total", actor6Total);
+    formData.append("actor7_total", actor7Total);
+    formData.append("actorweek_total", actorweekTotal);
+    formData.append("actorday_total", actordayTotal);
     // formData.append("staaaaars", staaaaars);
     // formData.append("staaaaars", staaaaars);
     // formData.append("staaaaars", staaaaars);
@@ -8557,7 +8676,28 @@ function BudgetEdit() {
       setExtrasTotal={setExtrasTotal}
       castTotal={castTotal}
       setCastTotal={setCastTotal}
-      setShow={setShowCast}  /> 
+      setShow={setShowCast}  
+      princ2Total={princ2Total}
+      setPrinc2Total={setPrinc2Total}
+      princ3Total={princ3Total}
+      setPrinc3Total={setPrinc3Total}
+      actor2Total={actor2Total}
+      setActor2Total={setActor2Total}
+      actor3Total={actor3Total}
+      setActor3Total={setActor3Total}
+      actor4Total={actor4Total}
+      setActor4Total={setActor4Total}
+      actor5Total={actor5Total}
+      setActor5Total={setActor5Total}
+      actor6Total={actor6Total}
+      setActor6Total={setActor6Total}
+      actor7Total={actor7Total}
+      setActor7Total={setActor7Total}
+      actorweekTotal={actorweekTotal}
+      setActorweekTotal={setActorweekTotal}
+      actordayTotal={actordayTotal}
+      setActordayTotal={setActordayTotal}
+      /> 
     ) }
     {/* production staff */}
     {!showProStaff ? (

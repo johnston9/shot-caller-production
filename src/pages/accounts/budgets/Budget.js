@@ -71,6 +71,21 @@ const Budget = (props) => {
     music_rights_addl_songs, other_music, fringes_taxes_music,
     stars_music_total,
     // cast
+    // new
+    // prin_2_qty, prin_2_uno, prin_2_una, prin_2_rt,
+    // prin_3_qty, prin_3_uno, prin_3_una, prin_3_rt,
+    // actors_2_qty, actors_2_uno, actors_2_una, actors_2_rt,
+    // actors_3_qty, actors_3_uno, actors_3_una, actors_3_rt, 
+    // actors_4_qty, actors_4_uno, actors_4_una, actors_4_rt,
+    // actors_5_qty, actors_5_uno, actors_5_una, actors_5_rt,
+    // actors_6_qty, actors_6_uno, actors_6_una, actors_6_rt,
+    // actors_7_qty, actors_7_uno, actors_7_una, actors_7_rt,
+    // actors_week_qty, actors_week_uno, actors_week_una, actors_week_rt,
+    // actors_day_qty, actors_day_uno, actors_day_una, actors_day_rt,
+    // princ2_total, princ3_total, actor2_total, actor3_total,
+    // actor4_total, actor5_total, actor6_total, actor7_total, 
+    // actorweek_total, actorday_total,
+    // old
     rehersals_cast, rehersals_unit_cast,
     overtime_cast, overtime_unit_cast,
     days6th7th_cast, days6th7th_unit_cast,

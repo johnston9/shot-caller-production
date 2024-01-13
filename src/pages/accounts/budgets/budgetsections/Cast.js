@@ -17,11 +17,32 @@ const Cast = (props) => {
          stuntperformersTotal, setStuntperformersTotal,
          otherperformersTotal, setOtherperformersTotal,
          extrasTotal, setExtrasTotal,
-         castTotal, setCastTotal} = props;
+         castTotal, setCastTotal,
+         princ2Total, setPrinc2Total,
+         princ3Total, setPrinc3Total,
+         actor2Total, setActor2Total,
+         actor3Total, setActor3Total,
+         actor4Total, setActor4Total,
+         actor5Total, setActor5Total,
+         actor6Total, setActor6Total,
+         actor7Total, setActor7Total,
+         actorweekTotal, setActorweekTotal,
+         actordayTotal, setActordayTotal,
+  } = props;
          
   // Cast postData values
   const {
-    // new
+    prin_2_qty, prin_2_uno, prin_2_una, prin_2_rt,
+    prin_3_qty, prin_3_uno, prin_3_una, prin_3_rt,
+    actors_2_qty, actors_2_uno, actors_2_una, actors_2_rt,
+    actors_3_qty, actors_3_uno, actors_3_una, actors_3_rt, 
+    actors_4_qty, actors_4_uno, actors_4_una, actors_4_rt,
+    actors_5_qty, actors_5_uno, actors_5_una, actors_5_rt,
+    actors_6_qty, actors_6_uno, actors_6_una, actors_6_rt,
+    actors_7_qty, actors_7_uno, actors_7_una, actors_7_rt,
+    actors_week_qty, actors_week_uno, actors_week_una, actors_week_rt,
+    actors_day_qty, actors_day_uno, actors_day_una, actors_day_rt,
+    // old
     rehersals_cast, rehersals_unit_cast,
     overtime_cast, overtime_unit_cast,
     days6th7th_cast, days6th7th_unit_cast,
@@ -59,7 +80,7 @@ const Cast = (props) => {
   };
 
   // Calculate Functions
-  // function to calculate principals on change
+  // function to calculate principals 1 on change
   useEffect(() => {
     const addPrincipals = () => {
       setPrincipalsTotal(parseFloat(principals_units_number || 0) * 
@@ -76,7 +97,41 @@ const Cast = (props) => {
     // eslint-disable-next-line
   }, [principals_units_number, principals_quantity, principals_rate]);
 
-  // function to calculate actors on change
+  // function to calculate principals 2 on change
+  useEffect(() => {
+    const addPrincipal2 = () => {
+    setPrinc2Total(parseFloat(prin_2_qty || 0) * 
+      parseFloat(prin_2_uno || 0) * 
+      parseFloat(prin_2_rt || 0))
+    }
+    const timer = setTimeout(() => {
+        addPrincipal2();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [prin_2_qty, prin_2_uno, prin_2_rt]);
+
+  // function to calculate principals 3 on change
+  useEffect(() => {
+    const addPrincipal3 = () => {
+    setPrinc3Total(parseFloat(prin_3_qty || 0) * 
+      parseFloat(prin_3_uno || 0) * 
+      parseFloat(prin_3_rt || 0))
+    }
+    const timer = setTimeout(() => {
+        addPrincipal3();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [prin_3_qty, prin_3_uno, prin_3_rt]);
+
+  // function to calculate actors 1 on change
   useEffect(() => {
     const addActors = () => {
       setActorsTotal(parseFloat(actors_units_number || 0) * 
@@ -92,6 +147,142 @@ const Cast = (props) => {
     };
     // eslint-disable-next-line
   }, [actors_units_number, actors_quantity, actors_rate]);
+
+  // function to calculate actors 2 on change
+  useEffect(() => {
+    const addActor2 = () => {
+      setActor2Total(parseFloat(actors_2_qty || 0) * 
+      parseFloat(actors_2_uno || 0) * 
+      parseFloat(actors_2_rt || 0))
+    }
+    const timer = setTimeout(() => {
+        addActor2();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [actors_2_qty, actors_2_uno, actors_2_rt]);
+
+  // function to calculate actors 3 on change
+  useEffect(() => {
+    const addActor3 = () => {
+      setActor3Total(parseFloat(actors_3_qty || 0) * 
+      parseFloat(actors_3_uno || 0) * 
+      parseFloat(actors_3_rt || 0))
+    }
+    const timer = setTimeout(() => {
+        addActor3();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [actors_3_qty, actors_3_uno, actors_3_rt]);
+
+  // function to calculate actors 4 on change
+  useEffect(() => {
+    const addActor4 = () => {
+      setActor4Total(parseFloat(actors_4_qty || 0) * 
+      parseFloat(actors_4_uno || 0) * 
+      parseFloat(actors_4_rt || 0))
+    }
+    const timer = setTimeout(() => {
+        addActor4();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [actors_4_qty, actors_4_uno, actors_4_rt]);
+
+  // function to calculate actors 5 on change
+  useEffect(() => {
+    const addActor5 = () => {
+      setActor5Total(parseFloat(actors_5_qty || 0) * 
+      parseFloat(actors_5_uno || 0) * 
+      parseFloat(actors_5_rt || 0))
+    }
+    const timer = setTimeout(() => {
+        addActor5();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [actors_5_qty, actors_5_uno, actors_5_rt]);
+
+  // function to calculate actors 6 on change
+  useEffect(() => {
+    const addActor6 = () => {
+      setActor6Total(parseFloat(actors_6_qty || 0) * 
+      parseFloat(actors_6_uno || 0) * 
+      parseFloat(actors_6_rt || 0))
+    }
+    const timer = setTimeout(() => {
+        addActor6();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [actors_6_qty, actors_6_uno, actors_6_rt]);
+
+  // function to calculate actors 7 on change
+  useEffect(() => {
+    const addActor7 = () => {
+      setActor7Total(parseFloat(actors_7_qty || 0) * 
+      parseFloat(actors_7_uno || 0) * 
+      parseFloat(actors_7_rt || 0))
+    }
+    const timer = setTimeout(() => {
+        addActor7();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [actors_7_qty, actors_7_uno, actors_7_rt]);
+
+  // function to calculate actors week on change
+  useEffect(() => {
+    const addActorweek = () => {
+      setActorweekTotal(parseFloat(actors_week_qty || 0) * 
+      parseFloat(actors_week_uno || 0) * 
+      parseFloat(actors_week_rt || 0))
+    }
+    const timer = setTimeout(() => {
+        addActorweek();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [actors_week_qty, actors_week_uno, actors_week_rt]);
+
+  // function to calculate actors day on change
+  useEffect(() => {
+    const addActorday = () => {
+      setActordayTotal(parseFloat(actors_day_qty || 0) * 
+      parseFloat(actors_day_uno || 0) * 
+      parseFloat(actors_day_rt || 0))
+    }
+    const timer = setTimeout(() => {
+        addActorday();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [actors_day_qty, actors_day_uno, actors_day_rt]);
 
   // function to calculate stuntcoordinators on change
   useEffect(() => {

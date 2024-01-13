@@ -2403,7 +2403,7 @@ const PropertyLabour = (props) => {
     <p className={`${styles.Underline}`}>11.91</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Other - Property</p>
+    <p className={`${styles.Underline}`}>Other</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     </Col>

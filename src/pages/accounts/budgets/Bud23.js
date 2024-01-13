@@ -1,50 +1,69 @@
-days6th7th_unit_wran: "",
-days6th7th_wran: 0,
-overtime_unit_wran: "",
-overtime_wran: 0,
-holidays_unit_wran: "", 
-holidays_wran: 0,
-box_rent_unit_wran: "",
-box_rent_wran: 0,
-other_solo_wran: 0,
-he_wran_qty_prep: 0,
-he_wran_uno_prep: 0,
-he_wran_una_prep: "",
-he_wran_rt_prep: 0,
-he_wran_qty_wrap: 0,
-he_wran_uno_wrap: 0,
-he_wran_una_wrap: "",
-he_wran_rt_wrap: 0,
-oth_wran_qty_prep: 0,
-oth_wran_uno_prep: 0,
-oth_wran_una_prep: "",
-oth_wran_rt_prep: 0,
-oth_wran_qty_wrap: 0,
-oth_wran_uno_wrap: 0,
-oth_wran_una_wrap: "",
-oth_wran_rt_wrap: 0,
-  // head wrangler
-  // head wrangler shoot Total postData
-  const [headwranglerTotal, setHeadwranglerTotal] = useState(0);
-  // head wrangler prep Total postData
-  const [hewranprepTotal, setHewranprepTotal] = useState(0);
-  // head wrangler wrap Total postData
-  const [hewranwrapTotal, setHewranwrapTotal] = useState(0);
-  // head wrangler all Total postData
-  const [hewranallTotal, setHewranallTotal] = useState(0);
+    prin_2_qty,
+    prin_2_uno,
+    prin_2_una,
+    prin_2_rt,
+    prin_3_qty,
+    prin_3_uno,
+    prin_3_una,
+    prin_3_rt,
+    actors_2_qty,
+    actors_2_uno,
+    actors_2_una,
+    actors_2_rt,
+    actors_3_qty,
+    actors_3_uno,
+    actors_3_una,
+    actors_3_rt,
+    actors_4_qty,
+    actors_4_uno,
+    actors_4_una,
+    actors_4_rt,
+    actors_5_qty,
+    actors_5_uno,
+    actors_5_una,
+    actors_5_rt,
+    actors_6_qty,
+    actors_6_uno,
+    actors_6_una,
+    actors_6_rt,
+    actors_7_qty,
+    actors_7_uno,
+    actors_7_una,
+    actors_7_rt,
+    actors_week_qty,
+    actors_week_uno,
+    actors_week_una,
+    actors_week_rt,
+    actors_day_qty,
+    actors_day_uno,
+    actors_day_una,
+    actors_day_rt,
+    //
+    // Principals 1 Total postData
+  const [principalsTotal, setPrincipalsTotal] = useState(0);
+  // Principals 2 Total postData
+  const [princ2Total, setPrinc2Total] = useState(0);
+  // Principals 3 Total postData
+  const [princ3Total, setPrinc3Total] = useState(0);
 
-  // other wrangling labour
-  // other wrangling labour shoot Total postData
-  const [otherwranglinglabourTotal, setOtherwranglinglabourTotal] = useState(0);
-  // other wrangling labour prep Total postData
-  const [othwranlabprepTotal, setOtwranlabprepTotal] = useState(0);
-  // other wrangling labour wrap Total postData
-  const [othwranlabwrapTotal, setOtwranlabwrapTotal] = useState(0);
-  // other wrangling labour all Total postData
-  const [othwranlaballTotal, setOtwranlaballTotal] = useState(0);
-
-  // Wrangling Labour Total postData 
-  const [wranglerlabourTotal, setWranglerlabourTotal] = useState(0);
+  // Actors Total postData 
+  const [actorsTotal, setActorsTotal] = useState(0);
+  // Actor 2 Total postData 
+  const [actor2Total, setActor2Total] = useState(0);
+  // Actors 3 Total postData 
+  const [actor3Total, setActor3Total] = useState(0);
+  // Actors 4 Total postData 
+  const [actor4Total, setActor4Total] = useState(0);
+  // Actors 5 Total postData 
+  const [actor5Total, setActor5Total] = useState(0);
+  // Actors 6 Total postData 
+  const [actor6Total, setActor6Total] = useState(0);
+  // Actors 7 Total postData 
+  const [actor7Total, setActor7Total] = useState(0);
+  // Actors week Total postData 
+  const [actorweekTotal, setActorweekTotal] = useState(0);
+  // Actors day Total postData 
+  const [actordayTotal, setActordayTotal] = useState(0);
 //
 days6th7th_unit,
 days6th7th, 
