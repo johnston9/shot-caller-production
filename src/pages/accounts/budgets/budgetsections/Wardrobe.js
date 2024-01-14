@@ -17,10 +17,49 @@ const Wardrobe = (props) => {
            wardrobeassistTotal, setWardrobeassistTotal,
            truckcostumerTotal, setTruckcostumerTotal,
            otherwardrobeTotal, setOtherwardrobeTotal, setShow,
-           wardrobelabourTotal, setWardrobelabourTotal} = props;
+           wardrobelabourTotal, setWardrobelabourTotal,
+           cosdesprepTotal, setCosdesprepTotal,
+           cosdeswrapTotal, setCosdeswrapTotal,
+           cosdesallTotal, setCosdesallTotal,
+           ascosdesprepTotal, setAscosdesprepTotal,
+           ascosdeswrapTotal, setAscosdeswrapTotal,
+           ascosdesallTotal, setAscosdesallTotal,
+           hewarprepTotal, setHewarprepTotal,
+           hewarwrapTotal, setHewarwrapTotal,
+           hewarallTotal, setHewarallTotal,
+           warasprepTotal, setWarasprepTotal,
+           waraswrapTotal, setWaraswrapTotal,
+           warasallTotal, setWarasallTotal,
+           trucosprepTotal, setTrucosprepTotal,
+           trucoswrapTotal, setTrucoswrapTotal,
+           trucosallTotal, setTrucosallTotal,
+           shopperTotal, setShopperTotal,
+           shopprepTotal, setShopprepTotal,
+           shopallTotal, setShopallTotal,
+           othwarprepTotal, setOthwarprepTotal,
+           othwarwrapTotal, setOthwarwrapTotal,
+           othwarallTotal, setOthwarallTotal,
+    } = props;
     
     // Wardrobe Labour postData values
-    const {costume_designer_quantity, costume_designer_units_number,
+    const {days6th7th_unit_war, days6th7th_war, overtime_unit_war, overtime_war,
+        holidays_unit_war, holidays_war, box_rent_unit_war, box_rent_war, other_solo_war,
+        cos_des_qty_prep, cos_des_uno_prep, cos_des_una_prep, cos_des_rt_prep,
+        cos_des_qty_wrap, cos_des_uno_wrap, cos_des_una_wrap, cos_des_rt_wrap,
+        as_cos_des_qty_prep, as_cos_des_uno_prep, as_cos_des_una_prep, as_cos_des_rt_prep,
+        as_cos_des_qty_wrap, as_cos_des_uno_wrap, as_cos_des_una_wrap, as_cos_des_rt_wrap,
+        he_war_qty_prep, he_war_uno_prep, he_war_una_prep, he_war_rt_prep,
+        he_war_qty_wrap, he_war_uno_wrap, he_war_una_wrap, he_war_rt_wrap,
+        war_as_qty_prep, war_as_uno_prep, war_as_una_prep, war_as_rt_prep, 
+        war_as_qty_wrap, war_as_uno_wrap, war_as_una_wrap, war_as_rt_wrap,
+        tru_cos_qty_prep, tru_cos_uno_prep, tru_cos_una_prep, tru_cos_rt_prep,
+        tru_cos_qty_wrap, tru_cos_uno_wrap, tru_cos_una_wrap, tru_cos_rt_wrap,
+        ot_war_qty_prep, ot_war_uno_prep, ot_war_una_prep, ot_war_rt_prep,
+        ot_war_qty_wrap, ot_war_uno_wrap, ot_war_una_wrap, ot_war_rt_wrap,
+        shopper_qty, shopper_uno, shopper_una, shopper_rt,
+        shopper_qty_prep, shopper_uno_prep, shopper_una_prep, shopper_rt_prep,
+        tailors, textile_ar, cos_coor,
+        costume_designer_quantity, costume_designer_units_number,
         costume_designer_units_name, costume_designer_rate,
         assist_costume_designer_quantity, assist_costume_designer_units_number,
         assist_costume_designer_units_name, assist_costume_designer_rate,
@@ -38,9 +77,9 @@ const Wardrobe = (props) => {
     const handleChange = (event) => {
         setPostDataWardrobe({
         ...postDataWardrobe,
-        [event.target.name]: parseFloat(event.target.value || 0 ),
+        [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
         });
-    }; 
+    };
 
     // handleChange Text 
     const handleChangeText = (event) => {
@@ -51,7 +90,9 @@ const Wardrobe = (props) => {
     };
 
     // Calculate Functions
-    // function to calculate costume designer on change
+
+    // costume designer
+    // function to calculate costume designer shoot on change
     useEffect(() => {
         const addCosdes = () => {
         setCostumedesignerTotal(parseFloat(costume_designer_quantity || 0) * 
@@ -67,9 +108,60 @@ const Wardrobe = (props) => {
         };
         // eslint-disable-next-line
     }, [costume_designer_quantity, costume_designer_units_number,
-        costume_designer_rate]);
+    costume_designer_rate]);
+
+    // function to calculate costume designer prep on change
+    useEffect(() => {
+        const addCosdesprep = () => {
+        setCosdesprepTotal(parseFloat(cos_des_qty_prep || 0) * 
+        parseFloat(cos_des_uno_prep || 0) * 
+        parseFloat(cos_des_rt_prep || 0))
+        }
+        const timer = setTimeout(() => {
+            addCosdesprep();
+        }, 2000);
+
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [cos_des_qty_prep, cos_des_uno_prep, cos_des_rt_prep]);
+
+    // function to calculate costume designer wrap on change
+    useEffect(() => {
+        const addCosdeswrap = () => {
+        setCosdeswrapTotal(parseFloat(cos_des_qty_wrap || 0) * 
+        parseFloat(cos_des_uno_wrap || 0) * 
+        parseFloat(cos_des_rt_wrap || 0))
+        }
+        const timer = setTimeout(() => {
+            addCosdeswrap();
+        }, 2000);
+
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [cos_des_qty_wrap, cos_des_uno_wrap, cos_des_rt_wrap]);
+
+    // function to calculate costume designer all on change
+    useEffect(() => {
+        const addCosdesall = () => {
+        setCosdesallTotal(parseFloat(costumedesignerTotal || 0) +
+        parseFloat(cosdesprepTotal || 0) +
+        parseFloat(cosdeswrapTotal || 0))
+        }
+        const timer = setTimeout(() => {
+            addCosdesall();
+        }, 1000);
+
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [costumedesignerTotal, cosdesprepTotal, cosdeswrapTotal]);
     
-    // function to calculate assistant costume designer on change
+    // function to calculate assistant costume designer shoot on change
     useEffect(() => {
         const addAsscos = () => {
         setAssistcosdesignerTotal(parseFloat(assist_costume_designer_quantity || 0) * 
@@ -85,9 +177,61 @@ const Wardrobe = (props) => {
         };
         // eslint-disable-next-line
     }, [assist_costume_designer_quantity, assist_costume_designer_units_number,
-        assist_costume_designer_rate]);
+    assist_costume_designer_rate]);
 
-    // function to calculate head wardrobe on change
+    // function to calculate assistant costume designer prep on change
+    useEffect(() => {
+        const addAsscosprep = () => {
+        setAscosdesprepTotal(parseFloat(as_cos_des_qty_prep || 0) * 
+        parseFloat(as_cos_des_uno_prep || 0) * 
+        parseFloat(as_cos_des_rt_prep || 0))
+        }
+        const timer = setTimeout(() => {
+            addAsscosprep();
+        }, 2000);
+
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [as_cos_des_qty_prep, as_cos_des_uno_prep, as_cos_des_rt_prep]);
+
+    // function to calculate assistant costume designer wrap on change
+    useEffect(() => {
+        const addAsscoswrap = () => {
+        setAscosdeswrapTotal(parseFloat(as_cos_des_qty_wrap || 0) * 
+        parseFloat(as_cos_des_uno_wrap || 0) * 
+        parseFloat(as_cos_des_rt_wrap || 0))
+        }
+        const timer = setTimeout(() => {
+            addAsscoswrap();
+        }, 2000);
+
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [as_cos_des_qty_wrap, as_cos_des_uno_wrap, as_cos_des_rt_wrap]);
+
+    // function to calculate assistant costume designer all on change
+    useEffect(() => {
+        const addAsscosall = () => {
+        setAscosdesallTotal(parseFloat(assistcosdesignerTotal || 0) +
+        parseFloat(ascosdesprepTotal || 0) +
+        parseFloat(ascosdeswrapTotal || 0))
+        }
+        const timer = setTimeout(() => {
+            addAsscosall();
+        }, 1000);
+
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [assistcosdesignerTotal, ascosdesprepTotal, ascosdeswrapTotal]);
+
+    // head wardrobe/supervisor
+    // function to calculate head wardrobe shoot on change
     useEffect(() => {
         const addHeawar = () => {
         setHeadwardrobeTotal(parseFloat(head_wardrobe_quantity || 0) * 
@@ -103,7 +247,7 @@ const Wardrobe = (props) => {
         };
         // eslint-disable-next-line
     }, [head_wardrobe_quantity, head_wardrobe_units_number,
-        head_wardrobe_rate]);
+    head_wardrobe_rate]);
 
     // function to calculate wardrobe assistant on change
     useEffect(() => {

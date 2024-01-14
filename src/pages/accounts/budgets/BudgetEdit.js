@@ -2206,13 +2206,13 @@ function BudgetEdit() {
 
   // Special Effects Labour postData
   const [postDataSpecialEffects, setPostDataSpecialEffects] = useState({
-    days6th7th_unit_fx: 0,
+    days6th7th_unit_fx: "",
     days6th7th_fx: 0,
-    overtime_unit_fx: 0,
+    overtime_unit_fx: "",
     overtime_fx: 0,
-    holidays_unit_fx: 0, 
+    holidays_unit_fx: "", 
     holidays_fx: 0,
-    box_rent_unit_fx: 0,
+    box_rent_unit_fx: "",
     box_rent_fx: 0,
     other_solo_fx: 0,
     fx_sup_qty_prep: 0,
@@ -2312,6 +2312,75 @@ function BudgetEdit() {
 
   // Wardrobe Labour postData
   const [postDataWardrobe, setPostDataWardrobe] = useState({
+    days6th7th_unit_war: "",
+    days6th7th_war: 0,
+    overtime_unit_war: "",
+    overtime_war: 0,
+    holidays_unit_war: "", 
+    holidays_war: 0,
+    box_rent_unit_war: "",
+    box_rent_war: 0,
+    other_solo_war: 0,
+    cos_des_qty_prep: 0,
+    cos_des_uno_prep: 0,
+    cos_des_una_prep: "",
+    cos_des_rt_prep: 0,
+    cos_des_qty_wrap: 0,
+    cos_des_uno_wrap: 0,
+    cos_des_una_wrap: "",
+    cos_des_rt_wrap: 0,
+    as_cos_des_qty_prep: 0,
+    as_cos_des_uno_prep: 0,
+    as_cos_des_una_prep: "",
+    as_cos_des_rt_prep: 0,
+    as_cos_des_qty_wrap: 0,
+    as_cos_des_uno_wrap: 0,
+    as_cos_des_una_wrap: "",
+    as_cos_des_rt_wrap: 0,
+    he_war_qty_prep: 0,
+    he_war_uno_prep: 0,
+    he_war_una_prep: "",
+    he_war_rt_prep: 0,
+    he_war_qty_wrap: 0,
+    he_war_uno_wrap: 0,
+    he_war_una_wrap: "",
+    he_war_rt_wrap: 0,
+    war_as_qty_prep: 0,
+    war_as_uno_prep: 0,
+    war_as_una_prep: "",
+    war_as_rt_prep: 0,
+    war_as_qty_wrap: 0,
+    war_as_uno_wrap: 0,
+    war_as_una_wrap: "",
+    war_as_rt_wrap: 0,
+    tru_cos_qty_prep: 0,
+    tru_cos_uno_prep: 0,
+    tru_cos_una_prep: "",
+    tru_cos_rt_prep: 0,
+    tru_cos_qty_wrap: 0,
+    tru_cos_uno_wrap: 0,
+    tru_cos_una_wrap: "",
+    tru_cos_rt_wrap: 0,
+    ot_war_qty_prep: 0,
+    ot_war_uno_prep: 0,
+    ot_war_una_prep: "",
+    ot_war_rt_prep: 0,
+    ot_war_qty_wrap: 0,
+    ot_war_uno_wrap: 0,
+    ot_war_una_wrap: "",
+    ot_war_rt_wrap: 0,
+    shopper_qty: 0,
+    shopper_uno: 0,
+    shopper_una: "",
+    shopper_rt: 0,
+    shopper_qty_prep: 0,
+    shopper_uno_prep: 0,
+    shopper_una_prep: "",
+    shopper_rt_prep: 0,
+    tailors: 0,
+    textile_ar: 0,
+    cos_coor: 0,
+    // old _prep wrap
     fringes_taxes_wardrobe: 0,
     costume_designer_quantity: 0,
     costume_designer_units_number: 0,
@@ -2340,7 +2409,26 @@ function BudgetEdit() {
   });
 
   // Wardrobe Labour postData values
-  const {costume_designer_quantity, costume_designer_units_number,
+  const {
+    days6th7th_unit_war, days6th7th_war, overtime_unit_war, overtime_war,
+    holidays_unit_war, holidays_war, box_rent_unit_war, box_rent_war, other_solo_war,
+    cos_des_qty_prep, cos_des_uno_prep, cos_des_una_prep, cos_des_rt_prep,
+    cos_des_qty_wrap, cos_des_uno_wrap, cos_des_una_wrap, cos_des_rt_wrap,
+    as_cos_des_qty_prep, as_cos_des_uno_prep, as_cos_des_una_prep, as_cos_des_rt_prep,
+    as_cos_des_qty_wrap, as_cos_des_uno_wrap, as_cos_des_una_wrap, as_cos_des_rt_wrap,
+    he_war_qty_prep, he_war_uno_prep, he_war_una_prep, he_war_rt_prep,
+    he_war_qty_wrap, he_war_uno_wrap, he_war_una_wrap, he_war_rt_wrap,
+    war_as_qty_prep, war_as_uno_prep, war_as_una_prep, war_as_rt_prep, 
+    war_as_qty_wrap, war_as_uno_wrap, war_as_una_wrap, war_as_rt_wrap,
+    tru_cos_qty_prep, tru_cos_uno_prep, tru_cos_una_prep, tru_cos_rt_prep,
+    tru_cos_qty_wrap, tru_cos_uno_wrap, tru_cos_una_wrap, tru_cos_rt_wrap,
+    ot_war_qty_prep, ot_war_uno_prep, ot_war_una_prep, ot_war_rt_prep,
+    ot_war_qty_wrap, ot_war_uno_wrap, ot_war_una_wrap, ot_war_rt_wrap,
+    shopper_qty, shopper_uno, shopper_una, shopper_rt,
+    shopper_qty_prep, shopper_uno_prep, shopper_una_prep, shopper_rt_prep,
+    tailors, textile_ar, cos_coor,
+    // old
+    costume_designer_quantity, costume_designer_units_number,
     costume_designer_units_name, costume_designer_rate,
     assist_costume_designer_quantity, assist_costume_designer_units_number,
     assist_costume_designer_units_name, assist_costume_designer_rate,
@@ -2355,23 +2443,73 @@ function BudgetEdit() {
     fringes_taxes_wardrobe, } = postDataWardrobe;
 
   // Totals
-  // costume designer Total postData 
+
+  // costume designer
+  // costume designer Total shoot postData 
   const [costumedesignerTotal, setCostumedesignerTotal] = useState(0);
+  // costume designer prep Total postData 
+  const [cosdesprepTotal, setCosdesprepTotal] = useState(0);
+  // costume designer wrap Total postData 
+  const [cosdeswrapTotal, setCosdeswrapTotal] = useState(0);
+  // costume designer all Total postData 
+  const [cosdesallTotal, setCosdesallTotal] = useState(0);
 
-  // assistant costume designer Total postData 
+  // assistant costume designer shoot Total postData 
   const [assistcosdesignerTotal, setAssistcosdesignerTotal] = useState(0);
+  // assistant costume designer prep Total postData 
+  const [ascosdesprepTotal, setAscosdesprepTotal] = useState(0);
+  // assistant costume designer wrap Total postData 
+  const [ascosdeswrapTotal, setAscosdeswrapTotal] = useState(0);
+  // assistant costume designer all Total postData 
+  const [ascosdesallTotal, setAscosdesallTotal] = useState(0);
 
-  // head wardrobe Total postData 
+  // head wardrobe/supervisor
+  // head wardrobe shoot Total postData 
   const [headwardrobeTotal, setHeadwardrobeTotal] = useState(0);
+  // head wardrobe prep Total postData 
+  const [hewarprepTotal, setHewarprepTotal] = useState(0);
+  // head wardrobe wrap Total postData 
+  const [hewarwrapTotal, setHewarwrapTotal] = useState(0);
+  // head wardrobe all Total postData 
+  const [hewarallTotal, setHewarallTotal] = useState(0);
 
-  // wardrobe assist Total postData 
+  // wardrobe assist/set costumer
+  // wardrobe assist shoot Total postData 
   const [wardrobeassistTotal, setWardrobeassistTotal] = useState(0);
+  // wardrobe assist prep Total postData 
+  const [warasprepTotal, setWarasprepTotal] = useState(0);
+  // wardrobe assist wrap Total postData 
+  const [waraswrapTotal, setWaraswrapTotal] = useState(0);
+  // wardrobe assist all Total postData 
+  const [warasallTotal, setWarasallTotal] = useState(0);
 
-  // truck costumer Total postData 
+  // truck costumer
+  // truck costumer shoot Total postData 
   const [truckcostumerTotal, setTruckcostumerTotal] = useState(0);
+  // truck costumer prep Total postData 
+  const [trucosprepTotal, setTrucosprepTotal] = useState(0);
+  // truck costumer wrap Total postData 
+  const [trucoswrapTotal, setTrucoswrapTotal] = useState(0);
+  // truck costumer all Total postData 
+  const [trucosallTotal, setTrucosallTotal] = useState(0);
 
-  // other wardrobe labour Total postData 
+  // shopper
+  // shopper shoot Total postData 
+  const [shopperTotal, setShopperTotal] = useState(0);
+  // shopper prep Total postData 
+  const [shopprepTotal, setShopprepTotal] = useState(0);
+  // shopper all Total postData 
+  const [shopallTotal, setShopallTotal] = useState(0);
+
+  // other wardrobe labour
+  // other wardrobe labour shoot Total postData 
   const [otherwardrobeTotal, setOtherwardrobeTotal] = useState(0);
+  // other wardrobe labour prep Total postData 
+  const [othwarprepTotal, setOthwarprepTotal] = useState(0);
+  // other wardrobe labour wrap Total postData 
+  const [othwarwrapTotal, setOthwarwrapTotal] = useState(0);
+  // other wardrobe labour all Total postData 
+  const [othwarallTotal, setOthwarallTotal] = useState(0);
 
   // Wardrobe Labour Total postData 
   const [wardrobelabourTotal, setWardrobelabourTotal] = useState(0);
@@ -5332,7 +5470,24 @@ function BudgetEdit() {
             other_fx_labour_units_name, other_fx_labour_rate,});
         setFxlabourTotal(fxlabour_total);
         // wradrobe
-        const {fringes_taxes_wardrobe,
+        const {days6th7th_unit_war, days6th7th_war, overtime_unit_war, overtime_war,
+          holidays_unit_war, holidays_war, box_rent_unit_war, box_rent_war, other_solo_war,
+          cos_des_qty_prep, cos_des_uno_prep, cos_des_una_prep, cos_des_rt_prep,
+          cos_des_qty_wrap, cos_des_uno_wrap, cos_des_una_wrap, cos_des_rt_wrap,
+          as_cos_des_qty_prep, as_cos_des_uno_prep, as_cos_des_una_prep, as_cos_des_rt_prep,
+          as_cos_des_qty_wrap, as_cos_des_uno_wrap, as_cos_des_una_wrap, as_cos_des_rt_wrap,
+          he_war_qty_prep, he_war_uno_prep, he_war_una_prep, he_war_rt_prep,
+          he_war_qty_wrap, he_war_uno_wrap, he_war_una_wrap, he_war_rt_wrap,
+          war_as_qty_prep, war_as_uno_prep, war_as_una_prep, war_as_rt_prep, 
+          war_as_qty_wrap, war_as_uno_wrap, war_as_una_wrap, war_as_rt_wrap,
+          tru_cos_qty_prep, tru_cos_uno_prep, tru_cos_una_prep, tru_cos_rt_prep,
+          tru_cos_qty_wrap, tru_cos_uno_wrap, tru_cos_una_wrap, tru_cos_rt_wrap,
+          ot_war_qty_prep, ot_war_uno_prep, ot_war_una_prep, ot_war_rt_prep,
+          ot_war_qty_wrap, ot_war_uno_wrap, ot_war_una_wrap, ot_war_rt_wrap,
+          shopper_qty, shopper_uno, shopper_una, shopper_rt,
+          shopper_qty_prep, shopper_uno_prep, shopper_una_prep, shopper_rt_prep,
+          tailors, textile_ar, cos_coor,
+          fringes_taxes_wardrobe,
           costume_designer_quantity, costume_designer_units_number,
           costume_designer_units_name, costume_designer_rate,
           assist_costume_designer_quantity, assist_costume_designer_units_number,
@@ -5346,7 +5501,24 @@ function BudgetEdit() {
           other_wardrobe_labour_quantity, other_wardrobe_labour_units_number,
           other_wardrobe_labour_units_name, other_wardrobe_labour_rate,
           wardrobelabour_total} = data.results[0];
-        setPostDataWardrobe({fringes_taxes_wardrobe,
+        setPostDataWardrobe({days6th7th_unit_war, days6th7th_war, overtime_unit_war, overtime_war,
+          holidays_unit_war, holidays_war, box_rent_unit_war, box_rent_war, other_solo_war,
+          cos_des_qty_prep, cos_des_uno_prep, cos_des_una_prep, cos_des_rt_prep,
+          cos_des_qty_wrap, cos_des_uno_wrap, cos_des_una_wrap, cos_des_rt_wrap,
+          as_cos_des_qty_prep, as_cos_des_uno_prep, as_cos_des_una_prep, as_cos_des_rt_prep,
+          as_cos_des_qty_wrap, as_cos_des_uno_wrap, as_cos_des_una_wrap, as_cos_des_rt_wrap,
+          he_war_qty_prep, he_war_uno_prep, he_war_una_prep, he_war_rt_prep,
+          he_war_qty_wrap, he_war_uno_wrap, he_war_una_wrap, he_war_rt_wrap,
+          war_as_qty_prep, war_as_uno_prep, war_as_una_prep, war_as_rt_prep, 
+          war_as_qty_wrap, war_as_uno_wrap, war_as_una_wrap, war_as_rt_wrap,
+          tru_cos_qty_prep, tru_cos_uno_prep, tru_cos_una_prep, tru_cos_rt_prep,
+          tru_cos_qty_wrap, tru_cos_uno_wrap, tru_cos_una_wrap, tru_cos_rt_wrap,
+          ot_war_qty_prep, ot_war_uno_prep, ot_war_una_prep, ot_war_rt_prep,
+          ot_war_qty_wrap, ot_war_uno_wrap, ot_war_una_wrap, ot_war_rt_wrap,
+          shopper_qty, shopper_uno, shopper_una, shopper_rt,
+          shopper_qty_prep, shopper_uno_prep, shopper_una_prep, shopper_rt_prep,
+          tailors, textile_ar, cos_coor,
+          fringes_taxes_wardrobe,
           costume_designer_quantity, costume_designer_units_number,
           costume_designer_units_name, costume_designer_rate,
           assist_costume_designer_quantity, assist_costume_designer_units_number,
@@ -7589,6 +7761,123 @@ function BudgetEdit() {
     formData.append("actor7_total", actor7Total);
     formData.append("actorweek_total", actorweekTotal);
     formData.append("actorday_total", actordayTotal);
+    formData.append("days6th7th_unit_war", days6th7th_unit_war);
+    formData.append("days6th7th_war", days6th7th_war);
+    formData.append("overtime_unit_war", overtime_unit_war);
+    formData.append("overtime_war", overtime_war);
+    formData.append("holidays_unit_war", holidays_unit_war);
+    formData.append("holidays_war", holidays_war);
+    formData.append("box_rent_unit_war", box_rent_unit_war);
+    formData.append("box_rent_war", box_rent_war);
+    formData.append("other_solo_war", other_solo_war);
+    formData.append("cos_des_qty_prep", cos_des_qty_prep);
+    formData.append("cos_des_uno_prep", cos_des_uno_prep);
+    formData.append("cos_des_una_prep", cos_des_una_prep);
+    formData.append("cos_des_rt_prep", cos_des_rt_prep);
+    formData.append("cos_des_qty_wrap", cos_des_qty_wrap);
+    formData.append("cos_des_uno_wrap", cos_des_uno_wrap);
+    formData.append("cos_des_una_wrap", cos_des_una_wrap);
+    formData.append("cos_des_rt_wrap", cos_des_rt_wrap);
+    formData.append("as_cos_des_qty_prep", as_cos_des_qty_prep);
+    formData.append("as_cos_des_uno_prep", as_cos_des_uno_prep);
+    formData.append("as_cos_des_una_prep", as_cos_des_una_prep);
+    formData.append("as_cos_des_rt_prep", as_cos_des_rt_prep);
+    formData.append("as_cos_des_qty_wrap", as_cos_des_qty_wrap);
+    formData.append("as_cos_des_uno_wrap", as_cos_des_uno_wrap);
+    formData.append("as_cos_des_una_wrap", as_cos_des_una_wrap);
+    formData.append("as_cos_des_rt_wrap", as_cos_des_rt_wrap);
+    formData.append("he_war_qty_prep", he_war_qty_prep);
+    formData.append("he_war_uno_prep", he_war_uno_prep);
+    formData.append("he_war_una_prep", he_war_una_prep);
+    formData.append("he_war_rt_prep", he_war_rt_prep);
+    formData.append("he_war_qty_wrap", he_war_qty_wrap);
+    formData.append("he_war_uno_wrap", he_war_uno_wrap);
+    formData.append("he_war_una_wrap", he_war_una_wrap);
+    formData.append("he_war_rt_wrap", he_war_rt_wrap);
+    formData.append("war_as_qty_prep", war_as_qty_prep);
+    formData.append("war_as_uno_prep", war_as_uno_prep);
+    formData.append("war_as_una_prep", war_as_una_prep);
+    formData.append("war_as_rt_prep", war_as_rt_prep);
+    formData.append("war_as_qty_wrap", war_as_qty_wrap);
+    formData.append("war_as_uno_wrap", war_as_uno_wrap);
+    formData.append("war_as_una_wrap", war_as_una_wrap);
+    formData.append("war_as_rt_wrap", war_as_rt_wrap);
+    formData.append("tru_cos_qty_prep", tru_cos_qty_prep);
+    formData.append("tru_cos_uno_prep", tru_cos_uno_prep);
+    formData.append("tru_cos_una_prep", tru_cos_una_prep);
+    formData.append("tru_cos_rt_prep", tru_cos_rt_prep);
+    formData.append("tru_cos_qty_wrap", tru_cos_qty_wrap);
+    formData.append("tru_cos_uno_wrap", tru_cos_uno_wrap);
+    formData.append("tru_cos_una_wrap", tru_cos_una_wrap);
+    formData.append("tru_cos_rt_wrap", tru_cos_rt_wrap);
+    formData.append("ot_war_qty_prep", ot_war_qty_prep);
+    formData.append("ot_war_uno_prep", ot_war_uno_prep);
+    formData.append("ot_war_una_prep", ot_war_una_prep);
+    formData.append("ot_war_rt_prep", ot_war_rt_prep);
+    formData.append("ot_war_qty_wrap", ot_war_qty_wrap);
+    formData.append("ot_war_uno_wrap", ot_war_uno_wrap);
+    formData.append("ot_war_una_wrap", ot_war_una_wrap);
+    formData.append("ot_war_rt_wrap", ot_war_rt_wrap);
+    formData.append("shopper_qty", shopper_qty);
+    formData.append("shopper_uno", shopper_uno);
+    formData.append("shopper_una", shopper_una);
+    formData.append("shopper_rt", shopper_rt);
+    formData.append("shopper_qty_prep", shopper_qty_prep);
+    formData.append("shopper_uno_prep", shopper_uno_prep);
+    formData.append("shopper_una_prep", shopper_una_prep);
+    formData.append("shopper_rt_prep", shopper_rt_prep);
+    formData.append("tailors", tailors);
+    formData.append("textile_ar", textile_ar);
+    formData.append("cos_coor", cos_coor);
+    formData.append("cosdesprep_total", cosdesprepTotal);
+    formData.append("cosdeswrap_total", cosdeswrapTotal);
+    formData.append("cosdesall_total", cosdesallTotal);
+    formData.append("ascosdesprep_total", ascosdesprepTotal);
+    formData.append("ascosdeswrap_total", ascosdeswrapTotal);
+    formData.append("ascosdesall_total", ascosdesallTotal);
+    formData.append("hewarprep_total", hewarprepTotal);
+    formData.append("hewarwrap_total", hewarwrapTotal);
+    formData.append("hewarall_total", hewarallTotal);
+    formData.append("warasprep_total", warasprepTotal);
+    formData.append("waraswrap_total", waraswrapTotal);
+    formData.append("warasall_total", warasallTotal);
+    formData.append("trucosprep_total", trucosprepTotal);
+    formData.append("trucoswrap_total", trucoswrapTotal);
+    formData.append("trucosall_total", trucosallTotal);
+    formData.append("shopper_total", shopperTotal);
+    formData.append("shopprep_total", shopprepTotal);
+    formData.append("shopall_total", shopallTotal);
+    formData.append("othwarprep_total", othwarprepTotal);
+    formData.append("othwarwrap_total", othwarwrapTotal);
+    formData.append("othwarall_total", othwarallTotal);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
     // formData.append("staaaaars", staaaaars);
     // formData.append("staaaaars", staaaaars);
     // formData.append("staaaaars", staaaaars);
@@ -9202,7 +9491,50 @@ function BudgetEdit() {
       setOtherwardrobeTotal={setOtherwardrobeTotal}
       wardrobelabourTotal={wardrobelabourTotal}
       setWardrobelabourTotal={setWardrobelabourTotal}
-      setShow={setShowWardrobe}  /> 
+      setShow={setShowWardrobe}  
+      cosdesprepTotal={cosdesprepTotal}
+      setCosdesprepTotal={setCosdesprepTotal}
+      cosdeswrapTotal={cosdeswrapTotal}
+      setCosdeswrapTotal={setCosdeswrapTotal}
+      cosdesallTotal={cosdesallTotal}
+      setCosdesallTotal={setCosdesallTotal}
+      ascosdesprepTotal={ascosdesprepTotal}
+      setAscosdesprepTotal={setAscosdesprepTotal}
+      ascosdeswrapTotal={ascosdeswrapTotal}
+      setAscosdeswrapTotal={setAscosdeswrapTotal}
+      ascosdesallTotal={ascosdesallTotal}
+      setAscosdesallTotal={setAscosdesallTotal}
+      hewarprepTotal={hewarprepTotal}
+      setHewarprepTotal={setHewarprepTotal}
+      hewarwrapTotal={hewarwrapTotal}
+      setHewarwrapTotal={setHewarwrapTotal}
+      hewarallTotal={hewarallTotal}
+      setHewarallTotal={setHewarallTotal}
+      warasprepTotal={warasprepTotal}
+      setWarasprepTotal={setWarasprepTotal}
+      waraswrapTotal={waraswrapTotal}
+      setWaraswrapTotal={setWaraswrapTotal}
+      warasallTotal={warasallTotal}
+      setWarasallTotal={setWarasallTotal}
+      trucosprepTotal={trucosprepTotal}
+      setTrucosprepTotal={setTrucosprepTotal}
+      trucoswrapTotal={trucoswrapTotal}
+      setTrucoswrapTotal={setTrucoswrapTotal}
+      trucosallTotal={trucosallTotal}
+      setTrucosallTotal={setTrucosallTotal}
+      shopperTotal={shopperTotal}
+      setShopperTotal={setShopperTotal}
+      shopprepTotal={shopprepTotal}
+      setShopprepTotal={setShopprepTotal}
+      shopallTotal={shopallTotal}
+      setShopallTotal={setShopallTotal}
+      othwarprepTotal={othwarprepTotal}
+      setOthwarprepTotal={setOthwarprepTotal}
+      othwarwrapTotal={othwarwrapTotal}
+      setOthwarwrapTotal={setOthwarwrapTotal}
+      othwarallTotal={othwarallTotal}
+      setOthwarallTotal={setOthwarallTotal}
+      /> 
     ) }
     {/* makeup */}
     {!showMake ? (

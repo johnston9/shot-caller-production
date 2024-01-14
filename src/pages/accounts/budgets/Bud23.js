@@ -1,69 +1,142 @@
-    prin_2_qty,
-    prin_2_uno,
-    prin_2_una,
-    prin_2_rt,
-    prin_3_qty,
-    prin_3_uno,
-    prin_3_una,
-    prin_3_rt,
-    actors_2_qty,
-    actors_2_uno,
-    actors_2_una,
-    actors_2_rt,
-    actors_3_qty,
-    actors_3_uno,
-    actors_3_una,
-    actors_3_rt,
-    actors_4_qty,
-    actors_4_uno,
-    actors_4_una,
-    actors_4_rt,
-    actors_5_qty,
-    actors_5_uno,
-    actors_5_una,
-    actors_5_rt,
-    actors_6_qty,
-    actors_6_uno,
-    actors_6_una,
-    actors_6_rt,
-    actors_7_qty,
-    actors_7_uno,
-    actors_7_una,
-    actors_7_rt,
-    actors_week_qty,
-    actors_week_uno,
-    actors_week_una,
-    actors_week_rt,
-    actors_day_qty,
-    actors_day_uno,
-    actors_day_una,
-    actors_day_rt,
-    //
-    // Principals 1 Total postData
-  const [principalsTotal, setPrincipalsTotal] = useState(0);
-  // Principals 2 Total postData
-  const [princ2Total, setPrinc2Total] = useState(0);
-  // Principals 3 Total postData
-  const [princ3Total, setPrinc3Total] = useState(0);
+    days6th7th_unit_war,
+    days6th7th_war,
+    overtime_unit_war,
+    overtime_war,
+    holidays_unit_war, 
+    holidays_war,
+    box_rent_unit_war,
+    box_rent_war,
+    other_solo_war,
+    cos_des_qty_prep,
+    cos_des_uno_prep,
+    cos_des_una_prep,
+    cos_des_rt_prep,
+    cos_des_qty_wrap,
+    cos_des_uno_wrap,
+    cos_des_una_wrap,
+    cos_des_rt_wrap,
+    as_cos_des_qty_prep,
+    as_cos_des_uno_prep,
+    as_cos_des_una_prep,
+    as_cos_des_rt_prep,
+    as_cos_des_qty_wrap,
+    as_cos_des_uno_wrap,
+    as_cos_des_una_wrap,
+    as_cos_des_rt_wrap,
+    he_war_qty_prep,
+    he_war_uno_prep,
+    he_war_una_prep,
+    he_war_rt_prep,
+    he_war_qty_wrap,
+    he_war_uno_wrap,
+    he_war_una_wrap,
+    he_war_rt_wrap,
+    war_as_qty_prep,
+    war_as_uno_prep,
+    war_as_una_prep,
+    war_as_rt_prep,
+    war_as_qty_wrap,
+    war_as_uno_wrap,
+    war_as_una_wrap,
+    war_as_rt_wrap,
+    tru_cos_qty_prep,
+    tru_cos_uno_prep,
+    tru_cos_una_prep,
+    tru_cos_rt_prep,
+    tru_cos_qty_wrap,
+    tru_cos_uno_wrap,
+    tru_cos_una_wrap,
+    tru_cos_rt_wrap,
+    ot_war_qty_prep,
+    ot_war_uno_prep,
+    ot_war_una_prep,
+    ot_war_rt_prep,
+    ot_war_qty_wrap,
+    ot_war_uno_wrap,
+    ot_war_una_wrap,
+    ot_war_rt_wrap,
+    shopper_qty,
+    shopper_uno,
+    shopper_una,
+    shopper_rt,
+    shopper_qty_prep,
+    shopper_uno_prep,
+    shopper_una_prep,
+    shopper_rt_prep,
+    tailors,
+    textile_ar,
+    cos_coor,
+  // Totals
 
-  // Actors Total postData 
-  const [actorsTotal, setActorsTotal] = useState(0);
-  // Actor 2 Total postData 
-  const [actor2Total, setActor2Total] = useState(0);
-  // Actors 3 Total postData 
-  const [actor3Total, setActor3Total] = useState(0);
-  // Actors 4 Total postData 
-  const [actor4Total, setActor4Total] = useState(0);
-  // Actors 5 Total postData 
-  const [actor5Total, setActor5Total] = useState(0);
-  // Actors 6 Total postData 
-  const [actor6Total, setActor6Total] = useState(0);
-  // Actors 7 Total postData 
-  const [actor7Total, setActor7Total] = useState(0);
-  // Actors week Total postData 
-  const [actorweekTotal, setActorweekTotal] = useState(0);
-  // Actors day Total postData 
-  const [actordayTotal, setActordayTotal] = useState(0);
+  // costume designer
+  // costume designer Total shoot postData 
+  const [costumedesignerTotal, setCostumedesignerTotal] = useState(0);
+  // costume designer prep Total postData 
+  const [cosdesprepTotal, setCosdesprepTotal] = useState(0);
+  // costume designer wrap Total postData 
+  const [cosdeswrapTotal, setCosdeswrapTotal] = useState(0);
+  // costume designer all Total postData 
+  const [cosdesallTotal, setCosdesallTotal] = useState(0);
+
+  // assistant costume designer shoot Total postData 
+  const [assistcosdesignerTotal, setAssistcosdesignerTotal] = useState(0);
+  // assistant costume designer prep Total postData 
+  const [ascosdesprepTotal, setAscosdesprepTotal] = useState(0);
+  // assistant costume designer wrap Total postData 
+  const [ascosdeswrapTotal, setAscosdeswrapTotal] = useState(0);
+  // assistant costume designer all Total postData 
+  const [ascosdesallTotal, setAscosdesallTotal] = useState(0);
+
+  // head wardrobe/supervisor
+  // head wardrobe shoot Total postData 
+  const [headwardrobeTotal, setHeadwardrobeTotal] = useState(0);
+  // head wardrobe prep Total postData 
+  const [hewarprepTotal, setHewarprepTotal] = useState(0);
+  // head wardrobe wrap Total postData 
+  const [hewarwrapTotal, setHewarwrapTotal] = useState(0);
+  // head wardrobe all Total postData 
+  const [hewarallTotal, setHewarallTotal] = useState(0);
+
+  // wardrobe assist/set costumer
+  // wardrobe assist shoot Total postData 
+  const [wardrobeassistTotal, setWardrobeassistTotal] = useState(0);
+  // wardrobe assist prep Total postData 
+  const [warasprepTotal, setWarasprepTotal] = useState(0);
+  // wardrobe assist wrap Total postData 
+  const [waraswrapTotal, setWaraswrapTotal] = useState(0);
+  // wardrobe assist all Total postData 
+  const [warasallTotal, setWarasallTotal] = useState(0);
+
+  // truck costumer
+  // truck costumer shoot Total postData 
+  const [truckcostumerTotal, setTruckcostumerTotal] = useState(0);
+  // truck costumer prep Total postData 
+  const [trucosprepTotal, setTrucosprepTotal] = useState(0);
+  // truck costumer wrap Total postData 
+  const [trucoswrapTotal, setTrucoswrapTotal] = useState(0);
+  // truck costumer all Total postData 
+  const [trucosallTotal, setTrucosallTotal] = useState(0);
+
+  // shopper
+  // shopper shoot Total postData 
+  const [shopperTotal, setShopperTotal] = useState(0);
+  // shopper prep Total postData 
+  const [shopprepTotal, setShopprepTotal] = useState(0);
+  // shopper all Total postData 
+  const [shopallTotal, setShopallTotal] = useState(0);
+
+  // other wardrobe labour
+  // other wardrobe labour shoot Total postData 
+  const [otherwardrobeTotal, setOtherwardrobeTotal] = useState(0);
+  // other wardrobe labour prep Total postData 
+  const [othwarprepTotal, setOthwarprepTotal] = useState(0);
+  // other wardrobe labour wrap Total postData 
+  const [othwarwrapTotal, setOthwarwrapTotal] = useState(0);
+  // other wardrobe labour all Total postData 
+  const [othwarallTotal, setOthwarallTotal] = useState(0);
+
+  // Wardrobe Labour Total postData 
+  const [wardrobelabourTotal, setWardrobelabourTotal] = useState(0);
 //
 days6th7th_unit,
 days6th7th, 
