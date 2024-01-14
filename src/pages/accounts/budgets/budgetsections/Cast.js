@@ -357,7 +357,17 @@ const Cast = (props) => {
     const addCast = () => {
       setCastTotal(
       parseFloat(principalsTotal || 0) +
+      parseFloat(princ2Total || 0) +
+      parseFloat(princ3Total || 0) +
       parseFloat(actorsTotal || 0) +
+      parseFloat(actor2Total || 0) +
+      parseFloat(actor3Total || 0) +
+      parseFloat(actor4Total || 0) +
+      parseFloat(actor5Total || 0) +
+      parseFloat(actor6Total || 0) +
+      parseFloat(actor7Total || 0) +
+      parseFloat(actorweekTotal || 0) +
+      parseFloat(actordayTotal || 0) +
       parseFloat(stuntcoordinatorsTotal || 0) +
       parseFloat(stuntperformersTotal || 0) +
       parseFloat(otherperformersTotal || 0) +
@@ -384,9 +394,12 @@ const Cast = (props) => {
   }, [principalsTotal, actorsTotal, stuntcoordinatorsTotal,
     stuntperformersTotal, otherperformersTotal, extrasTotal,
     casting_director, extras_casting, other_cast,
-    rights_payments_cast, fringes_taxes_cast,
-    rehersals_cast, overtime_cast,
-    days6th7th_cast, holidays_cast,]);
+    rights_payments_cast, fringes_taxes_cast, rehersals_cast, 
+    overtime_cast, days6th7th_cast, holidays_cast,
+    princ2Total, princ3Total, actor2Total, actor3Total,
+    actor4Total, actor5Total, actor6Total, actor7Total,
+    actorweekTotal, actordayTotal,
+  ]);
 
   return (
     <div className={`${styles.WhiteBack} mx-5 mt-3 mb-5`}>
@@ -438,14 +451,14 @@ const Cast = (props) => {
     </Col>
     <Col md={1}></Col>
     </Row>
-    {/* Principals */}
+    {/* Principals 1 */}
     <Row className="py-1 d-flex align-items-center">
     <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>06.10</p>
     </Col>
     <Col md={3} >
-    <p className={`${styles.BoldBlack}`}>Principals</p>
+    <p className={`${styles.BoldBlack}`}>Principals #1 - wks/rt #1</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="principals_quantity" 
@@ -535,18 +548,223 @@ const Cast = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col md={{offset: 1, span:10}} >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
-    {/* Actors */}
+    {/* Principals 2 */}
     <Row className="py-1 d-flex align-items-center">
     <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>06.20</p>
     </Col>
     <Col md={3} >
-    <p className={`${styles.BoldBlack}`}>Actors</p>
+    <p className={`${styles.BoldBlack}`}>Principals #2 - wks/rt #2</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="prin_2_qty" 
+        className={`${styles.Width100} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="prin_2_qty"
+        value={prin_2_qty}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.prin_2_qty?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="prin_2_uno" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="prin_2_uno"
+        value={prin_2_uno}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.prin_2_uno?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="prin_2_una" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="prin_2_una"
+        value={prin_2_una}
+        onChange={handleChangeCastText}
+            />
+    </Form.Group>
+    {errors?.prin_2_una?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="prin_2_rt" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="prin_2_rt"
+        value={prin_2_rt}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.prin_2_rt?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="princ2Total" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="princ2Total"
+        value={princ2Total}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.princ2Total?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Principals 3 */}
+    <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>06.30</p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.BoldBlack}`}>Principals #3 - wks/rt #3</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="prin_3_qty" 
+        className={`${styles.Width100} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="prin_3_qty"
+        value={prin_3_qty}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.prin_3_qty?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="prin_3_uno" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="prin_3_uno"
+        value={prin_3_uno}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.prin_3_uno?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="prin_3_una" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="prin_3_una"
+        value={prin_3_una}
+        onChange={handleChangeCastText}
+            />
+    </Form.Group>
+    {errors?.prin_3_una?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="prin_3_rt" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="prin_3_rt"
+        value={prin_3_rt}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.prin_3_rt?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="princ3Total" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="princ3Total"
+        value={princ3Total}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.princ3Total?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Actors 1 */}
+    <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>06.40</p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.BoldBlack}`}>Actors #1 - wks/rt #1</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="actors_quantity" 
@@ -636,7 +854,824 @@ const Cast = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col md={{offset: 1, span:10}} >
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Actors 2 */}
+    <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>06.50</p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.BoldBlack}`}>Actors #2 - wks/rt #2</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="actors_2_qty" 
+        className={`${styles.Width100} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="actors_2_qty"
+        value={actors_2_qty}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.actors_2_qty?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="actors_2_uno" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="actors_2_uno"
+        value={actors_2_uno}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.actors_2_uno?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="actors_2_una" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="actors_2_una"
+        value={actors_2_una}
+        onChange={handleChangeCastText}
+            />
+    </Form.Group>
+    {errors?.actors_2_una?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="actors_2_rt" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="actors_2_rt"
+        value={actors_2_rt}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.actors_2_rt?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="actor2Total" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="actor2Total"
+        value={actor2Total}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.actor2Total?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Actors 3 */}
+    <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>06.60</p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.BoldBlack}`}>Actors #3 - wks/rt #3</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="actors_3_qty" 
+        className={`${styles.Width100} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="actors_3_qty"
+        value={actors_3_qty}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.actors_3_qty?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="actors_3_uno" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="actors_3_uno"
+        value={actors_3_uno}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.actors_3_uno?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="actors_3_una" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="actors_3_una"
+        value={actors_3_una}
+        onChange={handleChangeCastText}
+            />
+    </Form.Group>
+    {errors?.actors_3_una?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="actors_3_rt" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="actors_3_rt"
+        value={actors_3_rt}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.actors_3_rt?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="actor3Total" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="actor3Total"
+        value={actor3Total}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.actor3Total?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Actors 4 */}
+    <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>06.70</p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.BoldBlack}`}>Actors #4 - wks/rt #4</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="actors_4_qty" 
+        className={`${styles.Width100} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="actors_4_qty"
+        value={actors_4_qty}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.actors_4_qty?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="actors_4_uno" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="actors_4_uno"
+        value={actors_4_uno}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.actors_4_uno?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="actors_4_una" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="actors_4_una"
+        value={actors_4_una}
+        onChange={handleChangeCastText}
+            />
+    </Form.Group>
+    {errors?.actors_4_una?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="actors_4_rt" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="actors_4_rt"
+        value={actors_4_rt}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.actors_4_rt?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="actor4Total" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="actor4Total"
+        value={actor4Total}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.actor4Total?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Actors 5 */}
+    <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>06.80</p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.BoldBlack}`}>Actors #5 - wks/rt #5</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="actors_5_qty" 
+        className={`${styles.Width100} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="actors_5_qty"
+        value={actors_5_qty}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.actors_5_qty?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="actors_5_uno" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="actors_5_uno"
+        value={actors_5_uno}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.actors_5_uno?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="actors_5_una" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="actors_5_una"
+        value={actors_5_una}
+        onChange={handleChangeCastText}
+            />
+    </Form.Group>
+    {errors?.actors_5_una?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="actors_5_rt" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="actors_5_rt"
+        value={actors_5_rt}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.actors_5_rt?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="actor5Total" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="actor5Total"
+        value={actor5Total}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.actor5Total?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Actors 6 */}
+    <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>06.90</p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.BoldBlack}`}>Actors #6 - wks/rt #6</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="actors_6_qty" 
+        className={`${styles.Width100} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="actors_6_qty"
+        value={actors_6_qty}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.actors_6_qty?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="actors_6_uno" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="actors_6_uno"
+        value={actors_6_uno}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.actors_6_uno?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="actors_6_una" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="actors_6_una"
+        value={actors_6_una}
+        onChange={handleChangeCastText}
+            />
+    </Form.Group>
+    {errors?.actors_6_una?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="actors_6_rt" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="actors_6_rt"
+        value={actors_6_rt}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.actors_6_rt?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="actor6Total" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="actor6Total"
+        value={actor6Total}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.actor6Total?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Actors 7 */}
+    <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>06.91</p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.BoldBlack}`}>Actors #7 - wks/rt #7</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="actors_7_qty" 
+        className={`${styles.Width100} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="actors_7_qty"
+        value={actors_7_qty}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.actors_7_qty?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="actors_7_uno" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="actors_7_uno"
+        value={actors_7_uno}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.actors_7_uno?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="actors_7_una" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="actors_7_una"
+        value={actors_7_una}
+        onChange={handleChangeCastText}
+            />
+    </Form.Group>
+    {errors?.actors_7_una?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="actors_7_rt" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="actors_7_rt"
+        value={actors_7_rt}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.actors_7_rt?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="actor7Total" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="actor7Total"
+        value={actor7Total}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.actor7Total?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Actors 1 week */}
+    <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>06.93</p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.BoldBlack}`}>Actors - 1 Week</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="actors_week_qty" 
+        className={`${styles.Width100} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="actors_week_qty"
+        value={actors_week_qty}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.actors_week_qty?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="actors_week_uno" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="actors_week_uno"
+        value={actors_week_uno}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.actors_week_uno?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="actors_week_una" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="actors_week_una"
+        value={actors_week_una}
+        onChange={handleChangeCastText}
+            />
+    </Form.Group>
+    {errors?.actors_week_una?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="actors_week_rt" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="actors_week_rt"
+        value={actors_week_rt}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.actors_week_rt?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="actorweekTotal" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="actorweekTotal"
+        value={actorweekTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.actorweekTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Actors 1 week */}
+    <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>06.94</p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.BoldBlack}`}>Actors - Day Players</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="actors_day_qty" 
+        className={`${styles.Width100} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="actors_day_qty"
+        value={actors_day_qty}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.actors_day_qty?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="actors_day_uno" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="actors_day_uno"
+        value={actors_day_uno}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.actors_day_uno?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="actors_day_una" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="actors_day_una"
+        value={actors_day_una}
+        onChange={handleChangeCastText}
+            />
+    </Form.Group>
+    {errors?.actors_day_una?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="actors_day_rt" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="actors_day_rt"
+        value={actors_day_rt}
+        onChange={handleChangeCast}
+            />
+    </Form.Group>
+    {errors?.actors_day_rt?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="actordayTotal" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="actordayTotal"
+        value={actordayTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.actordayTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
@@ -737,7 +1772,8 @@ const Cast = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col md={{offset: 1, span:10}} >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
@@ -838,7 +1874,8 @@ const Cast = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col md={{offset: 1, span:10}} >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
@@ -939,7 +1976,8 @@ const Cast = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col md={{offset: 1, span:10}} >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
@@ -1040,7 +2078,8 @@ const Cast = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col md={{offset: 1, span:10}} >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
@@ -1082,7 +2121,8 @@ const Cast = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col md={{offset: 1, span:10}} >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
@@ -1124,7 +2164,8 @@ const Cast = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col md={{offset: 1, span:10}} >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
@@ -1180,7 +2221,8 @@ const Cast = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col md={{offset: 1, span:10}} >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
@@ -1236,7 +2278,8 @@ const Cast = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col md={{offset: 1, span:10}} >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
@@ -1292,7 +2335,8 @@ const Cast = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col md={{offset: 1, span:10}} >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
@@ -1348,7 +2392,8 @@ const Cast = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col md={{offset: 1, span:10}} >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
@@ -1390,7 +2435,8 @@ const Cast = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col md={{offset: 1, span:10}} >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
@@ -1432,7 +2478,8 @@ const Cast = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col md={{offset: 1, span:10}} >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
@@ -1474,7 +2521,8 @@ const Cast = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col md={{offset: 1, span:10}} >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
