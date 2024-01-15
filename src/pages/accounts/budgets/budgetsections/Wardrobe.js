@@ -249,7 +249,59 @@ const Wardrobe = (props) => {
     }, [head_wardrobe_quantity, head_wardrobe_units_number,
     head_wardrobe_rate]);
 
-    // function to calculate wardrobe assistant on change
+    // function to calculate head wardrobe prep on change
+    useEffect(() => {
+        const addHeawarprep = () => {
+        setHewarprepTotal(parseFloat(he_war_qty_prep || 0) * 
+        parseFloat(he_war_uno_prep || 0) * 
+        parseFloat(he_war_rt_prep || 0))
+        }
+        const timer = setTimeout(() => {
+            addHeawarprep();
+        }, 2000);
+
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [he_war_qty_prep, he_war_uno_prep, he_war_rt_prep]);
+
+    // function to calculate head wardrobe wrap on change
+    useEffect(() => {
+        const addHeawarwrap = () => {
+        setHewarwrapTotal(parseFloat(he_war_qty_wrap || 0) * 
+        parseFloat(he_war_uno_wrap || 0) * 
+        parseFloat(he_war_rt_wrap || 0))
+        }
+        const timer = setTimeout(() => {
+            addHeawarwrap();
+        }, 2000);
+
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [he_war_qty_wrap, he_war_uno_wrap, he_war_rt_wrap]);
+
+    // function to calculate head wardrobe all on change
+    useEffect(() => {
+        const addHeawarall = () => {
+        setHewarallTotal(parseFloat(headwardrobeTotal || 0) +
+        parseFloat(hewarprepTotal || 0) +
+        parseFloat(hewarwrapTotal || 0))
+        }
+        const timer = setTimeout(() => {
+            addHeawarall();
+        }, 1000);
+
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [headwardrobeTotal, hewarprepTotal, hewarwrapTotal]);
+
+    // wardrobe assistant/set costumer
+    // function to calculate wardrobe assistant shoot on change
     useEffect(() => {
         const addWarass = () => {
         setWardrobeassistTotal(parseFloat(wardrobe_assist_quantity || 0) * 
@@ -265,9 +317,61 @@ const Wardrobe = (props) => {
         };
         // eslint-disable-next-line
     }, [wardrobe_assist_quantity, wardrobe_assist_units_number,
-        wardrobe_assist_rate]);
+    wardrobe_assist_rate]);
 
-    // function to calculate truck costumer on change
+    // function to calculate wardrobe assistant prep on change
+    useEffect(() => {
+        const addWarassprep = () => {
+        setWarasprepTotal(parseFloat(war_as_qty_prep || 0) * 
+        parseFloat(war_as_uno_prep || 0) * 
+        parseFloat(war_as_rt_prep || 0))
+        }
+        const timer = setTimeout(() => {
+            addWarassprep();
+        }, 2000);
+
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [war_as_qty_prep, war_as_uno_prep, war_as_rt_prep]);
+
+    // function to calculate wardrobe assistant wrap on change
+    useEffect(() => {
+        const addWarasswrap = () => {
+        setWaraswrapTotal(parseFloat(war_as_qty_wrap || 0) * 
+        parseFloat(war_as_uno_wrap || 0) * 
+        parseFloat(war_as_rt_wrap || 0))
+        }
+        const timer = setTimeout(() => {
+            addWarasswrap();
+        }, 2000);
+
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [war_as_qty_wrap, war_as_uno_wrap, war_as_rt_wrap]);
+
+    // function to calculate wardrobe assistant all on change
+    useEffect(() => {
+        const addWarassall = () => {
+        setWarasallTotal(parseFloat(wardrobeassistTotal || 0) +
+        parseFloat(warasprepTotal || 0) +
+        parseFloat(waraswrapTotal || 0))
+        }
+        const timer = setTimeout(() => {
+            addWarassall();
+        }, 1000);
+
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [wardrobeassistTotal, warasprepTotal, waraswrapTotal]);
+
+    // truck costumer
+    // function to calculate truck costumer shoot on change
     useEffect(() => {
         const addTrucus = () => {
         setTruckcostumerTotal(parseFloat(truck_costumer_quantity || 0) * 
@@ -283,9 +387,112 @@ const Wardrobe = (props) => {
         };
         // eslint-disable-next-line
     }, [truck_costumer_quantity, truck_costumer_units_number,
-        truck_costumer_rate]);
+    truck_costumer_rate]);
 
-    // function to calculate other wardrobe labour on change
+    // function to calculate truck costumer prep on change
+    useEffect(() => {
+        const addTrucusprep = () => {
+        setTrucosprepTotal(parseFloat(tru_cos_qty_prep || 0) * 
+        parseFloat(tru_cos_uno_prep || 0) * 
+        parseFloat(tru_cos_rt_prep || 0))
+        }
+        const timer = setTimeout(() => {
+            addTrucusprep();
+        }, 2000);
+
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [tru_cos_qty_prep, tru_cos_uno_prep, tru_cos_rt_prep]);
+
+    // function to calculate truck costumer wrap on change
+    useEffect(() => {
+        const addTrucuswrap = () => {
+        setTrucosprepTotal(parseFloat(tru_cos_qty_wrap || 0) * 
+        parseFloat(tru_cos_uno_wrap || 0) * 
+        parseFloat(tru_cos_rt_wrap || 0))
+        }
+        const timer = setTimeout(() => {
+            addTrucuswrap();
+        }, 2000);
+
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [tru_cos_qty_wrap, tru_cos_uno_wrap, tru_cos_rt_wrap]);
+
+    // function to calculate truck costumer all on change
+    useEffect(() => {
+        const addTrucusall = () => {
+        setTrucosallTotal(parseFloat(truckcostumerTotal || 0) +
+        parseFloat(trucosprepTotal || 0) +
+        parseFloat(trucoswrapTotal || 0))
+        }
+        const timer = setTimeout(() => {
+            addTrucusall();
+        }, 1000);
+
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [truckcostumerTotal, trucosprepTotal, trucoswrapTotal]);
+
+    // shopper
+    // function to calculate shopper shoot on change
+    useEffect(() => {
+        const addShop = () => {
+        setShopperTotal(parseFloat(shopper_qty || 0) * 
+        parseFloat(shopper_uno || 0) * 
+        parseFloat(shopper_rt || 0))
+        }
+        const timer = setTimeout(() => {
+            addShop();
+        }, 2000);
+
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [shopper_qty, shopper_uno, shopper_rt]);
+
+    // function to calculate shopper prep on change
+    useEffect(() => {
+        const addShopprep = () => {
+        setShopprepTotal(parseFloat(shopper_qty_prep || 0) * 
+        parseFloat(shopper_uno_prep || 0) * 
+        parseFloat(shopper_rt_prep || 0))
+        }
+        const timer = setTimeout(() => {
+            addShopprep();
+        }, 2000);
+
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [shopper_qty_prep, shopper_uno_prep, shopper_rt_prep]);
+
+    // function to calculate shopper all on change
+    useEffect(() => {
+        const addShopall = () => {
+        setShopallTotal(parseFloat(shopperTotal || 0) +
+        parseFloat(shopprepTotal || 0))
+        }
+        const timer = setTimeout(() => {
+            addShopall();
+        }, 1000);
+
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [shopperTotal, shopprepTotal]);
+
+    // other wardrobe labour/PA
+    // function to calculate other wardrobe labour shoot on change
     useEffect(() => {
         const addOthwar = () => {
         setOtherwardrobeTotal(parseFloat(other_wardrobe_labour_quantity || 0) * 
@@ -301,19 +508,79 @@ const Wardrobe = (props) => {
         };
         // eslint-disable-next-line
     }, [other_wardrobe_labour_quantity, other_wardrobe_labour_units_number,
-        other_wardrobe_labour_rate]);
+    other_wardrobe_labour_rate]);
+
+    // function to calculate other wardrobe labour prep on change
+    useEffect(() => {
+        const addOthwarprep = () => {
+        setOthwarprepTotal(parseFloat(ot_war_qty_prep || 0) * 
+        parseFloat(ot_war_uno_prep || 0) * 
+        parseFloat(ot_war_rt_prep || 0))
+        }
+        const timer = setTimeout(() => {
+            addOthwarprep();
+        }, 2000);
+
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [ot_war_qty_prep, ot_war_uno_prep, ot_war_rt_prep]);
+
+    // function to calculate other wardrobe labour wrap on change
+    useEffect(() => {
+        const addOthwarwrap = () => {
+        setOthwarwrapTotal(parseFloat(ot_war_qty_wrap || 0) * 
+        parseFloat(ot_war_uno_wrap || 0) * 
+        parseFloat(ot_war_rt_wrap || 0))
+        }
+        const timer = setTimeout(() => {
+            addOthwarwrap();
+        }, 2000);
+
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [ot_war_qty_wrap, ot_war_uno_wrap, ot_war_rt_wrap]);
+
+    // function to calculate other wardrobe labour all on change
+    useEffect(() => {
+        const addOthwarall = () => {
+        setOthwarallTotal(parseFloat(otherwardrobeTotal || 0) +
+        parseFloat(othwarprepTotal || 0) +
+        parseFloat(othwarwrapTotal || 0))
+        }
+        const timer = setTimeout(() => {
+            addOthwarall();
+        }, 1000);
+
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [otherwardrobeTotal, othwarprepTotal, othwarwrapTotal]);
 
     // function to add all Wardrobe Labour on change
     useEffect(() => {
         const addWarlab = () => {
         setWardrobelabourTotal(
-        parseFloat(costumedesignerTotal || 0) +
-        parseFloat(assistcosdesignerTotal || 0) +
-        parseFloat(headwardrobeTotal || 0) +
-        parseFloat(wardrobeassistTotal || 0) +
-        parseFloat(truckcostumerTotal || 0) +
-        parseFloat(fringes_taxes_wardrobe || 0) +
-        parseFloat(otherwardrobeTotal || 0)
+        parseFloat(cosdesallTotal || 0) +
+        parseFloat(ascosdesallTotal || 0) +
+        parseFloat(hewarallTotal || 0) +
+        parseFloat(warasallTotal || 0) +
+        parseFloat(trucosallTotal || 0) +
+        parseFloat(shopallTotal || 0) +
+        parseFloat(othwarallTotal || 0) + 
+        parseFloat(tailors || 0) +
+        parseFloat(textile_ar || 0) +
+        parseFloat(cos_coor || 0) +
+        parseFloat(days6th7th_war || 0) +
+        parseFloat(overtime_war || 0) +
+        parseFloat(holidays_war || 0) +
+        parseFloat(box_rent_war || 0) +
+        parseFloat(other_solo_war || 0) +
+        parseFloat(fringes_taxes_wardrobe || 0)
         )
         }
         const timer = setTimeout(() => {
@@ -323,10 +590,11 @@ const Wardrobe = (props) => {
         return () => {
         clearTimeout(timer);
         };
-        // eslint-disable-next-line
-        }, [costumedesignerTotal, assistcosdesignerTotal, headwardrobeTotal,
-            wardrobeassistTotal, truckcostumerTotal, otherwardrobeTotal,
-            fringes_taxes_wardrobe,]);
+        // eslint-disable-next-line tailors
+        }, [cosdesallTotal, ascosdesallTotal, hewarallTotal, warasallTotal, 
+            trucosallTotal, othwarallTotal, shopallTotal, tailors,
+            textile_ar, cos_coor, days6th7th_war, overtime_war, holidays_war,
+            box_rent_war, other_solo_war, fringes_taxes_wardrobe,]);
 
 
   return (
