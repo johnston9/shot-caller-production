@@ -1083,7 +1083,7 @@ const Wardrobe = (props) => {
     <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={3} >
-    <p className={`${styles.Underline7}`}></p>
+    <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="assist_costume_designer_quantity" 
