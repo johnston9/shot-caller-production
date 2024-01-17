@@ -1,3 +1,55 @@
+war_coor_qty,
+war_coor_uno,
+war_coor_una,
+war_coor_rt,
+war_coor_qty_prep,
+war_coor_uno_prep,
+war_coor_una_prep,
+war_coor_rt_prep,
+war_coor_qty_wrap,
+war_coor_uno_wrap,
+war_coor_una_wrap,
+war_coor_rt_wrap,
+train_qty_prep,
+train_uno_prep,
+train_una_prep,
+train_rt_prep,
+train_qty,
+train_uno,
+train_una,
+train_rt,
+train_qty_wrap,
+train_uno_wrap,
+train_una_wrap,
+train_rt_wrap,
+day_war_qty,
+day_war_uno,
+day_war_una,
+day_war_rt,
+// Wardrobe Coordinator
+  // wardrobe Coordinator shoot Total postData 
+  const [warcoorTotal, setWarcoorTotal] = useState(0);
+  // wardrobe Coordinator prep Total postData 
+  const [warcoprepTotal, setWarcoprepTotal] = useState(0);
+  // wardrobe Coordinator wrap Total postData 
+  const [warcowrapTotal, setWarcowrapTotal] = useState(0);
+  // wardrobe Coordinator all Total postData 
+  const [warcoallTotal, setWarcoallTotal] = useState(0);
+
+  // Wardrobe Trainee
+  // wardrobe Trainee shoot Total postData 
+  const [wartrainTotal, setWartrainTotal] = useState(0);
+  // wardrobe Trainee prep Total postData 
+  const [wartraprepTotal, setWartraprepTotal] = useState(0);
+  // wardrobe Trainee wrap Total postData 
+  const [wartrawrapTotal, setWartrawrapTotal] = useState(0);
+  // wardrobe Trainee prep Total postData 
+  const [wartraallTotal, setWartraallTotal] = useState(0);
+
+  // Wardrobe Dailies
+  // wardrobe Dailies shoot Total postData 
+  const [wardayTotal, setWardayTotal] = useState(0);
+    
     // days6th7th_unit_war,
     // days6th7th_war,
     // overtime_unit_war,

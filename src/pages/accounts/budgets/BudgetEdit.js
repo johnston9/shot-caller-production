@@ -2379,8 +2379,36 @@ function BudgetEdit() {
     shopper_rt_prep: 0,
     tailors: 0,
     textile_ar: 0,
-    cos_coor: 0,
-    // old _prep wrap
+    // new new
+    train_qty_prep: 0,
+    train_uno_prep: 0,
+    train_una_prep: "",
+    train_rt_prep: 0,
+    train_qty: 0,
+    train_uno: 0,
+    train_una: "",
+    train_rt: 0,
+    train_qty_wrap: 0,
+    train_uno_wrap: 0,
+    train_una_wrap: "",
+    train_rt_wrap: 0,
+    day_war_qty: 0,
+    day_war_uno: 0,
+    day_war_una: "",
+    day_war_rt: 0,
+    war_coor_qty: 0,
+    war_coor_uno: 0,
+    war_coor_una: "",
+    war_coor_rt: 0,
+    war_coor_qty_prep: 0,
+    war_coor_uno_prep: 0,
+    war_coor_una_prep: "",
+    war_coor_rt_prep: 0,
+    war_coor_qty_wrap: 0,
+    war_coor_uno_wrap: 0,
+    war_coor_una_wrap: "",
+    war_coor_rt_wrap: 0,
+    // old _prep _wrap
     fringes_taxes_wardrobe: 0,
     costume_designer_quantity: 0,
     costume_designer_units_number: 0,
@@ -2409,7 +2437,14 @@ function BudgetEdit() {
   });
 
   // Wardrobe Labour postData values
-  const {
+  const {train_qty_prep, train_uno_prep, train_una_prep, train_rt_prep, 
+    train_qty, train_uno, train_una, train_rt,
+    train_qty_wrap, train_uno_wrap, train_una_wrap, train_rt_wrap, 
+    day_war_qty, day_war_uno, day_war_una, day_war_rt,
+    war_coor_qty, war_coor_uno, war_coor_una, war_coor_rt,
+    war_coor_qty_prep, war_coor_uno_prep, war_coor_una_prep, war_coor_rt_prep,
+    war_coor_qty_wrap, war_coor_uno_wrap, war_coor_una_wrap, war_coor_rt_wrap,
+    // old new
     days6th7th_unit_war, days6th7th_war, overtime_unit_war, overtime_war,
     holidays_unit_war, holidays_war, box_rent_unit_war, box_rent_war, other_solo_war,
     cos_des_qty_prep, cos_des_uno_prep, cos_des_una_prep, cos_des_rt_prep,
@@ -2426,7 +2461,7 @@ function BudgetEdit() {
     ot_war_qty_wrap, ot_war_uno_wrap, ot_war_una_wrap, ot_war_rt_wrap,
     shopper_qty, shopper_uno, shopper_una, shopper_rt,
     shopper_qty_prep, shopper_uno_prep, shopper_una_prep, shopper_rt_prep,
-    tailors, textile_ar, cos_coor,
+    tailors, textile_ar,
     // old
     costume_designer_quantity, costume_designer_units_number,
     costume_designer_units_name, costume_designer_rate,
@@ -2463,25 +2498,25 @@ function BudgetEdit() {
   // assistant costume designer all Total postData 
   const [ascosdesallTotal, setAscosdesallTotal] = useState(0);
 
-  // head wardrobe/supervisor
-  // head wardrobe shoot Total postData 
+  // wardrobe supervisor - using headwardrobe as variable
+  // wardrobe supervisor shoot Total postData 
   const [headwardrobeTotal, setHeadwardrobeTotal] = useState(0);
-  // head wardrobe prep Total postData 
+  // wardrobe supervisor prep Total postData 
   const [hewarprepTotal, setHewarprepTotal] = useState(0);
-  // head wardrobe wrap Total postData 
+  // wardrobe supervisor wrap Total postData 
   const [hewarwrapTotal, setHewarwrapTotal] = useState(0);
-  // head wardrobe all Total postData 
+  // wardrobe supervisor all Total postData 
   const [hewarallTotal, setHewarallTotal] = useState(0);
 
-  // wardrobe assist/set costumer
-  // wardrobe assist shoot Total postData 
-  const [wardrobeassistTotal, setWardrobeassistTotal] = useState(0);
-  // wardrobe assist prep Total postData 
-  const [warasprepTotal, setWarasprepTotal] = useState(0);
-  // wardrobe assist wrap Total postData 
-  const [waraswrapTotal, setWaraswrapTotal] = useState(0);
-  // wardrobe assist all Total postData 
-  const [warasallTotal, setWarasallTotal] = useState(0);
+  // Set Costumer - using otherwardrobe as variable
+  // Set Costumer shoot Total postData 
+  const [otherwardrobeTotal, setOtherwardrobeTotal] = useState(0);
+  // Set Costumer prep Total postData 
+  const [othwarprepTotal, setOthwarprepTotal] = useState(0);
+  // Set Costumer wrap Total postData 
+  const [othwarwrapTotal, setOthwarwrapTotal] = useState(0);
+  // Set Costumer all Total postData 
+  const [othwarallTotal, setOthwarallTotal] = useState(0);
 
   // truck costumer
   // truck costumer shoot Total postData 
@@ -2501,15 +2536,39 @@ function BudgetEdit() {
   // shopper all Total postData 
   const [shopallTotal, setShopallTotal] = useState(0);
 
-  // other wardrobe labour
-  // other wardrobe labour shoot Total postData 
-  const [otherwardrobeTotal, setOtherwardrobeTotal] = useState(0);
-  // other wardrobe labour prep Total postData 
-  const [othwarprepTotal, setOthwarprepTotal] = useState(0);
-  // other wardrobe labour wrap Total postData 
-  const [othwarwrapTotal, setOthwarwrapTotal] = useState(0);
-  // other wardrobe labour all Total postData 
-  const [othwarallTotal, setOthwarallTotal] = useState(0);
+  // Wardrobe Assistant/Costume PA
+  // wardrobe assist shoot Total postData 
+  const [wardrobeassistTotal, setWardrobeassistTotal] = useState(0);
+  // wardrobe assist prep Total postData 
+  const [warasprepTotal, setWarasprepTotal] = useState(0);
+  // wardrobe assist wrap Total postData 
+  const [waraswrapTotal, setWaraswrapTotal] = useState(0);
+  // wardrobe assist all Total postData 
+  const [warasallTotal, setWarasallTotal] = useState(0);
+
+  // Wardrobe Coordinator
+  // wardrobe Coordinator shoot Total postData 
+  const [warcoorTotal, setWarcoorTotal] = useState(0);
+  // wardrobe Coordinator prep Total postData 
+  const [warcoprepTotal, setWarcoprepTotal] = useState(0);
+  // wardrobe Coordinator wrap Total postData 
+  const [warcowrapTotal, setWarcowrapTotal] = useState(0);
+  // wardrobe Coordinator all Total postData 
+  const [warcoallTotal, setWarcoallTotal] = useState(0);
+
+  // Wardrobe Trainee
+  // wardrobe Trainee shoot Total postData 
+  const [wartrainTotal, setWartrainTotal] = useState(0);
+  // wardrobe Trainee prep Total postData 
+  const [wartraprepTotal, setWartraprepTotal] = useState(0);
+  // wardrobe Trainee wrap Total postData 
+  const [wartrawrapTotal, setWartrawrapTotal] = useState(0);
+  // wardrobe Trainee prep Total postData 
+  const [wartraallTotal, setWartraallTotal] = useState(0);
+
+  // Wardrobe Dailies
+  // wardrobe Dailies shoot Total postData 
+  const [wardayTotal, setWardayTotal] = useState(0);
 
   // Wardrobe Labour Total postData 
   const [wardrobelabourTotal, setWardrobelabourTotal] = useState(0);
@@ -5469,8 +5528,15 @@ function BudgetEdit() {
             other_fx_labour_quantity, other_fx_labour_units_number,
             other_fx_labour_units_name, other_fx_labour_rate,});
         setFxlabourTotal(fxlabour_total);
-        // wradrobe
-        const {days6th7th_unit_war, days6th7th_war, overtime_unit_war, overtime_war,
+        // wardrobe
+        const {train_qty_prep, train_uno_prep, train_una_prep, train_rt_prep, 
+          train_qty, train_uno, train_una, train_rt,
+          train_qty_wrap, train_uno_wrap, train_una_wrap, train_rt_wrap, 
+          day_war_qty, day_war_uno, day_war_una, day_war_rt,
+          war_coor_qty, war_coor_uno, war_coor_una, war_coor_rt,
+          war_coor_qty_prep, war_coor_uno_prep, war_coor_una_prep, war_coor_rt_prep,
+          war_coor_qty_wrap, war_coor_uno_wrap, war_coor_una_wrap, war_coor_rt_wrap,
+          days6th7th_unit_war, days6th7th_war, overtime_unit_war, overtime_war,
           holidays_unit_war, holidays_war, box_rent_unit_war, box_rent_war, other_solo_war,
           cos_des_qty_prep, cos_des_uno_prep, cos_des_una_prep, cos_des_rt_prep,
           cos_des_qty_wrap, cos_des_uno_wrap, cos_des_una_wrap, cos_des_rt_wrap,
@@ -5501,7 +5567,14 @@ function BudgetEdit() {
           other_wardrobe_labour_quantity, other_wardrobe_labour_units_number,
           other_wardrobe_labour_units_name, other_wardrobe_labour_rate,
           wardrobelabour_total} = data.results[0];
-        setPostDataWardrobe({days6th7th_unit_war, days6th7th_war, overtime_unit_war, overtime_war,
+        setPostDataWardrobe({train_qty_prep, train_uno_prep, train_una_prep, 
+          train_rt_prep, train_qty, train_uno, train_una, train_rt,
+          train_qty_wrap, train_uno_wrap, train_una_wrap, train_rt_wrap, 
+          day_war_qty, day_war_uno, day_war_una, day_war_rt,
+          war_coor_qty, war_coor_uno, war_coor_una, war_coor_rt,
+          war_coor_qty_prep, war_coor_uno_prep, war_coor_una_prep, war_coor_rt_prep,
+          war_coor_qty_wrap, war_coor_uno_wrap, war_coor_una_wrap, war_coor_rt_wrap,
+          days6th7th_unit_war, days6th7th_war, overtime_unit_war, overtime_war,
           holidays_unit_war, holidays_war, box_rent_unit_war, box_rent_war, other_solo_war,
           cos_des_qty_prep, cos_des_uno_prep, cos_des_una_prep, cos_des_rt_prep,
           cos_des_qty_wrap, cos_des_uno_wrap, cos_des_una_wrap, cos_des_rt_wrap,
@@ -7828,7 +7901,6 @@ function BudgetEdit() {
     formData.append("shopper_rt_prep", shopper_rt_prep);
     formData.append("tailors", tailors);
     formData.append("textile_ar", textile_ar);
-    formData.append("cos_coor", cos_coor);
     formData.append("cosdesprep_total", cosdesprepTotal);
     formData.append("cosdeswrap_total", cosdeswrapTotal);
     formData.append("cosdesall_total", cosdesallTotal);
@@ -7850,29 +7922,43 @@ function BudgetEdit() {
     formData.append("othwarprep_total", othwarprepTotal);
     formData.append("othwarwrap_total", othwarwrapTotal);
     formData.append("othwarall_total", othwarallTotal);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
+    formData.append("war_coor_qty", war_coor_qty);
+    formData.append("war_coor_uno", war_coor_uno);
+    formData.append("war_coor_una", war_coor_una);
+    formData.append("war_coor_rt", war_coor_rt);
+    formData.append("war_coor_qty_prep", war_coor_qty_prep);
+    formData.append("war_coor_uno_prep", war_coor_uno_prep);
+    formData.append("war_coor_una_prep", war_coor_una_prep);
+    formData.append("war_coor_rt_prep", war_coor_rt_prep);
+    formData.append("war_coor_qty_wrap", war_coor_qty_wrap);
+    formData.append("war_coor_uno_wrap", war_coor_uno_wrap);
+    formData.append("war_coor_una_wrap", war_coor_una_wrap);
+    formData.append("war_coor_rt_wrap", war_coor_rt_wrap);
+    formData.append("train_qty_prep", train_qty_prep);
+    formData.append("train_uno_prep", train_uno_prep);
+    formData.append("train_una_prep", train_una_prep);
+    formData.append("train_rt_prep", train_rt_prep);
+    formData.append("train_qty", train_qty);
+    formData.append("train_uno", train_uno);
+    formData.append("train_una", train_una);
+    formData.append("train_rt", train_rt);
+    formData.append("train_qty_wrap", train_qty_wrap);
+    formData.append("train_uno_wrap", train_uno_wrap);
+    formData.append("train_una_wrap", train_una_wrap);
+    formData.append("train_rt_wrap", train_rt_wrap);
+    formData.append("day_war_qty", day_war_qty);
+    formData.append("day_war_uno", day_war_uno);
+    formData.append("day_war_una", day_war_una);
+    formData.append("day_war_rt", day_war_rt);
+    formData.append("warcoor_total", warcoorTotal);
+    formData.append("warcoprep_total", warcoprepTotal);
+    formData.append("warcowrap_total", warcowrapTotal);
+    formData.append("warcoall_total", warcoallTotal);
+    formData.append("wartrain_total", wartrainTotal);
+    formData.append("wartraprep_total", wartraprepTotal);
+    formData.append("wartrawrap_total", wartrawrapTotal);
+    formData.append("wartraall_total", wartraallTotal);
+    formData.append("warday_total", wardayTotal);
     // formData.append("staaaaars", staaaaars);
     // formData.append("staaaaars", staaaaars);
     // formData.append("staaaaars", staaaaars);
@@ -9534,6 +9620,24 @@ function BudgetEdit() {
       setOthwarwrapTotal={setOthwarwrapTotal}
       othwarallTotal={othwarallTotal}
       setOthwarallTotal={setOthwarallTotal}
+      warcoorTotal={warcoorTotal}
+      setWarcoorTotal={setWarcoorTotal}
+      warcoprepTotal={warcoprepTotal}
+      setWarcoprepTotal={setWarcoprepTotal}
+      warcowrapTotal={warcowrapTotal}
+      setWarcowrapTotal={setWarcowrapTotal}
+      warcoallTotal={warcoallTotal}
+      setWarcoallTotal={setWarcoallTotal}
+      wartrainTotal={wartrainTotal}
+      setWartrainTotal={setWartrainTotal}
+      wartraprepTotal={wartraprepTotal}
+      setWartraprepTotal={setWartraprepTotal}
+      wartrawrapTotal={wartrawrapTotal}
+      setWartrawrapTotal={setWartrawrapTotal}
+      wartraallTotal={wartraallTotal}
+      setWartraallTotal={setWartraallTotal}
+      wardayTotal={wardayTotal}
+      setWardayTotal={setWardayTotal}
       /> 
     ) }
     {/* makeup */}
