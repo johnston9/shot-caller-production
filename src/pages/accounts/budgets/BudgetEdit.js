@@ -2577,6 +2577,84 @@ function BudgetEdit() {
 
   // Makeup Labour postData
   const [postDataMakeup, setPostDataMakeup] = useState({
+    days6th7th_unit_mak: "",
+    days6th7th_mak: 0,
+    overtime_unit_mak: "",
+    overtime_mak: 0,
+    holidays_unit_mak: "", 
+    holidays_mak: 0,
+    box_rent_unit_mak: "",
+    box_rent_mak: 0,
+    other_solo_mak: 0,
+    mak_head_qty_prep: 0,
+    mak_head_uno_prep: 0,
+    mak_head_una_prep: "",
+    mak_head_rt_prep: 0,
+    mak_head_qty_wrap: 0,
+    mak_head_uno_wrap: 0,
+    mak_head_una_wrap: "",
+    mak_head_rt_wrap: 0,
+    key_mak_qty_prep: 0,
+    key_mak_uno_prep: 0,
+    key_mak_una_prep: "",
+    key_mak_rt_prep: 0,
+    key_mak_qty_wrap: 0,
+    key_mak_uno_wrap: 0,
+    key_mak_una_wrap: "",
+    key_mak_rt_wrap: 0,
+    mak_art_qty_prep: 0,
+    mak_art_uno_prep: 0,
+    mak_art_una_prep: "",
+    mak_art_rt_prep: 0,
+    mak_art_qty_wrap: 0,
+    mak_art_uno_wrap: 0,
+    mak_art_una_wrap: "",
+    mak_art_rt_wrap: 0,
+    key_hair_qty_prep: 0,
+    key_hair_uno_prep: 0,
+    key_hair_una_prep: "",
+    key_hair_rt_prep: 0,
+    key_hair_qty_wrap: 0,
+    key_hair_uno_wrap: 0,
+    key_hair_una_wrap: "",
+    key_hair_rt_wrap: 0,
+    hair_qty_prep: 0,
+    hair_uno_prep: 0,
+    hair_una_prep: "",
+    hair_rt_prep: 0,
+    hair_qty_wrap: 0,
+    hair_uno_wrap: 0,
+    hair_una_wrap: "",
+    hair_rt_wrap: 0,
+    oth_mak_qty_prep: 0,
+    oth_mak_uno_prep: 0,
+    oth_mak_una_prep: "",
+    oth_mak_rt_prep: 0,
+    oth_mak_qty_wrap: 0,
+    oth_mak_uno_wrap: 0,
+    oth_mak_una_wrap: "",
+    oth_mak_rt_wrap: 0,
+    sfx_mak_qty_prep: 0,
+    sfx_mak_uno_prep: 0,
+    sfx_mak_una_prep: "",
+    sfx_mak_rt_prep: 0,
+    sfx_mak_qty_wrap: 0,
+    sfx_mak_uno_wrap: 0,
+    sfx_mak_una_wrap: "",
+    sfx_mak_rt_wrap: 0,
+    mak_train_qty: 0,
+    mak_train_uno: 0,
+    mak_train_una: "",
+    mak_train_rt: 0,
+    mak_train_qty_prep: 0,
+    mak_train_uno_prep: 0,
+    mak_train_una_prep: "",
+    mak_train_rt_prep: 0,
+    mak_train_qty_wrap: 0,
+    mak_train_uno_wrap: 0,
+    mak_train_una_wrap: "",
+    mak_train_rt_wrap: 0,
+    // old _prep wrap hair train
     fringes_taxes_makeup: 0,
     makeup_dept_head_quantity: 0,
     makeup_dept_head_units_number: 0,
@@ -2612,7 +2690,27 @@ function BudgetEdit() {
     sfx_makeup_rate: 0,
   });
 
-  const {makeup_dept_head_quantity,
+  const {days6th7th_unit_mak, days6th7th_mak, overtime_unit_mak, overtime_mak,
+    holidays_unit_mak, holidays_mak, box_rent_unit_mak, box_rent_mak, other_solo_mak,
+    mak_head_qty_prep, mak_head_uno_prep, mak_head_una_prep, mak_head_rt_prep,
+    mak_head_qty_wrap, mak_head_uno_wrap, mak_head_una_wrap, mak_head_rt_wrap,
+    key_mak_qty_prep, key_mak_uno_prep, key_mak_una_prep, key_mak_rt_prep,
+    key_mak_qty_wrap, key_mak_uno_wrap, key_mak_una_wrap, key_mak_rt_wrap,
+    mak_art_qty_prep, mak_art_uno_prep, mak_art_una_prep, mak_art_rt_prep, 
+    mak_art_qty_wrap, mak_art_uno_wrap, mak_art_una_wrap, mak_art_rt_wrap,
+    key_hair_qty_prep, key_hair_uno_prep, key_hair_una_prep, key_hair_rt_prep,
+    key_hair_qty_wrap, key_hair_uno_wrap, key_hair_una_wrap, key_hair_rt_wrap,
+    hair_qty_prep, hair_uno_prep, hair_una_prep, hair_rt_prep,
+    hair_qty_wrap, hair_uno_wrap, hair_una_wrap, hair_rt_wrap,
+    oth_mak_qty_prep, oth_mak_uno_prep, oth_mak_una_prep, oth_mak_rt_prep,
+    oth_mak_qty_wrap, oth_mak_uno_wrap, oth_mak_una_wrap, oth_mak_rt_wrap,
+    sfx_mak_qty_prep, sfx_mak_uno_prep, sfx_mak_una_prep, sfx_mak_rt_prep,
+    sfx_mak_qty_wrap, sfx_mak_uno_wrap, sfx_mak_una_wrap, sfx_mak_rt_wrap,
+    mak_train_qty, mak_train_uno, mak_train_una, mak_train_rt,
+    mak_train_qty_prep, mak_train_uno_prep, mak_train_una_prep, mak_train_rt_prep,
+    mak_train_qty_wrap, mak_train_uno_wrap, mak_train_una_wrap, mak_train_rt_wrap,
+    // old
+    makeup_dept_head_quantity,
     makeup_dept_head_units_number,
     makeup_dept_head_units_name,
     makeup_dept_head_rate,
@@ -2646,29 +2744,96 @@ function BudgetEdit() {
     sfx_makeup_rate, fringes_taxes_makeup,} = postDataMakeup;
   
   // Totals
-  // head makeup Total postData 
+
+  // head makeup
+  // head makeup shoot Total postData 
   const [headmakeupTotal, setHeadmakeupTotal] = useState(0);
+  // head makeup prep Total postData 
+  const [headmakprepTotal, setHeadmakprepTotal] = useState(0);
+  // head makeup wrap Total postData 
+  const [headmakwrapTotal, setHeadmakwrapTotal] = useState(0);
+  // head makeup all Total postData 
+  const [headmakallTotal, setHeadmakallTotal] = useState(0);
 
-  // key makeup Total postData 
+  // key makeup
+  // key makeup shoot Total postData 
   const [keymakeupTotal, setKeymakeupTotal] = useState(0);
-
-  // makeup artist Total postData 
+  // key makeup prep Total postData 
+  const [keymakprepTotal, setKeymakprepTotal] = useState(0);
+  // key makeup wrap Total postData 
+  const [keymakwrapTotal, setKeymakwrapTotal] = useState(0);
+  // key makeup prep Total postData 
+  const [keymakallTotal, setKeymakallTotal] = useState(0);
+  
+  // makeup artist
+  // makeup artist shoot Total postData 
   const [makeupartistTotal, setMakeupartistTotal] = useState(0);
+  // makeup artist prep Total postData 
+  const [makartprepTotal, setMakartprepTotal] = useState(0);
+  // makeup artist wrap Total postData 
+  const [makartwrapTotal, setMakartwrapTotal] = useState(0);
+  // makeup artist all Total postData 
+  const [makartallTotal, setMakallTotal] = useState(0);
 
-  // key hairstylist Total postData 
+  // key hairstylist
+  // key hairstylist shoot Total postData 
   const [keyhairstylistTotal, setKeyhairstylistTotal] = useState(0);
+  // key hairstylist prep Total postData 
+  const [keyhairprepTotal, setKeyhairprepTotal] = useState(0);
+  // key hairstylist wrap Total postData 
+  const [keyhairwrapTotal, setKeyhairwrapTotal] = useState(0);
+  // key hairstylist all Total postData 
+  const [keyhairallTotal, setKeyhairallTotal] = useState(0);
 
-  // hairdresser Total postData 
+  // hairdresser
+  // hairdresser shoot Total postData 
   const [hairdresserTotal, setHairdresserTotal] = useState(0);
+  // hairdresser prep Total postData 
+  const [hairprepTotal, setHairprepTotal] = useState(0);
+  // hairdresser wrap Total postData 
+  const [hairwrapTotal, setHairwrapTotal] = useState(0);
+  // hairdresser all Total postData 
+  const [hairallTotal, setHairallTotal] = useState(0);
 
-  // hair makeup dailies Total postData 
+  // hair makeup dailies
+  // hair makeup dailies shoot Total postData 
   const [hairmakeupdailiesTotal, setHairmakeupdailiesTotal] = useState(0);
+  // hair makeup dailies prep Total postData 
+  const [makdayprepTotal, setMakdayprepTotal] = useState(0);
+  // hair makeup dailies wrap Total postData 
+  const [makdaywrapTotal, setMakdaywrapTotal] = useState(0);
+  // hair makeup dailies all Total postData 
+  const [makdayallTotal, setMakdayallTotal] = useState(0);
 
-  // other makeup labour Total postData 
+  // other makeup labour
+  // other makeup labour shoot Total postData 
   const [othermakeuplabourTotal, setOthermakeuplabourTotal] = useState(0);
+  // other makeup labour prep Total postData 
+  const [othmakprepTotal, setOthmakprepTotal] = useState(0);
+  // other makeup labour wrap Total postData 
+  const [othmakwrapTotal, setOthmakwrapTotal] = useState(0);
+  // other makeup labour all Total postData 
+  const [othmakallTotal, setOthmakallTotal] = useState(0);
 
-  // sfx makeup labour Total postData 
+  // sfx makeup labour
+  // sfx makeup labour shoot Total postData 
   const [sfxmakeupTotal, setSfxmakeupTotal] = useState(0);
+  // sfx makeup labour prep Total postData 
+  const [sfxmakprepTotal, setSfxmakprepTotal] = useState(0);
+  // sfx makeup labour wrap Total postData 
+  const [sfxmakwrapTotal, setSfxmakwrapTotal] = useState(0);
+  // sfx makeup labour all Total postData 
+  const [sfxmakallTotal, setSfxmakallTotal] = useState(0);
+
+  // makeup trainee labour
+  // makeup trainee labour shoot Total postData 
+  const [maktrainTotal, setMakktrainTotal] = useState(0);
+  // makeup trainee labour prep Total postData 
+  const [maktraprepTotal, setMakktraprepTotal] = useState(0);
+  // makeup trainee labour wrap Total postData 
+  const [maktrawrapTotal, setMakktrawrapTotal] = useState(0);
+  // makeup trainee labour all Total postData 
+  const [maktraallTotal, setMakktraallTotal] = useState(0);
 
   // Makeup Labour Total postData 
   const [makeuplabourTotal, setMakeuplabourTotal] = useState(0);
@@ -5606,7 +5771,26 @@ function BudgetEdit() {
           other_wardrobe_labour_units_name, other_wardrobe_labour_rate,});
         setWardrobelabourTotal(wardrobelabour_total);
         // makeup
-        const {fringes_taxes_makeup,
+        const {days6th7th_unit_mak, days6th7th_mak, overtime_unit_mak, overtime_mak,
+          holidays_unit_mak, holidays_mak, box_rent_unit_mak, box_rent_mak, other_solo_mak,
+          mak_head_qty_prep, mak_head_uno_prep, mak_head_una_prep, mak_head_rt_prep,
+          mak_head_qty_wrap, mak_head_uno_wrap, mak_head_una_wrap, mak_head_rt_wrap,
+          key_mak_qty_prep, key_mak_uno_prep, key_mak_una_prep, key_mak_rt_prep,
+          key_mak_qty_wrap, key_mak_uno_wrap, key_mak_una_wrap, key_mak_rt_wrap,
+          mak_art_qty_prep, mak_art_uno_prep, mak_art_una_prep, mak_art_rt_prep, 
+          mak_art_qty_wrap, mak_art_uno_wrap, mak_art_una_wrap, mak_art_rt_wrap,
+          key_hair_qty_prep, key_hair_uno_prep, key_hair_una_prep, key_hair_rt_prep,
+          key_hair_qty_wrap, key_hair_uno_wrap, key_hair_una_wrap, key_hair_rt_wrap,
+          hair_qty_prep, hair_uno_prep, hair_una_prep, hair_rt_prep,
+          hair_qty_wrap, hair_uno_wrap, hair_una_wrap, hair_rt_wrap,
+          oth_mak_qty_prep, oth_mak_uno_prep, oth_mak_una_prep, oth_mak_rt_prep,
+          oth_mak_qty_wrap, oth_mak_uno_wrap, oth_mak_una_wrap, oth_mak_rt_wrap,
+          sfx_mak_qty_prep, sfx_mak_uno_prep, sfx_mak_una_prep, sfx_mak_rt_prep,
+          sfx_mak_qty_wrap, sfx_mak_uno_wrap, sfx_mak_una_wrap, sfx_mak_rt_wrap,
+          mak_train_qty, mak_train_uno, mak_train_una, mak_train_rt,
+          mak_train_qty_prep, mak_train_uno_prep, mak_train_una_prep, mak_train_rt_prep,
+          mak_train_qty_wrap, mak_train_uno_wrap, mak_train_una_wrap, mak_train_rt_wrap,
+          fringes_taxes_makeup,
           makeup_dept_head_quantity, makeup_dept_head_units_number,
           makeup_dept_head_units_name, makeup_dept_head_rate,
           key_makeup_quantity, key_makeup_units_number,
@@ -5625,6 +5809,25 @@ function BudgetEdit() {
           sfx_makeup_units_name, sfx_makeup_rate,
           makeuplabour_total} = data.results[0];
         setPostDataMakeup({fringes_taxes_makeup,
+          days6th7th_unit_mak, days6th7th_mak, overtime_unit_mak, overtime_mak,
+          holidays_unit_mak, holidays_mak, box_rent_unit_mak, box_rent_mak, other_solo_mak,
+          mak_head_qty_prep, mak_head_uno_prep, mak_head_una_prep, mak_head_rt_prep,
+          mak_head_qty_wrap, mak_head_uno_wrap, mak_head_una_wrap, mak_head_rt_wrap,
+          key_mak_qty_prep, key_mak_uno_prep, key_mak_una_prep, key_mak_rt_prep,
+          key_mak_qty_wrap, key_mak_uno_wrap, key_mak_una_wrap, key_mak_rt_wrap,
+          mak_art_qty_prep, mak_art_uno_prep, mak_art_una_prep, mak_art_rt_prep, 
+          mak_art_qty_wrap, mak_art_uno_wrap, mak_art_una_wrap, mak_art_rt_wrap,
+          key_hair_qty_prep, key_hair_uno_prep, key_hair_una_prep, key_hair_rt_prep,
+          key_hair_qty_wrap, key_hair_uno_wrap, key_hair_una_wrap, key_hair_rt_wrap,
+          hair_qty_prep, hair_uno_prep, hair_una_prep, hair_rt_prep,
+          hair_qty_wrap, hair_uno_wrap, hair_una_wrap, hair_rt_wrap,
+          oth_mak_qty_prep, oth_mak_uno_prep, oth_mak_una_prep, oth_mak_rt_prep,
+          oth_mak_qty_wrap, oth_mak_uno_wrap, oth_mak_una_wrap, oth_mak_rt_wrap,
+          sfx_mak_qty_prep, sfx_mak_uno_prep, sfx_mak_una_prep, sfx_mak_rt_prep,
+          sfx_mak_qty_wrap, sfx_mak_uno_wrap, sfx_mak_una_wrap, sfx_mak_rt_wrap,
+          mak_train_qty, mak_train_uno, mak_train_una, mak_train_rt,
+          mak_train_qty_prep, mak_train_uno_prep, mak_train_una_prep, mak_train_rt_prep,
+          mak_train_qty_wrap, mak_train_uno_wrap, mak_train_una_wrap, mak_train_rt_wrap,
             makeup_dept_head_quantity, makeup_dept_head_units_number,
             makeup_dept_head_units_name, makeup_dept_head_rate,
             key_makeup_quantity, key_makeup_units_number,
@@ -7959,6 +8162,118 @@ function BudgetEdit() {
     formData.append("wartrawrap_total", wartrawrapTotal);
     formData.append("wartraall_total", wartraallTotal);
     formData.append("warday_total", wardayTotal);
+    formData.append("days6th7th_unit_mak", days6th7th_unit_mak);
+    formData.append("days6th7th_mak", days6th7th_mak);
+    formData.append("overtime_unit_mak", overtime_unit_mak);
+    formData.append("overtime_mak", overtime_mak);
+    formData.append("holidays_unit_mak", holidays_unit_mak);
+    formData.append("holidays_mak", holidays_mak);
+    formData.append("box_rent_unit_mak", box_rent_unit_mak);
+    formData.append("box_rent_mak", box_rent_mak);
+    formData.append("other_solo_mak", other_solo_mak);
+    formData.append("mak_head_qty_prep", mak_head_qty_prep);
+    formData.append("mak_head_uno_prep", mak_head_uno_prep);
+    formData.append("mak_head_una_prep", mak_head_una_prep);
+    formData.append("mak_head_rt_prep", mak_head_rt_prep);
+    formData.append("mak_head_qty_wrap", mak_head_qty_wrap);
+    formData.append("mak_head_uno_wrap", mak_head_uno_wrap);
+    formData.append("mak_head_una_wrap", mak_head_una_wrap);
+    formData.append("mak_head_rt_wrap", mak_head_rt_wrap);
+    formData.append("key_mak_qty_prep", key_mak_qty_prep);
+    formData.append("key_mak_uno_prep", key_mak_uno_prep);
+    formData.append("key_mak_una_prep", key_mak_una_prep);
+    formData.append("key_mak_rt_prep", key_mak_rt_prep);
+    formData.append("key_mak_qty_wrap", key_mak_qty_wrap);
+    formData.append("key_mak_uno_wrap", key_mak_uno_wrap);
+    formData.append("key_mak_una_wrap", key_mak_una_wrap);
+    formData.append("key_mak_rt_wrap", key_mak_rt_wrap);
+    formData.append("mak_art_qty_prep", mak_art_qty_prep);
+    formData.append("mak_art_uno_prep", mak_art_uno_prep);
+    formData.append("mak_art_una_prep", mak_art_una_prep);
+    formData.append("mak_art_rt_prep", mak_art_rt_prep);
+    formData.append("mak_art_qty_wrap", mak_art_qty_wrap);
+    formData.append("mak_art_uno_wrap", mak_art_uno_wrap);
+    formData.append("mak_art_una_wrap", mak_art_una_wrap);
+    formData.append("mak_art_rt_wrap", mak_art_rt_wrap);
+    formData.append("key_hair_qty_prep", key_hair_qty_prep);
+    formData.append("key_hair_uno_prep", key_hair_uno_prep);
+    formData.append("key_hair_una_prep", key_hair_una_prep);
+    formData.append("key_hair_rt_prep", key_hair_rt_prep);
+    formData.append("key_hair_qty_wrap", key_hair_qty_wrap);
+    formData.append("key_hair_uno_wrap", key_hair_uno_wrap);
+    formData.append("key_hair_una_wrap", key_hair_una_wrap);
+    formData.append("key_hair_rt_wrap", key_hair_rt_wrap);
+    formData.append("hair_qty_prep", hair_qty_prep);
+    formData.append("hair_uno_prep", hair_uno_prep);
+    formData.append("hair_una_prep", hair_una_prep);
+    formData.append("hair_rt_prep", hair_rt_prep);
+    formData.append("hair_qty_wrap", hair_qty_wrap);
+    formData.append("hair_uno_wrap", hair_uno_wrap);
+    formData.append("hair_una_wrap", hair_una_wrap);
+    formData.append("hair_rt_wrap", hair_rt_wrap);
+    formData.append("oth_mak_qty_prep", oth_mak_qty_prep);
+    formData.append("oth_mak_uno_prep", oth_mak_uno_prep);
+    formData.append("oth_mak_una_prep", oth_mak_una_prep);
+    formData.append("oth_mak_rt_prep", oth_mak_rt_prep);
+    formData.append("oth_mak_qty_wrap", oth_mak_qty_wrap);
+    formData.append("oth_mak_uno_wrap", oth_mak_uno_wrap);
+    formData.append("oth_mak_una_wrap", oth_mak_una_wrap);
+    formData.append("oth_mak_rt_wrap", oth_mak_rt_wrap);
+    formData.append("sfx_mak_qty_prep", sfx_mak_qty_prep);
+    formData.append("sfx_mak_uno_prep", sfx_mak_uno_prep);
+    formData.append("sfx_mak_una_prep", sfx_mak_una_prep);
+    formData.append("sfx_mak_rt_prep", sfx_mak_rt_prep);
+    formData.append("sfx_mak_qty_wrap", sfx_mak_qty_wrap);
+    formData.append("sfx_mak_uno_wrap", sfx_mak_uno_wrap);
+    formData.append("sfx_mak_una_wrap", sfx_mak_una_wrap);
+    formData.append("sfx_mak_rt_wrap", sfx_mak_rt_wrap);
+    formData.append("mak_train_qty", mak_train_qty);
+    formData.append("mak_train_uno", mak_train_uno);
+    formData.append("mak_train_una", mak_train_una);
+    formData.append("mak_train_rt", mak_train_rt);
+    formData.append("mak_train_qty_prep", mak_train_qty_prep);
+    formData.append("mak_train_uno_prep", mak_train_uno_prep);
+    formData.append("mak_train_una_prep", mak_train_una_prep);
+    formData.append("mak_train_rt_prep", mak_train_rt_prep);
+    formData.append("mak_train_qty_wrap", mak_train_qty_wrap);
+    formData.append("mak_train_uno_wrap", mak_train_uno_wrap);
+    formData.append("mak_train_una_wrap", mak_train_una_wrap);
+    formData.append("mak_train_rt_wrap", mak_train_rt_wrap);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
     // formData.append("staaaaars", staaaaars);
     // formData.append("staaaaars", staaaaars);
     // formData.append("staaaaars", staaaaars);

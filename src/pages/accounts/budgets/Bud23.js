@@ -1,54 +1,175 @@
-war_coor_qty,
-war_coor_uno,
-war_coor_una,
-war_coor_rt,
-war_coor_qty_prep,
-war_coor_uno_prep,
-war_coor_una_prep,
-war_coor_rt_prep,
-war_coor_qty_wrap,
-war_coor_uno_wrap,
-war_coor_una_wrap,
-war_coor_rt_wrap,
-train_qty_prep,
-train_uno_prep,
-train_una_prep,
-train_rt_prep,
-train_qty,
-train_uno,
-train_una,
-train_rt,
-train_qty_wrap,
-train_uno_wrap,
-train_una_wrap,
-train_rt_wrap,
-day_war_qty,
-day_war_uno,
-day_war_una,
-day_war_rt,
-// Wardrobe Coordinator
-  // wardrobe Coordinator shoot Total postData 
-  const [warcoorTotal, setWarcoorTotal] = useState(0);
-  // wardrobe Coordinator prep Total postData 
-  const [warcoprepTotal, setWarcoprepTotal] = useState(0);
-  // wardrobe Coordinator wrap Total postData 
-  const [warcowrapTotal, setWarcowrapTotal] = useState(0);
-  // wardrobe Coordinator all Total postData 
-  const [warcoallTotal, setWarcoallTotal] = useState(0);
+    days6th7th_unit_mak,
+    days6th7th_mak,
+    overtime_unit_mak,
+    overtime_mak,
+    holidays_unit_mak, 
+    holidays_mak,
+    box_rent_unit_mak,
+    box_rent_mak,
+    other_solo_mak,
+    mak_head_qty_prep,
+    mak_head_uno_prep,
+    mak_head_una_prep,
+    mak_head_rt_prep,
+    mak_head_qty_wrap,
+    mak_head_uno_wrap,
+    mak_head_una_wrap,
+    mak_head_rt_wrap,
+    key_mak_qty_prep,
+    key_mak_uno_prep,
+    key_mak_una_prep,
+    key_mak_rt_prep,
+    key_mak_qty_wrap,
+    key_mak_uno_wrap,
+    key_mak_una_wrap,
+    key_mak_rt_wrap,
+    mak_art_qty_prep,
+    mak_art_uno_prep,
+    mak_art_una_prep,
+    mak_art_rt_prep,
+    mak_art_qty_wrap,
+    mak_art_uno_wrap,
+    mak_art_una_wrap,
+    mak_art_rt_wrap,
+    key_hair_qty_prep,
+    key_hair_uno_prep,
+    key_hair_una_prep,
+    key_hair_rt_prep,
+    key_hair_qty_wrap,
+    key_hair_uno_wrap,
+    key_hair_una_wrap,
+    key_hair_rt_wrap,
+    hair_qty_prep,
+    hair_uno_prep,
+    hair_una_prep,
+    hair_rt_prep,
+    hair_qty_wrap,
+    hair_uno_wrap,
+    hair_una_wrap,
+    hair_rt_wrap,
+    oth_mak_qty_prep,
+    oth_mak_uno_prep,
+    oth_mak_una_prep,
+    oth_mak_rt_prep,
+    oth_mak_qty_wrap,
+    oth_mak_uno_wrap,
+    oth_mak_una_wrap,
+    oth_mak_rt_wrap,
+    sfx_mak_qty_prep,
+    sfx_mak_uno_prep,
+    sfx_mak_una_prep,
+    sfx_mak_rt_prep,
+    sfx_mak_qty_wrap,
+    sfx_mak_uno_wrap,
+    sfx_mak_una_wrap,
+    sfx_mak_rt_wrap,
+    mak_train_qty,
+    mak_train_uno,
+    mak_train_una,
+    mak_train_rt,
+    mak_train_qty_prep,
+    mak_train_uno_prep,
+    mak_train_una_prep,
+    mak_train_rt_prep,
+    mak_train_qty_wrap,
+    mak_train_uno_wrap,
+    mak_train_una_wrap, 
+    mak_train_rt_wrap,
 
-  // Wardrobe Trainee
-  // wardrobe Trainee shoot Total postData 
-  const [wartrainTotal, setWartrainTotal] = useState(0);
-  // wardrobe Trainee prep Total postData 
-  const [wartraprepTotal, setWartraprepTotal] = useState(0);
-  // wardrobe Trainee wrap Total postData 
-  const [wartrawrapTotal, setWartrawrapTotal] = useState(0);
-  // wardrobe Trainee prep Total postData 
-  const [wartraallTotal, setWartraallTotal] = useState(0);
+    // Totals
 
-  // Wardrobe Dailies
-  // wardrobe Dailies shoot Total postData 
-  const [wardayTotal, setWardayTotal] = useState(0);
+  // head makeup
+  // head makeup shoot Total postData 
+  const [headmakeupTotal, setHeadmakeupTotal] = useState(0);
+  // head makeup prep Total postData 
+  const [headmakprepTotal, setHeadmakprepTotal] = useState(0);
+  // head makeup wrap Total postData 
+  const [headmakwrapTotal, setHeadmakwrapTotal] = useState(0);
+  // head makeup all Total postData 
+  const [headmakallTotal, setHeadmakallTotal] = useState(0);
+
+  // key makeup
+  // key makeup shoot Total postData 
+  const [keymakeupTotal, setKeymakeupTotal] = useState(0);
+  // key makeup prep Total postData 
+  const [keymakprepTotal, setKeymakprepTotal] = useState(0);
+  // key makeup wrap Total postData 
+  const [keymakwrapTotal, setKeymakwrapTotal] = useState(0);
+  // key makeup prep Total postData 
+  const [keymakallTotal, setKeymakallTotal] = useState(0);
+  
+  // makeup artist
+  // makeup artist shoot Total postData 
+  const [makeupartistTotal, setMakeupartistTotal] = useState(0);
+  // makeup artist prep Total postData 
+  const [makartprepTotal, setMakartprepTotal] = useState(0);
+  // makeup artist wrap Total postData 
+  const [makartwrapTotal, setMakartwrapTotal] = useState(0);
+  // makeup artist all Total postData 
+  const [makartallTotal, setMakallTotal] = useState(0);
+
+  // key hairstylist
+  // key hairstylist shoot Total postData 
+  const [keyhairstylistTotal, setKeyhairstylistTotal] = useState(0);
+  // key hairstylist prep Total postData 
+  const [keyhairprepTotal, setKeyhairprepTotal] = useState(0);
+  // key hairstylist wrap Total postData 
+  const [keyhairwrapTotal, setKeyhairwrapTotal] = useState(0);
+  // key hairstylist all Total postData 
+  const [keyhairallTotal, setKeyhairallTotal] = useState(0);
+
+  // hairdresser
+  // hairdresser shoot Total postData 
+  const [hairdresserTotal, setHairdresserTotal] = useState(0);
+  // hairdresser prep Total postData 
+  const [hairprepTotal, setHairprepTotal] = useState(0);
+  // hairdresser wrap Total postData 
+  const [hairwrapTotal, setHairwrapTotal] = useState(0);
+  // hairdresser all Total postData 
+  const [hairallTotal, setHairallTotal] = useState(0);
+
+  // hair makeup dailies
+  // hair makeup dailies shoot Total postData 
+  const [hairmakeupdailiesTotal, setHairmakeupdailiesTotal] = useState(0);
+  // hair makeup dailies prep Total postData 
+  const [makdayprepTotal, setMakdayprepTotal] = useState(0);
+  // hair makeup dailies wrap Total postData 
+  const [makdaywrapTotal, setMakdaywrapTotal] = useState(0);
+  // hair makeup dailies all Total postData 
+  const [makdayallTotal, setMakdayallTotal] = useState(0);
+
+  // other makeup labour
+  // other makeup labour shoot Total postData 
+  const [othermakeuplabourTotal, setOthermakeuplabourTotal] = useState(0);
+  // other makeup labour prep Total postData 
+  const [othmakprepTotal, setOthmakprepTotal] = useState(0);
+  // other makeup labour wrap Total postData 
+  const [othmakwrapTotal, setOthmakwrapTotal] = useState(0);
+  // other makeup labour all Total postData 
+  const [othmakallTotal, setOthmakallTotal] = useState(0);
+
+  // sfx makeup labour
+  // sfx makeup labour shoot Total postData 
+  const [sfxmakeupTotal, setSfxmakeupTotal] = useState(0);
+  // sfx makeup labour prep Total postData 
+  const [sfxmakprepTotal, setSfxmakprepTotal] = useState(0);
+  // sfx makeup labour wrap Total postData 
+  const [sfxmakwrapTotal, setSfxmakwrapTotal] = useState(0);
+  // sfx makeup labour all Total postData 
+  const [sfxmakallTotal, setSfxmakallTotal] = useState(0);
+
+  // makeup trainee labour
+  // makeup trainee labour shoot Total postData 
+  const [maktrainTotal, setMakktrainTotal] = useState(0);
+  // makeup trainee labour prep Total postData 
+  const [maktraprepTotal, setMakktraprepTotal] = useState(0);
+  // makeup trainee labour wrap Total postData 
+  const [maktrawrapTotal, setMakktrawrapTotal] = useState(0);
+  // makeup trainee labour all Total postData 
+  const [maktraallTotal, setMakktraallTotal] = useState(0);
+
+  // Makeup Labour Total postData 
+  const [makeuplabourTotal, setMakeuplabourTotal] = useState(0);
     
     // days6th7th_unit_war,
     // days6th7th_war,
