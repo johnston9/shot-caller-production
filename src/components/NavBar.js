@@ -204,7 +204,7 @@ const NavBar = () => {
   /* Icons that display when a user is logged out */
     <>
       <NavLink
-        className={`mt-2 mx-2 ${styles.NavLink}`}
+        className={`mt-2 pt-1 ml-3 ${styles.NavLink}`}
         activeClassName={styles.Active}
         to="/signin"
       >
@@ -212,7 +212,7 @@ const NavBar = () => {
       </NavLink>
       <NavLink
         to="/signup"
-        className={`mt-2 ${styles.NavLink}`}
+        className={`mt-2 pt-1 ${styles.NavLink}`}
         activeClassName={styles.Active}
       >
         <i className="fas fa-user-plus"></i>Sign up

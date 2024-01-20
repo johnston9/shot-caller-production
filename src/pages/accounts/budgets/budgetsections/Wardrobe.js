@@ -784,6 +784,7 @@ const Wardrobe = (props) => {
     </Row>
     <div className="px-2">
     <Row className={`mt-3`}>
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>14.00</p>
     </Col>
@@ -4139,6 +4140,13 @@ const Wardrobe = (props) => {
         {message}
         </Alert>
     ))}
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Fringes and Taxes */}

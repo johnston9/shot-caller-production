@@ -128,10 +128,6 @@
   // hairdresser all Total postData 
   const [hairallTotal, setHairallTotal] = useState(0);
 
-  // hair makeup dailies
-  // hair makeup dailies shoot Total postData 
-  const [hairmakeupdailiesTotal, setHairmakeupdailiesTotal] = useState(0);
-
   // hair/makeup assistants - using othermakeuplabour as variable name
   // hair/makeup assistants shoot Total postData 
   const [othermakeuplabourTotal, setOthermakeuplabourTotal] = useState(0);
@@ -161,6 +157,10 @@
   const [maktrawrapTotal, setMakktrawrapTotal] = useState(0);
   // makeup trainee labour all Total postData 
   const [maktraallTotal, setMakktraallTotal] = useState(0);
+
+  // hair makeup dailies
+  // hair makeup dailies shoot Total postData 
+  const [hairmakeupdailiesTotal, setHairmakeupdailiesTotal] = useState(0);
 
   // Makeup Labour Total postData 
   const [makeuplabourTotal, setMakeuplabourTotal] = useState(0);
