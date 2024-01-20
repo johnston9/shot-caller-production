@@ -2773,7 +2773,7 @@ function BudgetEdit() {
   // makeup artist wrap Total postData 
   const [makartwrapTotal, setMakartwrapTotal] = useState(0);
   // makeup artist all Total postData 
-  const [makartallTotal, setMakallTotal] = useState(0);
+  const [makartallTotal, setMakartallTotal] = useState(0);
 
   // key hairstylist
   // key hairstylist shoot Total postData 
@@ -8239,31 +8239,31 @@ function BudgetEdit() {
     formData.append("mak_train_uno_wrap", mak_train_uno_wrap);
     formData.append("mak_train_una_wrap", mak_train_una_wrap);
     formData.append("mak_train_rt_wrap", mak_train_rt_wrap);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
+    formData.append("headmakprep_total", headmakprepTotal);
+    formData.append("headmakwrap_total", headmakwrapTotal);
+    formData.append("headmakall_total", headmakallTotal);
+    formData.append("keymakprep_total", keymakprepTotal);
+    formData.append("keymakwrap_total", keymakwrapTotal);
+    formData.append("keymakall_total", keymakallTotal);
+    formData.append("makartprep_total", makartprepTotal);
+    formData.append("makartwrap_total", makartwrapTotal);
+    formData.append("makartall_total", makartallTotal);
+    formData.append("keyhairprep_total", keyhairprepTotal);
+    formData.append("keyhairwrap_total", keyhairwrapTotal);
+    formData.append("keyhairall_total", keyhairallTotal);
+    formData.append("hairprep_total", hairprepTotal);
+    formData.append("hairwrap_total", hairwrapTotal);
+    formData.append("hairall_total", hairallTotal);
+    formData.append("othmakprep_total", othmakprepTotal);
+    formData.append("othmakwrap_total", othmakwrapTotal);
+    formData.append("othmakall_total", othmakallTotal);
+    formData.append("sfxmakprep_total", sfxmakprepTotal);
+    formData.append("sfxmakwrap_total", sfxmakwrapTotal);
+    formData.append("sfxmakall_total", sfxmakallTotal);
+    formData.append("maktrain_total", maktrainTotal);
+    formData.append("maktraprep_total", maktraprepTotal);
+    formData.append("maktrawrap_total", maktrawrapTotal);
+    formData.append("maktraall_total", maktraallTotal);
     // formData.append("staaaaars", staaaaars);
     // formData.append("staaaaars", staaaaars);
     // formData.append("staaaaars", staaaaars);
@@ -9980,7 +9980,58 @@ function BudgetEdit() {
       setSfxmakeupTotal={setSfxmakeupTotal}
       makeuplabourTotal={makeuplabourTotal}
       setMakeuplabourTotal={setMakeuplabourTotal}
-      setShow={setShowMake}  /> 
+      setShow={setShowMake} 
+      headmakprepTotal={headmakprepTotal}
+      setHeadmakprepTotal={setHeadmakprepTotal}
+      headmakwrapTotal={headmakwrapTotal}
+      setHeadmakwrapTotal={setHeadmakwrapTotal}
+      headmakallTotal={headmakallTotal}
+      setHeadmakallTotal={setHeadmakallTotal}
+      keymakprepTotal={keymakprepTotal}
+      setKeymakprepTotal={setKeymakprepTotal}
+      keymakwrapTotal={keymakwrapTotal}
+      setKeymakwrapTotal={setKeymakwrapTotal}
+      keymakallTotal={keymakallTotal}
+      setKeymakallTotal={setKeymakallTotal}
+      makartprepTotal={makartprepTotal}
+      setMakartprepTotal={setMakartprepTotal}
+      makartwrapTotal={makartwrapTotal}
+      setMakartwrapTotal={setMakartwrapTotal}
+      makartallTotal={makartallTotal}
+      setMakartallTotal={setMakartallTotal}
+      keyhairprepTotal={keyhairprepTotal}
+      setKeyhairprepTotal={setKeyhairprepTotal}
+      keyhairwrapTotal={keyhairwrapTotal}
+      setKeyhairwrapTotal={setKeyhairwrapTotal}
+      keyhairallTotal={keyhairallTotal}
+      setKeyhairallTotal={setKeyhairallTotal}
+      hairprepTotal={hairprepTotal}
+      setHairprepTotal={setHairprepTotal}
+      hairwrapTotal={hairwrapTotal}
+      setHairwrapTotal={setHairwrapTotal}
+      hairallTotal={hairallTotal}
+      setHairallTotal={setHairallTotal}
+      othmakprepTotal={othmakprepTotal}
+      setOthmakprepTotal={setOthmakprepTotal}
+      othmakwrapTotal={othmakwrapTotal}
+      setOthmakwrapTotal={setOthmakwrapTotal}
+      othmakallTotal={othmakallTotal}
+      setOthmakallTotal={setOthmakallTotal}
+      sfxmakprepTotal={sfxmakprepTotal}
+      setSfxmakprepTotal={setSfxmakprepTotal}
+      sfxmakwrapTotal={sfxmakwrapTotal}
+      setSfxmakwrapTotal={setSfxmakwrapTotal}
+      sfxmakallTotal={sfxmakallTotal}
+      setSfxmakallTotal={setSfxmakallTotal}
+      maktrainTotal={maktrainTotal}
+      setMakktrainTotal={setMakktrainTotal}
+      maktraprepTotal={maktraprepTotal}
+      setMakktraprepTotal={setMakktraprepTotal}
+      maktrawrapTotal={maktrawrapTotal}
+      setMakktrawrapTotal={setMakktrawrapTotal}
+      maktraallTotal={maktraallTotal}
+      setMakktraallTotal={setMakktraallTotal}
+      /> 
     ) }
     {/* camera */}
     {!showCam ? (

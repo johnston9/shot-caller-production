@@ -19,7 +19,33 @@ const Makeup = (props) => {
            hairmakeupdailiesTotal, setHairmakeupdailiesTotal,
            othermakeuplabourTotal, setOthermakeuplabourTotal,
            sfxmakeupTotal, setSfxmakeupTotal, setShow,
-           makeuplabourTotal, setMakeuplabourTotal} = props;
+           makeuplabourTotal, setMakeuplabourTotal,
+           headmakprepTotal, setHeadmakprepTotal,
+           headmakwrapTotal, setHeadmakwrapTotal,
+           headmakallTotal, setHeadmakallTotal,
+           keymakprepTotal, setKeymakprepTotal,
+           keymakwrapTotal, setKeymakwrapTotal,
+           keymakallTotal, setKeymakallTotal,
+           makartprepTotal, setMakartprepTotal,
+           makartwrapTotal, setMakartwrapTotal,
+           makartallTotal, setMakartallTotal,
+           keyhairprepTotal, setKeyhairprepTotal,
+           keyhairwrapTotal, setKeyhairwrapTotal,
+           keyhairallTotal, setKeyhairallTotal,
+           hairprepTotal, setHairprepTotal,
+           hairwrapTotal, setHairwrapTotal,
+           hairallTotal, setHairallTotal,
+           othmakprepTotal, setOthmakprepTotal,
+           othmakwrapTotal, setOthmakwrapTotal,
+           othmakallTotal, setOthmakallTotal,
+           sfxmakprepTotal, setSfxmakprepTotal,
+           sfxmakwrapTotal, setSfxmakwrapTotal,
+           sfxmakallTotal, setSfxmakallTotal,
+           maktrainTotal, setMakktrainTotal,
+           maktraprepTotal, setMakktraprepTotal,
+           maktrawrapTotal, setMakktrawrapTotal,
+           maktraallTotal, setMakktraallTotal,
+    } = props;
 
     const {days6th7th_unit_mak, days6th7th_mak, overtime_unit_mak, overtime_mak,
     holidays_unit_mak, holidays_mak, box_rent_unit_mak, box_rent_mak, other_solo_mak,
@@ -60,11 +86,11 @@ const Makeup = (props) => {
 
     // handleChange 
     const handleChange = (event) => {
-      setPostDataMakeup({
-      ...postDataMakeup,
-      [event.target.name]: parseFloat(event.target.value || 0 ),
-      });
-    }; 
+        setPostDataMakeup({
+        ...postDataMakeup,
+        [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
+        });
+    };
 
     // handleChange Text 
     const handleChangeText = (event) => {
@@ -75,7 +101,8 @@ const Makeup = (props) => {
     };
 
     // Calculate Functions
-    // function to calculate makeup dept head on change
+    // makeup dept head
+    // function to calculate makeup dept head shoot on change
     useEffect(() => {
       const addMakhea = () => {
       setHeadmakeupTotal(parseFloat(makeup_dept_head_quantity || 0) * 
@@ -93,7 +120,59 @@ const Makeup = (props) => {
   }, [makeup_dept_head_quantity, makeup_dept_head_units_number,
     makeup_dept_head_rate]);
 
-    // function to calculate key makeup on change
+    // function to calculate makeup dept head prep on change
+    useEffect(() => {
+        const addMakheaprep = () => {
+        setHeadmakprepTotal(parseFloat(mak_head_qty_prep || 0) * 
+        parseFloat(mak_head_uno_prep || 0) * 
+        parseFloat(mak_head_rt_prep || 0))
+        }
+        const timer = setTimeout(() => {
+            addMakheaprep();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [mak_head_qty_prep, mak_head_uno_prep, mak_head_rt_prep]);
+
+    // function to calculate makeup dept head wrap on change
+    useEffect(() => {
+        const addMakheawrap = () => {
+        setHeadmakwrapTotal(parseFloat(mak_head_qty_wrap || 0) * 
+        parseFloat(mak_head_uno_wrap || 0) * 
+        parseFloat(mak_head_rt_wrap || 0))
+        }
+        const timer = setTimeout(() => {
+            addMakheawrap();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [mak_head_qty_wrap, mak_head_uno_wrap, mak_head_rt_wrap]);
+
+    // function to calculate makeup dept head all on change
+    useEffect(() => {
+        const addMakheaall = () => {
+        setHeadmakallTotal(parseFloat(headmakeupTotal || 0) +
+        parseFloat(headmakprepTotal || 0) +
+        parseFloat(headmakwrapTotal || 0))
+        }
+        const timer = setTimeout(() => {
+            addMakheaall();
+        }, 1000);
+
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [headmakeupTotal, headmakprepTotal, headmakwrapTotal]);
+
+    // key makeup
+    // function to calculate key makeup shoot on change
     useEffect(() => {
       const addKeymak = () => {
       setKeymakeupTotal(parseFloat(key_makeup_quantity || 0) * 
@@ -111,7 +190,59 @@ const Makeup = (props) => {
   }, [key_makeup_quantity, key_makeup_units_number,
     key_makeup_rate]);
 
-    // function to calculate makeup artist on change
+    // function to calculate key makeup prep on change
+    useEffect(() => {
+        const addKeymakprep = () => {
+        setKeymakprepTotal(parseFloat(key_mak_qty_prep || 0) * 
+        parseFloat(key_mak_uno_prep || 0) * 
+        parseFloat(key_mak_rt_prep || 0))
+        }
+        const timer = setTimeout(() => {
+            addKeymakprep();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [key_mak_qty_prep, key_mak_uno_prep, key_mak_rt_prep]);
+
+    // function to calculate key makeup wrap on change
+    useEffect(() => {
+        const addKeymakwrap = () => {
+        setKeymakwrapTotal(parseFloat(key_mak_qty_wrap || 0) * 
+        parseFloat(key_mak_uno_wrap || 0) * 
+        parseFloat(key_mak_rt_wrap || 0))
+        }
+        const timer = setTimeout(() => {
+            addKeymakwrap();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [key_mak_qty_wrap, key_mak_uno_wrap, key_mak_rt_wrap]);
+
+    // function to calculate key makeup all on change
+    useEffect(() => {
+        const addKeymakall = () => {
+        setKeymakallTotal(parseFloat(keymakeupTotal || 0) +
+        parseFloat(keymakprepTotal || 0) +
+        parseFloat(keymakwrapTotal || 0))
+        }
+        const timer = setTimeout(() => {
+            addKeymakall();
+        }, 1000);
+
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [keymakeupTotal, keymakprepTotal, keymakwrapTotal]);
+
+    // makeup artist
+    // function to calculate makeup artist shoot on change
     useEffect(() => {
       const addMakart = () => {
       setMakeupartistTotal(parseFloat(makeup_artist_quantity || 0) * 
@@ -129,7 +260,59 @@ const Makeup = (props) => {
   }, [makeup_artist_quantity, makeup_artist_units_number,
     makeup_artist_rate]);
 
-    // function to calculate key hairstylist on change
+    // function to calculate makeup artist prep on change
+    useEffect(() => {
+        const addMakartprep = () => {
+        setMakartprepTotal(parseFloat(mak_art_qty_prep || 0) * 
+        parseFloat(mak_art_uno_prep || 0) * 
+        parseFloat(mak_art_rt_prep || 0))
+        }
+        const timer = setTimeout(() => {
+            addMakartprep();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [mak_art_qty_prep, mak_art_uno_prep, mak_art_rt_prep]);
+
+    // function to calculate makeup artist wrap on change
+    useEffect(() => {
+        const addMakartwrap = () => {
+        setMakartwrapTotal(parseFloat(mak_art_qty_wrap || 0) * 
+        parseFloat(mak_art_uno_wrap || 0) * 
+        parseFloat(mak_art_rt_wrap || 0))
+        }
+        const timer = setTimeout(() => {
+            addMakartwrap();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [mak_art_qty_wrap, mak_art_uno_wrap, mak_art_rt_wrap]);
+
+    // function to calculate makeup artist all on change
+    useEffect(() => {
+        const addMakartall = () => {
+        setMakartallTotal(parseFloat(makeupartistTotal || 0) +
+        parseFloat(makartprepTotal || 0) +
+        parseFloat(makartwrapTotal || 0))
+        }
+        const timer = setTimeout(() => {
+            addMakartall();
+        }, 1000);
+
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [makeupartistTotal, makartprepTotal, makartwrapTotal]);
+
+    // key hairstylist
+    // function to calculate key hairstylist shoot on change
     useEffect(() => {
       const addKeyhai = () => {
       setKeyhairstylistTotal(parseFloat(key_hairstylist_quantity || 0) * 
@@ -147,7 +330,59 @@ const Makeup = (props) => {
   }, [key_hairstylist_quantity, key_hairstylist_units_number,
     key_hairstylist_rate]);
 
-    // function to calculate hairdresser on change
+    // function to calculate key hairstylist prep on change
+    useEffect(() => {
+        const addKeyhaiprep = () => {
+        setKeyhairprepTotal(parseFloat(key_hair_qty_prep || 0) * 
+        parseFloat(key_hair_uno_prep || 0) * 
+        parseFloat(key_hair_rt_prep || 0))
+        }
+        const timer = setTimeout(() => {
+            addKeyhaiprep();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [key_hair_qty_prep, key_hair_uno_prep, key_hair_rt_prep]);
+
+    // function to calculate key hairstylist wrap on change
+    useEffect(() => {
+        const addKeyhaiwrap = () => {
+        setKeyhairwrapTotal(parseFloat(key_hair_qty_wrap || 0) * 
+        parseFloat(key_hair_uno_wrap || 0) * 
+        parseFloat(key_hair_rt_wrap || 0))
+        }
+        const timer = setTimeout(() => {
+            addKeyhaiwrap();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [key_hair_qty_wrap, key_hair_uno_wrap, key_hair_rt_wrap]);
+
+    // function to calculate key hairstylist all on change
+    useEffect(() => {
+        const addKeyhaiall = () => {
+        setKeyhairallTotal(parseFloat(keyhairstylistTotal || 0) +
+        parseFloat(keyhairprepTotal || 0) +
+        parseFloat(keyhairwrapTotal || 0))
+        }
+        const timer = setTimeout(() => {
+            addKeyhaiall();
+        }, 1000);
+
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [keyhairstylistTotal, keyhairprepTotal, keyhairwrapTotal]);
+
+    // hairdresser
+    // function to calculate hairdresser shoot on change
     useEffect(() => {
       const addHairdr = () => {
       setHairdresserTotal(parseFloat(hairdresser_quantity || 0) * 
@@ -165,6 +400,58 @@ const Makeup = (props) => {
   }, [hairdresser_quantity, hairdresser_units_number,
     hairdresser_rate]);
 
+    // function to calculate hairdresser prep on change
+    useEffect(() => {
+        const addHairdrprep = () => {
+        setHairprepTotal(parseFloat(hair_qty_prep || 0) * 
+        parseFloat(hair_uno_prep || 0) * 
+        parseFloat(hair_rt_prep || 0))
+        }
+        const timer = setTimeout(() => {
+            addHairdrprep();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [hair_qty_prep, hair_uno_prep, hair_rt_prep]);
+
+    // function to calculate hairdresser wrap on change
+    useEffect(() => {
+        const addHairdrwrap = () => {
+        setHairwrapTotal(parseFloat(hair_qty_wrap || 0) * 
+        parseFloat(hair_uno_wrap || 0) * 
+        parseFloat(hair_rt_wrap || 0))
+        }
+        const timer = setTimeout(() => {
+            addHairdrwrap();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [hair_qty_wrap, hair_uno_wrap, hair_rt_wrap]);
+
+    // function to calculate hairdresser all on change
+    useEffect(() => {
+        const addHairdrall = () => {
+        setHairallTotal(parseFloat(hairdresserTotal || 0) +
+        parseFloat(hairprepTotal || 0) +
+        parseFloat(hairwrapTotal || 0))
+        }
+        const timer = setTimeout(() => {
+            addHairdrall();
+        }, 1000);
+
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [hairdresserTotal, hairprepTotal, hairwrapTotal]);
+
+    // hair makeup dailies
     // function to calculate hair makeup dailies on change
     useEffect(() => {
       const addDailie = () => {
@@ -183,7 +470,8 @@ const Makeup = (props) => {
   }, [hair_makeup_dailies_quantity, hair_makeup_dailies_units_number,
     hair_makeup_dailies_rate]);
 
-    // function to calculate other makeup labour on change
+    // hair/makeup assistants
+    // function to calculate hair/makeup assistants shoot on change
     useEffect(() => {
       const addOthmak = () => {
       setOthermakeuplabourTotal(parseFloat(other_makeup_labour_quantity || 0) * 
@@ -201,7 +489,59 @@ const Makeup = (props) => {
   }, [other_makeup_labour_quantity, other_makeup_labour_units_number,
     other_makeup_labour_rate]);
 
-    // function to calculate sfx makeup on change
+    // function to calculate hair/makeup assistants prep on change
+    useEffect(() => {
+        const addOthmakprep = () => {
+        setOthmakprepTotal(parseFloat(oth_mak_qty_prep || 0) * 
+        parseFloat(oth_mak_uno_prep || 0) * 
+        parseFloat(oth_mak_rt_prep || 0))
+        }
+        const timer = setTimeout(() => {
+            addOthmakprep();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [oth_mak_qty_prep, oth_mak_uno_prep, oth_mak_rt_prep]);
+
+    // function to calculate hair/makeup assistants wrap on change
+    useEffect(() => {
+        const addOthmakwrap = () => {
+        setOthmakwrapTotal(parseFloat(oth_mak_qty_wrap || 0) * 
+        parseFloat(oth_mak_uno_wrap || 0) * 
+        parseFloat(oth_mak_rt_wrap || 0))
+        }
+        const timer = setTimeout(() => {
+            addOthmakwrap();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [oth_mak_qty_wrap, oth_mak_uno_wrap, oth_mak_rt_wrap]);
+
+    // function to calculate hair/makeup assistants all on change
+    useEffect(() => {
+        const addOthmakall = () => {
+        setOthmakallTotal(parseFloat(othermakeuplabourTotal || 0) +
+        parseFloat(othmakprepTotal || 0) +
+        parseFloat(othmakwrapTotal || 0))
+        }
+        const timer = setTimeout(() => {
+            addOthmakall();
+        }, 1000);
+
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [othermakeuplabourTotal, othmakprepTotal, othmakwrapTotal]);
+
+    // sfx makeup
+    // function to calculate sfx makeup shoot on change
     useEffect(() => {
       const addSfxmak = () => {
       setSfxmakeupTotal(parseFloat(sfx_makeup_quantity || 0) * 
@@ -219,19 +559,145 @@ const Makeup = (props) => {
   }, [sfx_makeup_quantity, sfx_makeup_units_number,
     sfx_makeup_rate]);
 
+    // function to calculate sfx makeup prep on change
+    useEffect(() => {
+        const addSfxmakprep = () => {
+        setSfxmakprepTotal(parseFloat(sfx_mak_qty_prep || 0) * 
+        parseFloat(sfx_mak_uno_prep || 0) * 
+        parseFloat(sfx_mak_rt_prep || 0))
+        }
+        const timer = setTimeout(() => {
+            addSfxmakprep();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [sfx_mak_qty_prep, sfx_mak_uno_prep, sfx_mak_rt_prep]);
+
+    // function to calculate sfx makeup wrap on change
+    useEffect(() => {
+        const addSfxmakwrap = () => {
+        setSfxmakwrapTotal(parseFloat(sfx_mak_qty_wrap || 0) * 
+        parseFloat(sfx_mak_uno_wrap || 0) * 
+        parseFloat(sfx_mak_rt_wrap || 0))
+        }
+        const timer = setTimeout(() => {
+            addSfxmakwrap();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [sfx_mak_qty_wrap, sfx_mak_uno_wrap, sfx_mak_rt_wrap]);
+
+    // function to calculate sfx makeup all on change
+    useEffect(() => {
+        const addSfxmakall = () => {
+        setSfxmakallTotal(parseFloat(sfxmakeupTotal || 0) +
+        parseFloat(sfxmakprepTotal || 0) +
+        parseFloat(sfxmakwrapTotal || 0))
+        }
+        const timer = setTimeout(() => {
+            addSfxmakall();
+        }, 1000);
+
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [sfxmakeupTotal, sfxmakprepTotal, sfxmakwrapTotal]);
+
+    // makeup trainee
+    // function to calculate makeup trainee shoot on change
+    useEffect(() => {
+        const addMaktrain = () => {
+        setMakktrainTotal(parseFloat(mak_train_qty || 0) * 
+        parseFloat(mak_train_uno || 0) * 
+        parseFloat(mak_train_rt || 0))
+        }
+        const timer = setTimeout(() => {
+            addMaktrain();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [mak_train_qty, mak_train_uno, mak_train_rt]);
+
+    // function to calculate makeup trainee prep on change
+    useEffect(() => {
+        const addMaktraprep = () => {
+        setMakktraprepTotal(parseFloat(mak_train_qty_prep || 0) * 
+        parseFloat(mak_train_uno_prep || 0) * 
+        parseFloat(mak_train_rt_prep || 0))
+        }
+        const timer = setTimeout(() => {
+            addMaktraprep();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [mak_train_qty_prep, mak_train_uno_prep, mak_train_rt_prep]);
+
+    // function to calculate makeup trainee wrap on change
+    useEffect(() => {
+        const addMaktrawrap = () => {
+        setMakktrawrapTotal(parseFloat(mak_train_qty_wrap || 0) * 
+        parseFloat(mak_train_uno_wrap || 0) * 
+        parseFloat(mak_train_rt_wrap || 0))
+        }
+        const timer = setTimeout(() => {
+            addMaktrawrap();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [mak_train_qty_wrap, mak_train_uno_wrap, mak_train_rt_wrap]);
+
+    // function to calculate makeup trainee all on change
+    useEffect(() => {
+        const addMaktraall = () => {
+        setMakktraallTotal(parseFloat(maktrainTotal || 0) +
+        parseFloat(maktraprepTotal || 0) +
+        parseFloat(maktrawrapTotal || 0))
+        }
+        const timer = setTimeout(() => {
+            addMaktraall();
+        }, 1000);
+
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [maktrainTotal, maktraprepTotal, maktrawrapTotal]);
+
     // function to add all makeup Labour on change
     useEffect(() => {
       const addMaklab = () => {
       setMakeuplabourTotal(
-      parseFloat(headmakeupTotal || 0) +
-      parseFloat(keymakeupTotal || 0) +
-      parseFloat(makeupartistTotal || 0) +
-      parseFloat(keyhairstylistTotal || 0) +
-      parseFloat(hairdresserTotal || 0) +
+      parseFloat(headmakallTotal || 0) +
+      parseFloat(keymakallTotal || 0) +
+      parseFloat(makartallTotal || 0) +
+      parseFloat(keyhairallTotal || 0) +
+      parseFloat(hairallTotal || 0) +
       parseFloat(hairmakeupdailiesTotal || 0) +
-      parseFloat(othermakeuplabourTotal || 0) +
-      parseFloat(fringes_taxes_makeup || 0) +
-      parseFloat(sfxmakeupTotal || 0)
+      parseFloat(othmakallTotal || 0) +
+      parseFloat(sfxmakallTotal || 0) +
+      parseFloat(maktraallTotal || 0) +
+      parseFloat(days6th7th_mak || 0) +
+      parseFloat(overtime_mak || 0) +
+      parseFloat(holidays_mak || 0) +
+      parseFloat(box_rent_mak || 0) +
+      parseFloat(other_solo_mak || 0) +
+      parseFloat(fringes_taxes_makeup || 0)
       )
       }
       const timer = setTimeout(() => {
@@ -242,9 +708,11 @@ const Makeup = (props) => {
       clearTimeout(timer);
       };
       // eslint-disable-next-line
-      }, [headmakeupTotal, keymakeupTotal, makeupartistTotal,
-        keyhairstylistTotal, hairdresserTotal, hairmakeupdailiesTotal,
-        othermakeuplabourTotal, sfxmakeupTotal, fringes_taxes_makeup,]);
+      }, [headmakallTotal, keymakallTotal, makartallTotal,
+        keyhairallTotal, hairallTotal, hairmakeupdailiesTotal,
+        othmakallTotal, sfxmakallTotal, maktraallTotal,
+        days6th7th_mak, overtime_mak, holidays_mak, box_rent_mak,
+        other_solo_mak, fringes_taxes_makeup,]);
 
   return (
     <div className="mt-5">

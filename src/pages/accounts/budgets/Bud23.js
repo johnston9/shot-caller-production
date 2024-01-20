@@ -106,7 +106,7 @@
   // makeup artist wrap Total postData 
   const [makartwrapTotal, setMakartwrapTotal] = useState(0);
   // makeup artist all Total postData 
-  const [makartallTotal, setMakallTotal] = useState(0);
+  const [makartallTotal, setMakartallTotal] = useState(0);
 
   // key hairstylist
   // key hairstylist shoot Total postData 
@@ -131,21 +131,15 @@
   // hair makeup dailies
   // hair makeup dailies shoot Total postData 
   const [hairmakeupdailiesTotal, setHairmakeupdailiesTotal] = useState(0);
-  // hair makeup dailies prep Total postData 
-  const [makdayprepTotal, setMakdayprepTotal] = useState(0);
-  // hair makeup dailies wrap Total postData 
-  const [makdaywrapTotal, setMakdaywrapTotal] = useState(0);
-  // hair makeup dailies all Total postData 
-  const [makdayallTotal, setMakdayallTotal] = useState(0);
 
-  // other makeup labour
-  // other makeup labour shoot Total postData 
+  // hair/makeup assistants - using othermakeuplabour as variable name
+  // hair/makeup assistants shoot Total postData 
   const [othermakeuplabourTotal, setOthermakeuplabourTotal] = useState(0);
-  // other makeup labour prep Total postData 
+  // hair/makeup assistants prep Total postData 
   const [othmakprepTotal, setOthmakprepTotal] = useState(0);
-  // other makeup labour wrap Total postData 
+  // hair/makeup assistants wrap Total postData 
   const [othmakwrapTotal, setOthmakwrapTotal] = useState(0);
-  // other makeup labour all Total postData 
+  // hair/makeup assistants all Total postData 
   const [othmakallTotal, setOthmakallTotal] = useState(0);
 
   // sfx makeup labour
