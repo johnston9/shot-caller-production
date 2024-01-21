@@ -1,169 +1,84 @@
-    days6th7th_unit_mak,
-    days6th7th_mak,
-    overtime_unit_mak,
-    overtime_mak,
-    holidays_unit_mak, 
-    holidays_mak,
-    box_rent_unit_mak,
-    box_rent_mak,
-    other_solo_mak,
-    mak_head_qty_prep,
-    mak_head_uno_prep,
-    mak_head_una_prep,
-    mak_head_rt_prep,
-    mak_head_qty_wrap,
-    mak_head_uno_wrap,
-    mak_head_una_wrap,
-    mak_head_rt_wrap,
-    key_mak_qty_prep,
-    key_mak_uno_prep,
-    key_mak_una_prep,
-    key_mak_rt_prep,
-    key_mak_qty_wrap,
-    key_mak_uno_wrap,
-    key_mak_una_wrap,
-    key_mak_rt_wrap,
-    mak_art_qty_prep,
-    mak_art_uno_prep,
-    mak_art_una_prep,
-    mak_art_rt_prep,
-    mak_art_qty_wrap,
-    mak_art_uno_wrap,
-    mak_art_una_wrap,
-    mak_art_rt_wrap,
-    key_hair_qty_prep,
-    key_hair_uno_prep,
-    key_hair_una_prep,
-    key_hair_rt_prep,
-    key_hair_qty_wrap,
-    key_hair_uno_wrap,
-    key_hair_una_wrap,
-    key_hair_rt_wrap,
-    hair_qty_prep,
-    hair_uno_prep,
-    hair_una_prep,
-    hair_rt_prep,
-    hair_qty_wrap,
-    hair_uno_wrap,
-    hair_una_wrap,
-    hair_rt_wrap,
-    oth_mak_qty_prep,
-    oth_mak_uno_prep,
-    oth_mak_una_prep,
-    oth_mak_rt_prep,
-    oth_mak_qty_wrap,
-    oth_mak_uno_wrap,
-    oth_mak_una_wrap,
-    oth_mak_rt_wrap,
-    sfx_mak_qty_prep,
-    sfx_mak_uno_prep,
-    sfx_mak_una_prep,
-    sfx_mak_rt_prep,
-    sfx_mak_qty_wrap,
-    sfx_mak_uno_wrap,
-    sfx_mak_una_wrap,
-    sfx_mak_rt_wrap,
-    mak_train_qty,
-    mak_train_uno,
-    mak_train_una,
-    mak_train_rt,
-    mak_train_qty_prep,
-    mak_train_uno_prep,
-    mak_train_una_prep,
-    mak_train_rt_prep,
-    mak_train_qty_wrap,
-    mak_train_uno_wrap,
-    mak_train_una_wrap, 
-    mak_train_rt_wrap,
-
-    // Totals
-
-  // head makeup
-  // head makeup shoot Total postData 
-  const [headmakeupTotal, setHeadmakeupTotal] = useState(0);
-  // head makeup prep Total postData 
-  const [headmakprepTotal, setHeadmakprepTotal] = useState(0);
-  // head makeup wrap Total postData 
-  const [headmakwrapTotal, setHeadmakwrapTotal] = useState(0);
-  // head makeup all Total postData 
-  const [headmakallTotal, setHeadmakallTotal] = useState(0);
-
-  // key makeup
-  // key makeup shoot Total postData 
-  const [keymakeupTotal, setKeymakeupTotal] = useState(0);
-  // key makeup prep Total postData 
-  const [keymakprepTotal, setKeymakprepTotal] = useState(0);
-  // key makeup wrap Total postData 
-  const [keymakwrapTotal, setKeymakwrapTotal] = useState(0);
-  // key makeup prep Total postData 
-  const [keymakallTotal, setKeymakallTotal] = useState(0);
-  
-  // makeup artist
-  // makeup artist shoot Total postData 
-  const [makeupartistTotal, setMakeupartistTotal] = useState(0);
-  // makeup artist prep Total postData 
-  const [makartprepTotal, setMakartprepTotal] = useState(0);
-  // makeup artist wrap Total postData 
-  const [makartwrapTotal, setMakartwrapTotal] = useState(0);
-  // makeup artist all Total postData 
-  const [makartallTotal, setMakartallTotal] = useState(0);
-
-  // key hairstylist
-  // key hairstylist shoot Total postData 
-  const [keyhairstylistTotal, setKeyhairstylistTotal] = useState(0);
-  // key hairstylist prep Total postData 
-  const [keyhairprepTotal, setKeyhairprepTotal] = useState(0);
-  // key hairstylist wrap Total postData 
-  const [keyhairwrapTotal, setKeyhairwrapTotal] = useState(0);
-  // key hairstylist all Total postData 
-  const [keyhairallTotal, setKeyhairallTotal] = useState(0);
-
-  // hairdresser
-  // hairdresser shoot Total postData 
-  const [hairdresserTotal, setHairdresserTotal] = useState(0);
-  // hairdresser prep Total postData 
-  const [hairprepTotal, setHairprepTotal] = useState(0);
-  // hairdresser wrap Total postData 
-  const [hairwrapTotal, setHairwrapTotal] = useState(0);
-  // hairdresser all Total postData 
-  const [hairallTotal, setHairallTotal] = useState(0);
-
-  // hair/makeup assistants - using othermakeuplabour as variable name
-  // hair/makeup assistants shoot Total postData 
-  const [othermakeuplabourTotal, setOthermakeuplabourTotal] = useState(0);
-  // hair/makeup assistants prep Total postData 
-  const [othmakprepTotal, setOthmakprepTotal] = useState(0);
-  // hair/makeup assistants wrap Total postData 
-  const [othmakwrapTotal, setOthmakwrapTotal] = useState(0);
-  // hair/makeup assistants all Total postData 
-  const [othmakallTotal, setOthmakallTotal] = useState(0);
-
-  // sfx makeup labour
-  // sfx makeup labour shoot Total postData 
-  const [sfxmakeupTotal, setSfxmakeupTotal] = useState(0);
-  // sfx makeup labour prep Total postData 
-  const [sfxmakprepTotal, setSfxmakprepTotal] = useState(0);
-  // sfx makeup labour wrap Total postData 
-  const [sfxmakwrapTotal, setSfxmakwrapTotal] = useState(0);
-  // sfx makeup labour all Total postData 
-  const [sfxmakallTotal, setSfxmakallTotal] = useState(0);
-
-  // makeup trainee labour
-  // makeup trainee labour shoot Total postData 
-  const [maktrainTotal, setMakktrainTotal] = useState(0);
-  // makeup trainee labour prep Total postData 
-  const [maktraprepTotal, setMakktraprepTotal] = useState(0);
-  // makeup trainee labour wrap Total postData 
-  const [maktrawrapTotal, setMakktrawrapTotal] = useState(0);
-  // makeup trainee labour all Total postData 
-  const [maktraallTotal, setMakktraallTotal] = useState(0);
-
-  // hair makeup dailies
-  // hair makeup dailies shoot Total postData 
-  const [hairmakeupdailiesTotal, setHairmakeupdailiesTotal] = useState(0);
-
-  // Makeup Labour Total postData 
-  const [makeuplabourTotal, setMakeuplabourTotal] = useState(0);
+  days6th7th_unit_cam,
+  days6th7th_cam,
+  overtime_unit_cam,
+  overtime_cam,
+  holidays_unit_cam, 
+  holidays_cam,
+  box_rent_unit_cam,
+  box_rent_cam,
+  other_solo_cam,
+  dop_qty_prep,
+  dop_uno_prep,
+  dop_una_prep,
+  dop_rt_prep,
+  dop_qty_wrap,
+  dop_uno_wrap,
+  dop_una_wrap,
+  dop_rt_wrap,
+  cam_op_qty_prep,
+  cam_op_uno_prep,
+  cam_op_una_prep,
+  cam_op_rt_prep,
+  cam_op_qty_wrap,
+  cam_op_uno_wrap,
+  cam_op_una_wrap,
+  cam_op_rt_wrap,
+  cam_ac1_qty_prep,
+  cam_ac1_uno_prep,
+  cam_ac1_una_prep,
+  cam_ac1_rt_prep,
+  cam_ac1_qty_wrap,
+  cam_ac1_uno_wrap,
+  cam_ac1_una_wrap,
+  cam_ac1_rt_wrap,
+  cam_ac2_qty_prep,
+  cam_ac2_uno_prep,
+  cam_ac2_una_prep,
+  cam_ac2_rt_prep,
+  cam_ac2_qty_wrap,
+  cam_ac2_uno_wrap,
+  cam_ac2_una_wrap,
+  cam_ac2_rt_wrap,
+  dit_qty_prep,
+  dit_uno_prep,
+  dit_una_prep,
+  dit_rt_prep,
+  dit_qty_wrap,
+  dit_uno_wrap,
+  dit_una_wrap,
+  dit_rt_wrap,
+  stead_qty_prep
+  stead_uno_prep,
+  stead_una_prep,
+  stead_rt_prep,
+  stead_qty_wrap,
+  stead_uno_wrap
+  stead_una_wrap,
+  stead_rt_wrap,
+  cam_pa_qty_prep,
+  cam_pa_uno_prep,
+  cam_pa_una_prep,
+  cam_pa_rt_prep,
+  cam_pa_qty_wrap,
+  cam_pa_uno_wrap,
+  cam_pa_una_wrap,
+  cam_pa_rt_wrap,
+  dro_pil_qty_prep,
+  dro_pil_uno_prep,
+  dro_pil_una_prep,
+  dro_pil_rt_prep,
+  dro_pil_qty_wrap,
+  dro_pil_uno_wrap,
+  dro_pil_una_wrap,
+  dro_pil_rt_wrap,
+  ot_cam_qty_prep,
+  ot_cam_uno_prep,
+  ot_cam_una_prep,
+  ot_cam_rt_prep,
+  ot_cam_qty_wrap,
+  ot_cam_uno_wrap,
+  ot_cam_una_wrap,
+  ot_cam_rt_wrap,
     
     // days6th7th_unit_war,
     // days6th7th_war,
