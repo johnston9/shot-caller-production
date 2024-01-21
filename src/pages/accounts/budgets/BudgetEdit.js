@@ -3003,34 +3003,99 @@ function BudgetEdit() {
     fringes_taxes_camera,} = postDataCamera;
 
   // Totals
-  // dop Total postData 
+
+  // dop
+  // dop shoot Total postData 
   const [dopTotal, setDopTotal] = useState(0);
+  // dop prep Total postData 
+  const [dopprepTotal, setDopprepTotal] = useState(0);
+  // dop wrap Total postData 
+  const [dopwrapTotal, setDopwrapTotal] = useState(0);
+  // dop all Total postData 
+  const [dopallTotal, setDopallTotal] = useState(0);
 
-  // Camera Operator Total postData 
+  // Camera Operator
+  // Camera Operator shoot Total postData 
   const [cameraopTotal, setCameraopTotal] = useState(0);
+  // Camera Operator prep Total postData 
+  const [camopprepTotal, setCamopprepTotal] = useState(0);
+  // Camera Operator wrap Total postData 
+  const [camopwrapTotal, setCamopwrapTotal] = useState(0);
+  // Camera Operator all Total postData 
+  const [camopallTotal, setCamopallTotal] = useState(0);
 
-  // 1st Assistant Camera Total postData 
+  // 1st Assistant Camera
+  // 1st Assistant Camera shoot Total postData 
   const [camac1Total, setCamac1Total] = useState(0);
+  // 1st Assistant Camera prep Total postData 
+  const [camac1prepTotal, setCamac1prepTotal] = useState(0);
+  // 1st Assistant Camera wrap Total postData 
+  const [camac1wrapTotal, setCamac1wrapTotal] = useState(0);
+  // 1st Assistant Camera all Total postData 
+  const [camac1allTotal, setCamac1allTotal] = useState(0);
 
-  // 2nd Assistant Camera Total postData 
+  // 2nd Assistant Camera
+  // 2nd Assistant Camera shoot Total postData 
   const [camac2Total, setCamac2Total] = useState(0);
+  // 2nd Assistant Camera prep Total postData 
+  const [camac2prepTotal, setCamac2prepTotal] = useState(0);
+  // 2nd Assistant Camera wrap Total postData 
+  const [camac2wrapTotal, setCamac2wrapTotal] = useState(0);
+  // 2nd Assistant Camera all Total postData 
+  const [camac2allTotal, setCamac2allTotal] = useState(0);
 
-  // DIT Total postData 
+  // DIT Total
+  // DIT shoot Total postData 
   const [ditTotal, setDitTotal] = useState(0);
+  // DIT prep Total postData 
+  const [ditprepTotal, setDitprepTotal] = useState(0);
+  // DIT wrap Total postData 
+  const [ditwrapTotal, setDitwrapTotal] = useState(0);
+  // DIT prep Total postData 
+  const [ditallTotal, setDitallTotal] = useState(0);
 
-  // Steadicam Total postData 
+  // Steadicam
+  // Steadicam shoot Total postData 
   const [steadicamTotal, setSteadicamTotal] = useState(0);
+  // Steadicam prep Total postData 
+  const [stecamprepTotal, setStecamprepTotal] = useState(0);
+  // Steadicam wrap Total postData 
+  const [stecamwrapTotal, setStecamwrapTotal] = useState(0);
+  // Steadicam all Total postData 
+  const [stecamallTotal, setStecamallTotal] = useState(0);
 
-  // Camera PA Total postData 
+  // Camera PA
+  // Camera PA shoot Total postData 
   const [campaTotal, setCampaTotal] = useState(0);
+  // Camera PA prep Total postData 
+  const [campaprepTotal, setCampaprepTotal] = useState(0);
+  // Camera PA wrap Total postData 
+  const [campawrapTotal, setCampawrapTotal] = useState(0);
+  // Camera PA all Total postData 
+  const [campaallTotal, setCampaallTotal] = useState(0);
 
-  // Drone Pilot Total postData 
+  // Drone Pilot
+  // Drone Pilot shoot Total postData 
   const [dronepilotTotal, setDronepilotTotal] = useState(0);
+  // Drone Pilot prep Total postData 
+  const [dronpiprepTotal, setDronpiprepTotal] = useState(0);
+  // Drone Pilot wrap Total postData 
+  const [dronpiwrapTotal, setDronpiwrapTotal] = useState(0);
+  // Drone Pilot all Total postData 
+  const [dronpiallTotal, setDronpiallTotal] = useState(0);
 
-  // other cam Total postData 
+  // other cam
+  // other cam shoot Total postData 
   const [othercamTotal, setOthercamTotal] = useState(0);
+  // other cam prep Total postData 
+  const [othcamprepTotal, setOthcamprepTotal] = useState(0);
+  // other cam wrap Total postData 
+  const [othcamwrapTotal, setOthcamwrapTotal] = useState(0);
+  // other cam all Total postData 
+  const [othcamallTotal, setOthcamallTotal] = useState(0);
 
-  // Stills Total postData 
+  // Stills
+  // Stills shoot Total postData 
   const [stillsTotal, setStillsTotal] = useState(0);
 
   // Camera Labour Total postData 
@@ -5950,8 +6015,28 @@ function BudgetEdit() {
             sfx_makeup_units_name, sfx_makeup_rate,});
         setMakeuplabourTotal(makeuplabour_total);
         // camera
-        const {fringes_taxes_camera, 
-          dop_qty, dop_uno, dop_una, dop_rt,
+        const {days6th7th_unit_cam, days6th7th_cam,
+          overtime_unit_cam, overtime_cam, holidays_unit_cam, 
+          holidays_cam, box_rent_unit_cam, box_rent_cam, other_solo_cam,
+          dop_qty_prep, dop_uno_prep, dop_una_prep, dop_rt_prep,
+          dop_qty_wrap, dop_uno_wrap, dop_una_wrap, dop_rt_wrap,
+          cam_op_qty_prep, cam_op_uno_prep, cam_op_una_prep, cam_op_rt_prep,
+          cam_op_qty_wrap, cam_op_uno_wrap, cam_op_una_wrap, cam_op_rt_wrap,
+          cam_ac1_qty_prep, cam_ac1_uno_prep, cam_ac1_una_prep, cam_ac1_rt_prep,
+          cam_ac1_qty_wrap, cam_ac1_uno_wrap, cam_ac1_una_wrap, cam_ac1_rt_wrap,
+          cam_ac2_qty_prep, cam_ac2_uno_prep, cam_ac2_una_prep, cam_ac2_rt_prep,
+          cam_ac2_qty_wrap, cam_ac2_uno_wrap, cam_ac2_una_wrap, cam_ac2_rt_wrap,
+          dit_qty_prep, dit_uno_prep, dit_una_prep, dit_rt_prep, 
+          dit_qty_wrap, dit_uno_wrap, dit_una_wrap, dit_rt_wrap,
+          stead_qty_prep, stead_uno_prep, stead_una_prep, stead_rt_prep,
+          stead_qty_wrap, stead_uno_wrap, stead_una_wrap, stead_rt_wrap,
+          cam_pa_qty_prep, cam_pa_uno_prep, cam_pa_una_prep, cam_pa_rt_prep,
+          cam_pa_qty_wrap, cam_pa_uno_wrap, cam_pa_una_wrap, cam_pa_rt_wrap,
+          dro_pil_qty_prep, dro_pil_uno_prep, dro_pil_una_prep, dro_pil_rt_prep,
+          dro_pil_qty_wrap, dro_pil_uno_wrap, dro_pil_una_wrap, dro_pil_rt_wrap,
+          ot_cam_qty_prep, ot_cam_uno_prep, ot_cam_una_prep, ot_cam_rt_prep,
+          ot_cam_qty_wrap, ot_cam_uno_wrap, ot_cam_una_wrap, ot_cam_rt_wrap,
+          fringes_taxes_camera, dop_qty, dop_uno, dop_una, dop_rt,
           camera_op_qty, camera_op_uno, camera_op_una, camera_op_rt,
           cam_ac1_qty, cam_ac1_uno, cam_ac1_una, cam_ac1_rt,
           cam_ac2_qty, cam_ac2_uno, cam_ac2_una, cam_ac2_rt,
@@ -5962,8 +6047,28 @@ function BudgetEdit() {
           other_cam_qty, other_cam_uno, cameralabour_total,
           stills_qty, stills_uno, stills_una, stills_rt,
           other_cam_una, other_cam_rt,} = data.results[0];
-        setPostDataCamera({fringes_taxes_camera,
-          dop_qty, dop_uno, dop_una, dop_rt,
+        setPostDataCamera({days6th7th_unit_cam, days6th7th_cam,
+          overtime_unit_cam, overtime_cam, holidays_unit_cam, 
+          holidays_cam, box_rent_unit_cam, box_rent_cam, other_solo_cam,
+          dop_qty_prep, dop_uno_prep, dop_una_prep, dop_rt_prep,
+          dop_qty_wrap, dop_uno_wrap, dop_una_wrap, dop_rt_wrap,
+          cam_op_qty_prep, cam_op_uno_prep, cam_op_una_prep, cam_op_rt_prep,
+          cam_op_qty_wrap, cam_op_uno_wrap, cam_op_una_wrap, cam_op_rt_wrap,
+          cam_ac1_qty_prep, cam_ac1_uno_prep, cam_ac1_una_prep, cam_ac1_rt_prep,
+          cam_ac1_qty_wrap, cam_ac1_uno_wrap, cam_ac1_una_wrap, cam_ac1_rt_wrap,
+          cam_ac2_qty_prep, cam_ac2_uno_prep, cam_ac2_una_prep, cam_ac2_rt_prep,
+          cam_ac2_qty_wrap, cam_ac2_uno_wrap, cam_ac2_una_wrap, cam_ac2_rt_wrap,
+          dit_qty_prep, dit_uno_prep, dit_una_prep, dit_rt_prep, 
+          dit_qty_wrap, dit_uno_wrap, dit_una_wrap, dit_rt_wrap,
+          stead_qty_prep, stead_uno_prep, stead_una_prep, stead_rt_prep,
+          stead_qty_wrap, stead_uno_wrap, stead_una_wrap, stead_rt_wrap,
+          cam_pa_qty_prep, cam_pa_uno_prep, cam_pa_una_prep, cam_pa_rt_prep,
+          cam_pa_qty_wrap, cam_pa_uno_wrap, cam_pa_una_wrap, cam_pa_rt_wrap,
+          dro_pil_qty_prep, dro_pil_uno_prep, dro_pil_una_prep, dro_pil_rt_prep,
+          dro_pil_qty_wrap, dro_pil_uno_wrap, dro_pil_una_wrap, dro_pil_rt_wrap,
+          ot_cam_qty_prep, ot_cam_uno_prep, ot_cam_una_prep, ot_cam_rt_prep,
+          ot_cam_qty_wrap, ot_cam_uno_wrap, ot_cam_una_wrap, ot_cam_rt_wrap,
+          fringes_taxes_camera, dop_qty, dop_uno, dop_una, dop_rt,
           camera_op_qty, camera_op_uno, camera_op_una, camera_op_rt,
           cam_ac1_qty, cam_ac1_uno, cam_ac1_una, cam_ac1_rt,
           cam_ac2_qty, cam_ac2_uno, cam_ac2_una, cam_ac2_rt,
@@ -8368,6 +8473,167 @@ function BudgetEdit() {
     formData.append("maktraprep_total", maktraprepTotal);
     formData.append("maktrawrap_total", maktrawrapTotal);
     formData.append("maktraall_total", maktraallTotal);
+
+    try {
+      const { data } = await axiosReq.put(`/budgets/${budgetId}/`, formData);
+      console.log(`submit2 ${data}`);
+      handleSubmit3(event); 
+    } catch (err) {
+      console.log(err);
+      if (err.response?.status !== 401) {
+        setErrors(err.response?.data);
+      }
+    }
+  };
+
+  // Submit3
+  const handleSubmit3 = async (event) => {
+    event.preventDefault();
+    const formData = new FormData();
+    formData.append("days6th7th_unit_cam", days6th7th_unit_cam);
+    formData.append("days6th7th_cam", days6th7th_cam);
+    formData.append("overtime_unit_cam", overtime_unit_cam);
+    formData.append("overtime_cam", overtime_cam);
+    formData.append("holidays_unit_cam", holidays_unit_cam);
+    formData.append("holidays_cam", holidays_cam);
+    formData.append("box_rent_unit_cam", box_rent_unit_cam);
+    formData.append("box_rent_cam", box_rent_cam);
+    formData.append("other_solo_cam", other_solo_cam);
+    formData.append("dop_qty_prep", dop_qty_prep);
+    formData.append("dop_uno_prep", dop_uno_prep);
+    formData.append("dop_una_prep", dop_una_prep);
+    formData.append("dop_rt_prep", dop_rt_prep);
+    formData.append("dop_qty_wrap", dop_qty_wrap);
+    formData.append("dop_uno_wrap", dop_uno_wrap);
+    formData.append("dop_una_wrap", dop_una_wrap);
+    formData.append("dop_rt_wrap", dop_rt_wrap);
+    formData.append("cam_op_qty_prep", cam_op_qty_prep);
+    formData.append("cam_op_uno_prep", cam_op_uno_prep);
+    formData.append("cam_op_una_prep", cam_op_una_prep);
+    formData.append("cam_op_rt_prep", cam_op_rt_prep);
+    formData.append("cam_op_qty_wrap", cam_op_qty_wrap);
+    formData.append("cam_op_uno_wrap", cam_op_uno_wrap);
+    formData.append("cam_op_una_wrap", cam_op_una_wrap);
+    formData.append("cam_op_rt_wrap", cam_op_rt_wrap);
+    formData.append("cam_ac1_qty_prep", cam_ac1_qty_prep);
+    formData.append("cam_ac1_uno_prep", cam_ac1_uno_prep);
+    formData.append("cam_ac1_una_prep", cam_ac1_una_prep);
+    formData.append("cam_ac1_rt_prep", cam_ac1_rt_prep);
+    formData.append("cam_ac1_qty_wrap", cam_ac1_qty_wrap);
+    formData.append("cam_ac1_uno_wrap", cam_ac1_uno_wrap);
+    formData.append("cam_ac1_una_wrap", cam_ac1_una_wrap);
+    formData.append("cam_ac1_rt_wrap", cam_ac1_rt_wrap);
+    formData.append("cam_ac2_qty_prep", cam_ac2_qty_prep);
+    formData.append("cam_ac2_uno_prep", cam_ac2_uno_prep);
+    formData.append("cam_ac2_una_prep", cam_ac2_una_prep);
+    formData.append("cam_ac2_rt_prep", cam_ac2_rt_prep);
+    formData.append("cam_ac2_qty_wrap", cam_ac2_qty_wrap);
+    formData.append("cam_ac2_uno_wrap", cam_ac2_uno_wrap);
+    formData.append("cam_ac2_una_wrap", cam_ac2_una_wrap);
+    formData.append("cam_ac2_rt_wrap", cam_ac2_rt_wrap);
+    formData.append("dit_qty_prep", dit_qty_prep);
+    formData.append("dit_uno_prep", dit_uno_prep);
+    formData.append("dit_una_prep", dit_una_prep);
+    formData.append("dit_rt_prep", dit_rt_prep);
+    formData.append("dit_qty_wrap", dit_qty_wrap);
+    formData.append("dit_uno_wrap", dit_uno_wrap);
+    formData.append("dit_una_wrap", dit_una_wrap);
+    formData.append("dit_rt_wrap", dit_rt_wrap);
+    formData.append("stead_qty_prep", stead_qty_prep);
+    formData.append("stead_uno_prep", stead_uno_prep);
+    formData.append("stead_una_prep", stead_una_prep);
+    formData.append("stead_rt_prep", stead_rt_prep);
+    formData.append("stead_qty_wrap", stead_qty_wrap);
+    formData.append("stead_uno_wrap", stead_uno_wrap);
+    formData.append("stead_una_wrap", stead_una_wrap);
+    formData.append("stead_rt_wrap", stead_rt_wrap);
+    formData.append("cam_pa_qty_prep", cam_pa_qty_prep);
+    formData.append("cam_pa_uno_prep", cam_pa_uno_prep);
+    formData.append("cam_pa_una_prep", cam_pa_una_prep);
+    formData.append("cam_pa_rt_prep", cam_pa_rt_prep);
+    formData.append("cam_pa_qty_wrap", cam_pa_qty_wrap);
+    formData.append("cam_pa_uno_wrap", cam_pa_uno_wrap);
+    formData.append("cam_pa_una_wrap", cam_pa_una_wrap);
+    formData.append("cam_pa_rt_wrap", cam_pa_rt_wrap);
+    formData.append("dro_pil_qty_prep", dro_pil_qty_prep);
+    formData.append("dro_pil_uno_prep", dro_pil_uno_prep);
+    formData.append("dro_pil_una_prep", dro_pil_una_prep);
+    formData.append("dro_pil_rt_prep", dro_pil_rt_prep);
+    formData.append("dro_pil_qty_wrap", dro_pil_qty_wrap);
+    formData.append("dro_pil_uno_wrap", dro_pil_uno_wrap);
+    formData.append("dro_pil_una_wrap", dro_pil_una_wrap);
+    formData.append("dro_pil_rt_wrap", dro_pil_rt_wrap);
+    formData.append("ot_cam_qty_prep", ot_cam_qty_prep);
+    formData.append("ot_cam_uno_prep", ot_cam_uno_prep);
+    formData.append("ot_cam_una_prep", ot_cam_una_prep);
+    formData.append("ot_cam_rt_prep", ot_cam_rt_prep);
+    formData.append("ot_cam_qty_wrap", ot_cam_qty_wrap);
+    formData.append("ot_cam_uno_wrap", ot_cam_uno_wrap);
+    formData.append("ot_cam_una_wrap", ot_cam_una_wrap);
+    formData.append("ot_cam_rt_wrap", ot_cam_rt_wrap);
+    formData.append("dopprep_total", dopprepTotal);
+    formData.append("dopwrap_total", dopwrapTotal);
+    formData.append("dopall_total", dopallTotal);
+    formData.append("camopprep_total", camopprepTotal);
+    formData.append("camopwrap_total", camopwrapTotal);
+    formData.append("camopall_total", camopallTotal);
+    formData.append("camac1prep_total", camac1prepTotal);
+    formData.append("camac1wrap_total", camac1wrapTotal);
+    formData.append("camac1all_total", camac1allTotal);
+    formData.append("camac2prep_total", camac2prepTotal);
+    formData.append("camac2wrap_total", camac2wrapTotal);
+    formData.append("camac2all_total", camac2allTotal);
+    formData.append("ditprep_total", ditprepTotal);
+    formData.append("ditwrap_total", ditwrapTotal);
+    formData.append("ditall_total", ditallTotal);
+    formData.append("stecamprep_total", stecamprepTotal);
+    formData.append("stecamwrap_total", stecamwrapTotal);
+    formData.append("stecamall_total", stecamallTotal);
+    formData.append("campaprep_total", campaprepTotal);
+    formData.append("campawrap_total", campawrapTotal);
+    formData.append("campaall_total", campaallTotal);
+    formData.append("dronpiprep_total", dronpiprepTotal);
+    formData.append("dronpiwrap_total", dronpiwrapTotal);
+    formData.append("dronpiall_total", dronpiallTotal);
+    formData.append("othcamprep_total", othcamprepTotal);
+    formData.append("othcamwrap_total", othcamwrapTotal);
+    formData.append("othcamall_total", othcamallTotal);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
+    // formData.append("staaaaars", staaaaars);
     // formData.append("staaaaars", staaaaars);
     // formData.append("staaaaars", staaaaars);
     // formData.append("staaaaars", staaaaars);
@@ -8395,8 +8661,8 @@ function BudgetEdit() {
 
     try {
       const { data } = await axiosReq.put(`/budgets/${budgetId}/`, formData);
-      console.log(`submit2 ${data}`);
-      // handleSubmit3(event); 
+      console.log(`submit3 ${data}`);
+      history.goBack();
     } catch (err) {
       console.log(err);
       if (err.response?.status !== 401) {
@@ -8404,23 +8670,6 @@ function BudgetEdit() {
       }
     }
   };
-
-  // Submit3
-  // const handleSubmit3 = async (event) => {
-  //   event.preventDefault();
-  //   const formData = new FormData();
-
-  //   try {
-  //     const { data } = await axiosReq.put(`/budgets/${budgetId}/`, formData);
-  //     console.log(`submit3 ${data}`);
-  //     history.goBack();
-  //   } catch (err) {
-  //     console.log(err);
-  //     if (err.response?.status !== 401) {
-  //       setErrors(err.response?.data);
-  //     }
-  //   }
-  // };
 
   return (
     <div className="mt-3 ">
@@ -10166,7 +10415,62 @@ function BudgetEdit() {
       setStillsTotal={setStillsTotal}
       cameralabourTotal={cameralabourTotal}
       setCameralabourTotal={setCameralabourTotal}
-      setShow={setShowCam}  /> 
+      setShow={setShowCam}  
+      dopprepTotal={dopprepTotal}
+      setDopprepTotal={setDopprepTotal}
+      dopwrapTotal={dopwrapTotal}
+      setDopwrapTotal={setDopwrapTotal}
+      dopallTotal={dopallTotal}
+      setDopallTotal={setDopallTotal}
+      camopprepTotal={camopprepTotal}
+      setCamopprepTotal={setCamopprepTotal}
+      camopwrapTotal={camopwrapTotal}
+      setCamopwrapTotal={setCamopwrapTotal}
+      camopallTotal={camopallTotal}
+      setCamopallTotal={setCamopallTotal}
+      camac1prepTotal={camac1prepTotal}
+      setCamac1prepTotal={setCamac1prepTotal}
+      camac1wrapTotal={camac1wrapTotal}
+      setCamac1wrapTotal={setCamac1wrapTotal}
+      camac1allTotal={camac1allTotal}
+      setCamac1allTotal={setCamac1allTotal}
+      camac2prepTotal={camac2prepTotal}
+      setCamac2prepTotal={setCamac2prepTotal}
+      camac2wrapTotal={camac2wrapTotal}
+      setCamac2wrapTotal={setCamac2wrapTotal}
+      camac2allTotal={camac2allTotal}
+      setCamac2allTotal={setCamac2allTotal}
+      ditprepTotal={ditprepTotal}
+      setDitprepTotal={setDitprepTotal}
+      ditwrapTotal={ditwrapTotal}
+      setDitwrapTotal={setDitwrapTotal}
+      ditallTotal={ditallTotal}
+      setDitallTotal={setDitallTotal}
+      stecamprepTotal={stecamprepTotal}
+      setStecamprepTotal={setStecamprepTotal}
+      stecamwrapTotal={stecamwrapTotal}
+      setStecamwrapTotal={setStecamwrapTotal}
+      stecamallTotal={stecamallTotal}
+      setStecamallTotal={setStecamallTotal}
+      campaprepTotal={campaprepTotal}
+      setCampaprepTotal={setCampaprepTotal}
+      campawrapTotal={campawrapTotal}
+      setCampawrapTotal={setCampawrapTotal}
+      campaallTotal={campaallTotal}
+      setCampaallTotal={setCampaallTotal}
+      dronpiprepTotal={dronpiprepTotal}
+      setDronpiprepTotal={setDronpiprepTotal}
+      dronpiwrapTotal={dronpiwrapTotal}
+      setDronpiwrapTotal={setDronpiwrapTotal}
+      dronpiallTotal={dronpiallTotal}
+      setDronpiallTotal={setDronpiallTotal}
+      othcamprepTotal={othcamprepTotal}
+      setOthcamprepTotal={setOthcamprepTotal}
+      othcamwrapTotal={othcamwrapTotal}
+      setOthcamwrapTotal={setOthcamwrapTotal}
+      othcamallTotal={othcamallTotal}
+      setOthcamallTotal={setOthcamallTotal}
+      /> 
     ) }
     {/* electric */}
     {!showElec ? (

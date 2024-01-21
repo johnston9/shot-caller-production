@@ -79,87 +79,105 @@
   ot_cam_uno_wrap,
   ot_cam_una_wrap,
   ot_cam_rt_wrap,
-    
-    // days6th7th_unit_war,
-    // days6th7th_war,
-    // overtime_unit_war,
-    // overtime_war,
-    // holidays_unit_war, 
-    // holidays_war,
-    // box_rent_unit_war,
-    // box_rent_war,
-    // other_solo_war,
-    // cos_des_qty_prep,
-    // cos_des_uno_prep,
-    // cos_des_una_prep,
-    // cos_des_rt_prep,
-    // cos_des_qty_wrap,
-    // cos_des_uno_wrap,
-    // cos_des_una_wrap,
-    // cos_des_rt_wrap,
-    // as_cos_des_qty_prep,
-    // as_cos_des_uno_prep,
-    // as_cos_des_una_prep,
-    // as_cos_des_rt_prep,
-    // as_cos_des_qty_wrap,
-    // as_cos_des_uno_wrap,
-    // as_cos_des_una_wrap,
-    // as_cos_des_rt_wrap,
-    // he_war_qty_prep,
-    // he_war_uno_prep,
-    // he_war_una_prep,
-    // he_war_rt_prep,
-    // he_war_qty_wrap,
-    // he_war_uno_wrap,
-    // he_war_una_wrap,
-    // he_war_rt_wrap,
-    // war_as_qty_prep,
-    // war_as_uno_prep,
-    // war_as_una_prep,
-    // war_as_rt_prep,
-    // war_as_qty_wrap,
-    // war_as_uno_wrap,
-    // war_as_una_wrap,
-    // war_as_rt_wrap,
-    // tru_cos_qty_prep,
-    // tru_cos_uno_prep,
-    // tru_cos_una_prep,
-    // tru_cos_rt_prep,
-    // tru_cos_qty_wrap,
-    // tru_cos_uno_wrap,
-    // tru_cos_una_wrap,
-    // tru_cos_rt_wrap,
-    // ot_war_qty_prep,
-    // ot_war_uno_prep,
-    // ot_war_una_prep,
-    // ot_war_rt_prep,
-    // ot_war_qty_wrap,
-    // ot_war_uno_wrap,
-    // ot_war_una_wrap,
-    // ot_war_rt_wrap,
-    // shopper_qty,
-    // shopper_uno,
-    // shopper_una,
-    // shopper_rt,
-    // shopper_qty_prep,
-    // shopper_uno_prep,
-    // shopper_una_prep,
-    // shopper_rt_prep,
-    // tailors,
-    // textile_ar,
-    // cos_coor,
   // Totals
-//
-// days6th7th_unit,
-// days6th7th, 
-// overtime_unit, 
-// overtime, 
-// holidays_unit, 
-// holidays, 
-// box_rent_unit,
-// box_rent,
-// other,
-// fringes_taxes,
+
+  // dop
+  // dop shoot Total postData 
+  const [dopTotal, setDopTotal] = useState(0);
+  // dop prep Total postData 
+  const [dopprepTotal, setDopprepTotal] = useState(0);
+  // dop wrap Total postData 
+  const [dopwrapTotal, setDopwrapTotal] = useState(0);
+  // dop all Total postData 
+  const [dopallTotal, setDopallTotal] = useState(0);
+
+  // Camera Operator
+  // Camera Operator shoot Total postData 
+  const [cameraopTotal, setCameraopTotal] = useState(0);
+  // Camera Operator prep Total postData 
+  const [camopprepTotal, setCamopprepTotal] = useState(0);
+  // Camera Operator wrap Total postData 
+  const [camopwrapTotal, setCamopwrapTotal] = useState(0);
+  // Camera Operator all Total postData 
+  const [camopallTotal, setCamopallTotal] = useState(0);
+
+  // 1st Assistant Camera
+  // 1st Assistant Camera shoot Total postData 
+  const [camac1Total, setCamac1Total] = useState(0);
+  // 1st Assistant Camera prep Total postData 
+  const [camac1prepTotal, setCamac1prepTotal] = useState(0);
+  // 1st Assistant Camera wrap Total postData 
+  const [camac1wrapTotal, setCamac1wrapTotal] = useState(0);
+  // 1st Assistant Camera all Total postData 
+  const [camac1allTotal, setCamac1allTotal] = useState(0);
+
+  // 2nd Assistant Camera
+  // 2nd Assistant Camera shoot Total postData 
+  const [camac2Total, setCamac2Total] = useState(0);
+  // 2nd Assistant Camera prep Total postData 
+  const [camac2prepTotal, setCamac2prepTotal] = useState(0);
+  // 2nd Assistant Camera wrap Total postData 
+  const [camac2wrapTotal, setCamac2wrapTotal] = useState(0);
+  // 2nd Assistant Camera all Total postData 
+  const [camac2allTotal, setCamac2allTotal] = useState(0);
+
+  // DIT Total
+  // DIT shoot Total postData 
+  const [ditTotal, setDitTotal] = useState(0);
+  // DIT prep Total postData 
+  const [ditprepTotal, setDitprepTotal] = useState(0);
+  // DIT wrap Total postData 
+  const [ditwrapTotal, setDitwrapTotal] = useState(0);
+  // DIT prep Total postData 
+  const [ditallTotal, setDitallTotal] = useState(0);
+
+  // Steadicam
+  // Steadicam shoot Total postData 
+  const [steadicamTotal, setSteadicamTotal] = useState(0);
+  // Steadicam prep Total postData 
+  const [stecamprepTotal, setStecamprepTotal] = useState(0);
+  // Steadicam wrap Total postData 
+  const [stecamwrapTotal, setStecamwrapTotal] = useState(0);
+  // Steadicam all Total postData 
+  const [stecamallTotal, setStecamallTotal] = useState(0);
+
+  // Camera PA
+  // Camera PA shoot Total postData 
+  const [campaTotal, setCampaTotal] = useState(0);
+  // Camera PA prep Total postData 
+  const [campaprepTotal, setCampaprepTotal] = useState(0);
+  // Camera PA wrap Total postData 
+  const [campawrapTotal, setCampawrapTotal] = useState(0);
+  // Camera PA all Total postData 
+  const [campaallTotal, setCampaallTotal] = useState(0);
+
+  // Drone Pilot
+  // Drone Pilot shoot Total postData 
+  const [dronepilotTotal, setDronepilotTotal] = useState(0);
+  // Drone Pilot prep Total postData 
+  const [dronpiprepTotal, setDronpiprepTotal] = useState(0);
+  // Drone Pilot wrap Total postData 
+  const [dronpiwrapTotal, setDronpiwrapTotal] = useState(0);
+  // Drone Pilot all Total postData 
+  const [dronpiallTotal, setDronpiallTotal] = useState(0);
+
+  // other cam
+  // other cam shoot Total postData 
+  const [othercamTotal, setOthercamTotal] = useState(0);
+  // other cam prep Total postData 
+  const [othcamprepTotal, setOthcamprepTotal] = useState(0);
+  // other cam wrap Total postData 
+  const [othcamwrapTotal, setOthcamwrapTotal] = useState(0);
+  // other cam all Total postData 
+  const [othcamallTotal, setOthcamallTotal] = useState(0);
+
+  // Stills
+  // Stills shoot Total postData 
+  const [stillsTotal, setStillsTotal] = useState(0);
+
+  // Camera Labour Total postData 
+  const [cameralabourTotal, setCameralabourTotal] = useState(0);
+
 // Budget Top Old
 {/* old */}
     {/* RIGHTS */}
@@ -240,3 +258,56 @@
         {message}
         </Alert>
     ))} */}
+
+// handlechanges
+
+// handleChange3 - parseFloat(event.target.value) ?  
+    // const handleChange3 = (event) => {
+    //     setPostDataCamera({
+    //     ...postDataCamera,
+    //     [event.target.name]: parseFloat(event.target.value) ? parseFloat(event.target.value) : '',
+    //     });
+    // }; 
+
+    // handleChange4 - Use text="number" in input box
+    // const handleChange4 = (event) => {
+    //     setPostDataCamera({
+    //     ...postDataCamera,
+    //     [event.target.name]: parseFloat(event.target.value) || 0,
+    //     });
+    // }; 
+
+    // handleChange7 - Use parseFloat only - - doesn't work first go
+    // const handleChange7 = (event) => {
+    //     setPostDataCamera({
+    //     ...postDataCamera,
+    //     [event.target.name]: parseFloat(event.target.value) || 0,
+    //     });
+    // };
+
+    // handleChange2 - const re = /\d+\.?\d*/ - doesn't work
+    // const handleChange2 = (event) => {
+    //     const re = new RegExp('/\d+\.?\d*/');
+    //     if (re.test(event.target.value)) {
+    //       setPostDataCamera({
+    //       ...postDataCamera,
+    //       [event.target.name]: event.target.value,
+    //       });
+    //     }
+    // };
+
+    // handleChange9 - replace("[^\\d.]", ""); - doesn't work
+    // const handleChange6 = (event) => {
+    //     setPostDataCamera({
+    //     ...postDataCamera,
+    //     [event.target.name]: parseFloat(event.target.value.replace("[^\\d.]", "") || 0 ),
+    //     });
+    // };
+
+    // handleChange6 - replace(/[^0-9.]/g, '') - doesn't work
+    // const handleChange6 = (event) => {
+    //     setPostDataCamera({
+    //     ...postDataCamera,
+    //     [event.target.name]: parseFloat(event.target.value.replace(/[^0-9.]/g, '') || 0 ),
+    //     });
+    // };

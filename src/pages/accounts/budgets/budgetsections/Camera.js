@@ -21,19 +21,68 @@ const Camera = (props) => {
            dronepilotTotal, setDronepilotTotal,
            stillsTotal, setStillsTotal,
            othercamTotal, setOthercamTotal, setShow,
-           cameralabourTotal, setCameralabourTotal} = props;
+           cameralabourTotal, setCameralabourTotal,
+           dopprepTotal, setDopprepTotal,
+           dopwrapTotal, setDopwrapTotal,
+           dopallTotal, setDopallTotal,
+           camopprepTotal, setCamopprepTotal,
+           camopwrapTotal, setCamopwrapTotal,
+           camopallTotal, setCamopallTotal,
+           camac1prepTotal, setCamac1prepTotal,
+           camac1wrapTotal, setCamac1wrapTotal,
+           camac1allTotal, setCamac1allTotal,
+           camac2prepTotal, setCamac2prepTotal,
+           camac2wrapTotal, setCamac2wrapTotal,
+           camac2allTotal, setCamac2allTotal,
+           ditprepTotal, setDitprepTotal,
+           ditwrapTotal, setDitwrapTotal,
+           ditallTotal, setDitallTotal,
+           stecamprepTotal, setStecamprepTotal,
+           stecamwrapTotal, setStecamwrapTotal,
+           stecamallTotal, setStecamallTotal,
+           campaprepTotal, setCampaprepTotal,
+           campawrapTotal, setCampawrapTotal,
+           campaallTotal, setCampaallTotal,
+           dronpiprepTotal, setDronpiprepTotal,
+           dronpiwrapTotal, setDronpiwrapTotal,
+           dronpiallTotal, setDronpiallTotal,
+           othcamprepTotal, setOthcamprepTotal,
+           othcamwrapTotal, setOthcamwrapTotal,
+           othcamallTotal, setOthcamallTotal,
+    } = props;
       
     // Camera Labour postData values
-    const {dop_qty, dop_uno, dop_una, dop_rt,
-      camera_op_qty, camera_op_uno, camera_op_una, camera_op_rt,
-      cam_ac1_qty, cam_ac1_uno, cam_ac1_una, cam_ac1_rt,
-      cam_ac2_qty, cam_ac2_uno, cam_ac2_una, cam_ac2_rt,
-      dit_qty, dit_uno, dit_una, dit_rt,
-      steadicam_qty, steadicam_uno, steadicam_una, steadicam_rt,
-      cam_pa_qty, cam_pa_uno, cam_pa_una, cam_pa_rt, 
-      drone_pilot_qty, drone_pilot_uno, drone_pilot_una, drone_pilot_rt,
-      other_cam_qty, other_cam_uno, other_cam_una, other_cam_rt,
-      stills_qty, stills_uno, stills_una, stills_rt,
+    const {days6th7th_unit_cam, days6th7th_cam,
+    overtime_unit_cam, overtime_cam, holidays_unit_cam, 
+    holidays_cam, box_rent_unit_cam, box_rent_cam, other_solo_cam,
+    dop_qty_prep, dop_uno_prep, dop_una_prep, dop_rt_prep,
+    dop_qty_wrap, dop_uno_wrap, dop_una_wrap, dop_rt_wrap,
+    cam_op_qty_prep, cam_op_uno_prep, cam_op_una_prep, cam_op_rt_prep,
+    cam_op_qty_wrap, cam_op_uno_wrap, cam_op_una_wrap, cam_op_rt_wrap,
+    cam_ac1_qty_prep, cam_ac1_uno_prep, cam_ac1_una_prep, cam_ac1_rt_prep,
+    cam_ac1_qty_wrap, cam_ac1_uno_wrap, cam_ac1_una_wrap, cam_ac1_rt_wrap,
+    cam_ac2_qty_prep, cam_ac2_uno_prep, cam_ac2_una_prep, cam_ac2_rt_prep,
+    cam_ac2_qty_wrap, cam_ac2_uno_wrap, cam_ac2_una_wrap, cam_ac2_rt_wrap,
+    dit_qty_prep, dit_uno_prep, dit_una_prep, dit_rt_prep, 
+    dit_qty_wrap, dit_uno_wrap, dit_una_wrap, dit_rt_wrap,
+    stead_qty_prep, stead_uno_prep, stead_una_prep, stead_rt_prep,
+    stead_qty_wrap, stead_uno_wrap, stead_una_wrap, stead_rt_wrap,
+    cam_pa_qty_prep, cam_pa_uno_prep, cam_pa_una_prep, cam_pa_rt_prep,
+    cam_pa_qty_wrap, cam_pa_uno_wrap, cam_pa_una_wrap, cam_pa_rt_wrap,
+    dro_pil_qty_prep, dro_pil_uno_prep, dro_pil_una_prep, dro_pil_rt_prep,
+    dro_pil_qty_wrap, dro_pil_uno_wrap, dro_pil_una_wrap, dro_pil_rt_wrap,
+    ot_cam_qty_prep, ot_cam_uno_prep, ot_cam_una_prep, ot_cam_rt_prep,
+    ot_cam_qty_wrap, ot_cam_uno_wrap, ot_cam_una_wrap, ot_cam_rt_wrap,
+    dop_qty, dop_uno, dop_una, dop_rt,
+    camera_op_qty, camera_op_uno, camera_op_una, camera_op_rt,
+    cam_ac1_qty, cam_ac1_uno, cam_ac1_una, cam_ac1_rt,
+    cam_ac2_qty, cam_ac2_uno, cam_ac2_una, cam_ac2_rt,
+    dit_qty, dit_uno, dit_una, dit_rt,
+    steadicam_qty, steadicam_uno, steadicam_una, steadicam_rt,
+    cam_pa_qty, cam_pa_uno, cam_pa_una, cam_pa_rt, 
+    drone_pilot_qty, drone_pilot_uno, drone_pilot_una, drone_pilot_rt,
+    other_cam_qty, other_cam_uno, other_cam_una, other_cam_rt,
+    stills_qty, stills_uno, stills_una, stills_rt,
     fringes_taxes_camera,} = postDataCamera;
 
     // handleChange - replace(/\D/g,'') - works but no decimal
@@ -52,50 +101,9 @@ const Camera = (props) => {
       });
     };
 
-    // handleChange3 - parseFloat(event.target.value) ?  
-    // const handleChange3 = (event) => {
-    //     setPostDataCamera({
-    //     ...postDataCamera,
-    //     [event.target.name]: parseFloat(event.target.value) ? parseFloat(event.target.value) : '',
-    //     });
-    // }; 
-
-    // handleChange4 - Use text="number" in input box
-    // const handleChange4 = (event) => {
-    //     setPostDataCamera({
-    //     ...postDataCamera,
-    //     [event.target.name]: parseFloat(event.target.value) || 0,
-    //     });
-    // }; 
-
-    // handleChange7 - Use parseFloat only - - doesn't work first go
-    // const handleChange7 = (event) => {
-    //     setPostDataCamera({
-    //     ...postDataCamera,
-    //     [event.target.name]: parseFloat(event.target.value) || 0,
-    //     });
-    // };
-
-    // handleChange2 - const re = /\d+\.?\d*/ - doesn't work
-    // const handleChange2 = (event) => {
-    //     const re = new RegExp('/\d+\.?\d*/');
-    //     if (re.test(event.target.value)) {
-    //       setPostDataCamera({
-    //       ...postDataCamera,
-    //       [event.target.name]: event.target.value,
-    //       });
-    //     }
-    // };
-
-    // handleChange6 - replace(/[^0-9.]/g, '') - hopfully works best
-    // const handleChange6 = (event) => {
-    //     setPostDataCamera({
-    //     ...postDataCamera,
-    //     [event.target.name]: parseFloat(event.target.value.replace(/[^0-9.]/g, '') || 0 ),
-    //     });
-    // };
-
     // Calculate Functions
+
+    // dop
     // function to calculate dop on change
     useEffect(() => {
       const addDop = () => {
