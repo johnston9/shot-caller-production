@@ -104,7 +104,7 @@ const Camera = (props) => {
     // Calculate Functions
 
     // dop
-    // function to calculate dop on change
+    // function to calculate dop shoot on change
     useEffect(() => {
       const addDop = () => {
       setDopTotal(parseFloat(dop_qty || 0) * 
@@ -121,6 +121,58 @@ const Camera = (props) => {
       // eslint-disable-next-line
     }, [dop_qty, dop_uno, dop_rt]);
 
+    // function to calculate dop prep on change
+    useEffect(() => {
+        const addDopprep = () => {
+        setDopprepTotal(parseFloat(dop_qty_prep || 0) * 
+        parseFloat(dop_uno_prep || 0) * 
+        parseFloat(dop_rt_prep || 0))
+        }
+        const timer = setTimeout(() => {
+            addDopprep();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [dop_qty_prep, dop_uno_prep, dop_rt_prep]);
+
+    // function to calculate dop wrap on change
+    useEffect(() => {
+        const addDopwrap = () => {
+        setDopwrapTotal(parseFloat(dop_qty_wrap || 0) * 
+        parseFloat(dop_uno_wrap || 0) * 
+        parseFloat(dop_rt_wrap || 0))
+        }
+        const timer = setTimeout(() => {
+            addDopwrap();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [dop_qty_wrap, dop_uno_wrap, dop_rt_wrap]);
+
+    // function to calculate dop all on change
+    useEffect(() => {
+        const addDopall = () => {
+        setDopallTotal(parseFloat(dopTotal || 0) +
+        parseFloat(dopprepTotal || 0) +
+        parseFloat(dopwrapTotal || 0))
+        }
+        const timer = setTimeout(() => {
+            addDopall();
+        }, 1000);
+
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [dopTotal, dopprepTotal, dopwrapTotal]);
+
+    // stills
     // function to calculate stills on change
     useEffect(() => {
         const addSti = () => {
@@ -138,7 +190,8 @@ const Camera = (props) => {
         // eslint-disable-next-line
       }, [stills_qty, stills_uno, stills_rt]);
 
-    // function to calculate Camera Operator on change
+    // Camera Operator
+    // function to calculate Camera Operator shoot on change
     useEffect(() => {
       const addCamope = () => {
       setCameraopTotal(parseFloat(camera_op_qty || 0) * 
@@ -155,7 +208,59 @@ const Camera = (props) => {
       // eslint-disable-next-line
     }, [camera_op_qty, camera_op_uno, camera_op_rt]);
 
-    // function to calculate 1st Assistant Camera on change
+    // function to calculate Camera Operator prep on change
+    useEffect(() => {
+        const addCamopprep = () => {
+        setCamopprepTotal(parseFloat(cam_op_qty_prep || 0) * 
+        parseFloat(cam_op_uno_prep || 0) * 
+        parseFloat(cam_op_rt_prep || 0))
+        }
+        const timer = setTimeout(() => {
+            addCamopprep();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [cam_op_qty_prep, cam_op_uno_prep, cam_op_rt_prep]);
+
+    // function to calculate Camera Operator wrap on change
+    useEffect(() => {
+        const addCamopwrap = () => {
+        setCamopwrapTotal(parseFloat(cam_op_qty_wrap || 0) * 
+        parseFloat(cam_op_uno_wrap || 0) * 
+        parseFloat(cam_op_rt_wrap || 0))
+        }
+        const timer = setTimeout(() => {
+            addCamopwrap();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [cam_op_qty_wrap, cam_op_uno_wrap, cam_op_rt_wrap]);
+
+    // function to calculate Camera Operator all on change
+    useEffect(() => {
+        const addCamopall = () => {
+        setCamopallTotal(parseFloat(cameraopTotal || 0) +
+        parseFloat(camopprepTotal || 0) +
+        parseFloat(camopwrapTotal || 0))
+        }
+        const timer = setTimeout(() => {
+            addCamopall();
+        }, 1000);
+
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [cameraopTotal, camopprepTotal, camopwrapTotal]);
+
+    // 1st Assistant Camera
+    // function to calculate 1st Assistant Camera shoot on change
     useEffect(() => {
       const addCamac1 = () => {
       setCamac1Total(parseFloat(cam_ac1_qty || 0) * 
@@ -172,7 +277,59 @@ const Camera = (props) => {
       // eslint-disable-next-line
     }, [cam_ac1_qty, cam_ac1_uno, cam_ac1_rt]);
 
-    // function to calculate 2nd Assistant Camera on change
+    // function to calculate 1st Assistant Camera prep on change
+    useEffect(() => {
+        const addCamac1prep = () => {
+        setCamac1prepTotal(parseFloat(cam_ac1_qty_prep || 0) * 
+        parseFloat(cam_ac1_uno_prep || 0) * 
+        parseFloat(cam_ac1_rt_prep || 0))
+        }
+        const timer = setTimeout(() => {
+            addCamac1prep();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [cam_ac1_qty_prep, cam_ac1_uno_prep, cam_ac1_rt_prep]);
+
+    // function to calculate 1st Assistant Camera wrap on change
+    useEffect(() => {
+        const addCamac1wrap = () => {
+        setCamac1wrapTotal(parseFloat(cam_ac1_qty_wrap || 0) * 
+        parseFloat(cam_ac1_uno_wrap || 0) * 
+        parseFloat(cam_ac1_rt_wrap || 0))
+        }
+        const timer = setTimeout(() => {
+            addCamac1wrap();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [cam_ac1_qty_wrap, cam_ac1_uno_wrap, cam_ac1_rt_wrap]);
+
+    // function to calculate 1st Assistant Camera all on change
+    useEffect(() => {
+        const addCamac1all = () => {
+        setCamac1allTotal(parseFloat(camac1Total || 0) +
+        parseFloat(camac1prepTotal || 0) +
+        parseFloat(camac1wrapTotal || 0))
+        }
+        const timer = setTimeout(() => {
+            addCamac1all();
+        }, 1000);
+
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [camac1Total, camac1prepTotal, camac1wrapTotal]);
+
+    // 2nd Assistant Camera
+    // function to calculate 2nd Assistant Camera shoot on change
     useEffect(() => {
       const addCamac2 = () => {
       setCamac2Total(parseFloat(cam_ac2_qty || 0) * 
@@ -189,6 +346,58 @@ const Camera = (props) => {
       // eslint-disable-next-line
     }, [cam_ac2_qty, cam_ac2_uno, cam_ac2_rt]);
 
+    // function to calculate 2nd Assistant Camera prep on change
+    useEffect(() => {
+        const addCamac2prep = () => {
+        setCamac2prepTotal(parseFloat(cam_ac2_qty_prep || 0) * 
+        parseFloat(cam_ac2_uno_prep || 0) * 
+        parseFloat(cam_ac2_rt_prep || 0))
+        }
+        const timer = setTimeout(() => {
+            addCamac2prep();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [cam_ac2_qty_prep, cam_ac2_uno_prep, cam_ac2_rt_prep]);
+
+    // function to calculate 2nd Assistant Camera wrap on change
+    useEffect(() => {
+        const addCamac2wrap = () => {
+        setCamac2wrapTotal(parseFloat(cam_ac2_qty_wrap || 0) * 
+        parseFloat(cam_ac2_uno_wrap || 0) * 
+        parseFloat(cam_ac2_rt_wrap || 0))
+        }
+        const timer = setTimeout(() => {
+            addCamac2wrap();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [cam_ac2_qty_wrap, cam_ac2_uno_wrap, cam_ac2_rt_wrap]);
+
+    // function to calculate 2nd Assistant Camera all on change
+    useEffect(() => {
+        const addCamac2all = () => {
+        setCamac2allTotal(parseFloat(camac2Total || 0) +
+        parseFloat(camac2prepTotal || 0) +
+        parseFloat(camac2wrapTotal || 0))
+        }
+        const timer = setTimeout(() => {
+            addCamac2all();
+        }, 1000);
+
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [camac2Total, camac2prepTotal, camac2wrapTotal]);
+
+    // DIT - start here
     // function to calculate DIT on change
     useEffect(() => {
       const addDit = () => {
