@@ -85,13 +85,21 @@ const Camera = (props) => {
     stills_qty, stills_uno, stills_una, stills_rt,
     fringes_taxes_camera,} = postDataCamera;
 
-    // handleChange - replace(/\D/g,'') - works but no decimal
+    // handleChange - replace(/\D/g,'') - works with decimal
     const handleChange = (event) => {
       setPostDataCamera({
-      ...postDataCamera,
-      [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
+      ...postDataCamera, 
+      [event.target.name]: event.target.value.replace(/[^0-9.]/g, ''),
       });
     }; 
+
+    // no decimal
+    // const handleChange = (event) => {
+    //     setPostDataCamera({
+    //     ...postDataCamera,
+    //     [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
+    //     });
+    //   }; 
 
     // handleChange Text 
     const handleChangeText = (event) => {
@@ -791,7 +799,7 @@ const Camera = (props) => {
     </Col>
     </Row>
     <div className="px-2">
-    <Row >
+    <Row className={`mt-3`}>
     <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>16.00</p>
@@ -2819,16 +2827,124 @@ const Camera = (props) => {
     </Col>
     </Row>
     {/* Camera PA */}
-    <Row>
+    <div className="mt-1"> 
+    <Row >
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>16.70</p>
     </Col>
-    <Col md={5} >
-    <p className={`${styles.Underline}`}>Camera PA</p>
+    <Col md={9} >
+    <p className={`${styles.BoldBlack}`}>Camera PA</p>
+    </Col>
+    </Row>
+    {/* Prep */} 
+    <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Prep</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="cam_pa_qty_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="cam_pa_qty_prep"
+        value={cam_pa_qty_prep}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.cam_pa_qty_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="cam_pa_uno_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="cam_pa_uno_prep"
+        value={cam_pa_uno_prep}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.cam_pa_uno_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="cam_pa_una_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="cam_pa_una_prep"
+        value={cam_pa_una_prep}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.cam_pa_una_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="cam_pa_rt_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="cam_pa_rt_prep"
+        value={cam_pa_rt_prep}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.cam_pa_rt_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="campaprepTotal" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="campaprepTotal"
+        value={campaprepTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.campaprepTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>  
+    <Col md={1}></Col>
+    </Row>
+    {/* Shoot */}
+    <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="cam_pa_qty" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2845,7 +2961,7 @@ const Camera = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="cam_pa_uno" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2862,7 +2978,7 @@ const Camera = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="cam_pa_una" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2879,7 +2995,7 @@ const Camera = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="cam_pa_rt" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2896,7 +3012,7 @@ const Camera = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="campaTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2912,17 +3028,255 @@ const Camera = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Drone Pilot */}
+    {/* Wrap */}
+    <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1}></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Wrap</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="cam_pa_qty_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="cam_pa_qty_wrap"
+        value={cam_pa_qty_wrap}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.cam_pa_qty_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="cam_pa_uno_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="cam_pa_uno_wrap"
+        value={cam_pa_uno_wrap}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.cam_pa_uno_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="cam_pa_una_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="cam_pa_una_wrap"
+        value={cam_pa_una_wrap}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.cam_pa_una_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="cam_pa_rt_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="cam_pa_rt_wrap"
+        value={cam_pa_rt_wrap}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.cam_pa_rt_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="campawrapTotal" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="campawrapTotal"
+        value={campawrapTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.campawrapTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row className="py-0 d-flex align-items-center">
+    <Col md={1}></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={7} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="campaallTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="campaallTotal"
+        value={campaallTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.campaallTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    </div>
+    {/* hr */}
     <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-1 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Drone Pilot */}
+    <div className="mt-1"> 
+    <Row >
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>16.80</p>
     </Col>
-    <Col md={5} >
-    <p className={`${styles.Underline}`}>Drone Pilot</p>
+    <Col md={9} >
+    <p className={`${styles.BoldBlack}`}>Drone Pilot</p>
+    </Col>
+    </Row>
+    {/* Prep */} 
+    <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Prep</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="dro_pil_qty_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="dro_pil_qty_prep"
+        value={dro_pil_qty_prep}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.dro_pil_qty_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="dro_pil_uno_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="dro_pil_uno_prep"
+        value={dro_pil_uno_prep}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.dro_pil_uno_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="dro_pil_una_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="dro_pil_una_prep"
+        value={dro_pil_una_prep}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.dro_pil_una_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="dro_pil_rt_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="dro_pil_rt_prep"
+        value={dro_pil_rt_prep}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.dro_pil_rt_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="dronpiprepTotal" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="dronpiprepTotal"
+        value={dronpiprepTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.dronpiprepTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>  
+    <Col md={1}></Col>
+    </Row>
+    {/* Shoot */}
+    <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="drone_pilot_qty" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2939,7 +3293,7 @@ const Camera = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="drone_pilot_uno" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2956,7 +3310,7 @@ const Camera = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="drone_pilot_una" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2973,7 +3327,7 @@ const Camera = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="drone_pilot_rt" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -2990,7 +3344,7 @@ const Camera = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="dronepilotTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -3006,111 +3360,255 @@ const Camera = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Stills Photographer */}
-    <Row>
+    {/* Wrap */}
+    <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1}></Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>16.90</p>
+    <p className={`${styles.Underline}`}></p>
     </Col>
-    <Col md={5} >
-    <p className={`${styles.Underline}`}>Stills Photographer</p>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Wrap</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
-    <Form.Group controlId="stills_qty" 
-        className={`${styles.Width95} text-center mb-1`} >
+    <Form.Group controlId="dro_pil_qty_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="stills_qty"
-        value={stills_qty}
+        name="dro_pil_qty_wrap"
+        value={dro_pil_qty_wrap}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.stills_qty?.map((message, idx) => (
+    {errors?.dro_pil_qty_wrap?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     <Col className="px-1 mx-0" md={1} >
-    <Form.Group controlId="stills_uno" 
-        className={`${styles.Width95} text-center mb-1`} >
+    <Form.Group controlId="dro_pil_uno_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="stills_uno"
-        value={stills_uno}
+        name="dro_pil_uno_wrap"
+        value={dro_pil_uno_wrap}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.stills_uno?.map((message, idx) => (
+    {errors?.dro_pil_uno_wrap?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     <Col className="px-1 mx-0" md={1} >
-    <Form.Group controlId="stills_una" 
-        className={`${styles.Width95} text-center mb-1`} >
+    <Form.Group controlId="dro_pil_una_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="stills_una"
-        value={stills_una}
+        name="dro_pil_una_wrap"
+        value={dro_pil_una_wrap}
         onChange={handleChangeText}
             />
     </Form.Group>
-    {errors?.stills_una?.map((message, idx) => (
+    {errors?.dro_pil_una_wrap?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     <Col className="px-1 mx-0" md={1} >
-    <Form.Group controlId="stills_rt" 
-        className={`${styles.Width95} text-center mb-1`} >
+    <Form.Group controlId="dro_pil_rt_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="stills_rt"
-        value={stills_rt}
+        name="dro_pil_rt_wrap"
+        value={dro_pil_rt_wrap}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.stills_rt?.map((message, idx) => (
+    {errors?.dro_pil_rt_wrap?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     <Col md={2} >
-    <Form.Group controlId="stillsTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+    <Form.Group controlId="dronpiwrapTotal" 
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="stillsTotal"
-        value={stillsTotal}
+        name="dronpiwrapTotal"
+        value={dronpiwrapTotal}
         readOnly
             />
     </Form.Group>
-    {errors?.stillsTotal?.map((message, idx) => (
+    {errors?.dronpiwrapTotal?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     </Row>
-    {/* Other */}
-    <Row>
+    {/* Total */}
+    <Row className="py-0 d-flex align-items-center">
+    <Col md={1}></Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>16.91</p>
+    <p className={`${styles.Underline}`}></p>
     </Col>
-    <Col md={5} >
-    <p className={`${styles.Underline}`}>Other - Camera</p>
+    <Col md={7} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="dronpiallTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="dronpiallTotal"
+        value={dronpiallTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.dronpiallTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    </div>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-1 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Other */}
+    <div className="mt-1"> 
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>16.90</p>
+    </Col>
+    <Col md={9} >
+    <p className={`${styles.BoldBlack}`}>Additional Camera Labour</p>
+    </Col>
+    </Row>
+    {/* Prep */} 
+    <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Prep</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="ot_cam_qty_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="ot_cam_qty_prep"
+        value={ot_cam_qty_prep}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.ot_cam_qty_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="ot_cam_uno_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="ot_cam_uno_prep"
+        value={ot_cam_uno_prep}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.ot_cam_uno_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="ot_cam_una_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="ot_cam_una_prep"
+        value={ot_cam_una_prep}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.ot_cam_una_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="ot_cam_rt_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="ot_cam_rt_prep"
+        value={ot_cam_rt_prep}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.ot_cam_rt_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="othcamprepTotal" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="othcamprepTotal"
+        value={othcamprepTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.othcamprepTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>  
+    <Col md={1}></Col>
+    </Row>
+    {/* Shoot */}
+    <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="other_cam_qty" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -3127,7 +3625,7 @@ const Camera = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="other_cam_uno" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -3144,7 +3642,7 @@ const Camera = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="other_cam_una" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -3161,7 +3659,7 @@ const Camera = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="other_cam_rt" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -3178,7 +3676,7 @@ const Camera = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="othercamTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -3194,12 +3692,509 @@ const Camera = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Fringes and Taxes */}
+    {/* Wrap */}
+    <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1}></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Wrap</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="ot_cam_qty_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="ot_cam_qty_wrap"
+        value={ot_cam_qty_wrap}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.ot_cam_qty_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="ot_cam_uno_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="ot_cam_uno_wrap"
+        value={ot_cam_uno_wrap}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.ot_cam_uno_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="ot_cam_una_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="ot_cam_una_wrap"
+        value={ot_cam_una_wrap}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.ot_cam_una_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="ot_cam_rt_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="ot_cam_rt_wrap"
+        value={ot_cam_rt_wrap}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.ot_cam_rt_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="othcamwrapTotal" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="othcamwrapTotal"
+        value={othcamwrapTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.othcamwrapTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row className="py-0 d-flex align-items-center">
+    <Col md={1}></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={7} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="othcamallTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="othcamallTotal"
+        value={othcamallTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.othcamallTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    </div>
+    {/* hr */}
     <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-1 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Stills Photographer */}
+    <Row className="py-1 d-flex align-items-center">
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>16.91</p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline}`}>Stills Photographer</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="stills_qty" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="stills_qty"
+        value={stills_qty}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.stills_qty?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="stills_uno" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="stills_uno"
+        value={stills_uno}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.stills_uno?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="stills_una" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="stills_una"
+        value={stills_una}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.stills_una?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="stills_rt" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="stills_rt"
+        value={stills_rt}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.stills_rt?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="stillsTotal" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="stillsTotal"
+        value={stillsTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.stillsTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* 6th/7th Days */}
+    <Row className="py-1 d-flex align-items-center">
+    <Col md={1}></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>16.92</p>
     </Col>
+    <Col md={4} >
+    <p className={`${styles.BoldBlack}`}>6th/7th Days</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="days6th7th_unit_cam" 
+        className={`${styles.Width95} text-center my-0 py-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="days6th7th_unit_cam"
+        value={days6th7th_unit_cam}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.days6th7th_unit_cam?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="days6th7th_cam" 
+        className={`${styles.Width95} text-center my-0 py-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="days6th7th_cam"
+        value={days6th7th_cam}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.days6th7th_cam?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Overtime */}
+    <Row className="py-1 d-flex align-items-center">
+    <Col md={1}></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>16.93</p>
+    </Col>
+    <Col md={4} >
+    <p className={`${styles.BoldBlack}`}>Overtime</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="overtime_unit_cam" 
+        className={`${styles.Width95} text-center my-0 py-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="overtime_unit_cam"
+        value={overtime_unit_cam}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.overtime_unit_cam?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="overtime_cam" 
+        className={`${styles.Width95} text-center my-0 py-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="overtime_cam"
+        value={overtime_cam}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.overtime_cam?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Holidays */}
+    <Row className="py-1 d-flex align-items-center">
+    <Col md={1}></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>16.94</p>
+    </Col>
+    <Col md={4} >
+    <p className={`${styles.BoldBlack}`}>Holidays</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="holidays_unit_cam" 
+        className={`${styles.Width95} text-center my-0 py-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="holidays_unit_cam"
+        value={holidays_unit_cam}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.holidays_unit_cam?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="holidays_cam" 
+        className={`${styles.Width95} text-center my-0 py-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="holidays_cam"
+        value={holidays_cam}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.holidays_cam?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Box Rentals */}
+    <Row className="py-1 d-flex align-items-center">
+    <Col md={1}></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>16.95</p>
+    </Col>
+    <Col md={4} >
+    <p className={`${styles.BoldBlack}`}>Box Rentals </p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="box_rent_unit_cam" 
+        className={`${styles.Width95} text-center my-0 py-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="box_rent_unit_cam"
+        value={box_rent_unit_cam}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.box_rent_unit_cam?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="box_rent_cam" 
+        className={`${styles.Width95} text-center my-0 py-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="box_rent_cam"
+        value={box_rent_cam}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.box_rent_cam?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Other */}
+    <Row className="py-1 d-flex align-items-center">
+    <Col md={1}></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>16.96</p>
+    </Col>
     <Col md={6} >
+    <p className={`${styles.Underline}`}>Other</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="other_solo_cam" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="other_solo_cam"
+        value={other_solo_cam}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.other_solo_cam?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Fringes and Taxes */}
+    <Row className="py-1 d-flex align-items-center">
+    <Col md={1}></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>16.97</p>
+    </Col>
+    <Col md={4} >
     <p className={`${styles.Underline}`}>Fringes and Taxes</p>
     </Col>
     <Col md={1} >
@@ -3229,18 +4224,20 @@ const Camera = (props) => {
     ))}
     </Col>
     </Row>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
     {/* Camera Total */}
-    <Row className="mt-3">
+    <Row className="mt-3 pb-2">
+    <Col md={1}></Col>
     <Col md={1} >
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>CAMERA TOTAL</p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={1} >
-    <p></p>
     </Col>
     <Col md={1} >
     <p></p>
