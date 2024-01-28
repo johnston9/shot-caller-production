@@ -765,7 +765,6 @@ const DesignLabour = (props) => {
     // eslint-disable-next-line
   }, [artcoorTotal, artcoorprepTotal, artcoorwrapTotal]);
 
-  // START HERE  
   // function to add all design on change 
   useEffect(() => {
     const addDesign = () => {

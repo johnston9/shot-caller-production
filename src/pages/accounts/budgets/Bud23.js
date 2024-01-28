@@ -1,182 +1,124 @@
-  days6th7th_unit_cam,
-  days6th7th_cam,
-  overtime_unit_cam,
-  overtime_cam,
-  holidays_unit_cam, 
-  holidays_cam,
-  box_rent_unit_cam,
-  box_rent_cam,
-  other_solo_cam,
-  dop_qty_prep,
-  dop_uno_prep,
-  dop_una_prep,
-  dop_rt_prep,
-  dop_qty_wrap,
-  dop_uno_wrap,
-  dop_una_wrap,
-  dop_rt_wrap,
-  cam_op_qty_prep,
-  cam_op_uno_prep,
-  cam_op_una_prep,
-  cam_op_rt_prep,
-  cam_op_qty_wrap,
-  cam_op_uno_wrap,
-  cam_op_una_wrap,
-  cam_op_rt_wrap,
-  cam_ac1_qty_prep,
-  cam_ac1_uno_prep,
-  cam_ac1_una_prep,
-  cam_ac1_rt_prep,
-  cam_ac1_qty_wrap,
-  cam_ac1_uno_wrap,
-  cam_ac1_una_wrap,
-  cam_ac1_rt_wrap,
-  cam_ac2_qty_prep,
-  cam_ac2_uno_prep,
-  cam_ac2_una_prep,
-  cam_ac2_rt_prep,
-  cam_ac2_qty_wrap,
-  cam_ac2_uno_wrap,
-  cam_ac2_una_wrap,
-  cam_ac2_rt_wrap,
-  dit_qty_prep,
-  dit_uno_prep,
-  dit_una_prep,
-  dit_rt_prep,
-  dit_qty_wrap,
-  dit_uno_wrap,
-  dit_una_wrap,
-  dit_rt_wrap,
-  stead_qty_prep
-  stead_uno_prep,
-  stead_una_prep,
-  stead_rt_prep,
-  stead_qty_wrap,
-  stead_uno_wrap
-  stead_una_wrap,
-  stead_rt_wrap,
-  cam_pa_qty_prep,
-  cam_pa_uno_prep,
-  cam_pa_una_prep,
-  cam_pa_rt_prep,
-  cam_pa_qty_wrap,
-  cam_pa_uno_wrap,
-  cam_pa_una_wrap,
-  cam_pa_rt_wrap,
-  dro_pil_qty_prep,
-  dro_pil_uno_prep,
-  dro_pil_una_prep,
-  dro_pil_rt_prep,
-  dro_pil_qty_wrap,
-  dro_pil_uno_wrap,
-  dro_pil_una_wrap,
-  dro_pil_rt_wrap,
-  ot_cam_qty_prep,
-  ot_cam_uno_prep,
-  ot_cam_una_prep,
-  ot_cam_rt_prep,
-  ot_cam_qty_wrap,
-  ot_cam_uno_wrap,
-  ot_cam_una_wrap,
-  ot_cam_rt_wrap,
+  days6th7th_unit_ele,
+  days6th7th_ele,
+  overtime_unit_ele,
+  overtime_ele,
+  holidays_unit_ele, 
+  holidays_ele,
+  box_rent_unit_ele,
+  box_rent_ele,
+  other_solo_ele,
+  gaf_qty_prep,
+  gaf_uno_prep,
+  gaf_una_prep,
+  gaf_rt_prep,
+  gaf_qty_wrap,
+  gaf_uno_wrap,
+  gaf_una_wrap,
+  gaf_rt_wrap,
+  b_boy_qty_prep,
+  b_boy_uno_prep,
+  b_boy_una_prep,
+  b_boy_rt_prep,
+  b_boy_qty_wrap,
+  b_boy_uno_wrap,
+  b_boy_una_wrap,
+  b_boy_rt_wrap,
+  elec_qty_prep,
+  elec_uno_prep,
+  elec_una_prep,
+  elec_rt_prep,
+  elec_qty_wrap,
+  elec_uno_wrap,
+  elec_una_wrap,
+  elec_rt_wrap,
+  d_elec_qty_prep,
+  d_elec_uno_prep,
+  d_elec_una_prep,
+  d_elec_rt_prep,
+  d_elec_qty_wrap,
+  d_elec_uno_wrap,
+  d_elec_una_wrap,
+  d_elec_rt_wrap,
+  gen_op_qty_prep,
+  gen_op_uno_prep,
+  gen_op_una_prep,
+  gen_op_rt_prep,
+  gen_op_qty_wrap,
+  gen_op_uno_wrap,
+  gen_op_una_wrap,
+  gen_op_rt_wrap,
+  ot_el_qty_prep,
+  ot_el_uno_prep,
+  ot_el_una_prep,
+  ot_el_rt_prep,
+  ot_el_qty_wrap,
+  ot_el_uno_wrap,
+  ot_el_una_wrap,
+  ot_el_rt_wrap,
   // Totals
 
-  // dop
-  // dop shoot Total postData 
-  const [dopTotal, setDopTotal] = useState(0);
-  // dop prep Total postData 
-  const [dopprepTotal, setDopprepTotal] = useState(0);
-  // dop wrap Total postData 
-  const [dopwrapTotal, setDopwrapTotal] = useState(0);
-  // dop all Total postData 
-  const [dopallTotal, setDopallTotal] = useState(0);
+  // gaffer
+  // gaffer shoot Total postData 
+  const [gafferTotal, setGafferTotal] = useState(0);
+  // gaffer prep Total postData 
+  const [gafprepTotal, setGafprepTotal] = useState(0);
+  // gaffer wrap Total postData 
+  const [gafwrapTotal, setGafwrapTotal] = useState(0);
+  // gaffer all Total postData 
+  const [gafallTotal, setGafallTotal] = useState(0);
 
-  // Camera Operator
-  // Camera Operator shoot Total postData 
-  const [cameraopTotal, setCameraopTotal] = useState(0);
-  // Camera Operator prep Total postData 
-  const [camopprepTotal, setCamopprepTotal] = useState(0);
-  // Camera Operator wrap Total postData 
-  const [camopwrapTotal, setCamopwrapTotal] = useState(0);
-  // Camera Operator all Total postData 
-  const [camopallTotal, setCamopallTotal] = useState(0);
+  // best boy
+  // best boy shoot Total postData 
+  const [bestboyTotal, setBestboyTotal] = useState(0);
+  // best boy prep Total postData 
+  const [bboyprepTotal, setBboyprepTotal] = useState(0);
+  // best boy wrap Total postData 
+  const [bboywrapTotal, setBboywrapTotal] = useState(0);
+  // best boy all Total postData 
+  const [bboyallTotal, setBboyallTotal] = useState(0);
 
-  // 1st Assistant Camera
-  // 1st Assistant Camera shoot Total postData 
-  const [camac1Total, setCamac1Total] = useState(0);
-  // 1st Assistant Camera prep Total postData 
-  const [camac1prepTotal, setCamac1prepTotal] = useState(0);
-  // 1st Assistant Camera wrap Total postData 
-  const [camac1wrapTotal, setCamac1wrapTotal] = useState(0);
-  // 1st Assistant Camera all Total postData 
-  const [camac1allTotal, setCamac1allTotal] = useState(0);
+  // electrician
+  // electrician shoot Total postData 
+  const [electricianTotal, setElectricianTotal] = useState(0);
+  // electrician prep Total postData 
+  const [elecprepTotal, setElecprepTotal] = useState(0);
+  // electrician wrap Total postData 
+  const [elecwrapTotal, setElecwrapTotal] = useState(0);
+  // electrician all Total postData 
+  const [elecallTotal, setElecallTotal] = useState(0);
 
-  // 2nd Assistant Camera
-  // 2nd Assistant Camera shoot Total postData 
-  const [camac2Total, setCamac2Total] = useState(0);
-  // 2nd Assistant Camera prep Total postData 
-  const [camac2prepTotal, setCamac2prepTotal] = useState(0);
-  // 2nd Assistant Camera wrap Total postData 
-  const [camac2wrapTotal, setCamac2wrapTotal] = useState(0);
-  // 2nd Assistant Camera all Total postData 
-  const [camac2allTotal, setCamac2allTotal] = useState(0);
+  // dailies electric
+  // dailies electric shoot Total postData 
+  const [dailieselecTotal, setDailieselecTotal] = useState(0);
+  // dailies electric prep Total postData 
+  const [daelecprepTotal, setDaelecprepTotal] = useState(0);
+  // dailies electric wrap Total postData 
+  const [daelecwrapTotal, setDaelecwrapTotal] = useState(0);
+  // dailies electric all Total postData 
+  const [daelecallTotal, setDaelecallTotal] = useState(0);
 
-  // DIT Total
-  // DIT shoot Total postData 
-  const [ditTotal, setDitTotal] = useState(0);
-  // DIT prep Total postData 
-  const [ditprepTotal, setDitprepTotal] = useState(0);
-  // DIT wrap Total postData 
-  const [ditwrapTotal, setDitwrapTotal] = useState(0);
-  // DIT prep Total postData 
-  const [ditallTotal, setDitallTotal] = useState(0);
+  // generator operator
+  // generator operator shoot Total postData 
+  const [generatoropTotal, setGeneratoropTotal] = useState(0);
+  // generator operator prep Total postData 
+  const [genopprepTotal, setGenopprepTotal] = useState(0);
+  // generator operator wrap Total postData 
+  const [genopwrapTotal, setGenopwrapTotal] = useState(0);
+  // generator operator all Total postData 
+  const [genopallTotal, setGenopallTotal] = useState(0);
 
-  // Steadicam
-  // Steadicam shoot Total postData 
-  const [steadicamTotal, setSteadicamTotal] = useState(0);
-  // Steadicam prep Total postData 
-  const [stecamprepTotal, setStecamprepTotal] = useState(0);
-  // Steadicam wrap Total postData 
-  const [stecamwrapTotal, setStecamwrapTotal] = useState(0);
-  // Steadicam all Total postData 
-  const [stecamallTotal, setStecamallTotal] = useState(0);
+  // other electric
+  // other electric shoot Total postData 
+  const [otherelectricTotal, setOtherelectricTotal] = useState(0);
+  // other electric prep Total postData 
+  const [otelecprepTotal, setOtelecprepTotal] = useState(0);
+  // other electric wrap Total postData 
+  const [otelecwrapTotal, setOtelecwrapTotal] = useState(0);
+  // other electric all Total postData 
+  const [otelecallTotal, setOtelecallTotal] = useState(0);
 
-  // Camera PA
-  // Camera PA shoot Total postData 
-  const [campaTotal, setCampaTotal] = useState(0);
-  // Camera PA prep Total postData 
-  const [campaprepTotal, setCampaprepTotal] = useState(0);
-  // Camera PA wrap Total postData 
-  const [campawrapTotal, setCampawrapTotal] = useState(0);
-  // Camera PA all Total postData 
-  const [campaallTotal, setCampaallTotal] = useState(0);
-
-  // Drone Pilot
-  // Drone Pilot shoot Total postData 
-  const [dronepilotTotal, setDronepilotTotal] = useState(0);
-  // Drone Pilot prep Total postData 
-  const [dronpiprepTotal, setDronpiprepTotal] = useState(0);
-  // Drone Pilot wrap Total postData 
-  const [dronpiwrapTotal, setDronpiwrapTotal] = useState(0);
-  // Drone Pilot all Total postData 
-  const [dronpiallTotal, setDronpiallTotal] = useState(0);
-
-  // other cam
-  // other cam shoot Total postData 
-  const [othercamTotal, setOthercamTotal] = useState(0);
-  // other cam prep Total postData 
-  const [othcamprepTotal, setOthcamprepTotal] = useState(0);
-  // other cam wrap Total postData 
-  const [othcamwrapTotal, setOthcamwrapTotal] = useState(0);
-  // other cam all Total postData 
-  const [othcamallTotal, setOthcamallTotal] = useState(0);
-
-  // Stills
-  // Stills shoot Total postData 
-  const [stillsTotal, setStillsTotal] = useState(0);
-
-  // Camera Labour Total postData 
-  const [cameralabourTotal, setCameralabourTotal] = useState(0);
+  // Electric Labour Total postData 
+  const [electriclabourTotal, setElectriclabourTotal] = useState(0);
 
 // Budget Top Old
 {/* old */}

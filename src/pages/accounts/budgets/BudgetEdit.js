@@ -3105,6 +3105,64 @@ function BudgetEdit() {
 
   // Electrical Labour postData
   const [postDataElectric, setPostDataElectric] = useState({
+    days6th7th_unit_ele: "",
+    days6th7th_ele: 0,
+    overtime_unit_ele: "",
+    overtime_ele: 0,
+    holidays_unit_ele: "", 
+    holidays_ele: 0,
+    box_rent_unit_ele: "",
+    box_rent_ele: 0,
+    other_solo_ele: 0,
+    gaf_qty_prep: 0,
+    gaf_uno_prep: 0,
+    gaf_una_prep: "",
+    gaf_rt_prep: 0,
+    gaf_qty_wrap: 0,
+    gaf_uno_wrap: 0,
+    gaf_una_wrap: "",
+    gaf_rt_wrap: 0,
+    b_boy_qty_prep: 0,
+    b_boy_uno_prep: 0,
+    b_boy_una_prep: "",
+    b_boy_rt_prep: 0,
+    b_boy_qty_wrap: 0,
+    b_boy_uno_wrap: 0,
+    b_boy_una_wrap: "",
+    b_boy_rt_wrap: 0,
+    elec_qty_prep: 0,
+    elec_uno_prep: 0,
+    elec_una_prep: "",
+    elec_rt_prep: 0,
+    elec_qty_wrap: 0,
+    elec_uno_wrap: 0,
+    elec_una_wrap: "",
+    elec_rt_wrap: 0,
+    d_elec_qty_prep: 0,
+    d_elec_uno_prep: 0,
+    d_elec_una_prep: "",
+    d_elec_rt_prep: 0,
+    d_elec_qty_wrap: 0,
+    d_elec_uno_wrap: 0,
+    d_elec_una_wrap: "",
+    d_elec_rt_wrap: 0,
+    gen_op_qty_prep: 0,
+    gen_op_uno_prep: 0,
+    gen_op_una_prep: "",
+    gen_op_rt_prep: 0,
+    gen_op_qty_wrap: 0,
+    gen_op_uno_wrap: 0,
+    gen_op_una_wrap: "",
+    gen_op_rt_wrap: 0,
+    ot_el_qty_prep: 0,
+    ot_el_uno_prep: 0,
+    ot_el_una_prep: "",
+    ot_el_rt_prep: 0,
+    ot_el_qty_wrap: 0,
+    ot_el_uno_wrap: 0,
+    ot_el_una_wrap: "",
+    ot_el_rt_wrap: 0,
+    // old _prep wrap
     fringes_taxes_electric: 0,
     gaffer_qty: 0,
     gaffer_uno: 0,
@@ -3133,7 +3191,23 @@ function BudgetEdit() {
   });
 
   // values
-  const {gaffer_qty, gaffer_uno, gaffer_una, gaffer_rt,
+  const {days6th7th_unit_ele,days6th7th_ele,
+    overtime_unit_ele, overtime_ele, holidays_unit_ele, 
+    holidays_ele, box_rent_unit_ele, box_rent_ele, other_solo_ele,
+    gaf_qty_prep, gaf_uno_prep, gaf_una_prep, gaf_rt_prep, 
+    gaf_qty_wrap, gaf_uno_wrap, gaf_una_wrap, gaf_rt_wrap,
+    b_boy_qty_prep, b_boy_uno_prep, b_boy_una_prep, b_boy_rt_prep,
+    b_boy_qty_wrap, b_boy_uno_wrap, b_boy_una_wrap, b_boy_rt_wrap,
+    elec_qty_prep, elec_uno_prep, elec_una_prep, elec_rt_prep,
+    elec_qty_wrap, elec_uno_wrap, elec_una_wrap, elec_rt_wrap,
+    d_elec_qty_prep, d_elec_uno_prep, d_elec_una_prep, d_elec_rt_prep,
+    d_elec_qty_wrap, d_elec_uno_wrap, d_elec_una_wrap, d_elec_rt_wrap,
+    gen_op_qty_prep, gen_op_uno_prep, gen_op_una_prep, gen_op_rt_prep,
+    gen_op_qty_wrap, gen_op_uno_wrap, gen_op_una_wrap, gen_op_rt_wrap,
+    ot_el_qty_prep, ot_el_uno_prep, ot_el_una_prep, ot_el_rt_prep,
+    ot_el_qty_wrap, ot_el_uno_wrap, ot_el_una_wrap, ot_el_rt_wrap,
+    // old
+    gaffer_qty, gaffer_uno, gaffer_una, gaffer_rt,
     best_boy_qty, best_boy_uno, best_boy_una, best_boy_rt,
     electrician_qty, electrician_uno, electrician_una, electrician_rt,
     dailies_elec_qty, dailies_elec_uno, dailies_elec_una, dailies_elec_rt,
@@ -3142,23 +3216,66 @@ function BudgetEdit() {
     fringes_taxes_electric,} = postDataElectric;
 
   // Totals
-  // gaffer Total postData 
+
+  // gaffer
+  // gaffer shoot Total postData 
   const [gafferTotal, setGafferTotal] = useState(0);
+  // gaffer prep Total postData 
+  const [gafprepTotal, setGafprepTotal] = useState(0);
+  // gaffer wrap Total postData 
+  const [gafwrapTotal, setGafwrapTotal] = useState(0);
+  // gaffer all Total postData 
+  const [gafallTotal, setGafallTotal] = useState(0);
 
-  // best boy Total postData 
+  // best boy
+  // best boy shoot Total postData 
   const [bestboyTotal, setBestboyTotal] = useState(0);
+  // best boy prep Total postData 
+  const [bboyprepTotal, setBboyprepTotal] = useState(0);
+  // best boy wrap Total postData 
+  const [bboywrapTotal, setBboywrapTotal] = useState(0);
+  // best boy all Total postData 
+  const [bboyallTotal, setBboyallTotal] = useState(0);
 
-  // electrician Total postData 
+  // electrician
+  // electrician shoot Total postData 
   const [electricianTotal, setElectricianTotal] = useState(0);
+  // electrician prep Total postData 
+  const [elecprepTotal, setElecprepTotal] = useState(0);
+  // electrician wrap Total postData 
+  const [elecwrapTotal, setElecwrapTotal] = useState(0);
+  // electrician all Total postData 
+  const [elecallTotal, setElecallTotal] = useState(0);
 
-  // dailies electric Total postData 
+  // dailies electric
+  // dailies electric shoot Total postData 
   const [dailieselecTotal, setDailieselecTotal] = useState(0);
+  // dailies electric prep Total postData 
+  const [daelecprepTotal, setDaelecprepTotal] = useState(0);
+  // dailies electric wrap Total postData 
+  const [daelecwrapTotal, setDaelecwrapTotal] = useState(0);
+  // dailies electric all Total postData 
+  const [daelecallTotal, setDaelecallTotal] = useState(0);
 
-  // generator operator Total postData 
+  // generator operator
+  // generator operator shoot Total postData 
   const [generatoropTotal, setGeneratoropTotal] = useState(0);
+  // generator operator prep Total postData 
+  const [genopprepTotal, setGenopprepTotal] = useState(0);
+  // generator operator wrap Total postData 
+  const [genopwrapTotal, setGenopwrapTotal] = useState(0);
+  // generator operator all Total postData 
+  const [genopallTotal, setGenopallTotal] = useState(0);
 
-  // other electric Total postData 
+  // other electric
+  // other electric shoot Total postData 
   const [otherelectricTotal, setOtherelectricTotal] = useState(0);
+  // other electric prep Total postData 
+  const [otelecprepTotal, setOtelecprepTotal] = useState(0);
+  // other electric wrap Total postData 
+  const [otelecwrapTotal, setOtelecwrapTotal] = useState(0);
+  // other electric all Total postData 
+  const [otelecallTotal, setOtelecallTotal] = useState(0);
 
   // Electric Labour Total postData 
   const [electriclabourTotal, setElectriclabourTotal] = useState(0);
@@ -5433,78 +5550,40 @@ function BudgetEdit() {
             craft_services_rt_wrap,
             // old
             fringes_taxes_production,
-            production_manager_quantity,
-            production_manager_units_number,
-            production_manager_units_name,
-            production_manager_rate,
-            production_supervisor_quantity,
-            production_supervisor_units_number,
-            production_supervisor_units_name,
-            production_supervisor_rate,
-            production_coordinator_quantity,
-            production_coordinator_units_number,
-            production_coordinator_units_name,
-            production_coordinator_rate,
-            unit_manager_quantity,
-            unit_manager_units_number,
-            unit_manager_units_name,
-            unit_manager_rate,
-            location_manager_quantity,
-            location_manager_units_number,
-            location_manager_units_name,
-            location_manager_rate,
-            location_manager_assistant_quantity,
-            location_manager_assistant_units_number,
-            location_manager_assistant_units_name,
-            location_manager_assistant_rate,
-            production_assistants_quantity,
-            production_assistants_units_number,
-            production_assistants_units_name,
-            production_assistants_rate,
-            production_secretary_quantity,
-            production_secretary_units_number,
-            production_secretary_units_name,
-            production_secretary_rate,
-            production_accountant_quantity,
-            production_accountant_units_number,
-            production_accountant_units_name,
-            production_accountant_rate,
-            production_accountant_assistant_quantity,
-            production_accountant_assistant_units_number,
-            production_accountant_assistant_units_name,
-            production_accountant_assistant_rate,
-            scriptsupervisor_continuity_quantity,
-            scriptsupervisor_continuity_units_number,
-            scriptsupervisor_continuity_units_name,
-            scriptsupervisor_continuity_rate,
-            payroll_quantity,
-            payroll_units_number,
-            payroll_units_name,
-            payroll_rate,
-            other_production_quantity,
-            other_production_units_number,
-            other_production_units_name,
-            other_production_rate,
-            directors_assistant_quantity,
-            directors_assistant_units_number,
-            directors_assistant_units_name,
-            directors_assistant_rate,
-            assistant_director_1st_quantity,
-            assistant_director_1st_units_number,
-            assistant_director_1st_units_name,
-            assistant_director_1st_rate,
-            assistant_director_2nd_quantity,
-            assistant_director_2nd_units_number,
-            assistant_director_2nd_units_name,
-            assistant_director_2nd_rate,
-            assistant_director_3rd_quantity,
-            assistant_director_3rd_units_number,
-            assistant_director_3rd_units_name,
-            assistant_director_3rd_rate,
-            craft_services_quantity,
-            craft_services_units_number,
-            craft_services_units_name,
-            craft_services_rate});
+            production_manager_quantity, production_manager_units_number,
+            production_manager_rate, production_supervisor_quantity,
+            production_supervisor_units_number, production_supervisor_units_name,
+            production_supervisor_rate, production_coordinator_quantity,
+            production_coordinator_units_number, production_coordinator_units_name,
+            production_coordinator_rate, unit_manager_quantity,
+            unit_manager_units_number, unit_manager_units_name,
+            unit_manager_rate, location_manager_quantity,
+            location_manager_units_number, location_manager_units_name,
+            location_manager_rate, location_manager_assistant_quantity,
+            location_manager_assistant_units_number, location_manager_assistant_units_name,
+            location_manager_assistant_rate, production_assistants_quantity,
+            production_assistants_units_number, production_assistants_units_name,
+            production_assistants_rate, production_secretary_quantity,
+            production_secretary_units_number, production_secretary_units_name,
+            production_secretary_rate, production_accountant_quantity,
+            production_accountant_units_number, production_accountant_units_name,
+            production_accountant_rate, production_accountant_assistant_quantity,
+            production_accountant_assistant_units_number, production_accountant_assistant_units_name,
+            production_accountant_assistant_rate, scriptsupervisor_continuity_quantity,
+            scriptsupervisor_continuity_units_number, scriptsupervisor_continuity_units_name,
+            scriptsupervisor_continuity_rate, payroll_quantity, payroll_units_number,
+            payroll_units_name, payroll_rate, other_production_quantity,
+            other_production_units_number, other_production_units_name,
+            other_production_rate, directors_assistant_quantity,
+            directors_assistant_units_number, directors_assistant_units_name,
+            directors_assistant_rate, assistant_director_1st_quantity,
+            assistant_director_1st_units_number, assistant_director_1st_units_name,
+            assistant_director_1st_rate, assistant_director_2nd_quantity,
+            assistant_director_2nd_units_number, assistant_director_2nd_units_name,
+            assistant_director_2nd_rate, assistant_director_3rd_quantity,
+            assistant_director_3rd_units_number, assistant_director_3rd_units_name, assistant_director_3rd_rate,
+            craft_services_quantity, craft_services_units_number,
+            craft_services_units_name, craft_services_rate});
           setProductionstaffTotal(productionstaff_total);
         // design
         const {production_designer_quantity, production_designer_units_number,
@@ -6080,7 +6159,22 @@ function BudgetEdit() {
           other_cam_qty, other_cam_uno, other_cam_una, other_cam_rt,});
         setCameralabourTotal(cameralabour_total);
         // electric
-        const {fringes_taxes_electric,
+        const {days6th7th_unit_ele,days6th7th_ele,
+          overtime_unit_ele, overtime_ele, holidays_unit_ele, 
+          holidays_ele, box_rent_unit_ele, box_rent_ele, other_solo_ele,
+          gaf_qty_prep, gaf_uno_prep, gaf_una_prep, gaf_rt_prep, 
+          gaf_qty_wrap, gaf_uno_wrap, gaf_una_wrap, gaf_rt_wrap,
+          b_boy_qty_prep, b_boy_uno_prep, b_boy_una_prep, b_boy_rt_prep,
+          b_boy_qty_wrap, b_boy_uno_wrap, b_boy_una_wrap, b_boy_rt_wrap,
+          elec_qty_prep, elec_uno_prep, elec_una_prep, elec_rt_prep,
+          elec_qty_wrap, elec_uno_wrap, elec_una_wrap, elec_rt_wrap,
+          d_elec_qty_prep, d_elec_uno_prep, d_elec_una_prep, d_elec_rt_prep,
+          d_elec_qty_wrap, d_elec_uno_wrap, d_elec_una_wrap, d_elec_rt_wrap,
+          gen_op_qty_prep, gen_op_uno_prep, gen_op_una_prep, gen_op_rt_prep,
+          gen_op_qty_wrap, gen_op_uno_wrap, gen_op_una_wrap, gen_op_rt_wrap,
+          ot_el_qty_prep, ot_el_uno_prep, ot_el_una_prep, ot_el_rt_prep,
+          ot_el_qty_wrap, ot_el_uno_wrap, ot_el_una_wrap, ot_el_rt_wrap,
+          fringes_taxes_electric,
           gaffer_qty, gaffer_uno, gaffer_una, gaffer_rt,
           best_boy_qty, best_boy_uno, best_boy_una, best_boy_rt,
           electrician_qty, electrician_uno, electrician_una, electrician_rt,
@@ -6089,6 +6183,21 @@ function BudgetEdit() {
           other_elec_qty, other_elec_uno, other_elec_una, other_elec_rt,
           electriclabour_total,} = data.results[0];
         setPostDataElectric({fringes_taxes_electric,
+          days6th7th_unit_ele,days6th7th_ele,
+          overtime_unit_ele, overtime_ele, holidays_unit_ele, 
+          holidays_ele, box_rent_unit_ele, box_rent_ele, other_solo_ele,
+          gaf_qty_prep, gaf_uno_prep, gaf_una_prep, gaf_rt_prep, 
+          gaf_qty_wrap, gaf_uno_wrap, gaf_una_wrap, gaf_rt_wrap,
+          b_boy_qty_prep, b_boy_uno_prep, b_boy_una_prep, b_boy_rt_prep,
+          b_boy_qty_wrap, b_boy_uno_wrap, b_boy_una_wrap, b_boy_rt_wrap,
+          elec_qty_prep, elec_uno_prep, elec_una_prep, elec_rt_prep,
+          elec_qty_wrap, elec_uno_wrap, elec_una_wrap, elec_rt_wrap,
+          d_elec_qty_prep, d_elec_uno_prep, d_elec_una_prep, d_elec_rt_prep,
+          d_elec_qty_wrap, d_elec_uno_wrap, d_elec_una_wrap, d_elec_rt_wrap,
+          gen_op_qty_prep, gen_op_uno_prep, gen_op_una_prep, gen_op_rt_prep,
+          gen_op_qty_wrap, gen_op_uno_wrap, gen_op_una_wrap, gen_op_rt_wrap,
+          ot_el_qty_prep, ot_el_uno_prep, ot_el_una_prep, ot_el_rt_prep,
+          ot_el_qty_wrap, ot_el_uno_wrap, ot_el_una_wrap, ot_el_rt_wrap,
           gaffer_qty, gaffer_uno, gaffer_una, gaffer_rt,
           best_boy_qty, best_boy_uno, best_boy_una, best_boy_rt,
           electrician_qty, electrician_uno, electrician_una, electrician_rt,
@@ -8598,54 +8707,81 @@ function BudgetEdit() {
     formData.append("othcamprep_total", othcamprepTotal);
     formData.append("othcamwrap_total", othcamwrapTotal);
     formData.append("othcamall_total", othcamallTotal);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
-    // formData.append("staaaaars", staaaaars);
+    formData.append("days6th7th_unit_ele", days6th7th_unit_ele);
+    formData.append("days6th7th_ele", days6th7th_ele);
+    formData.append("overtime_unit_ele", overtime_unit_ele);
+    formData.append("overtime_ele", overtime_ele);
+    formData.append("holidays_unit_ele", holidays_unit_ele);
+    formData.append("holidays_ele", holidays_ele);
+    formData.append("box_rent_unit_ele", box_rent_unit_ele);
+    formData.append("box_rent_ele", box_rent_ele);
+    formData.append("other_solo_ele", other_solo_ele);
+    formData.append("gaf_qty_prep", gaf_qty_prep);
+    formData.append("gaf_uno_prep", gaf_uno_prep);
+    formData.append("gaf_una_prep", gaf_una_prep);
+    formData.append("gaf_rt_prep", gaf_rt_prep);
+    formData.append("gaf_qty_wrap", gaf_qty_wrap);
+    formData.append("gaf_uno_wrap", gaf_uno_wrap);
+    formData.append("gaf_una_wrap", gaf_una_wrap);
+    formData.append("gaf_rt_wrap", gaf_rt_wrap);
+    formData.append("b_boy_qty_prep", b_boy_qty_prep);
+    formData.append("b_boy_uno_prep", b_boy_uno_prep);
+    formData.append("b_boy_una_prep", b_boy_una_prep);
+    formData.append("b_boy_rt_prep", b_boy_rt_prep);
+    formData.append("b_boy_qty_wrap", b_boy_qty_wrap);
+    formData.append("b_boy_uno_wrap", b_boy_uno_wrap);
+    formData.append("b_boy_una_wrap", b_boy_una_wrap);
+    formData.append("b_boy_rt_wrap", b_boy_rt_wrap);
+    formData.append("elec_qty_prep", elec_qty_prep);
+    formData.append("elec_uno_prep", elec_uno_prep);
+    formData.append("elec_una_prep", elec_una_prep);
+    formData.append("elec_rt_prep", elec_rt_prep);
+    formData.append("elec_qty_wrap", elec_qty_wrap);
+    formData.append("elec_uno_wrap", elec_uno_wrap);
+    formData.append("elec_una_wrap", elec_una_wrap);
+    formData.append("elec_rt_wrap", elec_rt_wrap);
+    formData.append("d_elec_qty_prep", d_elec_qty_prep);
+    formData.append("d_elec_uno_prep", d_elec_uno_prep);
+    formData.append("d_elec_una_prep", d_elec_una_prep);
+    formData.append("d_elec_rt_prep", d_elec_rt_prep);
+    formData.append("d_elec_qty_wrap", d_elec_qty_wrap);
+    formData.append("d_elec_uno_wrap", d_elec_uno_wrap);
+    formData.append("d_elec_una_wrap", d_elec_una_wrap);
+    formData.append("d_elec_rt_wrap", d_elec_rt_wrap);
+    formData.append("gen_op_qty_prep", gen_op_qty_prep);
+    formData.append("gen_op_uno_prep", gen_op_uno_prep);
+    formData.append("gen_op_una_prep", gen_op_una_prep);
+    formData.append("gen_op_rt_prep", gen_op_rt_prep);
+    formData.append("gen_op_qty_wrap", gen_op_qty_wrap);
+    formData.append("gen_op_uno_wrap", gen_op_uno_wrap);
+    formData.append("gen_op_una_wrap", gen_op_una_wrap);
+    formData.append("gen_op_rt_wrap", gen_op_rt_wrap);
+    formData.append("ot_el_qty_prep", ot_el_qty_prep);
+    formData.append("ot_el_uno_prep", ot_el_uno_prep);
+    formData.append("ot_el_una_prep", ot_el_una_prep);
+    formData.append("ot_el_rt_prep", ot_el_rt_prep);
+    formData.append("ot_el_qty_wrap", ot_el_qty_wrap);
+    formData.append("ot_el_uno_wrap", ot_el_uno_wrap);
+    formData.append("ot_el_una_wrap", ot_el_una_wrap);
+    formData.append("ot_el_rt_wrap", ot_el_rt_wrap);
+    formData.append("gafprep_total", gafprepTotal);
+    formData.append("gafwrap_total", gafwrapTotal);
+    formData.append("gafall_total", gafallTotal);
+    formData.append("bboyprep_total", bboyprepTotal);
+    formData.append("bboywrap_total", bboywrapTotal);
+    formData.append("bboyall_total", bboyallTotal);
+    formData.append("elecprep_total", elecprepTotal);
+    formData.append("elecwrapTotal", elecwrapTotal);
+    formData.append("elecall_total", elecallTotal);
+    formData.append("daelecprep_total", daelecprepTotal);
+    formData.append("daelecwrap_total", daelecwrapTotal);
+    formData.append("daelecall_total", daelecallTotal);
+    formData.append("genopprep_total", genopprepTotal);
+    formData.append("genopwrap_total", genopwrapTotal);
+    formData.append("genopall_total", genopallTotal);
+    formData.append("otelecprep_total", otelecprepTotal);
+    formData.append("otelecwrap_total", otelecwrapTotal);
+    formData.append("otelecall_total", otelecallTotal);
     // formData.append("staaaaars", staaaaars);
     // formData.append("staaaaars", staaaaars);
     // formData.append("staaaaars", staaaaars);
@@ -10493,7 +10629,9 @@ function BudgetEdit() {
       setOtherelectricTotal={setOtherelectricTotal}
       electriclabourTotal={electriclabourTotal}
       setElectriclabourTotal={setElectriclabourTotal}
-      setShow={setShowElec}  /> 
+      setShow={setShowElec}  
+      
+      /> 
     ) }
     {/* grip */}
     {!showGrip ? (
