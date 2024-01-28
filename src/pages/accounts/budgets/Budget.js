@@ -684,7 +684,7 @@ const Budget = (props) => {
     dit_total, steadicam_total, campa_total, dronepilot_total,
     othercam_total, cameralabour_total, fringes_taxes_camera,
     // electric
-    // days6th7th_unit_ele,days6th7th_ele,
+    days6th7th_unit_ele, days6th7th_ele,
     // overtime_unit_ele, overtime_ele, holidays_unit_ele, 
     // holidays_ele, box_rent_unit_ele, box_rent_ele, other_solo_ele,
     // gaf_qty_prep, gaf_uno_prep, gaf_una_prep, gaf_rt_prep, 
@@ -9216,7 +9216,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>16.10</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>DOP</p>
+    <p className={`${styles.Underline}`}>DOP {days6th7th_unit_ele} {days6th7th_ele} </p>
     </Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>{dop_qty || 0}</p>

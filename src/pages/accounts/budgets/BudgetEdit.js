@@ -8703,7 +8703,7 @@ function BudgetEdit() {
     formData.append("dronpiprep_total", dronpiprepTotal);
     formData.append("dronpiwrap_total", dronpiwrapTotal);
     formData.append("dronpiall_total", dronpiallTotal);
-    formData.append("othcamprep_total", othcamprepTotal);
+    formData.append("othcamprepTotal", othcamprepTotal);
     formData.append("othcamwrap_total", othcamwrapTotal);
     formData.append("othcamall_total", othcamallTotal);
     formData.append("days6th7th_unit_ele", days6th7th_unit_ele);
