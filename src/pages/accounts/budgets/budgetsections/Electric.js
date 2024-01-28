@@ -17,7 +17,26 @@ const Electric = (props) => {
         dailieselecTotal, setDailieselecTotal,
         generatoropTotal, setGeneratoropTotal,
         otherelectricTotal, setOtherelectricTotal, setShow,
-        electriclabourTotal, setElectriclabourTotal,} = props;
+        electriclabourTotal, setElectriclabourTotal,
+        gafprepTotal, setGafprepTotal,
+        gafwrapTotal, setGafwrapTotal,
+        gafallTotal, setGafallTotal,
+        bboyprepTotal, setBboyprepTotal,
+        bboywrapTotal, setBboywrapTotal,
+        bboyallTotal, setBboyallTotal,
+        elecprepTotal, setElecprepTotal,
+        elecwrapTotal, setElecwrapTotal,
+        elecallTotal, setElecallTotal,
+        daelecprepTotal, setDaelecprepTotal,
+        daelecwrapTotal, setDaelecwrapTotal,
+        daelecallTotal, setDaelecallTotal,
+        genopprepTotal, setGenopprepTotal,
+        genopwrapTotal, setGenopwrapTotal,
+        genopallTotal, setGenopallTotal,
+        otelecprepTotal, setOtelecprepTotal, 
+        otelecwrapTotal, setOtelecwrapTotal,
+        otelecallTotal, setOtelecallTotal,
+    } = props;
     
     const {days6th7th_unit_ele,days6th7th_ele,
         overtime_unit_ele, overtime_ele, holidays_unit_ele, 
@@ -46,7 +65,7 @@ const Electric = (props) => {
     const handleChange = (event) => {
         setPostDataElectric({
         ...postDataElectric,
-        [event.target.name]: parseFloat(event.target.value || 0 ),
+        [event.target.name]: event.target.value.replace(/[^0-9.]/g, ''),
         });
     }; 
   
@@ -59,7 +78,9 @@ const Electric = (props) => {
     };
 
     // Calculate Functions
-    // function to calculate gaffer on change
+
+    // gaffer
+    // function to calculate gaffer shoot on change
     useEffect(() => {
         const addGaffer = () => {
         setGafferTotal(parseFloat(gaffer_qty || 0) * 
@@ -74,9 +95,61 @@ const Electric = (props) => {
         clearTimeout(timer);
         };
         // eslint-disable-next-line
-      }, [gaffer_qty, gaffer_uno, gaffer_rt]);
+    }, [gaffer_qty, gaffer_uno, gaffer_rt]);
 
-    // function to calculate best boy on change
+    // function to calculate gaffer prep on change
+    useEffect(() => {
+        const addGafprep = () => {
+        setGafprepTotal(parseFloat(gaf_qty_prep || 0) * 
+        parseFloat(gaf_uno_prep || 0) * 
+        parseFloat(gaf_rt_prep || 0))
+        }
+        const timer = setTimeout(() => {
+            addGafprep();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [gaf_qty_prep, gaf_uno_prep, gaf_rt_prep]);
+
+    // function to calculate gaffer wrap on change
+    useEffect(() => {
+        const addGafwrap = () => {
+        setGafwrapTotal(parseFloat(gaf_qty_wrap || 0) * 
+        parseFloat(gaf_uno_wrap || 0) * 
+        parseFloat(gaf_rt_wrap || 0))
+        }
+        const timer = setTimeout(() => {
+            addGafwrap();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [gaf_qty_wrap, gaf_uno_wrap, gaf_rt_wrap]);
+
+    // function to calculate gaffer all on change
+    useEffect(() => {
+        const addGafall = () => {
+        setGafallTotal(parseFloat(gafferTotal || 0) +
+        parseFloat(gafprepTotal || 0) +
+        parseFloat(gafwrapTotal || 0))
+        }
+        const timer = setTimeout(() => {
+            addGafall();
+        }, 1000);
+
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [gafferTotal, gafprepTotal, gafwrapTotal]);
+
+    // best boy 
+    // function to calculate best boy shoot on change
     useEffect(() => {
         const addBesboy = () => {
         setBestboyTotal(parseFloat(best_boy_qty || 0) * 
@@ -91,9 +164,61 @@ const Electric = (props) => {
         clearTimeout(timer);
         };
         // eslint-disable-next-line
-      }, [best_boy_qty, best_boy_uno, best_boy_rt]);
+    }, [best_boy_qty, best_boy_uno, best_boy_rt]);
 
-    // function to calculate electrician on change
+    // function to calculate best boy prep on change
+    useEffect(() => {
+        const addBesboyprep = () => {
+        setBboyprepTotal(parseFloat(b_boy_qty_prep || 0) * 
+        parseFloat(b_boy_uno_prep || 0) * 
+        parseFloat(b_boy_rt_prep || 0))
+        }
+        const timer = setTimeout(() => {
+            addBesboyprep();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [b_boy_qty_prep, b_boy_uno_prep, b_boy_rt_prep]);
+
+    // function to calculate best boy wrap on change
+    useEffect(() => {
+        const addBesboywrap = () => {
+        setBboywrapTotal(parseFloat(b_boy_qty_wrap || 0) * 
+        parseFloat(b_boy_uno_wrap || 0) * 
+        parseFloat(b_boy_rt_wrap || 0))
+        }
+        const timer = setTimeout(() => {
+            addBesboywrap();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [b_boy_qty_wrap, b_boy_uno_wrap, b_boy_rt_wrap]);
+
+    // function to calculate best boy all on change
+    useEffect(() => {
+        const addBesboyall = () => {
+        setBboyallTotal(parseFloat(bestboyTotal || 0) +
+        parseFloat(bboyprepTotal || 0) +
+        parseFloat(bboywrapTotal || 0))
+        }
+        const timer = setTimeout(() => {
+            addBesboyall();
+        }, 1000);
+
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [bestboyTotal, bboyprepTotal, bboywrapTotal]);
+
+    // electrician
+    // function to calculate electrician shoot on change
     useEffect(() => {
         const addElectr = () => {
         setElectricianTotal(parseFloat(electrician_qty || 0) * 
@@ -108,9 +233,61 @@ const Electric = (props) => {
         clearTimeout(timer);
         };
         // eslint-disable-next-line
-      }, [electrician_qty, electrician_uno, electrician_rt]);
+    }, [electrician_qty, electrician_uno, electrician_rt]);
 
-    // function to calculate dailies on change
+    // function to calculate electrician prep on change
+    useEffect(() => {
+        const addElectrprep = () => {
+        setElecprepTotal(parseFloat(elec_qty_prep || 0) * 
+        parseFloat(elec_uno_prep || 0) * 
+        parseFloat(elec_rt_prep || 0))
+        }
+        const timer = setTimeout(() => {
+            addElectrprep();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [elec_qty_prep, elec_uno_prep, elec_rt_prep]);
+
+    // function to calculate electrician wrap on change
+    useEffect(() => {
+        const addElectrwrap = () => {
+        setElecwrapTotal(parseFloat(elec_qty_wrap || 0) * 
+        parseFloat(elec_uno_wrap || 0) * 
+        parseFloat(elec_rt_wrap || 0))
+        }
+        const timer = setTimeout(() => {
+            addElectrwrap();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [elec_qty_wrap, elec_uno_wrap, elec_rt_wrap]);
+
+    // function to calculate electrician all on change
+    useEffect(() => {
+        const addElectrall = () => {
+        setElecallTotal(parseFloat(electricianTotal || 0) +
+        parseFloat(elecprepTotal || 0) +
+        parseFloat(elecwrapTotal || 0))
+        }
+        const timer = setTimeout(() => {
+            addElectrall();
+        }, 1000);
+
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [electricianTotal, elecprepTotal, elecwrapTotal]);
+
+    // dailies
+    // function to calculate dailies shoot on change
     useEffect(() => {
         const addDaiele = () => {
         setDailieselecTotal(parseFloat(dailies_elec_qty || 0) * 
@@ -127,7 +304,59 @@ const Electric = (props) => {
         // eslint-disable-next-line
       }, [dailies_elec_qty, dailies_elec_uno, dailies_elec_rt]);
 
-    // function to calculate generator operator on change
+    // function to calculate dailies prep on change
+    useEffect(() => {
+        const addDaielprep = () => {
+        setDaelecprepTotal(parseFloat(d_elec_qty_prep || 0) * 
+        parseFloat(d_elec_uno_prep || 0) * 
+        parseFloat(d_elec_rt_prep || 0))
+        }
+        const timer = setTimeout(() => {
+            addDaielprep();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+      }, [d_elec_qty_prep, d_elec_uno_prep, d_elec_rt_prep]);
+
+    // function to calculate dailies wrap on change
+    useEffect(() => {
+        const addDaielwrap = () => {
+        setDaelecwrapTotal(parseFloat(d_elec_qty_wrap || 0) * 
+        parseFloat(d_elec_uno_wrap || 0) * 
+        parseFloat(d_elec_rt_wrap || 0))
+        }
+        const timer = setTimeout(() => {
+            addDaielwrap();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [d_elec_qty_wrap, d_elec_uno_wrap, d_elec_rt_wrap]);
+
+    // function to calculate dailies all on change
+    useEffect(() => {
+        const addDaielall = () => {
+        setDaelecallTotal(parseFloat(dailieselecTotal || 0) +
+        parseFloat(daelecprepTotal || 0) +
+        parseFloat(daelecwrapTotal || 0))
+        }
+        const timer = setTimeout(() => {
+            addDaielall();
+        }, 1000);
+
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [dailieselecTotal, daelecprepTotal, daelecwrapTotal]);
+
+    // generator operator
+    // function to calculate generator operator shoot on change
     useEffect(() => {
         const addGerope = () => {
         setGeneratoropTotal(parseFloat(generator_op_qty || 0) * 
@@ -142,9 +371,61 @@ const Electric = (props) => {
         clearTimeout(timer);
         };
         // eslint-disable-next-line
-      }, [generator_op_qty, generator_op_uno, generator_op_rt]);
+    }, [generator_op_qty, generator_op_uno, generator_op_rt]);
 
-    // function to calculate other elec on change
+    // function to calculate generator operator prep on change
+    useEffect(() => {
+        const addGeropprep = () => {
+        setGenopprepTotal(parseFloat(gen_op_qty_prep || 0) * 
+        parseFloat(gen_op_uno_prep || 0) * 
+        parseFloat(gen_op_rt_prep || 0))
+        }
+        const timer = setTimeout(() => {
+            addGeropprep();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [gen_op_qty_prep, gen_op_uno_prep, gen_op_rt_prep]);
+
+    // function to calculate generator operator wrap on change
+    useEffect(() => {
+        const addGeropwrap = () => {
+        setGenopwrapTotal(parseFloat(gen_op_qty_wrap || 0) * 
+        parseFloat(gen_op_uno_wrap || 0) * 
+        parseFloat(gen_op_rt_wrap || 0))
+        }
+        const timer = setTimeout(() => {
+            addGeropwrap();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [gen_op_qty_wrap, gen_op_uno_wrap, gen_op_rt_wrap]);
+
+    // function to calculate generator operator all on change
+    useEffect(() => {
+        const addGeropall = () => {
+        setGenopallTotal(parseFloat(generatoropTotal || 0) +
+        parseFloat(genopprepTotal || 0) +
+        parseFloat(genopwrapTotal || 0))
+        }
+        const timer = setTimeout(() => {
+            addGeropall();
+        }, 1000);
+
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [generatoropTotal, genopprepTotal, genopwrapTotal]);
+
+    // other elec
+    // function to calculate other elec shoot on change
     useEffect(() => {
         const addOthele = () => {
         setOtherelectricTotal(parseFloat(other_elec_qty || 0) * 
@@ -159,19 +440,75 @@ const Electric = (props) => {
         clearTimeout(timer);
         };
         // eslint-disable-next-line
-      }, [other_elec_qty, other_elec_uno, other_elec_rt]);
+    }, [other_elec_qty, other_elec_uno, other_elec_rt]);
+
+    // function to calculate other elec prep on change
+    useEffect(() => {
+        const addOthelprep = () => {
+        setOtelecprepTotal(parseFloat(ot_el_qty_prep || 0) * 
+        parseFloat(ot_el_uno_prep || 0) * 
+        parseFloat(ot_el_rt_prep || 0))
+        }
+        const timer = setTimeout(() => {
+            addOthelprep();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [ot_el_qty_prep, ot_el_uno_prep, ot_el_rt_prep]);
+
+    // function to calculate other elec wrap on change
+    useEffect(() => {
+        const addOthelwrap = () => {
+        setOtelecwrapTotal(parseFloat(ot_el_qty_wrap || 0) * 
+        parseFloat(ot_el_uno_wrap || 0) * 
+        parseFloat(ot_el_rt_wrap || 0))
+        }
+        const timer = setTimeout(() => {
+            addOthelwrap();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [ot_el_qty_wrap, ot_el_uno_wrap, ot_el_rt_wrap]);
+
+    // function to calculate other elec all on change
+    useEffect(() => {
+        const addOthelall = () => {
+        setOtelecallTotal(parseFloat(otherelectricTotal || 0) +
+        parseFloat(otelecprepTotal || 0) +
+        parseFloat(otelecwrapTotal || 0))
+        }
+        const timer = setTimeout(() => {
+            addOthelall();
+        }, 1000);
+
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [otherelectricTotal, otelecprepTotal, otelecwrapTotal]);
 
     // function to add all Electric Labour on change
     useEffect(() => {
         const AddEleLab = () => {
         setElectriclabourTotal(
-        parseFloat(gafferTotal || 0) +
-        parseFloat(bestboyTotal || 0) +
-        parseFloat(electricianTotal || 0) +
-        parseFloat(dailieselecTotal || 0) +
-        parseFloat(generatoropTotal || 0) +
-        parseFloat(fringes_taxes_electric || 0) +
-        parseFloat(otherelectricTotal || 0) 
+        parseFloat(gafallTotal || 0) +
+        parseFloat(bboyallTotal || 0) +
+        parseFloat(elecallTotal || 0) +
+        parseFloat(daelecallTotal || 0) +
+        parseFloat(genopallTotal || 0) +
+        parseFloat(otelecallTotal || 0) +
+        parseFloat(days6th7th_ele || 0) +
+        parseFloat(overtime_ele || 0) +
+        parseFloat(holidays_ele || 0) +
+        parseFloat(box_rent_ele || 0) +
+        parseFloat(other_solo_ele || 0) +
+        parseFloat(fringes_taxes_electric || 0)
         )
         }
         const timer = setTimeout(() => {
@@ -182,10 +519,11 @@ const Electric = (props) => {
         clearTimeout(timer);
         };
         // eslint-disable-next-line
-        }, [gafferTotal, bestboyTotal, electricianTotal,
-            dailieselecTotal, generatoropTotal, otherelectricTotal,
-            fringes_taxes_electric,]);
-
+        }, [gafallTotal, bboyallTotal, elecallTotal,
+            genopallTotal, otelecallTotal, daelecallTotal,
+            days6th7th_ele, overtime_ele, holidays_ele, 
+            box_rent_ele, other_solo_ele, fringes_taxes_electric,
+    ]);
 
   return (
     <div className="mt-5">

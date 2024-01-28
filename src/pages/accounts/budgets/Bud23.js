@@ -87,16 +87,6 @@
   // electrician all Total postData 
   const [elecallTotal, setElecallTotal] = useState(0);
 
-  // dailies electric
-  // dailies electric shoot Total postData 
-  const [dailieselecTotal, setDailieselecTotal] = useState(0);
-  // dailies electric prep Total postData 
-  const [daelecprepTotal, setDaelecprepTotal] = useState(0);
-  // dailies electric wrap Total postData 
-  const [daelecwrapTotal, setDaelecwrapTotal] = useState(0);
-  // dailies electric all Total postData 
-  const [daelecallTotal, setDaelecallTotal] = useState(0);
-
   // generator operator
   // generator operator shoot Total postData 
   const [generatoropTotal, setGeneratoropTotal] = useState(0);
@@ -116,6 +106,16 @@
   const [otelecwrapTotal, setOtelecwrapTotal] = useState(0);
   // other electric all Total postData 
   const [otelecallTotal, setOtelecallTotal] = useState(0);
+
+  // dailies electric
+  // dailies electric shoot Total postData 
+  const [dailieselecTotal, setDailieselecTotal] = useState(0);
+  // dailies electric prep Total postData 
+  const [daelecprepTotal, setDaelecprepTotal] = useState(0);
+  // dailies electric wrap Total postData 
+  const [daelecwrapTotal, setDaelecwrapTotal] = useState(0);
+  // dailies electric all Total postData 
+  const [daelecallTotal, setDaelecallTotal] = useState(0);
 
   // Electric Labour Total postData 
   const [electriclabourTotal, setElectriclabourTotal] = useState(0);

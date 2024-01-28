@@ -8022,7 +8022,6 @@ function BudgetEdit() {
     formData.append("con_coor_una_prep", con_coor_una_prep);
     formData.append("con_coor_rt_prep", con_coor_rt_prep);
     formData.append("con_coor_qty_wrap", con_coor_qty_wrap);
-    formData.append("con_coor_una_wrap", con_coor_uno_wrap);
     formData.append("con_coor_uno_wrap", con_coor_uno_wrap);
     formData.append("con_coor_una_wrap", con_coor_una_wrap);
     formData.append("con_coor_rt_wrap", con_coor_rt_wrap);
@@ -10630,7 +10629,42 @@ function BudgetEdit() {
       electriclabourTotal={electriclabourTotal}
       setElectriclabourTotal={setElectriclabourTotal}
       setShow={setShowElec}  
-      
+      gafprepTotal={gafprepTotal}
+      setGafprepTotal={setGafprepTotal}
+      gafwrapTotal={gafwrapTotal}
+      setGafwrapTotal={setGafwrapTotal}
+      gafallTotal={gafallTotal}
+      setGafallTotal={setGafallTotal}
+      bboyprepTotal={bboyprepTotal}
+      setBboyprepTotal={setBboyprepTotal}
+      bboywrapTotal={bboywrapTotal}
+      setBboywrapTotal={setBboywrapTotal}
+      bboyallTotal={bboyallTotal}
+      setBboyallTotal={setBboyallTotal}
+      elecprepTotal={elecprepTotal}
+      setElecprepTotal={setElecprepTotal}
+      elecwrapTotal={elecwrapTotal}
+      setElecwrapTotal={setElecwrapTotal}
+      elecallTotal={elecallTotal}
+      setElecallTotal={setElecallTotal}
+      daelecprepTotal={daelecprepTotal}
+      setDaelecprepTotal={setDaelecprepTotal}
+      daelecwrapTotal={daelecwrapTotal}
+      setDaelecwrapTotal={setDaelecwrapTotal}
+      daelecallTotal={daelecallTotal}
+      setDaelecallTotal={setDaelecallTotal}
+      genopprepTotal={genopprepTotal}
+      setGenopprepTotal={setGenopprepTotal}
+      genopwrapTotal={genopwrapTotal}
+      setGenopwrapTotal={setGenopwrapTotal}
+      genopallTotal={genopallTotal}
+      setGenopallTotal={setGenopallTotal}
+      otelecprepTotal={otelecprepTotal}
+      setOtelecprepTotal={setOtelecprepTotal}
+      otelecwrapTotal={otelecwrapTotal}
+      setOtelecwrapTotal={setOtelecwrapTotal}
+      otelecallTotal={otelecallTotal}
+      setOtelecallTotal={setOtelecallTotal}
       /> 
     ) }
     {/* grip */}
