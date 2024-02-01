@@ -348,28 +348,69 @@ function BudgetCreate() {
     </div>
   );
 
-  // Submit
+  // Submit 1
   const handleSubmit = async (event) => {
+  event.preventDefault();
+  const formData = new FormData();
+  formData.append("project", id );
+  formData.append("budget_number", "1");
+  // prepared by
+  formData.append("dated", dated);
+  formData.append("prelimfin", prelimfin);
+  formData.append("preparedby", preparedby);
+  formData.append("approvedby", approvedby);
+  formData.append("approvedbyco", approvedbyco);
+  // details
+  formData.append("title", title);
+  formData.append("series", series);
+  formData.append("prodco", prodco);
+  formData.append("writer", writer);
+  formData.append("format", format);
+  formData.append("location", location);
+
+  try {
+    const { data } = await axiosReq.post("/budgets1/", formData);
+    console.log(`submit create Budgets 1 ${data}`);
+    handleSubmit2(event);
+  } catch (err) {
+    console.log(err);
+    if (err.response?.status !== 401) {
+      setErrors(err.response?.data);
+    }
+  }
+  };
+
+  // Submit 2
+  const handleSubmit2 = async (event) => {
     event.preventDefault();
     const formData = new FormData();
     formData.append("project", id );
-    // prepared by
-    formData.append("dated", dated);
-    formData.append("prelimfin", prelimfin);
-    formData.append("preparedby", preparedby);
-    formData.append("approvedby", approvedby);
-    formData.append("approvedbyco", approvedbyco);
-    // details
     formData.append("title", title);
-    formData.append("series", series);
-    formData.append("prodco", prodco);
-    formData.append("writer", writer);
-    formData.append("format", format);
-    formData.append("location", location);
+    formData.append("budget_number", "2");
 
     try {
-      const { data } = await axiosReq.post("/budgets/", formData);
-      console.log(`submit create ${data}`);
+      const { data } = await axiosReq.post("/budgets2/", formData);
+      console.log(`submit create Budgets 2 ${data}`);
+      handleSubmit3(event);
+    } catch (err) {
+      console.log(err);
+      if (err.response?.status !== 401) {
+        setErrors(err.response?.data);
+      }
+    }
+  };
+
+  // Submit 3
+  const handleSubmit3 = async (event) => {
+    event.preventDefault();
+    const formData = new FormData();
+    formData.append("project", id );
+    formData.append("title", title);
+    formData.append("budget_number", "3");
+
+    try {
+      const { data } = await axiosReq.post("/budgets3/", formData);
+      console.log(`submit create Budget 3 ${data}`);
       history.goBack();
     } catch (err) {
       console.log(err);

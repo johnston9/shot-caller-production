@@ -9,31 +9,36 @@
 //    import Button from "react-bootstrap/Button";
 
 const BudgetTop = (props) => {
-const {setShowTop, budget} = props;
+const {setShowTop, budget1, budget2, budget3} = props;
 
 const {above_the_line_total, below_the_lineB_total,
-  below_the_lineB_costs_total, b_labour_and_costs_total,
-  post_productionC_total, belowB_andC_total, grand_total,
-  above_belowABC_total, otherD_total, above_belowABCandD_total,
-  dated, prelimfin, preparedby, approvedby, approvedbyco,
-  title, series, prodco, format, location,
-  research, prep, shoot, wrap, post, length_total,
-  rights_total, development_total, scenario_total,
-  producers_dirs_total, stars_music_total, cast_total,
-  productionstaff_total, designlabour_total, constructionlabour_total,
-  dressinglabour_total, propertylabour_total, wranglerlabour_total,
+     below_the_lineB_costs_total, b_labour_and_costs_total,
+     post_productionC_total, belowB_andC_total, grand_total,
+     above_belowABC_total, otherD_total, above_belowABCandD_total,
+     dated, prelimfin, preparedby, approvedby, approvedbyco,
+     title, series, prodco, format, location,
+     research, prep, shoot, wrap, post, length_total,
+     rights_total, development_total, scenario_total,
+     producers_dirs_total, stars_music_total, cast_total,
+     productionstaff_total, designlabour_total, constructionlabour_total,
+     dressinglabour_total, propertylabour_total,
+   } = budget1;
+
+const { wranglerlabour_total,
   fxlabour_total, wardrobelabour_total, makeuplabour_total,
   cameralabour_total, electriclabour_total, griplabour_total,
   soundlabour_total, transportlabour_total, tvspecificlabour_total,
-  proOff_total, studio_total, site_total, unit_total, traliv_total,
-  transport_total, constructionmat_total, artSup_total, dressing_total,
-  props_total, fx_total, animals_total, wardrobe_total, makeup_total,
-  camera_total, electric_total, grip_total, sound_total, secondU_total,
-  stockLab_total, postStaffFac_total, editing_total, postSound_total,
-  postLab_total, postTitles_total, postVersion_total, postVfx_total,
-  pub_total, insur_total, genEx_total, indirCo_total,
-  contingency, completion_bond,
-} = budget;
+} = budget2;
+
+   const {proOff_total, studio_total, site_total, unit_total, traliv_total,
+     transport_total, constructionmat_total, artSup_total, dressing_total,
+     props_total, fx_total, animals_total, wardrobe_total, makeup_total,
+     camera_total, electric_total, grip_total, sound_total, secondU_total,
+     stockLab_total, postStaffFac_total, editing_total, postSound_total,
+     postLab_total, postTitles_total, postVersion_total, postVfx_total,
+     pub_total, insur_total, genEx_total, indirCo_total,
+     contingency, completion_bond,
+   } = budget3;
 
   return (
     <div className='mx-5 px-5 mb-5'>

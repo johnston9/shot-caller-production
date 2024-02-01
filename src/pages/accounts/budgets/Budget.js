@@ -15,12 +15,15 @@ const Budget = (props) => {
   const [showInfo, setShowInfo] = useState(false);
 
   const {
-    budget1, projectId,
+    budget1, budget2, budget3, projectId,
   } = props;
 
-  const budget = budget1.results[0] || "" ;
+  const budget11 = budget1.results[0] || "" ;
+  const budget12 = budget2.results[0] || "" ;
+  const budget13 = budget3.results[0] || "" ;
 
   const {// totals
+    id, budget_number,
     above_the_line_total, below_the_lineB_total, 
     below_the_lineB_costs_total, b_labour_and_costs_total, 
     post_productionC_total, belowB_andC_total,
@@ -505,6 +508,13 @@ const Budget = (props) => {
     armorer_units_name, armorer_rate, armorer_total,
     other_property, propertymaster_total, assistpropertymaster_total,
     onsetpropsperson_total, propertybuyer_total, propertylabour_total,
+    } = budget11;
+
+  console.log(props);
+  console.log(budget11);
+
+  // budget2
+  const {
     // wrangling
     // days6th7th_unit_wran, days6th7th_wran,
     // overtime_unit_wran, overtime_wran, holidays_unit_wran, 
@@ -761,6 +771,13 @@ const Budget = (props) => {
     techsuper_total, techdirect_total, floorman_total, lightdirect_total,
     boardman_total, audio_total, vtroperator_total, stagehands_total,
     othertv_total, tvspecificlabour_total,
+    } = budget12;
+
+  console.log(props);
+  console.log(budget12);
+
+  // budget3
+  const {   
     // Production Office
     office_rentals, office_equipment, office_supplies,
     phones_net, courier_postage, office_other, proOff_total,
@@ -902,10 +919,10 @@ const Budget = (props) => {
     // Contingency/Bond
     contingency, completion_bond,
 
-    } = budget;
+    } = budget13;
 
   console.log(props);
-  console.log(budget);
+  console.log(budget13);
 
   const history = useHistory();
   const [showCover, setShowCover] = useState(false);
@@ -938,7 +955,7 @@ const Budget = (props) => {
             <Information  /> 
     ) }   
     {/* Add /Edit Budget */}
-    {budget ? (
+    {budget11 ? (
     <Row className='mt-0 mb-0'>
     <Col className="text-center">
     <Link to={`/budgets/edit/${projectId}`}>
@@ -985,14 +1002,18 @@ const Budget = (props) => {
     ) : (
       <Budgetcover 
       setShowCover={setShowCover}
-      budget={budget} /> 
+      budget={budget11} 
+      /> 
     ) }
     {!showTop ? (
       ""
     ) : (
       <BudgetTop 
       setShowTop={setShowTop}
-      budget={budget} /> 
+      budget1={budget11} 
+      budget2={budget12} 
+      budget3={budget13} 
+       /> 
     ) }
     {/* BUDGET ALL */}
     <div className={`${styles.WhiteBack}`}>
@@ -1002,6 +1023,12 @@ const Budget = (props) => {
     <h5 className={ `${styles.BoldBlack}`}>BUDGET DETAIL PAGE</h5>
     </Col>
     </Row>
+    <Row>
+        <Col>
+        <p>One</p>
+        <p>{id} - {budget_number} </p>
+        </Col>
+      </Row>
     </div>
     {/* DETAILS LENGTH */}
     <div className={ `my-0 py-0`}>
