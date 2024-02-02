@@ -3291,6 +3291,72 @@ function BudgetEdit() {
 
   // Grip Labour postData
   const [postDataGrip, setPostDataGrip] = useState({
+    days6th7th_unit_grip: "",
+    days6th7th_grip: 0,
+    overtime_unit_grip: "",
+    overtime_grip: 0,
+    holidays_unit_grip: "", 
+    holidays_grip: 0,
+    box_rent_unit_grip: "",
+    box_rent_grip: 0,
+    other_solo_grip: 0,
+    k_grip_qty_prep: 0,
+    k_grip_uno_prep: 0,
+    k_grip_una_prep: "",
+    k_grip_rt_prep: 0,
+    k_grip_qty_wrap: 0,
+    k_grip_uno_wrap: 0,
+    k_grip_una_wrap: "",
+    k_grip_rt_wrap: 0,
+    bb_grip_qty_prep: 0,
+    bb_grip_uno_prep: 0,
+    bb_grip_una_prep: "",
+    bb_grip_rt_prep: 0,
+    bb_grip_qty_wrap: 0,
+    bb_grip_uno_wrap: 0,
+    bb_grip_una_wrap: "",
+    bb_grip_rt_wrap: 0,
+    grips_qty_prep: 0,
+    grips_uno_prep: 0,
+    grips_una_prep: "",
+    grips_rt_prep: 0,
+    grips_qty_wrap: 0,
+    grips_uno_wrap: 0,
+    grips_una_wrap: "",
+    grips_rt_wrap: 0,
+    dol_grip_qty_prep: 0,
+    dol_grip_uno_prep: 0,
+    dol_grip_una_prep: "",
+    dol_grip_rt_prep: 0,
+    dol_grip_qty_wrap: 0,
+    dol_grip_uno_wrap: 0,
+    dol_grip_una_wrap: "",
+    dol_grip_rt_wrap: 0,
+    sw_grips_qty_prep: 0,
+    sw_grips_uno_prep: 0,
+    sw_grips_una_prep: "",
+    sw_grips_rt_prep: 0,
+    sw_grips_qty_wrap: 0,
+    sw_grips_uno_wrap: 0,
+    sw_grips_una_wrap: "",
+    sw_grips_rt_wrap: 0,
+    oth_grip_qty_prep: 0,
+    oth_grip_uno_prep: 0,
+    oth_grip_una_prep: "",
+    oth_grip_rt_prep: 0,
+    oth_grip_qty_wrap: 0,
+    oth_grip_uno_wrap: 0,
+    oth_grip_una_wrap: "",
+    oth_grip_rt_wrap: 0,
+    dail_grip_qty_prep: 0,
+    dail_grip_uno_prep: 0,
+    dail_grip_una_prep: "",
+    dail_grip_rt_prep: 0,
+    dail_grip_qty_wrap: 0,
+    dail_grip_uno_wrap: 0,
+    dail_grip_una_wrap: "",
+    dail_grip_rt_: 0,
+    // old _prep wrap
     fringes_taxes_grip: 0,
     key_grip_qty: 0,
     key_grip_uno: 0,
@@ -3304,10 +3370,6 @@ function BudgetEdit() {
     grips_uno: 0,
     grips_una: "",
     grips_rt: 0,
-    dailies_grip_qty: 0,
-    dailies_grip_uno: 0,
-    dailies_grip_una: "",
-    dailies_grip_rt: 0,
     dolly_crane_grip_qty: 0,
     dolly_crane_grip_uno: 0,
     dolly_crane_grip_una: "",
@@ -3320,9 +3382,31 @@ function BudgetEdit() {
     other_grip_labour_uno: 0,
     other_grip_labour_una: "",
     other_grip_labour_rt: 0,
+    dailies_grip_qty: 0,
+    dailies_grip_uno: 0,
+    dailies_grip_una: "",
+    dailies_grip_rt: 0,
   });
 
-  const {key_grip_qty, key_grip_uno, key_grip_una, key_grip_rt,
+  const {days6th7th_unit_grip, days6th7th_grip, overtime_unit_grip,
+    overtime_grip, holidays_unit_grip, 
+    holidays_grip, box_rent_unit_grip, box_rent_grip, other_solo_grip,
+    k_grip_qty_prep, k_grip_uno_prep, k_grip_una_prep, k_grip_rt_prep,
+    k_grip_qty_wrap, k_grip_uno_wrap, k_grip_una_wrap, k_grip_rt_wrap, 
+    bb_grip_qty_prep, bb_grip_uno_prep, bb_grip_una_prep, bb_grip_rt_prep,
+    bb_grip_qty_wrap, bb_grip_uno_wrap, bb_grip_una_wrap, bb_grip_rt_wrap,
+    grips_qty_prep, grips_uno_prep, grips_una_prep, grips_rt_prep,
+    grips_qty_wrap, grips_uno_wrap, grips_una_wrap, grips_rt_wrap,
+    dol_grip_qty_prep, dol_grip_uno_prep, dol_grip_una_prep, dol_grip_rt_prep,
+    dol_grip_qty_wrap, dol_grip_uno_wrap, dol_grip_una_wrap, dol_grip_rt_wrap,
+    sw_grips_qty_prep, sw_grips_uno_prep, sw_grips_una_prep, sw_grips_rt_prep,
+    sw_grips_qty_wrap, sw_grips_uno_wrap, sw_grips_una_wrap, sw_grips_rt_wrap,
+    oth_grip_qty_prep, oth_grip_uno_prep, oth_grip_una_prep, oth_grip_rt_prep,
+    oth_grip_qty_wrap, oth_grip_uno_wrap, oth_grip_una_wrap, oth_grip_rt_wrap,
+    dail_grip_qty_prep, dail_grip_uno_prep, dail_grip_una_prep, dail_grip_rt_prep,
+    dail_grip_qty_wrap, dail_grip_uno_wrap, dail_grip_una_wrap, dail_grip_rt_,
+    // old
+    key_grip_qty, key_grip_uno, key_grip_una, key_grip_rt,
     best_boy_grip_qty, best_boy_grip_uno, best_boy_grip_una, best_boy_grip_rt,
     grips_qty, grips_uno, grips_una, grips_rt,
     dailies_grip_qty, dailies_grip_uno, dailies_grip_una, dailies_grip_rt, 
@@ -3332,14 +3416,36 @@ function BudgetEdit() {
     fringes_taxes_grip,} = postDataGrip;
 
   // Totals
-  // key grip Total postData 
+
+  // key grip
+  // key grip shoot Total postData 
   const [keygripTotal, setKeygripTotal] = useState(0);
+  // key grip prep Total postData 
+  const [kgripprepTotal, setKgripprepTotal] = useState(0);
+  // key grip wrap Total postData 
+  const [kgripwrapTotal, setKgripwrapTotal] = useState(0);
+  // key grip all Total postData 
+  const [kgripallTotal, setKgripallTotal] = useState(0);
 
-  // best boy grip Total postData 
+  // best boy grip
+  // best boy grip shoot Total postData 
   const [bestboygripTotal, setBestboygripTotal] = useState(0);
+  // best boy grip prep Total postData 
+  const [bbgripprepTotal, setBbgripprepTotal] = useState(0);
+  // best boy grip wrap Total postData 
+  const [bbgripwrapTotal, setBbgripwrapTotal] = useState(0);
+  // best boy grip all Total postData 
+  const [bbgripallTotal, setBbgripallTotal] = useState(0);
 
-  // grips Total postData 
+  // grips
+  // grips shoot Total postData 
   const [gripsTotal, setGripsTotal] = useState(0);
+  // grips prep Total postData 
+  const [gripsprepTotal, setGripsprepTotal] = useState(0);
+  // grips wrap Total postData 
+  const [gripswrapTotal, setGripswrapTotal] = useState(0);
+  // grips all Total postData 
+  const [gripsallTotal, setGripsallTotal] = useState(0);
 
   // dailies grip Total postData 
   const [dailiesgripTotal, setDailiesgripTotal] = useState(0);
@@ -6236,6 +6342,23 @@ function BudgetEdit() {
           other_elec_qty, other_elec_uno, other_elec_una, other_elec_rt,})
         setElectriclabourTotal(electriclabour_total);
         const {fringes_taxes_grip,
+          days6th7th_unit_grip, days6th7th_grip, overtime_unit_grip,
+          overtime_grip, holidays_unit_grip, 
+          holidays_grip, box_rent_unit_grip, box_rent_grip, other_solo_grip,
+          k_grip_qty_prep, k_grip_uno_prep, k_grip_una_prep, k_grip_rt_prep,
+          k_grip_qty_wrap, k_grip_uno_wrap, k_grip_una_wrap, k_grip_rt_wrap, 
+          bb_grip_qty_prep, bb_grip_uno_prep, bb_grip_una_prep, bb_grip_rt_prep,
+          bb_grip_qty_wrap, bb_grip_uno_wrap, bb_grip_una_wrap, bb_grip_rt_wrap,
+          grips_qty_prep, grips_uno_prep, grips_una_prep, grips_rt_prep,
+          grips_qty_wrap, grips_uno_wrap, grips_una_wrap, grips_rt_wrap,
+          dol_grip_qty_prep, dol_grip_uno_prep, dol_grip_una_prep, dol_grip_rt_prep,
+          dol_grip_qty_wrap, dol_grip_uno_wrap, dol_grip_una_wrap, dol_grip_rt_wrap,
+          sw_grips_qty_prep, sw_grips_uno_prep, sw_grips_una_prep, sw_grips_rt_prep,
+          sw_grips_qty_wrap, sw_grips_uno_wrap, sw_grips_una_wrap, sw_grips_rt_wrap,
+          oth_grip_qty_prep, oth_grip_uno_prep, oth_grip_una_prep, oth_grip_rt_prep,
+          oth_grip_qty_wrap, oth_grip_uno_wrap, oth_grip_una_wrap, oth_grip_rt_wrap,
+          dail_grip_qty_prep, dail_grip_uno_prep, dail_grip_una_prep, dail_grip_rt_prep,
+          dail_grip_qty_wrap, dail_grip_uno_wrap, dail_grip_una_wrap, dail_grip_rt_,
           key_grip_qty, key_grip_uno, key_grip_una, key_grip_rt,
           best_boy_grip_qty, best_boy_grip_uno, best_boy_grip_una, best_boy_grip_rt,
           grips_qty, grips_uno, grips_una, grips_rt,
@@ -6245,6 +6368,23 @@ function BudgetEdit() {
           other_grip_labour_qty, other_grip_labour_uno, griplabour_total,
           other_grip_labour_una, other_grip_labour_rt,} = data.results[0];
         setPostDataGrip({fringes_taxes_grip,
+          days6th7th_unit_grip, days6th7th_grip, overtime_unit_grip,
+          overtime_grip, holidays_unit_grip, 
+          holidays_grip, box_rent_unit_grip, box_rent_grip, other_solo_grip,
+          k_grip_qty_prep, k_grip_uno_prep, k_grip_una_prep, k_grip_rt_prep,
+          k_grip_qty_wrap, k_grip_uno_wrap, k_grip_una_wrap, k_grip_rt_wrap, 
+          bb_grip_qty_prep, bb_grip_uno_prep, bb_grip_una_prep, bb_grip_rt_prep,
+          bb_grip_qty_wrap, bb_grip_uno_wrap, bb_grip_una_wrap, bb_grip_rt_wrap,
+          grips_qty_prep, grips_uno_prep, grips_una_prep, grips_rt_prep,
+          grips_qty_wrap, grips_uno_wrap, grips_una_wrap, grips_rt_wrap,
+          dol_grip_qty_prep, dol_grip_uno_prep, dol_grip_una_prep, dol_grip_rt_prep,
+          dol_grip_qty_wrap, dol_grip_uno_wrap, dol_grip_una_wrap, dol_grip_rt_wrap,
+          sw_grips_qty_prep, sw_grips_uno_prep, sw_grips_una_prep, sw_grips_rt_prep,
+          sw_grips_qty_wrap, sw_grips_uno_wrap, sw_grips_una_wrap, sw_grips_rt_wrap,
+          oth_grip_qty_prep, oth_grip_uno_prep, oth_grip_una_prep, oth_grip_rt_prep,
+          oth_grip_qty_wrap, oth_grip_uno_wrap, oth_grip_una_wrap, oth_grip_rt_wrap,
+          dail_grip_qty_prep, dail_grip_uno_prep, dail_grip_una_prep, dail_grip_rt_prep,
+          dail_grip_qty_wrap, dail_grip_uno_wrap, dail_grip_una_wrap, dail_grip_rt_,
           key_grip_qty, key_grip_uno, key_grip_una, key_grip_rt,
           best_boy_grip_qty, best_boy_grip_uno, best_boy_grip_una, best_boy_grip_rt,
           grips_qty, grips_uno, grips_una, grips_rt,

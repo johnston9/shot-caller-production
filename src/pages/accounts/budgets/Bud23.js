@@ -1,126 +1,68 @@
-
-  
-  days6th7th_unit_ele,
-  days6th7th_ele,
-  overtime_unit_ele,
-  overtime_ele,
-  holidays_unit_ele, 
-  holidays_ele,
-  box_rent_unit_ele,
-  box_rent_ele,
-  other_solo_ele,
-  gaf_qty_prep,
-  gaf_uno_prep,
-  gaf_una_prep,
-  gaf_rt_prep,
-  gaf_qty_wrap,
-  gaf_uno_wrap,
-  gaf_una_wrap,
-  gaf_rt_wrap,
-  b_boy_qty_prep,
-  b_boy_uno_prep,
-  b_boy_una_prep,
-  b_boy_rt_prep,
-  b_boy_qty_wrap,
-  b_boy_uno_wrap,
-  b_boy_una_wrap,
-  b_boy_rt_wrap,
-  elec_qty_prep,
-  elec_uno_prep,
-  elec_una_prep,
-  elec_rt_prep,
-  elec_qty_wrap,
-  elec_uno_wrap,
-  elec_una_wrap,
-  elec_rt_wrap,
-  d_elec_qty_prep,
-  d_elec_uno_prep,
-  d_elec_una_prep,
-  d_elec_rt_prep,
-  d_elec_qty_wrap,
-  d_elec_uno_wrap,
-  d_elec_una_wrap,
-  d_elec_rt_wrap,
-  gen_op_qty_prep,
-  gen_op_uno_prep,
-  gen_op_una_prep,
-  gen_op_rt_prep,
-  gen_op_qty_wrap,
-  gen_op_uno_wrap,
-  gen_op_una_wrap,
-  gen_op_rt_wrap,
-  ot_el_qty_prep,
-  ot_el_uno_prep,
-  ot_el_una_prep,
-  ot_el_rt_prep,
-  ot_el_qty_wrap,
-  ot_el_uno_wrap,
-  ot_el_una_wrap,
-  ot_el_rt_wrap,
-  // Totals
-
-  // gaffer
-  // gaffer shoot Total postData 
-  const [gafferTotal, setGafferTotal] = useState(0);
-  // gaffer prep Total postData 
-  const [gafprepTotal, setGafprepTotal] = useState(0);
-  // gaffer wrap Total postData 
-  const [gafwrapTotal, setGafwrapTotal] = useState(0);
-  // gaffer all Total postData 
-  const [gafallTotal, setGafallTotal] = useState(0);
-
-  // best boy
-  // best boy shoot Total postData 
-  const [bestboyTotal, setBestboyTotal] = useState(0);
-  // best boy prep Total postData 
-  const [bboyprepTotal, setBboyprepTotal] = useState(0);
-  // best boy wrap Total postData 
-  const [bboywrapTotal, setBboywrapTotal] = useState(0);
-  // best boy all Total postData 
-  const [bboyallTotal, setBboyallTotal] = useState(0);
-
-  // electrician
-  // electrician shoot Total postData 
-  const [electricianTotal, setElectricianTotal] = useState(0);
-  // electrician prep Total postData 
-  const [elecprepTotal, setElecprepTotal] = useState(0);
-  // electrician wrap Total postData 
-  const [elecwrapTotal, setElecwrapTotal] = useState(0);
-  // electrician all Total postData 
-  const [elecallTotal, setElecallTotal] = useState(0);
-
-  // generator operator
-  // generator operator shoot Total postData 
-  const [generatoropTotal, setGeneratoropTotal] = useState(0);
-  // generator operator prep Total postData 
-  const [genopprepTotal, setGenopprepTotal] = useState(0);
-  // generator operator wrap Total postData 
-  const [genopwrapTotal, setGenopwrapTotal] = useState(0);
-  // generator operator all Total postData 
-  const [genopallTotal, setGenopallTotal] = useState(0);
-
-  // other electric
-  // other electric shoot Total postData 
-  const [otherelectricTotal, setOtherelectricTotal] = useState(0);
-  // other electric prep Total postData 
-  const [otelecprepTotal, setOtelecprepTotal] = useState(0);
-  // other electric wrap Total postData 
-  const [otelecwrapTotal, setOtelecwrapTotal] = useState(0);
-  // other electric all Total postData 
-  const [otelecallTotal, setOtelecallTotal] = useState(0);
-
-  // dailies electric
-  // dailies electric shoot Total postData 
-  const [dailieselecTotal, setDailieselecTotal] = useState(0);
-  // dailies electric prep Total postData 
-  const [daelecprepTotal, setDaelecprepTotal] = useState(0);
-  // dailies electric wrap Total postData 
-  const [daelecwrapTotal, setDaelecwrapTotal] = useState(0);
-  // dailies electric all Total postData 
-  const [daelecallTotal, setDaelecallTotal] = useState(0);
-
-  // Electric Labour Total postData 
-  const [electriclabourTotal, setElectriclabourTotal] = useState(0);
+    days6th7th_unit_grip,
+    days6th7th_grip,
+    overtime_unit_grip,
+    overtime_grip,
+    holidays_unit_grip, 
+    holidays_grip,
+    box_rent_unit_grip,
+    box_rent_grip,
+    other_solo_grip,
+    k_grip_qty_prep,
+    k_grip_uno_prep,
+    k_grip_una_prep,
+    k_grip_rt_prep,
+    k_grip_qty_wrap,
+    k_grip_uno_wrap,
+    k_grip_una_wrap,
+    k_grip_rt_wrap,
+    bb_grip_qty_prep,
+    bb_grip_uno_prep,
+    bb_grip_una_prep,
+    bb_grip_rt_prep,
+    bb_grip_qty_wrap,
+    bb_grip_uno_wrap,
+    bb_grip_una_wrap,
+    bb_grip_rt_wrap,
+    grips_qty_prep,
+    grips_uno_prep,
+    grips_una_prep,
+    grips_rt_prep,
+    grips_qty_wrap,
+    grips_uno_wrap,
+    grips_una_wrap,
+    grips_rt_wrap,
+    dol_grip_qty_prep,
+    dol_grip_uno_prep,
+    dol_grip_una_prep,
+    dol_grip_rt_prep,
+    dol_grip_qty_wrap,
+    dol_grip_uno_wrap,
+    dol_grip_una_wrap,
+    dol_grip_rt_wrap,
+    sw_grips_qty_prep,
+    sw_grips_uno_prep,
+    sw_grips_una_prep,
+    sw_grips_rt_prep,
+    sw_grips_qty_wrap,
+    sw_grips_uno_wrap,
+    sw_grips_una_wrap,
+    sw_grips_rt_wrap,
+    oth_grip_qty_prep,
+    oth_grip_uno_prep,
+    oth_grip_una_prep,
+    oth_grip_rt_prep,
+    oth_grip_qty_wrap,
+    oth_grip_uno_wrap,
+    oth_grip_una_wrap,
+    oth_grip_rt_wrap,
+    dail_grip_qty_prep,
+    dail_grip_uno_prep,
+    dail_grip_una_prep,
+    dail_grip_rt_prep,
+    dail_grip_qty_wrap,
+    dail_grip_uno_wrap,
+    dail_grip_una_wrap,
+    dail_grip_rt_,
 
 // Budget Top Old
 {/* old */}
