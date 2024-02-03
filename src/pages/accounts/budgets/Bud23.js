@@ -55,14 +55,73 @@
     oth_grip_uno_wrap,
     oth_grip_una_wrap,
     oth_grip_rt_wrap,
-    dail_grip_qty_prep,
-    dail_grip_uno_prep,
-    dail_grip_una_prep,
-    dail_grip_rt_prep,
-    dail_grip_qty_wrap,
-    dail_grip_uno_wrap,
-    dail_grip_una_wrap,
-    dail_grip_rt_,
+    // Totals
+
+  // key grip
+  // key grip shoot Total postData 
+  const [keygripTotal, setKeygripTotal] = useState(0);
+  // key grip prep Total postData 
+  const [kgripprepTotal, setKgripprepTotal] = useState(0);
+  // key grip wrap Total postData 
+  const [kgripwrapTotal, setKgripwrapTotal] = useState(0);
+  // key grip all Total postData 
+  const [kgripallTotal, setKgripallTotal] = useState(0);
+
+  // best boy grip
+  // best boy grip shoot Total postData 
+  const [bestboygripTotal, setBestboygripTotal] = useState(0);
+  // best boy grip prep Total postData 
+  const [bbgripprepTotal, setBbgripprepTotal] = useState(0);
+  // best boy grip wrap Total postData 
+  const [bbgripwrapTotal, setBbgripwrapTotal] = useState(0);
+  // best boy grip all Total postData 
+  const [bbgripallTotal, setBbgripallTotal] = useState(0);
+
+  // grips
+  // grips shoot Total postData 
+  const [gripsTotal, setGripsTotal] = useState(0);
+  // grips prep Total postData 
+  const [gripsprepTotal, setGripsprepTotal] = useState(0);
+  // grips wrap Total postData 
+  const [gripswrapTotal, setGripswrapTotal] = useState(0);
+  // grips all Total postData 
+  const [gripsallTotal, setGripsallTotal] = useState(0);
+
+  // dolly crane grip
+  // dolly crane grip shoot Total postData 
+  const [dollycranegripTotal, setDollycranegripTotal] = useState(0);
+  // dolly crane grip prep Total postData 
+  const [dolgripprepTotal, setDolgripprepTotal] = useState(0);
+  // dolly crane grip wrap Total postData 
+  const [dolgripwrapTotal, setDolgripwrapTotal] = useState(0);
+  // dolly crane grip all Total postData 
+  const [dolgripallTotal, setDolgripallTotal] = useState(0);
+
+  // swing grips
+  // swing grips shoot Total postData 
+  const [swinggripsTotal, setSwinggripsTotal] = useState(0);
+  // swing grips prep Total postData 
+  const [swigripsprepTotal, setSwigripsprepTotal] = useState(0);
+  // swing grips wrap Total postData 
+  const [swigripswrapTotal, setSwigripswrapTotal] = useState(0);
+  // swing grips all Total postData 
+  const [swigripsallTotal, setSwigripsallTotal] = useState(0);
+
+  // other grip labour 
+  // other grip labour shoot Total postData 
+  const [othergriplabourTotal, setOthergriplabourTotal] = useState(0);
+  // other grip labour prep Total postData 
+  const [othgripprepTotal, setOthgripprepTotal] = useState(0);
+  // other grip labour wrap Total postData 
+  const [othgripwrapTotal, setOthgripwrapTotal] = useState(0);
+  // other grip labour all Total postData 
+  const [othgripallTotal, setOthallTotal] = useState(0);
+
+  // dailies grip Total postData 
+  const [dailiesgripTotal, setDailiesgripTotal] = useState(0);
+
+  // Grip Labour Total postData 
+  const [griplabourTotal, setGriplabourTotal] = useState(0);
 
 // Budget Top Old
 {/* old */}

@@ -35,8 +35,6 @@ const Grip = (props) => {
     sw_grips_qty_wrap, sw_grips_uno_wrap, sw_grips_una_wrap, sw_grips_rt_wrap,
     oth_grip_qty_prep, oth_grip_uno_prep, oth_grip_una_prep, oth_grip_rt_prep,
     oth_grip_qty_wrap, oth_grip_uno_wrap, oth_grip_una_wrap, oth_grip_rt_wrap,
-    dail_grip_qty_prep, dail_grip_uno_prep, dail_grip_una_prep, dail_grip_rt_prep,
-    dail_grip_qty_wrap, dail_grip_uno_wrap, dail_grip_una_wrap, dail_grip_rt_,
     key_grip_qty, key_grip_uno, key_grip_una, key_grip_rt,
     best_boy_grip_qty, best_boy_grip_uno, best_boy_grip_una, best_boy_grip_rt,
     grips_qty, grips_uno, grips_una, grips_rt,

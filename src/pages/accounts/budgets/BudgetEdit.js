@@ -3348,14 +3348,6 @@ function BudgetEdit() {
     oth_grip_uno_wrap: 0,
     oth_grip_una_wrap: "",
     oth_grip_rt_wrap: 0,
-    dail_grip_qty_prep: 0,
-    dail_grip_uno_prep: 0,
-    dail_grip_una_prep: "",
-    dail_grip_rt_prep: 0,
-    dail_grip_qty_wrap: 0,
-    dail_grip_uno_wrap: 0,
-    dail_grip_una_wrap: "",
-    dail_grip_rt_: 0,
     // old _prep wrap
     fringes_taxes_grip: 0,
     key_grip_qty: 0,
@@ -3403,8 +3395,6 @@ function BudgetEdit() {
     sw_grips_qty_wrap, sw_grips_uno_wrap, sw_grips_una_wrap, sw_grips_rt_wrap,
     oth_grip_qty_prep, oth_grip_uno_prep, oth_grip_una_prep, oth_grip_rt_prep,
     oth_grip_qty_wrap, oth_grip_uno_wrap, oth_grip_una_wrap, oth_grip_rt_wrap,
-    dail_grip_qty_prep, dail_grip_uno_prep, dail_grip_una_prep, dail_grip_rt_prep,
-    dail_grip_qty_wrap, dail_grip_uno_wrap, dail_grip_una_wrap, dail_grip_rt_,
     // old
     key_grip_qty, key_grip_uno, key_grip_una, key_grip_rt,
     best_boy_grip_qty, best_boy_grip_uno, best_boy_grip_una, best_boy_grip_rt,
@@ -3447,17 +3437,38 @@ function BudgetEdit() {
   // grips all Total postData 
   const [gripsallTotal, setGripsallTotal] = useState(0);
 
+  // dolly crane grip
+  // dolly crane grip shoot Total postData 
+  const [dollycranegripTotal, setDollycranegripTotal] = useState(0);
+  // dolly crane grip prep Total postData 
+  const [dolgripprepTotal, setDolgripprepTotal] = useState(0);
+  // dolly crane grip wrap Total postData 
+  const [dolgripwrapTotal, setDolgripwrapTotal] = useState(0);
+  // dolly crane grip all Total postData 
+  const [dolgripallTotal, setDolgripallTotal] = useState(0);
+
+  // swing grips
+  // swing grips shoot Total postData 
+  const [swinggripsTotal, setSwinggripsTotal] = useState(0);
+  // swing grips prep Total postData 
+  const [swigripsprepTotal, setSwigripsprepTotal] = useState(0);
+  // swing grips wrap Total postData 
+  const [swigripswrapTotal, setSwigripswrapTotal] = useState(0);
+  // swing grips all Total postData 
+  const [swigripsallTotal, setSwigripsallTotal] = useState(0);
+
+  // other grip labour 
+  // other grip labour shoot Total postData 
+  const [othergriplabourTotal, setOthergriplabourTotal] = useState(0);
+  // other grip labour prep Total postData 
+  const [othgripprepTotal, setOthgripprepTotal] = useState(0);
+  // other grip labour wrap Total postData 
+  const [othgripwrapTotal, setOthgripwrapTotal] = useState(0);
+  // other grip labour all Total postData 
+  const [othgripallTotal, setOthallTotal] = useState(0);
+
   // dailies grip Total postData 
   const [dailiesgripTotal, setDailiesgripTotal] = useState(0);
-
-  // dolly crane grip Total postData 
-  const [dollycranegripTotal, setDollycranegripTotal] = useState(0);
-
-  // swing grips Total postData 
-  const [swinggripsTotal, setSwinggripsTotal] = useState(0);
-
-  // other grip labour Total postData 
-  const [othergriplabourTotal, setOthergriplabourTotal] = useState(0);
 
   // Grip Labour Total postData 
   const [griplabourTotal, setGriplabourTotal] = useState(0);
@@ -6357,8 +6368,6 @@ function BudgetEdit() {
           sw_grips_qty_wrap, sw_grips_uno_wrap, sw_grips_una_wrap, sw_grips_rt_wrap,
           oth_grip_qty_prep, oth_grip_uno_prep, oth_grip_una_prep, oth_grip_rt_prep,
           oth_grip_qty_wrap, oth_grip_uno_wrap, oth_grip_una_wrap, oth_grip_rt_wrap,
-          dail_grip_qty_prep, dail_grip_uno_prep, dail_grip_una_prep, dail_grip_rt_prep,
-          dail_grip_qty_wrap, dail_grip_uno_wrap, dail_grip_una_wrap, dail_grip_rt_,
           key_grip_qty, key_grip_uno, key_grip_una, key_grip_rt,
           best_boy_grip_qty, best_boy_grip_uno, best_boy_grip_una, best_boy_grip_rt,
           grips_qty, grips_uno, grips_una, grips_rt,
@@ -6383,8 +6392,6 @@ function BudgetEdit() {
           sw_grips_qty_wrap, sw_grips_uno_wrap, sw_grips_una_wrap, sw_grips_rt_wrap,
           oth_grip_qty_prep, oth_grip_uno_prep, oth_grip_una_prep, oth_grip_rt_prep,
           oth_grip_qty_wrap, oth_grip_uno_wrap, oth_grip_una_wrap, oth_grip_rt_wrap,
-          dail_grip_qty_prep, dail_grip_uno_prep, dail_grip_una_prep, dail_grip_rt_prep,
-          dail_grip_qty_wrap, dail_grip_uno_wrap, dail_grip_una_wrap, dail_grip_rt_,
           key_grip_qty, key_grip_uno, key_grip_una, key_grip_rt,
           best_boy_grip_qty, best_boy_grip_uno, best_boy_grip_una, best_boy_grip_rt,
           grips_qty, grips_uno, grips_una, grips_rt,
@@ -8451,6 +8458,82 @@ function BudgetEdit() {
   formData.append("swinggrips_total", swinggripsTotal);
   formData.append("othergriplabour_total", othergriplabourTotal);
   formData.append("griplabour_total", griplabourTotal);
+  // new grip  for drf
+  formData.append("days6th7th_unit_grip", days6th7th_unit_grip);
+  formData.append("days6th7th_grip", days6th7th_grip);
+  formData.append("overtime_unit_grip", overtime_unit_grip);
+  formData.append("overtime_grip", overtime_grip);
+  formData.append("holidays_unit_grip", holidays_unit_grip);
+  formData.append("holidays_grip", holidays_grip);
+  formData.append("box_rent_unit_grip", box_rent_unit_grip);
+  formData.append("box_rent_grip", box_rent_grip);
+  formData.append("other_solo_grip", other_solo_grip);
+  formData.append("k_grip_qty_prep", k_grip_qty_prep);
+  formData.append("k_grip_uno_prep", k_grip_uno_prep);
+  formData.append("k_grip_una_prep", k_grip_una_prep);
+  formData.append("k_grip_rt_prep", k_grip_rt_prep);
+  formData.append("k_grip_qty_wrap", k_grip_qty_wrap);
+  formData.append("k_grip_uno_wrap", k_grip_uno_wrap);
+  formData.append("k_grip_una_wrap", k_grip_una_wrap);
+  formData.append("k_grip_rt_wrap", k_grip_rt_wrap);
+  formData.append("bb_grip_qty_prep", bb_grip_qty_prep);
+  formData.append("bb_grip_uno_prep", bb_grip_uno_prep);
+  formData.append("bb_grip_una_prep", bb_grip_una_prep);
+  formData.append("bb_grip_rt_prep", bb_grip_rt_prep);
+  formData.append("bb_grip_qty_wrap", bb_grip_qty_wrap);
+  formData.append("bb_grip_uno_wrap", bb_grip_uno_wrap);
+  formData.append("bb_grip_una_wrap", bb_grip_una_wrap);
+  formData.append("bb_grip_rt_wrap", bb_grip_rt_wrap);
+  formData.append("grips_qty_prep", grips_qty_prep);
+  formData.append("grips_uno_prep", grips_uno_prep);
+  formData.append("grips_una_prep", grips_una_prep);
+  formData.append("grips_rt_prep", grips_rt_prep);
+  formData.append("grips_qty_wrap", grips_qty_wrap);
+  formData.append("grips_uno_wrap", grips_uno_wrap);
+  formData.append("grips_una_wrap", grips_una_wrap);
+  formData.append("grips_rt_wrap", grips_rt_wrap);
+  formData.append("dol_grip_qty_prep", dol_grip_qty_prep);
+  formData.append("dol_grip_uno_prep", dol_grip_uno_prep);
+  formData.append("dol_grip_una_prep", dol_grip_una_prep);
+  formData.append("dol_grip_rt_prep", dol_grip_rt_prep);
+  formData.append("dol_grip_qty_wrap", dol_grip_qty_wrap);
+  formData.append("dol_grip_uno_wrap", dol_grip_uno_wrap);
+  formData.append("dol_grip_una_wrap", dol_grip_una_wrap);
+  formData.append("dol_grip_rt_wrap", dol_grip_rt_wrap);
+  formData.append("sw_grips_qty_prep", sw_grips_qty_prep);
+  formData.append("sw_grips_uno_prep", sw_grips_uno_prep);
+  formData.append("sw_grips_una_prep", sw_grips_una_prep);
+  formData.append("sw_grips_rt_prep", sw_grips_rt_prep);
+  formData.append("sw_grips_qty_wrap", sw_grips_qty_wrap);
+  formData.append("sw_grips_uno_wrap", sw_grips_uno_wrap);
+  formData.append("sw_grips_una_wrap", sw_grips_una_wrap);
+  formData.append("sw_grips_rt_wrap", sw_grips_rt_wrap);
+  formData.append("oth_grip_qty_prep", oth_grip_qty_prep);
+  formData.append("oth_grip_uno_prep", oth_grip_uno_prep);
+  formData.append("oth_grip_una_prep", oth_grip_una_prep);
+  formData.append("oth_grip_rt_prep", oth_grip_rt_prep);
+  formData.append("oth_grip_qty_wrap", oth_grip_qty_wrap);
+  formData.append("oth_grip_uno_wrap", oth_grip_uno_wrap);
+  formData.append("oth_grip_una_wrap", oth_grip_una_wrap);
+  formData.append("oth_grip_rt_wrap", oth_grip_rt_wrap);
+  formData.append("kgripprep_total", kgripprepTotal);
+  formData.append("kgripwrap_total", kgripwrapTotal);
+  formData.append("kgripall_total", kgripallTotal);
+  formData.append("bbgripprep_total", bbgripprepTotal);
+  formData.append("bbgripwrap_total", bbgripwrapTotal);
+  formData.append("bbgripall_total", bbgripallTotal);
+  formData.append("gripsprep_total", gripsprepTotal);
+  formData.append("gripswrap_total", gripswrapTotal);
+  formData.append("gripsall_total", gripsallTotal);
+  formData.append("dolgripprep_total", dolgripprepTotal);
+  formData.append("dolgripwrap_total", dolgripwrapTotal);
+  formData.append("dolgripall_total", dolgripallTotal);
+  formData.append("swigripsprep_total", swigripsprepTotal);
+  formData.append("swigripswrap_total", swigripswrapTotal);
+  formData.append("swigripsall_total", swigripsallTotal);
+  formData.append("othgripprep_total", othgripprepTotal);
+  formData.append("othgripwrap_total", othgripwrapTotal);
+  formData.append("othgripall_total", othgripallTotal);
   // sound pro 
   formData.append("fringes_taxes_sound", fringes_taxes_sound);
   formData.append("sound_mixer_qty", sound_mixer_qty);
@@ -8474,6 +8557,63 @@ function BudgetEdit() {
   formData.append("cablewrangler_total", cablewranglerTotal);
   formData.append("othersoundlabour_total", othersoundlabourTotal);
   formData.append("soundlabour_total", soundlabourTotal);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
   // transport 
   formData.append("fringes_taxes_transport", fringes_taxes_transport);
   formData.append("tp_coordinator_qty", tp_coordinator_qty);
