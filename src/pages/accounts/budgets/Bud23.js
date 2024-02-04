@@ -123,6 +123,72 @@
   // Grip Labour Total postData 
   const [griplabourTotal, setGriplabourTotal] = useState(0);
 
+  // electric
+  // Totals
+
+  // gaffer
+  // gaffer shoot Total postData 
+  const [gafferTotal, setGafferTotal] = useState(0);
+  // gaffer prep Total postData 
+  const [gafprepTotal, setGafprepTotal] = useState(0);
+  // gaffer wrap Total postData 
+  const [gafwrapTotal, setGafwrapTotal] = useState(0);
+  // gaffer all Total postData 
+  const [gafallTotal, setGafallTotal] = useState(0);
+
+  // best boy
+  // best boy shoot Total postData 
+  const [bestboyTotal, setBestboyTotal] = useState(0);
+  // best boy prep Total postData 
+  const [bboyprepTotal, setBboyprepTotal] = useState(0);
+  // best boy wrap Total postData 
+  const [bboywrapTotal, setBboywrapTotal] = useState(0);
+  // best boy all Total postData 
+  const [bboyallTotal, setBboyallTotal] = useState(0);
+
+  // electrician
+  // electrician shoot Total postData 
+  const [electricianTotal, setElectricianTotal] = useState(0);
+  // electrician prep Total postData 
+  const [elecprepTotal, setElecprepTotal] = useState(0);
+  // electrician wrap Total postData 
+  const [elecwrapTotal, setElecwrapTotal] = useState(0);
+  // electrician all Total postData 
+  const [elecallTotal, setElecallTotal] = useState(0);
+
+  // dailies electric
+  // dailies electric shoot Total postData 
+  const [dailieselecTotal, setDailieselecTotal] = useState(0);
+  // dailies electric prep Total postData 
+  const [daelecprepTotal, setDaelecprepTotal] = useState(0);
+  // dailies electric wrap Total postData 
+  const [daelecwrapTotal, setDaelecwrapTotal] = useState(0);
+  // dailies electric all Total postData 
+  const [daelecallTotal, setDaelecallTotal] = useState(0);
+
+  // generator operator
+  // generator operator shoot Total postData 
+  const [generatoropTotal, setGeneratoropTotal] = useState(0);
+  // generator operator prep Total postData 
+  const [genopprepTotal, setGenopprepTotal] = useState(0);
+  // generator operator wrap Total postData 
+  const [genopwrapTotal, setGenopwrapTotal] = useState(0);
+  // generator operator all Total postData 
+  const [genopallTotal, setGenopallTotal] = useState(0);
+
+  // other electric
+  // other electric shoot Total postData 
+  const [otherelectricTotal, setOtherelectricTotal] = useState(0);
+  // other electric prep Total postData 
+  const [otelecprepTotal, setOtelecprepTotal] = useState(0);
+  // other electric wrap Total postData 
+  const [otelecwrapTotal, setOtelecwrapTotal] = useState(0);
+  // other electric all Total postData 
+  const [otelecallTotal, setOtelecallTotal] = useState(0);
+
+  // Electric Labour Total postData 
+  const [electriclabourTotal, setElectriclabourTotal] = useState(0);
+
 // Budget Top Old
 {/* old */}
     {/* RIGHTS */}

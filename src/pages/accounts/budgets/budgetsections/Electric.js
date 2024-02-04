@@ -526,54 +526,172 @@ const Electric = (props) => {
     ]);
 
   return (
-    <div className="mt-5">
-    <Row >
+    <div className={`${styles.WhiteBack} mx-5 mt-3 mb-5`}>
+    <Row className="mx-0" >
+    <Col md={12}
+        className={ `${styles.Overview} py-0 text-center`}>
+            <span className={`${styles.Close } py-2 mb-0 float-right `} 
+    onClick={() => setShow(false) } >Close</span>
+    <p className="pl-5 py-2">
+    ELECTRICAL LABOUR SECTION
+    </p>
+    </Col>
+    </Row>
+    <div className="px-2">
+    <Row className={`mt-3`}>
+    <Col md={1} ></Col>
     <Col md={1} >
-    <p className="mb-2">17.00</p>
+    <p className={`${styles.Underline}`}>17.00</p>
     </Col>
     <Col md={9} >
-    <p className={ `${styles.BoldBlack} mb-2`}>Electrical Labour</p>
-    </Col>
-    <Col md={2}>
-    <span className={`${styles.Close }`} 
-    onClick={() => setShow(false) } >Close</span>
+    <p className={ `${styles.BoldBlack} mb-1`}>ELECTRICAL LABOUR</p>
     </Col>
     </Row>
     {/* TITLES */}
-    <Row className={ `${styles.Overview} mb-2 py-1`} >
-    <Col md={1} >
+    <Row className={`mb-2 py-0`} >
+    <Col md={1} ></Col>
+    <Col className={ `${styles.Overview} py-1`} md={1} >
     <p className="mb-0">ACCT</p>
     </Col>
-    <Col md={5} >
+    <Col className={ `${styles.Overview} py-1`} md={3} >
     <p className="mb-0">Description</p>
     </Col>
-    <Col md={1} className="text-center" >
+    <Col className={`${styles.Overview} text-center py-1`} md={1} >
     <p className="mb-0">#</p>
     </Col>
-    <Col className="text-center" md={1} >
+    <Col className={`${styles.Overview} text-center py-1`} md={1} >
     <p># Unit</p>
     </Col>
-    <Col md={1} className="text-center" >
+    <Col md={1} className={`${styles.Overview} text-center py-1`} >
     <p className="mb-0">Unit</p>
     </Col>
-    <Col md={1} className="text-center" >
+    <Col md={1} className={`${styles.Overview} text-center py-1`} >
     <p className="mb-0">Price</p>
     </Col>
-    <Col md={2} className="text-center" >
+    <Col md={2} className={`${styles.Overview} text-center py-1`} >
     <p className="mb-0">Total</p>
     </Col>
+    <Col md={1}></Col>
     </Row>
     {/* Gaffer */}
-    <Row>
+    <div className="mt-2"> 
+    <Row >
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>17.10</p>
     </Col>
-    <Col md={5} >
-    <p className={`${styles.Underline}`}>Gaffer</p>
+    <Col md={9} >
+    <p className={`${styles.BoldBlack}`}>Gaffer</p>
+    </Col>
+    </Row>
+    {/* Prep */} 
+    <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Prep</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="gaf_qty_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="gaf_qty_prep"
+        value={gaf_qty_prep}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.gaf_qty_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="gaf_uno_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="gaf_uno_prep"
+        value={gaf_uno_prep}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.gaf_uno_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="gaf_una_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="gaf_una_prep"
+        value={gaf_una_prep}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.gaf_una_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="gaf_rt_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="gaf_rt_prep"
+        value={gaf_rt_prep}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.gaf_rt_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="gafprepTotal" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="gafprepTotal"
+        value={gafprepTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.gafprepTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={1}></Col>
+    </Row>
+    {/* Shoot */}
+    <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="gaffer_qty" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -590,7 +708,7 @@ const Electric = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="gaffer_uno" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -607,7 +725,7 @@ const Electric = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="gaffer_una" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -624,7 +742,7 @@ const Electric = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="gaffer_rt" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -641,7 +759,7 @@ const Electric = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="gafferTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -657,17 +775,255 @@ const Electric = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Best Boy */}
+    {/* Wrap */}
+    <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1}></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Wrap</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="gaf_qty_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="gaf_qty_wrap"
+        value={gaf_qty_wrap}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.gaf_qty_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="gaf_uno_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="gaf_uno_wrap"
+        value={gaf_uno_wrap}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.gaf_uno_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="gaf_una_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="gaf_una_wrap"
+        value={gaf_una_wrap}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.gaf_una_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="gaf_rt_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="gaf_rt_wrap"
+        value={gaf_rt_wrap}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.gaf_rt_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="gafwrapTotal" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="gafwrapTotal"
+        value={gafwrapTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.gafwrapTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row className="py-0 d-flex align-items-center">
+    <Col md={1}></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={7} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="gafallTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="gafallTotal"
+        value={gafallTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.gafallTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    </div>
+    {/* hr */}
     <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-1 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Best Boy */}
+    <div className="mt-1"> 
+    <Row >
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>17.20</p>
     </Col>
-    <Col md={5} >
-    <p className={`${styles.Underline}`}>Best Boy</p>
+    <Col md={9} >
+    <p className={`${styles.BoldBlack}`}>Best Boy</p>
+    </Col>
+    </Row>
+    {/* Prep */} 
+    <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Prep</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="b_boy_qty_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="b_boy_qty_prep"
+        value={b_boy_qty_prep}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.b_boy_qty_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="b_boy_uno_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="b_boy_uno_prep"
+        value={b_boy_uno_prep}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.b_boy_uno_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="b_boy_una_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="b_boy_una_prep"
+        value={b_boy_una_prep}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.b_boy_una_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="b_boy_rt_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="b_boy_rt_prep"
+        value={b_boy_rt_prep}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.b_boy_rt_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="bboyprepTotal" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="bboyprepTotal"
+        value={bboyprepTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.bboyprepTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={1}></Col>
+    </Row>
+    {/* Shoot */}
+    <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="best_boy_qty" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -684,7 +1040,7 @@ const Electric = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="best_boy_uno" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -701,7 +1057,7 @@ const Electric = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="best_boy_una" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -718,7 +1074,7 @@ const Electric = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="best_boy_rt" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -735,7 +1091,7 @@ const Electric = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="bestboyTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -751,17 +1107,255 @@ const Electric = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Electrician */}
+    {/* Wrap */}
+    <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1}></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Wrap</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="b_boy_qty_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="b_boy_qty_wrap"
+        value={b_boy_qty_wrap}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.b_boy_qty_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="b_boy_uno_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="b_boy_uno_wrap"
+        value={b_boy_uno_wrap}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.b_boy_uno_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="b_boy_una_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="b_boy_una_wrap"
+        value={b_boy_una_wrap}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.b_boy_una_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="b_boy_rt_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="b_boy_rt_wrap"
+        value={b_boy_rt_wrap}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.b_boy_rt_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="bboywrapTotal" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="bboywrapTotal"
+        value={bboywrapTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.bboywrapTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row className="py-0 d-flex align-items-center">
+    <Col md={1}></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={7} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="bboyallTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="bboyallTotal"
+        value={bboyallTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.bboyallTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    </div>
+    {/* hr */}
     <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-1 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Electrician */}
+    <div className="mt-1"> 
+    <Row >
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>17.30</p>
     </Col>
-    <Col md={5} >
-    <p className={`${styles.Underline}`}>Electricians</p>
+    <Col md={9} >
+    <p className={`${styles.BoldBlack}`}>Electrician/Lighting Technician</p>
+    </Col>
+    </Row>
+    {/* Prep */} 
+    <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Prep</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="elec_qty_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="elec_qty_prep"
+        value={elec_qty_prep}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.elec_qty_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="elec_uno_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="elec_uno_prep"
+        value={elec_uno_prep}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.elec_uno_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="elec_una_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="elec_una_prep"
+        value={elec_una_prep}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.elec_una_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="elec_rt_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="elec_rt_prep"
+        value={elec_rt_prep}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.elec_rt_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="elecprepTotal" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="elecprepTotal"
+        value={elecprepTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.elecprepTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={1}></Col>
+    </Row>
+    {/* Shoot */}
+    <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="electrician_qty" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -778,7 +1372,7 @@ const Electric = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="electrician_uno" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -795,7 +1389,7 @@ const Electric = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="electrician_una" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -812,7 +1406,7 @@ const Electric = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="electrician_rt" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -829,7 +1423,7 @@ const Electric = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="electricianTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -843,6 +1437,136 @@ const Electric = (props) => {
         {message}
         </Alert>
     ))}
+    </Col>
+    </Row>
+    {/* Wrap */}
+    <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1}></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Wrap</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="elec_qty_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="elec_qty_wrap"
+        value={elec_qty_wrap}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.elec_qty_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="elec_uno_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="elec_uno_wrap"
+        value={elec_uno_wrap}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.elec_uno_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="elec_una_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="elec_una_wrap"
+        value={elec_una_wrap}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.elec_una_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="elec_rt_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="elec_rt_wrap"
+        value={elec_rt_wrap}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.elec_rt_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="elecwrapTotal" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="elecwrapTotal"
+        value={elecwrapTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.elecwrapTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row className="py-0 d-flex align-items-center">
+    <Col md={1}></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={7} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="elecallTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="elecallTotal"
+        value={elecallTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.elecallTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    </div>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-1 mb-0`}/>
     </Col>
     </Row>
     {/* Dailies Electric */}
@@ -1196,6 +1920,7 @@ const Electric = (props) => {
     ))}
     </Col>
     </Row>
+    </div>
     </div>
   )
 }
