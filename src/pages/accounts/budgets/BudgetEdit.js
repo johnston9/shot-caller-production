@@ -8697,7 +8697,7 @@ function BudgetEdit() {
     handleSubmit3(event); 
   } catch (err) {
     console.log(err);
-    if (err.response?.status !== 401) {
+    if (err.response?.status !== 401) { 
       setErrors(err.response?.data);
     }
   }
@@ -11043,7 +11043,43 @@ function BudgetEdit() {
       setOthergriplabourTotal={setOthergriplabourTotal}
       griplabourTotal={griplabourTotal}
       setGriplabourTotal={setGriplabourTotal}
-      setShow={setShowGrip}  /> 
+      setShow={setShowGrip}  
+      kgripprepTotal={kgripprepTotal}
+      setKgripprepTotal={setKgripprepTotal}
+      kgripwrapTotal={kgripwrapTotal}
+      setKgripwrapTotal={setKgripwrapTotal}
+      kgripallTotal={kgripallTotal}
+      setKgripallTotal={setKgripallTotal}
+      bbgripprepTotal={bbgripprepTotal}
+      setBbgripprepTotal={setBbgripprepTotal}
+      bbgripwrapTotal={bbgripwrapTotal}
+      setBbgripwrapTotal={setBbgripwrapTotal}
+      bbgripallTotal={bbgripallTotal}
+      setBbgripallTotal={setBbgripallTotal}
+      gripsprepTotal={gripsprepTotal}
+      setGripsprepTotal={setGripsprepTotal}
+      gripswrapTotal={gripswrapTotal}
+      gripsallTotal={gripsallTotal}
+      setGripsallTotal={setGripsallTotal}
+      dolgripprepTotal={dolgripprepTotal}
+      setDolgripprepTotal={setDolgripprepTotal}
+      dolgripwrapTotal={dolgripwrapTotal}
+      setDolgripwrapTotal={setDolgripwrapTotal}
+      dolgripallTotal={dolgripallTotal}
+      setDolgripallTotal={setDolgripallTotal}
+      swigripsprepTotal={swigripsprepTotal}
+      setSwigripsprepTotal={setSwigripsprepTotal}
+      swigripswrapTotal={swigripswrapTotal}
+      setSwigripswrapTotal={setSwigripswrapTotal}
+      swigripsallTotal={swigripsallTotal}
+      setSwigripsallTotal={setSwigripsallTotal}
+      othgripprepTotal={othgripprepTotal}
+      setOthgripprepTotal={setOthgripprepTotal}
+      othgripwrapTotal={othgripwrapTotal}
+      setOthgripwrapTotal={setOthgripwrapTotal}
+      othgripallTotal={othgripallTotal}
+      setOthgripallTotal={setOthgripallTotal}
+    /> 
     ) }
     {/* sound */}
     {!showSound ? (

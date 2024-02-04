@@ -115,7 +115,7 @@
   // other grip labour wrap Total postData 
   const [othgripwrapTotal, setOthgripwrapTotal] = useState(0);
   // other grip labour all Total postData 
-  const [othgripallTotal, setOthallTotal] = useState(0);
+  const [othgripallTotal, setOthgripallTotal] = useState(0);
 
   // dailies grip Total postData 
   const [dailiesgripTotal, setDailiesgripTotal] = useState(0);

@@ -18,7 +18,26 @@ const Grip = (props) => {
            dollycranegripTotal, setDollycranegripTotal,
            swinggripsTotal, setSwinggripsTotal, setShow,
            othergriplabourTotal, setOthergriplabourTotal,
-           griplabourTotal, setGriplabourTotal,} = props;
+           griplabourTotal, setGriplabourTotal,
+           kgripprepTotal, setKgripprepTotal,
+           kgripwrapTotal, setKgripwrapTotal,
+           kgripallTotal, setKgripallTotal,
+           bbgripprepTotal, setBbgripprepTotal,
+           bbgripwrapTotal, setBbgripwrapTotal,
+           bbgripallTotal, setBbgripallTotal,
+           gripsprepTotal, setGripsprepTotal,
+           gripswrapTotal, setGripswrapTotal,
+           gripsallTotal, setGripsallTotal,
+           dolgripprepTotal, setDolgripprepTotal,
+           dolgripwrapTotal, setDolgripwrapTotal,
+           dolgripallTotal, setDolgripallTotal,
+           swigripsprepTotal, setSwigripsprepTotal,
+           swigripswrapTotal, setSwigripswrapTotal,
+           swigripsallTotal, setSwigripsallTotal,
+           othgripprepTotal, setOthgripprepTotal,
+           othgripwrapTotal, setOthgripwrapTotal,
+           othgripallTotal, setOthgripallTotal,
+        } = props;
 
     const {days6th7th_unit_grip, days6th7th_grip, overtime_unit_grip,
     overtime_grip, holidays_unit_grip, 
@@ -48,7 +67,7 @@ const Grip = (props) => {
     const handleChange = (event) => {
       setPostDataGrip({
       ...postDataGrip,
-      [event.target.name]: parseFloat(event.target.value || 0 ),
+      [event.target.name]: event.target.value.replace(/[^0-9.]/g, ''),
       });
     }; 
 
@@ -61,7 +80,9 @@ const Grip = (props) => {
     };
 
     // Calculate Functions
-    // function to calculate key grip on change
+
+    // key grip
+    // function to calculate key grip shoot on change
     useEffect(() => {
       const addKetgri = () => {
       setKeygripTotal(parseFloat(key_grip_qty || 0) * 
@@ -78,7 +99,59 @@ const Grip = (props) => {
       // eslint-disable-next-line
     }, [key_grip_qty, key_grip_uno, key_grip_rt]);
 
-    // function to calculate best boy grip on change
+    // function to calculate key grip prep on change
+    useEffect(() => {
+        const addKetgriprep = () => {
+        setKgripprepTotal(parseFloat(k_grip_qty_prep || 0) * 
+        parseFloat(k_grip_uno_prep || 0) * 
+        parseFloat(k_grip_rt_prep || 0))
+        }
+        const timer = setTimeout(() => {
+            addKetgriprep();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [k_grip_qty_prep, k_grip_uno_prep, k_grip_rt_prep]);
+
+    // function to calculate key grip wrap on change
+    useEffect(() => {
+        const addKetgriwrap = () => {
+        setKgripwrapTotal(parseFloat(k_grip_qty_wrap || 0) * 
+        parseFloat(k_grip_uno_wrap || 0) * 
+        parseFloat(k_grip_rt_wrap || 0))
+        }
+        const timer = setTimeout(() => {
+            addKetgriwrap();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [k_grip_qty_wrap, k_grip_uno_wrap, k_grip_rt_wrap]);
+
+    // function to calculate key grip all on change
+    useEffect(() => {
+        const addKetgriall = () => {
+        setKgripallTotal(parseFloat(keygripTotal || 0) +
+        parseFloat(kgripprepTotal || 0) +
+        parseFloat(kgripwrapTotal || 0))
+        }
+        const timer = setTimeout(() => {
+            addKetgriall();
+        }, 1000);
+
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [keygripTotal, kgripprepTotal, kgripwrapTotal]);
+
+    // best boy grip
+    // function to calculate best boy grip shoot on change
     useEffect(() => {
       const addBbgrip = () => {
       setBestboygripTotal(parseFloat(best_boy_grip_qty || 0) * 
@@ -95,7 +168,59 @@ const Grip = (props) => {
       // eslint-disable-next-line
     }, [best_boy_grip_qty, best_boy_grip_uno, best_boy_grip_rt]);
 
-    // function to calculate grips on change
+    // function to calculate best boy grip prep on change
+    useEffect(() => {
+        const addBbgriprep = () => {
+        setBbgripprepTotal(parseFloat(bb_grip_qty_prep || 0) * 
+        parseFloat(bb_grip_uno_prep || 0) * 
+        parseFloat(bb_grip_rt_prep || 0))
+        }
+        const timer = setTimeout(() => {
+            addBbgriprep();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [bb_grip_qty_prep, bb_grip_uno_prep, bb_grip_rt_prep]);
+
+    // function to calculate best boy grip wrap on change
+    useEffect(() => {
+        const addBbgriwrap = () => {
+        setBbgripwrapTotal(parseFloat(bb_grip_qty_wrap || 0) * 
+        parseFloat(bb_grip_uno_wrap || 0) * 
+        parseFloat(bb_grip_rt_wrap || 0))
+        }
+        const timer = setTimeout(() => {
+            addBbgriwrap();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [bb_grip_qty_wrap, bb_grip_uno_wrap, bb_grip_rt_wrap]);
+
+    // function to calculate best boy grip all on change
+    useEffect(() => {
+        const addBbgriall = () => {
+        setBbgripallTotal(parseFloat(bestboygripTotal || 0) +
+        parseFloat(bbgripprepTotal || 0) +
+        parseFloat(bbgripwrapTotal || 0))
+        }
+        const timer = setTimeout(() => {
+            addBbgriall();
+        }, 1000);
+
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [bestboygripTotal, bbgripprepTotal, bbgripwrapTotal]);
+
+    // grips
+    // function to calculate grips shoot on change
     useEffect(() => {
       const addGrips = () => {
       setGripsTotal(parseFloat(grips_qty || 0) * 
@@ -112,24 +237,59 @@ const Grip = (props) => {
       // eslint-disable-next-line
     }, [grips_qty, grips_uno, grips_rt]);
 
-    // function to calculate dailies grip on change
+    // function to calculate grips prep on change
     useEffect(() => {
-      const addDaigri = () => {
-      setDailiesgripTotal(parseFloat(dailies_grip_qty || 0) * 
-      parseFloat(dailies_grip_uno || 0) * 
-      parseFloat(dailies_grip_rt || 0))
-      }
-      const timer = setTimeout(() => {
-        addDaigri();
-      }, 2000);
+        const addGriprep = () => {
+        setGripsprepTotal(parseFloat(grips_qty_prep || 0) * 
+        parseFloat(grips_uno_prep || 0) * 
+        parseFloat(grips_rt_prep || 0))
+        }
+        const timer = setTimeout(() => {
+            addGriprep();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [grips_qty_prep, grips_uno_prep, grips_rt_prep]);
 
-      return () => {
-      clearTimeout(timer);
-      };
-      // eslint-disable-next-line
-    }, [dailies_grip_qty, dailies_grip_uno, dailies_grip_rt]);
+    // function to calculate grips wrap on change
+    useEffect(() => {
+        const addGriwrap = () => {
+        setGripswrapTotal(parseFloat(grips_qty_wrap || 0) * 
+        parseFloat(grips_uno_wrap || 0) * 
+        parseFloat(grips_rt_wrap || 0))
+        }
+        const timer = setTimeout(() => {
+            addGriwrap();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [grips_qty_wrap, grips_uno_wrap, grips_rt_wrap]);
 
-    // function to calculate dolly crane grip on change
+    // function to calculate grips all on change
+    useEffect(() => {
+        const addGriall = () => {
+        setGripsallTotal(parseFloat(gripsTotal || 0) +
+        parseFloat(gripsprepTotal || 0) +
+        parseFloat(gripswrapTotal || 0))
+        }
+        const timer = setTimeout(() => {
+            addGriall();
+        }, 1000);
+
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [gripsTotal, gripsprepTotal, gripswrapTotal]);
+
+    // dolly crane grip
+    // function to calculate dolly crane grip shoot on change
     useEffect(() => {
       const addDolcra = () => {
       setDollycranegripTotal(parseFloat(dolly_crane_grip_qty || 0) * 
@@ -146,7 +306,59 @@ const Grip = (props) => {
       // eslint-disable-next-line
     }, [dolly_crane_grip_qty, dolly_crane_grip_uno, dolly_crane_grip_rt]);
 
-    // function to calculate swing grips on change
+    // function to calculate dolly crane grip prep on change
+    useEffect(() => {
+        const addDolcraprep = () => {
+        setDolgripprepTotal(parseFloat(dol_grip_qty_prep || 0) * 
+        parseFloat(dol_grip_uno_prep || 0) * 
+        parseFloat(dol_grip_rt_prep || 0))
+        }
+        const timer = setTimeout(() => {
+            addDolcraprep();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [dol_grip_qty_prep, dol_grip_uno_prep, dol_grip_rt_prep]);
+
+    // function to calculate dolly crane grip wrap on change
+    useEffect(() => {
+        const addDolcrawrap = () => {
+        setDolgripwrapTotal(parseFloat(dol_grip_qty_wrap || 0) * 
+        parseFloat(dol_grip_uno_wrap || 0) * 
+        parseFloat(dol_grip_rt_wrap || 0))
+        }
+        const timer = setTimeout(() => {
+            addDolcrawrap();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [dol_grip_qty_wrap, dol_grip_uno_wrap, dol_grip_rt_wrap]);
+
+    // function to calculate dolly crane grip all on change
+    useEffect(() => {
+        const addDolcraall = () => {
+        setDolgripallTotal(parseFloat(dollycranegripTotal || 0) +
+        parseFloat(dolgripprepTotal || 0) +
+        parseFloat(dolgripwrapTotal || 0))
+        }
+        const timer = setTimeout(() => {
+            addDolcraall();
+        }, 1000);
+
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [dollycranegripTotal, dolgripprepTotal, dolgripwrapTotal]);
+
+    // swing grips
+    // function to calculate swing grips shoot on change
     useEffect(() => {
       const addSwigri = () => {
       setSwinggripsTotal(parseFloat(swing_grips_qty || 0) * 
@@ -163,7 +375,59 @@ const Grip = (props) => {
       // eslint-disable-next-line
     }, [swing_grips_qty, swing_grips_uno, swing_grips_rt]);
 
-    // function to calculate other grip labour on change
+    // function to calculate swing grips prep on change
+    useEffect(() => {
+        const addSwigriprep = () => {
+        setSwigripsprepTotal(parseFloat(sw_grips_qty_prep || 0) * 
+        parseFloat(sw_grips_uno_prep || 0) * 
+        parseFloat(sw_grips_rt_prep || 0))
+        }
+        const timer = setTimeout(() => {
+            addSwigriprep();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [sw_grips_qty_prep, sw_grips_uno_prep, sw_grips_rt_prep]);
+
+    // function to calculate swing grips wrap on change
+    useEffect(() => {
+        const addSwigriwrap = () => {
+        setSwigripswrapTotal(parseFloat(sw_grips_qty_wrap || 0) * 
+        parseFloat(sw_grips_uno_wrap || 0) * 
+        parseFloat(sw_grips_rt_wrap || 0))
+        }
+        const timer = setTimeout(() => {
+            addSwigriwrap();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [sw_grips_qty_wrap, sw_grips_uno_wrap, sw_grips_rt_wrap]);
+
+    // function to calculate swing grips all on change
+    useEffect(() => {
+        const addSwigriall = () => {
+        setSwigripsallTotal(parseFloat(swinggripsTotal || 0) +
+        parseFloat(swigripsprepTotal || 0) +
+        parseFloat(swigripswrapTotal || 0))
+        }
+        const timer = setTimeout(() => {
+            addSwigriall();
+        }, 1000);
+
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [swinggripsTotal, swigripsprepTotal, swigripswrapTotal]);
+
+    // other grip labour
+    // function to calculate other grip labour shoot on change
     useEffect(() => {
       const addOthgri = () => {
       setOthergriplabourTotal(parseFloat(other_grip_labour_qty || 0) * 
@@ -180,18 +444,91 @@ const Grip = (props) => {
       // eslint-disable-next-line
     }, [other_grip_labour_qty, other_grip_labour_uno, other_grip_labour_rt]);
 
+    // function to calculate other grip labour prep on change
+    useEffect(() => {
+        const addOthgriprep = () => {
+        setOthgripprepTotal(parseFloat(oth_grip_qty_prep || 0) * 
+        parseFloat(oth_grip_uno_prep || 0) * 
+        parseFloat(oth_grip_rt_prep || 0))
+        }
+        const timer = setTimeout(() => {
+            addOthgriprep();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [oth_grip_qty_prep, oth_grip_uno_prep, oth_grip_rt_prep]);
+
+    // function to calculate other grip labour wrap on change
+    useEffect(() => {
+        const addOthgriwrap = () => {
+        setOthgripwrapTotal(parseFloat(oth_grip_qty_wrap || 0) * 
+        parseFloat(oth_grip_uno_wrap || 0) * 
+        parseFloat(oth_grip_rt_wrap || 0))
+        }
+        const timer = setTimeout(() => {
+            addOthgriwrap();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [oth_grip_qty_wrap, oth_grip_uno_wrap, oth_grip_rt_wrap]);
+
+    // function to calculate  other grip labour all on change
+    useEffect(() => {
+        const addOthgriall = () => {
+        setOthgripallTotal(parseFloat(othergriplabourTotal || 0) +
+        parseFloat(othgripprepTotal || 0) +
+        parseFloat(othgripwrapTotal || 0))
+        }
+        const timer = setTimeout(() => {
+            addOthgriall();
+        }, 1000);
+
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [othergriplabourTotal, othgripprepTotal, othgripwrapTotal]);
+
+    // function to calculate dailies grip on change
+    useEffect(() => {
+        const addDaigri = () => {
+        setDailiesgripTotal(parseFloat(dailies_grip_qty || 0) * 
+        parseFloat(dailies_grip_uno || 0) * 
+        parseFloat(dailies_grip_rt || 0))
+        }
+        const timer = setTimeout(() => {
+          addDaigri();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+      }, [dailies_grip_qty, dailies_grip_uno, dailies_grip_rt]);
+
     // function to add all Grip Labour on change
     useEffect(() => {
       const AddGriLab = () => {
       setGriplabourTotal(
-      parseFloat(keygripTotal || 0) +
-      parseFloat(bestboygripTotal || 0) +
-      parseFloat(gripsTotal || 0) +
+      parseFloat(kgripallTotal || 0) +
+      parseFloat(bbgripallTotal || 0) +
+      parseFloat(gripsallTotal || 0) +
+      parseFloat(dolgripallTotal || 0) +
+      parseFloat(swigripsallTotal || 0) +
+      parseFloat(othgripallTotal || 0) +
       parseFloat(dailiesgripTotal || 0) +
-      parseFloat(dollycranegripTotal || 0) +
-      parseFloat(swinggripsTotal || 0) +
-      parseFloat(fringes_taxes_grip || 0) +
-      parseFloat(othergriplabourTotal || 0)
+      parseFloat(days6th7th_grip || 0) +
+      parseFloat(overtime_grip || 0) +
+      parseFloat(holidays_grip || 0) +
+      parseFloat(box_rent_grip || 0) +
+      parseFloat(other_solo_grip || 0) +
+      parseFloat(fringes_taxes_grip || 0)
       )
       }
       const timer = setTimeout(() => {
@@ -202,9 +539,11 @@ const Grip = (props) => {
       clearTimeout(timer);
       };
       // eslint-disable-next-line
-      }, [keygripTotal, bestboygripTotal, gripsTotal,
-        dailiesgripTotal, dollycranegripTotal, swinggripsTotal,
-        othergriplabourTotal, fringes_taxes_grip,]);
+      }, [kgripallTotal, bbgripallTotal, gripsallTotal,
+        dolgripallTotal, swigripsallTotal, othgripallTotal,
+        dailiesgripTotal, days6th7th_grip, overtime_grip,
+        holidays_grip, box_rent_grip, other_solo_grip,
+        fringes_taxes_grip,]);
    
   return (
     <div className="mt-5">
