@@ -2805,12 +2805,6 @@ function BudgetEdit() {
   // hair makeup dailies
   // hair makeup dailies shoot Total postData 
   const [hairmakeupdailiesTotal, setHairmakeupdailiesTotal] = useState(0);
-  // hair makeup dailies prep Total postData 
-  const [makdayprepTotal, setMakdayprepTotal] = useState(0);
-  // hair makeup dailies wrap Total postData 
-  const [makdaywrapTotal, setMakdaywrapTotal] = useState(0);
-  // hair makeup dailies all Total postData 
-  const [makdayallTotal, setMakdayallTotal] = useState(0);
 
   // other makeup labour
   // other makeup labour shoot Total postData 
@@ -3145,14 +3139,6 @@ function BudgetEdit() {
     elec_uno_wrap: 0,
     elec_una_wrap: "",
     elec_rt_wrap: 0,
-    d_elec_qty_prep: 0,
-    d_elec_uno_prep: 0,
-    d_elec_una_prep: "",
-    d_elec_rt_prep: 0,
-    d_elec_qty_wrap: 0,
-    d_elec_uno_wrap: 0,
-    d_elec_una_wrap: "",
-    d_elec_rt_wrap: 0,
     gen_op_qty_prep: 0,
     gen_op_uno_prep: 0,
     gen_op_una_prep: "",
@@ -3169,6 +3155,14 @@ function BudgetEdit() {
     ot_el_uno_wrap: 0,
     ot_el_una_wrap: "",
     ot_el_rt_wrap: 0,
+    d_elec_qty_prep: 0,
+    d_elec_uno_prep: 0,
+    d_elec_una_prep: "",
+    d_elec_rt_prep: 0,
+    d_elec_qty_wrap: 0,
+    d_elec_uno_wrap: 0,
+    d_elec_una_wrap: "",
+    d_elec_rt_wrap: 0,
     // old _prep wrap
     fringes_taxes_electric: 0,
     gaffer_qty: 0,
@@ -3465,7 +3459,7 @@ function BudgetEdit() {
   // other grip labour wrap Total postData 
   const [othgripwrapTotal, setOthgripwrapTotal] = useState(0);
   // other grip labour all Total postData 
-  const [othgripallTotal, setOthallTotal] = useState(0);
+  const [othgripallTotal, setOthgripallTotal] = useState(0);
 
   // dailies grip Total postData 
   const [dailiesgripTotal, setDailiesgripTotal] = useState(0);
@@ -5676,7 +5670,7 @@ function BudgetEdit() {
             craft_services_una_wrap,
             craft_services_rt_wrap,
             // old
-            fringes_taxes_production,
+            fringes_taxes_production, production_manager_units_name,
             production_manager_quantity, production_manager_units_number,
             production_manager_rate, production_supervisor_quantity,
             production_supervisor_units_number, production_supervisor_units_name,
@@ -11059,6 +11053,7 @@ function BudgetEdit() {
       gripsprepTotal={gripsprepTotal}
       setGripsprepTotal={setGripsprepTotal}
       gripswrapTotal={gripswrapTotal}
+      setGripswrapTotal={setGripswrapTotal}
       gripsallTotal={gripsallTotal}
       setGripsallTotal={setGripsallTotal}
       dolgripprepTotal={dolgripprepTotal}

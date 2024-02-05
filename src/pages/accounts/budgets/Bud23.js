@@ -117,77 +117,105 @@
   // other grip labour all Total postData 
   const [othgripallTotal, setOthgripallTotal] = useState(0);
 
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>18.70</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Other Grip Labour</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="other_grip_labour_qty" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="other_grip_labour_qty"
+        value={other_grip_labour_qty}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.other_grip_labour_qty?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="other_grip_labour_uno" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="other_grip_labour_uno"
+        value={other_grip_labour_uno}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.other_grip_labour_uno?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="other_grip_labour_una" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="other_grip_labour_una"
+        value={other_grip_labour_una}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.other_grip_labour_una?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="other_grip_labour_rt" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="other_grip_labour_rt"
+        value={other_grip_labour_rt}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.other_grip_labour_rt?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="othergriplabourTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="othergriplabourTotal"
+        value={othergriplabourTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.othergriplabourTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+
   // dailies grip Total postData 
   const [dailiesgripTotal, setDailiesgripTotal] = useState(0);
 
   // Grip Labour Total postData 
   const [griplabourTotal, setGriplabourTotal] = useState(0);
-
-  // electric
-  // Totals
-
-  // gaffer
-  // gaffer shoot Total postData 
-  const [gafferTotal, setGafferTotal] = useState(0);
-  // gaffer prep Total postData 
-  const [gafprepTotal, setGafprepTotal] = useState(0);
-  // gaffer wrap Total postData 
-  const [gafwrapTotal, setGafwrapTotal] = useState(0);
-  // gaffer all Total postData 
-  const [gafallTotal, setGafallTotal] = useState(0);
-
-  // best boy
-  // best boy shoot Total postData 
-  const [bestboyTotal, setBestboyTotal] = useState(0);
-  // best boy prep Total postData 
-  const [bboyprepTotal, setBboyprepTotal] = useState(0);
-  // best boy wrap Total postData 
-  const [bboywrapTotal, setBboywrapTotal] = useState(0);
-  // best boy all Total postData 
-  const [bboyallTotal, setBboyallTotal] = useState(0);
-
-  // electrician
-  // electrician shoot Total postData 
-  const [electricianTotal, setElectricianTotal] = useState(0);
-  // electrician prep Total postData 
-  const [elecprepTotal, setElecprepTotal] = useState(0);
-  // electrician wrap Total postData 
-  const [elecwrapTotal, setElecwrapTotal] = useState(0);
-  // electrician all Total postData 
-  const [elecallTotal, setElecallTotal] = useState(0);
-
-  // dailies electric
-  // dailies electric shoot Total postData 
-  const [dailieselecTotal, setDailieselecTotal] = useState(0);
-  // dailies electric prep Total postData 
-  const [daelecprepTotal, setDaelecprepTotal] = useState(0);
-  // dailies electric wrap Total postData 
-  const [daelecwrapTotal, setDaelecwrapTotal] = useState(0);
-  // dailies electric all Total postData 
-  const [daelecallTotal, setDaelecallTotal] = useState(0);
-
-  // generator operator
-  // generator operator shoot Total postData 
-  const [generatoropTotal, setGeneratoropTotal] = useState(0);
-  // generator operator prep Total postData 
-  const [genopprepTotal, setGenopprepTotal] = useState(0);
-  // generator operator wrap Total postData 
-  const [genopwrapTotal, setGenopwrapTotal] = useState(0);
-  // generator operator all Total postData 
-  const [genopallTotal, setGenopallTotal] = useState(0);
-
-  // other electric
-  // other electric shoot Total postData 
-  const [otherelectricTotal, setOtherelectricTotal] = useState(0);
-  // other electric prep Total postData 
-  const [otelecprepTotal, setOtelecprepTotal] = useState(0);
-  // other electric wrap Total postData 
-  const [otelecwrapTotal, setOtelecwrapTotal] = useState(0);
-  // other electric all Total postData 
-  const [otelecallTotal, setOtelecallTotal] = useState(0);
-
-  // Electric Labour Total postData 
-  const [electriclabourTotal, setElectriclabourTotal] = useState(0);
 
 // Budget Top Old
 {/* old */}
@@ -322,3 +350,10 @@
     //     [event.target.name]: parseFloat(event.target.value.replace(/[^0-9.]/g, '') || 0 ),
     //     });
     // };
+
+// hair makeup dailies prep Total postData 
+const [makdayprepTotal, setMakdayprepTotal] = useState(0);
+// hair makeup dailies wrap Total postData 
+const [makdaywrapTotal, setMakdaywrapTotal] = useState(0);
+// hair makeup dailies all Total postData 
+const [makdayallTotal, setMakdayallTotal] = useState(0);

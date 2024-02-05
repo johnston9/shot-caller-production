@@ -4208,7 +4208,7 @@ const Camera = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="fringes_taxes_camera" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
