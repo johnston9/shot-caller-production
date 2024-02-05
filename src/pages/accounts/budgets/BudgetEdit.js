@@ -3471,6 +3471,16 @@ function BudgetEdit() {
 
   // Production Sound Labour postData
   const [postDataSoundPro, setPostDataSoundPro] = useState({
+    days6th7th_unit_sound: "",
+    days6th7th_sound: 0,
+    overtime_unit_sound: "",
+    overtime_sound: 0,
+    holidays_unit_sound: "", 
+    holidays_sound: 0,
+    box_rent_unit_sound: "",
+    box_rent_sound: 0,
+    other_solo_sound: 0,
+    // old
     fringes_taxes_sound: 0,
     sound_mixer_qty: 0,
     sound_mixer_uno: 0,
