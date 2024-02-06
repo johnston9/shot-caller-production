@@ -1,209 +1,142 @@
-    days6th7th_unit_grip,
-    days6th7th_grip,
-    overtime_unit_grip,
-    overtime_grip,
-    holidays_unit_grip, 
-    holidays_grip,
-    box_rent_unit_grip,
-    box_rent_grip,
-    other_solo_grip,
-    k_grip_qty_prep,
-    k_grip_uno_prep,
-    k_grip_una_prep,
-    k_grip_rt_prep,
-    k_grip_qty_wrap,
-    k_grip_uno_wrap,
-    k_grip_una_wrap,
-    k_grip_rt_wrap,
-    bb_grip_qty_prep,
-    bb_grip_uno_prep,
-    bb_grip_una_prep,
-    bb_grip_rt_prep,
-    bb_grip_qty_wrap,
-    bb_grip_uno_wrap,
-    bb_grip_una_wrap,
-    bb_grip_rt_wrap,
-    grips_qty_prep,
-    grips_uno_prep,
-    grips_una_prep,
-    grips_rt_prep,
-    grips_qty_wrap,
-    grips_uno_wrap,
-    grips_una_wrap,
-    grips_rt_wrap,
-    dol_grip_qty_prep,
-    dol_grip_uno_prep,
-    dol_grip_una_prep,
-    dol_grip_rt_prep,
-    dol_grip_qty_wrap,
-    dol_grip_uno_wrap,
-    dol_grip_una_wrap,
-    dol_grip_rt_wrap,
-    sw_grips_qty_prep,
-    sw_grips_uno_prep,
-    sw_grips_una_prep,
-    sw_grips_rt_prep,
-    sw_grips_qty_wrap,
-    sw_grips_uno_wrap,
-    sw_grips_una_wrap,
-    sw_grips_rt_wrap,
-    oth_grip_qty_prep,
-    oth_grip_uno_prep,
-    oth_grip_una_prep,
-    oth_grip_rt_prep,
-    oth_grip_qty_wrap,
-    oth_grip_uno_wrap,
-    oth_grip_una_wrap,
-    oth_grip_rt_wrap,
+    days6th7th_unit_sound,
+    days6th7th_sound,
+    overtime_unit_sound,
+    overtime_sound,
+    holidays_unit_sound, 
+    holidays_sound,
+    box_rent_unit_sound,
+    box_rent_sound,
+    other_solo_sound,
+    so_mix_qty_prep,
+    so_mix_uno_prep,
+    so_mix_una_prep,
+    so_mix_rt_prep,
+    so_mix_qty_wrap,
+    so_mix_uno_wrap,
+    so_mix_una_wrap,
+    so_mix_rt_wrap,
+    boom_op_qty_prep,
+    boom_op_uno_prep,
+    boom_op_una_prep,
+    boom_op_rt_prep,
+    boom_op_qty_wrap,
+    boom_op_uno_wrap,
+    boom_op_una_wrap,
+    boom_op_rt_wrap,
+    cab_wran_qty_prep,
+    cab_wran_uno_prep,
+    cab_wran_una_prep,
+    cab_wran_rt_prep,
+    cab_wran_qty_wrap,
+    cab_wran_uno_wrap,
+    cab_wran_una_wrap,
+    cab_wran_rt_wrap,
+    ot_sound_qty_prep,
+    ot_sound_uno_prep,
+    ot_sound_una_prep,
+    ot_sound_rt_prep,
+    ot_sound_qty_wrap,
+    ot_sound_uno_wrap,
+    ot_sound_una_wrap,
+    ot_sound_rt_wrap,
     // Totals
-
-  // key grip
-  // key grip shoot Total postData 
-  const [keygripTotal, setKeygripTotal] = useState(0);
-  // key grip prep Total postData 
-  const [kgripprepTotal, setKgripprepTotal] = useState(0);
-  // key grip wrap Total postData 
-  const [kgripwrapTotal, setKgripwrapTotal] = useState(0);
-  // key grip all Total postData 
-  const [kgripallTotal, setKgripallTotal] = useState(0);
-
-  // best boy grip
-  // best boy grip shoot Total postData 
-  const [bestboygripTotal, setBestboygripTotal] = useState(0);
-  // best boy grip prep Total postData 
-  const [bbgripprepTotal, setBbgripprepTotal] = useState(0);
-  // best boy grip wrap Total postData 
-  const [bbgripwrapTotal, setBbgripwrapTotal] = useState(0);
-  // best boy grip all Total postData 
-  const [bbgripallTotal, setBbgripallTotal] = useState(0);
-
-  // grips
-  // grips shoot Total postData 
-  const [gripsTotal, setGripsTotal] = useState(0);
-  // grips prep Total postData 
-  const [gripsprepTotal, setGripsprepTotal] = useState(0);
-  // grips wrap Total postData 
-  const [gripswrapTotal, setGripswrapTotal] = useState(0);
-  // grips all Total postData 
-  const [gripsallTotal, setGripsallTotal] = useState(0);
-
-  // dolly crane grip
-  // dolly crane grip shoot Total postData 
-  const [dollycranegripTotal, setDollycranegripTotal] = useState(0);
-  // dolly crane grip prep Total postData 
-  const [dolgripprepTotal, setDolgripprepTotal] = useState(0);
-  // dolly crane grip wrap Total postData 
-  const [dolgripwrapTotal, setDolgripwrapTotal] = useState(0);
-  // dolly crane grip all Total postData 
-  const [dolgripallTotal, setDolgripallTotal] = useState(0);
-
-  // swing grips
-  // swing grips shoot Total postData 
-  const [swinggripsTotal, setSwinggripsTotal] = useState(0);
-  // swing grips prep Total postData 
-  const [swigripsprepTotal, setSwigripsprepTotal] = useState(0);
-  // swing grips wrap Total postData 
-  const [swigripswrapTotal, setSwigripswrapTotal] = useState(0);
-  // swing grips all Total postData 
-  const [swigripsallTotal, setSwigripsallTotal] = useState(0);
-
-  // other grip labour 
-  // other grip labour shoot Total postData 
-  const [othergriplabourTotal, setOthergriplabourTotal] = useState(0);
-  // other grip labour prep Total postData 
-  const [othgripprepTotal, setOthgripprepTotal] = useState(0);
-  // other grip labour wrap Total postData 
-  const [othgripwrapTotal, setOthgripwrapTotal] = useState(0);
-  // other grip labour all Total postData 
-  const [othgripallTotal, setOthgripallTotal] = useState(0);
+  // sound mixer
+  // sound mixer shoot Total postData 
+  const [soundmixerTotal, setSoundmixerTotal] = useState(0);
+  // sound mixer prep Total postData 
+  const [somixprepTotal, setSomixprepTotal] = useState(0);
+  // sound mixer wrap Total postData 
+  const [somixwrapTotal, setSomixwrapTotal] = useState(0);
+  // sound mixer all Total postData 
+  const [somixallTotal, setSomixallTotal] = useState(0);
 
     <Row>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>18.70</p>
+    <p className={`${styles.Underline}`}>19.10</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Other Grip Labour</p>
+    <p className={`${styles.Underline}`}>Sound Mixer</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
-    <Form.Group controlId="other_grip_labour_qty" 
+    <Form.Group controlId="sound_mixer_qty" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="other_grip_labour_qty"
-        value={other_grip_labour_qty}
+        name="sound_mixer_qty"
+        value={sound_mixer_qty}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.other_grip_labour_qty?.map((message, idx) => (
+    {errors?.sound_mixer_qty?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     <Col className="px-1 mx-0" md={1} >
-    <Form.Group controlId="other_grip_labour_uno" 
+    <Form.Group controlId="sound_mixer_uno" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="other_grip_labour_uno"
-        value={other_grip_labour_uno}
+        name="sound_mixer_uno"
+        value={sound_mixer_uno}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.other_grip_labour_uno?.map((message, idx) => (
+    {errors?.sound_mixer_uno?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     <Col className="px-1 mx-0" md={1} >
-    <Form.Group controlId="other_grip_labour_una" 
+    <Form.Group controlId="sound_mixer_una" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="other_grip_labour_una"
-        value={other_grip_labour_una}
+        name="sound_mixer_una"
+        value={sound_mixer_una}
         onChange={handleChangeText}
             />
     </Form.Group>
-    {errors?.other_grip_labour_una?.map((message, idx) => (
+    {errors?.sound_mixer_una?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     <Col className="px-1 mx-0" md={1} >
-    <Form.Group controlId="other_grip_labour_rt" 
+    <Form.Group controlId="sound_mixer_rt" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="other_grip_labour_rt"
-        value={other_grip_labour_rt}
+        name="sound_mixer_rt"
+        value={sound_mixer_rt}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.other_grip_labour_rt?.map((message, idx) => (
+    {errors?.sound_mixer_rt?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
     ))}
     </Col>
     <Col md={2} >
-    <Form.Group controlId="othergriplabourTotal" 
+    <Form.Group controlId="soundmixerTotal" 
         className={`${styles.Width95} text-center mb-1`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="othergriplabourTotal"
-        value={othergriplabourTotal}
+        name="soundmixerTotal"
+        value={soundmixerTotal}
         readOnly
             />
     </Form.Group>
-    {errors?.othergriplabourTotal?.map((message, idx) => (
+    {errors?.soundmixerTotal?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>
@@ -211,11 +144,38 @@
     </Col>
     </Row>
 
-  // dailies grip Total postData 
-  const [dailiesgripTotal, setDailiesgripTotal] = useState(0);
+  // boom operator
+  // boom operator shoot Total postData 
+  const [boomoperatorTotal, setBoomoperatorTotal] = useState(0);
+  // boom operator prep Total postData 
+  const [boomopprepTotal, setBoomopprepTotal] = useState(0);
+  // boom operator wrap Total postData 
+  const [boomopwrapTotal, setBoomopwrapTotal] = useState(0);
+  // boom operator all Total postData 
+  const [boomopallTotal, setBoomopallTotal] = useState(0);
 
-  // Grip Labour Total postData 
-  const [griplabourTotal, setGriplabourTotal] = useState(0);
+  // cable wrangler
+  // cable wrangler shoot Total postData 
+  const [cablewranglerTotal, setCablewranglerTotal] = useState(0);
+  // cable wrangler prep Total postData 
+  const [cawranprepTotal, setCawranprepTotal] = useState(0);
+  // cable wrangler wrap Total postData 
+  const [cawranwrapTotal, setCawranwrapTotal] = useState(0);
+  // cable wrangler all Total postData 
+  const [cawranallTotal, setCawranallTotal] = useState(0);
+
+  // other sound labour
+  // other sound labour shoot Total postData 
+  const [othersoundlabourTotal, setOthersoundlabourTotal] = useState(0);
+  // other sound labour prep Total postData 
+  const [otsoundprepTotal, setOtsoundprepTotal] = useState(0);
+  // other sound labour wrap Total postData 
+  const [otsoundwrapTotal, setOtsoundwrapTotal] = useState(0);
+  // other sound labour all Total postData 
+  const [otsoundallTotal, setOtsoundallTotal] = useState(0);
+
+  // Sound Labour Total postData 
+  const [soundlabourTotal, setSoundlabourTotal] = useState(0);
 
 // Budget Top Old
 {/* old */}

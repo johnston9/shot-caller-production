@@ -15,9 +15,33 @@ const Sound = (props) => {
       boomoperatorTotal, setBoomoperatorTotal,
       cablewranglerTotal, setCablewranglerTotal, setShow,
       othersoundlabourTotal, setOthersoundlabourTotal,
-      soundlabourTotal, setSoundlabourTotal,} = props;
+      soundlabourTotal, setSoundlabourTotal,
+      somixprepTotal, setSomixprepTotal,
+      somixwrapTotal, setSomixwrapTotal,
+      somixallTotal, setSomixallTotal,
+      boomopprepTotal, setBoomopprepTotal,
+      boomopwrapTotal, setBoomopwrapTotal,
+      boomopallTotal, setBoomopallTotal,
+      cawranprepTotal, setCawranprepTotal,
+      cawranwrapTotal, setCawranwrapTotal,
+      cawranallTotal, setCawranallTotal,
+      otsoundprepTotal, setOtsoundprepTotal,
+      otsoundwrapTotal, setOtsoundwrapTotal,
+      otsoundallTotal, setOtsoundallTotal,
+    } = props;
 
-    const {sound_mixer_qty, sound_mixer_uno,
+    const {days6th7th_unit_sound, days6th7th_sound, 
+        overtime_unit_sound, overtime_sound, holidays_unit_sound, holidays_sound,
+        box_rent_unit_sound, box_rent_sound, other_solo_sound,
+        so_mix_qty_prep, so_mix_uno_prep, so_mix_una_prep, so_mix_rt_prep,
+        so_mix_qty_wrap, so_mix_uno_wrap, so_mix_una_wrap, so_mix_rt_wrap,
+        boom_op_qty_prep, boom_op_uno_prep, boom_op_una_prep, boom_op_rt_prep,
+        boom_op_qty_wrap, boom_op_uno_wrap, boom_op_una_wrap, boom_op_rt_wrap,
+        cab_wran_qty_prep, cab_wran_uno_prep, cab_wran_una_prep, cab_wran_rt_prep,
+        cab_wran_qty_wrap, cab_wran_uno_wrap, cab_wran_una_wrap, cab_wran_rt_wrap,
+        ot_sound_qty_prep, ot_sound_uno_prep, ot_sound_una_prep, ot_sound_rt_prep,
+        ot_sound_qty_wrap, ot_sound_uno_wrap, ot_sound_una_wrap, ot_sound_rt_wrap,
+      sound_mixer_qty, sound_mixer_uno,
       sound_mixer_una, sound_mixer_rt,
       boom_operator_qty, boom_operator_uno,
       boom_operator_una, boom_operator_rt,
@@ -31,7 +55,7 @@ const Sound = (props) => {
     const handleChange = (event) => {
       setPostDataSoundPro({
       ...postDataSoundPro,
-      [event.target.name]: parseFloat(event.target.value || 0 ),
+      [event.target.name]: event.target.value.replace(/[^0-9.]/g, ''),
       });
     }; 
 
@@ -44,7 +68,9 @@ const Sound = (props) => {
     };
 
     // Calculate Functions
-    // function to calculate Sound Mixer on change
+
+    // Sound Mixer
+    // function to calculate Sound Mixer shoot on change
     useEffect(() => {
       const addSoumix = () => {
       setSoundmixerTotal(parseFloat(sound_mixer_qty || 0) * 
@@ -61,7 +87,59 @@ const Sound = (props) => {
       // eslint-disable-next-line
     }, [sound_mixer_qty, sound_mixer_uno, sound_mixer_rt]);
 
-    // function to calculate Boom Operator on change
+    // function to calculate Sound Mixer prep on change
+    useEffect(() => {
+        const addSoumixprep = () => {
+        setSomixprepTotal(parseFloat(so_mix_qty_prep || 0) * 
+        parseFloat(so_mix_uno_prep || 0) * 
+        parseFloat(so_mix_rt_prep || 0))
+        }
+        const timer = setTimeout(() => {
+            addSoumixprep();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [so_mix_qty_prep, so_mix_uno_prep, so_mix_rt_prep]);
+
+    // function to calculate Sound Mixer wrap on change
+    useEffect(() => {
+        const addSoumixwrap = () => {
+        setSomixwrapTotal(parseFloat(so_mix_qty_wrap || 0) * 
+        parseFloat(so_mix_uno_wrap || 0) * 
+        parseFloat(so_mix_rt_wrap || 0))
+        }
+        const timer = setTimeout(() => {
+            addSoumixwrap();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [so_mix_qty_wrap, so_mix_uno_wrap, so_mix_rt_wrap]);
+
+    // function to calculate Sound Mixer all on change
+    useEffect(() => {
+        const addSoumixall = () => {
+        setSomixallTotal(parseFloat(soundmixerTotal || 0) +
+        parseFloat(somixprepTotal || 0) +
+        parseFloat(somixwrapTotal || 0))
+        }
+        const timer = setTimeout(() => {
+            addSoumixall();
+        }, 1000);
+
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [soundmixerTotal, somixprepTotal, somixwrapTotal]);
+
+    // Boom Operator
+    // function to calculate Boom Operator shoot on change
     useEffect(() => {
       const addBooope = () => {
       setBoomoperatorTotal(parseFloat(boom_operator_qty || 0) * 
@@ -78,7 +156,59 @@ const Sound = (props) => {
       // eslint-disable-next-line
     }, [boom_operator_qty, boom_operator_uno, boom_operator_rt]);
 
-    // function to calculate Cable Wrangler on change
+    // function to calculate Boom Operator prep on change
+    useEffect(() => {
+        const addBooopprep = () => {
+        setBoomopprepTotal(parseFloat(boom_op_qty_prep || 0) * 
+        parseFloat(boom_op_uno_prep || 0) * 
+        parseFloat(boom_op_rt_prep || 0))
+        }
+        const timer = setTimeout(() => {
+            addBooopprep();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [boom_op_qty_prep, boom_op_uno_prep, boom_op_rt_prep]);
+
+    // function to calculate Boom Operator wrap on change
+    useEffect(() => {
+        const addBooopwrap = () => {
+        setBoomopwrapTotal(parseFloat(boom_op_qty_wrap || 0) * 
+        parseFloat(boom_op_uno_wrap || 0) * 
+        parseFloat(boom_op_rt_wrap || 0))
+        }
+        const timer = setTimeout(() => {
+            addBooopwrap();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [boom_op_qty_wrap, boom_op_uno_wrap, boom_op_rt_wrap]);
+
+    // function to calculate Boom Operator all on change
+    useEffect(() => {
+        const addBooopall = () => {
+        setBoomopallTotal(parseFloat(boomoperatorTotal || 0) +
+        parseFloat(boomopprepTotal || 0) +
+        parseFloat(boomopwrapTotal || 0))
+        }
+        const timer = setTimeout(() => {
+            addBooopall();
+        }, 1000);
+
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [boomoperatorTotal, boomopprepTotal, boomopwrapTotal]);
+
+    // Cable Wrangler
+    // function to calculate Cable Wrangler shoot on change
     useEffect(() => {
       const addCabwra = () => {
       setCablewranglerTotal(parseFloat(cable_wrangler_qty || 0) * 
@@ -95,7 +225,59 @@ const Sound = (props) => {
       // eslint-disable-next-line
     }, [cable_wrangler_qty, cable_wrangler_uno, cable_wrangler_rt]);
 
-    // function to calculate Other Sound Labour on change
+    // function to calculate Cable Wrangler prep on change
+    useEffect(() => {
+        const addCabwraprep = () => {
+        setCawranprepTotal(parseFloat(cab_wran_qty_prep || 0) * 
+        parseFloat(cab_wran_uno_prep || 0) * 
+        parseFloat(cab_wran_rt_prep || 0))
+        }
+        const timer = setTimeout(() => {
+            addCabwraprep();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [cab_wran_qty_prep, cab_wran_uno_prep, cab_wran_rt_prep]);
+
+    // function to calculate Cable Wrangler wrap on change
+    useEffect(() => {
+        const addCabwrawrap = () => {
+        setCawranwrapTotal(parseFloat(cab_wran_qty_wrap || 0) * 
+        parseFloat(cab_wran_uno_wrap || 0) * 
+        parseFloat(cab_wran_rt_wrap || 0))
+        }
+        const timer = setTimeout(() => {
+            addCabwrawrap();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [cab_wran_qty_wrap, cab_wran_uno_wrap, cab_wran_rt_wrap]);
+
+    // function to calculate Cable Wrangler all on change
+    useEffect(() => {
+        const addCabwraall = () => {
+        setCawranallTotal(parseFloat(cablewranglerTotal || 0) +
+        parseFloat(cawranprepTotal || 0) +
+        parseFloat(cawranwrapTotal || 0))
+        }
+        const timer = setTimeout(() => {
+            addCabwraall();
+        }, 1000);
+
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [cablewranglerTotal, cawranprepTotal, cawranwrapTotal]);
+
+    // Other Sound Labour
+    // function to calculate Other Sound Labour shoot on change
     useEffect(() => {
       const addOthsou = () => {
       setOthersoundlabourTotal(parseFloat(other_sound_labour_qty || 0) * 
@@ -112,15 +294,71 @@ const Sound = (props) => {
       // eslint-disable-next-line
     }, [other_sound_labour_qty, other_sound_labour_uno, other_sound_labour_rt]);
 
+    // function to calculate Other Sound Labour prep on change
+    useEffect(() => {
+        const addOthsouprep = () => {
+        setOtsoundprepTotal(parseFloat(ot_sound_qty_prep || 0) * 
+        parseFloat(ot_sound_uno_prep || 0) * 
+        parseFloat(ot_sound_rt_prep || 0))
+        }
+        const timer = setTimeout(() => {
+            addOthsouprep();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [ot_sound_qty_prep, ot_sound_uno_prep, ot_sound_rt_prep]);
+
+    // function to calculate Other Sound Labour wrap on change
+    useEffect(() => {
+        const addOthsouwrap = () => {
+        setOtsoundwrapTotal(parseFloat(ot_sound_qty_wrap || 0) * 
+        parseFloat(ot_sound_uno_wrap || 0) * 
+        parseFloat(ot_sound_rt_wrap || 0))
+        }
+        const timer = setTimeout(() => {
+            addOthsouwrap();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [ot_sound_qty_wrap, ot_sound_uno_wrap, ot_sound_rt_wrap]);
+
+    // function to calculate Other Sound Labour all on change
+    useEffect(() => {
+        const addOthsouall = () => {
+        setOtsoundallTotal(parseFloat(othersoundlabourTotal || 0) +
+        parseFloat(otsoundprepTotal || 0) +
+        parseFloat(otsoundwrapTotal || 0))
+        }
+        const timer = setTimeout(() => {
+            addOthsouall();
+        }, 1000);
+
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [othersoundlabourTotal, otsoundprepTotal, otsoundwrapTotal]);
+
     // function to add all Sound Labour on change
     useEffect(() => {
       const AddSouLab = () => {
       setSoundlabourTotal(
-      parseFloat(soundmixerTotal || 0) +
-      parseFloat(boomoperatorTotal || 0) +
-      parseFloat(cablewranglerTotal || 0) +
-      parseFloat(fringes_taxes_sound || 0) +
-      parseFloat(othersoundlabourTotal || 0)
+      parseFloat(somixallTotal || 0) +
+      parseFloat(boomopallTotal || 0) +
+      parseFloat(cawranallTotal || 0) +
+      parseFloat(otsoundallTotal || 0) +
+      parseFloat(days6th7th_sound || 0) +
+      parseFloat(overtime_sound || 0) +
+      parseFloat(holidays_sound || 0) +
+      parseFloat(box_rent_sound || 0) +
+      parseFloat(other_solo_sound || 0) +
+      parseFloat(fringes_taxes_sound || 0)
       )
       }
       const timer = setTimeout(() => {
@@ -131,58 +369,178 @@ const Sound = (props) => {
       clearTimeout(timer);
       };
       // eslint-disable-next-line
-      }, [soundmixerTotal, boomoperatorTotal, cablewranglerTotal,
-        othersoundlabourTotal, fringes_taxes_sound,]);
+      }, [somixallTotal, boomopallTotal, cawranallTotal,
+        otsoundallTotal, days6th7th_sound, overtime_sound,
+        holidays_sound, box_rent_sound, other_solo_sound,
+        fringes_taxes_sound,]);
     
   return (
-    <div className="mt-5">
-    <Row >
+    <div className={`${styles.WhiteBack} mx-5 mt-3 mb-5`}>
+    <Row className="mx-0" >
+    <Col md={12}
+        className={ `${styles.Overview} py-0 text-center`}>
+            <span className={`${styles.Close } py-2 mb-0 float-right `} 
+    onClick={() => setShow(false) } >Close</span>
+    <p className="pl-5 py-2">
+    PRODUCTION SOUND LABOUR SECTION
+    </p>
+    </Col>
+    </Row>
+    <div className="px-2">
+    <Row className={`mt-3`}>
+    <Col md={1} ></Col>
     <Col md={1} >
-    <p className="mb-2">19.00</p>
+    <p className={`${styles.Underline}`}>19.00</p>
     </Col>
     <Col md={9} >
-    <p className={ `${styles.BoldBlack} mb-2`}>Sound Labour</p>
-    </Col>
-    <Col md={2}>
-    <span className={`${styles.Close }`} 
-    onClick={() => setShow(false) } >Close</span>
+    <p className={ `${styles.BoldBlack} mb-1`}>PRODUCTION SOUND LABOUR</p>
     </Col>
     </Row>
     {/* TITLES */}
-    <Row className={ `${styles.Overview} mb-2 py-1`} >
-    <Col md={1} >
+    <Row className={`mb-2 py-0`} >
+    <Col md={1} ></Col>
+    <Col className={ `${styles.Overview} py-1`} md={1} >
     <p className="mb-0">ACCT</p>
     </Col>
-    <Col md={5} >
+    <Col className={ `${styles.Overview} py-1`} md={3} >
     <p className="mb-0">Description</p>
     </Col>
-    <Col md={1} className="text-center" >
+    <Col className={`${styles.Overview} text-center py-1`} md={1} >
     <p className="mb-0">#</p>
     </Col>
-    <Col className="text-center" md={1} >
+    <Col className={`${styles.Overview} text-center py-1`} md={1} >
     <p># Unit</p>
     </Col>
-    <Col md={1} className="text-center" >
+    <Col md={1} className={`${styles.Overview} text-center py-1`} >
     <p className="mb-0">Unit</p>
     </Col>
-    <Col md={1} className="text-center" >
+    <Col md={1} className={`${styles.Overview} text-center py-1`} >
     <p className="mb-0">Price</p>
     </Col>
-    <Col md={2} className="text-center" >
+    <Col md={2} className={`${styles.Overview} text-center py-1`} >
     <p className="mb-0">Total</p>
     </Col>
+    <Col md={1}></Col>
     </Row>
     {/* Sound Mixer */}
-    <Row>
+    <div className="mt-2"> 
+    <Row >
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>19.10</p>
     </Col>
-    <Col md={5} >
-    <p className={`${styles.Underline}`}>Sound Mixer</p>
+    <Col md={9} >
+    <p className={`${styles.BoldBlack}`}>Sound Mixer</p>
+    </Col>
+    </Row>
+    {/* Prep */} 
+    <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Prep</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="so_mix_qty_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="so_mix_qty_prep"
+        value={so_mix_qty_prep}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.so_mix_qty_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="so_mix_uno_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="so_mix_uno_prep"
+        value={so_mix_uno_prep}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.so_mix_uno_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="so_mix_una_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="so_mix_una_prep"
+        value={so_mix_una_prep}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.so_mix_una_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="so_mix_rt_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="so_mix_rt_prep"
+        value={so_mix_rt_prep}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.so_mix_rt_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="somixprepTotal" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="somixprepTotal"
+        value={somixprepTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.somixprepTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={1}></Col>
+    </Row>
+    {/* Shoot */}
+    <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="sound_mixer_qty" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -199,7 +557,7 @@ const Sound = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="sound_mixer_uno" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -216,7 +574,7 @@ const Sound = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="sound_mixer_una" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -233,7 +591,7 @@ const Sound = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="sound_mixer_rt" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -250,7 +608,7 @@ const Sound = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="soundmixerTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -266,7 +624,137 @@ const Sound = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Boom Operator */}
+    {/* Wrap */}
+    <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1}></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Wrap</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="so_mix_qty_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="so_mix_qty_wrap"
+        value={so_mix_qty_wrap}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.so_mix_qty_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="so_mix_uno_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="so_mix_uno_wrap"
+        value={so_mix_uno_wrap}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.so_mix_uno_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="so_mix_una_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="so_mix_una_wrap"
+        value={so_mix_una_wrap}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.so_mix_una_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="so_mix_rt_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="so_mix_rt_wrap"
+        value={so_mix_rt_wrap}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.so_mix_rt_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="somixwrapTotal" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="somixwrapTotal"
+        value={somixwrapTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.somixwrapTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row className="py-0 d-flex align-items-center">
+    <Col md={1}></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={7} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="somixallTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="somixallTotal"
+        value={somixallTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.somixallTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    </div>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-1 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Boom Operator start here */}
     <Row>
     <Col md={1} >
     <p className={`${styles.Underline}`}>19.20</p>
@@ -617,6 +1105,7 @@ const Sound = (props) => {
     ))}
     </Col>
     </Row>
+    </div>
     </div>
   )
 }

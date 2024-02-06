@@ -3480,7 +3480,39 @@ function BudgetEdit() {
     box_rent_unit_sound: "",
     box_rent_sound: 0,
     other_solo_sound: 0,
-    // old
+    so_mix_qty_prep: 0,
+    so_mix_uno_prep: 0,
+    so_mix_una_prep: "",
+    so_mix_rt_prep: 0,
+    so_mix_qty_wrap: 0,
+    so_mix_uno_wrap: 0,
+    so_mix_una_wrap: "",
+    so_mix_rt_wrap: 0,
+    boom_op_qty_prep: 0,
+    boom_op_uno_prep: 0,
+    boom_op_una_prep: "",
+    boom_op_rt_prep: 0,
+    boom_op_qty_wrap: 0,
+    boom_op_uno_wrap: 0,
+    boom_op_una_wrap: "",
+    boom_op_rt_wrap: 0,
+    cab_wran_qty_prep: 0,
+    cab_wran_uno_prep: 0,
+    cab_wran_una_prep: "",
+    cab_wran_rt_prep: 0,
+    cab_wran_qty_wrap: 0,
+    cab_wran_uno_wrap: 0,
+    cab_wran_una_wrap: "",
+    cab_wran_rt_wrap: 0,
+    ot_sound_qty_prep: 0,
+    ot_sound_uno_prep: 0,
+    ot_sound_una_prep: "",
+    ot_sound_rt_prep: 0,
+    ot_sound_qty_wrap: 0,
+    ot_sound_uno_wrap: 0,
+    ot_sound_una_wrap: "",
+    ot_sound_rt_wrap: 0,
+    // old _prep wrap
     fringes_taxes_sound: 0,
     sound_mixer_qty: 0,
     sound_mixer_uno: 0,
@@ -3500,7 +3532,19 @@ function BudgetEdit() {
     other_sound_labour_rt: 0,
   });
 
-  const {sound_mixer_qty, sound_mixer_uno,
+  const {days6th7th_unit_sound, days6th7th_sound, 
+    overtime_unit_sound, overtime_sound, holidays_unit_sound, holidays_sound,
+    box_rent_unit_sound, box_rent_sound, other_solo_sound,
+    so_mix_qty_prep, so_mix_uno_prep, so_mix_una_prep, so_mix_rt_prep,
+    so_mix_qty_wrap, so_mix_uno_wrap, so_mix_una_wrap, so_mix_rt_wrap,
+    boom_op_qty_prep, boom_op_uno_prep, boom_op_una_prep, boom_op_rt_prep,
+    boom_op_qty_wrap, boom_op_uno_wrap, boom_op_una_wrap, boom_op_rt_wrap,
+    cab_wran_qty_prep, cab_wran_uno_prep, cab_wran_una_prep, cab_wran_rt_prep,
+    cab_wran_qty_wrap, cab_wran_uno_wrap, cab_wran_una_wrap, cab_wran_rt_wrap,
+    ot_sound_qty_prep, ot_sound_uno_prep, ot_sound_una_prep, ot_sound_rt_prep,
+    ot_sound_qty_wrap, ot_sound_uno_wrap, ot_sound_una_wrap, ot_sound_rt_wrap,
+    // old
+    sound_mixer_qty, sound_mixer_uno,
     sound_mixer_una, sound_mixer_rt,
     boom_operator_qty, boom_operator_uno,
     boom_operator_una, boom_operator_rt,
@@ -3511,17 +3555,45 @@ function BudgetEdit() {
     fringes_taxes_sound,} = postDataSoundPro;
 
   // Totals
-  // sound mixer Total postData 
+  // sound mixer
+  // sound mixer shoot Total postData 
   const [soundmixerTotal, setSoundmixerTotal] = useState(0);
+  // sound mixer prep Total postData 
+  const [somixprepTotal, setSomixprepTotal] = useState(0);
+  // sound mixer wrap Total postData 
+  const [somixwrapTotal, setSomixwrapTotal] = useState(0);
+  // sound mixer all Total postData 
+  const [somixallTotal, setSomixallTotal] = useState(0);
 
-  // boom operator Total postData 
+  // boom operator
+  // boom operator shoot Total postData 
   const [boomoperatorTotal, setBoomoperatorTotal] = useState(0);
+  // boom operator prep Total postData 
+  const [boomopprepTotal, setBoomopprepTotal] = useState(0);
+  // boom operator wrap Total postData 
+  const [boomopwrapTotal, setBoomopwrapTotal] = useState(0);
+  // boom operator all Total postData 
+  const [boomopallTotal, setBoomopallTotal] = useState(0);
 
-  // cable wrangler Total postData 
-  const [cablewranglerTotal, setCablewranglerTotal] = useState(0)
+  // cable wrangler
+  // cable wrangler shoot Total postData 
+  const [cablewranglerTotal, setCablewranglerTotal] = useState(0);
+  // cable wrangler prep Total postData 
+  const [cawranprepTotal, setCawranprepTotal] = useState(0);
+  // cable wrangler wrap Total postData 
+  const [cawranwrapTotal, setCawranwrapTotal] = useState(0);
+  // cable wrangler all Total postData 
+  const [cawranallTotal, setCawranallTotal] = useState(0);
 
-  // other sound labour Total postData 
+  // other sound labour
+  // other sound labour shoot Total postData 
   const [othersoundlabourTotal, setOthersoundlabourTotal] = useState(0);
+  // other sound labour prep Total postData 
+  const [otsoundprepTotal, setOtsoundprepTotal] = useState(0);
+  // other sound labour wrap Total postData 
+  const [otsoundwrapTotal, setOtsoundwrapTotal] = useState(0);
+  // other sound labour all Total postData 
+  const [otsoundallTotal, setOtsoundallTotal] = useState(0);
 
   // Sound Labour Total postData 
   const [soundlabourTotal, setSoundlabourTotal] = useState(0);
@@ -6406,6 +6478,17 @@ function BudgetEdit() {
           other_grip_labour_una, other_grip_labour_rt,});
         setGriplabourTotal(griplabour_total);
         const {fringes_taxes_sound,
+          days6th7th_unit_sound, days6th7th_sound, 
+          overtime_unit_sound, overtime_sound, holidays_unit_sound, holidays_sound,
+          box_rent_unit_sound, box_rent_sound, other_solo_sound,
+          so_mix_qty_prep, so_mix_uno_prep, so_mix_una_prep, so_mix_rt_prep,
+          so_mix_qty_wrap, so_mix_uno_wrap, so_mix_una_wrap, so_mix_rt_wrap,
+          boom_op_qty_prep, boom_op_uno_prep, boom_op_una_prep, boom_op_rt_prep,
+          boom_op_qty_wrap, boom_op_uno_wrap, boom_op_una_wrap, boom_op_rt_wrap,
+          cab_wran_qty_prep, cab_wran_uno_prep, cab_wran_una_prep, cab_wran_rt_prep,
+          cab_wran_qty_wrap, cab_wran_uno_wrap, cab_wran_una_wrap, cab_wran_rt_wrap,
+          ot_sound_qty_prep, ot_sound_uno_prep, ot_sound_una_prep, ot_sound_rt_prep,
+          ot_sound_qty_wrap, ot_sound_uno_wrap, ot_sound_una_wrap, ot_sound_rt_wrap,
           sound_mixer_qty, sound_mixer_uno,
           sound_mixer_una, sound_mixer_rt,
           boom_operator_qty, boom_operator_uno,
@@ -6415,6 +6498,17 @@ function BudgetEdit() {
           other_sound_labour_qty, other_sound_labour_uno, soundlabour_total,
           other_sound_labour_una, other_sound_labour_rt,} = data.results[0];
         setPostDataSoundPro({fringes_taxes_sound,
+          days6th7th_unit_sound, days6th7th_sound, 
+          overtime_unit_sound, overtime_sound, holidays_unit_sound, holidays_sound,
+          box_rent_unit_sound, box_rent_sound, other_solo_sound,
+          so_mix_qty_prep, so_mix_uno_prep, so_mix_una_prep, so_mix_rt_prep,
+          so_mix_qty_wrap, so_mix_uno_wrap, so_mix_una_wrap, so_mix_rt_wrap,
+          boom_op_qty_prep, boom_op_uno_prep, boom_op_una_prep, boom_op_rt_prep,
+          boom_op_qty_wrap, boom_op_uno_wrap, boom_op_una_wrap, boom_op_rt_wrap,
+          cab_wran_qty_prep, cab_wran_uno_prep, cab_wran_una_prep, cab_wran_rt_prep,
+          cab_wran_qty_wrap, cab_wran_uno_wrap, cab_wran_una_wrap, cab_wran_rt_wrap,
+          ot_sound_qty_prep, ot_sound_uno_prep, ot_sound_una_prep, ot_sound_rt_prep,
+          ot_sound_qty_wrap, ot_sound_uno_wrap, ot_sound_una_wrap, ot_sound_rt_wrap,
           sound_mixer_qty, sound_mixer_uno,
           sound_mixer_una, sound_mixer_rt,
           boom_operator_qty, boom_operator_uno,
@@ -6424,6 +6518,25 @@ function BudgetEdit() {
           other_sound_labour_qty, other_sound_labour_uno,
           other_sound_labour_una, other_sound_labour_rt,});
         setSoundlabourTotal(soundlabour_total);
+            } catch (err) {
+        console.log(err);
+      }
+    };
+
+    handleMount();
+  }, [history, id]);
+
+  // USE EFFECT EDIT 3
+  // Fetch budget3 for edit pre-filled values
+  useEffect(() => {
+    const handleMount = async () => {
+      try {
+        const { data } = await axiosReq.get(`/budgets3/?project=${id}`);
+        console.log(data.results[0])
+        setBudgetId3(data.results[0].id);
+        // budget number
+        const {budget_number} = data.results[0];
+        setBudgetNumber3(budget_number);
         const {fringes_taxes_transport,
           tp_coordinator_qty, tp_coordinator_uno, tp_coordinator_una, tp_coordinator_rt,
           tp_captain_qty,tp_captain_uno, tp_captain_una, tp_captain_rt,
@@ -6460,26 +6573,6 @@ function BudgetEdit() {
           stagehands_qty, stagehands_uno, stagehands_una, stagehands_rt,
           other_tv_qty, other_tv_uno, other_tv_una, other_tv_rt,});
         setTvspecificlabourTotal(tvspecificlabour_total);
-
-            } catch (err) {
-        console.log(err);
-      }
-    };
-
-    handleMount();
-  }, [history, id]);
-
-  // USE EFFECT EDIT 3
-  // Fetch budget3 for edit pre-filled values
-  useEffect(() => {
-    const handleMount = async () => {
-      try {
-        const { data } = await axiosReq.get(`/budgets3/?project=${id}`);
-        console.log(data.results[0])
-        setBudgetId3(data.results[0].id);
-        // budget number
-        const {budget_number} = data.results[0];
-        setBudgetNumber3(budget_number);
         const {office_rentals, office_equipment, office_supplies,
           phones_net, courier_postage, office_other, 
         proOff_total} = data.results[0];
@@ -8561,63 +8654,77 @@ function BudgetEdit() {
   formData.append("cablewrangler_total", cablewranglerTotal);
   formData.append("othersoundlabour_total", othersoundlabourTotal);
   formData.append("soundlabour_total", soundlabourTotal);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
+  // new sound for drf 
+  formData.append("days6th7th_unit_sound", days6th7th_unit_sound);
+  formData.append("days6th7th_sound", days6th7th_sound);
+  formData.append("overtime_unit_sound", overtime_unit_sound);
+  formData.append("overtime_sound", overtime_sound);
+  formData.append("holidays_unit_sound", holidays_unit_sound);
+  formData.append("holidays_sound", holidays_sound);
+  formData.append("box_rent_unit_sound", box_rent_unit_sound);
+  formData.append("box_rent_sound", box_rent_sound);
+  formData.append("other_solo_sound", other_solo_sound);
+  formData.append("so_mix_qty_prep", so_mix_qty_prep);
+  formData.append("so_mix_uno_prep", so_mix_uno_prep);
+  formData.append("so_mix_una_prep", so_mix_una_prep);
+  formData.append("so_mix_rt_prep", so_mix_rt_prep);
+  formData.append("so_mix_qty_wrap", so_mix_qty_wrap);
+  formData.append("so_mix_uno_wrap", so_mix_uno_wrap);
+  formData.append("so_mix_una_wrap", so_mix_una_wrap);
+  formData.append("so_mix_rt_wrap", so_mix_rt_wrap);
+  formData.append("boom_op_qty_prep", boom_op_qty_prep);
+  formData.append("boom_op_uno_prep", boom_op_uno_prep);
+  formData.append("boom_op_una_prep", boom_op_una_prep);
+  formData.append("boom_op_rt_prep", boom_op_rt_prep);
+  formData.append("boom_op_qty_wrap", boom_op_qty_wrap);
+  formData.append("boom_op_uno_wrap", boom_op_uno_wrap);
+  formData.append("boom_op_una_wrap", boom_op_una_wrap);
+  formData.append("boom_op_rt_wrap", boom_op_rt_wrap);
+  formData.append("cab_wran_qty_prep", cab_wran_qty_prep);
+  formData.append("cab_wran_uno_prep", cab_wran_uno_prep);
+  formData.append("cab_wran_una_prep", cab_wran_una_prep);
+  formData.append("cab_wran_rt_prep", cab_wran_rt_prep);
+  formData.append("cab_wran_qty_wrap", cab_wran_qty_wrap);
+  formData.append("cab_wran_uno_wrap", cab_wran_uno_wrap);
+  formData.append("cab_wran_una_wrap", cab_wran_una_wrap);
+  formData.append("cab_wran_rt_wrap", cab_wran_rt_wrap);
+  formData.append("ot_sound_qty_prep", ot_sound_qty_prep);
+  formData.append("ot_sound_uno_prep", ot_sound_uno_prep);
+  formData.append("ot_sound_una_prep", ot_sound_una_prep);
+  formData.append("ot_sound_rt_prep", ot_sound_rt_prep);
+  formData.append("ot_sound_qty_wrap", ot_sound_qty_wrap);
+  formData.append("ot_sound_uno_wrap", ot_sound_uno_wrap);
+  formData.append("ot_sound_una_wrap", ot_sound_una_wrap);
+  formData.append("ot_sound_rt_wrap", ot_sound_rt_wrap);
+  formData.append("somixprep_total", somixprepTotal);
+  formData.append("somixwrap_total", somixwrapTotal);
+  formData.append("somixall_total", somixallTotal);
+  formData.append("boomopprep_total", boomopprepTotal);
+  formData.append("boomopwrap_total", boomopwrapTotal);
+  formData.append("boomopall_total", boomopallTotal);
+  formData.append("cawranprep_total", cawranprepTotal);
+  formData.append("cawranwrap_total", cawranwrapTotal);
+  formData.append("cawranall_total", cawranallTotal);
+  formData.append("otsoundprep_total", otsoundprepTotal);
+  formData.append("otsoundwrap_total", otsoundwrapTotal);
+  formData.append("otsoundall_total", otsoundallTotal);
+
+  try {
+    const { data } = await axiosReq.put(`/budgets2/${budgetId2}/`, formData);
+    console.log(`submit2 ${data}`);
+    handleSubmit3(event); 
+  } catch (err) {
+    console.log(err);
+    if (err.response?.status !== 401) { 
+      setErrors(err.response?.data);
+    }
+  }
+  };
+
+  // Submit3
+  const handleSubmit3 = async (event) => {
+  event.preventDefault();
+  const formData = new FormData();
   // transport 
   formData.append("fringes_taxes_transport", fringes_taxes_transport);
   formData.append("tp_coordinator_qty", tp_coordinator_qty);
@@ -8646,6 +8753,10 @@ function BudgetEdit() {
   formData.append("headdriver_total", headdriverTotal);
   formData.append("drivers_total", driversTotal);
   formData.append("transportlabour_total", transportlabourTotal);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
   // TV
   formData.append("fringes_taxes_tv", fringes_taxes_tv);
   formData.append("tech_super_qty", tech_super_qty);
@@ -8694,24 +8805,6 @@ function BudgetEdit() {
   formData.append("stagehands_total", stagehandsTotal);
   formData.append("othertv_total", othertvTotal);
   formData.append("tvspecificlabour_total", tvspecificlabourTotal);
-
-  try {
-    const { data } = await axiosReq.put(`/budgets2/${budgetId2}/`, formData);
-    console.log(`submit2 ${data}`);
-    handleSubmit3(event); 
-  } catch (err) {
-    console.log(err);
-    if (err.response?.status !== 401) { 
-      setErrors(err.response?.data);
-    }
-  }
-  };
-
-  // Submit3
-  const handleSubmit3 = async (event) => {
-  event.preventDefault();
-  const formData = new FormData();
-  // ALL COSTS
   // production office
   formData.append("office_rentals", office_rentals);
   formData.append("office_equipment", office_equipment);
@@ -11103,7 +11196,32 @@ function BudgetEdit() {
       setOthersoundlabourTotal={setOthersoundlabourTotal}
       soundlabourTotal={soundlabourTotal}
       setSoundlabourTotal={setSoundlabourTotal}
-      setShow={setShowSound}  /> 
+      setShow={setShowSound}
+      somixprepTotal={somixprepTotal}
+      setSomixprepTotal={setSomixprepTotal}
+      somixwrapTotal={somixwrapTotal}
+      setSomixwrapTotal={setSomixwrapTotal}
+      somixallTotal={somixallTotal}
+      setSomixallTotal={setSomixallTotal}
+      boomopprepTotal={boomopprepTotal}
+      setBoomopprepTotal={setBoomopprepTotal}
+      boomopwrapTotal={boomopwrapTotal}
+      setBoomopwrapTotal={setBoomopwrapTotal}
+      boomopallTotal={boomopallTotal}
+      setBoomopallTotal={setBoomopallTotal}
+      cawranprepTotal={cawranprepTotal}
+      setCawranprepTotal={setCawranprepTotal}
+      cawranwrapTotal={cawranwrapTotal}
+      setCawranwrapTotal={setCawranwrapTotal}
+      cawranallTotal={cawranallTotal}
+      setCawranallTotal={setCawranallTotal}
+      otsoundprepTotal={otsoundprepTotal}
+      setOtsoundprepTotal={setOtsoundprepTotal}
+      otsoundwrapTotal={otsoundwrapTotal}
+      setOtsoundwrapTotal={setOtsoundwrapTotal}
+      otsoundallTotal={otsoundallTotal}
+      setOtsoundallTotal={setOtsoundallTotal}
+      /> 
     ) }
     {/* transport */}
     {!showTport ? (
