@@ -3602,6 +3602,56 @@ function BudgetEdit() {
 
   // Transport Labour postData
   const [postDataTransport, setPostDataTransport] = useState({
+    days6th7th_unit_tran: "",
+    days6th7th_tran: 0,
+    overtime_unit_tran: "",
+    overtime_tran: 0,
+    holidays_unit_tran: "", 
+    holidays_tran: 0,
+    box_rent_unit_tran: "",
+    box_rent_tran: 0,
+    other_solo_tran: 0,
+    tp_coor_qty_prep: 0,
+    tp_coor_uno_prep: 0,
+    tp_coor_una_prep: "",
+    tp_coor_rt_prep: 0,
+    tp_coor_qty_wrap: 0,
+    tp_coor_uno_wrap: 0,
+    tp_coor_una_wrap: "",
+    tp_coor_rt_wrap: 0,
+    tp_cap_qty_prep: 0,
+    tp_cap_uno_prep: 0,
+    tp_cap_una_prep: "",
+    tp_cap_rt_prep: 0,
+    tp_cap_qty_wrap: 0,
+    tp_cap_uno_wrap: 0,
+    tp_cap_una_wrap: "",
+    tp_cap_rt_wrap: 0,
+    tp_man_qty_prep: 0,
+    tp_man_uno_prep: 0,
+    tp_man_una_prep: "",
+    tp_man_rt_prep: 0,
+    tp_man_qty_wrap: 0,
+    tp_man_uno_wrap: 0,
+    tp_man_una_wrap: "",
+    tp_man_rt_wrap: 0,
+    head_dr_qty_prep: 0,
+    head_dr_uno_prep: 0,
+    head_dr_una_prep: "",
+    head_dr_rt_prep: 0,
+    head_dr_qty_wrap: 0,
+    head_dr_uno_wrap: 0,
+    head_dr_una_wrap: "",
+    head_dr_rt_wrap: 0,
+    drive_qty_prep: 0,
+    drive_uno_prep: 0,
+    drive_una_prep: "",
+    drive_rt_prep: 0,
+    drive_qty_wrap: 0,
+    drive_uno_wrap: 0,
+    drive_una_wrap: "",
+    drive_rt_wrap: 0,
+    // old _prep wrap
     fringes_taxes_transport: 0,
     tp_coordinator_qty: 0,
     tp_coordinator_uno: 0,
@@ -3625,7 +3675,21 @@ function BudgetEdit() {
     drivers_rt: 0,
   });
 
-  const {tp_coordinator_qty, tp_coordinator_uno, tp_coordinator_una, tp_coordinator_rt,
+  const {days6th7th_unit_tran, days6th7th_tran,
+    overtime_unit_tran, overtime_tran, holidays_unit_tran, holidays_tran,
+    box_rent_unit_tran, box_rent_tran, other_solo_tran,
+    tp_coor_qty_prep, tp_coor_uno_prep, tp_coor_una_prep, tp_coor_rt_prep,
+    tp_coor_qty_wrap, tp_coor_uno_wrap, tp_coor_una_wrap, tp_coor_rt_wrap,
+    tp_cap_qty_prep, tp_cap_uno_prep, tp_cap_una_prep, tp_cap_rt_prep,
+    tp_cap_qty_wrap, tp_cap_uno_wrap, tp_cap_una_wrap, tp_cap_rt_wrap,
+    tp_man_qty_prep, tp_man_uno_prep, tp_man_una_prep, tp_man_rt_prep,
+    tp_man_qty_wrap, tp_man_uno_wrap, tp_man_una_wrap, tp_man_rt_wrap,
+    head_dr_qty_prep, head_dr_uno_prep, head_dr_una_prep, head_dr_rt_prep,
+    head_dr_qty_wrap, head_dr_uno_wrap, head_dr_una_wrap, head_dr_rt_wrap,
+    drive_qty_prep, drive_uno_prep, drive_una_prep, drive_rt_prep,
+    drive_qty_wrap, drive_uno_wrap, drive_una_wrap, drive_rt_wrap,
+    // old
+    tp_coordinator_qty, tp_coordinator_uno, tp_coordinator_una, tp_coordinator_rt,
     tp_captain_qty,tp_captain_uno, tp_captain_una, tp_captain_rt,
     tp_manager_qty, tp_manager_uno, tp_manager_una, tp_manager_rt,
     head_driver_qty, head_driver_uno, head_driver_una, head_driver_rt,
@@ -3633,20 +3697,56 @@ function BudgetEdit() {
     fringes_taxes_transport,} = postDataTransport;
 
   // Totals
-  // tp coordinator Total postData 
+
+  // tp coordinator
+  // tp coordinator shoot Total postData 
   const [tpcoordinatorTotal, setTpcoordinatorTotal] = useState(0);
+  // tp coordinator prep Total postData 
+  const [tpcoorprepTotal, setTpcoorprepTotal] = useState(0);
+  // tp coordinator wrap Total postData 
+  const [tpcoorwrapTotal, setTpcoorwrapTotal] = useState(0);
+  // tp coordinator all Total postData 
+  const [tpcoorallTotal, setTpcoorallTotal] = useState(0);
 
-  // tp captain Total postData 
+  // tp captain
+  // tp captain shoot Total postData 
   const [tpcaptainTotal, setTpcaptainTotal] = useState(0);
+  // tp captain prep Total postData 
+  const [tpcapprepTotal, setTpcapprepTotal] = useState(0);
+  // tp captain wrap Total postData 
+  const [tpcapwrapTotal, setTpcapwrapTotal] = useState(0);
+  // tp captain all Total postData 
+  const [tpcapallTotal, setTpcapallTotal] = useState(0);
 
-  // tp manager Total postData 
+  // tp manager
+  // tp manager shoot Total postData 
   const [tpmanagerTotal, setTpmanagerTotal] = useState(0);
+  // tp manager prep Total postData 
+  const [tpmanprepTotal, setTpmanprepTotal] = useState(0);
+  // tp manager wrap Total postData 
+  const [tpmanwrapTotal, setTpmanwrapTotal] = useState(0);
+  // tp manager all Total postData 
+  const [tpmanallTotal, setTpmanallTotal] = useState(0);
 
-  // head driver Total postData 
+  // head driver
+  // head driver shoot Total postData 
   const [headdriverTotal, setHeaddriverTotal] = useState(0);
+  // head driver prep Total postData 
+  const [headdriprepTotal, setHeaddriprepTotal] = useState(0);
+  // head driver wrap Total postData 
+  const [headdriwrapTotal, setHeaddriwrapTotal] = useState(0);
+  // head driver all Total postData 
+  const [headdriallTotal, setHeaddriallTotal] = useState(0);
 
-  // drivers Total postData 
+  // drivers
+  // drivers shoot Total postData 
   const [driversTotal, setDriversTotal] = useState(0);
+  // drivers prep Total postData 
+  const [driverprepTotal, setDriverprepTotal] = useState(0);
+  // drivers wrap Total postData 
+  const [driverwrapTotal, setDriverwrapTotal] = useState(0);
+  // drivers all Total postData 
+  const [driverallTotal, setDriverallTotal] = useState(0);
 
   // Transport Labour Total postData 
   const [transportlabourTotal, setTransportlabourTotal] = useState(0);
@@ -6537,7 +6637,19 @@ function BudgetEdit() {
         // budget number
         const {budget_number} = data.results[0];
         setBudgetNumber3(budget_number);
-        const {fringes_taxes_transport,
+        const {fringes_taxes_transport, days6th7th_unit_tran, days6th7th_tran,
+          overtime_unit_tran, overtime_tran, holidays_unit_tran, holidays_tran,
+          box_rent_unit_tran, box_rent_tran, other_solo_tran,
+          tp_coor_qty_prep, tp_coor_uno_prep, tp_coor_una_prep, tp_coor_rt_prep,
+          tp_coor_qty_wrap, tp_coor_uno_wrap, tp_coor_una_wrap, tp_coor_rt_wrap,
+          tp_cap_qty_prep, tp_cap_uno_prep, tp_cap_una_prep, tp_cap_rt_prep,
+          tp_cap_qty_wrap, tp_cap_uno_wrap, tp_cap_una_wrap, tp_cap_rt_wrap,
+          tp_man_qty_prep, tp_man_uno_prep, tp_man_una_prep, tp_man_rt_prep,
+          tp_man_qty_wrap, tp_man_uno_wrap, tp_man_una_wrap, tp_man_rt_wrap,
+          head_dr_qty_prep, head_dr_uno_prep, head_dr_una_prep, head_dr_rt_prep,
+          head_dr_qty_wrap, head_dr_uno_wrap, head_dr_una_wrap, head_dr_rt_wrap,
+          drive_qty_prep, drive_uno_prep, drive_una_prep, drive_rt_prep,
+          drive_qty_wrap, drive_uno_wrap, drive_una_wrap, drive_rt_wrap,
           tp_coordinator_qty, tp_coordinator_uno, tp_coordinator_una, tp_coordinator_rt,
           tp_captain_qty,tp_captain_uno, tp_captain_una, tp_captain_rt,
           tp_manager_qty, tp_manager_uno, tp_manager_una, tp_manager_rt,
@@ -6545,6 +6657,19 @@ function BudgetEdit() {
           drivers_qty, drivers_uno, drivers_una, drivers_rt,
           transportlabour_total,} = data.results[0];
         setPostDataTransport({fringes_taxes_transport,
+          days6th7th_unit_tran, days6th7th_tran,
+          overtime_unit_tran, overtime_tran, holidays_unit_tran, holidays_tran,
+          box_rent_unit_tran, box_rent_tran, other_solo_tran,
+          tp_coor_qty_prep, tp_coor_uno_prep, tp_coor_una_prep, tp_coor_rt_prep,
+          tp_coor_qty_wrap, tp_coor_uno_wrap, tp_coor_una_wrap, tp_coor_rt_wrap,
+          tp_cap_qty_prep, tp_cap_uno_prep, tp_cap_una_prep, tp_cap_rt_prep,
+          tp_cap_qty_wrap, tp_cap_uno_wrap, tp_cap_una_wrap, tp_cap_rt_wrap,
+          tp_man_qty_prep, tp_man_uno_prep, tp_man_una_prep, tp_man_rt_prep,
+          tp_man_qty_wrap, tp_man_uno_wrap, tp_man_una_wrap, tp_man_rt_wrap,
+          head_dr_qty_prep, head_dr_uno_prep, head_dr_una_prep, head_dr_rt_prep,
+          head_dr_qty_wrap, head_dr_uno_wrap, head_dr_una_wrap, head_dr_rt_wrap,
+          drive_qty_prep, drive_uno_prep, drive_una_prep, drive_rt_prep,
+          drive_qty_wrap, drive_uno_wrap, drive_una_wrap, drive_rt_wrap,
           tp_coordinator_qty, tp_coordinator_uno, tp_coordinator_una, tp_coordinator_rt,
           tp_captain_qty,tp_captain_uno, tp_captain_una, tp_captain_rt,
           tp_manager_qty, tp_manager_uno, tp_manager_una, tp_manager_rt,
@@ -8753,10 +8878,71 @@ function BudgetEdit() {
   formData.append("headdriver_total", headdriverTotal);
   formData.append("drivers_total", driversTotal);
   formData.append("transportlabour_total", transportlabourTotal);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
+  // new transport for drf
+  formData.append("days6th7th_unit_tran", days6th7th_unit_tran);
+  formData.append("days6th7th_tran", days6th7th_tran);
+  formData.append("overtime_unit_tran", overtime_unit_tran);
+  formData.append("overtime_tran", overtime_tran);
+  formData.append("holidays_unit_tran", holidays_unit_tran);
+  formData.append("holidays_tran", holidays_tran);
+  formData.append("box_rent_unit_tran", box_rent_unit_tran);
+  formData.append("box_rent_tran", box_rent_tran);
+  formData.append("other_solo_tran", other_solo_tran);
+  formData.append("tp_coor_qty_prep", tp_coor_qty_prep);
+  formData.append("tp_coor_uno_prep", tp_coor_uno_prep);
+  formData.append("tp_coor_una_prep", tp_coor_una_prep);
+  formData.append("tp_coor_rt_prep", tp_coor_rt_prep);
+  formData.append("tp_coor_qty_wrap", tp_coor_qty_wrap);
+  formData.append("tp_coor_uno_wrap", tp_coor_uno_wrap);
+  formData.append("tp_coor_una_wrap", tp_coor_una_wrap);
+  formData.append("tp_coor_rt_wrap", tp_coor_rt_wrap);
+  formData.append("tp_cap_qty_prep", tp_cap_qty_prep);
+  formData.append("tp_cap_uno_prep", tp_cap_uno_prep);
+  formData.append("tp_cap_una_prep", tp_cap_una_prep);
+  formData.append("tp_cap_rt_prep", tp_cap_rt_prep);
+  formData.append("tp_cap_qty_wrap", tp_cap_qty_wrap);
+  formData.append("tp_cap_uno_wrap", tp_cap_uno_wrap);
+  formData.append("tp_cap_una_wrap", tp_cap_una_wrap);
+  formData.append("tp_cap_rt_wrap", tp_cap_rt_wrap);
+  formData.append("tp_man_qty_prep", tp_man_qty_prep);
+  formData.append("tp_man_uno_prep", tp_man_uno_prep);
+  formData.append("tp_man_una_prep", tp_man_una_prep);
+  formData.append("tp_man_rt_prep", tp_man_rt_prep);
+  formData.append("tp_man_qty_wrap", tp_man_qty_wrap);
+  formData.append("tp_man_uno_wrap", tp_man_uno_wrap);
+  formData.append("tp_man_una_wrap", tp_man_una_wrap);
+  formData.append("tp_man_rt_wrap", tp_man_rt_wrap);
+  formData.append("head_dr_qty_prep", head_dr_qty_prep);
+  formData.append("head_dr_uno_prep", head_dr_uno_prep);
+  formData.append("head_dr_una_prep", head_dr_una_prep);
+  formData.append("head_dr_rt_prep", head_dr_rt_prep);
+  formData.append("head_dr_qty_wrap", head_dr_qty_wrap);
+  formData.append("head_dr_uno_wrap", head_dr_uno_wrap);
+  formData.append("head_dr_una_wrap", head_dr_una_wrap);
+  formData.append("head_dr_rt_wrap", head_dr_rt_wrap);
+  formData.append("drive_qty_prep", drive_qty_prep);
+  formData.append("drive_uno_prep", drive_uno_prep);
+  formData.append("drive_una_prep", drive_una_prep);
+  formData.append("drive_rt_prep", drive_rt_prep);
+  formData.append("drive_qty_wrap", drive_qty_wrap);
+  formData.append("drive_uno_wrap", drive_uno_wrap);
+  formData.append("drive_una_wrap", drive_una_wrap);
+  formData.append("drive_rt_wrap", drive_rt_wrap);
+  formData.append("tpcoorprep_total", tpcoorprepTotal);
+  formData.append("tpcoorwrap_total", tpcoorwrapTotal);
+  formData.append("tpcoorall_total", tpcoorallTotal);
+  formData.append("tpcapprep_total", tpcapprepTotal);
+  formData.append("tpcapwrap_total", tpcapwrapTotal);
+  formData.append("tpcapall_total", tpcapallTotal);
+  formData.append("tpmanprep_total", tpmanprepTotal);
+  formData.append("tpmanwrap_total", tpmanwrapTotal);
+  formData.append("tpmanall_total", tpmanallTotal);
+  formData.append("headdriprep_total", headdriprepTotal);
+  formData.append("headdriwrap_total", headdriwrapTotal);
+  formData.append("headdriall_total", headdriallTotal);
+  formData.append("driverprep_total", driverprepTotal);
+  formData.append("driverwrap_total", driverwrapTotal);
+  formData.append("driverall_total", driverallTotal);
   // TV
   formData.append("fringes_taxes_tv", fringes_taxes_tv);
   formData.append("tech_super_qty", tech_super_qty);
@@ -8805,6 +8991,12 @@ function BudgetEdit() {
   formData.append("stagehands_total", stagehandsTotal);
   formData.append("othertv_total", othertvTotal);
   formData.append("tvspecificlabour_total", tvspecificlabourTotal);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
+  // formData.append("staaaaars", staaaaars);
   // production office
   formData.append("office_rentals", office_rentals);
   formData.append("office_equipment", office_equipment);

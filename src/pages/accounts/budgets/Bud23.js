@@ -1,181 +1,106 @@
-    days6th7th_unit_sound,
-    days6th7th_sound,
-    overtime_unit_sound,
-    overtime_sound,
-    holidays_unit_sound, 
-    holidays_sound,
-    box_rent_unit_sound,
-    box_rent_sound,
-    other_solo_sound,
-    so_mix_qty_prep,
-    so_mix_uno_prep,
-    so_mix_una_prep,
-    so_mix_rt_prep,
-    so_mix_qty_wrap,
-    so_mix_uno_wrap,
-    so_mix_una_wrap,
-    so_mix_rt_wrap,
-    boom_op_qty_prep,
-    boom_op_uno_prep,
-    boom_op_una_prep,
-    boom_op_rt_prep,
-    boom_op_qty_wrap,
-    boom_op_uno_wrap,
-    boom_op_una_wrap,
-    boom_op_rt_wrap,
-    cab_wran_qty_prep,
-    cab_wran_uno_prep,
-    cab_wran_una_prep,
-    cab_wran_rt_prep,
-    cab_wran_qty_wrap,
-    cab_wran_uno_wrap,
-    cab_wran_una_wrap,
-    cab_wran_rt_wrap,
-    ot_sound_qty_prep,
-    ot_sound_uno_prep,
-    ot_sound_una_prep,
-    ot_sound_rt_prep,
-    ot_sound_qty_wrap,
-    ot_sound_uno_wrap,
-    ot_sound_una_wrap,
-    ot_sound_rt_wrap,
+    days6th7th_unit_tran,
+    days6th7th_tran,
+    overtime_unit_tran,
+    overtime_tran,
+    holidays_unit_tran, 
+    holidays_tran,
+    box_rent_unit_tran,
+    box_rent_tran,
+    other_solo_tran,
+    tp_coor_qty_prep,
+    tp_coor_uno_prep,
+    tp_coor_una_prep,
+    tp_coor_rt_prep,
+    tp_coor_qty_wrap,
+    tp_coor_uno_wrap,
+    tp_coor_una_wrap,
+    tp_coor_rt_wrap,
+    tp_cap_qty_prep,
+    tp_cap_uno_prep,
+    tp_cap_una_prep,
+    tp_cap_rt_prep,
+    tp_cap_qty_wrap,
+    tp_cap_uno_wrap,
+    tp_cap_una_wrap,
+    tp_cap_rt_wrap,
+    tp_man_qty_prep,
+    tp_man_uno_prep,
+    tp_man_una_prep,
+    tp_man_rt_prep,
+    tp_man_qty_wrap,
+    tp_man_uno_wrap,
+    tp_man_una_wrap,
+    tp_man_rt_wrap,
+    head_dr_qty_prep,
+    head_dr_uno_prep,
+    head_dr_una_prep,
+    head_dr_rt_prep,
+    head_dr_qty_wrap,
+    head_dr_uno_wrap,
+    head_dr_una_wrap,
+    head_dr_rt_wrap,
+    drive_qty_prep,
+    drive_uno_prep,
+    drive_una_prep,
+    drive_rt_prep,
+    drive_qty_wrap,
+    drive_uno_wrap,
+    drive_una_wrap,
+    drive_rt_wrap,
     // Totals
-  // sound mixer
-  // sound mixer shoot Total postData 
-  const [soundmixerTotal, setSoundmixerTotal] = useState(0);
-  // sound mixer prep Total postData 
-  const [somixprepTotal, setSomixprepTotal] = useState(0);
-  // sound mixer wrap Total postData 
-  const [somixwrapTotal, setSomixwrapTotal] = useState(0);
-  // sound mixer all Total postData 
-  const [somixallTotal, setSomixallTotal] = useState(0);
 
-    <Row>
-    <Col md={1} >
-    <p className={`${styles.Underline}`}>19.10</p>
-    </Col>
-    <Col md={5} >
-    <p className={`${styles.Underline}`}>Sound Mixer</p>
-    </Col>
-    <Col className="px-1 mx-0" md={1} >
-    <Form.Group controlId="sound_mixer_qty" 
-        className={`${styles.Width95} text-center mb-1`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="sound_mixer_qty"
-        value={sound_mixer_qty}
-        onChange={handleChange}
-            />
-    </Form.Group>
-    {errors?.sound_mixer_qty?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    <Col className="px-1 mx-0" md={1} >
-    <Form.Group controlId="sound_mixer_uno" 
-        className={`${styles.Width95} text-center mb-1`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="sound_mixer_uno"
-        value={sound_mixer_uno}
-        onChange={handleChange}
-            />
-    </Form.Group>
-    {errors?.sound_mixer_uno?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    <Col className="px-1 mx-0" md={1} >
-    <Form.Group controlId="sound_mixer_una" 
-        className={`${styles.Width95} text-center mb-1`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="sound_mixer_una"
-        value={sound_mixer_una}
-        onChange={handleChangeText}
-            />
-    </Form.Group>
-    {errors?.sound_mixer_una?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    <Col className="px-1 mx-0" md={1} >
-    <Form.Group controlId="sound_mixer_rt" 
-        className={`${styles.Width95} text-center mb-1`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="sound_mixer_rt"
-        value={sound_mixer_rt}
-        onChange={handleChange}
-            />
-    </Form.Group>
-    {errors?.sound_mixer_rt?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    <Col md={2} >
-    <Form.Group controlId="soundmixerTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="soundmixerTotal"
-        value={soundmixerTotal}
-        readOnly
-            />
-    </Form.Group>
-    {errors?.soundmixerTotal?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    </Row>
+  // tp coordinator
+  // tp coordinator shoot Total postData 
+  const [tpcoordinatorTotal, setTpcoordinatorTotal] = useState(0);
+  // tp coordinator prep Total postData 
+  const [tpcoorprepTotal, setTpcoorprepTotal] = useState(0);
+  // tp coordinator wrap Total postData 
+  const [tpcoorwrapTotal, setTpcoorwrapTotal] = useState(0);
+  // tp coordinator all Total postData 
+  const [tpcoorallTotal, setTpcoorallTotal] = useState(0);
 
-  // boom operator
-  // boom operator shoot Total postData 
-  const [boomoperatorTotal, setBoomoperatorTotal] = useState(0);
-  // boom operator prep Total postData 
-  const [boomopprepTotal, setBoomopprepTotal] = useState(0);
-  // boom operator wrap Total postData 
-  const [boomopwrapTotal, setBoomopwrapTotal] = useState(0);
-  // boom operator all Total postData 
-  const [boomopallTotal, setBoomopallTotal] = useState(0);
+  // tp captain
+  // tp captain shoot Total postData 
+  const [tpcaptainTotal, setTpcaptainTotal] = useState(0);
+  // tp captain prep Total postData 
+  const [tpcapprepTotal, setTpcapprepTotal] = useState(0);
+  // tp captain wrap Total postData 
+  const [tpcapwrapTotal, setTpcapwrapTotal] = useState(0);
+  // tp captain all Total postData 
+  const [tpcapallTotal, setTpcapallTotal] = useState(0);
 
-  // cable wrangler
-  // cable wrangler shoot Total postData 
-  const [cablewranglerTotal, setCablewranglerTotal] = useState(0);
-  // cable wrangler prep Total postData 
-  const [cawranprepTotal, setCawranprepTotal] = useState(0);
-  // cable wrangler wrap Total postData 
-  const [cawranwrapTotal, setCawranwrapTotal] = useState(0);
-  // cable wrangler all Total postData 
-  const [cawranallTotal, setCawranallTotal] = useState(0);
+  // tp manager
+  // tp manager shoot Total postData 
+  const [tpmanagerTotal, setTpmanagerTotal] = useState(0);
+  // tp manager prep Total postData 
+  const [tpmanprepTotal, setTpmanprepTotal] = useState(0);
+  // tp manager wrap Total postData 
+  const [tpmanwrapTotal, setTpmanwrapTotal] = useState(0);
+  // tp manager all Total postData 
+  const [tpmanallTotal, setTpmanallTotal] = useState(0);
 
-  // other sound labour
-  // other sound labour shoot Total postData 
-  const [othersoundlabourTotal, setOthersoundlabourTotal] = useState(0);
-  // other sound labour prep Total postData 
-  const [otsoundprepTotal, setOtsoundprepTotal] = useState(0);
-  // other sound labour wrap Total postData 
-  const [otsoundwrapTotal, setOtsoundwrapTotal] = useState(0);
-  // other sound labour all Total postData 
-  const [otsoundallTotal, setOtsoundallTotal] = useState(0);
+  // head driver
+  // head driver shoot Total postData 
+  const [headdriverTotal, setHeaddriverTotal] = useState(0);
+  // head driver prep Total postData 
+  const [headdriprepTotal, setHeaddriprepTotal] = useState(0);
+  // head driver wrap Total postData 
+  const [headdriwrapTotal, setHeaddriwrapTotal] = useState(0);
+  // head driver all Total postData 
+  const [headdriallTotal, setHeaddriallTotal] = useState(0);
 
-  // Sound Labour Total postData 
-  const [soundlabourTotal, setSoundlabourTotal] = useState(0);
+  // drivers
+  // drivers shoot Total postData 
+  const [driversTotal, setDriversTotal] = useState(0);
+  // drivers prep Total postData 
+  const [driverprepTotal, setDriverprepTotal] = useState(0);
+  // drivers wrap Total postData 
+  const [driverwrapTotal, setDriverwrapTotal] = useState(0);
+  // drivers all Total postData 
+  const [driverallTotal, setDriverallTotal] = useState(0);
+
+  // Transport Labour Total postData 
+  const [transportlabourTotal, setTransportlabourTotal] = useState(0);
 
 // Budget Top Old
 {/* old */}

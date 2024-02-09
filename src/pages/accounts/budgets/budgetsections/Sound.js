@@ -754,17 +754,125 @@ const Sound = (props) => {
     <hr className={`${styles.Break1} mt-1 mb-0`}/>
     </Col>
     </Row>
-    {/* Boom Operator start here */}
-    <Row>
+    {/* Boom Operator */}
+    <div className="mt-1"> 
+    <Row >
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>19.20</p>
     </Col>
-    <Col md={5} >
-    <p className={`${styles.Underline}`}>Boom Operator</p>
+    <Col md={9} >
+    <p className={`${styles.BoldBlack}`}>Boom Operator</p>
+    </Col>
+    </Row>
+    {/* Prep */} 
+    <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Prep</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="boom_op_qty_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="boom_op_qty_prep"
+        value={boom_op_qty_prep}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.boom_op_qty_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="boom_op_uno_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="boom_op_uno_prep"
+        value={boom_op_uno_prep}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.boom_op_uno_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="boom_op_una_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="boom_op_una_prep"
+        value={boom_op_una_prep}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.boom_op_una_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="boom_op_rt_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="boom_op_rt_prep"
+        value={boom_op_rt_prep}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.boom_op_rt_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="boomopprepTotal" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="boomopprepTotal"
+        value={boomopprepTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.boomopprepTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={1}></Col>
+    </Row>
+    {/* Shoot */}
+    <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="boom_operator_qty" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -781,7 +889,7 @@ const Sound = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="boom_operator_uno" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -798,7 +906,7 @@ const Sound = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="boom_operator_una" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -815,7 +923,7 @@ const Sound = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="boom_operator_rt" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -832,7 +940,7 @@ const Sound = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="boomoperatorTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -848,17 +956,255 @@ const Sound = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Cable Wrangler */}
+    {/* Wrap */}
+    <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1}></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Wrap</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="boom_op_qty_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="boom_op_qty_wrap"
+        value={boom_op_qty_wrap}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.boom_op_qty_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="boom_op_uno_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="boom_op_uno_wrap"
+        value={boom_op_uno_wrap}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.boom_op_uno_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="boom_op_una_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="boom_op_una_wrap"
+        value={boom_op_una_wrap}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.boom_op_una_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="boom_op_rt_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="boom_op_rt_wrap"
+        value={boom_op_rt_wrap}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.boom_op_rt_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="boomopwrapTotal" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="boomopwrapTotal"
+        value={boomopwrapTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.boomopwrapTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row className="py-0 d-flex align-items-center">
+    <Col md={1}></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={7} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="boomopallTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="boomopallTotal"
+        value={boomopallTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.boomopallTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    </div>
+    {/* hr */}
     <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-1 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Cable Wrangler */}
+    <div className="mt-1"> 
+    <Row >
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>19.30</p>
     </Col>
-    <Col md={5} >
-    <p className={`${styles.Underline}`}>Cable Wrangler</p>
+    <Col md={9} >
+    <p className={`${styles.BoldBlack}`}>Cable Wrangler</p>
+    </Col>
+    </Row>
+    {/* Prep */} 
+    <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Prep</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="cab_wran_qty_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="cab_wran_qty_prep"
+        value={cab_wran_qty_prep}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.cab_wran_qty_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="cab_wran_uno_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="cab_wran_uno_prep"
+        value={cab_wran_uno_prep}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.cab_wran_uno_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="cab_wran_una_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="cab_wran_una_prep"
+        value={cab_wran_una_prep}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.cab_wran_una_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="cab_wran_rt_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="cab_wran_rt_prep"
+        value={cab_wran_rt_prep}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.cab_wran_rt_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="cawranprepTotal" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="cawranprepTotal"
+        value={cawranprepTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.cawranprepTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={1}></Col>
+    </Row>
+    {/* Shoot */}
+    <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="cable_wrangler_qty" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -875,7 +1221,7 @@ const Sound = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="cable_wrangler_uno" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -892,7 +1238,7 @@ const Sound = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="cable_wrangler_una" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -909,7 +1255,7 @@ const Sound = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="cable_wrangler_rt" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -926,7 +1272,7 @@ const Sound = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="cablewranglerTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -942,17 +1288,255 @@ const Sound = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Other Sound Labour */}
+    {/* Wrap */}
+    <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1}></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Wrap</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="cab_wran_qty_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="cab_wran_qty_wrap"
+        value={cab_wran_qty_wrap}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.cab_wran_qty_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="cab_wran_uno_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="cab_wran_uno_wrap"
+        value={cab_wran_uno_wrap}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.cab_wran_uno_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="cab_wran_una_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="cab_wran_una_wrap"
+        value={cab_wran_una_wrap}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.cab_wran_una_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="cab_wran_rt_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="cab_wran_rt_wrap"
+        value={cab_wran_rt_wrap}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.cab_wran_rt_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="cawranwrapTotal" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="cawranwrapTotal"
+        value={cawranwrapTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.cawranwrapTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row className="py-0 d-flex align-items-center">
+    <Col md={1}></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={7} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="cawranallTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="cawranallTotal"
+        value={cawranallTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.cawranallTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    </div>
+    {/* hr */}
     <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-1 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Other Sound Labour */}
+    <div className="mt-1"> 
+    <Row >
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>19.40</p>
     </Col>
-    <Col md={5} >
-    <p className={`${styles.Underline}`}>Other Sound Labour</p>
+    <Col md={9} >
+    <p className={`${styles.BoldBlack}`}>Other Sound Labour</p>
+    </Col>
+    </Row>
+    {/* Prep */} 
+    <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Prep</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="ot_sound_qty_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="ot_sound_qty_prep"
+        value={ot_sound_qty_prep}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.ot_sound_qty_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="ot_sound_uno_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="ot_sound_uno_prep"
+        value={ot_sound_uno_prep}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.ot_sound_uno_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="ot_sound_una_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="ot_sound_una_prep"
+        value={ot_sound_una_prep}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.ot_sound_una_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="ot_sound_rt_prep" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="ot_sound_rt_prep"
+        value={ot_sound_rt_prep}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.ot_sound_rt_prep?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="otsoundprepTotal" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="otsoundprepTotal"
+        value={otsoundprepTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.otsoundprepTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={1}></Col>
+    </Row>
+    {/* Shoot */}
+    <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="other_sound_labour_qty" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -969,7 +1553,7 @@ const Sound = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="other_sound_labour_uno" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -986,7 +1570,7 @@ const Sound = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="other_sound_labour_una" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1003,7 +1587,7 @@ const Sound = (props) => {
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="other_sound_labour_rt" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1020,7 +1604,7 @@ const Sound = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="othersoundlabourTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1036,12 +1620,407 @@ const Sound = (props) => {
     ))}
     </Col>
     </Row>
-    {/* Fringes and Taxes */}
+    {/* Wrap */}
+    <Row className="py-0 d-flex align-items-center mb-1">
+    <Col md={1}></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Wrap</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="ot_sound_qty_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="ot_sound_qty_wrap"
+        value={ot_sound_qty_wrap}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.ot_sound_qty_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="ot_sound_uno_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="ot_sound_uno_wrap"
+        value={ot_sound_uno_wrap}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.ot_sound_uno_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="ot_sound_una_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="ot_sound_una_wrap"
+        value={ot_sound_una_wrap}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.ot_sound_una_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="ot_sound_rt_wrap" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="ot_sound_rt_wrap"
+        value={ot_sound_rt_wrap}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.ot_sound_rt_wrap?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="otsoundwrapTotal" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="otsoundwrapTotal"
+        value={otsoundwrapTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.otsoundwrapTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row className="py-0 d-flex align-items-center">
+    <Col md={1}></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={7} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="otsoundallTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="otsoundallTotal"
+        value={otsoundallTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.otsoundallTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    </div>
+    {/* hr */}
     <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-1 mb-0`}/>
+    </Col>
+    </Row>
+    {/* 6th/7th Days */}
+    <Row className="py-1 d-flex align-items-center">
+    <Col md={1}></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>19.50</p>
     </Col>
+    <Col md={4} >
+    <p className={`${styles.BoldBlack}`}>6th/7th Days</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="days6th7th_unit_sound" 
+        className={`${styles.Width95} text-center my-0 py-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="days6th7th_unit_sound"
+        value={days6th7th_unit_sound}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.days6th7th_unit_sound?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="days6th7th_sound" 
+        className={`${styles.Width95} text-center my-0 py-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="days6th7th_sound"
+        value={days6th7th_sound}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.days6th7th_sound?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Overtime */}
+    <Row className="py-1 d-flex align-items-center">
+    <Col md={1}></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>19.60</p>
+    </Col>
+    <Col md={4} >
+    <p className={`${styles.BoldBlack}`}>Overtime</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="overtime_unit_sound" 
+        className={`${styles.Width95} text-center my-0 py-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="overtime_unit_sound"
+        value={overtime_unit_sound}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.overtime_unit_sound?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="overtime_sound" 
+        className={`${styles.Width95} text-center my-0 py-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="overtime_sound"
+        value={overtime_sound}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.overtime_sound?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Holidays */}
+    <Row className="py-1 d-flex align-items-center">
+    <Col md={1}></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>19.70</p>
+    </Col>
+    <Col md={4} >
+    <p className={`${styles.BoldBlack}`}>Holidays</p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="holidays_unit_sound" 
+        className={`${styles.Width95} text-center my-0 py-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="holidays_unit_sound"
+        value={holidays_unit_sound}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.holidays_unit_sound?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="holidays_sound" 
+        className={`${styles.Width95} text-center my-0 py-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="holidays_sound"
+        value={holidays_sound}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.holidays_sound?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Box Rentals */}
+    <Row className="py-1 d-flex align-items-center">
+    <Col md={1}></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>19.80</p>
+    </Col>
+    <Col md={4} >
+    <p className={`${styles.BoldBlack}`}>Box Rentals </p>
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="box_rent_unit_sound" 
+        className={`${styles.Width95} text-center my-0 py-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="box_rent_unit_sound"
+        value={box_rent_unit_sound}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.box_rent_unit_sound?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={1} >
+    <p></p>
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="box_rent_sound" 
+        className={`${styles.Width95} text-center my-0 py-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="box_rent_sound"
+        value={box_rent_sound}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.box_rent_sound?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Other */}
+    <Row className="py-1 d-flex align-items-center">
+    <Col md={1}></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>19.90</p>
+    </Col>
     <Col md={6} >
+    <p className={`${styles.Underline}`}>Other</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="other_solo_sound" 
+        className={`${styles.Width95} text-center mb-0`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="other_solo_sound"
+        value={other_solo_sound}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.other_solo_sound?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Fringes and Taxes */}
+    <Row className="py-1 d-flex align-items-center">
+    <Col md={1}></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>19.91</p>
+    </Col>
+    <Col md={4} >
     <p className={`${styles.Underline}`}>Fringes and Taxes</p>
     </Col>
     <Col md={1} >
@@ -1055,7 +2034,7 @@ const Sound = (props) => {
     </Col>
     <Col md={2} >
     <Form.Group controlId="fringes_taxes_sound" 
-        className={`${styles.Width95} text-center mb-1`} >
+        className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
@@ -1071,18 +2050,20 @@ const Sound = (props) => {
     ))}
     </Col>
     </Row>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
     {/* Sound Total */}
-    <Row className="mt-3">
+    <Row className="mt-3 pb-2">
+    <Col md={1}></Col>
     <Col md={1} >
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>PRODUCTION SOUND TOTAL</p>
-    </Col>
-    <Col md={1} >
-    <p></p>
-    </Col>
-    <Col md={1} >
-    <p></p>
     </Col>
     <Col md={1} >
     <p></p>
