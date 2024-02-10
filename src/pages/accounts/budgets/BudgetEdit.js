@@ -11434,7 +11434,38 @@ function BudgetEdit() {
       setDriversTotal={setDriversTotal}
       transportlabourTotal={transportlabourTotal}
       setTransportlabourTotal={setTransportlabourTotal}
-      setShow={setShowTport}  /> 
+      setShow={setShowTport}
+      tpcoorprepTotal={tpcoorprepTotal}
+      setTpcoorprepTotal={setTpcoorprepTotal}
+      tpcoorwrapTotal={tpcoorwrapTotal}
+      setTpcoorwrapTotal={setTpcoorwrapTotal}
+      tpcoorallTotal={tpcoorallTotal}
+      setTpcoorallTotal={setTpcoorallTotal}
+      tpcapprepTotal={tpcapprepTotal}
+      setTpcapprepTotal={setTpcapprepTotal}
+      tpcapwrapTotal={tpcapwrapTotal}
+      setTpcapwrapTotal={setTpcapwrapTotal}
+      tpcapallTotal={tpcapallTotal}
+      setTpcapallTotal={setTpcapallTotal}
+      tpmanprepTotal={tpmanprepTotal}
+      setTpmanprepTotal={setTpmanprepTotal}
+      tpmanwrapTotal={tpmanwrapTotal}
+      setTpmanwrapTotal={setTpmanwrapTotal}
+      tpmanallTotal={tpmanallTotal}
+      setTpmanallTotal={setTpmanallTotal}
+      headdriprepTotal={headdriprepTotal}
+      setHeaddriprepTotal={setHeaddriprepTotal}
+      headdriwrapTotal={headdriwrapTotal}
+      setHeaddriwrapTotal={setHeaddriwrapTotal}
+      headdriallTotal={headdriallTotal}
+      setHeaddriallTotal={setHeaddriallTotal}
+      driverprepTotal={driverprepTotal}
+      setDriverprepTotal={setDriverprepTotal}
+      driverwrapTotal={driverwrapTotal}
+      setDriverwrapTotal={setDriverwrapTotal}
+      driverallTotal={driverallTotal}
+      setDriverallTotal={setDriverallTotal}
+      /> 
     ) }
     {/* TV */}
     {!showTV ? (

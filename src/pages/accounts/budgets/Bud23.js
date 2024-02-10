@@ -99,6 +99,100 @@
   // drivers all Total postData 
   const [driverallTotal, setDriverallTotal] = useState(0);
 
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>20.50</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Drivers</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="drivers_qty" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="drivers_qty"
+        value={drivers_qty}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.drivers_qty?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="drivers_uno" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="drivers_uno"
+        value={drivers_uno}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.drivers_uno?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="drivers_una" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="drivers_una"
+        value={drivers_una}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.drivers_una?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="drivers_rt" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="drivers_rt"
+        value={drivers_rt}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.drivers_rt?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="driversTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="driversTotal"
+        value={driversTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.driversTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+
   // Transport Labour Total postData 
   const [transportlabourTotal, setTransportlabourTotal] = useState(0);
 
