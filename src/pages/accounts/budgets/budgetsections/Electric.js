@@ -83,9 +83,9 @@ const Electric = (props) => {
     // function to calculate gaffer shoot on change
     useEffect(() => {
         const addGaffer = () => {
-        setGafferTotal(parseFloat(gaffer_qty || 0) * 
+        setGafferTotal((parseFloat(gaffer_qty || 0) * 
         parseFloat(gaffer_uno || 0) * 
-        parseFloat(gaffer_rt || 0))
+        parseFloat(gaffer_rt || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addGaffer();
@@ -100,9 +100,9 @@ const Electric = (props) => {
     // function to calculate gaffer prep on change
     useEffect(() => {
         const addGafprep = () => {
-        setGafprepTotal(parseFloat(gaf_qty_prep || 0) * 
+        setGafprepTotal((parseFloat(gaf_qty_prep || 0) * 
         parseFloat(gaf_uno_prep || 0) * 
-        parseFloat(gaf_rt_prep || 0))
+        parseFloat(gaf_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addGafprep();
@@ -117,9 +117,9 @@ const Electric = (props) => {
     // function to calculate gaffer wrap on change
     useEffect(() => {
         const addGafwrap = () => {
-        setGafwrapTotal(parseFloat(gaf_qty_wrap || 0) * 
+        setGafwrapTotal((parseFloat(gaf_qty_wrap || 0) * 
         parseFloat(gaf_uno_wrap || 0) * 
-        parseFloat(gaf_rt_wrap || 0))
+        parseFloat(gaf_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addGafwrap();
@@ -152,9 +152,9 @@ const Electric = (props) => {
     // function to calculate best boy shoot on change
     useEffect(() => {
         const addBesboy = () => {
-        setBestboyTotal(parseFloat(best_boy_qty || 0) * 
+        setBestboyTotal((parseFloat(best_boy_qty || 0) * 
         parseFloat(best_boy_uno || 0) * 
-        parseFloat(best_boy_rt || 0))
+        parseFloat(best_boy_rt || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addBesboy();
@@ -169,9 +169,9 @@ const Electric = (props) => {
     // function to calculate best boy prep on change
     useEffect(() => {
         const addBesboyprep = () => {
-        setBboyprepTotal(parseFloat(b_boy_qty_prep || 0) * 
+        setBboyprepTotal((parseFloat(b_boy_qty_prep || 0) * 
         parseFloat(b_boy_uno_prep || 0) * 
-        parseFloat(b_boy_rt_prep || 0))
+        parseFloat(b_boy_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addBesboyprep();
@@ -186,9 +186,9 @@ const Electric = (props) => {
     // function to calculate best boy wrap on change
     useEffect(() => {
         const addBesboywrap = () => {
-        setBboywrapTotal(parseFloat(b_boy_qty_wrap || 0) * 
+        setBboywrapTotal((parseFloat(b_boy_qty_wrap || 0) * 
         parseFloat(b_boy_uno_wrap || 0) * 
-        parseFloat(b_boy_rt_wrap || 0))
+        parseFloat(b_boy_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addBesboywrap();
@@ -221,9 +221,9 @@ const Electric = (props) => {
     // function to calculate electrician shoot on change
     useEffect(() => {
         const addElectr = () => {
-        setElectricianTotal(parseFloat(electrician_qty || 0) * 
+        setElectricianTotal((parseFloat(electrician_qty || 0) * 
         parseFloat(electrician_uno || 0) * 
-        parseFloat(electrician_rt || 0))
+        parseFloat(electrician_rt || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addElectr();
@@ -238,9 +238,9 @@ const Electric = (props) => {
     // function to calculate electrician prep on change
     useEffect(() => {
         const addElectrprep = () => {
-        setElecprepTotal(parseFloat(elec_qty_prep || 0) * 
+        setElecprepTotal((parseFloat(elec_qty_prep || 0) * 
         parseFloat(elec_uno_prep || 0) * 
-        parseFloat(elec_rt_prep || 0))
+        parseFloat(elec_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addElectrprep();
@@ -255,9 +255,9 @@ const Electric = (props) => {
     // function to calculate electrician wrap on change
     useEffect(() => {
         const addElectrwrap = () => {
-        setElecwrapTotal(parseFloat(elec_qty_wrap || 0) * 
+        setElecwrapTotal((parseFloat(elec_qty_wrap || 0) * 
         parseFloat(elec_uno_wrap || 0) * 
-        parseFloat(elec_rt_wrap || 0))
+        parseFloat(elec_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addElectrwrap();
@@ -290,9 +290,9 @@ const Electric = (props) => {
     // function to calculate dailies shoot on change
     useEffect(() => {
         const addDaiele = () => {
-        setDailieselecTotal(parseFloat(dailies_elec_qty || 0) * 
+        setDailieselecTotal((parseFloat(dailies_elec_qty || 0) * 
         parseFloat(dailies_elec_uno || 0) * 
-        parseFloat(dailies_elec_rt || 0))
+        parseFloat(dailies_elec_rt || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addDaiele();
@@ -307,9 +307,9 @@ const Electric = (props) => {
     // function to calculate dailies prep on change
     useEffect(() => {
         const addDaielprep = () => {
-        setDaelecprepTotal(parseFloat(d_elec_qty_prep || 0) * 
+        setDaelecprepTotal((parseFloat(d_elec_qty_prep || 0) * 
         parseFloat(d_elec_uno_prep || 0) * 
-        parseFloat(d_elec_rt_prep || 0))
+        parseFloat(d_elec_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addDaielprep();
@@ -324,9 +324,9 @@ const Electric = (props) => {
     // function to calculate dailies wrap on change
     useEffect(() => {
         const addDaielwrap = () => {
-        setDaelecwrapTotal(parseFloat(d_elec_qty_wrap || 0) * 
+        setDaelecwrapTotal((parseFloat(d_elec_qty_wrap || 0) * 
         parseFloat(d_elec_uno_wrap || 0) * 
-        parseFloat(d_elec_rt_wrap || 0))
+        parseFloat(d_elec_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addDaielwrap();
@@ -359,9 +359,9 @@ const Electric = (props) => {
     // function to calculate generator operator shoot on change
     useEffect(() => {
         const addGerope = () => {
-        setGeneratoropTotal(parseFloat(generator_op_qty || 0) * 
+        setGeneratoropTotal((parseFloat(generator_op_qty || 0) * 
         parseFloat(generator_op_uno || 0) * 
-        parseFloat(generator_op_rt || 0))
+        parseFloat(generator_op_rt || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addGerope();
@@ -376,9 +376,9 @@ const Electric = (props) => {
     // function to calculate generator operator prep on change
     useEffect(() => {
         const addGeropprep = () => {
-        setGenopprepTotal(parseFloat(gen_op_qty_prep || 0) * 
+        setGenopprepTotal((parseFloat(gen_op_qty_prep || 0) * 
         parseFloat(gen_op_uno_prep || 0) * 
-        parseFloat(gen_op_rt_prep || 0))
+        parseFloat(gen_op_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addGeropprep();
@@ -393,9 +393,9 @@ const Electric = (props) => {
     // function to calculate generator operator wrap on change
     useEffect(() => {
         const addGeropwrap = () => {
-        setGenopwrapTotal(parseFloat(gen_op_qty_wrap || 0) * 
+        setGenopwrapTotal((parseFloat(gen_op_qty_wrap || 0) * 
         parseFloat(gen_op_uno_wrap || 0) * 
-        parseFloat(gen_op_rt_wrap || 0))
+        parseFloat(gen_op_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addGeropwrap();
@@ -428,9 +428,9 @@ const Electric = (props) => {
     // function to calculate other elec shoot on change
     useEffect(() => {
         const addOthele = () => {
-        setOtherelectricTotal(parseFloat(other_elec_qty || 0) * 
+        setOtherelectricTotal((parseFloat(other_elec_qty || 0) * 
         parseFloat(other_elec_uno || 0) * 
-        parseFloat(other_elec_rt || 0))
+        parseFloat(other_elec_rt || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addOthele();
@@ -445,9 +445,9 @@ const Electric = (props) => {
     // function to calculate other elec prep on change
     useEffect(() => {
         const addOthelprep = () => {
-        setOtelecprepTotal(parseFloat(ot_el_qty_prep || 0) * 
+        setOtelecprepTotal((parseFloat(ot_el_qty_prep || 0) * 
         parseFloat(ot_el_uno_prep || 0) * 
-        parseFloat(ot_el_rt_prep || 0))
+        parseFloat(ot_el_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addOthelprep();
@@ -462,9 +462,9 @@ const Electric = (props) => {
     // function to calculate other elec wrap on change
     useEffect(() => {
         const addOthelwrap = () => {
-        setOtelecwrapTotal(parseFloat(ot_el_qty_wrap || 0) * 
+        setOtelecwrapTotal((parseFloat(ot_el_qty_wrap || 0) * 
         parseFloat(ot_el_uno_wrap || 0) * 
-        parseFloat(ot_el_rt_wrap || 0))
+        parseFloat(ot_el_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addOthelwrap();

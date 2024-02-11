@@ -109,7 +109,7 @@ const DesignLabour = (props) => {
         other_design, fringes_taxes_design,
     } = postDataDesign;
   
-  // handleChange1 
+  // handleChange
   const handleChangeDesign = (event) => {
     setPostDataDesign({
     ...postDataDesign,
@@ -351,9 +351,9 @@ const DesignLabour = (props) => {
   // function to calculate production assistants/trainees shoot on change
   useEffect(() => {
     const addProasstra = () => {
-      setProductionassistantstraineesTotal(parseFloat(production_assistants_trainees_quantity || 0) * 
+      setProductionassistantstraineesTotal((parseFloat(production_assistants_trainees_quantity || 0) * 
       parseFloat(production_assistants_trainees_units_number || 0) * 
-      parseFloat(production_assistants_trainees_rate || 0))
+      parseFloat(production_assistants_trainees_rate || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addProasstra();
@@ -369,9 +369,9 @@ const DesignLabour = (props) => {
   // function to calculate production assistants/trainees prep on change
   useEffect(() => {
     const addProasstraprep = () => {
-      setProasstrainprepTotal(parseFloat(pro_ass_trainees_qty_prep || 0) * 
+      setProasstrainprepTotal((parseFloat(pro_ass_trainees_qty_prep || 0) * 
       parseFloat(pro_ass_trainees_uno_prep || 0) * 
-      parseFloat(pro_ass_trainees_rt_prep || 0))
+      parseFloat(pro_ass_trainees_rt_prep || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addProasstraprep();
@@ -387,9 +387,9 @@ const DesignLabour = (props) => {
   // function to calculate production assistants/trainees wrap on change
   useEffect(() => {
     const addProasstrawrap = () => {
-      setProasstrainwrapTotal(parseFloat(pro_ass_trainees_qty_wrap || 0) * 
+      setProasstrainwrapTotal((parseFloat(pro_ass_trainees_qty_wrap || 0) * 
       parseFloat(pro_ass_trainees_uno_wrap || 0) * 
-      parseFloat(pro_ass_trainees_rt_wrap || 0))
+      parseFloat(pro_ass_trainees_rt_wrap || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addProasstrawrap();
@@ -426,9 +426,9 @@ const DesignLabour = (props) => {
   // function to calculate graphic artists shoot on change
   useEffect(() => {
     const addGraart = () => {
-      setGraphicartistsTotal(parseFloat(graphic_artists_quantity || 0) * 
+      setGraphicartistsTotal((parseFloat(graphic_artists_quantity || 0) * 
       parseFloat(graphic_artists_units_number || 0) * 
-      parseFloat(graphic_artists_rate || 0))
+      parseFloat(graphic_artists_rate || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addGraart();
@@ -444,9 +444,9 @@ const DesignLabour = (props) => {
   // function to calculate graphic artists prep on change
   useEffect(() => {
     const addGraartprep = () => {
-      setGraphicartprepTotal(parseFloat(graphic_art_qty_prep || 0) * 
+      setGraphicartprepTotal((parseFloat(graphic_art_qty_prep || 0) * 
       parseFloat(graphic_art_uno_prep || 0) * 
-      parseFloat(graphic_art_rt_prep || 0))
+      parseFloat(graphic_art_rt_prep || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addGraartprep();
@@ -481,9 +481,9 @@ const DesignLabour = (props) => {
   // function to calculate supervising art director shoot on change
   useEffect(() => {
     const addArtsup = () => {
-      setSupartdirTotal(parseFloat(supervart_qty || 0) * 
+      setSupartdirTotal((parseFloat(supervart_qty || 0) * 
       parseFloat(supervart_uno || 0) * 
-      parseFloat(supervart_rt || 0))
+      parseFloat(supervart_rt || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addArtsup();
@@ -498,9 +498,9 @@ const DesignLabour = (props) => {
   // function to calculate supervising art director prep on change
   useEffect(() => {
     const addArtsupprep = () => {
-      setSupartdirprepTotal(parseFloat(supervart_qty_prep || 0) * 
+      setSupartdirprepTotal((parseFloat(supervart_qty_prep || 0) * 
       parseFloat(supervart_uno_prep || 0) * 
-      parseFloat(supervart_rt_prep || 0))
+      parseFloat(supervart_rt_prep || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addArtsupprep();
@@ -534,9 +534,9 @@ const DesignLabour = (props) => {
   // function to calculate Set Designer/Draughtsperson shoot on change
   useEffect(() => {
     const addSetdes = () => {
-      setSetdesTotal(parseFloat(set_design_qty || 0) * 
+      setSetdesTotal((parseFloat(set_design_qty || 0) * 
       parseFloat(set_design_uno || 0) * 
-      parseFloat(set_design_rt || 0))
+      parseFloat(set_design_rt || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addSetdes();
@@ -551,9 +551,9 @@ const DesignLabour = (props) => {
   // function to calculate Set Designer/Draughtsperson prep on change
   useEffect(() => {
     const addSetdesprep = () => {
-      setSetdesprepTotal(parseFloat(set_design_qty_prep || 0) * 
+      setSetdesprepTotal((parseFloat(set_design_qty_prep || 0) * 
       parseFloat(set_design_uno_prep || 0) * 
-      parseFloat(set_design_rt_prep || 0))
+      parseFloat(set_design_rt_prep || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addSetdesprep();
@@ -588,9 +588,9 @@ const DesignLabour = (props) => {
   // function to calculate Junior Draughtsperson shoot on change
   useEffect(() => {
     const addJundra = () => {
-      setJundraughtTotal(parseFloat(junior_draught_qty || 0) * 
+      setJundraughtTotal((parseFloat(junior_draught_qty || 0) * 
       parseFloat(junior_draught_uno || 0) * 
-      parseFloat(junior_draught_rt || 0))
+      parseFloat(junior_draught_rt || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addJundra();
@@ -605,9 +605,9 @@ const DesignLabour = (props) => {
   // function to calculate Junior Draughtsperson prep on change
   useEffect(() => {
     const addJundraprep = () => {
-      setJundraprepTotal(parseFloat(junior_draught_qty_prep || 0) * 
+      setJundraprepTotal((parseFloat(junior_draught_qty_prep || 0) * 
       parseFloat(junior_draught_uno_prep || 0) * 
-      parseFloat(junior_draught_rt_prep || 0))
+      parseFloat(junior_draught_rt_prep || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addJundraprep();
@@ -642,9 +642,9 @@ const DesignLabour = (props) => {
   // function to calculate standby art shoot on change
   useEffect(() => {
     const addStbyart = () => {
-      setStandbyartTotal(parseFloat(standby_art_qty || 0) * 
+      setStandbyartTotal((parseFloat(standby_art_qty || 0) * 
       parseFloat(standby_art_uno || 0) * 
-      parseFloat(standby_art_rt || 0))
+      parseFloat(standby_art_rt || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addStbyart();
@@ -659,9 +659,9 @@ const DesignLabour = (props) => {
   // function to calculate standby art prep on change
   useEffect(() => {
     const addStbyartprep = () => {
-      setStbyartprepTotal(parseFloat(standby_art_qty_prep || 0) * 
+      setStbyartprepTotal((parseFloat(standby_art_qty_prep || 0) * 
       parseFloat(standby_art_uno_prep || 0) * 
-      parseFloat(standby_art_rt_prep || 0))
+      parseFloat(standby_art_rt_prep || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addStbyartprep();
@@ -696,9 +696,9 @@ const DesignLabour = (props) => {
   // function to calculate art dep coordinator shoot on change
   useEffect(() => {
     const addArtcoor = () => {
-      setArtcoorTotal(parseFloat(art_dep_coor_qty || 0) * 
+      setArtcoorTotal((parseFloat(art_dep_coor_qty || 0) * 
       parseFloat(art_dep_coor_uno || 0) * 
-      parseFloat(art_dep_coor_rt || 0))
+      parseFloat(art_dep_coor_rt || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addArtcoor();
@@ -713,9 +713,9 @@ const DesignLabour = (props) => {
   // function to calculate art dep coordinator prep on change
   useEffect(() => {
     const addArtcoorprep = () => {
-      setArtcoorprepTotal(parseFloat(art_dep_coor_qty_prep || 0) * 
+      setArtcoorprepTotal((parseFloat(art_dep_coor_qty_prep || 0) * 
       parseFloat(art_dep_coor_uno_prep || 0) * 
-      parseFloat(art_dep_coor_rt_prep || 0))
+      parseFloat(art_dep_coor_rt_prep || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addArtcoorprep();
@@ -731,9 +731,9 @@ const DesignLabour = (props) => {
   // function to calculate art dep coordinator wrap on change
   useEffect(() => {
     const addArtcoorwrap = () => {
-      setArtcoorwrapTotal(parseFloat(art_dep_coor_qty_wrap || 0) * 
+      setArtcoorwrapTotal((parseFloat(art_dep_coor_qty_wrap || 0) * 
       parseFloat(art_dep_coor_uno_wrap || 0) * 
-      parseFloat(art_dep_coor_rt_wrap || 0))
+      parseFloat(art_dep_coor_rt_wrap || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addArtcoorwrap();

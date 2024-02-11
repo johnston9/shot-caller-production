@@ -11,6 +11,7 @@ const Development = (props) => {
     const [errors, setErrors] = useState({});
     const {postDataDevelopment, setPostDataDevelopment,
       developmentTotal, setDevelopmentTotal, setShow} = props;
+
     // Development postData values
     const {research_development, prelim_budget, consultant_expenses,
     office_expenses, staff, travel_expenses_development,
@@ -21,7 +22,7 @@ const Development = (props) => {
     const handleChangeDevelopment = (event) => {
         setPostDataDevelopment({
         ...postDataDevelopment,
-        [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
+        [event.target.name]: event.target.value.replace(/[^0-9.]/g, ''),
         });
       };
 

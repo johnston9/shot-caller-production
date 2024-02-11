@@ -322,27 +322,11 @@ const ProductionStaff = (props) => {
     craft_services_rate,
   } = postDataProduction;
 
-  // Production handleChange 
-  // const handleChangePro = (event) => {
-  //   setPostDataProduction({
-  //     ...postDataProduction,
-  //     [event.target.name]: parseFloat(event.target.value || 0 ),
-  //   });
-  // }; 
-
-  // handleChange6 - replace(/[^0-9.]/g, '') - hopfully works best
-  // const handleChangePro = (event) => {
-  //   setPostDataProduction({
-  //   ...postDataProduction,
-  //   [event.target.name]: parseFloat(event.target.value.replace(/[^0-9.]/g, '') || 0 ),
-  //   });
-  // }; 
-
-  // handleChange1 - replace(/\D/g,'') - works but no decimal
+  // handleChange
   const handleChangePro = (event) => {
     setPostDataProduction({
     ...postDataProduction,
-    [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
+    [event.target.name]: event.target.value.replace(/[^0-9.]/g, ''),
     });
   };
 
@@ -360,9 +344,9 @@ const ProductionStaff = (props) => {
   // function to calculate production manager shoot on change
   useEffect(() => {
     const addproman = () => {
-      setProductionmanagerTotal(parseFloat(production_manager_quantity || 0) * 
+      setProductionmanagerTotal((parseFloat(production_manager_quantity || 0) * 
       parseFloat(production_manager_units_number || 0) * 
-      parseFloat(production_manager_rate || 0))
+      parseFloat(production_manager_rate || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addproman();
@@ -378,9 +362,9 @@ const ProductionStaff = (props) => {
   // function to calculate production manager prep on change
   useEffect(() => {
     const addpromanprep = () => {
-      setProductionmanagerprepTotal(parseFloat(production_manager_qty_prep || 0) * 
+      setProductionmanagerprepTotal((parseFloat(production_manager_qty_prep || 0) * 
       parseFloat(production_manager_uno_prep || 0) * 
-      parseFloat(production_manager_rt_prep || 0))
+      parseFloat(production_manager_rt_prep || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addpromanprep();
@@ -396,9 +380,9 @@ const ProductionStaff = (props) => {
   // function to calculate production manager wrap on change
   useEffect(() => {
     const addpromanwrap = () => {
-      setProductionmanagerwrapTotal(parseFloat(production_manager_qty_wrap || 0) * 
+      setProductionmanagerwrapTotal((parseFloat(production_manager_qty_wrap || 0) * 
       parseFloat(production_manager_uno_wrap || 0) * 
-      parseFloat(production_manager_rt_wrap || 0))
+      parseFloat(production_manager_rt_wrap || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addpromanwrap();
@@ -435,9 +419,9 @@ const ProductionStaff = (props) => {
   // function to calculate production supervisor shoot on change
   useEffect(() => {
     const addprosup = () => {
-      setProductionsupervisorTotal(parseFloat(production_supervisor_quantity || 0) * 
+      setProductionsupervisorTotal((parseFloat(production_supervisor_quantity || 0) * 
       parseFloat(production_supervisor_units_number || 0) * 
-      parseFloat(production_supervisor_rate || 0))
+      parseFloat(production_supervisor_rate || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addprosup();
@@ -453,9 +437,9 @@ const ProductionStaff = (props) => {
   // function to calculate production supervisor prep on change
   useEffect(() => {
     const addprosupprep = () => {
-      setProductionsupervisorprepTotal(parseFloat(production_supervisor_qty_prep || 0) * 
+      setProductionsupervisorprepTotal((parseFloat(production_supervisor_qty_prep || 0) * 
       parseFloat(production_supervisor_uno_prep || 0) * 
-      parseFloat(production_supervisor_rt_prep || 0))
+      parseFloat(production_supervisor_rt_prep || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addprosupprep();
@@ -471,9 +455,9 @@ const ProductionStaff = (props) => {
   // function to calculate production supervisor wrap on change
   useEffect(() => {
     const addprosupwrap = () => {
-      setProductionsupervisorwrapTotal(parseFloat(production_supervisor_qty_wrap || 0) * 
+      setProductionsupervisorwrapTotal((parseFloat(production_supervisor_qty_wrap || 0) * 
       parseFloat(production_supervisor_uno_wrap || 0) * 
-      parseFloat(production_supervisor_rt_wrap || 0))
+      parseFloat(production_supervisor_rt_wrap || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addprosupwrap();
@@ -510,9 +494,9 @@ const ProductionStaff = (props) => {
   // function to calculate production coordinator shoot on change
   useEffect(() => {
     const addprocoor = () => {
-      setProductioncoordinatorTotal(parseFloat(production_coordinator_quantity || 0) * 
+      setProductioncoordinatorTotal((parseFloat(production_coordinator_quantity || 0) * 
       parseFloat(production_coordinator_units_number || 0) * 
-      parseFloat(production_coordinator_rate || 0))
+      parseFloat(production_coordinator_rate || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addprocoor();
@@ -528,9 +512,9 @@ const ProductionStaff = (props) => {
   // function to calculate production coordinator prep on change
   useEffect(() => {
     const addprocoorprep = () => {
-      setProductioncoordinatorprepTotal(parseFloat(production_coordinator_qty_prep || 0) * 
+      setProductioncoordinatorprepTotal((parseFloat(production_coordinator_qty_prep || 0) * 
       parseFloat(production_coordinator_uno_prep || 0) * 
-      parseFloat(production_coordinator_rt_prep || 0))
+      parseFloat(production_coordinator_rt_prep || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addprocoorprep();
@@ -546,9 +530,9 @@ const ProductionStaff = (props) => {
   // function to calculate production coordinator wrap on change
   useEffect(() => {
     const addprocoorwrap = () => {
-      setProductioncoordinatorwrapTotal(parseFloat(production_coordinator_qty_wrap || 0) * 
+      setProductioncoordinatorwrapTotal((parseFloat(production_coordinator_qty_wrap || 0) * 
       parseFloat(production_coordinator_uno_wrap || 0) * 
-      parseFloat(production_coordinator_rt_wrap || 0))
+      parseFloat(production_coordinator_rt_wrap || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addprocoorwrap();
@@ -585,9 +569,9 @@ const ProductionStaff = (props) => {
   // function to calculate unit manager shoot on change
   useEffect(() => {
     const addunitman = () => {
-      setUnitmanagerTotal(parseFloat(unit_manager_quantity || 0) * 
+      setUnitmanagerTotal((parseFloat(unit_manager_quantity || 0) * 
       parseFloat(unit_manager_units_number || 0) * 
-      parseFloat(unit_manager_rate || 0))
+      parseFloat(unit_manager_rate || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addunitman();
@@ -603,9 +587,9 @@ const ProductionStaff = (props) => {
   // function to calculate unit manager prep on change
   useEffect(() => {
     const addunitmanprep = () => {
-      setUnitmanagerprepTotal(parseFloat(unit_manager_qty_prep || 0) * 
+      setUnitmanagerprepTotal((parseFloat(unit_manager_qty_prep || 0) * 
       parseFloat(unit_manager_uno_prep || 0) * 
-      parseFloat(unit_manager_rt_prep || 0))
+      parseFloat(unit_manager_rt_prep || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addunitmanprep();
@@ -620,9 +604,9 @@ const ProductionStaff = (props) => {
   // function to calculate unit manager wrap on change
   useEffect(() => {
     const addunitmanwrap = () => {
-      setUnitmanagerwrapTotal(parseFloat(unit_manager_qty_wrap || 0) * 
+      setUnitmanagerwrapTotal((parseFloat(unit_manager_qty_wrap || 0) * 
       parseFloat(unit_manager_uno_wrap || 0) * 
-      parseFloat(unit_manager_rt_wrap || 0))
+      parseFloat(unit_manager_rt_wrap || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addunitmanwrap();
@@ -657,9 +641,9 @@ const ProductionStaff = (props) => {
   // function to calculate location manager shoot on change
   useEffect(() => {
     const addlocman = () => {
-      setLocationmanagerTotal(parseFloat(location_manager_quantity || 0) * 
+      setLocationmanagerTotal((parseFloat(location_manager_quantity || 0) * 
       parseFloat(location_manager_units_number || 0) * 
-      parseFloat(location_manager_rate || 0))
+      parseFloat(location_manager_rate || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addlocman();
@@ -675,9 +659,9 @@ const ProductionStaff = (props) => {
   // function to calculate location manager prep on change
   useEffect(() => {
     const addlocmanprep = () => {
-      setLocationmanagerprepTotal(parseFloat(location_manager_qty_prep || 0) * 
+      setLocationmanagerprepTotal((parseFloat(location_manager_qty_prep || 0) * 
       parseFloat(location_manager_uno_prep || 0) * 
-      parseFloat(location_manager_rt_prep || 0))
+      parseFloat(location_manager_rt_prep || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addlocmanprep();
@@ -693,9 +677,9 @@ const ProductionStaff = (props) => {
   // function to calculate location manager wrap on change
   useEffect(() => {
     const addlocmanwrap = () => {
-      setLocationmanagerwrapTotal(parseFloat(location_manager_qty_wrap || 0) * 
+      setLocationmanagerwrapTotal((parseFloat(location_manager_qty_wrap || 0) * 
       parseFloat(location_manager_uno_wrap || 0) * 
-      parseFloat(location_manager_rt_wrap || 0))
+      parseFloat(location_manager_rt_wrap || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addlocmanwrap();
@@ -732,9 +716,9 @@ const ProductionStaff = (props) => {
   // function to calculate location manager assistant shoot on change
   useEffect(() => {
     const addlocmanass = () => {
-      setLocationmanagerassistantTotal(parseFloat(location_manager_assistant_quantity || 0) * 
+      setLocationmanagerassistantTotal((parseFloat(location_manager_assistant_quantity || 0) * 
       parseFloat(location_manager_assistant_units_number || 0) * 
-      parseFloat(location_manager_assistant_rate || 0))
+      parseFloat(location_manager_assistant_rate || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addlocmanass();
@@ -750,9 +734,9 @@ const ProductionStaff = (props) => {
   // function to calculate location manager assistant prep on change
   useEffect(() => {
     const addlocmanassprep = () => {
-      setLocmanassprepTotal(parseFloat(location_manager_ass_qty_prep || 0) * 
+      setLocmanassprepTotal((parseFloat(location_manager_ass_qty_prep || 0) * 
       parseFloat(location_manager_ass_uno_prep || 0) * 
-      parseFloat(location_manager_ass_rt_prep || 0))
+      parseFloat(location_manager_ass_rt_prep || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addlocmanassprep();
@@ -768,9 +752,9 @@ const ProductionStaff = (props) => {
   // function to calculate location manager assistant wrap on change
   useEffect(() => {
     const addlocmanasswrap = () => {
-      setLocmanasswrapTotal(parseFloat(location_manager_ass_qty_wrap || 0) * 
+      setLocmanasswrapTotal((parseFloat(location_manager_ass_qty_wrap || 0) * 
       parseFloat(location_manager_ass_uno_wrap || 0) * 
-      parseFloat(location_manager_ass_rt_wrap || 0))
+      parseFloat(location_manager_ass_rt_wrap || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addlocmanasswrap();
@@ -807,9 +791,9 @@ const ProductionStaff = (props) => {
   // function to calculate production assistants shoot on change
   useEffect(() => {
     const addproass = () => {
-      setProductionassistantsTotal(parseFloat(production_assistants_quantity || 0) * 
+      setProductionassistantsTotal((parseFloat(production_assistants_quantity || 0) * 
       parseFloat(production_assistants_units_number || 0) * 
-      parseFloat(production_assistants_rate || 0))
+      parseFloat(production_assistants_rate || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addproass();
@@ -825,9 +809,9 @@ const ProductionStaff = (props) => {
   // function to calculate production assistants prep on change
   useEffect(() => {
     const addproassprep = () => {
-      setProassprepTotal(parseFloat(production_ass_qty_prep || 0) * 
+      setProassprepTotal((parseFloat(production_ass_qty_prep || 0) * 
       parseFloat(production_ass_uno_prep || 0) * 
-      parseFloat(production_assistants_rate || 0))
+      parseFloat(production_assistants_rate || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addproassprep();
@@ -842,9 +826,9 @@ const ProductionStaff = (props) => {
   // function to calculate production assistants wrap on change
   useEffect(() => {
     const addproasswrap = () => {
-      setProasswrapTotal(parseFloat(production_ass_qty_wrap || 0) * 
+      setProasswrapTotal((parseFloat(production_ass_qty_wrap || 0) * 
       parseFloat(production_ass_uno_wrap || 0) * 
-      parseFloat(production_ass_rt_wrap || 0))
+      parseFloat(production_ass_rt_wrap || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addproasswrap();
@@ -881,9 +865,9 @@ const ProductionStaff = (props) => {
   // function to calculate production secretary shoot on change
   useEffect(() => {
     const addprosec = () => {
-      setProductionsecretaryTotal(parseFloat(production_secretary_quantity || 0) * 
+      setProductionsecretaryTotal((parseFloat(production_secretary_quantity || 0) * 
       parseFloat(production_secretary_units_number || 0) * 
-      parseFloat(production_secretary_rate || 0))
+      parseFloat(production_secretary_rate || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addprosec();
@@ -899,9 +883,9 @@ const ProductionStaff = (props) => {
   // function to calculate production secretary prep on change
   useEffect(() => {
     const addprosecprep = () => {
-      setProsecprepTotal(parseFloat(production_sec_qty_prep || 0) * 
+      setProsecprepTotal((parseFloat(production_sec_qty_prep || 0) * 
       parseFloat(production_sec_uno_prep || 0) * 
-      parseFloat(production_sec_rt_prep || 0))
+      parseFloat(production_sec_rt_prep || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addprosecprep();
@@ -917,9 +901,9 @@ const ProductionStaff = (props) => {
   // function to calculate production secretary wrap on change
   useEffect(() => {
     const addprosecwrap = () => {
-      setProsecwrapTotal(parseFloat(production_sec_qty_wrap || 0) * 
+      setProsecwrapTotal((parseFloat(production_sec_qty_wrap || 0) * 
       parseFloat(production_sec_uno_wrap || 0) * 
-      parseFloat(production_sec_rt_wrap || 0))
+      parseFloat(production_sec_rt_wrap || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addprosecwrap();
@@ -956,9 +940,9 @@ const ProductionStaff = (props) => {
   // function to calculate production accountant shoot on change
   useEffect(() => {
     const addproacc = () => {
-      setProductionaccountantTotal(parseFloat(production_accountant_quantity || 0) * 
+      setProductionaccountantTotal((parseFloat(production_accountant_quantity || 0) * 
       parseFloat(production_accountant_units_number || 0) * 
-      parseFloat(production_accountant_rate || 0))
+      parseFloat(production_accountant_rate || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addproacc();
@@ -974,9 +958,9 @@ const ProductionStaff = (props) => {
   // function to calculate production accountant prep on change
   useEffect(() => {
     const addproaccprep = () => {
-      setProaccprepTotal(parseFloat(production_acc_qty_prep || 0) * 
+      setProaccprepTotal((parseFloat(production_acc_qty_prep || 0) * 
       parseFloat(production_acc_uno_prep || 0) * 
-      parseFloat(production_acc_rt_prep || 0))
+      parseFloat(production_acc_rt_prep || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addproaccprep();
@@ -992,9 +976,9 @@ const ProductionStaff = (props) => {
   // function to calculate production accountant wrap on change
   useEffect(() => {
     const addproaccwrap = () => {
-      setProaccwrapTotal(parseFloat(production_acc_qty_wrap || 0) * 
+      setProaccwrapTotal((parseFloat(production_acc_qty_wrap || 0) * 
       parseFloat(production_acc_uno_wrap || 0) * 
-      parseFloat(production_acc_rt_wrap || 0))
+      parseFloat(production_acc_rt_wrap || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addproaccwrap();
@@ -1031,9 +1015,9 @@ const ProductionStaff = (props) => {
   // function to calculate production accountant assistant shoot on change
   useEffect(() => {
     const addaccass = () => {
-      setProductionaccountantassistantTotal(parseFloat(production_accountant_assistant_quantity || 0) * 
+      setProductionaccountantassistantTotal((parseFloat(production_accountant_assistant_quantity || 0) * 
       parseFloat(production_accountant_assistant_units_number || 0) * 
-      parseFloat(production_accountant_assistant_rate || 0))
+      parseFloat(production_accountant_assistant_rate || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addaccass();
@@ -1049,9 +1033,9 @@ const ProductionStaff = (props) => {
   // function to calculate production accountant assistant prep on change
   useEffect(() => {
     const addaccassprep = () => {
-      setProaccassprepTotal(parseFloat(production_acc_ass_qty_prep || 0) * 
+      setProaccassprepTotal((parseFloat(production_acc_ass_qty_prep || 0) * 
       parseFloat(production_acc_ass_uno_prep || 0) * 
-      parseFloat(production_acc_ass_rt_prep || 0))
+      parseFloat(production_acc_ass_rt_prep || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addaccassprep();
@@ -1067,9 +1051,9 @@ const ProductionStaff = (props) => {
   // function to calculate production accountant assistant wrap on change
   useEffect(() => {
     const addaccasswrap = () => {
-      setProaccasswrapTotal(parseFloat(production_acc_ass_qty_wrap || 0) * 
+      setProaccasswrapTotal((parseFloat(production_acc_ass_qty_wrap || 0) * 
       parseFloat(production_acc_ass_uno_wrap || 0) * 
-      parseFloat(production_acc_ass_rt_wrap || 0))
+      parseFloat(production_acc_ass_rt_wrap || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addaccasswrap();
@@ -1106,9 +1090,9 @@ const ProductionStaff = (props) => {
   // function to calculate scriptsupervisor continuity shoot on change
   useEffect(() => {
     const addsupcon = () => {
-      setScriptsupervisorcontinuityTotal(parseFloat(scriptsupervisor_continuity_quantity || 0) * 
+      setScriptsupervisorcontinuityTotal((parseFloat(scriptsupervisor_continuity_quantity || 0) * 
       parseFloat(scriptsupervisor_continuity_units_number || 0) * 
-      parseFloat(scriptsupervisor_continuity_rate || 0))
+      parseFloat(scriptsupervisor_continuity_rate || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addsupcon();
@@ -1124,9 +1108,9 @@ const ProductionStaff = (props) => {
   // function to calculate scriptsupervisor continuity prep on change
   useEffect(() => {
     const addsupconprep = () => {
-      setScriptsupconprepTotal(parseFloat(scriptsupervisor_con_qty_prep || 0) * 
+      setScriptsupconprepTotal((parseFloat(scriptsupervisor_con_qty_prep || 0) * 
       parseFloat(scriptsupervisor_con_uno_prep || 0) * 
-      parseFloat(scriptsupervisor_con_rt_prep || 0))
+      parseFloat(scriptsupervisor_con_rt_prep || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addsupconprep();
@@ -1142,9 +1126,9 @@ const ProductionStaff = (props) => {
   // function to calculate scriptsupervisor continuity wrap on change
   useEffect(() => {
     const addsupconwrap = () => {
-      setScriptsupconwrapTotal(parseFloat(scriptsupervisor_con_qty_wrap || 0) * 
+      setScriptsupconwrapTotal((parseFloat(scriptsupervisor_con_qty_wrap || 0) * 
       parseFloat(scriptsupervisor_con_uno_wrap || 0) * 
-      parseFloat(scriptsupervisor_con_rt_wrap || 0))
+      parseFloat(scriptsupervisor_con_rt_wrap || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addsupconwrap();
@@ -1181,9 +1165,9 @@ const ProductionStaff = (props) => {
   // function to calculate payroll shoot on change
   useEffect(() => {
     const addpayrol = () => {
-      setPayrollTotal(parseFloat(payroll_quantity || 0) * 
+      setPayrollTotal((parseFloat(payroll_quantity || 0) * 
       parseFloat(payroll_units_number || 0) * 
-      parseFloat(payroll_rate || 0))
+      parseFloat(payroll_rate || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addpayrol();
@@ -1199,9 +1183,9 @@ const ProductionStaff = (props) => {
   // function to calculate payroll prep on change
   useEffect(() => {
     const addpayrolprep = () => {
-      setPayrollprepTotal(parseFloat(payroll_qty_prep || 0) * 
+      setPayrollprepTotal((parseFloat(payroll_qty_prep || 0) * 
       parseFloat(payroll_uno_prep || 0) * 
-      parseFloat(payroll_rt_prep || 0))
+      parseFloat(payroll_rt_prep || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addpayrolprep();
@@ -1216,9 +1200,9 @@ const ProductionStaff = (props) => {
   // function to calculate payroll wrap on change
   useEffect(() => {
     const addpayrolwrap = () => {
-      setPayrollwrapTotal(parseFloat(payroll_qty_wrap || 0) * 
+      setPayrollwrapTotal((parseFloat(payroll_qty_wrap || 0) * 
       parseFloat(payroll_uno_wrap || 0) * 
-      parseFloat(payroll_rt_wrap || 0))
+      parseFloat(payroll_rt_wrap || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addpayrolwrap();
@@ -1253,9 +1237,9 @@ const ProductionStaff = (props) => {
   // function to calculate other production shoot on change
   useEffect(() => {
     const addothpro = () => {
-      setOtherproductionTotal(parseFloat(other_production_quantity || 0) * 
+      setOtherproductionTotal((parseFloat(other_production_quantity || 0) * 
       parseFloat(other_production_units_number || 0) * 
-      parseFloat(other_production_rate || 0))
+      parseFloat(other_production_rate || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addothpro();
@@ -1271,9 +1255,9 @@ const ProductionStaff = (props) => {
   // function to calculate other production prep on change
   useEffect(() => {
     const addothproprep = () => {
-      setOtherproprepTotal(parseFloat(other_pro_qty_prep || 0) * 
+      setOtherproprepTotal((parseFloat(other_pro_qty_prep || 0) * 
       parseFloat(other_pro_uno_prep || 0) * 
-      parseFloat(other_pro_rt_prep || 0))
+      parseFloat(other_pro_rt_prep || 0)).toFixed()
     }
     const timer = setTimeout(() => {
       addothproprep();
@@ -1288,9 +1272,9 @@ const ProductionStaff = (props) => {
   // function to calculate other production wrap on change
   useEffect(() => {
     const addothprowrap = () => {
-      setOtherprowrapTotal(parseFloat(other_pro_qty_wrap || 0) * 
+      setOtherprowrapTotal((parseFloat(other_pro_qty_wrap || 0) * 
       parseFloat(other_pro_uno_wrap || 0) * 
-      parseFloat(other_pro_rt_wrap || 0))
+      parseFloat(other_pro_rt_wrap || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addothprowrap();
@@ -1325,9 +1309,9 @@ const ProductionStaff = (props) => {
   // function to calculate directors assistant shoot on change
   useEffect(() => {
     const adddirass = () => {
-      setDirectorsassistantTotal(parseFloat(directors_assistant_quantity || 0) * 
+      setDirectorsassistantTotal((parseFloat(directors_assistant_quantity || 0) * 
       parseFloat(directors_assistant_units_number || 0) * 
-      parseFloat(directors_assistant_rate || 0))
+      parseFloat(directors_assistant_rate || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       adddirass();
@@ -1343,9 +1327,9 @@ const ProductionStaff = (props) => {
   // function to calculate directors assistant prep on change
   useEffect(() => {
     const adddirassprep = () => {
-      setDirectorsassprepTotal(parseFloat(directors_ass_qty_prep || 0) * 
+      setDirectorsassprepTotal((parseFloat(directors_ass_qty_prep || 0) * 
       parseFloat(directors_ass_uno_prep || 0) * 
-      parseFloat(directors_ass_rt_prep || 0))
+      parseFloat(directors_ass_rt_prep || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       adddirassprep();
@@ -1360,9 +1344,9 @@ const ProductionStaff = (props) => {
   // function to calculate directors assistant wrap on change
   useEffect(() => {
     const adddirasswrap = () => {
-      setDirectorsasswrapTotal(parseFloat(directors_ass_qty_wrap || 0) * 
+      setDirectorsasswrapTotal((parseFloat(directors_ass_qty_wrap || 0) * 
       parseFloat(directors_ass_uno_wrap || 0) * 
-      parseFloat(directors_ass_rt_wrap || 0))
+      parseFloat(directors_ass_rt_wrap || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       adddirasswrap();
@@ -1399,9 +1383,9 @@ const ProductionStaff = (props) => {
   // function to calculate 1st assistant director shoot on change
   useEffect(() => {
     const addasdir1 = () => {
-      setAssistantdirector1stTotal(parseFloat(assistant_director_1st_quantity || 0) * 
+      setAssistantdirector1stTotal((parseFloat(assistant_director_1st_quantity || 0) * 
       parseFloat(assistant_director_1st_units_number || 0) * 
-      parseFloat(assistant_director_1st_rate || 0))
+      parseFloat(assistant_director_1st_rate || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addasdir1();
@@ -1417,9 +1401,9 @@ const ProductionStaff = (props) => {
   // function to calculate 1st assistant director prep on change
   useEffect(() => {
     const addasdir1prep = () => {
-      setAssdirector1stprepTotal(parseFloat(ass_director_1st_qty_prep || 0) * 
+      setAssdirector1stprepTotal((parseFloat(ass_director_1st_qty_prep || 0) * 
       parseFloat(ass_director_1st_uno_prep || 0) * 
-      parseFloat(ass_director_1st_rt_prep || 0))
+      parseFloat(ass_director_1st_rt_prep || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addasdir1prep();
@@ -1435,9 +1419,9 @@ const ProductionStaff = (props) => {
   // function to calculate 1st assistant director wrap on change
   useEffect(() => {
     const addasdir1wrap = () => {
-      setAssdirector1stwrapTotal(parseFloat(ass_director_1st_qty_wrap || 0) * 
+      setAssdirector1stwrapTotal((parseFloat(ass_director_1st_qty_wrap || 0) * 
       parseFloat(ass_director_1st_uno_wrap || 0) * 
-      parseFloat(ass_director_1st_rt_wrap || 0))
+      parseFloat(ass_director_1st_rt_wrap || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addasdir1wrap();
@@ -1474,9 +1458,9 @@ const ProductionStaff = (props) => {
   // function to calculate 2nd assistant director shoot on change
   useEffect(() => {
     const addasdir2 = () => {
-      setAssistantdirector2ndTotal(parseFloat(assistant_director_2nd_quantity || 0) * 
+      setAssistantdirector2ndTotal((parseFloat(assistant_director_2nd_quantity || 0) * 
       parseFloat(assistant_director_2nd_units_number || 0) * 
-      parseFloat(assistant_director_2nd_rate || 0))
+      parseFloat(assistant_director_2nd_rate || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addasdir2();
@@ -1492,9 +1476,9 @@ const ProductionStaff = (props) => {
   // function to calculate 2nd assistant director prep on change
   useEffect(() => {
     const addasdir2prep = () => {
-      setAssdirector2ndprepTotal(parseFloat(ass_director_2nd_qty_prep || 0) * 
+      setAssdirector2ndprepTotal((parseFloat(ass_director_2nd_qty_prep || 0) * 
       parseFloat(ass_director_2nd_uno_prep || 0) * 
-      parseFloat(ass_director_2nd_rt_prep || 0))
+      parseFloat(ass_director_2nd_rt_prep || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addasdir2prep();
@@ -1510,9 +1494,9 @@ const ProductionStaff = (props) => {
   // function to calculate 2nd assistant director wrap on change
   useEffect(() => {
     const addasdir2wrap = () => {
-      setAssdirector2ndwrapTotal(parseFloat(ass_director_2nd_qty_wrap || 0) * 
+      setAssdirector2ndwrapTotal((parseFloat(ass_director_2nd_qty_wrap || 0) * 
       parseFloat(ass_director_2nd_uno_wrap || 0) * 
-      parseFloat(ass_director_2nd_rt_wrap || 0))
+      parseFloat(ass_director_2nd_rt_wrap || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addasdir2wrap();
@@ -1549,9 +1533,9 @@ const ProductionStaff = (props) => {
   // function to calculate 3rd assistant director shoot on change
   useEffect(() => {
     const addasdir3 = () => {
-      setAssistantdirector3rdTotal(parseFloat(assistant_director_3rd_quantity || 0) * 
+      setAssistantdirector3rdTotal((parseFloat(assistant_director_3rd_quantity || 0) * 
       parseFloat(assistant_director_3rd_units_number || 0) * 
-      parseFloat(assistant_director_3rd_rate || 0))
+      parseFloat(assistant_director_3rd_rate || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addasdir3();
@@ -1567,9 +1551,9 @@ const ProductionStaff = (props) => {
   // function to calculate 3rd assistant director prep on change
   useEffect(() => {
     const addasdir3prep = () => {
-      setAssdirector3rdprepTotal(parseFloat(ass_director_3rd_qty_prep || 0) * 
+      setAssdirector3rdprepTotal((parseFloat(ass_director_3rd_qty_prep || 0) * 
       parseFloat(ass_director_3rd_uno_prep || 0) * 
-      parseFloat(ass_director_3rd_rt_prep || 0))
+      parseFloat(ass_director_3rd_rt_prep || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addasdir3prep();
@@ -1585,9 +1569,9 @@ const ProductionStaff = (props) => {
   // function to calculate 3rd assistant director wrap on change
   useEffect(() => {
     const addasdir3wrap = () => {
-      setAssdirector3rdwrapTotal(parseFloat(ass_director_3rd_qty_wrap || 0) * 
+      setAssdirector3rdwrapTotal((parseFloat(ass_director_3rd_qty_wrap || 0) * 
       parseFloat(ass_director_3rd_uno_wrap || 0) * 
-      parseFloat(ass_director_3rd_rt_wrap || 0))
+      parseFloat(ass_director_3rd_rt_wrap || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addasdir3wrap();
@@ -1624,9 +1608,9 @@ const ProductionStaff = (props) => {
   // function to calculate craft services shoot on change
   useEffect(() => {
     const addcraser = () => {
-      setCraftservicesTotal(parseFloat(craft_services_quantity || 0) * 
+      setCraftservicesTotal((parseFloat(craft_services_quantity || 0) * 
       parseFloat(craft_services_units_number || 0) * 
-      parseFloat(craft_services_rate || 0))
+      parseFloat(craft_services_rate || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addcraser();
@@ -1642,9 +1626,9 @@ const ProductionStaff = (props) => {
   // function to calculate craft services prep on change
   useEffect(() => {
     const addcraserprep = () => {
-      setCraftservicesprepTotal(parseFloat(craft_services_qty_prep || 0) * 
+      setCraftservicesprepTotal((parseFloat(craft_services_qty_prep || 0) * 
       parseFloat(craft_services_uno_prep || 0) * 
-      parseFloat(craft_services_rt_prep || 0))
+      parseFloat(craft_services_rt_prep || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addcraserprep();
@@ -1660,9 +1644,9 @@ const ProductionStaff = (props) => {
   // function to calculate craft services wrap on change
   useEffect(() => {
     const addcraserwrap = () => {
-      setCraftserviceswrapTotal(parseFloat(craft_services_qty_wrap || 0) * 
+      setCraftserviceswrapTotal((parseFloat(craft_services_qty_wrap || 0) * 
       parseFloat(craft_services_uno_wrap || 0) * 
-      parseFloat(craft_services_rt_wrap || 0))
+      parseFloat(craft_services_rt_wrap || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addcraserwrap();

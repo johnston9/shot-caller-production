@@ -88,7 +88,7 @@ const Makeup = (props) => {
     const handleChange = (event) => {
         setPostDataMakeup({
         ...postDataMakeup,
-        [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
+        [event.target.name]: event.target.value.replace(/[^0-9.]/g, ''),
         });
     };
 
@@ -105,9 +105,9 @@ const Makeup = (props) => {
     // function to calculate makeup dept head shoot on change
     useEffect(() => {
       const addMakhea = () => {
-      setHeadmakeupTotal(parseFloat(makeup_dept_head_quantity || 0) * 
+      setHeadmakeupTotal((parseFloat(makeup_dept_head_quantity || 0) * 
       parseFloat(makeup_dept_head_units_number || 0) * 
-      parseFloat(makeup_dept_head_rate || 0))
+      parseFloat(makeup_dept_head_rate || 0)).toFixed())
       }
       const timer = setTimeout(() => {
         addMakhea();
@@ -123,9 +123,9 @@ const Makeup = (props) => {
     // function to calculate makeup dept head prep on change
     useEffect(() => {
         const addMakheaprep = () => {
-        setHeadmakprepTotal(parseFloat(mak_head_qty_prep || 0) * 
+        setHeadmakprepTotal((parseFloat(mak_head_qty_prep || 0) * 
         parseFloat(mak_head_uno_prep || 0) * 
-        parseFloat(mak_head_rt_prep || 0))
+        parseFloat(mak_head_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addMakheaprep();
@@ -140,9 +140,9 @@ const Makeup = (props) => {
     // function to calculate makeup dept head wrap on change
     useEffect(() => {
         const addMakheawrap = () => {
-        setHeadmakwrapTotal(parseFloat(mak_head_qty_wrap || 0) * 
+        setHeadmakwrapTotal((parseFloat(mak_head_qty_wrap || 0) * 
         parseFloat(mak_head_uno_wrap || 0) * 
-        parseFloat(mak_head_rt_wrap || 0))
+        parseFloat(mak_head_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addMakheawrap();
@@ -175,9 +175,9 @@ const Makeup = (props) => {
     // function to calculate key makeup shoot on change
     useEffect(() => {
       const addKeymak = () => {
-      setKeymakeupTotal(parseFloat(key_makeup_quantity || 0) * 
+      setKeymakeupTotal((parseFloat(key_makeup_quantity || 0) * 
       parseFloat(key_makeup_units_number || 0) * 
-      parseFloat(key_makeup_rate || 0))
+      parseFloat(key_makeup_rate || 0)).toFixed())
       }
       const timer = setTimeout(() => {
         addKeymak();
@@ -193,9 +193,9 @@ const Makeup = (props) => {
     // function to calculate key makeup prep on change
     useEffect(() => {
         const addKeymakprep = () => {
-        setKeymakprepTotal(parseFloat(key_mak_qty_prep || 0) * 
+        setKeymakprepTotal((parseFloat(key_mak_qty_prep || 0) * 
         parseFloat(key_mak_uno_prep || 0) * 
-        parseFloat(key_mak_rt_prep || 0))
+        parseFloat(key_mak_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addKeymakprep();
@@ -210,9 +210,9 @@ const Makeup = (props) => {
     // function to calculate key makeup wrap on change
     useEffect(() => {
         const addKeymakwrap = () => {
-        setKeymakwrapTotal(parseFloat(key_mak_qty_wrap || 0) * 
+        setKeymakwrapTotal((parseFloat(key_mak_qty_wrap || 0) * 
         parseFloat(key_mak_uno_wrap || 0) * 
-        parseFloat(key_mak_rt_wrap || 0))
+        parseFloat(key_mak_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addKeymakwrap();
@@ -245,9 +245,9 @@ const Makeup = (props) => {
     // function to calculate makeup artist shoot on change
     useEffect(() => {
       const addMakart = () => {
-      setMakeupartistTotal(parseFloat(makeup_artist_quantity || 0) * 
+      setMakeupartistTotal((parseFloat(makeup_artist_quantity || 0) * 
       parseFloat(makeup_artist_units_number || 0) * 
-      parseFloat(makeup_artist_rate || 0))
+      parseFloat(makeup_artist_rate || 0)).toFixed())
       }
       const timer = setTimeout(() => {
         addMakart();
@@ -263,9 +263,9 @@ const Makeup = (props) => {
     // function to calculate makeup artist prep on change
     useEffect(() => {
         const addMakartprep = () => {
-        setMakartprepTotal(parseFloat(mak_art_qty_prep || 0) * 
+        setMakartprepTotal((parseFloat(mak_art_qty_prep || 0) * 
         parseFloat(mak_art_uno_prep || 0) * 
-        parseFloat(mak_art_rt_prep || 0))
+        parseFloat(mak_art_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addMakartprep();
@@ -280,9 +280,9 @@ const Makeup = (props) => {
     // function to calculate makeup artist wrap on change
     useEffect(() => {
         const addMakartwrap = () => {
-        setMakartwrapTotal(parseFloat(mak_art_qty_wrap || 0) * 
+        setMakartwrapTotal((parseFloat(mak_art_qty_wrap || 0) * 
         parseFloat(mak_art_uno_wrap || 0) * 
-        parseFloat(mak_art_rt_wrap || 0))
+        parseFloat(mak_art_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addMakartwrap();
@@ -315,9 +315,9 @@ const Makeup = (props) => {
     // function to calculate key hairstylist shoot on change
     useEffect(() => {
       const addKeyhai = () => {
-      setKeyhairstylistTotal(parseFloat(key_hairstylist_quantity || 0) * 
+      setKeyhairstylistTotal((parseFloat(key_hairstylist_quantity || 0) * 
       parseFloat(key_hairstylist_units_number || 0) * 
-      parseFloat(key_hairstylist_rate || 0))
+      parseFloat(key_hairstylist_rate || 0)).toFixed())
       }
       const timer = setTimeout(() => {
         addKeyhai();
@@ -333,9 +333,9 @@ const Makeup = (props) => {
     // function to calculate key hairstylist prep on change
     useEffect(() => {
         const addKeyhaiprep = () => {
-        setKeyhairprepTotal(parseFloat(key_hair_qty_prep || 0) * 
+        setKeyhairprepTotal((parseFloat(key_hair_qty_prep || 0) * 
         parseFloat(key_hair_uno_prep || 0) * 
-        parseFloat(key_hair_rt_prep || 0))
+        parseFloat(key_hair_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addKeyhaiprep();
@@ -350,9 +350,9 @@ const Makeup = (props) => {
     // function to calculate key hairstylist wrap on change
     useEffect(() => {
         const addKeyhaiwrap = () => {
-        setKeyhairwrapTotal(parseFloat(key_hair_qty_wrap || 0) * 
+        setKeyhairwrapTotal((parseFloat(key_hair_qty_wrap || 0) * 
         parseFloat(key_hair_uno_wrap || 0) * 
-        parseFloat(key_hair_rt_wrap || 0))
+        parseFloat(key_hair_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addKeyhaiwrap();
@@ -385,9 +385,9 @@ const Makeup = (props) => {
     // function to calculate hairdresser shoot on change
     useEffect(() => {
       const addHairdr = () => {
-      setHairdresserTotal(parseFloat(hairdresser_quantity || 0) * 
+      setHairdresserTotal((parseFloat(hairdresser_quantity || 0) * 
       parseFloat(hairdresser_units_number || 0) * 
-      parseFloat(hairdresser_rate || 0))
+      parseFloat(hairdresser_rate || 0)).toFixed())
       }
       const timer = setTimeout(() => {
         addHairdr();
@@ -403,9 +403,9 @@ const Makeup = (props) => {
     // function to calculate hairdresser prep on change
     useEffect(() => {
         const addHairdrprep = () => {
-        setHairprepTotal(parseFloat(hair_qty_prep || 0) * 
+        setHairprepTotal((parseFloat(hair_qty_prep || 0) * 
         parseFloat(hair_uno_prep || 0) * 
-        parseFloat(hair_rt_prep || 0))
+        parseFloat(hair_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addHairdrprep();
@@ -420,9 +420,9 @@ const Makeup = (props) => {
     // function to calculate hairdresser wrap on change
     useEffect(() => {
         const addHairdrwrap = () => {
-        setHairwrapTotal(parseFloat(hair_qty_wrap || 0) * 
+        setHairwrapTotal((parseFloat(hair_qty_wrap || 0) * 
         parseFloat(hair_uno_wrap || 0) * 
-        parseFloat(hair_rt_wrap || 0))
+        parseFloat(hair_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addHairdrwrap();
@@ -455,9 +455,9 @@ const Makeup = (props) => {
     // function to calculate hair makeup dailies on change
     useEffect(() => {
       const addDailie = () => {
-      setHairmakeupdailiesTotal(parseFloat(hair_makeup_dailies_quantity || 0) * 
+      setHairmakeupdailiesTotal((parseFloat(hair_makeup_dailies_quantity || 0) * 
       parseFloat(hair_makeup_dailies_units_number || 0) * 
-      parseFloat(hair_makeup_dailies_rate || 0))
+      parseFloat(hair_makeup_dailies_rate || 0)).toFixed())
       }
       const timer = setTimeout(() => {
         addDailie();
@@ -474,9 +474,9 @@ const Makeup = (props) => {
     // function to calculate hair/makeup assistants shoot on change
     useEffect(() => {
       const addOthmak = () => {
-      setOthermakeuplabourTotal(parseFloat(other_makeup_labour_quantity || 0) * 
+      setOthermakeuplabourTotal((parseFloat(other_makeup_labour_quantity || 0) * 
       parseFloat(other_makeup_labour_units_number || 0) * 
-      parseFloat(other_makeup_labour_rate || 0))
+      parseFloat(other_makeup_labour_rate || 0)).toFixed())
       }
       const timer = setTimeout(() => {
         addOthmak();
@@ -492,9 +492,9 @@ const Makeup = (props) => {
     // function to calculate hair/makeup assistants prep on change
     useEffect(() => {
         const addOthmakprep = () => {
-        setOthmakprepTotal(parseFloat(oth_mak_qty_prep || 0) * 
+        setOthmakprepTotal((parseFloat(oth_mak_qty_prep || 0) * 
         parseFloat(oth_mak_uno_prep || 0) * 
-        parseFloat(oth_mak_rt_prep || 0))
+        parseFloat(oth_mak_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addOthmakprep();
@@ -509,9 +509,9 @@ const Makeup = (props) => {
     // function to calculate hair/makeup assistants wrap on change
     useEffect(() => {
         const addOthmakwrap = () => {
-        setOthmakwrapTotal(parseFloat(oth_mak_qty_wrap || 0) * 
+        setOthmakwrapTotal((parseFloat(oth_mak_qty_wrap || 0) * 
         parseFloat(oth_mak_uno_wrap || 0) * 
-        parseFloat(oth_mak_rt_wrap || 0))
+        parseFloat(oth_mak_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addOthmakwrap();
@@ -544,9 +544,9 @@ const Makeup = (props) => {
     // function to calculate sfx makeup shoot on change
     useEffect(() => {
       const addSfxmak = () => {
-      setSfxmakeupTotal(parseFloat(sfx_makeup_quantity || 0) * 
+      setSfxmakeupTotal((parseFloat(sfx_makeup_quantity || 0) * 
       parseFloat(sfx_makeup_units_number || 0) * 
-      parseFloat(sfx_makeup_rate || 0))
+      parseFloat(sfx_makeup_rate || 0)).toFixed())
       }
       const timer = setTimeout(() => {
         addSfxmak();
@@ -562,9 +562,9 @@ const Makeup = (props) => {
     // function to calculate sfx makeup prep on change
     useEffect(() => {
         const addSfxmakprep = () => {
-        setSfxmakprepTotal(parseFloat(sfx_mak_qty_prep || 0) * 
+        setSfxmakprepTotal((parseFloat(sfx_mak_qty_prep || 0) * 
         parseFloat(sfx_mak_uno_prep || 0) * 
-        parseFloat(sfx_mak_rt_prep || 0))
+        parseFloat(sfx_mak_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addSfxmakprep();
@@ -579,9 +579,9 @@ const Makeup = (props) => {
     // function to calculate sfx makeup wrap on change
     useEffect(() => {
         const addSfxmakwrap = () => {
-        setSfxmakwrapTotal(parseFloat(sfx_mak_qty_wrap || 0) * 
+        setSfxmakwrapTotal((parseFloat(sfx_mak_qty_wrap || 0) * 
         parseFloat(sfx_mak_uno_wrap || 0) * 
-        parseFloat(sfx_mak_rt_wrap || 0))
+        parseFloat(sfx_mak_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addSfxmakwrap();
@@ -614,9 +614,9 @@ const Makeup = (props) => {
     // function to calculate makeup trainee shoot on change
     useEffect(() => {
         const addMaktrain = () => {
-        setMakktrainTotal(parseFloat(mak_train_qty || 0) * 
+        setMakktrainTotal((parseFloat(mak_train_qty || 0) * 
         parseFloat(mak_train_uno || 0) * 
-        parseFloat(mak_train_rt || 0))
+        parseFloat(mak_train_rt || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addMaktrain();
@@ -631,9 +631,9 @@ const Makeup = (props) => {
     // function to calculate makeup trainee prep on change
     useEffect(() => {
         const addMaktraprep = () => {
-        setMakktraprepTotal(parseFloat(mak_train_qty_prep || 0) * 
+        setMakktraprepTotal((parseFloat(mak_train_qty_prep || 0) * 
         parseFloat(mak_train_uno_prep || 0) * 
-        parseFloat(mak_train_rt_prep || 0))
+        parseFloat(mak_train_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addMaktraprep();
@@ -648,9 +648,9 @@ const Makeup = (props) => {
     // function to calculate makeup trainee wrap on change
     useEffect(() => {
         const addMaktrawrap = () => {
-        setMakktrawrapTotal(parseFloat(mak_train_qty_wrap || 0) * 
+        setMakktrawrapTotal((parseFloat(mak_train_qty_wrap || 0) * 
         parseFloat(mak_train_uno_wrap || 0) * 
-        parseFloat(mak_train_rt_wrap || 0))
+        parseFloat(mak_train_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addMaktrawrap();

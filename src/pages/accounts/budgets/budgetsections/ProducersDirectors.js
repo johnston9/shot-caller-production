@@ -45,7 +45,7 @@ const ProducersDirectors = (props) => {
   const handleChangeProducersDirs = (event) => {
     setPostDataProducersDirs({
     ...postDataProducersDirs,
-    [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
+    [event.target.name]: event.target.value.replace(/[^0-9.]/g, ''),
     });
   };
 
@@ -53,8 +53,8 @@ const ProducersDirectors = (props) => {
   // function to calculate Exec Producers on change
   useEffect(() => {
     const addExecPros = () => {
-      setExecProducersTotal(parseFloat(executive_producers_quantity || 0) * 
-      parseFloat(executive_producers_rate || 0))
+      setExecProducersTotal((parseFloat(executive_producers_quantity || 0) * 
+      parseFloat(executive_producers_rate || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addExecPros();
@@ -69,8 +69,8 @@ const ProducersDirectors = (props) => {
   // function to calculate Producers on change
   useEffect(() => {
     const addPros = () => {
-      setProducersTotal(parseFloat(producers_quantity || 0) * 
-      parseFloat(producers_rate || 0))
+      setProducersTotal((parseFloat(producers_quantity || 0) * 
+      parseFloat(producers_rate || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addPros();
@@ -85,8 +85,8 @@ const ProducersDirectors = (props) => {
   // function to calculate Line Producers on change
   useEffect(() => {
     const addLinePros = () => {
-      setLineProducersTotal(parseFloat(line_producers_quantity || 0) * 
-      parseFloat(line_producers_rate || 0))
+      setLineProducersTotal((parseFloat(line_producers_quantity || 0) * 
+      parseFloat(line_producers_rate || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addLinePros();
@@ -101,8 +101,8 @@ const ProducersDirectors = (props) => {
   // function to calculate  Co Producers on change
   useEffect(() => {
     const addCoPros = () => {
-      setCoProducersTotal(parseFloat(co_producers_quantity || 0) * 
-      parseFloat(co_producers_rate || 0))
+      setCoProducersTotal((parseFloat(co_producers_quantity || 0) * 
+      parseFloat(co_producers_rate || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addCoPros();
@@ -117,8 +117,8 @@ const ProducersDirectors = (props) => {
   // function to calculate  Assoc Producers on change
   useEffect(() => {
     const addAssocPros = () => {
-      setAssocProducersTotal(parseFloat(associate_producers_quantity || 0) * 
-      parseFloat(associate_producers_rate || 0))
+      setAssocProducersTotal((parseFloat(associate_producers_quantity || 0) * 
+      parseFloat(associate_producers_rate || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addAssocPros();
@@ -133,8 +133,8 @@ const ProducersDirectors = (props) => {
   // function to calculate Directors on change
   useEffect(() => {
     const addDirectors = () => {
-      setDirectorsTotal(parseFloat(directors_quantity || 0) * 
-      parseFloat(directors_rate || 0))
+      setDirectorsTotal((parseFloat(directors_quantity || 0) * 
+      parseFloat(directors_rate || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addDirectors();
@@ -149,8 +149,8 @@ const ProducersDirectors = (props) => {
   // function to calculate 2nd Unit Directors on change
   useEffect(() => {
     const addUnit2Dirs = () => {
-      setUnit2DirectorsTotal(parseFloat(unit2_directors_quantity || 0) * 
-      parseFloat(unit2_directors_rate || 0))
+      setUnit2DirectorsTotal((parseFloat(unit2_directors_quantity || 0) * 
+      parseFloat(unit2_directors_rate || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addUnit2Dirs();

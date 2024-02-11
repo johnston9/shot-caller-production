@@ -85,9 +85,9 @@ const Grip = (props) => {
     // function to calculate key grip shoot on change
     useEffect(() => {
       const addKetgri = () => {
-      setKeygripTotal(parseFloat(key_grip_qty || 0) * 
+      setKeygripTotal((parseFloat(key_grip_qty || 0) * 
       parseFloat(key_grip_uno || 0) * 
-      parseFloat(key_grip_rt || 0))
+      parseFloat(key_grip_rt || 0)).toFixed())
       }
       const timer = setTimeout(() => {
         addKetgri();
@@ -102,9 +102,9 @@ const Grip = (props) => {
     // function to calculate key grip prep on change
     useEffect(() => {
         const addKetgriprep = () => {
-        setKgripprepTotal(parseFloat(k_grip_qty_prep || 0) * 
+        setKgripprepTotal((parseFloat(k_grip_qty_prep || 0) * 
         parseFloat(k_grip_uno_prep || 0) * 
-        parseFloat(k_grip_rt_prep || 0))
+        parseFloat(k_grip_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addKetgriprep();
@@ -119,9 +119,9 @@ const Grip = (props) => {
     // function to calculate key grip wrap on change
     useEffect(() => {
         const addKetgriwrap = () => {
-        setKgripwrapTotal(parseFloat(k_grip_qty_wrap || 0) * 
+        setKgripwrapTotal((parseFloat(k_grip_qty_wrap || 0) * 
         parseFloat(k_grip_uno_wrap || 0) * 
-        parseFloat(k_grip_rt_wrap || 0))
+        parseFloat(k_grip_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addKetgriwrap();
@@ -154,9 +154,9 @@ const Grip = (props) => {
     // function to calculate best boy grip shoot on change
     useEffect(() => {
       const addBbgrip = () => {
-      setBestboygripTotal(parseFloat(best_boy_grip_qty || 0) * 
+      setBestboygripTotal((parseFloat(best_boy_grip_qty || 0) * 
       parseFloat(best_boy_grip_uno || 0) * 
-      parseFloat(best_boy_grip_rt || 0))
+      parseFloat(best_boy_grip_rt || 0)).toFixed())
       }
       const timer = setTimeout(() => {
         addBbgrip();
@@ -171,9 +171,9 @@ const Grip = (props) => {
     // function to calculate best boy grip prep on change
     useEffect(() => {
         const addBbgriprep = () => {
-        setBbgripprepTotal(parseFloat(bb_grip_qty_prep || 0) * 
+        setBbgripprepTotal((parseFloat(bb_grip_qty_prep || 0) * 
         parseFloat(bb_grip_uno_prep || 0) * 
-        parseFloat(bb_grip_rt_prep || 0))
+        parseFloat(bb_grip_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addBbgriprep();
@@ -188,9 +188,9 @@ const Grip = (props) => {
     // function to calculate best boy grip wrap on change
     useEffect(() => {
         const addBbgriwrap = () => {
-        setBbgripwrapTotal(parseFloat(bb_grip_qty_wrap || 0) * 
+        setBbgripwrapTotal((parseFloat(bb_grip_qty_wrap || 0) * 
         parseFloat(bb_grip_uno_wrap || 0) * 
-        parseFloat(bb_grip_rt_wrap || 0))
+        parseFloat(bb_grip_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addBbgriwrap();
@@ -223,9 +223,9 @@ const Grip = (props) => {
     // function to calculate grips shoot on change
     useEffect(() => {
       const addGrips = () => {
-      setGripsTotal(parseFloat(grips_qty || 0) * 
+      setGripsTotal((parseFloat(grips_qty || 0) * 
       parseFloat(grips_uno || 0) * 
-      parseFloat(grips_rt || 0))
+      parseFloat(grips_rt || 0)).toFixed())
       }
       const timer = setTimeout(() => {
         addGrips();
@@ -240,9 +240,9 @@ const Grip = (props) => {
     // function to calculate grips prep on change
     useEffect(() => {
         const addGriprep = () => {
-        setGripsprepTotal(parseFloat(grips_qty_prep || 0) * 
+        setGripsprepTotal((parseFloat(grips_qty_prep || 0) * 
         parseFloat(grips_uno_prep || 0) * 
-        parseFloat(grips_rt_prep || 0))
+        parseFloat(grips_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addGriprep();
@@ -257,9 +257,9 @@ const Grip = (props) => {
     // function to calculate grips wrap on change
     useEffect(() => {
         const addGriwrap = () => {
-        setGripswrapTotal(parseFloat(grips_qty_wrap || 0) * 
+        setGripswrapTotal((parseFloat(grips_qty_wrap || 0) * 
         parseFloat(grips_uno_wrap || 0) * 
-        parseFloat(grips_rt_wrap || 0))
+        parseFloat(grips_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addGriwrap();
@@ -292,9 +292,9 @@ const Grip = (props) => {
     // function to calculate dolly crane grip shoot on change
     useEffect(() => {
       const addDolcra = () => {
-      setDollycranegripTotal(parseFloat(dolly_crane_grip_qty || 0) * 
+      setDollycranegripTotal((parseFloat(dolly_crane_grip_qty || 0) * 
       parseFloat(dolly_crane_grip_uno || 0) * 
-      parseFloat(dolly_crane_grip_rt || 0))
+      parseFloat(dolly_crane_grip_rt || 0)).toFixed())
       }
       const timer = setTimeout(() => {
         addDolcra();
@@ -309,9 +309,9 @@ const Grip = (props) => {
     // function to calculate dolly crane grip prep on change
     useEffect(() => {
         const addDolcraprep = () => {
-        setDolgripprepTotal(parseFloat(dol_grip_qty_prep || 0) * 
+        setDolgripprepTotal((parseFloat(dol_grip_qty_prep || 0) * 
         parseFloat(dol_grip_uno_prep || 0) * 
-        parseFloat(dol_grip_rt_prep || 0))
+        parseFloat(dol_grip_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addDolcraprep();
@@ -326,9 +326,9 @@ const Grip = (props) => {
     // function to calculate dolly crane grip wrap on change
     useEffect(() => {
         const addDolcrawrap = () => {
-        setDolgripwrapTotal(parseFloat(dol_grip_qty_wrap || 0) * 
+        setDolgripwrapTotal((parseFloat(dol_grip_qty_wrap || 0) * 
         parseFloat(dol_grip_uno_wrap || 0) * 
-        parseFloat(dol_grip_rt_wrap || 0))
+        parseFloat(dol_grip_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addDolcrawrap();
@@ -361,9 +361,9 @@ const Grip = (props) => {
     // function to calculate swing grips shoot on change
     useEffect(() => {
       const addSwigri = () => {
-      setSwinggripsTotal(parseFloat(swing_grips_qty || 0) * 
+      setSwinggripsTotal((parseFloat(swing_grips_qty || 0) * 
       parseFloat(swing_grips_uno || 0) * 
-      parseFloat(swing_grips_rt || 0))
+      parseFloat(swing_grips_rt || 0)).toFixed())
       }
       const timer = setTimeout(() => {
         addSwigri();
@@ -378,9 +378,9 @@ const Grip = (props) => {
     // function to calculate swing grips prep on change
     useEffect(() => {
         const addSwigriprep = () => {
-        setSwigripsprepTotal(parseFloat(sw_grips_qty_prep || 0) * 
+        setSwigripsprepTotal((parseFloat(sw_grips_qty_prep || 0) * 
         parseFloat(sw_grips_uno_prep || 0) * 
-        parseFloat(sw_grips_rt_prep || 0))
+        parseFloat(sw_grips_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addSwigriprep();
@@ -395,9 +395,9 @@ const Grip = (props) => {
     // function to calculate swing grips wrap on change
     useEffect(() => {
         const addSwigriwrap = () => {
-        setSwigripswrapTotal(parseFloat(sw_grips_qty_wrap || 0) * 
+        setSwigripswrapTotal((parseFloat(sw_grips_qty_wrap || 0) * 
         parseFloat(sw_grips_uno_wrap || 0) * 
-        parseFloat(sw_grips_rt_wrap || 0))
+        parseFloat(sw_grips_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addSwigriwrap();
@@ -430,9 +430,9 @@ const Grip = (props) => {
     // function to calculate other grip labour shoot on change
     useEffect(() => {
       const addOthgri = () => {
-      setOthergriplabourTotal(parseFloat(other_grip_labour_qty || 0) * 
+      setOthergriplabourTotal((parseFloat(other_grip_labour_qty || 0) * 
       parseFloat(other_grip_labour_uno || 0) * 
-      parseFloat(other_grip_labour_rt || 0))
+      parseFloat(other_grip_labour_rt || 0)).toFixed())
       }
       const timer = setTimeout(() => {
         addOthgri();
@@ -447,9 +447,9 @@ const Grip = (props) => {
     // function to calculate other grip labour prep on change
     useEffect(() => {
         const addOthgriprep = () => {
-        setOthgripprepTotal(parseFloat(oth_grip_qty_prep || 0) * 
+        setOthgripprepTotal((parseFloat(oth_grip_qty_prep || 0) * 
         parseFloat(oth_grip_uno_prep || 0) * 
-        parseFloat(oth_grip_rt_prep || 0))
+        parseFloat(oth_grip_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addOthgriprep();
@@ -464,9 +464,9 @@ const Grip = (props) => {
     // function to calculate other grip labour wrap on change
     useEffect(() => {
         const addOthgriwrap = () => {
-        setOthgripwrapTotal(parseFloat(oth_grip_qty_wrap || 0) * 
+        setOthgripwrapTotal((parseFloat(oth_grip_qty_wrap || 0) * 
         parseFloat(oth_grip_uno_wrap || 0) * 
-        parseFloat(oth_grip_rt_wrap || 0))
+        parseFloat(oth_grip_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addOthgriwrap();
@@ -498,9 +498,9 @@ const Grip = (props) => {
     // function to calculate dailies grip on change
     useEffect(() => {
         const addDaigri = () => {
-        setDailiesgripTotal(parseFloat(dailies_grip_qty || 0) * 
+        setDailiesgripTotal((parseFloat(dailies_grip_qty || 0) * 
         parseFloat(dailies_grip_uno || 0) * 
-        parseFloat(dailies_grip_rt || 0))
+        parseFloat(dailies_grip_rt || 0)).toFixed())
         }
         const timer = setTimeout(() => {
           addDaigri();

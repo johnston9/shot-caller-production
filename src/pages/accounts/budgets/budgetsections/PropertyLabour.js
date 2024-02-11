@@ -66,7 +66,7 @@ const PropertyLabour = (props) => {
     const handleChange = (event) => {
         setPostDataProperty({
         ...postDataProperty,
-        [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
+        [event.target.name]: event.target.value.replace(/[^0-9.]/g, ''),
         });
     };
 
