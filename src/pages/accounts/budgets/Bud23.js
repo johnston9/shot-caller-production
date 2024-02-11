@@ -1,3 +1,66 @@
+// replace(/\D/g,'') - works but no decimal
+// handleChange1 - replace(/[^0-9.]/g, '')- works with decimal
+const handleChangeCast = (event) => {
+    setPostDataCast({
+    ...postDataCast,
+    [event.target.name]: event.target.value.replace(/[^0-9.]/g, ''),
+    });
+};
+// .toFixed()
+
+// head painter
+  // function to calculate head painter shoot on change
+  useEffect(() => {
+    const addHeaPan = () => {
+      setHeadpainterTotal((parseFloat(headpainter_quantity || 0) * 
+      parseFloat(headpainter_units_number || 0) * 
+      parseFloat(headpainter_rate || 0)).toFixed())
+    }
+    const timer = setTimeout(() => {
+        addHeaPan();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [headpainter_quantity, headpainter_units_number,
+  headpainter_rate]);
+
+  // function to calculate head painter prep on change
+  useEffect(() => {
+    const addHeaPanprep = () => {
+      setHeadpainprepTotal((parseFloat(headpain_qty_prep || 0) * 
+      parseFloat(headpain_uno_prep || 0) * 
+      parseFloat(headpain_rt_prep || 0)).toFixed())
+    }
+    const timer = setTimeout(() => {
+        addHeaPanprep();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [headpain_qty_prep, headpain_uno_prep, headpain_rt_prep]);
+
+  // function to calculate head painter wrap on change
+  useEffect(() => {
+    const addHeaPanwrap = () => {
+      setHeadpainwrapTotal((parseFloat(headpain_qty_wrap || 0) * 
+      parseFloat(headpain_uno_wrap || 0) * 
+      parseFloat(headpain_rt_wrap || 0)).toFixed())
+    }
+    const timer = setTimeout(() => {
+        addHeaPanwrap();
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+    // eslint-disable-next-line
+  }, [headpain_qty_wrap, headpain_uno_wrap, headpain_rt_wrap]);
+
     days6th7th_unit_tran,
     days6th7th_tran,
     overtime_unit_tran,

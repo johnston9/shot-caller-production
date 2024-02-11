@@ -85,21 +85,13 @@ const Camera = (props) => {
     stills_qty, stills_uno, stills_una, stills_rt,
     fringes_taxes_camera,} = postDataCamera;
 
-    // handleChange - replace(/\D/g,'') - works with decimal
+    // handleChange 
     const handleChange = (event) => {
       setPostDataCamera({
       ...postDataCamera, 
       [event.target.name]: event.target.value.replace(/[^0-9.]/g, ''),
       });
     }; 
-
-    // no decimal
-    // const handleChange = (event) => {
-    //     setPostDataCamera({
-    //     ...postDataCamera,
-    //     [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
-    //     });
-    //   }; 
 
     // handleChange Text 
     const handleChangeText = (event) => {
@@ -115,9 +107,9 @@ const Camera = (props) => {
     // function to calculate dop shoot on change
     useEffect(() => {
       const addDop = () => {
-      setDopTotal(parseFloat(dop_qty || 0) * 
+      setDopTotal((parseFloat(dop_qty || 0) * 
       parseFloat(dop_uno || 0) * 
-      parseFloat(dop_rt || 0))
+      parseFloat(dop_rt || 0)).toFixed())
       }
       const timer = setTimeout(() => {
         addDop();
@@ -132,9 +124,9 @@ const Camera = (props) => {
     // function to calculate dop prep on change
     useEffect(() => {
         const addDopprep = () => {
-        setDopprepTotal(parseFloat(dop_qty_prep || 0) * 
+        setDopprepTotal((parseFloat(dop_qty_prep || 0) * 
         parseFloat(dop_uno_prep || 0) * 
-        parseFloat(dop_rt_prep || 0))
+        parseFloat(dop_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addDopprep();
@@ -149,9 +141,9 @@ const Camera = (props) => {
     // function to calculate dop wrap on change
     useEffect(() => {
         const addDopwrap = () => {
-        setDopwrapTotal(parseFloat(dop_qty_wrap || 0) * 
+        setDopwrapTotal((parseFloat(dop_qty_wrap || 0) * 
         parseFloat(dop_uno_wrap || 0) * 
-        parseFloat(dop_rt_wrap || 0))
+        parseFloat(dop_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addDopwrap();
@@ -184,9 +176,9 @@ const Camera = (props) => {
     // function to calculate stills on change
     useEffect(() => {
         const addSti = () => {
-        setStillsTotal(parseFloat(stills_qty || 0) * 
+        setStillsTotal((parseFloat(stills_qty || 0) * 
         parseFloat(stills_uno || 0) * 
-        parseFloat(stills_rt || 0))
+        parseFloat(stills_rt || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addSti();
@@ -202,9 +194,9 @@ const Camera = (props) => {
     // function to calculate Camera Operator shoot on change
     useEffect(() => {
       const addCamope = () => {
-      setCameraopTotal(parseFloat(camera_op_qty || 0) * 
+      setCameraopTotal((parseFloat(camera_op_qty || 0) * 
       parseFloat(camera_op_uno || 0) * 
-      parseFloat(camera_op_rt || 0))
+      parseFloat(camera_op_rt || 0)).toFixed())
       }
       const timer = setTimeout(() => {
         addCamope();
@@ -219,9 +211,9 @@ const Camera = (props) => {
     // function to calculate Camera Operator prep on change
     useEffect(() => {
         const addCamopprep = () => {
-        setCamopprepTotal(parseFloat(cam_op_qty_prep || 0) * 
+        setCamopprepTotal((parseFloat(cam_op_qty_prep || 0) * 
         parseFloat(cam_op_uno_prep || 0) * 
-        parseFloat(cam_op_rt_prep || 0))
+        parseFloat(cam_op_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addCamopprep();
@@ -236,9 +228,9 @@ const Camera = (props) => {
     // function to calculate Camera Operator wrap on change
     useEffect(() => {
         const addCamopwrap = () => {
-        setCamopwrapTotal(parseFloat(cam_op_qty_wrap || 0) * 
+        setCamopwrapTotal((parseFloat(cam_op_qty_wrap || 0) * 
         parseFloat(cam_op_uno_wrap || 0) * 
-        parseFloat(cam_op_rt_wrap || 0))
+        parseFloat(cam_op_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addCamopwrap();
@@ -271,9 +263,9 @@ const Camera = (props) => {
     // function to calculate 1st Assistant Camera shoot on change
     useEffect(() => {
       const addCamac1 = () => {
-      setCamac1Total(parseFloat(cam_ac1_qty || 0) * 
+      setCamac1Total((parseFloat(cam_ac1_qty || 0) * 
       parseFloat(cam_ac1_uno || 0) * 
-      parseFloat(cam_ac1_rt || 0))
+      parseFloat(cam_ac1_rt || 0)).toFixed())
       }
       const timer = setTimeout(() => {
         addCamac1();
@@ -288,9 +280,9 @@ const Camera = (props) => {
     // function to calculate 1st Assistant Camera prep on change
     useEffect(() => {
         const addCamac1prep = () => {
-        setCamac1prepTotal(parseFloat(cam_ac1_qty_prep || 0) * 
+        setCamac1prepTotal((parseFloat(cam_ac1_qty_prep || 0) * 
         parseFloat(cam_ac1_uno_prep || 0) * 
-        parseFloat(cam_ac1_rt_prep || 0))
+        parseFloat(cam_ac1_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addCamac1prep();
@@ -305,9 +297,9 @@ const Camera = (props) => {
     // function to calculate 1st Assistant Camera wrap on change
     useEffect(() => {
         const addCamac1wrap = () => {
-        setCamac1wrapTotal(parseFloat(cam_ac1_qty_wrap || 0) * 
+        setCamac1wrapTotal((parseFloat(cam_ac1_qty_wrap || 0) * 
         parseFloat(cam_ac1_uno_wrap || 0) * 
-        parseFloat(cam_ac1_rt_wrap || 0))
+        parseFloat(cam_ac1_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addCamac1wrap();
@@ -340,9 +332,9 @@ const Camera = (props) => {
     // function to calculate 2nd Assistant Camera shoot on change
     useEffect(() => {
       const addCamac2 = () => {
-      setCamac2Total(parseFloat(cam_ac2_qty || 0) * 
+      setCamac2Total((parseFloat(cam_ac2_qty || 0) * 
       parseFloat(cam_ac2_uno || 0) * 
-      parseFloat(cam_ac2_rt || 0))
+      parseFloat(cam_ac2_rt || 0)).toFixed())
       }
       const timer = setTimeout(() => {
         addCamac2();
@@ -357,9 +349,9 @@ const Camera = (props) => {
     // function to calculate 2nd Assistant Camera prep on change
     useEffect(() => {
         const addCamac2prep = () => {
-        setCamac2prepTotal(parseFloat(cam_ac2_qty_prep || 0) * 
+        setCamac2prepTotal((parseFloat(cam_ac2_qty_prep || 0) * 
         parseFloat(cam_ac2_uno_prep || 0) * 
-        parseFloat(cam_ac2_rt_prep || 0))
+        parseFloat(cam_ac2_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addCamac2prep();
@@ -374,9 +366,9 @@ const Camera = (props) => {
     // function to calculate 2nd Assistant Camera wrap on change
     useEffect(() => {
         const addCamac2wrap = () => {
-        setCamac2wrapTotal(parseFloat(cam_ac2_qty_wrap || 0) * 
+        setCamac2wrapTotal((parseFloat(cam_ac2_qty_wrap || 0) * 
         parseFloat(cam_ac2_uno_wrap || 0) * 
-        parseFloat(cam_ac2_rt_wrap || 0))
+        parseFloat(cam_ac2_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addCamac2wrap();
@@ -409,9 +401,9 @@ const Camera = (props) => {
     // function to calculate DIT shoot on change
     useEffect(() => {
       const addDit = () => {
-      setDitTotal(parseFloat(dit_qty || 0) * 
+      setDitTotal((parseFloat(dit_qty || 0) * 
       parseFloat(dit_uno || 0) * 
-      parseFloat(dit_rt || 0))
+      parseFloat(dit_rt || 0)).toFixed())
       }
       const timer = setTimeout(() => {
         addDit();
@@ -426,9 +418,9 @@ const Camera = (props) => {
     // function to calculate DIT prep on change
     useEffect(() => {
         const addDitprep = () => {
-        setDitprepTotal(parseFloat(dit_qty_prep || 0) * 
+        setDitprepTotal((parseFloat(dit_qty_prep || 0) * 
         parseFloat(dit_uno_prep || 0) * 
-        parseFloat(dit_rt_prep || 0))
+        parseFloat(dit_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addDitprep();
@@ -443,9 +435,9 @@ const Camera = (props) => {
       // function to calculate DIT wrap on change
     useEffect(() => {
         const addDitwrap = () => {
-        setDitwrapTotal(parseFloat(dit_qty_wrap || 0) * 
+        setDitwrapTotal((parseFloat(dit_qty_wrap || 0) * 
         parseFloat(dit_uno_wrap || 0) * 
-        parseFloat(dit_rt_wrap || 0))
+        parseFloat(dit_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addDitwrap();
@@ -478,9 +470,9 @@ const Camera = (props) => {
     // function to calculate Steadicam shoot on change
     useEffect(() => {
       const addSteady = () => {
-      setSteadicamTotal(parseFloat(steadicam_qty || 0) * 
+      setSteadicamTotal((parseFloat(steadicam_qty || 0) * 
       parseFloat(steadicam_uno || 0) * 
-      parseFloat(steadicam_rt || 0))
+      parseFloat(steadicam_rt || 0)).toFixed())
       }
       const timer = setTimeout(() => {
         addSteady();
@@ -495,9 +487,9 @@ const Camera = (props) => {
     // function to calculate Steadicam prep on change
     useEffect(() => {
         const addSteadyprep = () => {
-        setStecamprepTotal(parseFloat(stead_qty_prep || 0) * 
+        setStecamprepTotal((parseFloat(stead_qty_prep || 0) * 
         parseFloat(stead_uno_prep || 0) * 
-        parseFloat(stead_rt_prep || 0))
+        parseFloat(stead_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addSteadyprep();
@@ -512,9 +504,9 @@ const Camera = (props) => {
     // function to calculate Steadicam wrap on change
     useEffect(() => {
         const addSteadywrap = () => {
-        setStecamwrapTotal(parseFloat(stead_qty_wrap || 0) * 
+        setStecamwrapTotal((parseFloat(stead_qty_wrap || 0) * 
         parseFloat(stead_uno_wrap || 0) * 
-        parseFloat(stead_rt_wrap || 0))
+        parseFloat(stead_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addSteadywrap();
@@ -547,9 +539,9 @@ const Camera = (props) => {
     // function to calculate Camera PA shoot on change
     useEffect(() => {
       const addCampa = () => {
-      setCampaTotal(parseFloat(cam_pa_qty || 0) * 
+      setCampaTotal((parseFloat(cam_pa_qty || 0) * 
       parseFloat(cam_pa_uno || 0) * 
-      parseFloat(cam_pa_rt || 0))
+      parseFloat(cam_pa_rt || 0)).toFixed())
       }
       const timer = setTimeout(() => {
         addCampa();
@@ -564,9 +556,9 @@ const Camera = (props) => {
     // function to calculate Camera PA prep on change
     useEffect(() => {
         const addCampaprep = () => {
-        setCampaprepTotal(parseFloat(cam_pa_qty_prep || 0) * 
+        setCampaprepTotal((parseFloat(cam_pa_qty_prep || 0) * 
         parseFloat(cam_pa_uno_prep || 0) * 
-        parseFloat(cam_pa_rt_prep || 0))
+        parseFloat(cam_pa_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addCampaprep();
@@ -581,9 +573,9 @@ const Camera = (props) => {
     // function to calculate Camera PA wrap on change
     useEffect(() => {
         const addCampawrap = () => {
-        setCampawrapTotal(parseFloat(cam_pa_qty_wrap || 0) * 
+        setCampawrapTotal((parseFloat(cam_pa_qty_wrap || 0) * 
         parseFloat(cam_pa_uno_wrap || 0) * 
-        parseFloat(cam_pa_rt_wrap || 0))
+        parseFloat(cam_pa_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addCampawrap();
@@ -616,9 +608,9 @@ const Camera = (props) => {
     // function to calculate Drone Pilot shoot on change
     useEffect(() => {
       const addDropil = () => {
-      setDronepilotTotal(parseFloat(drone_pilot_qty || 0) * 
+      setDronepilotTotal((parseFloat(drone_pilot_qty || 0) * 
       parseFloat(drone_pilot_uno || 0) * 
-      parseFloat(drone_pilot_rt || 0))
+      parseFloat(drone_pilot_rt || 0)).toFixed())
       }
       const timer = setTimeout(() => {
         addDropil();
@@ -633,9 +625,9 @@ const Camera = (props) => {
     // function to calculate Drone Pilot prep on change
     useEffect(() => {
         const addDropilprep = () => {
-        setDronpiprepTotal(parseFloat(dro_pil_qty_prep || 0) * 
+        setDronpiprepTotal((parseFloat(dro_pil_qty_prep || 0) * 
         parseFloat(dro_pil_uno_prep || 0) * 
-        parseFloat(dro_pil_rt_prep || 0))
+        parseFloat(dro_pil_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addDropilprep();
@@ -650,9 +642,9 @@ const Camera = (props) => {
     // function to calculate Drone Pilot wrap on change
     useEffect(() => {
         const addDropilwrap = () => {
-        setDronpiwrapTotal(parseFloat(dro_pil_qty_wrap || 0) * 
+        setDronpiwrapTotal((parseFloat(dro_pil_qty_wrap || 0) * 
         parseFloat(dro_pil_uno_wrap || 0) * 
-        parseFloat(dro_pil_rt_wrap || 0))
+        parseFloat(dro_pil_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addDropilwrap();
@@ -685,9 +677,9 @@ const Camera = (props) => {
     // function to calculate Other Camera shoot on change
     useEffect(() => {
       const addOthcam = () => {
-      setOthercamTotal(parseFloat(other_cam_qty || 0) * 
+      setOthercamTotal((parseFloat(other_cam_qty || 0) * 
       parseFloat(other_cam_uno || 0) * 
-      parseFloat(other_cam_rt || 0))
+      parseFloat(other_cam_rt || 0)).toFixed())
       }
       const timer = setTimeout(() => {
         addOthcam();
@@ -702,9 +694,9 @@ const Camera = (props) => {
     // function to calculate Other Camera prep on change
     useEffect(() => {
         const addOthcamprep = () => {
-        setOthcamprepTotal(parseFloat(ot_cam_qty_prep || 0) * 
+        setOthcamprepTotal((parseFloat(ot_cam_qty_prep || 0) * 
         parseFloat(ot_cam_uno_prep || 0) * 
-        parseFloat(ot_cam_rt_prep || 0))
+        parseFloat(ot_cam_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addOthcamprep();
@@ -719,9 +711,9 @@ const Camera = (props) => {
     // function to calculate Other Camera wrap on change
     useEffect(() => {
         const addOthcamwrap = () => {
-        setOthcamwrapTotal(parseFloat(ot_cam_qty_wrap || 0) * 
+        setOthcamwrapTotal((parseFloat(ot_cam_qty_wrap || 0) * 
         parseFloat(ot_cam_uno_wrap || 0) * 
-        parseFloat(ot_cam_rt_wrap || 0))
+        parseFloat(ot_cam_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addOthcamwrap();

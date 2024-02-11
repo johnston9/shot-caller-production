@@ -63,11 +63,11 @@ const Cast = (props) => {
     other_cast, fringes_taxes_cast, rights_payments_cast,
   } = postDataCast;
 
-  // handleChange1 - replace(/\D/g,'') - works but no decimal
+  // handleChange1 
   const handleChangeCast = (event) => {
     setPostDataCast({
     ...postDataCast,
-    [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
+    [event.target.name]: event.target.value.replace(/[^0-9.]/g, ''),
     });
   };
 
@@ -83,9 +83,9 @@ const Cast = (props) => {
   // function to calculate principals 1 on change
   useEffect(() => {
     const addPrincipals = () => {
-      setPrincipalsTotal(parseFloat(principals_units_number || 0) * 
+      setPrincipalsTotal((parseFloat(principals_units_number || 0) * 
       parseFloat(principals_quantity || 0) * 
-      parseFloat(principals_rate || 0))
+      parseFloat(principals_rate || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addPrincipals();
@@ -100,9 +100,9 @@ const Cast = (props) => {
   // function to calculate principals 2 on change
   useEffect(() => {
     const addPrincipal2 = () => {
-    setPrinc2Total(parseFloat(prin_2_qty || 0) * 
+    setPrinc2Total((parseFloat(prin_2_qty || 0) * 
       parseFloat(prin_2_uno || 0) * 
-      parseFloat(prin_2_rt || 0))
+      parseFloat(prin_2_rt || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addPrincipal2();
@@ -117,9 +117,9 @@ const Cast = (props) => {
   // function to calculate principals 3 on change
   useEffect(() => {
     const addPrincipal3 = () => {
-    setPrinc3Total(parseFloat(prin_3_qty || 0) * 
+    setPrinc3Total((parseFloat(prin_3_qty || 0) * 
       parseFloat(prin_3_uno || 0) * 
-      parseFloat(prin_3_rt || 0))
+      parseFloat(prin_3_rt || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addPrincipal3();
@@ -134,9 +134,9 @@ const Cast = (props) => {
   // function to calculate actors 1 on change
   useEffect(() => {
     const addActors = () => {
-      setActorsTotal(parseFloat(actors_units_number || 0) * 
+      setActorsTotal((parseFloat(actors_units_number || 0) * 
       parseFloat(actors_quantity || 0) * 
-      parseFloat(actors_rate || 0))
+      parseFloat(actors_rate || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addActors();
@@ -151,9 +151,9 @@ const Cast = (props) => {
   // function to calculate actors 2 on change
   useEffect(() => {
     const addActor2 = () => {
-      setActor2Total(parseFloat(actors_2_qty || 0) * 
+      setActor2Total((parseFloat(actors_2_qty || 0) * 
       parseFloat(actors_2_uno || 0) * 
-      parseFloat(actors_2_rt || 0))
+      parseFloat(actors_2_rt || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addActor2();
@@ -168,9 +168,9 @@ const Cast = (props) => {
   // function to calculate actors 3 on change
   useEffect(() => {
     const addActor3 = () => {
-      setActor3Total(parseFloat(actors_3_qty || 0) * 
+      setActor3Total((parseFloat(actors_3_qty || 0) * 
       parseFloat(actors_3_uno || 0) * 
-      parseFloat(actors_3_rt || 0))
+      parseFloat(actors_3_rt || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addActor3();
@@ -185,9 +185,9 @@ const Cast = (props) => {
   // function to calculate actors 4 on change
   useEffect(() => {
     const addActor4 = () => {
-      setActor4Total(parseFloat(actors_4_qty || 0) * 
+      setActor4Total((parseFloat(actors_4_qty || 0) * 
       parseFloat(actors_4_uno || 0) * 
-      parseFloat(actors_4_rt || 0))
+      parseFloat(actors_4_rt || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addActor4();
@@ -202,9 +202,9 @@ const Cast = (props) => {
   // function to calculate actors 5 on change
   useEffect(() => {
     const addActor5 = () => {
-      setActor5Total(parseFloat(actors_5_qty || 0) * 
+      setActor5Total((parseFloat(actors_5_qty || 0) * 
       parseFloat(actors_5_uno || 0) * 
-      parseFloat(actors_5_rt || 0))
+      parseFloat(actors_5_rt || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addActor5();
@@ -219,9 +219,9 @@ const Cast = (props) => {
   // function to calculate actors 6 on change
   useEffect(() => {
     const addActor6 = () => {
-      setActor6Total(parseFloat(actors_6_qty || 0) * 
+      setActor6Total((parseFloat(actors_6_qty || 0) * 
       parseFloat(actors_6_uno || 0) * 
-      parseFloat(actors_6_rt || 0))
+      parseFloat(actors_6_rt || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addActor6();
@@ -236,9 +236,9 @@ const Cast = (props) => {
   // function to calculate actors 7 on change
   useEffect(() => {
     const addActor7 = () => {
-      setActor7Total(parseFloat(actors_7_qty || 0) * 
+      setActor7Total((parseFloat(actors_7_qty || 0) * 
       parseFloat(actors_7_uno || 0) * 
-      parseFloat(actors_7_rt || 0))
+      parseFloat(actors_7_rt || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addActor7();
@@ -253,9 +253,9 @@ const Cast = (props) => {
   // function to calculate actors week on change
   useEffect(() => {
     const addActorweek = () => {
-      setActorweekTotal(parseFloat(actors_week_qty || 0) * 
+      setActorweekTotal((parseFloat(actors_week_qty || 0) * 
       parseFloat(actors_week_uno || 0) * 
-      parseFloat(actors_week_rt || 0))
+      parseFloat(actors_week_rt || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addActorweek();
@@ -270,9 +270,9 @@ const Cast = (props) => {
   // function to calculate actors day on change
   useEffect(() => {
     const addActorday = () => {
-      setActordayTotal(parseFloat(actors_day_qty || 0) * 
+      setActordayTotal((parseFloat(actors_day_qty || 0) * 
       parseFloat(actors_day_uno || 0) * 
-      parseFloat(actors_day_rt || 0))
+      parseFloat(actors_day_rt || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addActorday();
@@ -287,9 +287,9 @@ const Cast = (props) => {
   // function to calculate stuntcoordinators on change
   useEffect(() => {
     const addStuntcoordinators = () => {
-      setStuntcoordinatorsTotal(parseFloat(stuntcoordinators_units_number || 0) * 
+      setStuntcoordinatorsTotal((parseFloat(stuntcoordinators_units_number || 0) * 
       parseFloat(stuntcoordinators_quantity || 0) * 
-      parseFloat(stuntcoordinators_rate || 0))
+      parseFloat(stuntcoordinators_rate || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addStuntcoordinators();
@@ -304,9 +304,9 @@ const Cast = (props) => {
   // function to calculate stuntperformers on change
   useEffect(() => {
     const addStuntperformers = () => {
-      setStuntperformersTotal(parseFloat(stuntperformers_units_number || 0) * 
+      setStuntperformersTotal((parseFloat(stuntperformers_units_number || 0) * 
       parseFloat(stuntperformers_quantity || 0) * 
-      parseFloat(stuntperformers_rate || 0))
+      parseFloat(stuntperformers_rate || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addStuntperformers();
@@ -321,9 +321,9 @@ const Cast = (props) => {
   // function to calculate otherperformers on change
   useEffect(() => {
     const addOtherperformers = () => {
-      setOtherperformersTotal(parseFloat(otherperformers_units_number || 0) * 
+      setOtherperformersTotal((parseFloat(otherperformers_units_number || 0) * 
       parseFloat(otherperformers_quantity || 0) * 
-      parseFloat(otherperformers_rate || 0))
+      parseFloat(otherperformers_rate || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addOtherperformers();
@@ -338,9 +338,9 @@ const Cast = (props) => {
   // function to calculate extras on change
   useEffect(() => {
     const addExtras = () => {
-      setExtrasTotal(parseFloat(extras_units_number || 0) * 
+      setExtrasTotal((parseFloat(extras_units_number || 0) * 
       parseFloat(extras_quantity || 0) * 
-      parseFloat(extras_rate || 0))
+      parseFloat(extras_rate || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addExtras();

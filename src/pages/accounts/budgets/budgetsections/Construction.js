@@ -79,7 +79,7 @@ const Construction = (props) => {
     const handleChange = (event) => {
         setPostDataConstruction({
         ...postDataConstruction,
-        [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
+        [event.target.name]: event.target.value.replace(/[^0-9.]/g, ''),
         });
     };
 
@@ -97,9 +97,9 @@ const Construction = (props) => {
   // function to calculate construction coordinator shoot on change
   useEffect(() => {
     const addConcoo = () => {
-      setConstructioncoordinatorTotal(parseFloat(constructioncoordinator_quantity || 0) * 
+      setConstructioncoordinatorTotal((parseFloat(constructioncoordinator_quantity || 0) * 
       parseFloat(constructioncoordinator_units_number || 0) * 
-      parseFloat(constructioncoordinator_rate || 0))
+      parseFloat(constructioncoordinator_rate || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addConcoo();
@@ -115,9 +115,9 @@ const Construction = (props) => {
   // function to calculate construction coordinator prep on change
   useEffect(() => {
     const addConcooprep = () => {
-      setConoorprepTotal(parseFloat(con_coor_qty_prep || 0) * 
+      setConoorprepTotal((parseFloat(con_coor_qty_prep || 0) * 
       parseFloat(con_coor_uno_prep || 0) * 
-      parseFloat(con_coor_rt_prep || 0))
+      parseFloat(con_coor_rt_prep || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addConcooprep();
@@ -132,9 +132,9 @@ const Construction = (props) => {
   // function to calculate construction coordinator wrap on change
   useEffect(() => {
     const addConcoowrap = () => {
-      setConoorwrapTotal(parseFloat(con_coor_qty_wrap || 0) * 
+      setConoorwrapTotal((parseFloat(con_coor_qty_wrap || 0) * 
       parseFloat(con_coor_uno_wrap || 0) * 
-      parseFloat(con_coor_rt_wrap || 0))
+      parseFloat(con_coor_rt_wrap || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addConcoowrap();
@@ -169,9 +169,9 @@ const Construction = (props) => {
   // function to calculate head carpenter shoot on change
   useEffect(() => {
     const addHedcar = () => {
-      setHeadcarpenterTotal(parseFloat(headcarpenter_quantity || 0) * 
+      setHeadcarpenterTotal((parseFloat(headcarpenter_quantity || 0) * 
       parseFloat(headcarpenter_units_number || 0) * 
-      parseFloat(headcarpenter_rate || 0))
+      parseFloat(headcarpenter_rate || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addHedcar();
@@ -187,9 +187,9 @@ const Construction = (props) => {
   // function to calculate head carpenter prep on change
   useEffect(() => {
     const addHedcarprep = () => {
-      setHeadcarprepTotal(parseFloat(headcar_qty_prep || 0) * 
+      setHeadcarprepTotal((parseFloat(headcar_qty_prep || 0) * 
       parseFloat(headcar_uno_prep || 0) * 
-      parseFloat(headcar_rt_prep || 0))
+      parseFloat(headcar_rt_prep || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addHedcarprep();
@@ -204,9 +204,9 @@ const Construction = (props) => {
   // function to calculate head carpenter wrap on change
   useEffect(() => {
     const addHedcarwrap = () => {
-      setHeadcarwrapTotal(parseFloat(headcar_qty_wrap || 0) * 
+      setHeadcarwrapTotal((parseFloat(headcar_qty_wrap || 0) * 
       parseFloat(headcar_uno_wrap || 0) * 
-      parseFloat(headcar_rt_wrap || 0))
+      parseFloat(headcar_rt_wrap || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addHedcarwrap();
@@ -241,9 +241,9 @@ const Construction = (props) => {
   // function to calculate carpenters shoot on change
   useEffect(() => {
     const addCarpen = () => {
-      setCarpentersTotal(parseFloat(carpenters_quantity || 0) * 
+      setCarpentersTotal((parseFloat(carpenters_quantity || 0) * 
       parseFloat(carpenters_units_number || 0) * 
-      parseFloat(carpenters_rate || 0))
+      parseFloat(carpenters_rate || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addCarpen();
@@ -259,9 +259,9 @@ const Construction = (props) => {
   // function to calculate carpenters prep on change
   useEffect(() => {
     const addCarpenprep = () => {
-      setCarpenprepTotal(parseFloat(carpen_qty_prep || 0) * 
+      setCarpenprepTotal((parseFloat(carpen_qty_prep || 0) * 
       parseFloat(carpen_uno_prep || 0) * 
-      parseFloat(carpen_rt_prep || 0))
+      parseFloat(carpen_rt_prep || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addCarpenprep();
@@ -276,9 +276,9 @@ const Construction = (props) => {
   // function to calculate carpenters wrap on change
   useEffect(() => {
     const addCarpenwrap = () => {
-      setCarpenwrapTotal(parseFloat(carpen_qty_wrap || 0) * 
+      setCarpenwrapTotal((parseFloat(carpen_qty_wrap || 0) * 
       parseFloat(carpen_uno_wrap || 0) * 
-      parseFloat(carpen_rt_wrap || 0))
+      parseFloat(carpen_rt_wrap || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addCarpenwrap();
@@ -313,9 +313,9 @@ const Construction = (props) => {
   // function to calculate scenic painters shoot on change
   useEffect(() => {
     const addScepan = () => {
-      setScenicpaintersTotal(parseFloat(scenicpainters_quantity || 0) * 
+      setScenicpaintersTotal((parseFloat(scenicpainters_quantity || 0) * 
       parseFloat(scenicpainters_units_number || 0) * 
-      parseFloat(scenicpainters_rate || 0))
+      parseFloat(scenicpainters_rate || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addScepan();
@@ -331,9 +331,9 @@ const Construction = (props) => {
   // function to calculate scenic painters prep on change
   useEffect(() => {
     const addScepanprep = () => {
-      setScenicprepTotal(parseFloat(scenic_qty_prep || 0) * 
+      setScenicprepTotal((parseFloat(scenic_qty_prep || 0) * 
       parseFloat(scenic_uno_prep || 0) * 
-      parseFloat(scenic_rt_prep || 0))
+      parseFloat(scenic_rt_prep || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addScepanprep();
@@ -348,9 +348,9 @@ const Construction = (props) => {
   // function to calculate scenic painters wrap on change
   useEffect(() => {
     const addScepanwrap = () => {
-      setScenicwrapTotal(parseFloat(scenic_qty_wrap || 0) * 
+      setScenicwrapTotal((parseFloat(scenic_qty_wrap || 0) * 
       parseFloat(scenic_uno_wrap || 0) * 
-      parseFloat(scenic_rt_wrap || 0))
+      parseFloat(scenic_rt_wrap || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addScepanwrap();
@@ -385,9 +385,9 @@ const Construction = (props) => {
   // function to calculate head painter shoot on change
   useEffect(() => {
     const addHeaPan = () => {
-      setHeadpainterTotal(parseFloat(headpainter_quantity || 0) * 
+      setHeadpainterTotal((parseFloat(headpainter_quantity || 0) * 
       parseFloat(headpainter_units_number || 0) * 
-      parseFloat(headpainter_rate || 0))
+      parseFloat(headpainter_rate || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addHeaPan();
@@ -403,9 +403,9 @@ const Construction = (props) => {
   // function to calculate head painter prep on change
   useEffect(() => {
     const addHeaPanprep = () => {
-      setHeadpainprepTotal(parseFloat(headpain_qty_prep || 0) * 
+      setHeadpainprepTotal((parseFloat(headpain_qty_prep || 0) * 
       parseFloat(headpain_uno_prep || 0) * 
-      parseFloat(headpain_rt_prep || 0))
+      parseFloat(headpain_rt_prep || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addHeaPanprep();
@@ -420,9 +420,9 @@ const Construction = (props) => {
   // function to calculate head painter wrap on change
   useEffect(() => {
     const addHeaPanwrap = () => {
-      setHeadpainwrapTotal(parseFloat(headpain_qty_wrap || 0) * 
+      setHeadpainwrapTotal((parseFloat(headpain_qty_wrap || 0) * 
       parseFloat(headpain_uno_wrap || 0) * 
-      parseFloat(headpain_rt_wrap || 0))
+      parseFloat(headpain_rt_wrap || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addHeaPanwrap();
@@ -457,9 +457,9 @@ const Construction = (props) => {
   // function to calculate painters shoot on change
   useEffect(() => {
     const addPainte = () => {
-      setPaintersTotal(parseFloat(painters_quantity || 0) * 
+      setPaintersTotal((parseFloat(painters_quantity || 0) * 
       parseFloat(painters_units_number || 0) * 
-      parseFloat(painters_rate || 0))
+      parseFloat(painters_rate || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addPainte();
