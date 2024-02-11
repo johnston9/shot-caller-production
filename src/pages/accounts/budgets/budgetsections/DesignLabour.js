@@ -109,11 +109,11 @@ const DesignLabour = (props) => {
         other_design, fringes_taxes_design,
     } = postDataDesign;
   
-  // handleChange1 - replace(/\D/g,'') - works but no decimal
+  // handleChange1 
   const handleChangeDesign = (event) => {
     setPostDataDesign({
     ...postDataDesign,
-    [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
+    [event.target.name]: event.target.value.replace(/[^0-9.]/g, ''),
     });
   };          
 
@@ -131,9 +131,9 @@ const DesignLabour = (props) => {
   // function to calculate production designer shoot on change
   useEffect(() => {
     const addProdes = () => {
-      setProductiondesignerTotal(parseFloat(production_designer_quantity || 0) * 
+      setProductiondesignerTotal((parseFloat(production_designer_quantity || 0) * 
       parseFloat(production_designer_units_number || 0) * 
-      parseFloat(production_designer_rate || 0))
+      parseFloat(production_designer_rate || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addProdes();
@@ -149,9 +149,9 @@ const DesignLabour = (props) => {
   // function to calculate production designer prep on change
   useEffect(() => {
     const addProdesprep = () => {
-      setProdesprepTotal(parseFloat(pro_designer_qty_prep || 0) * 
+      setProdesprepTotal((parseFloat(pro_designer_qty_prep || 0) * 
       parseFloat(pro_designer_uno_prep || 0) * 
-      parseFloat(pro_designer_rt_prep || 0))
+      parseFloat(pro_designer_rt_prep || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addProdesprep();
@@ -167,9 +167,9 @@ const DesignLabour = (props) => {
   // function to calculate production designer wrap on change
   useEffect(() => {
     const addProdeswrap = () => {
-      setProdeswrapTotal(parseFloat(pro_designer_qty_wrap || 0) * 
+      setProdeswrapTotal((parseFloat(pro_designer_qty_wrap || 0) * 
       parseFloat(pro_designer_uno_wrap || 0) * 
-      parseFloat(pro_designer_rt_wrap || 0))
+      parseFloat(pro_designer_rt_wrap || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addProdeswrap();
@@ -205,9 +205,9 @@ const DesignLabour = (props) => {
   // function to calculate art director shoot on change
   useEffect(() => {
     const addArtdir = () => {
-      setArtdirectorTotal(parseFloat(art_director_quantity || 0) * 
+      setArtdirectorTotal((parseFloat(art_director_quantity || 0) * 
       parseFloat(art_director_units_number || 0) * 
-      parseFloat(art_director_rate || 0))
+      parseFloat(art_director_rate || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addArtdir();
@@ -223,9 +223,9 @@ const DesignLabour = (props) => {
   // function to calculate art director prep on change
   useEffect(() => {
     const addArtdirprep = () => {
-      setArtdirprepTotal(parseFloat(art_director_qty_prep || 0) * 
+      setArtdirprepTotal((parseFloat(art_director_qty_prep || 0) * 
       parseFloat(art_director_uno_prep || 0) * 
-      parseFloat(art_director_rt_prep || 0))
+      parseFloat(art_director_rt_prep || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addArtdirprep();
@@ -241,9 +241,9 @@ const DesignLabour = (props) => {
   // function to calculate art director wrap on change
   useEffect(() => {
     const addArtdirwrap = () => {
-      setArtdirwrapTotal(parseFloat(art_director_qty_wrap || 0) * 
+      setArtdirwrapTotal((parseFloat(art_director_qty_wrap || 0) * 
       parseFloat(art_director_uno_wrap || 0) * 
-      parseFloat(art_director_rt_wrap || 0))
+      parseFloat(art_director_rt_wrap || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addArtdirwrap();
@@ -279,9 +279,9 @@ const DesignLabour = (props) => {
   // function to calculate art assistants shoot on change
   useEffect(() => {
     const addArtass = () => {
-      setArtassistantsTotal(parseFloat(art_assistants_quantity || 0) * 
+      setArtassistantsTotal((parseFloat(art_assistants_quantity || 0) * 
       parseFloat(art_assistants_units_number || 0) * 
-      parseFloat(art_assistants_rate || 0))
+      parseFloat(art_assistants_rate || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addArtass();
@@ -297,9 +297,9 @@ const DesignLabour = (props) => {
   // function to calculate art assistants prep on change
   useEffect(() => {
     const addArtassprep = () => {
-      setArtassprepTotal(parseFloat(art_ass_qty_prep || 0) * 
+      setArtassprepTotal((parseFloat(art_ass_qty_prep || 0) * 
       parseFloat(art_ass_uno_prep || 0) * 
-      parseFloat(art_ass_rt_prep || 0))
+      parseFloat(art_ass_rt_prep || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addArtassprep();
@@ -314,9 +314,9 @@ const DesignLabour = (props) => {
   // function to calculate art assistants wrap on change
   useEffect(() => { 
     const addArtasswrap = () => {
-      setArtasswrapTotal(parseFloat(art_ass_qty_wrap || 0) * 
+      setArtasswrapTotal((parseFloat(art_ass_qty_wrap || 0) * 
       parseFloat(art_ass_uno_wrap || 0) * 
-      parseFloat(art_ass_rt_wrap || 0))
+      parseFloat(art_ass_rt_wrap || 0)).toFixed())
     }
     const timer = setTimeout(() => {   
         addArtasswrap();  

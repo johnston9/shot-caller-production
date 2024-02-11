@@ -475,9 +475,9 @@ const Construction = (props) => {
   // function to calculate painters prep on change
   useEffect(() => {
     const addPainteprep = () => {
-      setPaintprepTotal(parseFloat(pain_qty_prep || 0) * 
+      setPaintprepTotal((parseFloat(pain_qty_prep || 0) * 
       parseFloat(pain_uno_prep || 0) * 
-      parseFloat(pain_rt_prep || 0))
+      parseFloat(pain_rt_prep || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addPainteprep();
@@ -492,9 +492,9 @@ const Construction = (props) => {
   // function to calculate painters wrap on change
   useEffect(() => {
     const addPaintewrap = () => {
-      setPaintwrapTotal(parseFloat(pain_qty_wrap || 0) * 
+      setPaintwrapTotal((parseFloat(pain_qty_wrap || 0) * 
       parseFloat(pain_uno_wrap || 0) * 
-      parseFloat(pain_rt_wrap || 0))
+      parseFloat(pain_rt_wrap || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addPaintewrap();
@@ -529,9 +529,9 @@ const Construction = (props) => {
   // function to calculate labourers shoot on change
   useEffect(() => {
     const addLabour = () => {
-      setLabourersTotal(parseFloat(labourers_quantity || 0) * 
+      setLabourersTotal((parseFloat(labourers_quantity || 0) * 
       parseFloat(labourers_units_number || 0) * 
-      parseFloat(labourers_rate || 0))
+      parseFloat(labourers_rate || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addLabour();
@@ -547,9 +547,9 @@ const Construction = (props) => {
   // function to calculate labourers prep on change
   useEffect(() => {
     const addLabourprep = () => {
-      setLaboprepTotal(parseFloat(labo_qty_prep || 0) * 
+      setLaboprepTotal((parseFloat(labo_qty_prep || 0) * 
       parseFloat(labo_uno_prep || 0) * 
-      parseFloat(labo_rt_prep || 0))
+      parseFloat(labo_rt_prep || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addLabourprep();
@@ -564,9 +564,9 @@ const Construction = (props) => {
   // function to calculate labourers wrap on change
   useEffect(() => {
     const addLabourwrap = () => {
-      setLabowrapTotal(parseFloat(labo_qty_wrap || 0) * 
+      setLabowrapTotal((parseFloat(labo_qty_wrap || 0) * 
       parseFloat(labo_uno_wrap || 0) * 
-      parseFloat(labo_rt_wrap || 0))
+      parseFloat(labo_rt_wrap || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addLabourwrap();
