@@ -84,9 +84,9 @@ const PropertyLabour = (props) => {
     // function to calculate property master shoot on change
     useEffect(() => {
         const addPromas = () => {
-        setPropertymasterTotal(parseFloat(property_master_quantity || 0) * 
+        setPropertymasterTotal((parseFloat(property_master_quantity || 0) * 
         parseFloat(property_master_units_number || 0) * 
-        parseFloat(property_master_rate || 0))
+        parseFloat(property_master_rate || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addPromas();
@@ -102,9 +102,9 @@ const PropertyLabour = (props) => {
     // function to calculate property master prep on change
     useEffect(() => {
         const addPromasprep = () => {
-        setPropmasprepTotal(parseFloat(pro_mas_qty_prep || 0) * 
+        setPropmasprepTotal((parseFloat(pro_mas_qty_prep || 0) * 
         parseFloat(pro_mas_uno_prep || 0) * 
-        parseFloat(pro_mas_rt_prep || 0))
+        parseFloat(pro_mas_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addPromasprep();
@@ -119,9 +119,9 @@ const PropertyLabour = (props) => {
     // function to calculate property master wrap on change
     useEffect(() => {
         const addPromaswrap = () => {
-        setPropmaswrapTotal(parseFloat(pro_mas_qty_wrap || 0) * 
+        setPropmaswrapTotal((parseFloat(pro_mas_qty_wrap || 0) * 
         parseFloat(pro_mas_uno_wrap || 0) * 
-        parseFloat(pro_mas_rt_wrap || 0))
+        parseFloat(pro_mas_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addPromaswrap();
@@ -154,9 +154,9 @@ const PropertyLabour = (props) => {
     // function to calculate assistant property master shoot on change
     useEffect(() => {
         const addAssmas = () => {
-        setAssistpropertymasterTotal(parseFloat(assist_property_master_quantity || 0) * 
+        setAssistpropertymasterTotal((parseFloat(assist_property_master_quantity || 0) * 
         parseFloat(assist_property_master_units_number || 0) * 
-        parseFloat(assist_property_master_rate || 0))
+        parseFloat(assist_property_master_rate || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addAssmas();
@@ -172,9 +172,9 @@ const PropertyLabour = (props) => {
     // function to calculate assistant property master prep on change
     useEffect(() => {
         const addAssmasprep = () => {
-        setAspropmaprepTotal(parseFloat(as_pro_ma_qty_prep || 0) * 
+        setAspropmaprepTotal((parseFloat(as_pro_ma_qty_prep || 0) * 
         parseFloat(as_pro_ma_uno_prep || 0) * 
-        parseFloat(as_pro_ma_rt_prep || 0))
+        parseFloat(as_pro_ma_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addAssmasprep();
@@ -189,9 +189,9 @@ const PropertyLabour = (props) => {
     // function to calculate assistant property master wrap on change
     useEffect(() => {
         const addAssmaswrap = () => {
-        setAspropmawrapTotal(parseFloat(as_pro_ma_qty_wrap || 0) * 
+        setAspropmawrapTotal((parseFloat(as_pro_ma_qty_wrap || 0) * 
         parseFloat(as_pro_ma_uno_wrap || 0) * 
-        parseFloat(as_pro_ma_rt_wrap || 0))
+        parseFloat(as_pro_ma_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addAssmaswrap();
@@ -224,9 +224,9 @@ const PropertyLabour = (props) => {
     // function to calculate on set props person shoot on change
     useEffect(() => {
         const addOnsepr = () => {
-        setOnsetpropspersonTotal(parseFloat(on_set_props_person_quantity || 0) * 
+        setOnsetpropspersonTotal((parseFloat(on_set_props_person_quantity || 0) * 
         parseFloat(on_set_props_person_units_number || 0) * 
-        parseFloat(on_set_props_person_rate || 0))
+        parseFloat(on_set_props_person_rate || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addOnsepr();
@@ -242,9 +242,9 @@ const PropertyLabour = (props) => {
     // function to calculate on set props person prep on change
     useEffect(() => {
         const addOnseprprep = () => {
-        setOnsetpropprepTotal(parseFloat(on_set_prop_qty_prep || 0) * 
+        setOnsetpropprepTotal((parseFloat(on_set_prop_qty_prep || 0) * 
         parseFloat(on_set_prop_uno_prep || 0) * 
-        parseFloat(on_set_prop_rt_prep || 0))
+        parseFloat(on_set_prop_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addOnseprprep();
@@ -259,9 +259,9 @@ const PropertyLabour = (props) => {
     // function to calculate on set props person wrap on change
     useEffect(() => {
         const addOnseprwrap = () => {
-        setOnsetpropwrapTotal(parseFloat(on_set_prop_qty_wrap || 0) * 
+        setOnsetpropwrapTotal((parseFloat(on_set_prop_qty_wrap || 0) * 
         parseFloat(on_set_prop_uno_wrap || 0) * 
-        parseFloat(on_set_prop_rt_wrap || 0))
+        parseFloat(on_set_prop_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addOnseprwrap();
@@ -294,9 +294,9 @@ const PropertyLabour = (props) => {
     // function to calculate property buyer shoot on change
     useEffect(() => {
         const addPrbuye = () => {
-        setPropertybuyerTotal(parseFloat(property_buyer_quantity || 0) * 
+        setPropertybuyerTotal((parseFloat(property_buyer_quantity || 0) * 
         parseFloat(property_buyer_units_number || 0) * 
-        parseFloat(property_buyer_rate || 0))
+        parseFloat(property_buyer_rate || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addPrbuye();
@@ -312,9 +312,9 @@ const PropertyLabour = (props) => {
     // function to calculate property buyer prep on change
     useEffect(() => {
         const addPrbuyeprep = () => {
-        setPropbuyprepTotal(parseFloat(prop_buy_qty_prep || 0) * 
+        setPropbuyprepTotal((parseFloat(prop_buy_qty_prep || 0) * 
         parseFloat(prop_buy_uno_prep || 0) * 
-        parseFloat(prop_buy_rt_prep || 0))
+        parseFloat(prop_buy_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addPrbuyeprep();
@@ -329,9 +329,9 @@ const PropertyLabour = (props) => {
     // function to calculate property buyer wrap on change
     useEffect(() => {
         const addPrbuyewrap = () => {
-        setPropbuywrapTotal(parseFloat(prop_buy_qty_wrap || 0) * 
+        setPropbuywrapTotal((parseFloat(prop_buy_qty_wrap || 0) * 
         parseFloat(prop_buy_uno_wrap || 0) * 
-        parseFloat(prop_buy_rt_wrap || 0))
+        parseFloat(prop_buy_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addPrbuyewrap();
@@ -364,9 +364,9 @@ const PropertyLabour = (props) => {
     // function to calculate armorer shoot on change
     useEffect(() => {
         const addArmour = () => {
-        setArmorerTotal(parseFloat(armorer_quantity || 0) * 
+        setArmorerTotal((parseFloat(armorer_quantity || 0) * 
         parseFloat(armorer_units_number || 0) * 
-        parseFloat(armorer_rate || 0))
+        parseFloat(armorer_rate || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addArmour();
@@ -382,9 +382,9 @@ const PropertyLabour = (props) => {
     // function to calculate armorer prep on change
     useEffect(() => {
         const addArmourprep = () => {
-        setArmorprepTotal(parseFloat(armor_qty_prep || 0) * 
+        setArmorprepTotal((parseFloat(armor_qty_prep || 0) * 
         parseFloat(armor_uno_prep || 0) * 
-        parseFloat(armor_rt_prep || 0))
+        parseFloat(armor_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addArmourprep();
@@ -399,9 +399,9 @@ const PropertyLabour = (props) => {
     // function to calculate armorer wrap on change
     useEffect(() => {
         const addArmourwrap = () => {
-        setArmorwrapTotal(parseFloat(armor_qty_wrap || 0) * 
+        setArmorwrapTotal((parseFloat(armor_qty_wrap || 0) * 
         parseFloat(armor_uno_wrap || 0) * 
-        parseFloat(armor_rt_wrap || 0))
+        parseFloat(armor_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addArmourwrap();

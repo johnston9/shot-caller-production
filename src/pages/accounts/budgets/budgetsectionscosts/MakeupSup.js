@@ -17,11 +17,11 @@ const MakeupSup = (props) => {
       hair_purchases, wigs, makeup_fx, makeup_ship_brok, other_makeup,
   } = postDataMakeupSup;
 
-  // handleChange - replace(/\D/g,'') - works but no decimal
+  // handleChange
   const handleChange = (event) => {
     setPostDataMakeupSup({
     ...postDataMakeupSup,
-    [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
+    [event.target.name]: event.target.value.replace(/[^0-9.]/g, ''),
     });
   };
 

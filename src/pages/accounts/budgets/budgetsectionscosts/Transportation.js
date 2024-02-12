@@ -18,11 +18,11 @@ const Transportation = (props) => {
         parking, licenses_permits, brokerage_insurance, other_transport,
   } = postDataTransportation;
 
-  // handleChange - replace(/\D/g,'') - works but no decimal
+  // handleChange 
   const handleChange = (event) => {
     setPostDataTransportation({
     ...postDataTransportation,
-    [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
+    [event.target.name]: event.target.value.replace(/[^0-9.]/g, ''),
     });
   };
 

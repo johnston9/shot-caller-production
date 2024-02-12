@@ -33,11 +33,11 @@ const StaffFacilities = (props) => {
     post_ship, post_craft, fringes_taxes_post, post_other, post_consultant,
   } = postDataPostStaffFac;
 
-  // handleChange - replace(/\D/g,'') - works but no decimal
+  // handleChange
   const handleChange = (event) => {
     setPostDataPostStaffFac({
     ...postDataPostStaffFac,
-    [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
+    [event.target.name]: event.target.value.replace(/[^0-9.]/g, ''),
     });
   }; 
 
@@ -53,9 +53,9 @@ const StaffFacilities = (props) => {
   // function to calculate Supervisor on change
   useEffect(() => {
     const addPossup = () => {
-    setPostSuperTotal(parseFloat(post_supervisor_qty || 0) * 
+    setPostSuperTotal((parseFloat(post_supervisor_qty || 0) * 
     parseFloat(post_supervisor_uno || 0) * 
-    parseFloat(post_supervisor_rt || 0))
+    parseFloat(post_supervisor_rt || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addPossup();
@@ -71,9 +71,9 @@ const StaffFacilities = (props) => {
   // function to calculate Coordinator on change
   useEffect(() => {
     const addPoscoo = () => {
-    setPostCoordinTotal(parseFloat(post_coordinator_qty || 0) * 
+    setPostCoordinTotal((parseFloat(post_coordinator_qty || 0) * 
     parseFloat(post_coordinator_uno || 0) * 
-    parseFloat(post_coordinator_rt || 0))
+    parseFloat(post_coordinator_rt || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addPoscoo();
@@ -88,9 +88,9 @@ const StaffFacilities = (props) => {
   // function to calculate Post Production Assistants on change
   useEffect(() => {
     const addPosass = () => {
-    setPostAssistTotal(parseFloat(post_assistants_qty || 0) * 
+    setPostAssistTotal((parseFloat(post_assistants_qty || 0) * 
     parseFloat(post_assistants_uno || 0) * 
-    parseFloat(post_assistants_rt || 0))
+    parseFloat(post_assistants_rt || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addPosass();
@@ -105,9 +105,9 @@ const StaffFacilities = (props) => {
   // function to calculate Post Production Accountants on change
   useEffect(() => {
     const addPosacc = () => {
-    setPostAccountTotal(parseFloat(post_accountants_qty || 0) * 
+    setPostAccountTotal((parseFloat(post_accountants_qty || 0) * 
     parseFloat(post_accountants_uno || 0) * 
-    parseFloat(post_accountants_rt || 0))
+    parseFloat(post_accountants_rt || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addPosacc();
@@ -122,9 +122,9 @@ const StaffFacilities = (props) => {
   // function to calculate Post Production Accountants Assistants on change
   useEffect(() => {
     const addPosaccass = () => {
-    setPostAccountAssTotal(parseFloat(post_accountants_ass_qty || 0) * 
+    setPostAccountAssTotal((parseFloat(post_accountants_ass_qty || 0) * 
     parseFloat(post_accountants_ass_uno || 0) * 
-    parseFloat(post_accountants_ass_rt || 0))
+    parseFloat(post_accountants_ass_rt || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addPosaccass();

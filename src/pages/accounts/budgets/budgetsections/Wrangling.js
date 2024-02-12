@@ -40,7 +40,7 @@ const Wrangling = (props) => {
     const handleChange = (event) => {
         setPostDataWrangling({
         ...postDataWrangling,
-        [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
+        [event.target.name]: event.target.value.replace(/[^0-9.]/g, ''),
         });
     }; 
 
@@ -58,9 +58,9 @@ const Wrangling = (props) => {
     // function to calculate head wrangler shoot on change
     useEffect(() => {
         const addWrangl = () => {
-        setHeadwranglerTotal(parseFloat(head_wrangler_quantity || 0) * 
+        setHeadwranglerTotal((parseFloat(head_wrangler_quantity || 0) * 
         parseFloat(head_wrangler_units_number || 0) * 
-        parseFloat(head_wrangler_rate || 0))
+        parseFloat(head_wrangler_rate || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addWrangl();
@@ -76,9 +76,9 @@ const Wrangling = (props) => {
     // function to calculate head wrangler prep on change
     useEffect(() => {
         const addWranprep = () => {
-        setHewranprepTotal(parseFloat(he_wran_qty_prep || 0) * 
+        setHewranprepTotal((parseFloat(he_wran_qty_prep || 0) * 
         parseFloat(he_wran_uno_prep || 0) * 
-        parseFloat(he_wran_rt_prep || 0))
+        parseFloat(he_wran_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addWranprep();
@@ -93,9 +93,9 @@ const Wrangling = (props) => {
     // function to calculate head wrangler wrap on change
     useEffect(() => {
         const addWranwrap = () => {
-        setHewranwrapTotal(parseFloat(he_wran_qty_wrap || 0) * 
+        setHewranwrapTotal((parseFloat(he_wran_qty_wrap || 0) * 
         parseFloat(he_wran_uno_wrap || 0) * 
-        parseFloat(he_wran_rt_wrap || 0))
+        parseFloat(he_wran_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addWranwrap();
@@ -128,9 +128,9 @@ const Wrangling = (props) => {
     // function to calculate other wrangling labour shoot on change
     useEffect(() => {
         const addOthwra = () => {
-        setOtherwranglinglabourTotal(parseFloat(other_wrangling_labour_quantity || 0) * 
+        setOtherwranglinglabourTotal((parseFloat(other_wrangling_labour_quantity || 0) * 
         parseFloat(other_wrangling_labour_units_number || 0) * 
-        parseFloat(other_wrangling_labour_rate || 0))
+        parseFloat(other_wrangling_labour_rate || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addOthwra();
@@ -146,9 +146,9 @@ const Wrangling = (props) => {
     // function to calculate other wrangling labour prep on change
     useEffect(() => {
         const addOthwraprep = () => {
-        setOtwranlabprepTotal(parseFloat(oth_wran_qty_prep || 0) * 
+        setOtwranlabprepTotal((parseFloat(oth_wran_qty_prep || 0) * 
         parseFloat(oth_wran_uno_prep || 0) * 
-        parseFloat(oth_wran_rt_prep || 0))
+        parseFloat(oth_wran_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addOthwraprep();
@@ -163,9 +163,9 @@ const Wrangling = (props) => {
     // function to calculate other wrangling labour wrap on change
     useEffect(() => {
         const addOthwrawrap = () => {
-        setOtwranlabwrapTotal(parseFloat(oth_wran_qty_wrap || 0) * 
+        setOtwranlabwrapTotal((parseFloat(oth_wran_qty_wrap || 0) * 
         parseFloat(oth_wran_uno_wrap || 0) * 
-        parseFloat(oth_wran_rt_wrap || 0))
+        parseFloat(oth_wran_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addOthwrawrap();

@@ -27,14 +27,13 @@ const Editing = (props) => {
     vfx_ed_system, post_edit_pur, lossdam_edit, fringes_taxes_post_edit,
   other_post_edit,} = postDataEdit;
 
-  // handleChange - replace(/\D/g,'') - works but no decimal
+  // handleChange 
   const handleChange = (event) => {
     setPostDataEdit({
     ...postDataEdit,
-    [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
+    [event.target.name]: event.target.value.replace(/[^0-9.]/g, ''),
     });
   };
-
 
   // handleChange Text 
   const handleChangeText = (event) => {
@@ -48,9 +47,9 @@ const Editing = (props) => {
   // function to calculate Editor on change
   useEffect(() => {
     const addEditor = () => {
-    setEditorTotal(parseFloat(editor_qty || 0) * 
+    setEditorTotal((parseFloat(editor_qty || 0) * 
     parseFloat(editor_uno || 0) * 
-    parseFloat(editor_rt || 0))
+    parseFloat(editor_rt || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addEditor();
@@ -65,9 +64,9 @@ const Editing = (props) => {
   // function to calculate VFX Editor on change
   useEffect(() => {
     const addEdivfx = () => {
-    setEditorVfxTotal(parseFloat(editor_vfx_qty || 0) * 
+    setEditorVfxTotal((parseFloat(editor_vfx_qty || 0) * 
     parseFloat(editor_vfx_uno || 0) * 
-    parseFloat(editor_vfx_rt || 0))
+    parseFloat(editor_vfx_rt || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addEdivfx();
@@ -82,9 +81,9 @@ const Editing = (props) => {
   // function to calculate Assistant Editor on change
   useEffect(() => {
     const addEdiass = () => {
-    setEditorAssTotal(parseFloat(editor_ass_qty || 0) * 
+    setEditorAssTotal((parseFloat(editor_ass_qty || 0) * 
     parseFloat(editor_ass_uno || 0) * 
-    parseFloat(editor_ass_rt || 0))
+    parseFloat(editor_ass_rt || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addEdiass();
@@ -99,9 +98,9 @@ const Editing = (props) => {
   // function to calculate Grader on change
   useEffect(() => {
     const addGrader = () => {
-    setGraderTotal(parseFloat(colorist_grader_qty || 0) * 
+    setGraderTotal((parseFloat(colorist_grader_qty || 0) * 
     parseFloat(colorist_grader_uno || 0) * 
-    parseFloat(colorist_grader_rt || 0))
+    parseFloat(colorist_grader_rt || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addGrader();
@@ -116,9 +115,9 @@ const Editing = (props) => {
   // function to calculate Graphics on change
   useEffect(() => {
     const addGraphics = () => {
-    setGraphicsTotal(parseFloat(graphics_qty || 0) * 
+    setGraphicsTotal((parseFloat(graphics_qty || 0) * 
     parseFloat(graphics_uno || 0) * 
-    parseFloat(graphics_rt || 0))
+    parseFloat(graphics_rt || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addGraphics();

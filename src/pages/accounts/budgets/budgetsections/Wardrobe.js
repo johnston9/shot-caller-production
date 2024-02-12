@@ -93,7 +93,7 @@ const Wardrobe = (props) => {
     const handleChange = (event) => {
         setPostDataWardrobe({
         ...postDataWardrobe,
-        [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
+        [event.target.name]: event.target.value.replace(/[^0-9.]/g, ''),
         });
     };
 
@@ -111,9 +111,9 @@ const Wardrobe = (props) => {
     // function to calculate costume designer shoot on change
     useEffect(() => {
         const addCosdes = () => {
-        setCostumedesignerTotal(parseFloat(costume_designer_quantity || 0) * 
+        setCostumedesignerTotal((parseFloat(costume_designer_quantity || 0) * 
         parseFloat(costume_designer_units_number || 0) * 
-        parseFloat(costume_designer_rate || 0))
+        parseFloat(costume_designer_rate || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addCosdes();
@@ -129,9 +129,9 @@ const Wardrobe = (props) => {
     // function to calculate costume designer prep on change
     useEffect(() => {
         const addCosdesprep = () => {
-        setCosdesprepTotal(parseFloat(cos_des_qty_prep || 0) * 
+        setCosdesprepTotal((parseFloat(cos_des_qty_prep || 0) * 
         parseFloat(cos_des_uno_prep || 0) * 
-        parseFloat(cos_des_rt_prep || 0))
+        parseFloat(cos_des_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addCosdesprep();
@@ -146,9 +146,9 @@ const Wardrobe = (props) => {
     // function to calculate costume designer wrap on change
     useEffect(() => {
         const addCosdeswrap = () => {
-        setCosdeswrapTotal(parseFloat(cos_des_qty_wrap || 0) * 
+        setCosdeswrapTotal((parseFloat(cos_des_qty_wrap || 0) * 
         parseFloat(cos_des_uno_wrap || 0) * 
-        parseFloat(cos_des_rt_wrap || 0))
+        parseFloat(cos_des_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addCosdeswrap();
@@ -180,9 +180,9 @@ const Wardrobe = (props) => {
     // function to calculate assistant costume designer shoot on change
     useEffect(() => {
         const addAsscos = () => {
-        setAssistcosdesignerTotal(parseFloat(assist_costume_designer_quantity || 0) * 
+        setAssistcosdesignerTotal((parseFloat(assist_costume_designer_quantity || 0) * 
         parseFloat(assist_costume_designer_units_number || 0) * 
-        parseFloat(assist_costume_designer_rate || 0))
+        parseFloat(assist_costume_designer_rate || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addAsscos();
@@ -198,9 +198,9 @@ const Wardrobe = (props) => {
     // function to calculate assistant costume designer prep on change
     useEffect(() => {
         const addAsscosprep = () => {
-        setAscosdesprepTotal(parseFloat(as_cos_des_qty_prep || 0) * 
+        setAscosdesprepTotal((parseFloat(as_cos_des_qty_prep || 0) * 
         parseFloat(as_cos_des_uno_prep || 0) * 
-        parseFloat(as_cos_des_rt_prep || 0))
+        parseFloat(as_cos_des_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addAsscosprep();
@@ -215,9 +215,9 @@ const Wardrobe = (props) => {
     // function to calculate assistant costume designer wrap on change
     useEffect(() => {
         const addAsscoswrap = () => {
-        setAscosdeswrapTotal(parseFloat(as_cos_des_qty_wrap || 0) * 
+        setAscosdeswrapTotal((parseFloat(as_cos_des_qty_wrap || 0) * 
         parseFloat(as_cos_des_uno_wrap || 0) * 
-        parseFloat(as_cos_des_rt_wrap || 0))
+        parseFloat(as_cos_des_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addAsscoswrap();
@@ -250,9 +250,9 @@ const Wardrobe = (props) => {
     // function to calculate head wardrobe shoot on change
     useEffect(() => {
         const addHeawar = () => {
-        setHeadwardrobeTotal(parseFloat(head_wardrobe_quantity || 0) * 
+        setHeadwardrobeTotal((parseFloat(head_wardrobe_quantity || 0) * 
         parseFloat(head_wardrobe_units_number || 0) * 
-        parseFloat(head_wardrobe_rate || 0))
+        parseFloat(head_wardrobe_rate || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addHeawar();
@@ -268,9 +268,9 @@ const Wardrobe = (props) => {
     // function to calculate head wardrobe prep on change
     useEffect(() => {
         const addHeawarprep = () => {
-        setHewarprepTotal(parseFloat(he_war_qty_prep || 0) * 
+        setHewarprepTotal((parseFloat(he_war_qty_prep || 0) * 
         parseFloat(he_war_uno_prep || 0) * 
-        parseFloat(he_war_rt_prep || 0))
+        parseFloat(he_war_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addHeawarprep();
@@ -285,9 +285,9 @@ const Wardrobe = (props) => {
     // function to calculate head wardrobe wrap on change
     useEffect(() => {
         const addHeawarwrap = () => {
-        setHewarwrapTotal(parseFloat(he_war_qty_wrap || 0) * 
+        setHewarwrapTotal((parseFloat(he_war_qty_wrap || 0) * 
         parseFloat(he_war_uno_wrap || 0) * 
-        parseFloat(he_war_rt_wrap || 0))
+        parseFloat(he_war_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addHeawarwrap();
@@ -320,9 +320,9 @@ const Wardrobe = (props) => {
     // function to calculate wardrobe assistant shoot on change
     useEffect(() => {
         const addWarass = () => {
-        setWardrobeassistTotal(parseFloat(wardrobe_assist_quantity || 0) * 
+        setWardrobeassistTotal((parseFloat(wardrobe_assist_quantity || 0) * 
         parseFloat(wardrobe_assist_units_number || 0) * 
-        parseFloat(wardrobe_assist_rate || 0))
+        parseFloat(wardrobe_assist_rate || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addWarass();
@@ -338,9 +338,9 @@ const Wardrobe = (props) => {
     // function to calculate wardrobe assistant prep on change
     useEffect(() => {
         const addWarassprep = () => {
-        setWarasprepTotal(parseFloat(war_as_qty_prep || 0) * 
+        setWarasprepTotal((parseFloat(war_as_qty_prep || 0) * 
         parseFloat(war_as_uno_prep || 0) * 
-        parseFloat(war_as_rt_prep || 0))
+        parseFloat(war_as_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addWarassprep();
@@ -355,9 +355,9 @@ const Wardrobe = (props) => {
     // function to calculate wardrobe assistant wrap on change
     useEffect(() => {
         const addWarasswrap = () => {
-        setWaraswrapTotal(parseFloat(war_as_qty_wrap || 0) * 
+        setWaraswrapTotal((parseFloat(war_as_qty_wrap || 0) * 
         parseFloat(war_as_uno_wrap || 0) * 
-        parseFloat(war_as_rt_wrap || 0))
+        parseFloat(war_as_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addWarasswrap();
@@ -390,9 +390,9 @@ const Wardrobe = (props) => {
     // function to calculate truck costumer shoot on change
     useEffect(() => {
         const addTrucus = () => {
-        setTruckcostumerTotal(parseFloat(truck_costumer_quantity || 0) * 
+        setTruckcostumerTotal((parseFloat(truck_costumer_quantity || 0) * 
         parseFloat(truck_costumer_units_number || 0) * 
-        parseFloat(truck_costumer_rate || 0))
+        parseFloat(truck_costumer_rate || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addTrucus();
@@ -408,9 +408,9 @@ const Wardrobe = (props) => {
     // function to calculate truck costumer prep on change
     useEffect(() => {
         const addTrucusprep = () => {
-        setTrucosprepTotal(parseFloat(tru_cos_qty_prep || 0) * 
+        setTrucosprepTotal((parseFloat(tru_cos_qty_prep || 0) * 
         parseFloat(tru_cos_uno_prep || 0) * 
-        parseFloat(tru_cos_rt_prep || 0))
+        parseFloat(tru_cos_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addTrucusprep();
@@ -425,9 +425,9 @@ const Wardrobe = (props) => {
     // function to calculate truck costumer wrap on change
     useEffect(() => {
         const addTrucuswrap = () => {
-        setTrucoswrapTotal(parseFloat(tru_cos_qty_wrap || 0) * 
+        setTrucoswrapTotal((parseFloat(tru_cos_qty_wrap || 0) * 
         parseFloat(tru_cos_uno_wrap || 0) * 
-        parseFloat(tru_cos_rt_wrap || 0))
+        parseFloat(tru_cos_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addTrucuswrap();
@@ -460,9 +460,9 @@ const Wardrobe = (props) => {
     // function to calculate shopper shoot on change
     useEffect(() => {
         const addShop = () => {
-        setShopperTotal(parseFloat(shopper_qty || 0) * 
+        setShopperTotal((parseFloat(shopper_qty || 0) * 
         parseFloat(shopper_uno || 0) * 
-        parseFloat(shopper_rt || 0))
+        parseFloat(shopper_rt || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addShop();
@@ -477,9 +477,9 @@ const Wardrobe = (props) => {
     // function to calculate shopper prep on change
     useEffect(() => {
         const addShopprep = () => {
-        setShopprepTotal(parseFloat(shopper_qty_prep || 0) * 
+        setShopprepTotal((parseFloat(shopper_qty_prep || 0) * 
         parseFloat(shopper_uno_prep || 0) * 
-        parseFloat(shopper_rt_prep || 0))
+        parseFloat(shopper_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addShopprep();
@@ -511,9 +511,9 @@ const Wardrobe = (props) => {
     // function to calculate other wardrobe labour shoot on change
     useEffect(() => {
         const addOthwar = () => {
-        setOtherwardrobeTotal(parseFloat(other_wardrobe_labour_quantity || 0) * 
+        setOtherwardrobeTotal((parseFloat(other_wardrobe_labour_quantity || 0) * 
         parseFloat(other_wardrobe_labour_units_number || 0) * 
-        parseFloat(other_wardrobe_labour_rate || 0))
+        parseFloat(other_wardrobe_labour_rate || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addOthwar();
@@ -529,9 +529,9 @@ const Wardrobe = (props) => {
     // function to calculate other wardrobe labour prep on change
     useEffect(() => {
         const addOthwarprep = () => {
-        setOthwarprepTotal(parseFloat(ot_war_qty_prep || 0) * 
+        setOthwarprepTotal((parseFloat(ot_war_qty_prep || 0) * 
         parseFloat(ot_war_uno_prep || 0) * 
-        parseFloat(ot_war_rt_prep || 0))
+        parseFloat(ot_war_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addOthwarprep();
@@ -546,9 +546,9 @@ const Wardrobe = (props) => {
     // function to calculate other wardrobe labour wrap on change
     useEffect(() => {
         const addOthwarwrap = () => {
-        setOthwarwrapTotal(parseFloat(ot_war_qty_wrap || 0) * 
+        setOthwarwrapTotal((parseFloat(ot_war_qty_wrap || 0) * 
         parseFloat(ot_war_uno_wrap || 0) * 
-        parseFloat(ot_war_rt_wrap || 0))
+        parseFloat(ot_war_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addOthwarwrap();
@@ -581,9 +581,9 @@ const Wardrobe = (props) => {
     // function to calculate Wardrobe Coordinator shoot on change
     useEffect(() => {
         const addWarcoor = () => {
-        setWarcoorTotal(parseFloat(war_coor_qty || 0) * 
+        setWarcoorTotal((parseFloat(war_coor_qty || 0) * 
         parseFloat(war_coor_uno || 0) * 
-        parseFloat(war_coor_rt || 0))
+        parseFloat(war_coor_rt || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addWarcoor();
@@ -598,9 +598,9 @@ const Wardrobe = (props) => {
     // function to calculate Wardrobe Coordinator prep on change
     useEffect(() => {
         const addWarcoprep = () => {
-        setWarcoprepTotal(parseFloat(war_coor_qty_prep || 0) * 
+        setWarcoprepTotal((parseFloat(war_coor_qty_prep || 0) * 
         parseFloat(war_coor_uno_prep || 0) * 
-        parseFloat(war_coor_rt_prep || 0))
+        parseFloat(war_coor_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addWarcoprep();
@@ -615,9 +615,9 @@ const Wardrobe = (props) => {
     // function to calculate Wardrobe Coordinator wrap on change
     useEffect(() => {
         const addWarcowrap = () => {
-        setWarcowrapTotal(parseFloat(war_coor_qty_wrap || 0) * 
+        setWarcowrapTotal((parseFloat(war_coor_qty_wrap || 0) * 
         parseFloat(war_coor_uno_wrap || 0) * 
-        parseFloat(war_coor_rt_wrap || 0))
+        parseFloat(war_coor_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addWarcowrap();
@@ -650,9 +650,9 @@ const Wardrobe = (props) => {
     // function to calculate Wardrobe Trainee shoot on change
     useEffect(() => {
         const addWartrain = () => {
-        setWartrainTotal(parseFloat(train_qty || 0) * 
+        setWartrainTotal((parseFloat(train_qty || 0) * 
         parseFloat(train_uno || 0) * 
-        parseFloat(train_rt || 0))
+        parseFloat(train_rt || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addWartrain();
@@ -667,9 +667,9 @@ const Wardrobe = (props) => {
     // function to calculate Wardrobe Trainee prep on change
     useEffect(() => {
         const addWartraprep = () => {
-        setWartraprepTotal(parseFloat(train_qty_prep || 0) * 
+        setWartraprepTotal((parseFloat(train_qty_prep || 0) * 
         parseFloat(train_uno_prep || 0) * 
-        parseFloat(train_rt_prep || 0))
+        parseFloat(train_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addWartraprep();
@@ -684,9 +684,9 @@ const Wardrobe = (props) => {
     // function to calculate Wardrobe Trainee wrap on change
     useEffect(() => {
         const addWartrawrap = () => {
-        setWartrawrapTotal(parseFloat(train_qty_wrap || 0) * 
+        setWartrawrapTotal((parseFloat(train_qty_wrap || 0) * 
         parseFloat(train_uno_wrap || 0) * 
-        parseFloat(train_rt_wrap || 0))
+        parseFloat(train_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addWartrawrap();
@@ -718,9 +718,9 @@ const Wardrobe = (props) => {
     // function to calculate Wardrobe Dailies on change
   useEffect(() => {
     const addWarday = () => {
-      setWardayTotal(parseFloat(day_war_qty || 0) * 
+      setWardayTotal((parseFloat(day_war_qty || 0) * 
       parseFloat(day_war_uno || 0) * 
-      parseFloat(day_war_rt || 0))
+      parseFloat(day_war_rt || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addWarday();

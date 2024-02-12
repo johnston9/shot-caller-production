@@ -73,7 +73,7 @@ const SetDressingLabour = (props) => {
     const handleChange = (event) => {
         setPostDataSetDressing({
         ...postDataSetDressing,
-        [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
+        [event.target.name]: event.target.value.replace(/[^0-9.]/g, ''),
         });
     };
 
@@ -90,9 +90,9 @@ const SetDressingLabour = (props) => {
     // function to calculate set decorator shoot on change
     useEffect(() => {
         const addSetdec = () => {
-        setDecoratorsetTotal(parseFloat(set_decorator_quantity || 0) * 
+        setDecoratorsetTotal((parseFloat(set_decorator_quantity || 0) * 
         parseFloat(set_decorator_units_number || 0) * 
-        parseFloat(set_decorator_rate || 0))
+        parseFloat(set_decorator_rate || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addSetdec();
@@ -108,9 +108,9 @@ const SetDressingLabour = (props) => {
     // function to calculate set decorator prep on change
     useEffect(() => {
         const addSetdecprep = () => {
-        setDecsetprepTotal(parseFloat(set_dec_qty_prep || 0) * 
+        setDecsetprepTotal((parseFloat(set_dec_qty_prep || 0) * 
         parseFloat(set_dec_uno_prep || 0) * 
-        parseFloat(set_dec_rt_prep || 0))
+        parseFloat(set_dec_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addSetdecprep();
@@ -125,9 +125,9 @@ const SetDressingLabour = (props) => {
     // function to calculate set decorator wrap on change
     useEffect(() => {
         const addSetdecwrap = () => {
-        setDecsetwrapTotal(parseFloat(set_dec_qty_wrap || 0) * 
+        setDecsetwrapTotal((parseFloat(set_dec_qty_wrap || 0) * 
         parseFloat(set_dec_uno_wrap || 0) * 
-        parseFloat(set_dec_rt_wrap || 0))
+        parseFloat(set_dec_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addSetdecwrap();
@@ -162,9 +162,9 @@ const SetDressingLabour = (props) => {
     // function to calculate assistant set decorator shoot on change
     useEffect(() => {
         const addAssdec = () => {
-        setAssistdecoratorsetTotal(parseFloat(assist_set_decorator_quantity || 0) * 
+        setAssistdecoratorsetTotal((parseFloat(assist_set_decorator_quantity || 0) * 
         parseFloat(assist_set_decorator_units_number || 0) * 
-        parseFloat(assist_set_decorator_rate || 0))
+        parseFloat(assist_set_decorator_rate || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addAssdec();
@@ -180,9 +180,9 @@ const SetDressingLabour = (props) => {
     // function to calculate assistant set decorator prep on change
     useEffect(() => {
         const addAssdecprep = () => {
-        setAssdsetprepTotal(parseFloat(ass_set_d_qty_prep || 0) * 
+        setAssdsetprepTotal((parseFloat(ass_set_d_qty_prep || 0) * 
         parseFloat(ass_set_d_uno_prep || 0) * 
-        parseFloat(ass_set_d_rt_prep || 0))
+        parseFloat(ass_set_d_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addAssdecprep();
@@ -197,9 +197,9 @@ const SetDressingLabour = (props) => {
     // function to calculate assistant set decorator wrap on change
     useEffect(() => {
         const addAssdecwrap = () => {
-        setAssdsetwrapTotal(parseFloat(ass_set_d_qty_wrap || 0) * 
+        setAssdsetwrapTotal((parseFloat(ass_set_d_qty_wrap || 0) * 
         parseFloat(ass_set_d_uno_wrap || 0) * 
-        parseFloat(ass_set_d_rt_wrap || 0))
+        parseFloat(ass_set_d_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addAssdecwrap();
@@ -234,9 +234,9 @@ const SetDressingLabour = (props) => {
     // function to calculate lead man shoot on change
     useEffect(() => {
         const addLeaman = () => {
-        setLeadmanTotal(parseFloat(lead_man_quantity || 0) * 
+        setLeadmanTotal((parseFloat(lead_man_quantity || 0) * 
         parseFloat(lead_man_units_number || 0) * 
-        parseFloat(lead_man_rate || 0))
+        parseFloat(lead_man_rate || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addLeaman();
@@ -252,9 +252,9 @@ const SetDressingLabour = (props) => {
     // function to calculate lead man prep on change
     useEffect(() => {
         const addLeamanprep = () => {
-        setLeadmanprepTotal(parseFloat(lead_man_qty_prep || 0) * 
+        setLeadmanprepTotal((parseFloat(lead_man_qty_prep || 0) * 
         parseFloat(lead_man_uno_prep || 0) * 
-        parseFloat(lead_man_rt_prep || 0))
+        parseFloat(lead_man_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addLeamanprep();
@@ -269,9 +269,9 @@ const SetDressingLabour = (props) => {
     // function to calculate lead man wrap on change
     useEffect(() => {
         const addLeamanwrap = () => {
-        setLeadmanwrapTotal(parseFloat(lead_man_qty_wrap || 0) * 
+        setLeadmanwrapTotal((parseFloat(lead_man_qty_wrap || 0) * 
         parseFloat(lead_man_uno_wrap || 0) * 
-        parseFloat(lead_man_rt_wrap || 0))
+        parseFloat(lead_man_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addLeamanwrap();
@@ -306,9 +306,9 @@ const SetDressingLabour = (props) => {
     // function to calculate set dressers shoot on change
     useEffect(() => {
         const addDresse = () => {
-        setDressersTotal(parseFloat(set_dressers_quantity || 0) * 
+        setDressersTotal((parseFloat(set_dressers_quantity || 0) * 
         parseFloat(set_dressers_units_number || 0) * 
-        parseFloat(set_dressers_rate || 0))
+        parseFloat(set_dressers_rate || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addDresse();
@@ -324,9 +324,9 @@ const SetDressingLabour = (props) => {
     // function to calculate set dressers prep on change
     useEffect(() => {
         const addDressprep = () => {
-        setDressprepTotal(parseFloat(set_dres_qty_prep || 0) * 
+        setDressprepTotal((parseFloat(set_dres_qty_prep || 0) * 
         parseFloat(set_dres_uno_prep || 0) * 
-        parseFloat(set_dres_rt_prep || 0))
+        parseFloat(set_dres_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addDressprep();
@@ -341,9 +341,9 @@ const SetDressingLabour = (props) => {
     // function to calculate set dressers wrap on change
     useEffect(() => {
         const addDresswrap = () => {
-        setDresswrapTotal(parseFloat(set_dres_qty_wrap || 0) * 
+        setDresswrapTotal((parseFloat(set_dres_qty_wrap || 0) * 
         parseFloat(set_dres_uno_wrap || 0) * 
-        parseFloat(set_dres_rt_wrap || 0))
+        parseFloat(set_dres_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addDresswrap();
@@ -378,9 +378,9 @@ const SetDressingLabour = (props) => {
     // function to calculate swing gang shoot on change
     useEffect(() => {
         const addSwiGan = () => {
-        setSwinggangTotal(parseFloat(swing_gang_quantity || 0) * 
+        setSwinggangTotal((parseFloat(swing_gang_quantity || 0) * 
         parseFloat(swing_gang_units_number || 0) * 
-        parseFloat(swing_gang_rate || 0))
+        parseFloat(swing_gang_rate || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addSwiGan();
@@ -396,9 +396,9 @@ const SetDressingLabour = (props) => {
     // function to calculate swing gang prep on change
     useEffect(() => {
         const addSwiGanprep = () => {
-        setSwinggprepTotal(parseFloat(swing_g_qty_prep || 0) * 
+        setSwinggprepTotal((parseFloat(swing_g_qty_prep || 0) * 
         parseFloat(swing_g_uno_prep || 0) * 
-        parseFloat(swing_g_rt_prep || 0))
+        parseFloat(swing_g_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addSwiGanprep();
@@ -413,9 +413,9 @@ const SetDressingLabour = (props) => {
     // function to calculate swing gang wrap on change
     useEffect(() => {
         const addSwiGanwrap = () => {
-        setSwinggwrapTotal(parseFloat(swing_g_qty_wrap || 0) * 
+        setSwinggwrapTotal((parseFloat(swing_g_qty_wrap || 0) * 
         parseFloat(swing_g_uno_wrap || 0) * 
-        parseFloat(swing_g_rt_wrap || 0))
+        parseFloat(swing_g_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addSwiGanwrap();
@@ -450,9 +450,9 @@ const SetDressingLabour = (props) => {
     // function to calculate set dressing buyer shoot on change
     useEffect(() => {
         const addDrebuy = () => {
-        setDressingbuyerTotal(parseFloat(set_dressing_buyer_quantity || 0) * 
+        setDressingbuyerTotal((parseFloat(set_dressing_buyer_quantity || 0) * 
         parseFloat(set_dressing_buyer_units_number || 0) * 
-        parseFloat(set_dressing_buyer_rate || 0))
+        parseFloat(set_dressing_buyer_rate || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addDrebuy();
@@ -468,9 +468,9 @@ const SetDressingLabour = (props) => {
     // function to calculate set dressing buyer prep on change
     useEffect(() => {
         const addDrebuyprep = () => {
-        setDressbuyprepTotal(parseFloat(set_d_buy_qty_prep || 0) * 
+        setDressbuyprepTotal((parseFloat(set_d_buy_qty_prep || 0) * 
         parseFloat(set_d_buy_uno_prep || 0) * 
-        parseFloat(set_d_buy_rt_prep || 0))
+        parseFloat(set_d_buy_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addDrebuyprep();
@@ -485,9 +485,9 @@ const SetDressingLabour = (props) => {
     // function to calculate set dressing buyer wrap on change
     useEffect(() => {
         const addDrebuywrap = () => {
-        setDressbuywrapTotal(parseFloat(set_d_buy_qty_wrap || 0) * 
+        setDressbuywrapTotal((parseFloat(set_d_buy_qty_wrap || 0) * 
         parseFloat(set_d_buy_uno_wrap || 0) * 
-        parseFloat(set_d_buy_rt_wrap || 0))
+        parseFloat(set_d_buy_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addDrebuywrap();

@@ -18,11 +18,11 @@ const Props = (props) => {
         picture_vehicle_mods, picture_vehicle_ins, other_props,
   } = postDataProps;
 
-  // handleChange - replace(/\D/g,'') - works but no decimal
+  // handleChange 
   const handleChange = (event) => {
     setPostDataProps({
     ...postDataProps,
-    [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
+    [event.target.name]: event.target.value.replace(/[^0-9.]/g, ''),
     });
   };
 

@@ -19,7 +19,7 @@ const Rights = (props) => {
   const handleChangeRights = (event) => {
     setPostDataRights({
     ...postDataRights,
-    [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
+    [event.target.name]: event.target.value.replace(/[^0-9.]/g, ''),
     });
 };
 

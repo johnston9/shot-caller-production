@@ -73,9 +73,9 @@ const Sound = (props) => {
     // function to calculate Sound Mixer shoot on change
     useEffect(() => {
       const addSoumix = () => {
-      setSoundmixerTotal(parseFloat(sound_mixer_qty || 0) * 
+      setSoundmixerTotal((parseFloat(sound_mixer_qty || 0) * 
       parseFloat(sound_mixer_uno || 0) * 
-      parseFloat(sound_mixer_rt || 0))
+      parseFloat(sound_mixer_rt || 0)).toFixed())
       }
       const timer = setTimeout(() => {
         addSoumix();
@@ -90,9 +90,9 @@ const Sound = (props) => {
     // function to calculate Sound Mixer prep on change
     useEffect(() => {
         const addSoumixprep = () => {
-        setSomixprepTotal(parseFloat(so_mix_qty_prep || 0) * 
+        setSomixprepTotal((parseFloat(so_mix_qty_prep || 0) * 
         parseFloat(so_mix_uno_prep || 0) * 
-        parseFloat(so_mix_rt_prep || 0))
+        parseFloat(so_mix_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addSoumixprep();
@@ -107,9 +107,9 @@ const Sound = (props) => {
     // function to calculate Sound Mixer wrap on change
     useEffect(() => {
         const addSoumixwrap = () => {
-        setSomixwrapTotal(parseFloat(so_mix_qty_wrap || 0) * 
+        setSomixwrapTotal((parseFloat(so_mix_qty_wrap || 0) * 
         parseFloat(so_mix_uno_wrap || 0) * 
-        parseFloat(so_mix_rt_wrap || 0))
+        parseFloat(so_mix_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addSoumixwrap();
@@ -142,9 +142,9 @@ const Sound = (props) => {
     // function to calculate Boom Operator shoot on change
     useEffect(() => {
       const addBooope = () => {
-      setBoomoperatorTotal(parseFloat(boom_operator_qty || 0) * 
+      setBoomoperatorTotal((parseFloat(boom_operator_qty || 0) * 
       parseFloat(boom_operator_uno || 0) * 
-      parseFloat(boom_operator_rt || 0))
+      parseFloat(boom_operator_rt || 0)).toFixed())
       }
       const timer = setTimeout(() => {
         addBooope();
@@ -159,9 +159,9 @@ const Sound = (props) => {
     // function to calculate Boom Operator prep on change
     useEffect(() => {
         const addBooopprep = () => {
-        setBoomopprepTotal(parseFloat(boom_op_qty_prep || 0) * 
+        setBoomopprepTotal((parseFloat(boom_op_qty_prep || 0) * 
         parseFloat(boom_op_uno_prep || 0) * 
-        parseFloat(boom_op_rt_prep || 0))
+        parseFloat(boom_op_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addBooopprep();
@@ -176,9 +176,9 @@ const Sound = (props) => {
     // function to calculate Boom Operator wrap on change
     useEffect(() => {
         const addBooopwrap = () => {
-        setBoomopwrapTotal(parseFloat(boom_op_qty_wrap || 0) * 
+        setBoomopwrapTotal((parseFloat(boom_op_qty_wrap || 0) * 
         parseFloat(boom_op_uno_wrap || 0) * 
-        parseFloat(boom_op_rt_wrap || 0))
+        parseFloat(boom_op_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addBooopwrap();
@@ -211,9 +211,9 @@ const Sound = (props) => {
     // function to calculate Cable Wrangler shoot on change
     useEffect(() => {
       const addCabwra = () => {
-      setCablewranglerTotal(parseFloat(cable_wrangler_qty || 0) * 
+      setCablewranglerTotal((parseFloat(cable_wrangler_qty || 0) * 
       parseFloat(cable_wrangler_uno || 0) * 
-      parseFloat(cable_wrangler_rt || 0))
+      parseFloat(cable_wrangler_rt || 0)).toFixed())
       }
       const timer = setTimeout(() => {
         addCabwra();
@@ -228,9 +228,9 @@ const Sound = (props) => {
     // function to calculate Cable Wrangler prep on change
     useEffect(() => {
         const addCabwraprep = () => {
-        setCawranprepTotal(parseFloat(cab_wran_qty_prep || 0) * 
+        setCawranprepTotal((parseFloat(cab_wran_qty_prep || 0) * 
         parseFloat(cab_wran_uno_prep || 0) * 
-        parseFloat(cab_wran_rt_prep || 0))
+        parseFloat(cab_wran_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addCabwraprep();
@@ -245,9 +245,9 @@ const Sound = (props) => {
     // function to calculate Cable Wrangler wrap on change
     useEffect(() => {
         const addCabwrawrap = () => {
-        setCawranwrapTotal(parseFloat(cab_wran_qty_wrap || 0) * 
+        setCawranwrapTotal((parseFloat(cab_wran_qty_wrap || 0) * 
         parseFloat(cab_wran_uno_wrap || 0) * 
-        parseFloat(cab_wran_rt_wrap || 0))
+        parseFloat(cab_wran_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addCabwrawrap();
@@ -280,9 +280,9 @@ const Sound = (props) => {
     // function to calculate Other Sound Labour shoot on change
     useEffect(() => {
       const addOthsou = () => {
-      setOthersoundlabourTotal(parseFloat(other_sound_labour_qty || 0) * 
+      setOthersoundlabourTotal((parseFloat(other_sound_labour_qty || 0) * 
       parseFloat(other_sound_labour_uno || 0) * 
-      parseFloat(other_sound_labour_rt || 0))
+      parseFloat(other_sound_labour_rt || 0)).toFixed())
       }
       const timer = setTimeout(() => {
         addOthsou();
@@ -297,9 +297,9 @@ const Sound = (props) => {
     // function to calculate Other Sound Labour prep on change
     useEffect(() => {
         const addOthsouprep = () => {
-        setOtsoundprepTotal(parseFloat(ot_sound_qty_prep || 0) * 
+        setOtsoundprepTotal((parseFloat(ot_sound_qty_prep || 0) * 
         parseFloat(ot_sound_uno_prep || 0) * 
-        parseFloat(ot_sound_rt_prep || 0))
+        parseFloat(ot_sound_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addOthsouprep();
@@ -314,9 +314,9 @@ const Sound = (props) => {
     // function to calculate Other Sound Labour wrap on change
     useEffect(() => {
         const addOthsouwrap = () => {
-        setOtsoundwrapTotal(parseFloat(ot_sound_qty_wrap || 0) * 
+        setOtsoundwrapTotal((parseFloat(ot_sound_qty_wrap || 0) * 
         parseFloat(ot_sound_uno_wrap || 0) * 
-        parseFloat(ot_sound_rt_wrap || 0))
+        parseFloat(ot_sound_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addOthsouwrap();

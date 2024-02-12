@@ -16,11 +16,11 @@ const Animals = (props) => {
   const {animals_rentals, animals_purchases, food_stabling,
         transport, vet, customs_broker, other_animals,} = postDataAnimals;
 
-  // handleChange - replace(/\D/g,'') - works but no decimal
+  // handleChange
   const handleChange = (event) => {
     setPostDataAnimals({
     ...postDataAnimals,
-    [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
+    [event.target.name]: event.target.value.replace(/[^0-9.]/g, ''),
     });
   };
 

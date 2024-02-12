@@ -46,7 +46,7 @@ const SpecialEffects = (props) => {
     const handleChange = (event) => {
         setPostDataSpecialEffects({
         ...postDataSpecialEffects,
-        [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
+        [event.target.name]: event.target.value.replace(/[^0-9.]/g, ''),
         });
     };
 
@@ -64,9 +64,9 @@ const SpecialEffects = (props) => {
     // function to calculate fx supervisor shoot on change
     useEffect(() => {
         const addSpeeff = () => {
-        setFxsupervisorTotal(parseFloat(fx_supervisor_quantity || 0) * 
+        setFxsupervisorTotal((parseFloat(fx_supervisor_quantity || 0) * 
         parseFloat(fx_supervisor_units_number || 0) * 
-        parseFloat(fx_supervisor_rate || 0))
+        parseFloat(fx_supervisor_rate || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addSpeeff();
@@ -82,9 +82,9 @@ const SpecialEffects = (props) => {
     // function to calculate fx supervisor prep on change
     useEffect(() => {
         const addSpeeffprep = () => {
-        setFxsupprepTotal(parseFloat(fx_sup_qty_prep || 0) * 
+        setFxsupprepTotal((parseFloat(fx_sup_qty_prep || 0) * 
         parseFloat(fx_sup_uno_prep || 0) * 
-        parseFloat(fx_sup_rt_prep || 0))
+        parseFloat(fx_sup_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addSpeeffprep();
@@ -99,9 +99,9 @@ const SpecialEffects = (props) => {
     // function to calculate fx supervisor wrap on change
     useEffect(() => {
         const addSpeeffwrap = () => {
-        setFxsupwrapTotal(parseFloat(fx_sup_qty_wrap || 0) * 
+        setFxsupwrapTotal((parseFloat(fx_sup_qty_wrap || 0) * 
         parseFloat(fx_sup_uno_wrap || 0) * 
-        parseFloat(fx_sup_rt_wrap || 0))
+        parseFloat(fx_sup_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addSpeeffwrap();
@@ -134,9 +134,9 @@ const SpecialEffects = (props) => {
     // function to calculate assistant fx shoot on change
     useEffect(() => {
         const addAssfx = () => {
-        setAssistfxTotal(parseFloat(assist_fx_quantity || 0) * 
+        setAssistfxTotal((parseFloat(assist_fx_quantity || 0) * 
         parseFloat(assist_fx_units_number || 0) * 
-        parseFloat(assist_fx_rate || 0))
+        parseFloat(assist_fx_rate || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addAssfx();
@@ -152,9 +152,9 @@ const SpecialEffects = (props) => {
     // function to calculate assistant fx prep on change
     useEffect(() => {
         const addAssfxprep = () => {
-        setAssfxprepTotal(parseFloat(ass_fx_qty_prep || 0) * 
+        setAssfxprepTotal((parseFloat(ass_fx_qty_prep || 0) * 
         parseFloat(ass_fx_uno_prep || 0) * 
-        parseFloat(ass_fx_rt_prep || 0))
+        parseFloat(ass_fx_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addAssfxprep();
@@ -169,9 +169,9 @@ const SpecialEffects = (props) => {
     // function to calculate assistant fx wrap on change
     useEffect(() => {
         const addAssfxwrap = () => {
-        setAssfxwrapTotal(parseFloat(ass_fx_qty_wrap || 0) * 
+        setAssfxwrapTotal((parseFloat(ass_fx_qty_wrap || 0) * 
         parseFloat(ass_fx_uno_wrap || 0) * 
-        parseFloat(ass_fx_rt_wrap || 0))
+        parseFloat(ass_fx_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addAssfxwrap();
@@ -204,9 +204,9 @@ const SpecialEffects = (props) => {
     // function to calculate other fx labour shoot on change
     useEffect(() => {
         const addOthfx = () => {
-        setOtherfxlabourTotal(parseFloat(other_fx_labour_quantity || 0) * 
+        setOtherfxlabourTotal((parseFloat(other_fx_labour_quantity || 0) * 
         parseFloat(other_fx_labour_units_number || 0) * 
-        parseFloat(other_fx_labour_rate || 0))
+        parseFloat(other_fx_labour_rate || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addOthfx();
@@ -222,9 +222,9 @@ const SpecialEffects = (props) => {
     // function to calculate other fx labour prep on change
     useEffect(() => {
         const addOthfxprep = () => {
-        setOthfxlabprepTotal(parseFloat(ot_fx_l_qty_prep || 0) * 
+        setOthfxlabprepTotal((parseFloat(ot_fx_l_qty_prep || 0) * 
         parseFloat(ot_fx_l_uno_prep || 0) * 
-        parseFloat(ot_fx_l_rt_prep || 0))
+        parseFloat(ot_fx_l_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addOthfxprep();
@@ -239,9 +239,9 @@ const SpecialEffects = (props) => {
     // function to calculate other fx labour wrap on change
     useEffect(() => {
         const addOthfxwrap = () => {
-        setOthfxlabwrapTotal(parseFloat(ot_fx_l_qty_wrap || 0) * 
+        setOthfxlabwrapTotal((parseFloat(ot_fx_l_qty_wrap || 0) * 
         parseFloat(ot_fx_l_uno_wrap || 0) * 
-        parseFloat(ot_fx_l_rt_wrap || 0))
+        parseFloat(ot_fx_l_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addOthfxwrap();
@@ -253,7 +253,7 @@ const SpecialEffects = (props) => {
         // eslint-disable-next-line
     }, [ot_fx_l_qty_wrap, ot_fx_l_uno_wrap, ot_fx_l_rt_wrap]);
 
-    // function to calculate all fx labour wrap on change
+    // function to calculate all other fx labour on change
     useEffect(() => {
         const addOthfxall = () => {
         setOthfxlaballTotal(parseFloat(otherfxlabourTotal || 0) +

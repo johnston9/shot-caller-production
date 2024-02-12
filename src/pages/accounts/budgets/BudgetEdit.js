@@ -3910,32 +3910,96 @@ function BudgetEdit() {
     fringes_taxes_tv,} = postDataTV;
 
   // Totals
-  // Technical Supervisor Total postData 
+
+  // Technical Supervisor
+  // Technical Supervisor shoot Total postData 
   const [techsuperTotal, setTechsuperTotal] = useState(0);
+  // Technical Supervisor prep Total postData 
+  const [tecsupprepTotal, setTecsupprepTotal] = useState(0);
+  // Technical Supervisor wrap Total postData 
+  const [tecsupwrapTotal, setTecsupwrapTotal] = useState(0);
+  // Technical Supervisor all Total postData 
+  const [tecsupallTotal, setTecsupallTotal] = useState(0);
 
-  // Technical Director Total postData 
+  // Technical Director
+  // Technical Director shoot Total postData 
   const [techdirectTotal, setTechdirectTotal] = useState(0);
+  // Technical Director prep Total postData 
+  const [tecdirprepTotal, setTecdirprepTotal] = useState(0);
+  // Technical Director wrap Total postData 
+  const [tecdirwrapTotal, setTecdirwrapTotal] = useState(0);
+  // Technical Director all Total postData 
+  const [tecdirallTotal, setTecdirallTotal] = useState(0);
 
-  // Floor Manager Total postData 
+  // Floor Manager
+  // Floor Manager shoot Total postData 
   const [floormanTotal, setFloormanTotal] = useState(0);
+  // Floor Manager prep Total postData 
+  const [flomanprepTotal, setFlomanprepTotal] = useState(0);
+  // Floor Manager wrap Total postData 
+  const [flomanwrapTotal, setFlomanwrapTotal] = useState(0);
+  // Floor Manager all Total postData 
+  const [flomanallTotal, setFlomanallTotal] = useState(0);
 
-  // Lighting Director Total postData 
+  // Lighting Director
+  // Lighting Director shoot Total postData 
   const [lightdirectTotal, setLightdirectTotal] = useState(0);
+  // Lighting Director prep Total postData 
+  const [ligdirprepTotal, setLigdirprepTotal] = useState(0);
+  // Lighting Director wrap Total postData 
+  const [ligdirwrapTotal, setLigdirwrapTotal] = useState(0);
+  // Lighting Director all Total postData 
+  const [ligdirallTotal, setLigdirallTotal] = useState(0);
 
-  // Boardman Total postData 
+  // Boardman
+  // Boardman Total shoot postData 
   const [boardmanTotal, setBoardmanTotal] = useState(0);
+  // Boardman Total prep postData 
+  const [boamanprepTotal, setBoamanprepTotal] = useState(0);
+  // Boardman Total wrap postData 
+  const [boamanwrapTotal, setBoamanwrapTotal] = useState(0);
+  // Boardman Total all postData 
+  const [boamanallTotal, setBoamanallTotal] = useState(0);
 
-  // Audio Total postData 
+  // Audio
+  // Audio shoot Total postData 
   const [audioTotal, setAudioTotal] = useState(0);
+  // Audio prep Total postData 
+  const [audprepTotal, setAudprepTotal] = useState(0);
+  // Audio wrap Total postData 
+  const [audwrapTotal, setAudwrapTotal] = useState(0);
+  // Audio all Total postData 
+  const [audallTotal, setAudallTotal] = useState(0);
 
-  // VRT Operator Total postData 
+  // VRT Operator
+  // VRT Operator shoot Total postData 
   const [vtroperatorTotal, setVtroperatorTotal] = useState(0);
+  // VRT Operator prep Total postData 
+  const [vtropprepTotal, setVtropprepTotal] = useState(0);
+  // VRT Operator wrap Total postData 
+  const [vtropwrapTotal, setVtropwrapTotal] = useState(0);
+  // VRT Operator all Total postData 
+  const [vtropallTotal, setVtropallTotal] = useState(0);
 
-  // Stagehands Total postData 
+  // Stagehands
+  // Stagehands shoot Total postData 
   const [stagehandsTotal, setStagehandsTotal] = useState(0);
+  // Stagehands prep Total postData 
+  const [stagehprepTotal, setStagehprepTotal] = useState(0);
+  // Stagehands wrap Total postData 
+  const [stagehwrapTotal, setStagehwrapTotal] = useState(0);
+  // Stagehands all Total postData 
+  const [stagehallTotal, setStagehallTotal] = useState(0);
 
-  // Other TV Labour Total postData 
+  // Other TV Labour
+  // Other TV Labour shoot Total postData 
   const [othertvTotal, setOthertvTotal] = useState(0);
+  // Other TV Labour prep Total postData 
+  const [othtvprepTotal, setOthtvprepTotal] = useState(0);
+  // Other TV Labour wrap Total postData 
+  const [othtvwrapTotal, setOthtvwrapTotal] = useState(0);
+  // Other TV Labour all Total postData 
+  const [othtvallTotal, setOthtvallTotal] = useState(0);
 
   // TV Specific Labour Total postData 
   const [tvspecificlabourTotal, setTvspecificlabourTotal] = useState(0);
@@ -9135,12 +9199,115 @@ function BudgetEdit() {
   formData.append("stagehands_total", stagehandsTotal);
   formData.append("othertv_total", othertvTotal);
   formData.append("tvspecificlabour_total", tvspecificlabourTotal);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
+  // new TV for drf
+  formData.append("days6th7th_unit_tv", days6th7th_unit_tv);
+  formData.append("days6th7th_tv", days6th7th_tv);
+  formData.append("overtime_unit_tv", overtime_unit_tv);
+  formData.append("overtime_tv", overtime_tv);
+  formData.append("holidays_unit_tv", holidays_unit_tv);
+  formData.append("holidays_tv", holidays_tv);
+  formData.append("box_rent_unit_tv", box_rent_unit_tv);
+  formData.append("box_rent_tv", box_rent_tv);
+  formData.append("other_solo_tv", other_solo_tv);
+  formData.append("tec_sup_qty_prep", tec_sup_qty_prep);
+  formData.append("tec_sup_uno_prep", tec_sup_uno_prep);
+  formData.append("tec_sup_una_prep", tec_sup_una_prep);
+  formData.append("tec_sup_rt_prep", tec_sup_rt_prep);
+  formData.append("tec_sup_qty_wrap", tec_sup_qty_wrap);
+  formData.append("tec_sup_uno_wrap", tec_sup_uno_wrap);
+  formData.append("tec_sup_una_wrap", tec_sup_una_wrap);
+  formData.append("tec_sup_rt_wrap", tec_sup_rt_wrap);
+  formData.append("tec_dir_qty_prep", tec_dir_qty_prep);
+  formData.append("tec_dir_uno_prep", tec_dir_uno_prep);
+  formData.append("tec_dir_una_prep", tec_dir_una_prep);
+  formData.append("tec_dir_rt_prep", tec_dir_rt_prep);
+  formData.append("tec_dir_qty_wrap", tec_dir_qty_wrap);
+  formData.append("tec_dir_uno_wrap", tec_dir_uno_wrap);
+  formData.append("tec_dir_una_wrap", tec_dir_una_wrap);
+  formData.append("tec_dir_rt_wrap", tec_dir_rt_wrap);
+  formData.append("flo_man_qty_prep", flo_man_qty_prep);
+  formData.append("flo_man_uno_prep", flo_man_uno_prep);
+  formData.append("flo_man_una_prep", flo_man_una_prep);
+  formData.append("flo_man_rt_prep", flo_man_rt_prep);
+  formData.append("flo_man_qty_wrap", flo_man_qty_wrap);
+  formData.append("flo_man_uno_wrap", flo_man_uno_wrap);
+  formData.append("flo_man_una_wrap", flo_man_una_wrap);
+  formData.append("flo_man_rt_wrap", flo_man_rt_wrap);
+  formData.append("lig_dir_qty_prep", lig_dir_qty_prep);
+  formData.append("lig_dir_uno_prep", lig_dir_uno_prep);
+  formData.append("lig_dir_una_prep", lig_dir_una_prep);
+  formData.append("lig_dir_rt_prep", lig_dir_rt_prep);
+  formData.append("lig_dir_qty_wrap", lig_dir_qty_wrap);
+  formData.append("lig_dir_uno_wrap", lig_dir_uno_wrap);
+  formData.append("lig_dir_una_wrap", lig_dir_una_wrap);
+  formData.append("lig_dir_rt_wrap", lig_dir_rt_wrap);
+  formData.append("boardm_qty_prep", boardm_qty_prep);
+  formData.append("boardm_uno_prep", boardm_uno_prep);
+  formData.append("boardm_una_prep", boardm_una_prep);
+  formData.append("boardm_rt_prep", boardm_rt_prep);
+  formData.append("boardm_qty_wrap", boardm_qty_wrap);
+  formData.append("boardm_uno_wrap", boardm_uno_wrap);
+  formData.append("boardm_una_wrap", boardm_una_wrap);
+  formData.append("boardm_rt_wrap", boardm_rt_wrap);
+  formData.append("audio_qty_prep", audio_qty_prep);
+  formData.append("audio_uno_prep", audio_uno_prep);
+  formData.append("audio_una_prep", audio_una_prep);
+  formData.append("audio_rt_prep", audio_rt_prep);
+  formData.append("audio_qty_wrap", audio_qty_wrap);
+  formData.append("audio_uno_wrap", audio_uno_wrap);
+  formData.append("audio_una_wrap", audio_una_wrap);
+  formData.append("audio_rt_wrap", audio_rt_wrap);
+  formData.append("vtr_op_qty_prep", vtr_op_qty_prep);
+  formData.append("vtr_op_uno_prep", vtr_op_uno_prep);
+  formData.append("vtr_op_una_prep", vtr_op_una_prep);
+  formData.append("vtr_op_rt_prep", vtr_op_rt_prep);
+  formData.append("vtr_op_qty_wrap", vtr_op_qty_wrap);
+  formData.append("vtr_op_uno_wrap", vtr_op_uno_wrap);
+  formData.append("vtr_op_una_wrap", vtr_op_una_wrap);
+  formData.append("vtr_op_rt_wrap", vtr_op_rt_wrap);
+  formData.append("stageh_qty_prep", stageh_qty_prep);
+  formData.append("stageh_uno_prep", stageh_uno_prep);
+  formData.append("stageh_una_prep", stageh_una_prep);
+  formData.append("stageh_rt_prep", stageh_rt_prep);
+  formData.append("stageh_qty_wrap", stageh_qty_wrap);
+  formData.append("stageh_uno_wrap", stageh_uno_wrap);
+  formData.append("stageh_una_wrap", stageh_una_wrap);
+  formData.append("stageh_rt_wrap", stageh_rt_wrap);
+  formData.append("oth_tv_qty_prep", oth_tv_qty_prep);
+  formData.append("oth_tv_uno_prep", oth_tv_uno_prep);
+  formData.append("oth_tv_una_prep", oth_tv_una_prep);
+  formData.append("oth_tv_rt_prep", oth_tv_rt_prep);
+  formData.append("oth_tv_qty_wrap", oth_tv_qty_wrap);
+  formData.append("oth_tv_uno_wrap", oth_tv_uno_wrap);
+  formData.append("oth_tv_una_wrap", oth_tv_una_wrap);
+  formData.append("oth_tv_rt_wrap", oth_tv_rt_wrap);
+  formData.append("tecsupprep_total", tecsupprepTotal);
+  formData.append("tecsupwrap_total", tecsupwrapTotal);
+  formData.append("tecsupall_total", tecsupallTotal);
+  formData.append("tecdirprep_total", tecdirprepTotal);
+  formData.append("tecdirwrap_total", tecdirwrapTotal);
+  formData.append("tecdirall_total", tecdirallTotal);
+  formData.append("flomanprep_total", flomanprepTotal);
+  formData.append("flomanwrap_total", flomanwrapTotal);
+  formData.append("flomanall_total", flomanallTotal);
+  formData.append("ligdirprep_total", ligdirprepTotal);
+  formData.append("ligdirwrap_total", ligdirwrapTotal);
+  formData.append("ligdirall_total", ligdirallTotal);
+  formData.append("boamanprep_total", boamanprepTotal);
+  formData.append("boamanwrap_total", boamanwrapTotal);
+  formData.append("boamanall_total", boamanallTotal);
+  formData.append("audprep_total", audprepTotal);
+  formData.append("audwrap_total", audwrapTotal);
+  formData.append("audall_total", audallTotal);
+  formData.append("vtropprep_total", vtropprepTotal);
+  formData.append("vtropwrap_total", vtropwrapTotal);
+  formData.append("vtropall_total", vtropallTotal);
+  formData.append("stagehprep_total", stagehprepTotal);
+  formData.append("stagehwrap_total", stagehwrapTotal);
+  formData.append("stagehall_total", stagehallTotal);
+  formData.append("othtvprep_total", othtvprepTotal);
+  formData.append("othtvwrap_total", othtvwrapTotal);
+  formData.append("othtvall_total", othtvallTotal);
   // production office
   formData.append("office_rentals", office_rentals);
   formData.append("office_equipment", office_equipment);
@@ -11638,7 +11805,62 @@ function BudgetEdit() {
       setOthertvTotal={setOthertvTotal}
       tvspecificlabourTotal={tvspecificlabourTotal}
       setTvspecificlabourTotal={setTvspecificlabourTotal}
-      setShow={setShowTV}  /> 
+      setShow={setShowTV}
+      tecsupprepTotal={tecsupprepTotal}
+      setTecsupprepTotal={setTecsupprepTotal}
+      tecsupwrapTotal={tecsupwrapTotal}
+      setTecsupwrapTotal={setTecsupwrapTotal}
+      tecsupallTotal={tecsupallTotal}
+      setTecsupallTotal={setTecsupallTotal}
+      tecdirprepTotal={tecdirprepTotal}
+      setTecdirprepTotal={setTecdirprepTotal}
+      tecdirwrapTotal={tecdirwrapTotal}
+      setTecdirwrapTotal={setTecdirwrapTotal}
+      tecdirallTotal={tecdirallTotal}
+      setTecdirallTotal={setTecdirallTotal}
+      flomanprepTotal={flomanprepTotal}
+      setFlomanprepTotal={setFlomanprepTotal}
+      flomanwrapTotal={flomanwrapTotal}
+      setFlomanwrapTotal={setFlomanwrapTotal}
+      flomanallTotal={flomanallTotal}
+      setFlomanallTotal={setFlomanallTotal}
+      ligdirprepTotal={ligdirprepTotal}
+      setLigdirprepTotal={setLigdirprepTotal}
+      ligdirwrapTotal={ligdirwrapTotal}
+      setLigdirwrapTotal={setLigdirwrapTotal}
+      ligdirallTotal={ligdirallTotal}
+      setLigdirallTotal={setLigdirallTotal}
+      boamanprepTotal={boamanprepTotal}
+      setBoamanprepTotal={setBoamanprepTotal}
+      boamanwrapTotal={boamanwrapTotal}
+      setBoamanwrapTotal={setBoamanwrapTotal}
+      boamanallTotal={boamanallTotal}
+      setBoamanallTotal={setBoamanallTotal}
+      audprepTotal={audprepTotal}
+      setAudprepTotal={setAudprepTotal}
+      audwrapTotal={audwrapTotal}
+      setAudwrapTotal={setAudwrapTotal}
+      audallTotal={audallTotal}
+      setAudallTotal={setAudallTotal}
+      vtropprepTotal={vtropprepTotal}
+      setVtropprepTotal={setVtropprepTotal}
+      vtropwrapTotal={vtropwrapTotal}
+      setVtropwrapTotal={setVtropwrapTotal}
+      vtropallTotal={vtropallTotal}
+      setVtropallTotal={setVtropallTotal}
+      stagehprepTotal={stagehprepTotal}
+      setStagehprepTotal={setStagehprepTotal}
+      stagehwrapTotal={stagehwrapTotal}
+      setStagehwrapTotal={setStagehwrapTotal}
+      stagehallTotal={stagehallTotal}
+      setStagehallTotal={setStagehallTotal}
+      othtvprepTotal={othtvprepTotal}
+      setOthtvprepTotal={setOthtvprepTotal}
+      othtvwrapTotal={othtvwrapTotal}
+      setOthtvwrapTotal={setOthtvwrapTotal}
+      othtvallTotal={othtvallTotal}
+      setOthtvallTotal={setOthtvallTotal}  
+      /> 
     ) }
     {/* below B costs components  */}
     {/* Production Office */}

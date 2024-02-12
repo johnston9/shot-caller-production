@@ -17,11 +17,11 @@ const Site = (props) => {
         site_insurance, repairs_construction, site_security, site_other,
         police_control,} = postDataSite;
 
-  // handleChange - replace(/\D/g,'') - works but no decimal
+  // handleChange
   const handleChange = (event) => {
     setPostDataSite({
     ...postDataSite,
-    [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
+    [event.target.name]: event.target.value.replace(/[^0-9.]/g, ''),
     });
   };
 

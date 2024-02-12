@@ -7,7 +7,8 @@ const handleChangeCast = (event) => {
     });
 };
 // .toFixed()
-days6th7th_unit_tv,
+
+    days6th7th_unit_tv,
     days6th7th_tv,
     overtime_unit_tv,
     overtime_tv,
@@ -88,257 +89,100 @@ days6th7th_unit_tv,
     oth_tv_uno_wrap,
     oth_tv_una_wrap,
     oth_tv_rt_wrap,
-
-// head painter
-  // function to calculate head painter shoot on change
-  useEffect(() => {
-    const addHeaPan = () => {
-      setHeadpainterTotal((parseFloat(headpainter_quantity || 0) * 
-      parseFloat(headpainter_units_number || 0) * 
-      parseFloat(headpainter_rate || 0)).toFixed())
-    }
-    const timer = setTimeout(() => {
-        addHeaPan();
-    }, 2000);
-
-    return () => {
-      clearTimeout(timer);
-    };
-    // eslint-disable-next-line
-  }, [headpainter_quantity, headpainter_units_number,
-  headpainter_rate]);
-
-  // function to calculate head painter prep on change
-  useEffect(() => {
-    const addHeaPanprep = () => {
-      setHeadpainprepTotal((parseFloat(headpain_qty_prep || 0) * 
-      parseFloat(headpain_uno_prep || 0) * 
-      parseFloat(headpain_rt_prep || 0)).toFixed())
-    }
-    const timer = setTimeout(() => {
-        addHeaPanprep();
-    }, 2000);
-
-    return () => {
-      clearTimeout(timer);
-    };
-    // eslint-disable-next-line
-  }, [headpain_qty_prep, headpain_uno_prep, headpain_rt_prep]);
-
-  // function to calculate head painter wrap on change
-  useEffect(() => {
-    const addHeaPanwrap = () => {
-      setHeadpainwrapTotal((parseFloat(headpain_qty_wrap || 0) * 
-      parseFloat(headpain_uno_wrap || 0) * 
-      parseFloat(headpain_rt_wrap || 0)).toFixed())
-    }
-    const timer = setTimeout(() => {
-        addHeaPanwrap();
-    }, 2000);
-
-    return () => {
-      clearTimeout(timer);
-    };
-    // eslint-disable-next-line
-  }, [headpain_qty_wrap, headpain_uno_wrap, headpain_rt_wrap]);
-
-    days6th7th_unit_tran,
-    days6th7th_tran,
-    overtime_unit_tran,
-    overtime_tran,
-    holidays_unit_tran, 
-    holidays_tran,
-    box_rent_unit_tran,
-    box_rent_tran,
-    other_solo_tran,
-    tp_coor_qty_prep,
-    tp_coor_uno_prep,
-    tp_coor_una_prep,
-    tp_coor_rt_prep,
-    tp_coor_qty_wrap,
-    tp_coor_uno_wrap,
-    tp_coor_una_wrap,
-    tp_coor_rt_wrap,
-    tp_cap_qty_prep,
-    tp_cap_uno_prep,
-    tp_cap_una_prep,
-    tp_cap_rt_prep,
-    tp_cap_qty_wrap,
-    tp_cap_uno_wrap,
-    tp_cap_una_wrap,
-    tp_cap_rt_wrap,
-    tp_man_qty_prep,
-    tp_man_uno_prep,
-    tp_man_una_prep,
-    tp_man_rt_prep,
-    tp_man_qty_wrap,
-    tp_man_uno_wrap,
-    tp_man_una_wrap,
-    tp_man_rt_wrap,
-    head_dr_qty_prep,
-    head_dr_uno_prep,
-    head_dr_una_prep,
-    head_dr_rt_prep,
-    head_dr_qty_wrap,
-    head_dr_uno_wrap,
-    head_dr_una_wrap,
-    head_dr_rt_wrap,
-    drive_qty_prep,
-    drive_uno_prep,
-    drive_una_prep,
-    drive_rt_prep,
-    drive_qty_wrap,
-    drive_uno_wrap,
-    drive_una_wrap,
-    drive_rt_wrap,
     // Totals
 
-  // tp coordinator
-  // tp coordinator shoot Total postData 
-  const [tpcoordinatorTotal, setTpcoordinatorTotal] = useState(0);
-  // tp coordinator prep Total postData 
-  const [tpcoorprepTotal, setTpcoorprepTotal] = useState(0);
-  // tp coordinator wrap Total postData 
-  const [tpcoorwrapTotal, setTpcoorwrapTotal] = useState(0);
-  // tp coordinator all Total postData 
-  const [tpcoorallTotal, setTpcoorallTotal] = useState(0);
+  // Technical Supervisor
+  // Technical Supervisor shoot Total postData 
+  const [techsuperTotal, setTechsuperTotal] = useState(0);
+  // Technical Supervisor prep Total postData 
+  const [tecsupprepTotal, setTecsupprepTotal] = useState(0);
+  // Technical Supervisor wrap Total postData 
+  const [tecsupwrapTotal, setTecsupwrapTotal] = useState(0);
+  // Technical Supervisor all Total postData 
+  const [tecsupallTotal, setTecsupallTotal] = useState(0);
 
-  // tp captain
-  // tp captain shoot Total postData 
-  const [tpcaptainTotal, setTpcaptainTotal] = useState(0);
-  // tp captain prep Total postData 
-  const [tpcapprepTotal, setTpcapprepTotal] = useState(0);
-  // tp captain wrap Total postData 
-  const [tpcapwrapTotal, setTpcapwrapTotal] = useState(0);
-  // tp captain all Total postData 
-  const [tpcapallTotal, setTpcapallTotal] = useState(0);
+  // Technical Director
+  // Technical Director shoot Total postData 
+  const [techdirectTotal, setTechdirectTotal] = useState(0);
+  // Technical Director prep Total postData 
+  const [tecdirprepTotal, setTecdirprepTotal] = useState(0);
+  // Technical Director wrap Total postData 
+  const [tecdirwrapTotal, setTecdirwrapTotal] = useState(0);
+  // Technical Director all Total postData 
+  const [tecdirallTotal, setTecdirallTotal] = useState(0);
 
-  // tp manager
-  // tp manager shoot Total postData 
-  const [tpmanagerTotal, setTpmanagerTotal] = useState(0);
-  // tp manager prep Total postData 
-  const [tpmanprepTotal, setTpmanprepTotal] = useState(0);
-  // tp manager wrap Total postData 
-  const [tpmanwrapTotal, setTpmanwrapTotal] = useState(0);
-  // tp manager all Total postData 
-  const [tpmanallTotal, setTpmanallTotal] = useState(0);
+  // Floor Manager
+  // Floor Manager shoot Total postData 
+  const [floormanTotal, setFloormanTotal] = useState(0);
+  // Floor Manager prep Total postData 
+  const [flomanprepTotal, setFlomanprepTotal] = useState(0);
+  // Floor Manager wrap Total postData 
+  const [flomanwrapTotal, setFlomanwrapTotal] = useState(0);
+  // Floor Manager all Total postData 
+  const [flomanallTotal, setFlomanallTotal] = useState(0);
 
-  // head driver
-  // head driver shoot Total postData 
-  const [headdriverTotal, setHeaddriverTotal] = useState(0);
-  // head driver prep Total postData 
-  const [headdriprepTotal, setHeaddriprepTotal] = useState(0);
-  // head driver wrap Total postData 
-  const [headdriwrapTotal, setHeaddriwrapTotal] = useState(0);
-  // head driver all Total postData 
-  const [headdriallTotal, setHeaddriallTotal] = useState(0);
+  // Lighting Director
+  // Lighting Director shoot Total postData 
+  const [lightdirectTotal, setLightdirectTotal] = useState(0);
+  // Lighting Director prep Total postData 
+  const [ligdirprepTotal, setLigdirprepTotal] = useState(0);
+  // Lighting Director wrap Total postData 
+  const [ligdirwrapTotal, setLigdirwrapTotal] = useState(0);
+  // Lighting Director all Total postData 
+  const [ligdirallTotal, setLigdirallTotal] = useState(0);
 
-  // drivers
-  // drivers shoot Total postData 
-  const [driversTotal, setDriversTotal] = useState(0);
-  // drivers prep Total postData 
-  const [driverprepTotal, setDriverprepTotal] = useState(0);
-  // drivers wrap Total postData 
-  const [driverwrapTotal, setDriverwrapTotal] = useState(0);
-  // drivers all Total postData 
-  const [driverallTotal, setDriverallTotal] = useState(0);
+  // Boardman
+  // Boardman Total shoot postData 
+  const [boardmanTotal, setBoardmanTotal] = useState(0);
+  // Boardman Total prep postData 
+  const [boamanprepTotal, setBoamanprepTotal] = useState(0);
+  // Boardman Total wrap postData 
+  const [boamanwrapTotal, setBoamanwrapTotal] = useState(0);
+  // Boardman Total all postData 
+  const [boamanallTotal, setBoamanallTotal] = useState(0);
 
-    <Row>
-    <Col md={1} >
-    <p className={`${styles.Underline}`}>20.50</p>
-    </Col>
-    <Col md={5} >
-    <p className={`${styles.Underline}`}>Drivers</p>
-    </Col>
-    <Col className="px-1 mx-0" md={1} >
-    <Form.Group controlId="drivers_qty" 
-        className={`${styles.Width95} text-center mb-1`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="drivers_qty"
-        value={drivers_qty}
-        onChange={handleChange}
-            />
-    </Form.Group>
-    {errors?.drivers_qty?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    <Col className="px-1 mx-0" md={1} >
-    <Form.Group controlId="drivers_uno" 
-        className={`${styles.Width95} text-center mb-1`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="drivers_uno"
-        value={drivers_uno}
-        onChange={handleChange}
-            />
-    </Form.Group>
-    {errors?.drivers_uno?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    <Col className="px-1 mx-0" md={1} >
-    <Form.Group controlId="drivers_una" 
-        className={`${styles.Width95} text-center mb-1`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="drivers_una"
-        value={drivers_una}
-        onChange={handleChangeText}
-            />
-    </Form.Group>
-    {errors?.drivers_una?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    <Col className="px-1 mx-0" md={1} >
-    <Form.Group controlId="drivers_rt" 
-        className={`${styles.Width95} text-center mb-1`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="drivers_rt"
-        value={drivers_rt}
-        onChange={handleChange}
-            />
-    </Form.Group>
-    {errors?.drivers_rt?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    <Col md={2} >
-    <Form.Group controlId="driversTotal" 
-        className={`${styles.Width95} text-center mb-1`} >
-        <Form.Control 
-        type="text"
-        className={styles.Input}
-        name="driversTotal"
-        value={driversTotal}
-        readOnly
-            />
-    </Form.Group>
-    {errors?.driversTotal?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-        {message}
-        </Alert>
-    ))}
-    </Col>
-    </Row>
+  // Audio
+  // Audio shoot Total postData 
+  const [audioTotal, setAudioTotal] = useState(0);
+  // Audio prep Total postData 
+  const [audprepTotal, setAudprepTotal] = useState(0);
+  // Audio wrap Total postData 
+  const [audwrapTotal, setAudwrapTotal] = useState(0);
+  // Audio all Total postData 
+  const [audallTotal, setAudallTotal] = useState(0);
 
-  // Transport Labour Total postData 
-  const [transportlabourTotal, setTransportlabourTotal] = useState(0);
+  // VRT Operator
+  // VRT Operator shoot Total postData 
+  const [vtroperatorTotal, setVtroperatorTotal] = useState(0);
+  // VRT Operator prep Total postData 
+  const [vtropprepTotal, setVtropprepTotal] = useState(0);
+  // VRT Operator wrap Total postData 
+  const [vtropwrapTotal, setVtropwrapTotal] = useState(0);
+  // VRT Operator all Total postData 
+  const [vtropallTotal, setVtropallTotal] = useState(0);
+
+  // Stagehands
+  // Stagehands shoot Total postData 
+  const [stagehandsTotal, setStagehandsTotal] = useState(0);
+  // Stagehands prep Total postData 
+  const [stagehprepTotal, setStagehprepTotal] = useState(0);
+  // Stagehands wrap Total postData 
+  const [stagehwrapTotal, setStagehwrapTotal] = useState(0);
+  // Stagehands all Total postData 
+  const [stagehallTotal, setStagehallTotal] = useState(0);
+
+  // Other TV Labour
+  // Other TV Labour shoot Total postData 
+  const [othertvTotal, setOthertvTotal] = useState(0);
+  // Other TV Labour prep Total postData 
+  const [othtvprepTotal, setOthtvprepTotal] = useState(0);
+  // Other TV Labour wrap Total postData 
+  const [othtvwrapTotal, setOthtvwrapTotal] = useState(0);
+  // Other TV Labour all Total postData 
+  const [othtvallTotal, setOthtvallTotal] = useState(0);
+
+  // TV Specific Labour Total postData 
+  const [tvspecificlabourTotal, setTvspecificlabourTotal] = useState(0);
 
 // Budget Top Old
 {/* old */}

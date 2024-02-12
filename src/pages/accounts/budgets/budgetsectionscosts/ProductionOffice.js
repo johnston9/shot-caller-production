@@ -17,11 +17,11 @@ const ProductionOffice = (props) => {
     phones_net, courier_postage, office_other,
   } = postDataProOff;
 
-  // handleChange - replace(/\D/g,'') - works but no decimal
+  // handleChange 
   const handleChange = (event) => {
     setPostDataProOff({
     ...postDataProOff,
-    [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
+    [event.target.name]: event.target.value.replace(/[^0-9.]/g, ''),
     });
   };
 

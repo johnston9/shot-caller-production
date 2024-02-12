@@ -34,7 +34,7 @@ const Scenario = (props) => {
   const handleChangeScenario = (event) => {
     setPostDataScenario({
     ...postDataScenario,
-    [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
+    [event.target.name]: event.target.value.replace(/[^0-9.]/g, ''),
     });
   };
 
@@ -50,7 +50,9 @@ const Scenario = (props) => {
   // function to calculate writers on change
   useEffect(() => {
     const addWriters = () => {
-      setWritersTotal(parseFloat(writers_units_number || 0) * parseFloat(writers_quantity || 0) * parseFloat(writers_rate || 0))
+      setWritersTotal((parseFloat(writers_units_number || 0) *
+      parseFloat(writers_quantity || 0) *
+      parseFloat(writers_rate || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addWriters();
@@ -65,8 +67,9 @@ const Scenario = (props) => {
   // function to calculate consultants on change
   useEffect(() => {
     const addConsultants = () => {
-      setConsultantsTotal(
-        parseFloat(consultants_units_number || 0) * parseFloat(consultants_quantity || 0) * parseFloat(consultants_rate || 0))
+      setConsultantsTotal((parseFloat(consultants_units_number || 0) *
+        parseFloat(consultants_quantity || 0) * 
+        parseFloat(consultants_rate || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addConsultants();
@@ -81,9 +84,9 @@ const Scenario = (props) => {
   // function to calculate editors on change
   useEffect(() => {
     const addEditors = () => {
-      setEditorsscenarioTotal(parseFloat(editors_scenario_units_number || 0) * 
+      setEditorsscenarioTotal((parseFloat(editors_scenario_units_number || 0) * 
       parseFloat(editors_scenario_quantity || 0) * 
-      parseFloat(editors_scenario_rate || 0))
+      parseFloat(editors_scenario_rate || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addEditors();
@@ -99,9 +102,9 @@ const Scenario = (props) => {
   // function to calculate admin on change
   useEffect(() => {
     const addAdminScenario = () => {
-      setAdminScenarioTotal(parseFloat(admin_scenario_units_number || 0) *
+      setAdminScenarioTotal((parseFloat(admin_scenario_units_number || 0) *
       parseFloat(admin_scenario_quantity || 0) *
-      parseFloat(admin_scenario_rate || 0))
+      parseFloat(admin_scenario_rate || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addAdminScenario();

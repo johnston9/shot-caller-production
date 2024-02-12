@@ -17,11 +17,11 @@ const Studio = (props) => {
     studio_fx_equipment, studio_security, studio_other,
     } = postDataStudio;
 
-  // handleChange - replace(/\D/g,'') - works but no decimal
+  // handleChange
   const handleChange = (event) => {
     setPostDataStudio({
     ...postDataStudio,
-    [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
+    [event.target.name]: event.target.value.replace(/[^0-9.]/g, ''),
     });
   };
 

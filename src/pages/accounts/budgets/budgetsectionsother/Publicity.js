@@ -18,11 +18,11 @@ const Publicity = (props) => {
     promotion, pr, firnges_pub, other_pub, previews, website,
   } = postDataPublicity;
 
-  // handleChange - replace(/\D/g,'') - works but no decimal
+  // handleChange 
   const handleChange = (event) => {
     setPostDataPublicity({
     ...postDataPublicity,
-    [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
+    [event.target.name]: event.target.value.replace(/[^0-9.]/g, ''),
     });
   };
 

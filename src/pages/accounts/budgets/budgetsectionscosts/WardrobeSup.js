@@ -17,11 +17,11 @@ const WardrobeSup = (props) => {
         ward_ship_brok, ward_repairs_clean, other_ward,
   } = postDataWardrobeSup;
 
-  // handleChange - replace(/\D/g,'') - works but no decimal
+  // handleChange
   const handleChange = (event) => {
     setPostDataWardrobeSup({
     ...postDataWardrobeSup,
-    [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
+    [event.target.name]: event.target.value.replace(/[^0-9.]/g, ''),
     });
   };
 

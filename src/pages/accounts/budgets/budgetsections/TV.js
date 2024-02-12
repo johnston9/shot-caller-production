@@ -20,7 +20,35 @@ const TV = (props) => {
            vtroperatorTotal, setVtroperatorTotal,
            stagehandsTotal, setStagehandsTotal,
            othertvTotal, setOthertvTotal, setShow,
-           tvspecificlabourTotal, setTvspecificlabourTotal,} = props;
+           tvspecificlabourTotal, setTvspecificlabourTotal,
+           tecsupprepTotal, setTecsupprepTotal,
+           tecsupwrapTotal, setTecsupwrapTotal,
+           tecsupallTotal, setTecsupallTotal,
+           tecdirprepTotal, setTecdirprepTotal,
+           tecdirwrapTotal, setTecdirwrapTotal,
+           tecdirallTotal, setTecdirallTotal,
+           flomanprepTotal, setFlomanprepTotal,
+           flomanwrapTotal, setFlomanwrapTotal,
+           flomanallTotal, setFlomanallTotal,
+           ligdirprepTotal, setLigdirprepTotal,
+           ligdirwrapTotal, setLigdirwrapTotal,
+           ligdirallTotal, setLigdirallTotal,
+           boamanprepTotal, setBoamanprepTotal,
+           boamanwrapTotal, setBoamanwrapTotal,
+           boamanallTotal, setBoamanallTotal,
+           audprepTotal, setAudprepTotal,
+           audwrapTotal, setAudwrapTotal,
+           audallTotal, setAudallTotal,
+           vtropprepTotal, setVtropprepTotal,
+           vtropwrapTotal, setVtropwrapTotal,
+           vtropallTotal, setVtropallTotal,
+           stagehprepTotal, setStagehprepTotal,
+           stagehwrapTotal, setStagehwrapTotal,
+           stagehallTotal, setStagehallTotal,
+           othtvprepTotal, setOthtvprepTotal,
+           othtvwrapTotal, setOthtvwrapTotal,
+           othtvallTotal, setOthtvallTotal,
+        } = props;
 
     const {days6th7th_unit_tv, days6th7th_tv, 
     overtime_unit_tv, overtime_tv, holidays_unit_tv, 
@@ -58,7 +86,7 @@ const TV = (props) => {
     const handleChange = (event) => {
         setPostDataTV({
         ...postDataTV,
-        [event.target.name]: parseFloat(event.target.value || 0 ),
+        [event.target.name]: event.target.value.replace(/[^0-9.]/g, ''),
         });
     }; 
   
@@ -71,7 +99,9 @@ const TV = (props) => {
     };
 
     // Calculate Functions
-    // function to calculate Technical Supervisor on change
+
+    // Technical Supervisor
+    // function to calculate Technical Supervisor shoot on change
     useEffect(() => {
         const addTecsup = () => {
         setTechsuperTotal(parseFloat(tech_super_qty || 0) * 
@@ -86,9 +116,61 @@ const TV = (props) => {
         clearTimeout(timer);
         };
         // eslint-disable-next-line
-      }, [tech_super_qty, tech_super_uno, tech_super_rt]);
+    }, [tech_super_qty, tech_super_uno, tech_super_rt]);
+
+    // function to calculate Technical Supervisor prep on change
+    useEffect(() => {
+        const addTecsupprep = () => {
+        setTecsupprepTotal(parseFloat(tec_sup_qty_prep || 0) * 
+        parseFloat(tec_sup_uno_prep || 0) * 
+        parseFloat(tec_sup_rt_prep || 0))
+        }
+        const timer = setTimeout(() => {
+            addTecsupprep();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [tec_sup_qty_prep, tec_sup_uno_prep, tec_sup_rt_prep]);
+
+    // function to calculate Technical Supervisor wrap on change
+    useEffect(() => {
+        const addTecsupwrap = () => {
+        setTecsupwrapTotal(parseFloat(tec_sup_qty_wrap || 0) * 
+        parseFloat(tec_sup_uno_wrap || 0) * 
+        parseFloat(tec_sup_rt_wrap || 0))
+        }
+        const timer = setTimeout(() => {
+            addTecsupwrap();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [tec_sup_qty_wrap, tec_sup_uno_wrap, tec_sup_rt_wrap]);
+
+    // function to calculate Technical Supervisor all on change
+    useEffect(() => {
+        const addTecsupall = () => {
+        setTecsupallTotal(parseFloat(techsuperTotal || 0) +
+        parseFloat(tecsupprepTotal || 0) +
+        parseFloat(tecsupwrapTotal || 0))
+        }
+        const timer = setTimeout(() => {
+            addTecsupall();
+        }, 1000);
+
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [techsuperTotal, tecsupprepTotal, tecsupwrapTotal]);
     
-    // function to calculate Technical Director on change
+    // Technical Director
+    // function to calculate Technical Director shoot on change
     useEffect(() => {
         const addTecdir = () => {
         setTechdirectTotal(parseFloat(tech_direct_qty || 0) * 
@@ -103,9 +185,61 @@ const TV = (props) => {
         clearTimeout(timer);
         };
         // eslint-disable-next-line
-      }, [tech_direct_qty, tech_direct_uno, tech_direct_rt]);
+    }, [tech_direct_qty, tech_direct_uno, tech_direct_rt]);
 
-    // function to calculate Floor Manager on change
+    // function to calculate Technical Director prep on change
+    useEffect(() => {
+        const addTecdirprep = () => {
+        setTecdirprepTotal(parseFloat(tec_dir_qty_prep || 0) * 
+        parseFloat(tec_dir_uno_prep || 0) * 
+        parseFloat(tec_dir_rt_prep || 0))
+        }
+        const timer = setTimeout(() => {
+            addTecdirprep();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [tec_dir_qty_prep, tec_dir_uno_prep, tec_dir_rt_prep]);
+
+    // function to calculate Technical Director wrap on change
+    useEffect(() => {
+        const addTecdirwrap = () => {
+        setTecdirwrapTotal(parseFloat(tec_dir_qty_wrap || 0) * 
+        parseFloat(tec_dir_uno_wrap || 0) * 
+        parseFloat(tec_dir_rt_wrap || 0))
+        }
+        const timer = setTimeout(() => {
+            addTecdirwrap();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [tec_dir_qty_wrap, tec_dir_uno_wrap, tec_dir_rt_wrap]);
+
+    // function to calculate Technical Director all on change
+    useEffect(() => {
+        const addTecdirall = () => {
+        setTecdirallTotal(parseFloat(techdirectTotal || 0) +
+        parseFloat(tecdirprepTotal || 0) +
+        parseFloat(tecdirwrapTotal || 0))
+        }
+        const timer = setTimeout(() => {
+            addTecdirall();
+        }, 1000);
+
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [techdirectTotal, tecdirprepTotal, tecdirwrapTotal]);
+
+    // Floor Manager
+    // function to calculate Floor Manager shoot on change
     useEffect(() => {
         const addFloman = () => {
         setFloormanTotal(parseFloat(floor_man_qty || 0) * 
@@ -120,9 +254,61 @@ const TV = (props) => {
         clearTimeout(timer);
         };
         // eslint-disable-next-line
-      }, [floor_man_qty, floor_man_uno, floor_man_rt]);
+    }, [floor_man_qty, floor_man_uno, floor_man_rt]);
 
-    // function to calculate Lighting Director on change
+    // function to calculate Floor Manager prep on change
+    useEffect(() => {
+        const addFlomanprep = () => {
+        setFlomanprepTotal(parseFloat(flo_man_qty_prep || 0) * 
+        parseFloat(flo_man_uno_prep || 0) * 
+        parseFloat(flo_man_rt_prep || 0))
+        }
+        const timer = setTimeout(() => {
+            addFlomanprep();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [flo_man_qty_prep, flo_man_uno_prep, flo_man_rt_prep]);
+
+    // function to calculate Floor Manager wrap on change
+    useEffect(() => {
+        const addFlomanwrap = () => {
+        setFlomanwrapTotal(parseFloat(flo_man_qty_wrap || 0) * 
+        parseFloat(flo_man_uno_wrap || 0) * 
+        parseFloat(flo_man_rt_wrap || 0))
+        }
+        const timer = setTimeout(() => {
+            addFlomanwrap();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [flo_man_qty_wrap, flo_man_uno_wrap, flo_man_rt_wrap]);
+
+    // function to calculate Floor Manager all on change
+    useEffect(() => {
+        const addFlomanall = () => {
+        setFlomanallTotal(parseFloat(floormanTotal || 0) +
+        parseFloat(flomanprepTotal || 0) +
+        parseFloat(flomanwrapTotal || 0))
+        }
+        const timer = setTimeout(() => {
+            addFlomanall();
+        }, 1000);
+
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [floormanTotal, flomanprepTotal, flomanwrapTotal]);
+
+    // Lighting Director
+    // function to calculate Lighting Director shoot on change
     useEffect(() => {
         const addLigdir = () => {
         setLightdirectTotal(parseFloat(light_direct_qty || 0) * 
@@ -137,8 +323,60 @@ const TV = (props) => {
         clearTimeout(timer);
         };
         // eslint-disable-next-line
-      }, [light_direct_qty, light_direct_uno, light_direct_rt]);
+    }, [light_direct_qty, light_direct_uno, light_direct_rt]);
 
+    // function to calculate Lighting Director prep on change
+    useEffect(() => {
+        const addLigdirprep = () => {
+        setLigdirprepTotal(parseFloat(lig_dir_qty_prep || 0) * 
+        parseFloat(lig_dir_uno_prep || 0) * 
+        parseFloat(lig_dir_rt_prep || 0))
+        }
+        const timer = setTimeout(() => {
+            addLigdirprep();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [lig_dir_qty_prep, lig_dir_uno_prep, lig_dir_rt_prep]);
+
+    // function to calculate Lighting Director wrap on change
+    useEffect(() => {
+        const addLigdirwrap = () => {
+        setLigdirwrapTotal(parseFloat(lig_dir_qty_wrap || 0) * 
+        parseFloat(lig_dir_uno_wrap || 0) * 
+        parseFloat(lig_dir_rt_wrap || 0))
+        }
+        const timer = setTimeout(() => {
+            addLigdirwrap();
+        }, 2000);
+  
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [lig_dir_qty_wrap, lig_dir_uno_wrap, lig_dir_rt_wrap]);
+
+    // function to calculate Lighting Director all on change
+    useEffect(() => {
+        const addLigdirall = () => {
+        setLigdirallTotal(parseFloat(lightdirectTotal || 0) +
+        parseFloat(ligdirprepTotal || 0) +
+        parseFloat(ligdirwrapTotal || 0))
+        }
+        const timer = setTimeout(() => {
+            addLigdirall();
+        }, 1000);
+
+        return () => {
+        clearTimeout(timer);
+        };
+        // eslint-disable-next-line
+    }, [lightdirectTotal, ligdirprepTotal, ligdirwrapTotal]);
+
+    // Boardman start here
     // function to calculate Boardman on change
     useEffect(() => {
         const addBoardm = () => {

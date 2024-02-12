@@ -17,11 +17,11 @@ const ArtSupplies = (props) => {
         stock_prints_processing, blueprinting, other_art,
   } = postDataArtSup;
   
-  // handleChange - replace(/\D/g,'') - works but no decimal
+  // handleChange 
   const handleChange = (event) => {
     setPostDataArtSup({
     ...postDataArtSup,
-    [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
+    [event.target.name]: event.target.value.replace(/[^0-9.]/g, ''),
     });
   };
 

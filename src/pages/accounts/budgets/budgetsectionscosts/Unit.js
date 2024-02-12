@@ -17,11 +17,11 @@ const Unit = (props) => {
         green_room, first_aid, outfitting,
         medical_insurance, unit_other,} = postDataUnit;
 
-  // handleChange - replace(/\D/g,'') - works but no decimal
+  // handleChange
   const handleChange = (event) => {
     setPostDataUnit({
     ...postDataUnit,
-    [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
+    [event.target.name]: event.target.value.replace(/[^0-9.]/g, ''),
     });
   };
 

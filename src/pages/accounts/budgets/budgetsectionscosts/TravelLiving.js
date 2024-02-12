@@ -16,11 +16,11 @@ const TravelLiving = (props) => {
   const {fares, accomatation_hotels, per_diems, taxis_limos,
         shipping, other_trav_liv, customs_brokerage,} = postDataTraLiv;
 
-  // handleChange - replace(/\D/g,'') - works but no decimal
+  // handleChange
   const handleChange = (event) => {
     setPostDataTraLiv({
     ...postDataTraLiv,
-    [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
+    [event.target.name]: event.target.value.replace(/[^0-9.]/g, ''),
     });
   };
 

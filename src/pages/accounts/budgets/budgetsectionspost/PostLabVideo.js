@@ -18,11 +18,11 @@ const PostLabVideo = (props) => {
     storage_post,
   } = postDataPostLab;
 
-  // handleChange - replace(/\D/g,'') - works but no decimal
+  // handleChange
   const handleChange = (event) => {
     setPostDataPostLab({
     ...postDataPostLab,
-    [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
+    [event.target.name]: event.target.value.replace(/[^0-9.]/g, ''),
     });
   };
   

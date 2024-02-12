@@ -31,11 +31,11 @@ const Postsound = (props) => {
     lossdam_sound, fringes_taxes_post_sound, other_post_sound,
   } = postDataPostSound;
 
-  // handleChange - replace(/\D/g,'') - works but no decimal
+  // handleChange
   const handleChange = (event) => {
     setPostDataPostSound({
     ...postDataPostSound,
-    [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
+    [event.target.name]: event.target.value.replace(/[^0-9.]/g, ''),
     });
   }; 
 
@@ -51,9 +51,9 @@ const Postsound = (props) => {
   // function to calculate Sound Designer on change
   useEffect(() => {
     const addSoudes = () => {
-    setDesSoundTotal(parseFloat(sound_designer_qty || 0) * 
+    setDesSoundTotal((parseFloat(sound_designer_qty || 0) * 
     parseFloat(sound_designer_uno || 0) * 
-    parseFloat(sound_designer_rt || 0))
+    parseFloat(sound_designer_rt || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addSoudes();
@@ -68,9 +68,9 @@ const Postsound = (props) => {
   // function to calculate Sound Editor on change
   useEffect(() => {
     const addSouedi = () => {
-    setEditorSoundTotal(parseFloat(editor_sound_qty || 0) * 
+    setEditorSoundTotal((parseFloat(editor_sound_qty || 0) * 
     parseFloat(editor_sound_uno || 0) * 
-    parseFloat(editor_sound_rt || 0))
+    parseFloat(editor_sound_rt || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addSouedi();
@@ -85,26 +85,9 @@ const Postsound = (props) => {
   // function to calculate Music Editor on change
   useEffect(() => {
     const addMusedi = () => {
-    setEditorMusicTotal(parseFloat(editor_music_qty || 0) * 
+    setEditorMusicTotal((parseFloat(editor_music_qty || 0) * 
     parseFloat(editor_music_uno || 0) * 
-    parseFloat(editor_music_rt || 0))
-    }
-    const timer = setTimeout(() => {
-        addMusedi();
-    }, 2000);
-
-    return () => {
-    clearTimeout(timer);
-    };
-    // eslint-disable-next-line
-  }, [editor_music_qty, editor_music_uno, editor_music_rt]);
-
-  // function to calculate Music Editor on change
-  useEffect(() => {
-    const addMusedi = () => {
-    setEditorMusicTotal(parseFloat(editor_music_qty || 0) * 
-    parseFloat(editor_music_uno || 0) * 
-    parseFloat(editor_music_rt || 0))
+    parseFloat(editor_music_rt || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addMusedi();
@@ -119,9 +102,9 @@ const Postsound = (props) => {
   // function to calculate Assistant Sound Editor on change
   useEffect(() => {
     const addAsssouedi = () => {
-    setSoundEdAssTotal(parseFloat(ed_sound_ass_qty || 0) * 
+    setSoundEdAssTotal((parseFloat(ed_sound_ass_qty || 0) * 
     parseFloat(ed_sound_ass_uno || 0) * 
-    parseFloat(ed_sound_ass_rt || 0))
+    parseFloat(ed_sound_ass_rt || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addAsssouedi();
@@ -136,9 +119,9 @@ const Postsound = (props) => {
   // function to calculate ADR Supervisor on change
   useEffect(() => {
     const addAdrsup = () => {
-    setAdrSupTotal(parseFloat(adr_super_qty || 0) * 
+    setAdrSupTotal((parseFloat(adr_super_qty || 0) * 
     parseFloat(adr_super_uno || 0) * 
-    parseFloat(adr_super_rt || 0))
+    parseFloat(adr_super_rt || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addAdrsup();
@@ -153,9 +136,9 @@ const Postsound = (props) => {
   // function to calculate Foley Labour on change
   useEffect(() => {
     const addFollabo = () => {
-    setFolLabTotal(parseFloat(foley_labour_qty || 0) * 
+    setFolLabTotal((parseFloat(foley_labour_qty || 0) * 
     parseFloat(foley_labour_uno || 0) * 
-    parseFloat(foley_labour_rt || 0))
+    parseFloat(foley_labour_rt || 0)).toFixed())
     }
     const timer = setTimeout(() => {
         addFollabo();

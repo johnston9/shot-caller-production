@@ -16,11 +16,11 @@ const Titles = (props) => {
   const {titles, opticals, stock_footage, con_script_ccsl,
   } = postDataPostTitles;
 
-  // handleChange - replace(/\D/g,'') - works but no decimal
+  // handleChange 
   const handleChange = (event) => {
     setPostDataPostTitles({
     ...postDataPostTitles,
-    [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
+    [event.target.name]: event.target.value.replace(/[^0-9.]/g, ''),
     });
   }; 
   

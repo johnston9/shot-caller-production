@@ -16,11 +16,11 @@ const Fx = (props) => {
   const {fx_rentals, fx_purchases, stunts_purchases_rentals,
         armaments_permits_fees, other_fx,} = postDataSpecEf;
 
-  // handleChange - replace(/\D/g,'') - works but no decimal
+  // handleChange
   const handleChange = (event) => {
     setPostDataSpecEf({
     ...postDataSpecEf,
-    [event.target.name]: parseFloat(event.target.value.replace(/\D/g,'') || 0 ),
+    [event.target.name]: event.target.value.replace(/[^0-9.]/g, ''),
     });
   };
 
