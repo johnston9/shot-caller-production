@@ -161,6 +161,100 @@ const handleChangeCast = (event) => {
   // VRT Operator all Total postData 
   const [vtropallTotal, setVtropallTotal] = useState(0);
 
+    <Row>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>21.70</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>VRT Operator</p>
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="vtr_operator_qty" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="vtr_operator_qty"
+        value={vtr_operator_qty}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.vtr_operator_qty?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="vtr_operator_uno" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="vtr_operator_uno"
+        value={vtr_operator_uno}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.vtr_operator_uno?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="vtr_operator_una" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="vtr_operator_una"
+        value={vtr_operator_una}
+        onChange={handleChangeText}
+            />
+    </Form.Group>
+    {errors?.vtr_operator_una?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col className="px-1 mx-0" md={1} >
+    <Form.Group controlId="vtr_operator_rt" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="vtr_operator_rt"
+        value={vtr_operator_rt}
+        onChange={handleChange}
+            />
+    </Form.Group>
+    {errors?.vtr_operator_rt?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    <Col md={2} >
+    <Form.Group controlId="vtroperatorTotal" 
+        className={`${styles.Width95} text-center mb-1`} >
+        <Form.Control 
+        type="text"
+        className={styles.Input}
+        name="vtroperatorTotal"
+        value={vtroperatorTotal}
+        readOnly
+            />
+    </Form.Group>
+    {errors?.vtroperatorTotal?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+        {message}
+        </Alert>
+    ))}
+    </Col>
+    </Row>
+
   // Stagehands
   // Stagehands shoot Total postData 
   const [stagehandsTotal, setStagehandsTotal] = useState(0);
@@ -170,6 +264,15 @@ const handleChangeCast = (event) => {
   const [stagehwrapTotal, setStagehwrapTotal] = useState(0);
   // Stagehands all Total postData 
   const [stagehallTotal, setStagehallTotal] = useState(0);
+
+//   15/02 - 2900      -  103
+//   01/02 - 2797 3866 -   37
+//   17/01 - 2760 3829 -  346
+//   04/01 - 2414 3483 - -288
+//   20/12 - 2711 3771 -  240
+//   07/12 - 2471 3531 -  220
+//   23/11 - 2259 3319
+
 
   // Other TV Labour
   // Other TV Labour shoot Total postData 
