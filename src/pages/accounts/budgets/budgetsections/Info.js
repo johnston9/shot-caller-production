@@ -58,48 +58,50 @@ const Info = (props) => {
     }, [research, prep, shoot, wrap, post ]);
 
   return (
-    <div className={`${styles.WhiteBack} mt-3 mb-5`}>
+    <div className={`${styles.WhiteBack} mx-5 mt-3 mb-5`}>
     <Row className="mx-0" >
     <Col md={12}
         className={ `${styles.Overview} py-0 text-center`}>
-            <span className={`${styles.Close } py-1 mb-0 float-right `} 
+            <span className={`${styles.Close } py-2 mb-0 float-right `} 
     onClick={() => setShow(false) } >Close</span>
-    <p className="pl-5 py-1">
-    INFO/LENGTH SECTION
+    <p className="pl-5 py-2">
+    PRODUCTION DETAILS & LENGTH
     </p>
-    </Col>
-    <Col md={2} >
     </Col>
     </Row>
     <div className="px-2" >
-    {/* Title */}
-    <Row className="mt-3" >
-    <Col md={1}><p className={`${styles.Underline}`}>00.00</p>
+    <Row className={`mt-3`}>
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline} pl-2`}>00.00</p>
     </Col>
-    <Col md={9}>
-    <p className={ `${styles.BoldBlack} py-1 mb-0`}>INFO</p>
+    <Col md={9} >
+    <p className={ `${styles.BoldBlack} pl-2 mb-1`}>PRODUCTION DETAILS & LENGTH </p>
     </Col>
     <Col md={2}>
     </Col>
     </Row>
+    <div className="px-2" >
     {/* TITLES */}
-    <Row className={ `${styles.Overview} mb-2 py-1`} >
-    <Col md={6} >
+    <Row className={ ` mb-2 py-1`} >
+    <Col md={1} ></Col>
+    <Col md={5} className={ `${styles.Overview} py-1`}>
     <p className="mb-0">Production Info</p>
     </Col>
-    <Col md={6} >
+    <Col md={5} className={ `${styles.Overview} py-1`}>
     <p className="mb-0">Production Length</p>
     </Col>
     </Row>
     <Row className="mt-3">
+    <Col md={1} ></Col>
     {/* DETAILS COLUMN */}
-    <Col md={6} >
+    <Col md={5} >
     {/* title */}
     <Row className="py-1 d-flex align-items-center">
-    <Col md={6}>
+    <Col md={2}>
     <p className={`${styles.Underline}`}>Title</p>
     </Col>
-    <Col md={6}>
+    <Col md={10}>
     <Form.Group controlId="title" 
         className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
@@ -125,10 +127,10 @@ const Info = (props) => {
     </Row>
     {/* Series */}
     <Row className="py-1 d-flex align-items-center">
-    <Col md={6}>
+    <Col md={2}>
     <p className={`${styles.Underline}`}>Series</p>
     </Col>
-    <Col md={6}>
+    <Col md={10}>
     <Form.Group controlId="series" 
         className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
@@ -154,10 +156,10 @@ const Info = (props) => {
     </Row>
     {/* Prodco */}
     <Row className="py-1 d-flex align-items-center">
-    <Col md={6}>
+    <Col md={2}>
     <p className={`${styles.Underline}`}>Prodco</p>
     </Col>
-    <Col md={6}>
+    <Col md={10}>
     <Form.Group controlId="prodco" 
         className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
@@ -183,10 +185,10 @@ const Info = (props) => {
     </Row>
     {/* Writers */}
     <Row className="py-1 d-flex align-items-center">
-    <Col md={6}>
+    <Col md={2}>
     <p className={`${styles.Underline}`}>Writers</p>
     </Col>
-    <Col md={6}>
+    <Col md={10}>
     <Form.Group controlId="writer" 
         className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
@@ -212,10 +214,10 @@ const Info = (props) => {
     </Row>
     {/* Format */}
     <Row className="py-1 d-flex align-items-center">
-    <Col md={6}>
+    <Col md={2}>
     <p className={`${styles.Underline}`}>Format</p>
     </Col>
-    <Col md={6}>
+    <Col md={10}>
     <Form.Group controlId="format" 
         className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
@@ -241,10 +243,10 @@ const Info = (props) => {
     </Row>
     {/* Location */}
     <Row className="py-1 d-flex align-items-center">
-    <Col md={6}>
+    <Col md={2}>
     <p className={`${styles.Underline}`}>Location</p>
     </Col>
-    <Col md={6}>
+    <Col md={10}>
     <Form.Group controlId="location" 
         className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
@@ -270,7 +272,7 @@ const Info = (props) => {
     </Row>
     </Col>
     {/* LENGTH COLUMN */}
-    <Col md={6} >
+    <Col md={5} >
     {/* Research */}
     <Row className="py-1 d-flex align-items-center">
     <Col md={4}>
@@ -465,6 +467,7 @@ const Info = (props) => {
     </Row>
     </Col>
     </Row>
+    </div>
     </div>
     </div>
   )

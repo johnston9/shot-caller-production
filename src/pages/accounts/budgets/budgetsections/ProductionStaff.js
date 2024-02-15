@@ -1257,7 +1257,7 @@ const ProductionStaff = (props) => {
     const addothproprep = () => {
       setOtherproprepTotal((parseFloat(other_pro_qty_prep || 0) * 
       parseFloat(other_pro_uno_prep || 0) * 
-      parseFloat(other_pro_rt_prep || 0)).toFixed()
+      parseFloat(other_pro_rt_prep || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addothproprep();

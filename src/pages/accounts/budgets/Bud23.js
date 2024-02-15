@@ -1,3 +1,40 @@
+{/* TITLES */}
+<Row className={ `mb-2 py-0`} >
+<Col md={1} ></Col>
+<Col className={ `${styles.Overview} py-1`} md={1} >
+<p className="mb-0">ACCT</p>
+</Col>
+<Col className={ `${styles.Overview} py-1`} md={3} >
+<p className="mb-0">Description</p>
+</Col>
+<Col className={`${styles.Overview} text-center py-1`} md={1} >
+<p className="mb-0">#</p>
+</Col>
+<Col className={`${styles.Overview} text-center py-1`} md={1} >
+<p># Unit</p>
+</Col>
+<Col md={1} className={`${styles.Overview} text-center py-1`} >
+<p className="mb-0">Unit</p>
+</Col>
+<Col md={1} className={`${styles.Overview} text-center py-1`} >
+<p className="mb-0">Price</p>
+</Col>
+<Col md={2} className={`${styles.Overview} text-center py-1`} >
+<p className="mb-0">Total</p>
+</Col>
+<Col md={1}></Col>
+</Row>
+
+{/* hr */}
+<Row>
+<Col md={1}></Col>
+<Col md={10} >
+<hr className={`${styles.Break1} mt-0 mb-0`}/>
+</Col>
+</Row>
+
+
+
 // replace(/\D/g,'') - works but no decimal
 // handleChange1 - replace(/[^0-9.]/g, '')- works with decimal
 const handleChangeCast = (event) => {

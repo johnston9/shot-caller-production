@@ -104,9 +104,9 @@ const TV = (props) => {
     // function to calculate Technical Supervisor shoot on change
     useEffect(() => {
         const addTecsup = () => {
-        setTechsuperTotal(parseFloat(tech_super_qty || 0) * 
+        setTechsuperTotal((parseFloat(tech_super_qty || 0) * 
         parseFloat(tech_super_uno || 0) * 
-        parseFloat(tech_super_rt || 0))
+        parseFloat(tech_super_rt || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addTecsup();
@@ -121,9 +121,9 @@ const TV = (props) => {
     // function to calculate Technical Supervisor prep on change
     useEffect(() => {
         const addTecsupprep = () => {
-        setTecsupprepTotal(parseFloat(tec_sup_qty_prep || 0) * 
+        setTecsupprepTotal((parseFloat(tec_sup_qty_prep || 0) * 
         parseFloat(tec_sup_uno_prep || 0) * 
-        parseFloat(tec_sup_rt_prep || 0))
+        parseFloat(tec_sup_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addTecsupprep();
@@ -138,9 +138,9 @@ const TV = (props) => {
     // function to calculate Technical Supervisor wrap on change
     useEffect(() => {
         const addTecsupwrap = () => {
-        setTecsupwrapTotal(parseFloat(tec_sup_qty_wrap || 0) * 
+        setTecsupwrapTotal((parseFloat(tec_sup_qty_wrap || 0) * 
         parseFloat(tec_sup_uno_wrap || 0) * 
-        parseFloat(tec_sup_rt_wrap || 0))
+        parseFloat(tec_sup_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addTecsupwrap();
@@ -173,9 +173,9 @@ const TV = (props) => {
     // function to calculate Technical Director shoot on change
     useEffect(() => {
         const addTecdir = () => {
-        setTechdirectTotal(parseFloat(tech_direct_qty || 0) * 
+        setTechdirectTotal((parseFloat(tech_direct_qty || 0) * 
         parseFloat(tech_direct_uno || 0) * 
-        parseFloat(tech_direct_rt || 0))
+        parseFloat(tech_direct_rt || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addTecdir();
@@ -190,9 +190,9 @@ const TV = (props) => {
     // function to calculate Technical Director prep on change
     useEffect(() => {
         const addTecdirprep = () => {
-        setTecdirprepTotal(parseFloat(tec_dir_qty_prep || 0) * 
+        setTecdirprepTotal((parseFloat(tec_dir_qty_prep || 0) * 
         parseFloat(tec_dir_uno_prep || 0) * 
-        parseFloat(tec_dir_rt_prep || 0))
+        parseFloat(tec_dir_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addTecdirprep();
@@ -207,9 +207,9 @@ const TV = (props) => {
     // function to calculate Technical Director wrap on change
     useEffect(() => {
         const addTecdirwrap = () => {
-        setTecdirwrapTotal(parseFloat(tec_dir_qty_wrap || 0) * 
+        setTecdirwrapTotal((parseFloat(tec_dir_qty_wrap || 0) * 
         parseFloat(tec_dir_uno_wrap || 0) * 
-        parseFloat(tec_dir_rt_wrap || 0))
+        parseFloat(tec_dir_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addTecdirwrap();
@@ -242,9 +242,9 @@ const TV = (props) => {
     // function to calculate Floor Manager shoot on change
     useEffect(() => {
         const addFloman = () => {
-        setFloormanTotal(parseFloat(floor_man_qty || 0) * 
+        setFloormanTotal((parseFloat(floor_man_qty || 0) * 
         parseFloat(floor_man_uno || 0) * 
-        parseFloat(floor_man_rt || 0))
+        parseFloat(floor_man_rt || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addFloman();
@@ -259,9 +259,9 @@ const TV = (props) => {
     // function to calculate Floor Manager prep on change
     useEffect(() => {
         const addFlomanprep = () => {
-        setFlomanprepTotal(parseFloat(flo_man_qty_prep || 0) * 
+        setFlomanprepTotal((parseFloat(flo_man_qty_prep || 0) * 
         parseFloat(flo_man_uno_prep || 0) * 
-        parseFloat(flo_man_rt_prep || 0))
+        parseFloat(flo_man_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addFlomanprep();
@@ -276,9 +276,9 @@ const TV = (props) => {
     // function to calculate Floor Manager wrap on change
     useEffect(() => {
         const addFlomanwrap = () => {
-        setFlomanwrapTotal(parseFloat(flo_man_qty_wrap || 0) * 
+        setFlomanwrapTotal((parseFloat(flo_man_qty_wrap || 0) * 
         parseFloat(flo_man_uno_wrap || 0) * 
-        parseFloat(flo_man_rt_wrap || 0))
+        parseFloat(flo_man_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addFlomanwrap();
@@ -311,9 +311,9 @@ const TV = (props) => {
     // function to calculate Lighting Director shoot on change
     useEffect(() => {
         const addLigdir = () => {
-        setLightdirectTotal(parseFloat(light_direct_qty || 0) * 
+        setLightdirectTotal((parseFloat(light_direct_qty || 0) * 
         parseFloat(light_direct_uno || 0) * 
-        parseFloat(light_direct_rt || 0))
+        parseFloat(light_direct_rt || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addLigdir();
@@ -328,9 +328,9 @@ const TV = (props) => {
     // function to calculate Lighting Director prep on change
     useEffect(() => {
         const addLigdirprep = () => {
-        setLigdirprepTotal(parseFloat(lig_dir_qty_prep || 0) * 
+        setLigdirprepTotal((parseFloat(lig_dir_qty_prep || 0) * 
         parseFloat(lig_dir_uno_prep || 0) * 
-        parseFloat(lig_dir_rt_prep || 0))
+        parseFloat(lig_dir_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addLigdirprep();
@@ -345,9 +345,9 @@ const TV = (props) => {
     // function to calculate Lighting Director wrap on change
     useEffect(() => {
         const addLigdirwrap = () => {
-        setLigdirwrapTotal(parseFloat(lig_dir_qty_wrap || 0) * 
+        setLigdirwrapTotal((parseFloat(lig_dir_qty_wrap || 0) * 
         parseFloat(lig_dir_uno_wrap || 0) * 
-        parseFloat(lig_dir_rt_wrap || 0))
+        parseFloat(lig_dir_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addLigdirwrap();
@@ -380,9 +380,9 @@ const TV = (props) => {
     // function to calculate Boardman shoot on change
     useEffect(() => {
         const addBoardm = () => {
-        setBoardmanTotal(parseFloat(boardman_qty || 0) * 
+        setBoardmanTotal((parseFloat(boardman_qty || 0) * 
         parseFloat(boardman_uno || 0) * 
-        parseFloat(boardman_rt || 0))
+        parseFloat(boardman_rt || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addBoardm();
@@ -397,9 +397,9 @@ const TV = (props) => {
     // function to calculate Boardman prep on change
     useEffect(() => {
         const addBoardmprep = () => {
-        setBoamanprepTotal(parseFloat(boardm_qty_prep || 0) * 
+        setBoamanprepTotal((parseFloat(boardm_qty_prep || 0) * 
         parseFloat(boardm_uno_prep || 0) * 
-        parseFloat(boardm_rt_prep || 0))
+        parseFloat(boardm_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addBoardmprep();
@@ -414,9 +414,9 @@ const TV = (props) => {
     // function to calculate Boardman wrap on change
     useEffect(() => {
         const addBoardmwrap = () => {
-        setBoamanwrapTotal(parseFloat(boardm_qty_wrap || 0) * 
+        setBoamanwrapTotal((parseFloat(boardm_qty_wrap || 0) * 
         parseFloat(boardm_uno_wrap || 0) * 
-        parseFloat(boardm_rt_wrap || 0))
+        parseFloat(boardm_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addBoardmwrap();
@@ -449,9 +449,9 @@ const TV = (props) => {
     // function to calculate Audio shoot on change
     useEffect(() => {
         const addAudio = () => {
-        setAudioTotal(parseFloat(audio_qty || 0) * 
+        setAudioTotal((parseFloat(audio_qty || 0) * 
         parseFloat(audio_uno || 0) * 
-        parseFloat(audio_rt || 0))
+        parseFloat(audio_rt || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addAudio();
@@ -466,9 +466,9 @@ const TV = (props) => {
     // function to calculate Audio prep on change
     useEffect(() => {
         const addAudioprep = () => {
-        setAudprepTotal(parseFloat(audio_qty_prep || 0) * 
+        setAudprepTotal((parseFloat(audio_qty_prep || 0) * 
         parseFloat(audio_uno_prep || 0) * 
-        parseFloat(audio_rt_prep || 0))
+        parseFloat(audio_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addAudioprep();
@@ -483,9 +483,9 @@ const TV = (props) => {
     // function to calculate Audio wrap on change
     useEffect(() => {
         const addAudiowrap = () => {
-        setAudwrapTotal(parseFloat(audio_qty_wrap || 0) * 
+        setAudwrapTotal((parseFloat(audio_qty_wrap || 0) * 
         parseFloat(audio_uno_wrap || 0) * 
-        parseFloat(audio_rt_wrap || 0))
+        parseFloat(audio_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addAudiowrap();
@@ -518,9 +518,9 @@ const TV = (props) => {
     // function to calculate VRT Operator shoot on change
     useEffect(() => {
         const addVtrope = () => {
-        setVtroperatorTotal(parseFloat(vtr_operator_qty || 0) * 
+        setVtroperatorTotal((parseFloat(vtr_operator_qty || 0) * 
         parseFloat(vtr_operator_uno || 0) * 
-        parseFloat(vtr_operator_rt || 0))
+        parseFloat(vtr_operator_rt || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addVtrope();
@@ -535,9 +535,9 @@ const TV = (props) => {
     // function to calculate VRT Operator prep on change
     useEffect(() => {
         const addVtropprep = () => {
-        setVtropprepTotal(parseFloat(vtr_op_qty_prep || 0) * 
+        setVtropprepTotal((parseFloat(vtr_op_qty_prep || 0) * 
         parseFloat(vtr_op_uno_prep || 0) * 
-        parseFloat(vtr_op_rt_prep || 0))
+        parseFloat(vtr_op_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addVtropprep();
@@ -552,9 +552,9 @@ const TV = (props) => {
     // function to calculate VRT Operator wrap on change
     useEffect(() => {
         const addVtropwrap = () => {
-        setVtropwrapTotal(parseFloat(vtr_op_qty_wrap || 0) * 
+        setVtropwrapTotal((parseFloat(vtr_op_qty_wrap || 0) * 
         parseFloat(vtr_op_uno_wrap || 0) * 
-        parseFloat(vtr_op_rt_wrap || 0))
+        parseFloat(vtr_op_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addVtropwrap();
@@ -587,9 +587,9 @@ const TV = (props) => {
     // function to calculate Stagehands shoot on change
     useEffect(() => {
         const addStageh = () => {
-        setStagehandsTotal(parseFloat(stagehands_qty || 0) * 
+        setStagehandsTotal((parseFloat(stagehands_qty || 0) * 
         parseFloat(stagehands_uno || 0) * 
-        parseFloat(stagehands_rt || 0))
+        parseFloat(stagehands_rt || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addStageh();
@@ -604,9 +604,9 @@ const TV = (props) => {
     // function to calculate Stagehands prep on change
     useEffect(() => {
         const addStagehprep = () => {
-        setStagehprepTotal(parseFloat(stageh_qty_prep || 0) * 
+        setStagehprepTotal((parseFloat(stageh_qty_prep || 0) * 
         parseFloat(stageh_uno_prep || 0) * 
-        parseFloat(stageh_rt_prep || 0))
+        parseFloat(stageh_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addStagehprep();
@@ -621,9 +621,9 @@ const TV = (props) => {
     // function to calculate Stagehands wrap on change
     useEffect(() => {
         const addStagehwrap = () => {
-        setStagehwrapTotal(parseFloat(stageh_qty_wrap || 0) * 
+        setStagehwrapTotal((parseFloat(stageh_qty_wrap || 0) * 
         parseFloat(stageh_uno_wrap || 0) * 
-        parseFloat(stageh_rt_wrap || 0))
+        parseFloat(stageh_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addStagehwrap();
@@ -656,9 +656,9 @@ const TV = (props) => {
     // function to calculate Other TV Labour shoot on change
     useEffect(() => {
         const addOthetv = () => {
-        setOthertvTotal(parseFloat(other_tv_qty || 0) * 
+        setOthertvTotal((parseFloat(other_tv_qty || 0) * 
         parseFloat(other_tv_uno || 0) * 
-        parseFloat(other_tv_rt || 0))
+        parseFloat(other_tv_rt || 0)).toFixed())
         }
         const timer = setTimeout(() => {
         addOthetv();
@@ -673,9 +673,9 @@ const TV = (props) => {
     // function to calculate Other TV Labour prep on change
     useEffect(() => {
         const addOthetvprep = () => {
-        setOthtvprepTotal(parseFloat(oth_tv_qty_prep || 0) * 
+        setOthtvprepTotal((parseFloat(oth_tv_qty_prep || 0) * 
         parseFloat(oth_tv_uno_prep || 0) * 
-        parseFloat(oth_tv_rt_prep || 0))
+        parseFloat(oth_tv_rt_prep || 0)).toFixed())
         }
         const timer = setTimeout(() => {
           addOthetvprep();
@@ -690,9 +690,9 @@ const TV = (props) => {
     // function to calculate Other TV Labour wrap on change
     useEffect(() => {
         const addOthetvwrap = () => {
-        setOthtvwrapTotal(parseFloat(oth_tv_qty_wrap || 0) * 
+        setOthtvwrapTotal((parseFloat(oth_tv_qty_wrap || 0) * 
         parseFloat(oth_tv_uno_wrap || 0) * 
-        parseFloat(oth_tv_rt_wrap || 0))
+        parseFloat(oth_tv_rt_wrap || 0)).toFixed())
         }
         const timer = setTimeout(() => {
             addOthetvwrap();
