@@ -409,7 +409,7 @@ const Cast = (props) => {
             <span className={`${styles.Close } py-2 mb-0 float-right `} 
     onClick={() => setShow(false) } >Close</span>
     <p className="pl-5 py-2">
-    CAST SECTION
+    CAST
     </p>
     </Col>
     </Row>
@@ -1475,7 +1475,7 @@ const Cast = (props) => {
     <Row className="py-1 d-flex align-items-center">
     <Col md={1} ></Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>06.93</p>
+    <p className={`${styles.Underline}`}>06.92</p>
     </Col>
     <Col md={3} >
     <p className={`${styles.BoldBlack}`}>Actors - 1 Week</p>
@@ -1573,14 +1573,14 @@ const Cast = (props) => {
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
-    {/* Actors 1 week */}
+    {/* Actors 1 day */}
     <Row className="py-1 d-flex align-items-center">
     <Col md={1} ></Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>06.94</p>
+    <p className={`${styles.Underline}`}>06.93</p>
     </Col>
     <Col md={3} >
-    <p className={`${styles.BoldBlack}`}>Actors - Day Players</p>
+    <p className={`${styles.BoldBlack}`}>Actors - 1 Day</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="actors_day_qty" 
@@ -1679,7 +1679,7 @@ const Cast = (props) => {
     <Row className="py-1 d-flex align-items-center">
     <Col md={1} ></Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>06.30</p>
+    <p className={`${styles.Underline}`}>06.94</p>
     </Col>
     <Col md={3} >
     <p className={`${styles.BoldBlack}`}>Stunt Coordinators</p>
@@ -1781,7 +1781,7 @@ const Cast = (props) => {
     <Row className="py-1 d-flex align-items-center">
     <Col md={1} ></Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>06.40</p>
+    <p className={`${styles.Underline}`}>06.95</p>
     </Col>
     <Col md={3} >
     <p className={`${styles.BoldBlack}`}>Stunt Performers</p>
@@ -1883,7 +1883,7 @@ const Cast = (props) => {
     <Row className="py-1 d-flex align-items-center">
     <Col md={1} ></Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>06.50</p>
+    <p className={`${styles.Underline}`}>06.96</p>
     </Col>
     <Col md={3} >
     <p className={`${styles.BoldBlack}`}>Other Performers</p>
@@ -1985,7 +1985,7 @@ const Cast = (props) => {
     <Row className="py-1 d-flex align-items-center">
     <Col md={1} ></Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>06.60</p>
+    <p className={`${styles.Underline}`}>06.97</p>
     </Col>
     <Col md={3} >
     <p className={`${styles.BoldBlack}`}>Extras</p>
@@ -2087,7 +2087,7 @@ const Cast = (props) => {
     <Row className="py-1 d-flex align-items-center">
     <Col md={1} ></Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>06.70</p>
+    <p className={`${styles.Underline}`}>06.98</p>
     </Col>
     <Col md={4} >
     <p className={`${styles.BoldBlack}`}>Casting Director</p>
@@ -2130,7 +2130,7 @@ const Cast = (props) => {
     <Row className="py-1 d-flex align-items-center">
     <Col md={1} ></Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>06.80</p>
+    <p className={`${styles.Underline}`}>06.99</p>
     </Col>
     <Col md={4} >
     <p className={`${styles.BoldBlack}`}>Extras Casting</p>
@@ -2173,7 +2173,7 @@ const Cast = (props) => {
     <Row className="py-1 d-flex align-items-center">
     <Col md={1} ></Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>06.90</p>
+    <p className={`${styles.Underline}`}>06.991</p>
     </Col>
     <Col md={4} >
     <p className={`${styles.BoldBlack}`}>Rehersals</p>
@@ -2230,7 +2230,7 @@ const Cast = (props) => {
     <Row className="py-1 d-flex align-items-center">
     <Col md={1} ></Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>06.91</p>
+    <p className={`${styles.Underline}`}>06.992</p>
     </Col>
     <Col md={4} >
     <p className={`${styles.BoldBlack}`}>6th/7th Days</p>
@@ -2287,7 +2287,7 @@ const Cast = (props) => {
     <Row className="py-1 d-flex align-items-center">
     <Col md={1} ></Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>06.92</p>
+    <p className={`${styles.Underline}`}>06.993</p>
     </Col>
     <Col md={4} >
     <p className={`${styles.BoldBlack}`}>Overtime</p>
@@ -2344,7 +2344,7 @@ const Cast = (props) => {
     <Row className="py-1 d-flex align-items-center">
     <Col md={1} ></Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>06.93</p>
+    <p className={`${styles.Underline}`}>06.994</p>
     </Col>
     <Col md={4} >
     <p className={`${styles.BoldBlack}`}>Holidays</p>
@@ -2401,7 +2401,7 @@ const Cast = (props) => {
     <Row className="py-1 d-flex align-items-center">
     <Col md={1} ></Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>06.94</p>
+    <p className={`${styles.Underline}`}>06.995</p>
     </Col>
     <Col md={4} >
     <p className={`${styles.BoldBlack}`}>Rights Payments - Cast</p>
@@ -2444,7 +2444,7 @@ const Cast = (props) => {
     <Row className="py-1 d-flex align-items-center">
     <Col md={1} ></Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>06.95</p>
+    <p className={`${styles.Underline}`}>06.996</p>
     </Col>
     <Col md={4} >
     <p className={`${styles.BoldBlack}`}>Other</p>
@@ -2487,7 +2487,7 @@ const Cast = (props) => {
     <Row className="py-1 d-flex align-items-center">
     <Col md={1} ></Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>06.96</p>
+    <p className={`${styles.Underline}`}>06.997</p>
     </Col>
     <Col md={4} >
     <p className={`${styles.BoldBlack}`}>Fringes & Taxes</p>

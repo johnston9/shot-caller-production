@@ -25,15 +25,15 @@
 <Col md={1}></Col>
 </Row>
 
-{/* hr */}
-<Row>
-<Col md={1}></Col>
-<Col md={10} >
-<hr className={`${styles.Break1} mt-0 mb-0`}/>
-</Col>
-</Row>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
 
-
+// <Col md={1} ></Col>
 
 // replace(/\D/g,'') - works but no decimal
 // handleChange1 - replace(/[^0-9.]/g, '')- works with decimal
@@ -53,6 +53,16 @@ const handleChangeCast = (event) => {
 //   07/12 - 2471 3531 -  220
 //   23/11 - 2259 3319
 
+    concoorprep_total, concoorwrap_total, concoorall_total,
+    headcarprep_total, headcarwrap_total, headcarall_total,
+    carpenprep_total, carpenwrap_total, carpenall_total,
+    scenicprep_total, scenicwrap_total, scenicall_total,
+    headpainprep_total, headpainwrap_total, headpainall_total,
+    paintprep_total, paintwrap_total, paintall_total,
+    laboprep_total, labowrap_total, laboall_total,
+
+    <div>
+    </div>
 
   // Other TV Labour
 

@@ -101,7 +101,6 @@ const ProductionStaff = (props) => {
     holidays_unit_pro_sta, 
     overtime_unit_pro_sta, 
     days6th7th_unit_pro_sta, 
-    // other_unit_pro_sta,
     box_rent_unit_pro_sta,
     production_manager_qty_prep,
     production_manager_uno_prep,

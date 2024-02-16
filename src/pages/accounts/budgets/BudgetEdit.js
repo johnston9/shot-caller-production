@@ -662,7 +662,6 @@ function BudgetEdit() {
     holidays_unit_pro_sta: "", 
     overtime_unit_pro_sta: "", 
     days6th7th_unit_pro_sta: "", 
-    other_unit_pro_sta: "",
     box_rent_unit_pro_sta: "",
     fringes_taxes_production: 0,
     production_manager_quantity: 0,
@@ -890,7 +889,7 @@ function BudgetEdit() {
     days6th7th_pro_sta, other_pro_sta,
     box_rent_pro_sta,
     holidays_unit_pro_sta, overtime_unit_pro_sta, 
-    days6th7th_unit_pro_sta, other_unit_pro_sta,
+    days6th7th_unit_pro_sta,
     box_rent_unit_pro_sta,
     production_manager_qty_prep,
     production_manager_uno_prep,
@@ -5650,7 +5649,7 @@ function BudgetEdit() {
           days6th7th_pro_sta, other_pro_sta,
           box_rent_pro_sta, holidays_unit_pro_sta, 
           overtime_unit_pro_sta, days6th7th_unit_pro_sta, 
-          other_unit_pro_sta, box_rent_unit_pro_sta,
+          box_rent_unit_pro_sta,
           production_manager_qty_prep,
           production_manager_uno_prep,
           production_manager_una_prep,
@@ -5874,7 +5873,7 @@ function BudgetEdit() {
             days6th7th_pro_sta, other_pro_sta,
             box_rent_pro_sta, holidays_unit_pro_sta, 
             overtime_unit_pro_sta, days6th7th_unit_pro_sta, 
-            other_unit_pro_sta, box_rent_unit_pro_sta,
+            box_rent_unit_pro_sta,
             production_manager_qty_prep,
             production_manager_uno_prep,
             production_manager_una_prep,
@@ -7472,7 +7471,6 @@ function BudgetEdit() {
   formData.append("holidays_unit_pro_sta", holidays_unit_pro_sta);
   formData.append("overtime_unit_pro_sta", overtime_unit_pro_sta);
   formData.append("days6th7th_unit_pro_sta", days6th7th_unit_pro_sta);
-  formData.append("other_unit_pro_sta", other_unit_pro_sta);
   formData.append("box_rent_unit_pro_sta", box_rent_unit_pro_sta);
   formData.append("production_manager_qty_prep", production_manager_qty_prep);
   formData.append("production_manager_uno_prep", production_manager_uno_prep);
@@ -7702,7 +7700,6 @@ function BudgetEdit() {
   formData.append("other_design", other_design);
   formData.append("designlabour_total", designlabourTotal);
   // design
-  // new art
   formData.append("pro_designer_qty_prep", pro_designer_qty_prep);
   formData.append("pro_designer_uno_prep", pro_designer_uno_prep);
   formData.append("pro_designer_una_prep", pro_designer_una_prep);
