@@ -9227,139 +9227,784 @@ const Budget = (props) => {
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
-    {/* Scenic Painters start here */}
-    <Row  >
+    {/* Scenic Painters */}
+    <div>
+    <Row >
+    <Col md={1} ></Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>09.40</p>
+    <p className={`${styles.Underline} mb-0`}>09.40</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Scenic Painters</p>
+    <p className={`${styles.BoldBlack} mb-0`}>Scenic Painters</p>
+    </Col>
+    </Row>
+    {/* Prep */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Prep</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{scenicpainters_quantity || 0}</p>
+    <div className={`${styles.Box} 
+    py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{scenic_qty_prep || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{scenicpainters_units_number || 0}</p>
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{scenic_uno_prep || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{scenicpainters_units_name || 0}</p>
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{scenic_una_prep}</p>
+    </div>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{scenicpainters_rate || 0}</p>
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{scenic_rt_prep || 0}</p>
+    </div>
     </Col>
     <Col md={2} >
+    <div className={`${styles.Box2} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{scenicprep_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    {/* Shoot */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Shoot</p>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{scenicpainters_quantity || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{scenicpainters_units_number || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{scenicpainters_units_name}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{scenicpainters_rate || 0}</p>
+    </div>
+    </Col>
+    <Col md={2} >
+    <div className={`${styles.Box2} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{scenicpainters_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    {/* Wrap */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Wrap</p>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{scenic_qty_wrap || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{scenic_uno_wrap || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{scenic_una_wrap}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{scenic_rt_wrap || 0}</p>
+    </div>
+    </Col>
+    <Col md={2} >
+    <div className={`${styles.Box2} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{scenicwrap_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline7}`}></p>
+    </Col>
+    <Col md={7} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <div className={`${styles.Box4} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{scenicall_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    </div>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Head Painter */}
-    <Row  >
+    <div>
+    <Row >
+    <Col md={1} ></Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>09.50</p>
+    <p className={`${styles.Underline} mb-0`}>09.50</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Head Painter</p>
+    <p className={`${styles.BoldBlack} mb-0`}>Head Painter</p>
+    </Col>
+    </Row>
+    {/* Prep */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Prep</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{headpainter_quantity || 0}</p>
+    <div className={`${styles.Box} 
+    py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{headpain_qty_prep || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{headpainter_units_number || 0}</p>
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{headpain_uno_prep || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{headpainter_units_name || 0}</p>
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{headpain_una_prep}</p>
+    </div>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{headpainter_rate || 0}</p>
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{headpain_rt_prep || 0}</p>
+    </div>
     </Col>
     <Col md={2} >
+    <div className={`${styles.Box2} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{headpainprep_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    {/* Shoot */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Shoot</p>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{headpainter_quantity || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{headpainter_units_number || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{headpainter_units_name}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{headpainter_rate || 0}</p>
+    </div>
+    </Col>
+    <Col md={2} >
+    <div className={`${styles.Box2} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{headpainter_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    {/* Wrap */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Wrap</p>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{headpain_qty_wrap || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{headpain_uno_wrap || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{headpain_una_wrap}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{headpain_rt_wrap || 0}</p>
+    </div>
+    </Col>
+    <Col md={2} >
+    <div className={`${styles.Box2} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{headpainter_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline7}`}></p>
+    </Col>
+    <Col md={7} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <div className={`${styles.Box4} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{headpainall_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    </div>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Painters */}
-    <Row  >
+    <div>
+    <Row >
+    <Col md={1} ></Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>09.96</p>
+    <p className={`${styles.Underline} mb-0`}>09.60</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Painters</p>
+    <p className={`${styles.BoldBlack} mb-0`}>Painters</p>
+    </Col>
+    </Row>
+    {/* Prep */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Prep</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{painters_quantity || 0}</p>
+    <div className={`${styles.Box} 
+    py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{pain_qty_prep || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{painters_units_number || 0}</p>
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{pain_uno_prep || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{painters_units_name || 0}</p>
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{pain_una_prep}</p>
+    </div>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{painters_rate || 0}</p>
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{pain_rt_prep || 0}</p>
+    </div>
     </Col>
     <Col md={2} >
+    <div className={`${styles.Box2} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{paintprep_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    {/* Shoot */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Shoot</p>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{painters_quantity || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{painters_units_number || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{painters_units_name}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{painters_rate || 0}</p>
+    </div>
+    </Col>
+    <Col md={2} >
+    <div className={`${styles.Box2} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{painters_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    {/* Wrap */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Wrap</p>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{pain_qty_wrap || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{pain_uno_wrap || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{pain_una_wrap}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{pain_rt_wrap || 0}</p>
+    </div>
+    </Col>
+    <Col md={2} >
+    <div className={`${styles.Box2} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{paintwrap_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline7}`}></p>
+    </Col>
+    <Col md={7} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <div className={`${styles.Box4} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{paintall_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    </div>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Labourers */}
-    <Row  >
+    <div>
+    <Row >
+    <Col md={1} ></Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>09.70</p>
+    <p className={`${styles.Underline} mb-0`}>09.70</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Labourers</p>
-    </Col>
-    <Col md={1} >
-    <p className={`${styles.Underline}`}>{labourers_quantity || 0}</p>
-    </Col>
-    <Col md={1} >
-    <p className={`${styles.Underline}`}>{labourers_units_number || 0}</p>
-    </Col>
-    <Col md={1} >
-    <p className={`${styles.Underline}`}>{labourers_units_name || 0}</p>
-    </Col>
-    <Col md={1} >
-    <p className={`${styles.Underline}`}>{labourers_rate || 0}</p>
-    </Col>
-    <Col md={2} >
-    <p className={`${styles.Underline}`}>{labourers_total || 0}</p>
+    <p className={`${styles.BoldBlack} mb-0`}>Labourers</p>
     </Col>
     </Row>
-    {/* Other - Construction */}
+    {/* Prep */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Prep</p>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+    py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{labo_qty_prep || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{labo_uno_prep || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{labo_una_prep}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{labo_rt_prep || 0}</p>
+    </div>
+    </Col>
+    <Col md={2} >
+    <div className={`${styles.Box2} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{laboprep_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    {/* Shoot */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Shoot</p>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{labourers_quantity || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{labourers_units_number || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{labourers_units_name}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{labourers_rate || 0}</p>
+    </div>
+    </Col>
+    <Col md={2} >
+    <div className={`${styles.Box2} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{labourers_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    {/* Wrap */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Wrap</p>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{labo_qty_wrap || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{labo_uno_wrap || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{labo_una_wrap}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{labo_rt_wrap || 0}</p>
+    </div>
+    </Col>
+    <Col md={2} >
+    <div className={`${styles.Box2} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{labowrap_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline7}`}></p>
+    </Col>
+    <Col md={7} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <div className={`${styles.Box4} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{laboall_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    </div>
+    {/* hr */}
     <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* 6th/7th Days */}
+    <Row >
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>09.80</p>
     </Col>
-    <Col md={9}>
-    <p className={`${styles.Underline}`}>OTHER - CONSTRUCTION</p>
+    <Col md={5}>
+    <p className={`${styles.BoldBlack}`}>6th/7th Days</p>
+    </Col>
+    <Col md={1}>
+    <div className={`${styles.Box5} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{days6th7th_unit_con} </p>
+    </div>
+    </Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={2}>
-    <p className={`${styles.Underline}`}>{other_construction || 0} </p>
+    <div className={`${styles.Box3} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{days6th7th_con || 0} </p>
+    </div>
     </Col>
     </Row>
-    {/* Fringes Taxes */}
+    {/* hr */}
     <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Overtime */}
+    <Row >
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>09.90</p>
     </Col>
-    <Col md={9}>
-    <p className={`${styles.Underline}`}>Fringes and Taxes, Government/Unions</p>
+    <Col md={5}>
+    <p className={`${styles.Underline}`}>Overtime</p>
+    </Col>
+    <Col md={1}>
+    <div className={`${styles.Box5} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{overtime_unit_con} </p>
+    </div>
+    </Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={2}>
-    <p className={`${styles.Underline}`}>{fringes_taxes_construction || 0} </p>
+    <div className={`${styles.Box3} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{overtime_con || 0} </p>
+    </div>
     </Col>
     </Row>
-    {/* Construction Total */}
-    <Row className='mt-3' >
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Holidays */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>09.91</p>
+    </Col>
+    <Col md={5}>
+    <p className={`${styles.Underline}`}>Holidays</p>
+    </Col>
+    <Col md={1}>
+    <div className={`${styles.Box5} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{holidays_unit_con} </p>
+    </div>
+    </Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={2}>
+    <div className={`${styles.Box3} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{holidays_con || 0} </p>
+    </div>
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Box Rentals */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>09.92</p>
+    </Col>
+    <Col md={5}>
+    <p className={`${styles.Underline}`}>Box Rentals</p>
+    </Col>
+    <Col md={1}>
+    <div className={`${styles.Box5} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{box_rent_unit_con} </p>
+    </div>
+    </Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={2}>
+    <div className={`${styles.Box3} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{box_rent_con || 0} </p>
+    </div>
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Other */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>09.93</p>
+    </Col>
+    <Col md={7}>
+    <p className={`${styles.Underline}`}>Other</p>
+    </Col>
+    <Col md={2}>
+    <div className={`${styles.Box3} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{other_construction || 0} </p>
+    </div>
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Fringes Taxes */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>09.94</p>
+    </Col>
+    <Col md={7}>
+    <p className={`${styles.Underline}`}>Fringes and Taxes</p>
+    </Col>
+    <Col md={2}>
+    <div className={`${styles.Box3} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{fringes_taxes_construction || 0} </p>
+    </div>
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Construction Staff Total */}
+    <Row className='mt-3 mb-1' >
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     <p></p>
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
-    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL CONSTRUCTION LABOUR </p>
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL CONSTRUCTION LABOUR</p>
     </Col>
-    <Col md={3} >
+    <Col md={1} >
     </Col>
     <Col md={2} >
+    <div className={`${styles.Box4} 
+      py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline} mb-0`}>{constructionlabour_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     </div>
