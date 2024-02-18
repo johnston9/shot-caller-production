@@ -206,7 +206,7 @@ const handleChangeCast = (event) => {
     <Row >
     <Col md={1} ></Col>
     <Col md={1}>
-    <p className={`${styles.Underline}`}>07.991</p>
+    <p className={`${styles.Underline}`}>11.60</p>
     </Col>
     <Col md={5}>
     <p className={`${styles.BoldBlack}`}>6th/7th Days</p>
@@ -214,7 +214,7 @@ const handleChangeCast = (event) => {
     <Col md={1}>
     <div className={`${styles.Box5} 
       py-0 d-flex align-items-center justify-content-center`}>
-    <p className={`${styles.Underline}`}>{days6th7th_unit_pro_sta} </p>
+    <p className={`${styles.Underline}`}>{days6th7th_unit_prop} </p>
     </div>
     </Col>
     <Col md={1}>
@@ -223,7 +223,7 @@ const handleChangeCast = (event) => {
     <Col md={2}>
     <div className={`${styles.Box3} 
       py-0 d-flex align-items-center justify-content-center`}>
-    <p className={`${styles.Underline}`}>{days6th7th_pro_sta || 0} </p>
+    <p className={`${styles.Underline}`}>{days6th7th_prop || 0} </p>
     </div>
     </Col>
     </Row>
@@ -238,7 +238,7 @@ const handleChangeCast = (event) => {
     <Row >
     <Col md={1} ></Col>
     <Col md={1}>
-    <p className={`${styles.Underline}`}>07.992</p>
+    <p className={`${styles.Underline}`}>11.70</p>
     </Col>
     <Col md={5}>
     <p className={`${styles.Underline}`}>Overtime</p>
@@ -246,7 +246,7 @@ const handleChangeCast = (event) => {
     <Col md={1}>
     <div className={`${styles.Box5} 
       py-0 d-flex align-items-center justify-content-center`}>
-    <p className={`${styles.Underline}`}>{overtime_unit_pro_sta} </p>
+    <p className={`${styles.Underline}`}>{overtime_unit_prop} </p>
     </div>
     </Col>
     <Col md={1}>
@@ -255,7 +255,7 @@ const handleChangeCast = (event) => {
     <Col md={2}>
     <div className={`${styles.Box3} 
       py-0 d-flex align-items-center justify-content-center`}>
-    <p className={`${styles.Underline}`}>{overtime_pro_sta || 0} </p>
+    <p className={`${styles.Underline}`}>{overtime_prop || 0} </p>
     </div>
     </Col>
     </Row>
@@ -270,7 +270,7 @@ const handleChangeCast = (event) => {
     <Row >
     <Col md={1} ></Col>
     <Col md={1}>
-    <p className={`${styles.Underline}`}>07.993</p>
+    <p className={`${styles.Underline}`}>11.80</p>
     </Col>
     <Col md={5}>
     <p className={`${styles.Underline}`}>Holidays</p>
@@ -278,7 +278,7 @@ const handleChangeCast = (event) => {
     <Col md={1}>
     <div className={`${styles.Box5} 
       py-0 d-flex align-items-center justify-content-center`}>
-    <p className={`${styles.Underline}`}>{holidays_unit_pro_sta} </p>
+    <p className={`${styles.Underline}`}>{holidays_unit_prop} </p>
     </div>
     </Col>
     <Col md={1}>
@@ -287,7 +287,7 @@ const handleChangeCast = (event) => {
     <Col md={2}>
     <div className={`${styles.Box3} 
       py-0 d-flex align-items-center justify-content-center`}>
-    <p className={`${styles.Underline}`}>{holidays_pro_sta || 0} </p>
+    <p className={`${styles.Underline}`}>{holidays_prop || 0} </p>
     </div>
     </Col>
     </Row>
@@ -302,7 +302,7 @@ const handleChangeCast = (event) => {
     <Row >
     <Col md={1} ></Col>
     <Col md={1}>
-    <p className={`${styles.Underline}`}>07.994</p>
+    <p className={`${styles.Underline}`}>11.90</p>
     </Col>
     <Col md={5}>
     <p className={`${styles.Underline}`}>Box Rentals</p>
@@ -310,7 +310,7 @@ const handleChangeCast = (event) => {
     <Col md={1}>
     <div className={`${styles.Box5} 
       py-0 d-flex align-items-center justify-content-center`}>
-    <p className={`${styles.Underline}`}>{box_rent_unit_pro_sta} </p>
+    <p className={`${styles.Underline}`}>{box_rent_unit_prop} </p>
     </div>
     </Col>
     <Col md={1}>
@@ -319,7 +319,7 @@ const handleChangeCast = (event) => {
     <Col md={2}>
     <div className={`${styles.Box3} 
       py-0 d-flex align-items-center justify-content-center`}>
-    <p className={`${styles.Underline}`}>{box_rent_pro_sta || 0} </p>
+    <p className={`${styles.Underline}`}>{box_rent_prop || 0} </p>
     </div>
     </Col>
     </Row>
@@ -334,7 +334,7 @@ const handleChangeCast = (event) => {
     <Row >
     <Col md={1} ></Col>
     <Col md={1}>
-    <p className={`${styles.Underline}`}>07.995</p>
+    <p className={`${styles.Underline}`}>11.91</p>
     </Col>
     <Col md={7}>
     <p className={`${styles.Underline}`}>Other</p>
@@ -342,7 +342,7 @@ const handleChangeCast = (event) => {
     <Col md={2}>
     <div className={`${styles.Box3} 
       py-0 d-flex align-items-center justify-content-center`}>
-    <p className={`${styles.Underline}`}>{other_pro_sta || 0} </p>
+    <p className={`${styles.Underline}`}>{other_property || 0} </p>
     </div>
     </Col>
     </Row>
@@ -357,15 +357,15 @@ const handleChangeCast = (event) => {
     <Row >
     <Col md={1} ></Col>
     <Col md={1}>
-    <p className={`${styles.Underline}`}>07.996</p>
+    <p className={`${styles.Underline}`}>11.92</p>
     </Col>
     <Col md={7}>
-    <p className={`${styles.Underline}`}>Fringes and Taxes</p>
+    <p className={`${styles.Underline}`}>Fringes & Taxes</p>
     </Col>
     <Col md={2}>
     <div className={`${styles.Box3} 
       py-0 d-flex align-items-center justify-content-center`}>
-    <p className={`${styles.Underline}`}>{fringes_taxes_production || 0} </p>
+    <p className={`${styles.Underline}`}>{fringes_taxes_property || 0} </p>
     </div>
     </Col>
     </Row>
@@ -376,7 +376,7 @@ const handleChangeCast = (event) => {
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
-    {/* Production Staff Total */}
+    {/* Property Total */}
     <Row className='mt-3 mb-1' >
     <Col md={1} ></Col>
     <Col md={1} >
@@ -384,14 +384,14 @@ const handleChangeCast = (event) => {
     <p></p>
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
-    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL PRODUCTION STAFF </p>
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL PROPERTY LABOUR</p>
     </Col>
     <Col md={1} >
     </Col>
     <Col md={2} >
     <div className={`${styles.Box4} 
       py-0 d-flex align-items-center justify-content-center`}>
-    <p className={`${styles.Underline} mb-0`}>{productionstaff_total || 0}</p>
+    <p className={`${styles.Underline} mb-0`}>{propertylabour_total || 0}</p>
     </div>
     </Col>
     </Row>
@@ -404,233 +404,210 @@ const handleChangeCast = (event) => {
     </Row>
     </div>
 
-    {/* SECTION TOTALS */}
-    decsetprep_total, decsetwrap_total, decsetall_total,
-    assdsetprep_total, assdsetwrap_total, assdsetall_total,
-    leadmanprep_total, leadmanwrap_total, leadmanall_total,
-    dressprep_total, dresswrap_total, dressall_total,
-    swinggprep_total, swinggwrap_total, swinggall_total,
-    dressbuyprep_total, dressbuywrap_total, dressbuyall_total,
-
     {/* SECTION BLOCK */}
-    {/* SET DRESSING LABOUR ---------------------------------- */}
-    <div className='mt-5'>
+    {/* WARDROBE LABOUR -------------------------------------- */}
+    <div className='mt-4'>
     <Row>
-    <Col md={1} ></Col>
     <Col xs={1}>
-    <p className={`${styles.BoldBlack}`}>10.00</p>
+    <p className='mb-2'>14.00</p>
     </Col>
-    <Col xs={8}>
-    <p className={ `${styles.BoldBlack}`}>SET DRESSING LABOUR</p>
+    <Col xs={10}>
+    <p className={ `${styles.BoldBlack} mb-2`}>WARDROBE LABOUR</p>
     </Col>
     </Row>
-    {/* TITLES */}
-    <Row className={ `mb-2 py-0`} >
-    <Col md={1} ></Col>
-    <Col className={ `${styles.Overview} py-1`} md={1} >
+    {/* Titles */}
+    <Row className={ `${styles.Overview} mb-2 py-1`} >
+    <Col md={1} >
     <p className="mb-0">ACCT</p>
     </Col>
-    <Col className={ `${styles.Overview} py-1`} md={3} >
+    <Col md={5} >
     <p className="mb-0">Description</p>
     </Col>
-    <Col className={`${styles.Overview} text-center py-1`} md={1} >
+    <Col md={1} >
     <p className="mb-0">#</p>
     </Col>
-    <Col className={`${styles.Overview} text-center py-1`} md={1} >
+    <Col className="px-0 mx-0" md={1} >
     <p># Unit</p>
     </Col>
-    <Col md={1} className={`${styles.Overview} text-center py-1`} >
+    <Col md={1} >
     <p className="mb-0">Unit</p>
     </Col>
-    <Col md={1} className={`${styles.Overview} text-center py-1`} >
+    <Col md={1} >
     <p className="mb-0">Price</p>
     </Col>
-    <Col md={2} className={`${styles.Overview} text-center py-1`} >
+    <Col md={2} >
     <p className="mb-0">Total</p>
     </Col>
-    <Col md={1}></Col>
     </Row>
-    {/* Set Decorator */}
+    {/* Costume Designer */}
     <Row  >
     <Col md={1} >
-    <p className={`${styles.Underline}`}>10.10</p>
+    <p className={`${styles.Underline}`}>14.10</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Set Decorator</p>
+    <p className={`${styles.Underline}`}>Costume Designer</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{set_decorator_quantity || 0}</p>
+    <p className={`${styles.Underline}`}>{costume_designer_quantity || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{set_decorator_units_number || 0}</p>
+    <p className={`${styles.Underline}`}>{costume_designer_units_number || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{set_decorator_units_name || 0}</p>
+    <p className={`${styles.Underline}`}>{costume_designer_units_name || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{set_decorator_rate || 0}</p>
+    <p className={`${styles.Underline}`}>{costume_designer_rate || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{decoratorset_total || 0}</p>
+    <p className={`${styles.Underline}`}>{costumedesigner_total || 0}</p>
     </Col>
     </Row>
-    {/* Assistant Set Decorator */}
+    {/* Assistant Costume Designer */}
     <Row  >
     <Col md={1} >
-    <p className={`${styles.Underline}`}>10.20</p>
+    <p className={`${styles.Underline}`}>14.20</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Assistant Set Decorator</p>
+    <p className={`${styles.Underline}`}>Assistant Costume Designer</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{assist_set_decorator_quantity || 0}</p>
+    <p className={`${styles.Underline}`}>{assist_costume_designer_quantity || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{assist_set_decorator_units_number || 0}</p>
+    <p className={`${styles.Underline}`}>{assist_costume_designer_units_number || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{assist_set_decorator_units_name || 0}</p>
+    <p className={`${styles.Underline}`}>{assist_costume_designer_units_name || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{assist_set_decorator_rate || 0}</p>
+    <p className={`${styles.Underline}`}>{assist_costume_designer_rate || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{assistdecoratorset_total || 0}</p>
+    <p className={`${styles.Underline}`}>{assistcosdesigner_total || 0}</p>
     </Col>
     </Row>
-    {/* Lead Man */}
+    {/* Head Wardrobe */}
     <Row  >
     <Col md={1} >
-    <p className={`${styles.Underline}`}>10.30</p>
+    <p className={`${styles.Underline}`}>14.30</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Lead Man</p>
+    <p className={`${styles.Underline}`}>Head Wardrobe</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{lead_man_quantity || 0}</p>
+    <p className={`${styles.Underline}`}>{head_wardrobe_quantity || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{lead_man_units_number || 0}</p>
+    <p className={`${styles.Underline}`}>{head_wardrobe_units_number || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{lead_man_units_name || 0}</p>
+    <p className={`${styles.Underline}`}>{head_wardrobe_units_name || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{lead_man_rate || 0}</p>
+    <p className={`${styles.Underline}`}>{head_wardrobe_rate || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{leadman_total || 0}</p>
+    <p className={`${styles.Underline}`}>{headwardrobe_total || 0}</p>
     </Col>
     </Row>
-    {/* Set Dressers */}
+    {/* Wardrobe Assistant */}
     <Row  >
     <Col md={1} >
-    <p className={`${styles.Underline}`}>10.40</p>
+    <p className={`${styles.Underline}`}>14.40</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Set Dressers</p>
+    <p className={`${styles.Underline}`}>Wardrobe Assistant</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{set_dressers_quantity || 0}</p>
+    <p className={`${styles.Underline}`}>{wardrobe_assist_quantity || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{set_dressers_units_number || 0}</p>
+    <p className={`${styles.Underline}`}>{wardrobe_assist_units_number || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{set_dressers_units_name || 0}</p>
+    <p className={`${styles.Underline}`}>{wardrobe_assist_units_name || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{set_dressers_rate || 0}</p>
+    <p className={`${styles.Underline}`}>{wardrobe_assist_rate || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{dressers_total || 0}</p>
+    <p className={`${styles.Underline}`}>{wardrobeassist_total || 0}</p>
     </Col>
     </Row>
-    {/* Swing Gang  */}
+    {/* Truck Costumer */}
     <Row  >
     <Col md={1} >
-    <p className={`${styles.Underline}`}>10.50</p>
+    <p className={`${styles.Underline}`}>14.50</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Swing Gang </p>
+    <p className={`${styles.Underline}`}>Truck Costumer</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{swing_gang_quantity || 0}</p>
+    <p className={`${styles.Underline}`}>{truck_costumer_quantity || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{swing_gang_units_number || 0}</p>
+    <p className={`${styles.Underline}`}>{truck_costumer_units_number || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{swing_gang_units_name || 0}</p>
+    <p className={`${styles.Underline}`}>{truck_costumer_units_name || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{swing_gang_rate || 0}</p>
+    <p className={`${styles.Underline}`}>{truck_costumer_rate || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{swinggang_total || 0}</p>
+    <p className={`${styles.Underline}`}>{truckcostumer_total || 0}</p>
     </Col>
     </Row>
-    {/* Set Dressing Buyer  */}
+    {/* Other Wardrobe Labour */}
     <Row  >
     <Col md={1} >
-    <p className={`${styles.Underline}`}>10.60</p>
+    <p className={`${styles.Underline}`}>14.60</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Set Dressing Buyer </p>
+    <p className={`${styles.Underline}`}>Other Wardrobe Labour</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{set_dressing_buyer_quantity || 0}</p>
+    <p className={`${styles.Underline}`}>{other_wardrobe_labour_quantity || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{set_dressing_buyer_units_number || 0}</p>
+    <p className={`${styles.Underline}`}>{other_wardrobe_labour_units_number || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{set_dressing_buyer_units_name || 0}</p>
+    <p className={`${styles.Underline}`}>{other_wardrobe_labour_units_name || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{set_dressing_buyer_rate || 0}</p>
+    <p className={`${styles.Underline}`}>{other_wardrobe_labour_rate || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{dressingbuyer_total || 0}</p>
-    </Col>
-    </Row>
-    {/* Other - Dressing */}
-    <Row>
-    <Col md={1}>
-    <p className={`${styles.Underline}`}>10.70</p>
-    </Col>
-    <Col md={9}>
-    <p className={`${styles.Underline}`}>OTHER - SET DRESSING</p>
-    </Col>
-    <Col md={2}>
-    <p className={`${styles.Underline}`}>{other_set_dressing || 0} </p>
+    <p className={`${styles.Underline}`}>{otherwardrobe_total || 0}</p>
     </Col>
     </Row>
     {/* Fringes Taxes */}
     <Row>
     <Col md={1}>
-    <p className={`${styles.Underline}`}>10.80</p>
+    <p className={`${styles.Underline}`}>14.70</p>
     </Col>
     <Col md={9}>
     <p className={`${styles.Underline}`}>Fringes and Taxes, Government/Unions</p>
     </Col>
     <Col md={2}>
-    <p className={`${styles.Underline}`}>{fringes_taxes_dressing || 0} </p>
+    <p className={`${styles.Underline}`}>{fringes_taxes_wardrobe || 0} </p>
     </Col>
     </Row>
-    {/* Dressing Total */}
+    {/* Wardrobe Total */}
     <Row className='mt-3' >
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     <p></p>
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
-    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL SET DRESSING LABOUR </p>
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL WARDROBE LABOUR </p>
     </Col>
     <Col md={3} >
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline} mb-0`}>{dressinglabour_total || 0}</p>
+    <p className={`${styles.Underline} mb-0`}>{wardrobelabour_total || 0}</p>
     </Col>
     </Row>
     </div>

@@ -600,7 +600,7 @@ const Wrangling = (props) => {
     <hr className={`${styles.Break1} mt-1 mb-0`}/>
     </Col>
     </Row>
-    {/* Wranglings */}
+    {/* Wranglers */}
     <div className="mt-1"> 
     <Row >
     <Col md={1} ></Col>
@@ -1200,10 +1200,10 @@ const Wrangling = (props) => {
     <Row className="py-0 d-flex align-items-center mb-1">
     <Col md={1}></Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>12.30</p>
+    <p className={`${styles.Underline}`}>12.80</p>
     </Col>
     <Col md={4} >
-    <p className={`${styles.Underline}`}>Fringes and Taxes</p>
+    <p className={`${styles.Underline}`}>Fringes & Taxes</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -1245,7 +1245,7 @@ const Wrangling = (props) => {
     <Col md={1} >
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
-    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL WRANGLING</p>
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL WRANGLING LABOUR</p>
     </Col>
     <Col md={1} >
     <p></p>

@@ -2439,7 +2439,7 @@ const PropertyLabour = (props) => {
     <p className={`${styles.Underline}`}>11.92</p>
     </Col>
     <Col md={4} >
-    <p className={`${styles.Underline}`}>Fringes and Taxes</p>
+    <p className={`${styles.Underline}`}>Fringes & Taxes</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -2481,7 +2481,7 @@ const PropertyLabour = (props) => {
     <Col md={1} >
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
-    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL PROPERTY</p>
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL PROPERTY LABOUR</p>
     </Col>
     <Col md={1} >
     <p></p>

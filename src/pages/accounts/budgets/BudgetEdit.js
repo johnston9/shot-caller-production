@@ -2155,7 +2155,6 @@ function BudgetEdit() {
     oth_wran_uno_wrap: 0,
     oth_wran_una_wrap: "",
     oth_wran_rt_wrap: 0,
-    // old
     fringes_taxes_wrangling: 0,
     head_wrangler_quantity: 0,
     head_wrangler_units_number: 0,
@@ -2175,7 +2174,6 @@ function BudgetEdit() {
     he_wran_qty_wrap, he_wran_uno_wrap, he_wran_una_wrap, he_wran_rt_wrap,
     oth_wran_qty_prep, oth_wran_uno_prep, oth_wran_una_prep, oth_wran_rt_prep,
     oth_wran_qty_wrap, oth_wran_uno_wrap, oth_wran_una_wrap, oth_wran_rt_wrap,
-    // old
     fringes_taxes_wrangling,
     head_wrangler_quantity, head_wrangler_units_number,
     head_wrangler_units_name, head_wrangler_rate,

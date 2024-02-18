@@ -474,26 +474,26 @@ const Budget = (props) => {
     leadman_total, dressers_total, swinggang_total,
     dressingbuyer_total, dressinglabour_total,
     // props
-    // days6th7th_unit_prop, days6th7th_prop, 
-    // overtime_unit_prop, overtime_prop,
-    // holidays_unit_prop, holidays_prop, box_rent_unit_prop, box_rent_prop,
-    // pro_mas_qty_prep, pro_mas_uno_prep, pro_mas_una_prep, pro_mas_rt_prep,
-    // pro_mas_qty_wrap, pro_mas_uno_wrap, pro_mas_una_wrap, pro_mas_rt_wrap,
-    // as_pro_ma_qty_prep, as_pro_ma_uno_prep, as_pro_ma_una_prep, as_pro_ma_rt_prep,
-    // as_pro_ma_qty_wrap, as_pro_ma_uno_wrap, as_pro_ma_una_wrap, as_pro_ma_rt_wrap,
-    // on_set_prop_qty_prep, on_set_prop_uno_prep, 
-    // on_set_prop_una_prep, on_set_prop_rt_prep,
-    // on_set_prop_qty_wrap, on_set_prop_uno_wrap, 
-    // on_set_prop_una_wrap, on_set_prop_rt_wrap, 
-    // prop_buy_qty_prep, prop_buy_uno_prep, prop_buy_una_prep, prop_buy_rt_prep,
-    // prop_buy_qty_wrap, prop_buy_uno_wrap, prop_buy_una_wrap, prop_buy_rt_wrap,
-    // armor_qty_prep, armor_uno_prep, armor_una_prep, armor_rt_prep,
-    // armor_qty_wrap, armor_uno_wrap, armor_una_wrap, armor_rt_wrap,
-    // propmasprep_total, propmaswrap_total, propmasall_total,
-    // aspropmaprep_total, aspropmawrap_total, aspropmaall_total,
-    // onsetpropprep_total, onsetpropwrap_total, onsetpropall_total,
-    // propbuyprep_total, propbuywrap_total, propbuyall_total,
-    // armorprep_total, armorwrap_total, armorall_total,
+    days6th7th_unit_prop, days6th7th_prop, 
+    overtime_unit_prop, overtime_prop,
+    holidays_unit_prop, holidays_prop, box_rent_unit_prop, box_rent_prop,
+    pro_mas_qty_prep, pro_mas_uno_prep, pro_mas_una_prep, pro_mas_rt_prep,
+    pro_mas_qty_wrap, pro_mas_uno_wrap, pro_mas_una_wrap, pro_mas_rt_wrap,
+    as_pro_ma_qty_prep, as_pro_ma_uno_prep, as_pro_ma_una_prep, as_pro_ma_rt_prep,
+    as_pro_ma_qty_wrap, as_pro_ma_uno_wrap, as_pro_ma_una_wrap, as_pro_ma_rt_wrap,
+    on_set_prop_qty_prep, on_set_prop_uno_prep, 
+    on_set_prop_una_prep, on_set_prop_rt_prep,
+    on_set_prop_qty_wrap, on_set_prop_uno_wrap, 
+    on_set_prop_una_wrap, on_set_prop_rt_wrap, 
+    prop_buy_qty_prep, prop_buy_uno_prep, prop_buy_una_prep, prop_buy_rt_prep,
+    prop_buy_qty_wrap, prop_buy_uno_wrap, prop_buy_una_wrap, prop_buy_rt_wrap,
+    armor_qty_prep, armor_uno_prep, armor_una_prep, armor_rt_prep,
+    armor_qty_wrap, armor_uno_wrap, armor_una_wrap, armor_rt_wrap,
+    propmasprep_total, propmaswrap_total, propmasall_total,
+    aspropmaprep_total, aspropmawrap_total, aspropmaall_total,
+    onsetpropprep_total, onsetpropwrap_total, onsetpropall_total,
+    propbuyprep_total, propbuywrap_total, propbuyall_total,
+    armorprep_total, armorwrap_total, armorall_total,
     fringes_taxes_property,
     property_master_quantity, property_master_units_number,
     property_master_units_name, property_master_rate,
@@ -515,16 +515,15 @@ const Budget = (props) => {
   // budget2
   const {
     // wrangling
-    // days6th7th_unit_wran, days6th7th_wran,
-    // overtime_unit_wran, overtime_wran, holidays_unit_wran, 
-    // holidays_wran, box_rent_unit_wran, box_rent_wran, other_solo_wran,
-    // he_wran_qty_prep, he_wran_uno_prep, he_wran_una_prep, he_wran_rt_prep,
-    // he_wran_qty_wrap, he_wran_uno_wrap, he_wran_una_wrap, he_wran_rt_wrap,
-    // oth_wran_qty_prep, oth_wran_uno_prep, oth_wran_una_prep, oth_wran_rt_prep,
-    // oth_wran_qty_wrap, oth_wran_uno_wrap, oth_wran_una_wrap, oth_wran_rt_wrap,
-    // hewranprep_total, hewranwrap_total, hewranall_total,
-    // othwranlabprep_total, othwranlabwrap_total, othwranlaball_total,
-    // old
+    days6th7th_unit_wran, days6th7th_wran,
+    overtime_unit_wran, overtime_wran, holidays_unit_wran, 
+    holidays_wran, box_rent_unit_wran, box_rent_wran, other_solo_wran,
+    he_wran_qty_prep, he_wran_uno_prep, he_wran_una_prep, he_wran_rt_prep,
+    he_wran_qty_wrap, he_wran_uno_wrap, he_wran_una_wrap, he_wran_rt_wrap,
+    oth_wran_qty_prep, oth_wran_uno_prep, oth_wran_una_prep, oth_wran_rt_prep,
+    oth_wran_qty_wrap, oth_wran_uno_wrap, oth_wran_una_wrap, oth_wran_rt_wrap,
+    hewranprep_total, hewranwrap_total, hewranall_total,
+    othwranlabprep_total, othwranlabwrap_total, othwranlaball_total,
     head_wrangler_quantity, head_wrangler_units_number,
     head_wrangler_units_name, head_wrangler_rate,
     other_wrangling_labour_quantity, other_wrangling_labour_units_number,
@@ -532,17 +531,17 @@ const Budget = (props) => {
     headwrangler_total, otherwranglinglabour_total,
     wranglerlabour_total, fringes_taxes_wrangling,
     // FX
-    // days6th7th_unit_fx, days6th7th_fx, overtime_unit_fx, overtime_fx,
-    // holidays_unit_fx,  holidays_fx, box_rent_unit_fx, box_rent_fx, other_solo_fx,
-    // fx_sup_qty_prep, fx_sup_uno_prep, fx_sup_una_prep, fx_sup_rt_prep,
-    // fx_sup_qty_wrap, fx_sup_uno_wrap, fx_sup_una_wrap, fx_sup_rt_wrap,
-    // ass_fx_qty_prep, ass_fx_uno_prep, ass_fx_una_prep, ass_fx_rt_prep,
-    // ass_fx_qty_wrap, ass_fx_uno_wrap, ass_fx_una_wrap, ass_fx_rt_wrap,
-    // ot_fx_l_qty_prep, ot_fx_l_uno_prep, ot_fx_l_una_prep, ot_fx_l_rt_prep,
-    // ot_fx_l_qty_wrap, ot_fx_l_uno_wrap, ot_fx_l_una_wrap, ot_fx_l_rt_wrap,
-    // fxsupprep_total, fxsupwrap_total, fxsupall_total,
-    // assfxprep_total, assfxwrap_total, assfxall_total,
-    // othfxlabprep_total, othfxlabwrap_total, othfxlaball_total,
+    days6th7th_unit_fx, days6th7th_fx, overtime_unit_fx, overtime_fx,
+    holidays_unit_fx,  holidays_fx, box_rent_unit_fx, box_rent_fx, other_solo_fx,
+    fx_sup_qty_prep, fx_sup_uno_prep, fx_sup_una_prep, fx_sup_rt_prep,
+    fx_sup_qty_wrap, fx_sup_uno_wrap, fx_sup_una_wrap, fx_sup_rt_wrap,
+    ass_fx_qty_prep, ass_fx_uno_prep, ass_fx_una_prep, ass_fx_rt_prep,
+    ass_fx_qty_wrap, ass_fx_uno_wrap, ass_fx_una_wrap, ass_fx_rt_wrap,
+    ot_fx_l_qty_prep, ot_fx_l_uno_prep, ot_fx_l_una_prep, ot_fx_l_rt_prep,
+    ot_fx_l_qty_wrap, ot_fx_l_uno_wrap, ot_fx_l_una_wrap, ot_fx_l_rt_wrap,
+    fxsupprep_total, fxsupwrap_total, fxsupall_total,
+    assfxprep_total, assfxwrap_total, assfxall_total,
+    othfxlabprep_total, othfxlabwrap_total, othfxlaball_total,
     fx_supervisor_quantity, fx_supervisor_units_number,
     fx_supervisor_units_name, fx_supervisor_rate,
     assist_fx_quantity, assist_fx_units_number,
@@ -10009,7 +10008,7 @@ const Budget = (props) => {
     </Row>
     </div>
     {/* SET DRESSING LABOUR ---------------------------------- */}
-    <div className='mt-5'>
+    <div className='mt-4'>
     <Row>
     <Col md={1} ></Col>
     <Col xs={1}>
@@ -11117,445 +11116,2171 @@ const Budget = (props) => {
     </Row>
     </div>
     {/* PROPERTY LABOUR -------------------------------------- */}
-    <div className='mt-5'>
+    <div className='mt-4'>
     <Row>
+    <Col md={1} ></Col>
     <Col xs={1}>
-    <p className='mb-2'>11.00</p>
+    <p className={`${styles.BoldBlack}`}>11.00</p>
     </Col>
-    <Col xs={10}>
-    <p className={ `${styles.BoldBlack} mb-2`}>PROPERTY LABOUR</p>
+    <Col xs={8}>
+    <p className={ `${styles.BoldBlack}`}>PROPERTY LABOUR</p>
     </Col>
     </Row>
-    {/* Titles */}
-    <Row className={ `${styles.Overview} mb-2 py-1`} >
-    <Col md={1} >
+    {/* TITLES */}
+    <Row className={ `mb-2 py-0`} >
+    <Col md={1} ></Col>
+    <Col className={ `${styles.Overview} py-1`} md={1} >
     <p className="mb-0">ACCT</p>
     </Col>
-    <Col md={5} >
+    <Col className={ `${styles.Overview} py-1`} md={3} >
     <p className="mb-0">Description</p>
     </Col>
-    <Col md={1} >
+    <Col className={`${styles.Overview} text-center py-1`} md={1} >
     <p className="mb-0">#</p>
     </Col>
-    <Col className="px-0 mx-0" md={1} >
+    <Col className={`${styles.Overview} text-center py-1`} md={1} >
     <p># Unit</p>
     </Col>
-    <Col md={1} >
+    <Col md={1} className={`${styles.Overview} text-center py-1`} >
     <p className="mb-0">Unit</p>
     </Col>
-    <Col md={1} >
+    <Col md={1} className={`${styles.Overview} text-center py-1`} >
     <p className="mb-0">Price</p>
     </Col>
-    <Col md={2} >
+    <Col md={2} className={`${styles.Overview} text-center py-1`} >
     <p className="mb-0">Total</p>
     </Col>
+    <Col md={1}></Col>
     </Row>
     {/* Property Master */}
-    <Row  >
+    <div>
+    <Row >
+    <Col md={1} ></Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>11.10</p>
+    <p className={`${styles.Underline} mb-0`}>11.10</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Property Master</p>
+    <p className={`${styles.BoldBlack} mb-0`}>Property Master</p>
+    </Col>
+    </Row>
+    {/* Prep */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Prep</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{property_master_quantity || 0}</p>
+    <div className={`${styles.Box} 
+    py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{pro_mas_qty_prep || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{property_master_units_number || 0}</p>
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{pro_mas_uno_prep || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{property_master_units_name || 0}</p>
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{pro_mas_una_prep}</p>
+    </div>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{property_master_rate || 0}</p>
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{pro_mas_rt_prep || 0}</p>
+    </div>
     </Col>
     <Col md={2} >
+    <div className={`${styles.Box2} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{propmasprep_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    {/* Shoot */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Shoot</p>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{property_master_quantity || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{property_master_units_number || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{property_master_units_name}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{property_master_rate || 0}</p>
+    </div>
+    </Col>
+    <Col md={2} >
+    <div className={`${styles.Box2} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{propertymaster_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    {/* Wrap */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Wrap</p>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{pro_mas_qty_wrap || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{pro_mas_uno_wrap || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{pro_mas_una_wrap}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{pro_mas_rt_wrap || 0}</p>
+    </div>
+    </Col>
+    <Col md={2} >
+    <div className={`${styles.Box2} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{propmaswrap_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline7}`}></p>
+    </Col>
+    <Col md={7} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <div className={`${styles.Box4} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{propmasall_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    </div>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Assistant Property Master */}
-    <Row  >
+    <div>
+    <Row >
+    <Col md={1} ></Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>11.20</p>
+    <p className={`${styles.Underline} mb-0`}>11.20</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Assistant Property Master</p>
+    <p className={`${styles.BoldBlack} mb-0`}>Assistant Property Master</p>
+    </Col>
+    </Row>
+    {/* Prep */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Prep</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{assist_property_master_quantity || 0}</p>
+    <div className={`${styles.Box} 
+    py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{as_pro_ma_qty_prep || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{assist_property_master_units_number || 0}</p>
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{as_pro_ma_uno_prep || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{assist_property_master_units_name || 0}</p>
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{as_pro_ma_una_prep}</p>
+    </div>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{assist_property_master_rate || 0}</p>
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{as_pro_ma_rt_prep || 0}</p>
+    </div>
     </Col>
     <Col md={2} >
+    <div className={`${styles.Box2} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{aspropmaprep_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    {/* Shoot */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Shoot</p>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{assist_property_master_quantity || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{assist_property_master_units_number || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{assist_property_master_units_name}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{assist_property_master_rate || 0}</p>
+    </div>
+    </Col>
+    <Col md={2} >
+    <div className={`${styles.Box2} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{assistpropertymaster_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    {/* Wrap */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Wrap</p>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{as_pro_ma_qty_wrap || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{as_pro_ma_uno_wrap || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{as_pro_ma_una_wrap}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{as_pro_ma_rt_wrap || 0}</p>
+    </div>
+    </Col>
+    <Col md={2} >
+    <div className={`${styles.Box2} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{aspropmawrap_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline7}`}></p>
+    </Col>
+    <Col md={7} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <div className={`${styles.Box4} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{aspropmaall_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    </div>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* On Set Props Person */}
-    <Row  >
+    <div>
+    <Row >
+    <Col md={1} ></Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>11.30</p>
+    <p className={`${styles.Underline} mb-0`}>11.30</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>On Set Props Person</p>
+    <p className={`${styles.BoldBlack} mb-0`}>On Set Props Person</p>
+    </Col>
+    </Row>
+    {/* Prep */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Prep</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{on_set_props_person_quantity || 0}</p>
+    <div className={`${styles.Box} 
+    py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{on_set_prop_qty_prep || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{on_set_props_person_units_number || 0}</p>
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{on_set_prop_uno_prep || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{on_set_props_person_units_name || 0}</p>
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{on_set_prop_una_prep}</p>
+    </div>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{on_set_props_person_rate || 0}</p>
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{on_set_prop_rt_prep || 0}</p>
+    </div>
     </Col>
     <Col md={2} >
+    <div className={`${styles.Box2} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{onsetpropprep_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    {/* Shoot */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Shoot</p>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{on_set_props_person_quantity || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{on_set_props_person_units_number || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{on_set_props_person_units_name}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{on_set_props_person_rate || 0}</p>
+    </div>
+    </Col>
+    <Col md={2} >
+    <div className={`${styles.Box2} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{onsetpropsperson_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    {/* Wrap */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Wrap</p>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{on_set_prop_qty_wrap || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{on_set_prop_uno_wrap || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{on_set_prop_una_wrap}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{on_set_prop_rt_wrap || 0}</p>
+    </div>
+    </Col>
+    <Col md={2} >
+    <div className={`${styles.Box2} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{onsetpropwrap_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline7}`}></p>
+    </Col>
+    <Col md={7} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <div className={`${styles.Box4} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{onsetpropall_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    </div>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Property Buyer */}
-    <Row  >
+    <div>
+    <Row >
+    <Col md={1} ></Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>11.40</p>
+    <p className={`${styles.Underline} mb-0`}>11.40</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Property Buyer</p>
+    <p className={`${styles.BoldBlack} mb-0`}>Property Buyer</p>
+    </Col>
+    </Row>
+    {/* Prep */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Prep</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{property_buyer_quantity || 0}</p>
+    <div className={`${styles.Box} 
+    py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{prop_buy_qty_prep || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{property_buyer_units_number || 0}</p>
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{prop_buy_uno_prep || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{property_buyer_units_name || 0}</p>
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{prop_buy_una_prep}</p>
+    </div>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{property_buyer_rate || 0}</p>
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{prop_buy_rt_prep || 0}</p>
+    </div>
     </Col>
     <Col md={2} >
+    <div className={`${styles.Box2} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{propbuyprep_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    {/* Shoot */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Shoot</p>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{property_buyer_quantity || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{property_buyer_units_number || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{property_buyer_units_name}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{property_buyer_rate || 0}</p>
+    </div>
+    </Col>
+    <Col md={2} >
+    <div className={`${styles.Box2} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{propertybuyer_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    {/* Wrap */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Wrap</p>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{prop_buy_qty_wrap || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{prop_buy_uno_wrap || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{prop_buy_una_wrap}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{prop_buy_rt_wrap || 0}</p>
+    </div>
+    </Col>
+    <Col md={2} >
+    <div className={`${styles.Box2} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{propbuywrap_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline7}`}></p>
+    </Col>
+    <Col md={7} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <div className={`${styles.Box4} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{propbuyall_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    </div>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Armorer */}
-    <Row  >
+    <div>
+    <Row >
+    <Col md={1} ></Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>11.50</p>
+    <p className={`${styles.Underline} mb-0`}>11.50</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Armorer</p>
-    </Col>
-    <Col md={1} >
-    <p className={`${styles.Underline}`}>{armorer_quantity || 0}</p>
-    </Col>
-    <Col md={1} >
-    <p className={`${styles.Underline}`}>{armorer_units_number || 0}</p>
-    </Col>
-    <Col md={1} >
-    <p className={`${styles.Underline}`}>{armorer_units_name || 0}</p>
-    </Col>
-    <Col md={1} >
-    <p className={`${styles.Underline}`}>{armorer_rate || 0}</p>
-    </Col>
-    <Col md={2} >
-    <p className={`${styles.Underline}`}>{armorer_total || 0}</p>
+    <p className={`${styles.BoldBlack} mb-0`}>Armorer</p>
     </Col>
     </Row>
-    {/* Other - Property */}
+    {/* Prep */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Prep</p>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+    py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{armor_qty_prep || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{armor_uno_prep || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{armor_una_prep}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{armor_rt_prep || 0}</p>
+    </div>
+    </Col>
+    <Col md={2} >
+    <div className={`${styles.Box2} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{armorprep_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    {/* Shoot */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Shoot</p>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{armorer_quantity || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{armorer_units_number || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{armorer_units_name}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{armorer_rate || 0}</p>
+    </div>
+    </Col>
+    <Col md={2} >
+    <div className={`${styles.Box2} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{armorer_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    {/* Wrap */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Wrap</p>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{armor_qty_wrap || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{armor_uno_wrap || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{armor_una_wrap}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{armor_rt_wrap || 0}</p>
+    </div>
+    </Col>
+    <Col md={2} >
+    <div className={`${styles.Box2} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{armorwrap_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline7}`}></p>
+    </Col>
+    <Col md={7} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <div className={`${styles.Box4} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{armorall_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    </div>
+    {/* hr */}
     <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* 6th/7th Days */}
+    <Row >
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>11.60</p>
     </Col>
-    <Col md={9}>
-    <p className={`${styles.Underline}`}>OTHER - PROPERTY</p>
+    <Col md={5}>
+    <p className={`${styles.BoldBlack}`}>6th/7th Days</p>
+    </Col>
+    <Col md={1}>
+    <div className={`${styles.Box5} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{days6th7th_unit_prop} </p>
+    </div>
+    </Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={2}>
-    <p className={`${styles.Underline}`}>{other_property || 0} </p>
+    <div className={`${styles.Box3} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{days6th7th_prop || 0} </p>
+    </div>
     </Col>
     </Row>
-    {/* Fringes Taxes */}
+    {/* hr */}
     <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Overtime */}
+    <Row >
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>11.70</p>
     </Col>
-    <Col md={9}>
-    <p className={`${styles.Underline}`}>Fringes and Taxes, Government/Unions</p>
+    <Col md={5}>
+    <p className={`${styles.Underline}`}>Overtime</p>
+    </Col>
+    <Col md={1}>
+    <div className={`${styles.Box5} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{overtime_unit_prop} </p>
+    </div>
+    </Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={2}>
+    <div className={`${styles.Box3} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{overtime_prop || 0} </p>
+    </div>
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Holidays */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>11.80</p>
+    </Col>
+    <Col md={5}>
+    <p className={`${styles.Underline}`}>Holidays</p>
+    </Col>
+    <Col md={1}>
+    <div className={`${styles.Box5} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{holidays_unit_prop} </p>
+    </div>
+    </Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={2}>
+    <div className={`${styles.Box3} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{holidays_prop || 0} </p>
+    </div>
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Box Rentals */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>11.90</p>
+    </Col>
+    <Col md={5}>
+    <p className={`${styles.Underline}`}>Box Rentals</p>
+    </Col>
+    <Col md={1}>
+    <div className={`${styles.Box5} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{box_rent_unit_prop} </p>
+    </div>
+    </Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={2}>
+    <div className={`${styles.Box3} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{box_rent_prop || 0} </p>
+    </div>
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Other */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>11.91</p>
+    </Col>
+    <Col md={7}>
+    <p className={`${styles.Underline}`}>Other</p>
+    </Col>
+    <Col md={2}>
+    <div className={`${styles.Box3} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{other_property || 0} </p>
+    </div>
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Fringes Taxes */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>11.92</p>
+    </Col>
+    <Col md={7}>
+    <p className={`${styles.Underline}`}>Fringes & Taxes</p>
+    </Col>
+    <Col md={2}>
+    <div className={`${styles.Box3} 
+      py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{fringes_taxes_property || 0} </p>
+    </div>
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Property Total */}
-    <Row className='mt-3' >
+    <Row className='mt-3 mb-1' >
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     <p></p>
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
-    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL PROPERTY LABOUR </p>
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL PROPERTY LABOUR</p>
     </Col>
-    <Col md={3} >
+    <Col md={1} >
     </Col>
     <Col md={2} >
+    <div className={`${styles.Box4} 
+      py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline} mb-0`}>{propertylabour_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     </div>
     {/* WRANGLING LABOUR ------------------------------------- */}
-    <div className='mt-5'>
+    <div className='mt-4'>
     <Row>
+    <Col md={1} ></Col>
     <Col xs={1}>
-    <p className='mb-2'>12.00</p>
+    <p className={`${styles.BoldBlack}`}>12.00</p>
     </Col>
-    <Col xs={10}>
-    <p className={ `${styles.BoldBlack} mb-2`}>WRANGLING LABOUR</p>
+    <Col xs={8}>
+    <p className={ `${styles.BoldBlack}`}>WRANGLING LABOUR</p>
     </Col>
     </Row>
-    {/* Titles */}
-    <Row className={ `${styles.Overview} mb-2 py-1`} >
-    <Col md={1} >
+    {/* TITLES */}
+    <Row className={ `mb-2 py-0`} >
+    <Col md={1} ></Col>
+    <Col className={ `${styles.Overview} py-1`} md={1} >
     <p className="mb-0">ACCT</p>
     </Col>
-    <Col md={5} >
+    <Col className={ `${styles.Overview} py-1`} md={3} >
     <p className="mb-0">Description</p>
     </Col>
-    <Col md={1} >
+    <Col className={`${styles.Overview} text-center py-1`} md={1} >
     <p className="mb-0">#</p>
     </Col>
-    <Col className="px-0 mx-0" md={1} >
+    <Col className={`${styles.Overview} text-center py-1`} md={1} >
     <p># Unit</p>
     </Col>
-    <Col md={1} >
+    <Col md={1} className={`${styles.Overview} text-center py-1`} >
     <p className="mb-0">Unit</p>
     </Col>
-    <Col md={1} >
+    <Col md={1} className={`${styles.Overview} text-center py-1`} >
     <p className="mb-0">Price</p>
     </Col>
-    <Col md={2} >
+    <Col md={2} className={`${styles.Overview} text-center py-1`} >
     <p className="mb-0">Total</p>
     </Col>
+    <Col md={1}></Col>
     </Row>
     {/* Head Wrangler */}
-    <Row  >
+    <div>
+    <Row >
+    <Col md={1} ></Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>12.10</p>
+    <p className={`${styles.Underline} mb-0`}>12.10</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Head Wrangler</p>
+    <p className={`${styles.BoldBlack} mb-0`}>Head Wrangler</p>
+    </Col>
+    </Row>
+    {/* Prep */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Prep</p>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} 
+    py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{he_wran_qty_prep || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{he_wran_uno_prep || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{he_wran_una_prep}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{he_wran_rt_prep || 0}</p>
+    </div>
+    </Col>
+    <Col md={2} >
+    <div className={`${styles.Box2} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{hewranprep_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    {/* Shoot */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Shoot</p>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{head_wrangler_quantity || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{head_wrangler_units_number || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{head_wrangler_units_name || 0}</p>
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{head_wrangler_units_name}</p>
+    </div>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{head_wrangler_rate || 0}</p>
+    </div>
     </Col>
     <Col md={2} >
+    <div className={`${styles.Box2} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{headwrangler_total || 0}</p>
+    </div>
     </Col>
     </Row>
-    {/* Other Wrangling Labour */}
-    <Row  >
+    {/* Wrap */}
+    <Row >
+    <Col md={1} ></Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>12.20</p>
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Wrap</p>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{he_wran_qty_wrap || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{he_wran_uno_wrap || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{he_wran_una_wrap}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{he_wran_rt_wrap || 0}</p>
+    </div>
+    </Col>
+    <Col md={2} >
+    <div className={`${styles.Box2} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{hewranwrap_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline7}`}></p>
+    </Col>
+    <Col md={7} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <div className={`${styles.Box4} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{hewranall_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    </div>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Wranglers */}
+    <div>
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline} mb-0`}>12.20</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Other Wrangling Labour</p>
-    </Col>
-    <Col md={1} >
-    <p className={`${styles.Underline}`}>{other_wrangling_labour_quantity || 0}</p>
-    </Col>
-    <Col md={1} >
-    <p className={`${styles.Underline}`}>{other_wrangling_labour_units_number || 0}</p>
-    </Col>
-    <Col md={1} >
-    <p className={`${styles.Underline}`}>{other_wrangling_labour_units_name || 0}</p>
-    </Col>
-    <Col md={1} >
-    <p className={`${styles.Underline}`}>{other_wrangling_labour_rate || 0}</p>
-    </Col>
-    <Col md={2} >
-    <p className={`${styles.Underline}`}>{otherwranglinglabour_total || 0}</p>
+    <p className={`${styles.BoldBlack} mb-0`}>Wranglers</p>
     </Col>
     </Row>
-    {/* Fringes Taxes */}
+    {/* Prep */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Prep</p>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+    py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{oth_wran_qty_prep || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{oth_wran_uno_prep || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{oth_wran_una_prep}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{oth_wran_rt_prep || 0}</p>
+    </div>
+    </Col>
+    <Col md={2} >
+    <div className={`${styles.Box2} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{othwranlabprep_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    {/* Shoot */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Shoot</p>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{other_wrangling_labour_quantity || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{other_wrangling_labour_units_number || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{other_wrangling_labour_units_name}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{other_wrangling_labour_rate || 0}</p>
+    </div>
+    </Col>
+    <Col md={2} >
+    <div className={`${styles.Box2} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{otherwranglinglabour_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    {/* Wrap */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Wrap</p>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{oth_wran_qty_wrap || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{oth_wran_uno_wrap || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{oth_wran_una_wrap}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{oth_wran_rt_wrap || 0}</p>
+    </div>
+    </Col>
+    <Col md={2} >
+    <div className={`${styles.Box2} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{othwranlabwrap_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline7}`}></p>
+    </Col>
+    <Col md={7} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <div className={`${styles.Box4} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{othwranlaball_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    </div>
+    {/* hr */}
     <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Other - Add'l Trainers/Handlers/Dailies */}
+    <Row >
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>12.30</p>
     </Col>
-    <Col md={9}>
-    <p className={`${styles.Underline}`}>Fringes and Taxes, Government/Unions</p>
+    <Col md={7}>
+    <p className={`${styles.Underline}`}>Other - Add'l Trainers/Handlers/Dailies</p>
     </Col>
     <Col md={2}>
+    <div className={`${styles.Box3} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{other_solo_wran || 0} </p>
+    </div>
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* 6th/7th Days */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>12.40</p>
+    </Col>
+    <Col md={5}>
+    <p className={`${styles.BoldBlack}`}>6th/7th Days</p>
+    </Col>
+    <Col md={1}>
+    <div className={`${styles.Box5} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{days6th7th_unit_wran} </p>
+    </div>
+    </Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={2}>
+    <div className={`${styles.Box3} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{days6th7th_wran || 0} </p>
+    </div>
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Overtime */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>12.50</p>
+    </Col>
+    <Col md={5}>
+    <p className={`${styles.Underline}`}>Overtime</p>
+    </Col>
+    <Col md={1}>
+    <div className={`${styles.Box5} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{overtime_unit_wran} </p>
+    </div>
+    </Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={2}>
+    <div className={`${styles.Box3} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{overtime_wran || 0} </p>
+    </div>
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Holidays */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>12.60</p>
+    </Col>
+    <Col md={5}>
+    <p className={`${styles.Underline}`}>Holidays</p>
+    </Col>
+    <Col md={1}>
+    <div className={`${styles.Box5} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{holidays_unit_wran} </p>
+    </div>
+    </Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={2}>
+    <div className={`${styles.Box3} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{holidays_wran || 0} </p>
+    </div>
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Box Rentals */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>12.70</p>
+    </Col>
+    <Col md={5}>
+    <p className={`${styles.Underline}`}>Box Rentals</p>
+    </Col>
+    <Col md={1}>
+    <div className={`${styles.Box5} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{box_rent_unit_wran} </p>
+    </div>
+    </Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={2}>
+    <div className={`${styles.Box3} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{box_rent_wran || 0} </p>
+    </div>
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Fringes Taxes */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>12.80</p>
+    </Col>
+    <Col md={7}>
+    <p className={`${styles.Underline}`}>Fringes & Taxes</p>
+    </Col>
+    <Col md={2}>
+    <div className={`${styles.Box3} 
+      py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{fringes_taxes_wrangling || 0} </p>
+    </div>
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Wrangling Total */}
-    <Row className='mt-3' >
+    <Row className='mt-3 mb-1' >
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     <p></p>
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
-    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL WRANGLING LABOUR </p>
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL WRANGLING LABOUR</p>
     </Col>
-    <Col md={3} >
+    <Col md={1} >
     </Col>
     <Col md={2} >
+    <div className={`${styles.Box4} 
+      py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline} mb-0`}>{wranglerlabour_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     </div>
     {/* FX LABOUR -------------------------------------------- */}
-    <div className='mt-5'>
+    <div className='mt-4'>
     <Row>
+    <Col md={1} ></Col>
     <Col xs={1}>
-    <p className='mb-2'>13.00</p>
+    <p className={`${styles.BoldBlack}`}>13.00</p>
     </Col>
-    <Col xs={10}>
-    <p className={ `${styles.BoldBlack} mb-2`}>SFX LABOUR</p>
+    <Col xs={8}>
+    <p className={ `${styles.BoldBlack}`}>SFX LABOUR</p>
     </Col>
     </Row>
-    {/* Titles */}
-    <Row className={ `${styles.Overview} mb-2 py-1`} >
-    <Col md={1} >
+    {/* TITLES */}
+    <Row className={ `mb-2 py-0`} >
+    <Col md={1} ></Col>
+    <Col className={ `${styles.Overview} py-1`} md={1} >
     <p className="mb-0">ACCT</p>
     </Col>
-    <Col md={5} >
+    <Col className={ `${styles.Overview} py-1`} md={3} >
     <p className="mb-0">Description</p>
     </Col>
-    <Col md={1} >
+    <Col className={`${styles.Overview} text-center py-1`} md={1} >
     <p className="mb-0">#</p>
     </Col>
-    <Col className="px-0 mx-0" md={1} >
+    <Col className={`${styles.Overview} text-center py-1`} md={1} >
     <p># Unit</p>
     </Col>
-    <Col md={1} >
+    <Col md={1} className={`${styles.Overview} text-center py-1`} >
     <p className="mb-0">Unit</p>
     </Col>
-    <Col md={1} >
+    <Col md={1} className={`${styles.Overview} text-center py-1`} >
     <p className="mb-0">Price</p>
     </Col>
-    <Col md={2} >
+    <Col md={2} className={`${styles.Overview} text-center py-1`} >
     <p className="mb-0">Total</p>
     </Col>
+    <Col md={1}></Col>
     </Row>
     {/* FX Supervisor */}
-    <Row  >
+    <div>
+    <Row >
+    <Col md={1} ></Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>13.10</p>
+    <p className={`${styles.Underline} mb-0`}>13.10</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>FX Supervisor</p>
+    <p className={`${styles.BoldBlack} mb-0`}>FX Supervisor</p>
+    </Col>
+    </Row>
+    {/* Prep */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Prep</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{fx_supervisor_quantity || 0}</p>
+    <div className={`${styles.Box} 
+    py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{fx_sup_qty_prep || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{fx_supervisor_units_number || 0}</p>
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{fx_sup_uno_prep || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{fx_supervisor_units_name || 0}</p>
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{fx_sup_una_prep}</p>
+    </div>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{fx_supervisor_rate || 0}</p>
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{fx_sup_rt_prep || 0}</p>
+    </div>
     </Col>
     <Col md={2} >
+    <div className={`${styles.Box2} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{fxsupprep_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    {/* Shoot */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Shoot</p>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{fx_supervisor_quantity || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{fx_supervisor_units_number || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{fx_supervisor_units_name}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{fx_supervisor_rate || 0}</p>
+    </div>
+    </Col>
+    <Col md={2} >
+    <div className={`${styles.Box2} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{fxsupervisor_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    {/* Wrap */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Wrap</p>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{fx_sup_qty_wrap || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{fx_sup_uno_wrap || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{fx_sup_una_wrap}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{fx_sup_rt_wrap || 0}</p>
+    </div>
+    </Col>
+    <Col md={2} >
+    <div className={`${styles.Box2} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{fxsupwrap_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline7}`}></p>
+    </Col>
+    <Col md={7} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <div className={`${styles.Box4} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{fxsupall_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    </div>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* FX Assistant */}
-    <Row  >
+    <div>
+    <Row >
+    <Col md={1} ></Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>13.20</p>
+    <p className={`${styles.Underline} mb-0`}>13.20</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>FX Assistant</p>
+    <p className={`${styles.BoldBlack} mb-0`}>FX Assistant</p>
+    </Col>
+    </Row>
+    {/* Prep */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Prep</p>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} 
+    py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{ass_fx_qty_prep || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{ass_fx_uno_prep || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{ass_fx_una_prep}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{ass_fx_rt_prep || 0}</p>
+    </div>
+    </Col>
+    <Col md={2} >
+    <div className={`${styles.Box2} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{assfxprep_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    {/* Shoot */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Shoot</p>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{assist_fx_quantity || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{assist_fx_units_number || 0}</p>
+    </div>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{assist_fx_units_name || 0}</p>
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{assist_fx_units_name}</p>
+    </div>
     </Col>
     <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{assist_fx_rate || 0}</p>
+    </div>
     </Col>
     <Col md={2} >
+    <div className={`${styles.Box2} py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{assistfx_total || 0}</p>
+    </div>
     </Col>
     </Row>
-    {/* Other FX Labour */}
-    <Row  >
+    {/* Wrap */}
+    <Row >
+    <Col md={1} ></Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>13.30</p>
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Wrap</p>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{ass_fx_qty_wrap || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{ass_fx_uno_wrap || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{ass_fx_una_wrap}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{ass_fx_rt_wrap || 0}</p>
+    </div>
+    </Col>
+    <Col md={2} >
+    <div className={`${styles.Box2} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{assfxwrap_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline7}`}></p>
+    </Col>
+    <Col md={7} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <div className={`${styles.Box4} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{assfxall_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    </div>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Add'l FX Labour */}
+    <div>
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline} mb-0`}>13.30</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Other FX Labour</p>
-    </Col>
-    <Col md={1} >
-    <p className={`${styles.Underline}`}>{other_fx_labour_quantity || 0}</p>
-    </Col>
-    <Col md={1} >
-    <p className={`${styles.Underline}`}>{other_fx_labour_units_number || 0}</p>
-    </Col>
-    <Col md={1} >
-    <p className={`${styles.Underline}`}>{other_fx_labour_units_name || 0}</p>
-    </Col>
-    <Col md={1} >
-    <p className={`${styles.Underline}`}>{other_fx_labour_rate || 0}</p>
-    </Col>
-    <Col md={2} >
-    <p className={`${styles.Underline}`}>{otherfxlabour_total || 0}</p>
+    <p className={`${styles.BoldBlack} mb-0`}>Add'l FX Labour</p>
     </Col>
     </Row>
-    {/* Fringes Taxes */}
+    {/* Prep */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Prep</p>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+    py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{ot_fx_l_qty_prep || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{ot_fx_l_uno_prep || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{ot_fx_l_una_prep}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{ot_fx_l_rt_prep || 0}</p>
+    </div>
+    </Col>
+    <Col md={2} >
+    <div className={`${styles.Box2} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{othfxlabprep_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    {/* Shoot */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Shoot</p>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{other_fx_labour_quantity || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{other_fx_labour_units_number || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{other_fx_labour_units_name}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{other_fx_labour_rate || 0}</p>
+    </div>
+    </Col>
+    <Col md={2} >
+    <div className={`${styles.Box2} py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{otherfxlabour_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    {/* Wrap */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline7}`}>Wrap</p>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{ot_fx_l_qty_wrap || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{ot_fx_l_uno_wrap || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{ot_fx_l_una_wrap}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{ot_fx_l_rt_wrap || 0}</p>
+    </div>
+    </Col>
+    <Col md={2} >
+    <div className={`${styles.Box2} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{othfxlabwrap_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    {/* Total */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline7}`}></p>
+    </Col>
+    <Col md={7} > 
+    <p className={`${styles.Underline}`}>Total</p>
+    </Col>
+    <Col md={2} >
+    <div className={`${styles.Box4} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{othfxlaball_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    </div>
+    {/* hr */}
     <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* 6th/7th Days */}
+    <Row >
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>13.40</p>
     </Col>
-    <Col md={9}>
-    <p className={`${styles.Underline}`}>Fringes and Taxes, Government/Unions</p>
+    <Col md={5}>
+    <p className={`${styles.BoldBlack}`}>6th/7th Days</p>
+    </Col>
+    <Col md={1}>
+    <div className={`${styles.Box5} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{days6th7th_unit_fx} </p>
+    </div>
+    </Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}></p>
     </Col>
     <Col md={2}>
+    <div className={`${styles.Box3} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{days6th7th_fx || 0} </p>
+    </div>
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Overtime */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>13.50</p>
+    </Col>
+    <Col md={5}>
+    <p className={`${styles.Underline}`}>Overtime</p>
+    </Col>
+    <Col md={1}>
+    <div className={`${styles.Box5} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{overtime_unit_fx} </p>
+    </div>
+    </Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={2}>
+    <div className={`${styles.Box3} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{overtime_fx || 0} </p>
+    </div>
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Holidays */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>13.60</p>
+    </Col>
+    <Col md={5}>
+    <p className={`${styles.Underline}`}>Holidays</p>
+    </Col>
+    <Col md={1}>
+    <div className={`${styles.Box5} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{holidays_unit_fx} </p>
+    </div>
+    </Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={2}>
+    <div className={`${styles.Box3} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{holidays_fx || 0} </p>
+    </div>
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Box Rentals */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>13.70</p>
+    </Col>
+    <Col md={5}>
+    <p className={`${styles.Underline}`}>Box Rentals</p>
+    </Col>
+    <Col md={1}>
+    <div className={`${styles.Box5} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{box_rent_unit_fx} </p>
+    </div>
+    </Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}></p>
+    </Col>
+    <Col md={2}>
+    <div className={`${styles.Box3} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{box_rent_fx || 0} </p>
+    </div>
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Other */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>13.80</p>
+    </Col>
+    <Col md={7}>
+    <p className={`${styles.Underline}`}>Other</p>
+    </Col>
+    <Col md={2}>
+    <div className={`${styles.Box3} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{other_solo_fx || 0} </p>
+    </div>
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
+    {/* Fringes Taxes */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>13.90</p>
+    </Col>
+    <Col md={7}>
+    <p className={`${styles.Underline}`}>Fringes & Taxes</p>
+    </Col>
+    <Col md={2}>
+    <div className={`${styles.Box3} 
+      py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline}`}>{fringes_taxes_fx || 0} </p>
+    </div>
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* FX Total */}
-    <Row className='mt-3' >
+    <Row className='mt-3 mb-1' >
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     <p></p>
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
-    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL FX LABOUR </p>
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL FX LABOUR</p>
     </Col>
-    <Col md={3} >
+    <Col md={1} >
     </Col>
     <Col md={2} >
+    <div className={`${styles.Box4} 
+      py-0 d-flex align-items-center justify-content-center`}>
     <p className={`${styles.Underline} mb-0`}>{fxlabour_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     </div>
     {/* WARDROBE LABOUR -------------------------------------- */}
-    <div className='mt-5'>
+    <div className='mt-4'>
     <Row>
     <Col xs={1}>
     <p className='mb-2'>14.00</p>
@@ -11761,7 +13486,7 @@ const Budget = (props) => {
     </Row>
     </div>
     {/* MAKEUP LABOUR ---------------------------------------- */}
-    <div className='mt-5'>
+    <div className='mt-4'>
     <Row>
     <Col xs={1}>
     <p className='mb-2'>15.00</p>

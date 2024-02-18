@@ -310,7 +310,6 @@ const SpecialEffects = (props) => {
     </Col>
     </Row>
     <div className="px-2">
-    {/* name new */}
     <Row className={`mt-3`}>
     <Col md={1} ></Col>
     <Col md={1} >
@@ -322,7 +321,7 @@ const SpecialEffects = (props) => {
     <Col md={1}>
     </Col>
     </Row>
-    {/* TITLES NEW */}
+    {/* TITLES */}
     <Row className={`mb-2 py-0`} >
     <Col md={1} ></Col>
     <Col className={ `${styles.Overview} py-1`} md={1} >
@@ -1334,10 +1333,11 @@ const SpecialEffects = (props) => {
     </Col>
     </Row>
     </div>
-    {/* hr test b*/}
+    {/* hr */}
     <Row>
-    <Col md={{offset: 1, span:10}} >
-    <hr className={`${styles.Break1} mt-1 mb-0`}/>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* 6th/7th Days */}
@@ -1390,7 +1390,7 @@ const SpecialEffects = (props) => {
     ))}
     </Col>
     </Row>
-    {/* hr test */}
+    {/* hr */}
     <Row>
     <Col md={1}></Col>
     <Col md={10} >
@@ -1447,9 +1447,10 @@ const SpecialEffects = (props) => {
     ))}
     </Col>
     </Row>
-    {/* hr test b*/}
+    {/* hr */}
     <Row>
-    <Col md={{offset: 1, span:10}} >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
@@ -1503,9 +1504,10 @@ const SpecialEffects = (props) => {
     ))}
     </Col>
     </Row>
-    {/* hr test b*/}
+    {/* hr */}
     <Row>
-    <Col md={{offset: 1, span:10}} >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
@@ -1559,9 +1561,10 @@ const SpecialEffects = (props) => {
     ))}
     </Col>
     </Row>
-    {/* hr test b*/}
+    {/* hr */}
     <Row>
-    <Col md={{offset: 1, span:10}} >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
@@ -1600,9 +1603,10 @@ const SpecialEffects = (props) => {
     ))}
     </Col>
     </Row>
-    {/* hr test b*/}
+    {/* hr */}
     <Row>
-    <Col md={{offset: 1, span:10}} >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
@@ -1613,7 +1617,7 @@ const SpecialEffects = (props) => {
     <p className={`${styles.Underline}`}>13.90</p>
     </Col>
     <Col md={4} >
-    <p className={`${styles.Underline}`}>Fringes and Taxes</p>
+    <p className={`${styles.Underline}`}>Fringes & Taxes</p>
     </Col>
     <Col md={1} >
     <p></p>
@@ -1642,9 +1646,10 @@ const SpecialEffects = (props) => {
     ))}
     </Col>
     </Row>
-    {/* hr test b*/}
+    {/* hr */}
     <Row>
-    <Col md={{offset: 1, span:10}} >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
@@ -1654,7 +1659,7 @@ const SpecialEffects = (props) => {
     <Col md={1} >
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
-    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL FX</p>
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL FX  LABOUR</p>
     </Col>
     <Col md={1} >
     <p></p>
