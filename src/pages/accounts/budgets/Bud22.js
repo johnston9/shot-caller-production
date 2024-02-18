@@ -1,3 +1,53 @@
+{/* SECTION TOTALS */}
+decsetprep_total, decsetwrap_total, decsetall_total,
+assdsetprep_total, assdsetwrap_total, assdsetall_total,
+leadmanprep_total, leadmanwrap_total, leadmanall_total,
+dressprep_total, dresswrap_total, dressall_total,
+swinggprep_total, swinggwrap_total, swinggall_total,
+dressbuyprep_total, dressbuywrap_total, dressbuyall_total,
+
+<div>
+{/* Other - Dressing */}
+<Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>10.70</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>OTHER - SET DRESSING</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{other_set_dressing || 0} </p>
+    </Col>
+    </Row>
+    {/* Fringes Taxes */}
+    <Row>
+    <Col md={1}>
+    <p className={`${styles.Underline}`}>10.80</p>
+    </Col>
+    <Col md={9}>
+    <p className={`${styles.Underline}`}>Fringes and Taxes, Government/Unions</p>
+    </Col>
+    <Col md={2}>
+    <p className={`${styles.Underline}`}>{fringes_taxes_dressing || 0} </p>
+    </Col>
+    </Row>
+    {/* Dressing Total */}
+    <Row className='mt-3' >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}></p>
+    <p></p>
+    </Col>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL SET DRESSING LABOUR </p>
+    </Col>
+    <Col md={3} >
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline} mb-0`}>{dressinglabour_total || 0}</p>
+    </Col>
+    </Row>
+</div>
+
 formData.append("pro_designer_qty_prep", pro_designer_qty_prep);
 formData.append("pro_designer_uno_prep", pro_designer_uno_prep);
 formData.append("pro_designer_una_prep", pro_designer_una_prep);

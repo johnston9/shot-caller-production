@@ -2860,7 +2860,7 @@ const SetDressingLabour = (props) => {
     <p className={`${styles.Underline}`}>10.93</p>
     </Col>
     <Col md={4} >
-    <p className={`${styles.Underline}`}>Fringes and Taxes</p>
+    <p className={`${styles.Underline}`}>Fringes & Taxes</p>
     </Col>
     <Col md={1} >
     <p></p>
