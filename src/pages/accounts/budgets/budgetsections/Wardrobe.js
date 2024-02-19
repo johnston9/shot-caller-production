@@ -4156,7 +4156,7 @@ const Wardrobe = (props) => {
     <p className={`${styles.Underline}`}>14.99</p>
     </Col>
     <Col md={4} >
-    <p className={`${styles.Underline}`}>Fringes and Taxes</p>
+    <p className={`${styles.Underline}`}>Fringes & Taxes</p>
     </Col>
     <Col md={1} >
     <p></p>

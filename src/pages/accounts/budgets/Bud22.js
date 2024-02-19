@@ -2,10 +2,13 @@
 cosdesprep_total, cosdeswrap_total, cosdesall_total,
 ascosdesprep_total, ascosdeswrap_total, ascosdesall_total,
 hewarprepTotal, hewarwrap_total, hewarall_total,
-warasprep_total, waraswrap_total, warasall_total,
+othwarprep_total, othwarwrap_total, othwarall_total,
 trucosprep_total, trucoswrap_total, trucosall_total,
 shopper_total, shopprep_total, shopall_total,
-othwarprep_total, othwarwrap_total, othwarall_total,
+warasprep_total, waraswrap_total, warasall_total,
+warcoor_total, warcoprep_total, warcowrap_total, warcoall_total,
+wartrain_total, wartraprep_total, wartrawrap_total, wartraall_total,
+warday_total,
 
 formData.append("pro_designer_qty_prep", pro_designer_qty_prep);
 formData.append("pro_designer_uno_prep", pro_designer_uno_prep);
