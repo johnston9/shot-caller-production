@@ -722,7 +722,7 @@ const Makeup = (props) => {
             <span className={`${styles.Close } py-2 mb-0 float-right `} 
     onClick={() => setShow(false) } >Close</span>
     <p className="pl-5 py-2">
-    MAKEUP LABOUR SECTION
+    HAIR & MAKEUP LABOUR SECTION
     </p>
     </Col>
     </Row>

@@ -1,14 +1,12 @@
 {/* SECTION TOTALS */}
-cosdesprep_total, cosdeswrap_total, cosdesall_total,
-ascosdesprep_total, ascosdeswrap_total, ascosdesall_total,
-hewarprepTotal, hewarwrap_total, hewarall_total,
-othwarprep_total, othwarwrap_total, othwarall_total,
-trucosprep_total, trucoswrap_total, trucosall_total,
-shopper_total, shopprep_total, shopall_total,
-warasprep_total, waraswrap_total, warasall_total,
-warcoor_total, warcoprep_total, warcowrap_total, warcoall_total,
-wartrain_total, wartraprep_total, wartrawrap_total, wartraall_total,
-warday_total,
+headmakprep_total, headmakwrap_total, headmakall_total,
+keymakprep_total, keymakwrap_total, keymakall_total,
+makartprep_total, makartwrap_total, makartall_total,
+keyhairprep_total, keyhairwrap_total, keyhairall_total,
+hairprep_total, hairwrap_total, hairall_total,
+othmakprep_total, othmakwrap_total, othmakall_total,
+sfxmakprep_total, sfxmakwrap_total, sfxmakall_total,
+maktrain_total, maktraprep_total, maktrawrap_total, maktraall_total,
 
 formData.append("pro_designer_qty_prep", pro_designer_qty_prep);
 formData.append("pro_designer_uno_prep", pro_designer_uno_prep);
