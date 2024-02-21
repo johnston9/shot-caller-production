@@ -2658,7 +2658,6 @@ function BudgetEdit() {
     mak_train_uno_wrap: 0,
     mak_train_una_wrap: "",
     mak_train_rt_wrap: 0,
-    // old _prep wrap hair train
     fringes_taxes_makeup: 0,
     makeup_dept_head_quantity: 0,
     makeup_dept_head_units_number: 0,

@@ -405,257 +405,308 @@ const handleChangeCast = (event) => {
     </div>
 
     {/* SECTION BLOCK */}
-    {/* MAKEUP LABOUR ---------------------------------------- */}
+    {/* CAMERA ----------------------------------------------- */}
     <div className='mt-4'>
     <Row>
+    <Col md={1} ></Col>
     <Col xs={1}>
-    <p className='mb-2'>15.00</p>
+    <p className={`${styles.BoldBlack}`}>16.00</p>
     </Col>
-    <Col xs={10}>
-    <p className={ `${styles.BoldBlack} mb-2`}>MAKEUP LABOUR</p>
+    <Col xs={8}>
+    <p className={ `${styles.BoldBlack}`}>CAMERA LABOUR</p>
     </Col>
     </Row>
-    {/* Titles */}
-    <Row className={ `${styles.Overview} mb-2 py-1`} >
-    <Col md={1} >
+    {/* TITLES */}
+    <Row className={ `mb-2 py-0`} >
+    <Col md={1} ></Col>
+    <Col className={ `${styles.Overview} py-1`} md={1} >
     <p className="mb-0">ACCT</p>
     </Col>
-    <Col md={5} >
+    <Col className={ `${styles.Overview} py-1`} md={3} >
     <p className="mb-0">Description</p>
     </Col>
-    <Col md={1} >
+    <Col className={`${styles.Overview} text-center py-1`} md={1} >
     <p className="mb-0">#</p>
     </Col>
-    <Col className="px-0 mx-0" md={1} >
+    <Col className={`${styles.Overview} text-center py-1`} md={1} >
     <p># Unit</p>
     </Col>
-    <Col md={1} >
+    <Col md={1} className={`${styles.Overview} text-center py-1`} >
     <p className="mb-0">Unit</p>
     </Col>
-    <Col md={1} >
+    <Col md={1} className={`${styles.Overview} text-center py-1`} >
     <p className="mb-0">Price</p>
     </Col>
-    <Col md={2} >
+    <Col md={2} className={`${styles.Overview} text-center py-1`} >
     <p className="mb-0">Total</p>
     </Col>
+    <Col md={1}></Col>
     </Row>
-    {/* Makeup Dept Head */}
+    {/* DOP */}
     <Row  >
     <Col md={1} >
-    <p className={`${styles.Underline}`}>15.10</p>
+    <p className={`${styles.Underline}`}>16.10</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Makeup Dept Head</p>
+    <p className={`${styles.Underline}`}>DOP {days6th7th_unit_ele} {days6th7th_ele} </p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{makeup_dept_head_quantity || 0}</p>
+    <p className={`${styles.Underline}`}>{dop_qty || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{makeup_dept_head_units_number || 0}</p>
+    <p className={`${styles.Underline}`}>{dop_uno || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{makeup_dept_head_units_name || 0}</p>
+    <p className={`${styles.Underline}`}>{dop_una || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{makeup_dept_head_rate || 0}</p>
+    <p className={`${styles.Underline}`}>{dop_rt || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{headmakeup_total || 0}</p>
+    <p className={`${styles.Underline}`}>{dop_total || 0}</p>
     </Col>
     </Row>
-    {/* Key Makeup */}
+    {/* Camera Operator */}
     <Row  >
     <Col md={1} >
-    <p className={`${styles.Underline}`}>15.20</p>
+    <p className={`${styles.Underline}`}>16.20</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Key Makeup</p>
+    <p className={`${styles.Underline}`}>Camera Operator</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{key_makeup_quantity || 0}</p>
+    <p className={`${styles.Underline}`}>{camera_op_qty || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{key_makeup_units_number || 0}</p>
+    <p className={`${styles.Underline}`}>{camera_op_uno || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{key_makeup_units_name || 0}</p>
+    <p className={`${styles.Underline}`}>{camera_op_una || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{key_makeup_rate || 0}</p>
+    <p className={`${styles.Underline}`}>{camera_op_rt || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{keymakeup_total || 0}</p>
+    <p className={`${styles.Underline}`}>{cameraop_total || 0}</p>
     </Col>
     </Row>
-    {/* Makeup Artist */}
+    {/* 1st Assistant Camera */}
     <Row  >
     <Col md={1} >
-    <p className={`${styles.Underline}`}>15.30</p>
+    <p className={`${styles.Underline}`}>16.30</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Makeup Artist</p>
+    <p className={`${styles.Underline}`}>1st Assistant Camera</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{makeup_artist_quantity || 0}</p>
+    <p className={`${styles.Underline}`}>{cam_ac1_qty || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{makeup_artist_units_number || 0}</p>
+    <p className={`${styles.Underline}`}>{cam_ac1_uno || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{makeup_artist_units_name || 0}</p>
+    <p className={`${styles.Underline}`}>{cam_ac1_una || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{makeup_artist_rate || 0}</p>
+    <p className={`${styles.Underline}`}>{cam_ac1_rt || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{makeupartist_total || 0}</p>
+    <p className={`${styles.Underline}`}>{camac1_total || 0}</p>
     </Col>
     </Row>
-    {/* Key Hairstylist */}
+    {/* 2nd Assistant Camera */}
     <Row  >
     <Col md={1} >
-    <p className={`${styles.Underline}`}>15.40</p>
+    <p className={`${styles.Underline}`}>16.40</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Key Hairstylist</p>
+    <p className={`${styles.Underline}`}>2nd Assistant Camera</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{key_hairstylist_quantity || 0}</p>
+    <p className={`${styles.Underline}`}>{cam_ac2_qty || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{key_hairstylist_units_number || 0}</p>
+    <p className={`${styles.Underline}`}>{cam_ac2_uno || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{key_hairstylist_units_name || 0}</p>
+    <p className={`${styles.Underline}`}>{cam_ac2_una || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{key_hairstylist_rate || 0}</p>
+    <p className={`${styles.Underline}`}>{cam_ac2_rt || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{keyhairstylist_total || 0}</p>
+    <p className={`${styles.Underline}`}>{camac2_total || 0}</p>
     </Col>
     </Row>
-    {/* Hairdresser */}
+    {/* DIT */}
     <Row  >
     <Col md={1} >
-    <p className={`${styles.Underline}`}>15.50</p>
+    <p className={`${styles.Underline}`}>16.50</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Hairdresser</p>
+    <p className={`${styles.Underline}`}>DIT</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{hairdresser_quantity || 0}</p>
+    <p className={`${styles.Underline}`}>{dit_qty || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{hairdresser_units_number || 0}</p>
+    <p className={`${styles.Underline}`}>{dit_uno || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{hairdresser_units_name || 0}</p>
+    <p className={`${styles.Underline}`}>{dit_una || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{hairdresser_rate || 0}</p>
+    <p className={`${styles.Underline}`}>{dit_rt || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{hairdresser_total || 0}</p>
+    <p className={`${styles.Underline}`}>{dit_total || 0}</p>
     </Col>
     </Row>
-    {/* Other Makeup Labour */}
+    {/* Steadicam */}
     <Row  >
     <Col md={1} >
-    <p className={`${styles.Underline}`}>15.70</p>
+    <p className={`${styles.Underline}`}>16.60</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Other Makeup Labour</p>
+    <p className={`${styles.Underline}`}>Steadicam</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{other_makeup_labour_quantity || 0}</p>
+    <p className={`${styles.Underline}`}>{steadicam_qty || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{other_makeup_labour_units_number || 0}</p>
+    <p className={`${styles.Underline}`}>{steadicam_uno || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{other_makeup_labour_units_name || 0}</p>
+    <p className={`${styles.Underline}`}>{steadicam_una || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{other_makeup_labour_rate || 0}</p>
+    <p className={`${styles.Underline}`}>{steadicam_rt || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{othermakeuplabour_total || 0}</p>
+    <p className={`${styles.Underline}`}>{steadicam_total || 0}</p>
     </Col>
     </Row>
-    {/* SFX Makeup */}
+    {/* Camera PA */}
     <Row  >
     <Col md={1} >
-    <p className={`${styles.Underline}`}>15.80</p>
+    <p className={`${styles.Underline}`}>16.70</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>SFX Makeup</p>
+    <p className={`${styles.Underline}`}>Camera PA</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{sfx_makeup_quantity || 0}</p>
+    <p className={`${styles.Underline}`}>{cam_pa_qty || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{sfx_makeup_units_number || 0}</p>
+    <p className={`${styles.Underline}`}>{cam_pa_uno || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{sfx_makeup_units_name || 0}</p>
+    <p className={`${styles.Underline}`}>{cam_pa_una || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{sfx_makeup_rate || 0}</p>
+    <p className={`${styles.Underline}`}>{cam_pa_rt || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{sfxmakeup_total || 0}</p>
+    <p className={`${styles.Underline}`}>{campa_total || 0}</p>
     </Col>
     </Row>
-    {/* Hair Makeup Dailies */}
+    {/* Drone Pilot */}
     <Row  >
     <Col md={1} >
-    <p className={`${styles.Underline}`}>15.60</p>
+    <p className={`${styles.Underline}`}>16.80</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Hair Makeup Dailies</p>
+    <p className={`${styles.Underline}`}>Drone Pilot</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{hair_makeup_dailies_quantity || 0}</p>
+    <p className={`${styles.Underline}`}>{drone_pilot_qty || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{hair_makeup_dailies_units_number || 0}</p>
+    <p className={`${styles.Underline}`}>{drone_pilot_uno || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{hair_makeup_dailies_units_name || 0}</p>
+    <p className={`${styles.Underline}`}>{drone_pilot_una || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{hair_makeup_dailies_rate || 0}</p>
+    <p className={`${styles.Underline}`}>{drone_pilot_rt || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{hairmakeupdailies_total || 0}</p>
+    <p className={`${styles.Underline}`}>{dronepilot_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Stills Photographer */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>16.90</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Stills Photographer</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{stills_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{stills_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{stills_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{stills_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{stills_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Other */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>16.91</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Other - Camera</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{other_cam_qty || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{other_cam_uno || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{other_cam_una || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{other_cam_rt || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{othercam_total || 0}</p>
     </Col>
     </Row>
     {/* Fringes Taxes */}
     <Row>
     <Col md={1}>
-    <p className={`${styles.Underline}`}>15.90</p>
+    <p className={`${styles.Underline}`}>16.92</p>
     </Col>
     <Col md={9}>
     <p className={`${styles.Underline}`}>Fringes and Taxes, Government/Unions</p>
     </Col>
     <Col md={2}>
-    <p className={`${styles.Underline}`}>{fringes_taxes_makeup || 0} </p>
+    <p className={`${styles.Underline}`}>{fringes_taxes_camera || 0} </p>
     </Col>
     </Row>
-    {/* Makeup Total */}
+    {/* Camera Total */}
     <Row className='mt-3' >
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     <p></p>
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
-    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL MAKEUP LABOUR </p>
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL CAMERA LABOUR </p>
     </Col>
     <Col md={3} >
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline} mb-0`}>{makeuplabour_total || 0}</p>
+    <p className={`${styles.Underline} mb-0`}>{cameralabour_total || 0}</p>
     </Col>
     </Row>
     </div>
