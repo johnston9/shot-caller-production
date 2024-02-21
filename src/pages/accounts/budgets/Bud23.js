@@ -559,30 +559,6 @@ const handleChangeCast = (event) => {
     <p className={`${styles.Underline}`}>{hairdresser_total || 0}</p>
     </Col>
     </Row>
-    {/* Hair Makeup Dailies */}
-    <Row  >
-    <Col md={1} >
-    <p className={`${styles.Underline}`}>15.60</p>
-    </Col>
-    <Col md={5} >
-    <p className={`${styles.Underline}`}>Hair Makeup Dailies</p>
-    </Col>
-    <Col md={1} >
-    <p className={`${styles.Underline}`}>{hair_makeup_dailies_quantity || 0}</p>
-    </Col>
-    <Col md={1} >
-    <p className={`${styles.Underline}`}>{hair_makeup_dailies_units_number || 0}</p>
-    </Col>
-    <Col md={1} >
-    <p className={`${styles.Underline}`}>{hair_makeup_dailies_units_name || 0}</p>
-    </Col>
-    <Col md={1} >
-    <p className={`${styles.Underline}`}>{hair_makeup_dailies_rate || 0}</p>
-    </Col>
-    <Col md={2} >
-    <p className={`${styles.Underline}`}>{hairmakeupdailies_total || 0}</p>
-    </Col>
-    </Row>
     {/* Other Makeup Labour */}
     <Row  >
     <Col md={1} >
@@ -629,6 +605,30 @@ const handleChangeCast = (event) => {
     </Col>
     <Col md={2} >
     <p className={`${styles.Underline}`}>{sfxmakeup_total || 0}</p>
+    </Col>
+    </Row>
+    {/* Hair Makeup Dailies */}
+    <Row  >
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>15.60</p>
+    </Col>
+    <Col md={5} >
+    <p className={`${styles.Underline}`}>Hair Makeup Dailies</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{hair_makeup_dailies_quantity || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{hair_makeup_dailies_units_number || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{hair_makeup_dailies_units_name || 0}</p>
+    </Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>{hair_makeup_dailies_rate || 0}</p>
+    </Col>
+    <Col md={2} >
+    <p className={`${styles.Underline}`}>{hairmakeupdailies_total || 0}</p>
     </Col>
     </Row>
     {/* Fringes Taxes */}
