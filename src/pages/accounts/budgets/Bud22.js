@@ -1,13 +1,10 @@
 {/* SECTION TOTALS */}
-dopprep_total, dopwrap_total, dopall_total,
-camopprep_total, camopwrap_total, camopall_total,
-camac1prep_total, camac1wrap_total, camac1all_total,
-camac2prep_total, camac2wrap_total, camac2all_total,
-ditprep_total, ditwrap_total, ditall_total,
-stecamprep_total, stecamwrap_total, stecamall_total,
-campaprep_total, campawrap_total, campaall_total,
-dronpiprep_total, dronpiwrap_total, dronpiall_total,
-othcamprep_total, othcamwrap_total, othcamall_total,
+gafprep_total, gafwrap_total, gafall_total, 
+bboyprep_total, bboywrap_total, bboyall_total,
+elecprep_total, elecwrapTotal, elecall_total,
+daelecprep_total, daelecwrap_total, daelecall_total,
+genopprep_total, genopwrap_total, genopall_total,
+otelecprep_total, otelecwrap_total, otelecall_total,
 
 formData.append("pro_designer_qty_prep", pro_designer_qty_prep);
 formData.append("pro_designer_uno_prep", pro_designer_uno_prep);

@@ -3482,7 +3482,7 @@ const Camera = (props) => {
     <hr className={`${styles.Break1} mt-1 mb-0`}/>
     </Col>
     </Row>
-    {/* Other */}
+    {/* Additional Camera Labour */}
     <div className="mt-1"> 
     <Row >
     <Col md={1} ></Col>

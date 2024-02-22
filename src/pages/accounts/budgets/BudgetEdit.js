@@ -2920,7 +2920,6 @@ function BudgetEdit() {
     ot_cam_uno_wrap: 0,
     ot_cam_una_wrap: "",
     ot_cam_rt_wrap: 0,
-    // old _prep wrap
     fringes_taxes_camera: 0,
     dop_qty: 0,
     dop_uno: 0,
