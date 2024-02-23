@@ -199,6 +199,54 @@ const handleChangeCast = (event) => {
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
+
+    {/* Electric Dailies */}
+    <Row >
+    <Col md={1} ></Col>
+    <Col md={1} >
+    <p className={`${styles.Underline}`}>15.90</p>
+    </Col>
+    <Col md={3} >
+    <p className={`${styles.Underline}`}>Hair/Makeup Dailies</p>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box5} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{hair_makeup_dailies_quantity || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box5} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{hair_makeup_dailies_units_number || 0}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box5} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{hair_makeup_dailies_units_name}</p>
+    </div>
+    </Col>
+    <Col md={1} >
+    <div className={`${styles.Box5} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{hair_makeup_dailies_rate || 0}</p>
+    </div>
+    </Col>
+    <Col md={2} >
+    <div className={`${styles.Box3} 
+      py-0 d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.Underline}`}>{hairmakeupdailies_total || 0}</p>
+    </div>
+    </Col>
+    </Row>
+    {/* hr */}
+    <Row>
+    <Col md={1}></Col>
+    <Col md={10} >
+    <hr className={`${styles.Break1} mt-0 mb-0`}/>
+    </Col>
+    </Row>
     
     {/* 6th7 days */}
     <div>
@@ -405,212 +453,161 @@ const handleChangeCast = (event) => {
     </div>
 
     {/* SECTION BLOCK */}
-    {/* ELECTRICAL ------------------------------------------- */}
+    {/* SOUND ------------------------------------------------ */}
     <div className='mt-4'>
     <Row>
-    <Col md={1} ></Col>
     <Col xs={1}>
-    <p className={`${styles.BoldBlack}`}>17.00</p>
+    <p className='mb-2'>19.00</p>
     </Col>
-    <Col xs={8}>
-    <p className={ `${styles.BoldBlack}`}>ELECTRICAL LABOUR</p>
+    <Col xs={10}>
+    <p className={ `${styles.BoldBlack} mb-2`}>PRODUCTION SOUND LABOUR</p>
     </Col>
     </Row>
-    {/* TITLES */}
-    <Row className={ `mb-2 py-0`} >
-    <Col md={1} ></Col>
-    <Col className={ `${styles.Overview} py-1`} md={1} >
+    {/* Titles */}
+    <Row className={ `${styles.Overview} mb-2 py-1`} >
+    <Col md={1} >
     <p className="mb-0">ACCT</p>
     </Col>
-    <Col className={ `${styles.Overview} py-1`} md={3} >
+    <Col md={5} >
     <p className="mb-0">Description</p>
     </Col>
-    <Col className={`${styles.Overview} text-center py-1`} md={1} >
+    <Col md={1} >
     <p className="mb-0">#</p>
     </Col>
-    <Col className={`${styles.Overview} text-center py-1`} md={1} >
+    <Col className="px-0 mx-0" md={1} >
     <p># Unit</p>
     </Col>
-    <Col md={1} className={`${styles.Overview} text-center py-1`} >
+    <Col md={1} >
     <p className="mb-0">Unit</p>
     </Col>
-    <Col md={1} className={`${styles.Overview} text-center py-1`} >
+    <Col md={1} >
     <p className="mb-0">Price</p>
     </Col>
-    <Col md={2} className={`${styles.Overview} text-center py-1`} >
+    <Col md={2} >
     <p className="mb-0">Total</p>
     </Col>
-    <Col md={1}></Col>
     </Row>
-    {/* Gaffer */}
-    <Row  >
+    {/* Sound Mixer */}
+    <Row >
     <Col md={1} >
-    <p className={`${styles.Underline}`}>17.10</p>
+    <p className={`${styles.Underline}`}>19.10</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Gaffer</p>
+    <p className={`${styles.Underline}`}>Sound Mixer</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{gaffer_qty || 0}</p>
+    <p className={`${styles.Underline}`}>{sound_mixer_qty || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{gaffer_uno || 0}</p>
+    <p className={`${styles.Underline}`}>{sound_mixer_uno || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{gaffer_una || 0}</p>
+    <p className={`${styles.Underline}`}>{sound_mixer_una || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{gaffer_rt || 0}</p>
+    <p className={`${styles.Underline}`}>{sound_mixer_rt || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{gaffer_total || 0}</p>
+    <p className={`${styles.Underline}`}>{soundmixer_total || 0}</p>
     </Col>
     </Row>
-    {/* Best Boy */}
-    <Row  >
+    {/* Boom Operator */}
+    <Row >
     <Col md={1} >
-    <p className={`${styles.Underline}`}>17.20</p>
+    <p className={`${styles.Underline}`}>19.20</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Best Boy</p>
+    <p className={`${styles.Underline}`}>Boom Operator</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{best_boy_qty || 0}</p>
+    <p className={`${styles.Underline}`}>{boom_operator_qty || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{best_boy_uno || 0}</p>
+    <p className={`${styles.Underline}`}>{boom_operator_uno || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{best_boy_una || 0}</p>
+    <p className={`${styles.Underline}`}>{boom_operator_una || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{best_boy_rt || 0}</p>
+    <p className={`${styles.Underline}`}>{boom_operator_rt || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{bestboy_total || 0}</p>
+    <p className={`${styles.Underline}`}>{boomoperator_total || 0}</p>
     </Col>
     </Row>
-    {/* Electricians */}
-    <Row  >
+    {/* Cable Wrangler */}
+    <Row >
     <Col md={1} >
-    <p className={`${styles.Underline}`}>17.30</p>
+    <p className={`${styles.Underline}`}>19.30</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Electricians</p>
+    <p className={`${styles.Underline}`}>Cable Wrangler</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{electrician_qty || 0}</p>
+    <p className={`${styles.Underline}`}>{cable_wrangler_qty || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{electrician_uno || 0}</p>
+    <p className={`${styles.Underline}`}>{cable_wrangler_uno || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{electrician_una || 0}</p>
+    <p className={`${styles.Underline}`}>{cable_wrangler_una || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{electrician_rt || 0}</p>
+    <p className={`${styles.Underline}`}>{cable_wrangler_rt || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{electrician_total || 0}</p>
+    <p className={`${styles.Underline}`}>{cablewrangler_total || 0}</p>
     </Col>
     </Row>
-    {/* Dailies Electric */}
-    <Row  >
+    {/* Other Sound Labour */}
+    <Row >
     <Col md={1} >
-    <p className={`${styles.Underline}`}>17.40</p>
+    <p className={`${styles.Underline}`}>19.40</p>
     </Col>
     <Col md={5} >
-    <p className={`${styles.Underline}`}>Dailies Electric</p>
+    <p className={`${styles.Underline}`}>Other Sound Labour</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{dailies_elec_qty || 0}</p>
+    <p className={`${styles.Underline}`}>{other_sound_labour_qty || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{dailies_elec_uno || 0}</p>
+    <p className={`${styles.Underline}`}>{other_sound_labour_uno || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{dailies_elec_una || 0}</p>
+    <p className={`${styles.Underline}`}>{other_sound_labour_una || 0}</p>
     </Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>{dailies_elec_rt || 0}</p>
+    <p className={`${styles.Underline}`}>{other_sound_labour_rt || 0}</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline}`}>{dailieselec_total || 0}</p>
-    </Col>
-    </Row>
-    {/* Generator Operator */}
-    <Row  >
-    <Col md={1} >
-    <p className={`${styles.Underline}`}>17.50</p>
-    </Col>
-    <Col md={5} >
-    <p className={`${styles.Underline}`}>Generator Operator</p>
-    </Col>
-    <Col md={1} >
-    <p className={`${styles.Underline}`}>{generator_op_qty || 0}</p>
-    </Col>
-    <Col md={1} >
-    <p className={`${styles.Underline}`}>{generator_op_uno || 0}</p>
-    </Col>
-    <Col md={1} >
-    <p className={`${styles.Underline}`}>{generator_op_una || 0}</p>
-    </Col>
-    <Col md={1} >
-    <p className={`${styles.Underline}`}>{generator_op_rt || 0}</p>
-    </Col>
-    <Col md={2} >
-    <p className={`${styles.Underline}`}>{generatorop_total || 0}</p>
-    </Col>
-    </Row>
-    {/* Other Electrical */}
-    <Row  >
-    <Col md={1} >
-    <p className={`${styles.Underline}`}>17.60</p>
-    </Col>
-    <Col md={5} >
-    <p className={`${styles.Underline}`}>Other Electrical</p>
-    </Col>
-    <Col md={1} >
-    <p className={`${styles.Underline}`}>{other_elec_qty || 0}</p>
-    </Col>
-    <Col md={1} >
-    <p className={`${styles.Underline}`}>{other_elec_uno || 0}</p>
-    </Col>
-    <Col md={1} >
-    <p className={`${styles.Underline}`}>{other_elec_una || 0}</p>
-    </Col>
-    <Col md={1} >
-    <p className={`${styles.Underline}`}>{other_elec_rt || 0}</p>
-    </Col>
-    <Col md={2} >
-    <p className={`${styles.Underline}`}>{otherelectric_total || 0}</p>
+    <p className={`${styles.Underline}`}>{othersoundlabour_total || 0}</p>
     </Col>
     </Row>
     {/* Fringes Taxes */}
     <Row>
     <Col md={1}>
-    <p className={`${styles.Underline}`}>17.70</p>
+    <p className={`${styles.Underline}`}>19.50</p>
     </Col>
     <Col md={9}>
     <p className={`${styles.Underline}`}>Fringes and Taxes, Government/Unions</p>
     </Col>
     <Col md={2}>
-    <p className={`${styles.Underline}`}>{fringes_taxes_electric || 0} </p>
+    <p className={`${styles.Underline}`}>{fringes_taxes_sound || 0} </p>
     </Col>
     </Row>
-    {/* Electric Total */}
+    {/* Sound Total */}
     <Row className='mt-3' >
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     <p></p>
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
-    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL ELECTRICAL LABOUR </p>
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL SOUND LABOUR </p>
     </Col>
     <Col md={3} >
     </Col>
     <Col md={2} >
-    <p className={`${styles.Underline} mb-0`}>{electriclabour_total || 0}</p>
+    <p className={`${styles.Underline} mb-0`}>{soundlabour_total || 0}</p>
     </Col>
     </Row>
     </div>

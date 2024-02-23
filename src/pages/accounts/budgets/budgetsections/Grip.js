@@ -1589,7 +1589,7 @@ const Grip = (props) => {
     <hr className={`${styles.Break1} mt-1 mb-0`}/>
     </Col>
     </Row>
-    {/* Dolly / Crane Grips */}
+    {/* Dolly/Crane Grips */}
     <div className="mt-1"> 
     <Row >
     <Col md={1} ></Col>
@@ -2592,7 +2592,7 @@ const Grip = (props) => {
     <p className={`${styles.Underline}`}>18.70</p>
     </Col>
     <Col md={3} >
-    <p className={`${styles.Underline}`}>Dailies</p>
+    <p className={`${styles.Underline}`}>Grip Dailies</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
     <Form.Group controlId="dailies_grip_qty" 

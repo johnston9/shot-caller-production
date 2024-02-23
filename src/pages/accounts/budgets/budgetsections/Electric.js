@@ -2241,7 +2241,7 @@ const Electric = (props) => {
     <p className={`${styles.Underline}`}>17.60</p>
     </Col>
     <Col md={9} >
-    <p className={`${styles.BoldBlack}`}>Dailies Electrical</p>
+    <p className={`${styles.BoldBlack}`}>Electrical Dailies</p>
     </Col>
     </Row>
     {/* Prep */} 

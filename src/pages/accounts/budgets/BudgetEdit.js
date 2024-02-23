@@ -3158,7 +3158,6 @@ function BudgetEdit() {
     d_elec_uno_wrap: 0,
     d_elec_una_wrap: "",
     d_elec_rt_wrap: 0,
-    // old _prep wrap
     fringes_taxes_electric: 0,
     gaffer_qty: 0,
     gaffer_uno: 0,
@@ -3337,7 +3336,6 @@ function BudgetEdit() {
     oth_grip_uno_wrap: 0,
     oth_grip_una_wrap: "",
     oth_grip_rt_wrap: 0,
-    // old _prep wrap
     fringes_taxes_grip: 0,
     key_grip_qty: 0,
     key_grip_uno: 0,

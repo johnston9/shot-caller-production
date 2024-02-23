@@ -1,10 +1,10 @@
 {/* SECTION TOTALS */}
-gafprep_total, gafwrap_total, gafall_total, 
-bboyprep_total, bboywrap_total, bboyall_total,
-elecprep_total, elecwrapTotal, elecall_total,
-daelecprep_total, daelecwrap_total, daelecall_total,
-genopprep_total, genopwrap_total, genopall_total,
-otelecprep_total, otelecwrap_total, otelecall_total,
+kgripprep_total, kgripwrap_total, kgripall_total,
+bbgripprep_total, bbgripwrap_total, bbgripall_total,
+gripsprep_total, gripswrap_total, gripsall_total,
+dolgripprep_total, dolgripwrap_total, dolgripall_total,
+swigripsprep_total, swigripswrap_total, swigripsall_total,
+othgripprep_total, othgripwrap_total, othgripall_total,
 
 formData.append("pro_designer_qty_prep", pro_designer_qty_prep);
 formData.append("pro_designer_uno_prep", pro_designer_uno_prep);
