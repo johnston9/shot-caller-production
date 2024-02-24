@@ -3505,7 +3505,6 @@ function BudgetEdit() {
     ot_sound_uno_wrap: 0,
     ot_sound_una_wrap: "",
     ot_sound_rt_wrap: 0,
-    // old _prep wrap
     fringes_taxes_sound: 0,
     sound_mixer_qty: 0,
     sound_mixer_uno: 0,
@@ -3536,7 +3535,6 @@ function BudgetEdit() {
     cab_wran_qty_wrap, cab_wran_uno_wrap, cab_wran_una_wrap, cab_wran_rt_wrap,
     ot_sound_qty_prep, ot_sound_uno_prep, ot_sound_una_prep, ot_sound_rt_prep,
     ot_sound_qty_wrap, ot_sound_uno_wrap, ot_sound_una_wrap, ot_sound_rt_wrap,
-    // old
     sound_mixer_qty, sound_mixer_uno,
     sound_mixer_una, sound_mixer_rt,
     boom_operator_qty, boom_operator_uno,
@@ -8160,6 +8158,7 @@ function BudgetEdit() {
   const handleSubmit2 = async (event) => {
   event.preventDefault();
   const formData = new FormData();
+  formData.append("project", id );
   // wrangling 
   formData.append("fringes_taxes_wrangling", fringes_taxes_wrangling);
   formData.append("head_wrangler_quantity", head_wrangler_quantity);
@@ -8173,7 +8172,6 @@ function BudgetEdit() {
   formData.append("headwrangler_total", headwranglerTotal);
   formData.append("otherwranglinglabour_total", otherwranglinglabourTotal);
   formData.append("wranglerlabour_total", wranglerlabourTotal);
-  //new wrang
   formData.append("days6th7th_unit_wran", days6th7th_unit_wran);
   formData.append("days6th7th_wran", days6th7th_wran);
   formData.append("overtime_unit_wran", overtime_unit_wran);
@@ -8223,7 +8221,6 @@ function BudgetEdit() {
   formData.append("assistfx_total", assistfxTotal);
   formData.append("otherfxlabour_total", otherfxlabourTotal);
   formData.append("fxlabour_total", fxlabourTotal);
-  // new fx
   formData.append("days6th7th_unit_fx", days6th7th_unit_fx);
   formData.append("days6th7th_fx", days6th7th_fx);
   formData.append("overtime_unit_fx", overtime_unit_fx);
@@ -8299,7 +8296,6 @@ function BudgetEdit() {
   formData.append("truckcostumer_total", truckcostumerTotal); 
   formData.append("otherwardrobe_total", otherwardrobeTotal); 
   formData.append("wardrobelabour_total", wardrobelabourTotal);
-  // new wardrobe
   formData.append("days6th7th_unit_war", days6th7th_unit_war);
   formData.append("days6th7th_war", days6th7th_war);
   formData.append("overtime_unit_war", overtime_unit_war);
@@ -8623,7 +8619,6 @@ function BudgetEdit() {
   formData.append("dronepilot_total", dronepilotTotal);
   formData.append("othercam_total", othercamTotal);
   formData.append("cameralabour_total", cameralabourTotal);
-  // new cam
   formData.append("days6th7th_unit_cam", days6th7th_unit_cam);
   formData.append("days6th7th_cam", days6th7th_cam);
   formData.append("overtime_unit_cam", overtime_unit_cam);
@@ -8765,7 +8760,6 @@ function BudgetEdit() {
   formData.append("generatorop_total", generatoropTotal);
   formData.append("otherelectric_total", otherelectricTotal);
   formData.append("electriclabour_total", electriclabourTotal);
-  // new elec
   formData.append("days6th7th_unit_ele", days6th7th_unit_ele);
   formData.append("days6th7th_ele", days6th7th_ele);
   formData.append("overtime_unit_ele", overtime_unit_ele);
@@ -8879,7 +8873,6 @@ function BudgetEdit() {
   formData.append("swinggrips_total", swinggripsTotal);
   formData.append("othergriplabour_total", othergriplabourTotal);
   formData.append("griplabour_total", griplabourTotal);
-  // new grip  for drf
   formData.append("days6th7th_unit_grip", days6th7th_unit_grip);
   formData.append("days6th7th_grip", days6th7th_grip);
   formData.append("overtime_unit_grip", overtime_unit_grip);
@@ -8978,7 +8971,6 @@ function BudgetEdit() {
   formData.append("cablewrangler_total", cablewranglerTotal);
   formData.append("othersoundlabour_total", othersoundlabourTotal);
   formData.append("soundlabour_total", soundlabourTotal);
-  // new sound for drf 
   formData.append("days6th7th_unit_sound", days6th7th_unit_sound);
   formData.append("days6th7th_sound", days6th7th_sound);
   formData.append("overtime_unit_sound", overtime_unit_sound);
@@ -9077,7 +9069,6 @@ function BudgetEdit() {
   formData.append("headdriver_total", headdriverTotal);
   formData.append("drivers_total", driversTotal);
   formData.append("transportlabour_total", transportlabourTotal);
-  // new transport for drf
   formData.append("days6th7th_unit_tran", days6th7th_unit_tran);
   formData.append("days6th7th_tran", days6th7th_tran);
   formData.append("overtime_unit_tran", overtime_unit_tran);
@@ -9190,7 +9181,6 @@ function BudgetEdit() {
   formData.append("stagehands_total", stagehandsTotal);
   formData.append("othertv_total", othertvTotal);
   formData.append("tvspecificlabour_total", tvspecificlabourTotal);
-  // new TV for drf
   formData.append("days6th7th_unit_tv", days6th7th_unit_tv);
   formData.append("days6th7th_tv", days6th7th_tv);
   formData.append("overtime_unit_tv", overtime_unit_tv);
@@ -9715,18 +9705,6 @@ function BudgetEdit() {
   // Contingency/Bond
   formData.append("contingency", contingency);
   formData.append("completion_bond", completion_bond);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
-  // formData.append("staaaaars", staaaaars);
 
   try {
     const { data } = await axiosReq.put(`/budgets3/${budgetId3}/`, formData);
