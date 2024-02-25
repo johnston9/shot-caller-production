@@ -1,9 +1,13 @@
 {/* SECTION TOTALS */}
-tpcoorprep_total, tpcoorwrap_total, tpcoorall_total,
-tpcapprep_total, tpcapwrap_total, tpcapall_total,
-tpmanprep_total, tpmanwrap_total, tpmanall_total,
-headdriprep_total, headdriwrap_total, headdriall_total,
-driverprep_total, driverwrap_total, driverall_total,
+tecsupprep_total, tecsupwrap_total, tecsupall_total,
+tecdirprep_total, tecdirwrap_total, tecdirall_total,
+flomanprep_total, flomanwrap_total, flomanall_total,
+ligdirprep_total, ligdirwrap_total, ligdirall_total,
+boamanprep_total, boamanwrap_total, boamanall_total,
+audprep_total, audwrap_total, audall_total,
+vtropprep_total, vtropwrap_total, vtropall_total,
+stagehprep_total, stagehwrap_total, stagehall_total,
+othtvprep_total, othtvwrap_total, othtvall_total,
 
 formData.append("pro_designer_qty_prep", pro_designer_qty_prep);
 formData.append("pro_designer_uno_prep", pro_designer_uno_prep);

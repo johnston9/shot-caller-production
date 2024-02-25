@@ -4056,14 +4056,14 @@ const TV = (props) => {
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
-    {/* Fringes and Taxes */}
+    {/* Fringes & Taxes */}
     <Row className="py-1 d-flex align-items-center">
     <Col md={1}></Col>
     <Col md={1} >
-    <p className={`${styles.Underline}`}>21.95</p>
+    <p className={`${styles.Underline}`}>21.96</p>
     </Col>
     <Col md={4} >
-    <p className={`${styles.Underline}`}>Fringes and Taxes</p>
+    <p className={`${styles.Underline}`}>Fringes & Taxes</p>
     </Col>
     <Col md={1} >
     <p></p>

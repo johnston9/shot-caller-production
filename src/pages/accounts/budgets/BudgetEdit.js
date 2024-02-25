@@ -3642,7 +3642,6 @@ function BudgetEdit() {
     drive_uno_wrap: 0,
     drive_una_wrap: "",
     drive_rt_wrap: 0,
-    // old _prep wrap
     fringes_taxes_transport: 0,
     tp_coordinator_qty: 0,
     tp_coordinator_uno: 0,
@@ -3679,7 +3678,6 @@ function BudgetEdit() {
     head_dr_qty_wrap, head_dr_uno_wrap, head_dr_una_wrap, head_dr_rt_wrap,
     drive_qty_prep, drive_uno_prep, drive_una_prep, drive_rt_prep,
     drive_qty_wrap, drive_uno_wrap, drive_una_wrap, drive_rt_wrap,
-    // old
     tp_coordinator_qty, tp_coordinator_uno, tp_coordinator_una, tp_coordinator_rt,
     tp_captain_qty,tp_captain_uno, tp_captain_una, tp_captain_rt,
     tp_manager_qty, tp_manager_uno, tp_manager_una, tp_manager_rt,
@@ -3827,7 +3825,6 @@ function BudgetEdit() {
     oth_tv_uno_wrap: 0,
     oth_tv_una_wrap: "",
     oth_tv_rt_wrap: 0,
-    // old _prep wrap
     fringes_taxes_tv: 0,
     tech_super_qty: 0,
     tech_super_uno: 0,
