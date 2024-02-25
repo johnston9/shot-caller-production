@@ -1417,8 +1417,8 @@ const Budget = (props) => {
     <div className='pl-2'>
     {/* TOTAL - ABOVE THE LINE */}
     <Row className='mt-3' >
-    <Col className={ `${styles.Overview} my-0 py-0`} md={10} >
-    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - ABOVE THE LINE "A"</p>
+    <Col className={ `${styles.Overview} my-0 pt-1 d-flex align-items-center`} md={10} >
+    <p className={ `${styles.Bold} py-0 my-0`}>TOTAL - ABOVE THE LINE "A"</p>
     </Col>
     <Col md={2} >
     <div className={`${styles.Box3} 
@@ -11090,7 +11090,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}></p>
     <p></p>
     </Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <Col className={ `${styles.Overview} d-flex align-items-center my-0 py-0`} md={6} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL SET DRESSING LABOUR</p>
     </Col>
     <Col md={1} >

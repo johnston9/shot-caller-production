@@ -104,7 +104,6 @@ function CreateProject({setShow, fetchProjects} ) {
       const { data } = await axiosReq.post("/projects/", formData);
       setShow(false);
       fetchProjects();
-      console.log(data)
     } catch (err) {
       console.log(err);
       if (err.response?.status !== 401) {

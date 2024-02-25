@@ -38,8 +38,6 @@ function ProfilePage() {
             axiosReq.get(`/profiles/${id}/`),
             axiosReq.get(`/chat/?owner__profile=${id}`),
           ]);
-
-          console.log(profilePosts)
         setProfileData((prevState) => ({
           ...prevState,
           profilePage: { results: [profilePage] },

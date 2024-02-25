@@ -27,9 +27,6 @@ const BudgetPage = () => {
         setBudget1({ results: [budget1] });
         setBudget2({ results: [budget2] });
         setBudget3({ results: [budget3] });
-        console.log(budget1);
-        console.log(budget2);
-        console.log(budget3);
         setHasLoaded(true);
         // const { data } = await axiosReq.get(`/budgets/?project=${id}`);
       } catch (err) {
@@ -43,35 +40,6 @@ const BudgetPage = () => {
 
   return (
     <div>
-    {/* Add /Edit Budget */}
-    {/* {hasLoaded ? (
-      <>
-      {budget.results.length ? (
-      <Row className='mt-0'>
-      <Col className="text-center">
-      <Link to={`/budgets/edit/${id}`}>
-      <div className={`px-1`}>
-      <p className={ `${styles.BudgetLink} pl-3`}>Edit Budget</p>
-      </div>
-      </Link>
-      </Col>
-      </Row>
-    ) : (
-      <Row className='mt-0'>
-      <Col className="text-center" xs={{span: 6, offset: 3 }} 
-       md={{span: 4, offset: 4 }} >
-      <Link to={`/budgets/create/${id}`}>
-      <div className={`px-1`}>
-      <p className={ `${styles.BudgetLink} pl-3`}>Create Budget</p>
-      </div>
-      </Link>
-      </Col>
-    </Row>
-    ) }
-      </>
-    ) : (
-      ""
-    ) } */}
     {/* budget */}
     <Row>
       <Col className="py-2 p-0 p-lg-2" >

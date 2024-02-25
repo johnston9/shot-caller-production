@@ -28,7 +28,6 @@ const Projects = ({id} ) => {
     try {
       const { data } = await axiosReq.get(`/projects/?owner__profile=${id}&search=${query}`);
       setProjects(data);
-      console.log(data);
       setHasLoaded(true);
     } catch (err) {
       console.log(err);

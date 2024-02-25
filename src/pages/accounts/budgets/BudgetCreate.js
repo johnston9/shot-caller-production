@@ -370,7 +370,7 @@ function BudgetCreate() {
 
   try {
     const { data } = await axiosReq.post("/budgets1/", formData);
-    console.log(`submit create Budgets 1 ${data}`);
+    // console.log(`submit create Budgets 1 ${data}`);
     handleSubmit2(event);
   } catch (err) {
     console.log(err);
@@ -390,7 +390,7 @@ function BudgetCreate() {
 
     try {
       const { data } = await axiosReq.post("/budgets2/", formData);
-      console.log(`submit create Budgets 2 ${data}`);
+      // console.log(`submit create Budgets 2 ${data}`);
       handleSubmit3(event);
     } catch (err) {
       console.log(err);
@@ -410,7 +410,7 @@ function BudgetCreate() {
 
     try {
       const { data } = await axiosReq.post("/budgets3/", formData);
-      console.log(`submit create Budget 3 ${data}`);
+      // console.log(`submit create Budget 3 ${data}`);
       history.goBack();
     } catch (err) {
       console.log(err);

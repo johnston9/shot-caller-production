@@ -5492,7 +5492,7 @@ function BudgetEdit() {
     const handleMount = async () => {
       try {
         const { data } = await axiosReq.get(`/budgets1/?project=${id}`);
-        console.log(data.results[0])
+        // console.log(data.results[0])
         setBudgetId1(data.results[0].id);
         // budget number
         const {budget_number} = data.results[0];
@@ -6355,7 +6355,7 @@ function BudgetEdit() {
     const handleMount = async () => {
       try {
         const { data } = await axiosReq.get(`/budgets2/?project=${id}`);
-        console.log(data.results[0])
+        // console.log(data.results[0]);
         setBudgetId2(data.results[0].id);
         // budget number
         const {budget_number} = data.results[0];
@@ -6788,7 +6788,7 @@ function BudgetEdit() {
     const handleMount = async () => {
       try {
         const { data } = await axiosReq.get(`/budgets3/?project=${id}`);
-        console.log(data.results[0])
+        // console.log(data.results[0]);
         setBudgetId3(data.results[0].id);
         // budget number
         const {budget_number} = data.results[0];
@@ -8141,7 +8141,7 @@ function BudgetEdit() {
 
   try {
     const { data } = await axiosReq.put(`/budgets1/${budgetId1}/`, formData);
-    console.log(`submit1 ${data}`);
+    // console.log(`submit1 ${data}`);
     handleSubmit2(event);
   } catch (err) {
     console.log(err);
@@ -9024,7 +9024,7 @@ function BudgetEdit() {
 
   try {
     const { data } = await axiosReq.put(`/budgets2/${budgetId2}/`, formData);
-    console.log(`submit2 ${data}`);
+    // console.log(`submit2 ${data}`);
     handleSubmit3(event); 
   } catch (err) {
     console.log(err);
@@ -9705,7 +9705,7 @@ function BudgetEdit() {
 
   try {
     const { data } = await axiosReq.put(`/budgets3/${budgetId3}/`, formData);
-    console.log(`submit3 ${data}`);
+    // console.log(`submit3 ${data}`);
     history.goBack();
   } catch (err) {
     console.log(err);

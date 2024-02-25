@@ -34,8 +34,6 @@ function AccountPage() {
         profilePage: { results: [profilePage] },
       }));
       setAccount(accountInfo);
-      console.log(accountInfo);
-      console.log(profilePage);
       setName(accountInfo.results[0].name)
       setHasLoaded(true);
     } catch (err) {
