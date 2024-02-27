@@ -4152,7 +4152,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}></p>
     <p></p>
     </Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <Col className={ `${styles.Overview} my-0 pt-1`} md={6} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL CAST </p>
     </Col>
     <Col md={1} >
@@ -7170,7 +7170,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}></p>
     <p></p>
     </Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <Col className={ `${styles.Overview} my-0 pt-1`} md={6} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL PRODUCTION STAFF </p>
     </Col>
     <Col md={1} >
@@ -8723,7 +8723,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}></p>
     <p></p>
     </Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <Col className={ `${styles.Overview} my-0 pt-1`} md={6} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL DESIGN LABOUR </p>
     </Col>
     <Col md={1} >
@@ -9976,7 +9976,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}></p>
     <p></p>
     </Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <Col className={ `${styles.Overview} my-0 pt-1`} md={6} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL CONSTRUCTION LABOUR</p>
     </Col>
     <Col md={1} >
@@ -11084,7 +11084,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}></p>
     <p></p>
     </Col>
-    <Col className={ `${styles.Overview} d-flex align-items-center my-0 py-0`} md={6} >
+    <Col className={ `${styles.Overview} my-0 pt-1`} md={6} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL SET DRESSING LABOUR</p>
     </Col>
     <Col md={1} >
@@ -12047,7 +12047,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}></p>
     <p></p>
     </Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <Col className={ `${styles.Overview} my-0 pt-1`} md={6} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL PROPERTY LABOUR</p>
     </Col>
     <Col md={1} >
@@ -12575,7 +12575,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}></p>
     <p></p>
     </Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <Col className={ `${styles.Overview} my-0 pt-1`} md={6} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL WRANGLING LABOUR</p>
     </Col>
     <Col md={1} >
@@ -13248,7 +13248,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}></p>
     <p></p>
     </Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <Col className={ `${styles.Overview} my-0 pt-1`} md={6} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL FX LABOUR</p>
     </Col>
     <Col md={1} >
@@ -14844,7 +14844,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}></p>
     <p></p>
     </Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <Col className={ `${styles.Overview} my-0 pt-1`} md={6} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL WARDROBE LABOUR</p>
     </Col>
     <Col md={1} >
@@ -16289,7 +16289,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}></p>
     <p></p>
     </Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <Col className={ `${styles.Overview} my-0 pt-1`} md={6} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL MAKEUP LABOUR</p>
     </Col>
     <Col md={1} >
@@ -17879,7 +17879,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}></p>
     <p></p>
     </Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <Col className={ `${styles.Overview} my-0 pt-1`} md={6} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL CAMERA LABOUR</p>
     </Col>
     <Col md={1} >
@@ -18987,7 +18987,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}></p>
     <p></p>
     </Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <Col className={ `${styles.Overview} my-0 pt-1`} md={6} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL ELECTRICAL LABOUR</p>
     </Col>
     <Col md={1} >
@@ -20142,7 +20142,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}></p>
     <p></p>
     </Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <Col className={ `${styles.Overview} my-0 pt-1`} md={6} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL GRIP LABOUR</p>
     </Col>
     <Col md={1} >
@@ -20960,7 +20960,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}></p>
     <p></p>
     </Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <Col className={ `${styles.Overview} my-0 pt-1`} md={6} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL SOUND LABOUR</p>
     </Col>
     <Col md={1} >
@@ -21923,7 +21923,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}></p>
     <p></p>
     </Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <Col className={ `${styles.Overview} my-0 pt-1`} md={6} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL TRANSPORTATION LABOUR</p>
     </Col>
     <Col md={1} >
@@ -23466,7 +23466,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}></p>
     <p></p>
     </Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <Col className={ `${styles.Overview} my-0 pt-1`} md={6} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL TV SPECIFIC LABOUR</p>
     </Col>
     <Col md={1} >
@@ -23490,7 +23490,7 @@ const Budget = (props) => {
     <div className="mt-5 pl-3">
     <Row >
     <Col md={1} ></Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={8} >
+    <Col className={ `${styles.Overview} my-0 pt-1`} md={8} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - "B" PRODUCTION - LABOUR </p>
     </Col>
     <Col md={2} >
@@ -23692,7 +23692,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}></p>
     <p></p>
     </Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <Col className={ `${styles.Overview} my-0 pt-1`} md={6} >
     <p className={ `${styles.BoldBlack} pb-0 mb-0`}>TOTAL PRODUCTION OFFICE </p>
     </Col>
     <Col md={1} >
@@ -23894,7 +23894,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}></p>
     <p></p>
     </Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <Col className={ `${styles.Overview} my-0 pt-1`} md={6} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL STUDIO/BACKLOT EXPENSES </p>
     </Col>
     <Col md={1} >
@@ -24165,7 +24165,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}></p>
     <p></p>
     </Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <Col className={ `${styles.Overview} my-0 pt-1`} md={6} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL SITE EXPENSES </p>
     </Col>
     <Col md={1} >
@@ -24185,13 +24185,14 @@ const Budget = (props) => {
     </Col>
     </Row>
     </div>   
-    {/* UNIT here ------------------------------------------------- */}
+    {/* UNIT ------------------------------------------------- */}
     <div className='mt-4'>
     <Row>
+    <Col md={1} ></Col>
     <Col xs={1}>
     <p className={`${styles.Underline}`}>25.00</p>
     </Col>
-    <Col xs={10}>
+    <Col xs={8}>
     <p className={ `${styles.BoldBlack}`}>UNIT EXPENSES</p>
     </Col>
     </Row>
@@ -24223,10 +24224,11 @@ const Budget = (props) => {
     </Row>
     {/* Catering */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>25.10</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Catering</p>
     </Col>
     <Col md={2}>
@@ -24238,16 +24240,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Craft Expenses */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>25.20</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Craft Expenses</p>
     </Col>
     <Col md={2}>
@@ -24259,16 +24263,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Meal Penalty */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>25.30</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Meal Penalty</p>
     </Col>
     <Col md={2}>
@@ -24280,16 +24286,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Support Area/Green Room */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>25.40</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Support Area/Green Room</p>
     </Col>
     <Col md={2}>
@@ -24301,16 +24309,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* First Aid */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>25.50</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>First Aid</p>
     </Col>
     <Col md={2}>
@@ -24322,16 +24332,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Special Crew Outfitting */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>25.60</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Special Crew Outfitting</p>
     </Col>
     <Col md={2}>
@@ -24343,16 +24355,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Medical/Insurance/Visa Expenses */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>25.70</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Medical/Insurance/Visa Expenses</p>
     </Col>
     <Col md={2}>
@@ -24364,16 +24378,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Other */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>25.80</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Other</p>
     </Col>
     <Col md={2}>
@@ -24385,20 +24401,22 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Unit Total */}
     <Row className='mt-3 mb-1' >
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     <p></p>
     </Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <Col className={ `${styles.Overview} my-0 pt-1`} md={6} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL UNIT EXPENSES </p>
     </Col>
-    <Col md={3} >
+    <Col md={1} >
     </Col>
     <Col md={2} >
     <div className={`${styles.Box3} 
@@ -24409,7 +24427,8 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
@@ -24417,10 +24436,11 @@ const Budget = (props) => {
     {/* TRAVEL & lIVING -------------------------------------- */}
     <div className='mt-4'>
     <Row>
+    <Col md={1} ></Col>
     <Col xs={1}>
     <p className={`${styles.Underline}`}>26.00</p>
     </Col>
-    <Col xs={10}>
+    <Col xs={8}>
     <p className={ `${styles.BoldBlack}`}>TRAVEL & LIVING</p>
     </Col>
     </Row>
@@ -24452,10 +24472,11 @@ const Budget = (props) => {
     </Row>
     {/* Fares */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>26.10</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Fares</p>
     </Col>
     <Col md={2}>
@@ -24467,16 +24488,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Accommodation/Hotels */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>26.20</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Accommodation/Hotels</p>
     </Col>
     <Col md={2}>
@@ -24488,16 +24511,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Per diems */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>26.30</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Per diems</p>
     </Col>
     <Col md={2}>
@@ -24509,16 +24534,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Taxis/Limousines */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>26.40</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Taxis/Limousines/Car Allowances</p>
     </Col>
     <Col md={2}>
@@ -24530,16 +24557,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Shipping */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>26.50</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Shipping</p>
     </Col>
     <Col md={2}>
@@ -24551,16 +24580,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Customs Brokerage */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>26.60</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Customs Brokerage</p>
     </Col>
     <Col md={2}>
@@ -24572,16 +24603,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Other */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>27.60</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Other</p>
     </Col>
     <Col md={2}>
@@ -24593,20 +24626,22 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* TRAVEL & LIVING Total */}
     <Row className='mt-3 mb-1' >
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     <p></p>
     </Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <Col className={ `${styles.Overview} my-0 pt-1`} md={6} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL TRAVEL & LIVING </p>
     </Col>
-    <Col md={3} >
+    <Col md={1} >
     </Col>
     <Col md={2} >
     <div className={`${styles.Box4} 
@@ -24617,7 +24652,8 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
@@ -24625,11 +24661,12 @@ const Budget = (props) => {
     {/* TRANSPORTATION --------------------------------------- */}
     <div className='mt-4'>
     <Row>
+    <Col md={1} ></Col>
     <Col xs={1}>
     <p className={`${styles.Underline}`}>27.00</p>
     </Col>
-    <Col xs={10}>
-    <p className={ `${styles.BoldBlack} mb-2`}>TRANSPORTATION</p>
+    <Col xs={7}>
+    <p className={ `${styles.BoldBlack}`}>TRANSPORTATION</p>
     </Col>
     </Row>
     {/* TITLES */}
@@ -24660,10 +24697,11 @@ const Budget = (props) => {
     </Row>
     {/* Production Cars */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>27.10</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Production Cars</p>
     </Col>
     <Col md={2}>
@@ -24675,16 +24713,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Trucks/Vans */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>27.20</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Trucks/Vans</p>
     </Col>
     <Col md={2}>
@@ -24696,16 +24736,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Buses */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>27.30</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Buses</p>
     </Col>
     <Col md={2}>
@@ -24717,16 +24759,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Motorhomes */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>27.40</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Motorhomes</p>
     </Col>
     <Col md={2}>
@@ -24738,16 +24782,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Talent Cars */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>27.50</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Talent Cars</p>
     </Col>
     <Col md={2}>
@@ -24759,16 +24805,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Special Support Vehicles */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>27.60</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Special Support Vehicles</p>
     </Col>
     <Col md={2}>
@@ -24780,16 +24828,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Boats/Planes */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>27.70</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Boats/Planes</p>
     </Col>
     <Col md={2}>
@@ -24801,16 +24851,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Fuel */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>27.80</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Fuel</p>
     </Col>
     <Col md={2}>
@@ -24822,16 +24874,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Repairs */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>27.90</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Repairs</p>
     </Col>
     <Col md={2}>
@@ -24843,16 +24897,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Taxis */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>27.91</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Taxis</p>
     </Col>
     <Col md={2}>
@@ -24864,16 +24920,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Parking */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>27.92</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Parking</p>
     </Col>
     <Col md={2}>
@@ -24885,16 +24943,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Special Licenses/Permits */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>27.93</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Special Licenses/Permits</p>
     </Col>
     <Col md={2}>
@@ -24906,16 +24966,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Brokerage/Insurance */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>27.94</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Brokerage/Insurance</p>
     </Col>
     <Col md={2}>
@@ -24927,16 +24989,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Other */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>27.95</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Other</p>
     </Col>
     <Col md={2}>
@@ -24948,20 +25012,22 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* TRANSPORTATION Total */}
     <Row className='mt-3 mb-1' >
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     <p></p>
     </Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <Col className={ `${styles.Overview} my-0 pt-1`} md={6} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL TRANSPORTATION </p>
     </Col>
-    <Col md={3} >
+    <Col md={1} >
     </Col>
     <Col md={2} >
     <div className={`${styles.Box4} 
@@ -24972,7 +25038,8 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
@@ -24980,10 +25047,11 @@ const Budget = (props) => {
     {/* CONSTRUCTION MATERIAL -------------------------------- */}
     <div className='mt-4'>
     <Row>
+    <Col md={1} ></Col>
     <Col xs={1}>
     <p className={`${styles.Underline}`}>28.00</p>
     </Col>
-    <Col xs={10}>
+    <Col xs={8}>
     <p className={ `${styles.BoldBlack}`}>CONSTRUCTION MATERIALS</p>
     </Col>
     </Row>
@@ -25015,10 +25083,11 @@ const Budget = (props) => {
     </Row>
     {/* Carpentry Rentals */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>28.10</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Carpentry Rentals</p>
     </Col>
     <Col md={2}>
@@ -25030,16 +25099,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Carpentry Purchases */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>28.20</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Carpentry Purchases</p>
     </Col>
     <Col md={2}>
@@ -25051,16 +25122,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Painting Rentals */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>28.30</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Painting Rentals</p>
     </Col>
     <Col md={2}>
@@ -25072,16 +25145,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Painting Purchases */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>28.40</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Painting Purchases</p>
     </Col>
     <Col md={2}>
@@ -25093,16 +25168,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Backdrops/Murals */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>28.50</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Backdrops/Murals</p>
     </Col>
     <Col md={2}>
@@ -25114,16 +25191,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Scaffolding */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>28.60</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Scaffolding</p>
     </Col>
     <Col md={2}>
@@ -25135,16 +25214,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Warehouse Rental */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>28.70</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Warehouse Rental</p>
     </Col>
     <Col md={2}>
@@ -25156,16 +25237,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Other */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>28.80</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Other</p>
     </Col>
     <Col md={2}>
@@ -25177,20 +25260,22 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* CONSTRUCTION MATERIAL Total */}
     <Row className='mt-3 mb-1' >
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     <p></p>
     </Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <Col className={ `${styles.Overview} my-0 pt-1`} md={6} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL CONSTRUCTION MATERIALS </p>
     </Col>
-    <Col md={3} >
+    <Col md={1} >
     </Col>
     <Col md={2} >
     <div className={`${styles.Box4} 
@@ -25201,7 +25286,8 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
@@ -25209,10 +25295,11 @@ const Budget = (props) => {
     {/* ART SUPPLIES ----------------------------------------- */}
     <div className='mt-4'>
     <Row>
+    <Col md={1} ></Col>
     <Col xs={1}>
     <p className={`${styles.Underline}`}>29.00</p>
     </Col>
-    <Col xs={10}>
+    <Col xs={8}>
     <p className={ `${styles.BoldBlack}`}>ART SUPPLIES</p>
     </Col>
     </Row>
@@ -25244,10 +25331,11 @@ const Budget = (props) => {
     </Row>
     {/* Drawing Supplies */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>29.10</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Drawing Supplies</p>
     </Col>
     <Col md={2}>
@@ -25259,16 +25347,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Drawing Equipment */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>29.20</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Drawing Equipment</p>
     </Col>
     <Col md={2}>
@@ -25280,16 +25370,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Tech/Software */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>29.30</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Tech/Software</p>
     </Col>
     <Col md={2}>
@@ -25301,16 +25393,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Stock/Prints/Processing */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>29.40</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Stock/Prints/Processing</p>
     </Col>
     <Col md={2}>
@@ -25322,16 +25416,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Blueprints */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>29.50</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Blueprints</p>
     </Col>
     <Col md={2}>
@@ -25343,16 +25439,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Other */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>29.60</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Other</p>
     </Col>
     <Col md={2}>
@@ -25364,20 +25462,22 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* ART SUPPLIES Total */}
     <Row className='mt-3 mb-1' >
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     <p></p>
     </Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <Col className={ `${styles.Overview} my-0 pt-1`} md={6} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL ART SUPPLIES </p>
     </Col>
-    <Col md={3} >
+    <Col md={1} >
     </Col>
     <Col md={2} >
     <div className={`${styles.Box3} 
@@ -25388,7 +25488,8 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
@@ -25396,11 +25497,12 @@ const Budget = (props) => {
     {/* SET DRESSING ----------------------------------------- */}
     <div className='mt-4'>
     <Row>
+    <Col md={1} ></Col>
     <Col xs={1}>
     <p className={`${styles.Underline}`}>30.00</p>
     </Col>
-    <Col xs={10}>
-    <p className={ `${styles.BoldBlack} mb-2`}>SET DRESSING</p>
+    <Col xs={8}>
+    <p className={ `${styles.BoldBlack}`}>SET DRESSING</p>
     </Col>
     </Row>
     {/* TITLES */}
@@ -25431,10 +25533,11 @@ const Budget = (props) => {
     </Row>
     {/* Rentals */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>30.10</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Rentals</p>
     </Col>
     <Col md={2}>
@@ -25446,16 +25549,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Purchases */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>30.20</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Purchases</p>
     </Col>
     <Col md={2}>
@@ -25467,16 +25572,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Manufacture */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>30.30</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Manufacture</p>
     </Col>
     <Col md={2}>
@@ -25488,16 +25595,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Repairs/Replacements */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>30.40</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Repairs/Replacements</p>
     </Col>
     <Col md={2}>
@@ -25509,16 +25618,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Other */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>30.50</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Other</p>
     </Col>
     <Col md={2}>
@@ -25530,20 +25641,22 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* SET DRESSING Total */}
     <Row className='mt-3 mb-1' >
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     <p></p>
     </Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <Col className={ `${styles.Overview} my-0 pt-1`} md={6} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL SET DRESSING </p>
     </Col>
-    <Col md={3} >
+    <Col md={1} >
     </Col>
     <Col md={2} >
     <div className={`${styles.Box4} 
@@ -25554,7 +25667,8 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
@@ -25562,11 +25676,12 @@ const Budget = (props) => {
     {/* PROPS ------------------------------------------------ */}
     <div className='mt-4'>
     <Row>
+    <Col md={1} ></Col>
     <Col xs={1}>
     <p className={`${styles.Underline}`}>31.00</p>
     </Col>
-    <Col xs={10}>
-    <p className={ `${styles.BoldBlack} mb-2`}>PROPS</p>
+    <Col xs={8}>
+    <p className={ `${styles.BoldBlack}`}>PROPS</p>
     </Col>
     </Row>
     {/* TITLES */}
@@ -25597,10 +25712,11 @@ const Budget = (props) => {
     </Row>
     {/* Rentals */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>31.10</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Rentals</p>
     </Col>
     <Col md={2}>
@@ -25612,16 +25728,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Purchases */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>31.20</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Purchases</p>
     </Col>
     <Col md={2}>
@@ -25633,16 +25751,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Graphics/Signs */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>31.30</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Graphics/Signs</p>
     </Col>
     <Col md={2}>
@@ -25654,16 +25774,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Repairs/Replacements */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>31.40</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Repairs/Replacements</p>
     </Col>
     <Col md={2}>
@@ -25675,16 +25797,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Picture Vehicle Rentals */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>31.50</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Picture Vehicle Rentals</p>
     </Col>
     <Col md={2}>
@@ -25696,16 +25820,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Picture Vehicle Purchases */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>31.60</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Picture Vehicle Purchases</p>
     </Col>
     <Col md={2}>
@@ -25717,16 +25843,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Picture Vehicle Modifications */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>31.70</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Picture Vehicle Modifications</p>
     </Col>
     <Col md={2}>
@@ -25738,16 +25866,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Picture Vehicle Insurance */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>31.80</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Picture Vehicle Insurance</p>
     </Col>
     <Col md={2}>
@@ -25759,16 +25889,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Other */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>31.90</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Other</p>
     </Col>
     <Col md={2}>
@@ -25780,20 +25912,22 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* PROPS Total */}
     <Row className='mt-3 mb-1' >
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     <p></p>
     </Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <Col className={ `${styles.Overview} my-0 pt-1`} md={6} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL PROPS </p>
     </Col>
-    <Col md={3} >
+    <Col md={1} >
     </Col>
     <Col md={2} >
     <div className={`${styles.Box4} 
@@ -25804,7 +25938,8 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
@@ -25812,11 +25947,12 @@ const Budget = (props) => {
     {/* FX --------------------------------------------------- */}
     <div className='mt-4'>
     <Row>
+    <Col md={1} ></Col>
     <Col xs={1}>
     <p className={`${styles.Underline}`}>32.00</p>
     </Col>
-    <Col xs={10}>
-    <p className={ `${styles.BoldBlack} mb-2`}>SPECIAL EFFECTS</p>
+    <Col xs={8}>
+    <p className={ `${styles.BoldBlack}`}>SPECIAL EFFECTS</p>
     </Col>
     </Row>
     {/* TITLES */}
@@ -25847,10 +25983,11 @@ const Budget = (props) => {
     </Row>
     {/* Rentals */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>32.10</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Rentals</p>
     </Col>
     <Col md={2}>
@@ -25862,16 +25999,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Purchases */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>32.20</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Purchases</p>
     </Col>
     <Col md={2}>
@@ -25883,16 +26022,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Stunts Purchases/Rentals */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>32.30</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Stunts Purchases/Rentals</p>
     </Col>
     <Col md={2}>
@@ -25904,16 +26045,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Armaments & Permits/Fees */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>32.40</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Armaments & Permits/Fees</p>
     </Col>
     <Col md={2}>
@@ -25925,16 +26068,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Other */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>32.50</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Other</p>
     </Col>
     <Col md={2}>
@@ -25946,20 +26091,22 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* SPECIAL EFFECTS Total */}
-    <Row className='mt-3' >
+    <Row className='mt-3 mb-1' >
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     <p></p>
     </Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <Col className={ `${styles.Overview} my-0 pt-1`} md={6} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL SPECIAL EFFECTS </p>
     </Col>
-    <Col md={3} >
+    <Col md={1} >
     </Col>
     <Col md={2} >
     <div className={`${styles.Box3} 
@@ -25970,7 +26117,8 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
@@ -25978,11 +26126,12 @@ const Budget = (props) => {
     {/* ANIMALS ---------------------------------------------- */}
     <div className='mt-4'>
     <Row>
+    <Col md={1} ></Col>
     <Col xs={1}>
     <p className={`${styles.Underline}`}>33.00</p>
     </Col>
-    <Col xs={10}>
-    <p className={ `${styles.BoldBlack} mb-2`}>ANIMALS</p>
+    <Col xs={8}>
+    <p className={ `${styles.BoldBlack}`}>ANIMALS</p>
     </Col>
     </Row>
     {/* TITLES */}
@@ -26013,10 +26162,11 @@ const Budget = (props) => {
     </Row>
     {/* Rentals */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>33.10</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Rentals</p>
     </Col>
     <Col md={2}>
@@ -26028,16 +26178,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Purchases */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>33.20</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Purchases</p>
     </Col>
     <Col md={2}>
@@ -26049,16 +26201,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Food/Stabling */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>33.30</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Food/Stabling</p>
     </Col>
     <Col md={2}>
@@ -26070,16 +26224,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Transport */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>33.40</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Transport</p>
     </Col>
     <Col md={2}>
@@ -26091,16 +26247,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Veterinary Fees */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>33.50</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Veterinary Fees</p>
     </Col>
     <Col md={2}>
@@ -26112,16 +26270,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Customs Brokerage */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>33.60</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Customs Brokerage</p>
     </Col>
     <Col md={2}>
@@ -26133,16 +26293,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Other */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>33.70</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Other</p>
     </Col>
     <Col md={2}>
@@ -26154,20 +26316,22 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* ANIMALS Total */}
     <Row className='mt-3 mb-1' >
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     <p></p>
     </Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <Col className={ `${styles.Overview} my-0 pt-1`} md={6} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL ANIMALS </p>
     </Col>
-    <Col md={3} >
+    <Col md={1} >
     </Col>
     <Col md={2} >
     <div className={`${styles.Box3} 
@@ -26178,7 +26342,8 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
@@ -26186,11 +26351,12 @@ const Budget = (props) => {
     {/* WARDROBE SUPPLIES ------------------------------------ */}
     <div className='mt-4'>
     <Row>
+    <Col md={1} ></Col>
     <Col xs={1}>
     <p className={`${styles.Underline}`}>34.00</p>
     </Col>
-    <Col xs={10}>
-    <p className={ `${styles.BoldBlack} mb-2`}>WARDROBE SUPPLIES</p>
+    <Col xs={8}>
+    <p className={ `${styles.BoldBlack}`}>WARDROBE SUPPLIES</p>
     </Col>
     </Row>
     {/* TITLES */}
@@ -26221,10 +26387,11 @@ const Budget = (props) => {
     </Row>
     {/* Rentals */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>34.10</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Rentals</p>
     </Col>
     <Col md={2}>
@@ -26236,16 +26403,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Purchases */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>34.20</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Purchases</p>
     </Col>
     <Col md={2}>
@@ -26257,16 +26426,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Manufacture */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>34.30</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Manufacture</p>
     </Col>
     <Col md={2}>
@@ -26278,16 +26449,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Shipping/Brokerage */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>34.40</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Shipping/Brokerage</p>
     </Col>
     <Col md={2}>
@@ -26299,16 +26472,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Repairs/Cleaning */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>34.50</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Repairs/Cleaning</p>
     </Col>
     <Col md={2}>
@@ -26320,16 +26495,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Other */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>34.60</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Other</p>
     </Col>
     <Col md={2}>
@@ -26341,20 +26518,22 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* WARDROBE SUPPLIES Total */}
     <Row className='mt-3 mb-1' >
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     <p></p>
     </Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <Col className={ `${styles.Overview} my-0 pt-1`} md={6} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL WARDROBE SUPPLIES </p>
     </Col>
-    <Col md={3} >
+    <Col md={1} >
     </Col>
     <Col md={2} >
     <div className={`${styles.Box4} 
@@ -26365,7 +26544,8 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
@@ -26373,11 +26553,12 @@ const Budget = (props) => {
     {/* MAKEUP SUPPLIES -------------------------------------- */}
     <div className='mt-4'>
     <Row>
+    <Col md={1} ></Col>
     <Col xs={1}>
     <p className={`${styles.Underline}`}>35.00</p>
     </Col>
-    <Col xs={10}>
-    <p className={ `${styles.BoldBlack} mb-2`}>MAKEUP SUPPLIES</p>
+    <Col xs={8}>
+    <p className={ `${styles.BoldBlack}`}>MAKEUP SUPPLIES</p>
     </Col>
     </Row>
     {/* TITLES */}
@@ -26408,10 +26589,11 @@ const Budget = (props) => {
     </Row>
     {/* Makeup Rentals */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>35.10</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Makeup Rentals</p>
     </Col>
     <Col md={2}>
@@ -26423,16 +26605,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Makeup Purchases */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>35.20</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Makeup Purchases</p>
     </Col>
     <Col md={2}>
@@ -26444,16 +26628,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Hair Rentals */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>35.30</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Hair Rentals</p>
     </Col>
     <Col md={2}>
@@ -26465,16 +26651,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Hair Purchases */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>35.40</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Hair Purchases</p>
     </Col>
     <Col md={2}>
@@ -26486,16 +26674,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Wigs Rentals/Purchases */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>35.50</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Wigs Rentals/Purchases</p>
     </Col>
     <Col md={2}>
@@ -26507,16 +26697,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Special Effects */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>35.60</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Special Effects</p>
     </Col>
     <Col md={2}>
@@ -26528,16 +26720,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Shipping/Brokerage */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>35.70</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Shipping/Brokerage</p>
     </Col>
     <Col md={2}>
@@ -26549,16 +26743,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Other */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>35.80</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Other</p>
     </Col>
     <Col md={2}>
@@ -26570,20 +26766,22 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* MAKEUP SUPPLIES Total */}
     <Row className='mt-3 mb-1' >
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     <p></p>
     </Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <Col className={ `${styles.Overview} my-0 pt-1`} md={6} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL MAKEUP SUPPLIES </p>
     </Col>
-    <Col md={3} >
+    <Col md={1} >
     </Col>
     <Col md={2} >
     <div className={`${styles.Box4} 
@@ -26594,7 +26792,8 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
@@ -26602,11 +26801,12 @@ const Budget = (props) => {
     {/* CAMERA EQUIPMENT ------------------------------------- */}
     <div className='mt-4'>
     <Row>
+    <Col md={1} ></Col>
     <Col xs={1}>
     <p className={`${styles.Underline}`}>36.00</p>
     </Col>
-    <Col xs={10}>
-    <p className={ `${styles.BoldBlack} mb-2`}>CAMERA EQUIPMENT</p>
+    <Col xs={8}>
+    <p className={ `${styles.BoldBlack}`}>CAMERA EQUIPMENT</p>
     </Col>
     </Row>
     {/* TITLES */}
@@ -26637,10 +26837,11 @@ const Budget = (props) => {
     </Row>
     {/* Basic Package Rentals */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>36.10</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Basic Package Rentals</p>
     </Col>
     <Col md={2}>
@@ -26652,16 +26853,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Daily Rentals */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>36.20</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Daily Rentals</p>
     </Col>
     <Col md={2}>
@@ -26673,16 +26876,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Specialty Rentals */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>36.30</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Specialty Rentals</p>
     </Col>
     <Col md={2}>
@@ -26694,16 +26899,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Purchases */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>36.40</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Purchases</p>
     </Col>
     <Col md={2}>
@@ -26715,16 +26922,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Steadicam */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>36.50</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Steadicam</p>
     </Col>
     <Col md={2}>
@@ -26736,16 +26945,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Video/Teleprompter */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>36.60</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Video/Teleprompter</p>
     </Col>
     <Col md={2}>
@@ -26757,16 +26968,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Shipping/Brokerage */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>36.70</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Shipping/Brokerage</p>
     </Col>
     <Col md={2}>
@@ -26778,16 +26991,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Loss & Damage */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>36.80</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Loss & Damage</p>
     </Col>
     <Col md={2}>
@@ -26799,16 +27014,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Other */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>36.90</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Other</p>
     </Col>
     <Col md={2}>
@@ -26820,20 +27037,22 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* CAMERA EQUIPMENT Total */}
     <Row className='mt-3 mb-1' >
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     <p></p>
     </Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <Col className={ `${styles.Overview} my-0 pt-1`} md={6} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL CAMERA EQUIPMENT </p>
     </Col>
-    <Col md={3} >
+    <Col md={1} >
     </Col>
     <Col md={2} >
     <div className={`${styles.Box4} 
@@ -26844,7 +27063,8 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
@@ -26852,11 +27072,12 @@ const Budget = (props) => {
     {/* ELECTRICAL EQUIPMENT --------------------------------- */}
     <div className='mt-4'>
     <Row>
+    <Col md={1} ></Col>
     <Col xs={1}>
     <p className={`${styles.Underline}`}>37.00</p>
     </Col>
-    <Col xs={10}>
-    <p className={ `${styles.BoldBlack} mb-2`}>ELECTRICAL EQUIPMENT</p>
+    <Col xs={8}>
+    <p className={ `${styles.BoldBlack}`}>ELECTRICAL EQUIPMENT</p>
     </Col>
     </Row>
     {/* TITLES */}
@@ -26887,10 +27108,11 @@ const Budget = (props) => {
     </Row>
     {/* Basic Package Rentals */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>37.10</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Basic Package Rentals</p>
     </Col>
     <Col md={2}>
@@ -26902,16 +27124,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Daily Rentals */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>37.20</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Daily Rentals</p>
     </Col>
     <Col md={2}>
@@ -26923,16 +27147,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Specialty Rentals */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>37.30</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Specialty Rentals</p>
     </Col>
     <Col md={2}>
@@ -26944,16 +27170,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Purchases */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>37.40</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Purchases</p>
     </Col>
     <Col md={2}>
@@ -26965,16 +27193,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Generators */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>37.50</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Generators</p>
     </Col>
     <Col md={2}>
@@ -26986,16 +27216,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Loss & Damage */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>37.60</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Loss & Damage</p>
     </Col>
     <Col md={2}>
@@ -27007,16 +27239,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Other */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>37.70</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Other</p>
     </Col>
     <Col md={2}>
@@ -27028,20 +27262,22 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* ELECTRICAL EQUIPMENT Total */}
     <Row className='mt-3 mb-1' >
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     <p></p>
     </Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <Col className={ `${styles.Overview} my-0 pt-1`} md={6} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL ELECTRICAL EQUIPMENT </p>
     </Col>
-    <Col md={3} >
+    <Col md={1} >
     </Col>
     <Col md={2} >
     <div className={`${styles.Box3} 
@@ -27052,7 +27288,8 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
@@ -27060,11 +27297,12 @@ const Budget = (props) => {
     {/* GRIP EQUIPMENT --------------------------------------- */}
     <div className='mt-4'>
     <Row>
+    <Col md={1} ></Col>
     <Col xs={1}>
     <p className={`${styles.Underline}`}>38.00</p>
     </Col>
     <Col xs={10}>
-    <p className={ `${styles.BoldBlack} mb-2`}>GRIP EQUIPMENT</p>
+    <p className={ `${styles.BoldBlack}`}>GRIP EQUIPMENT</p>
     </Col>
     </Row>
     {/* TITLES */}
@@ -27095,10 +27333,11 @@ const Budget = (props) => {
     </Row>
     {/* Basic Package Rentals */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>38.10</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Basic Package Rentals</p>
     </Col>
     <Col md={2}>
@@ -27110,16 +27349,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Daily Rentals */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>38.20</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Daily Rentals</p>
     </Col>
     <Col md={2}>
@@ -27131,16 +27372,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Specialty Rentals */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>38.30</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Specialty Rentals</p>
     </Col>
     <Col md={2}>
@@ -27152,16 +27395,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Crane Rentals */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>38.40</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Crane Rentals</p>
     </Col>
     <Col md={2}>
@@ -27173,16 +27418,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Scaffolding */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>38.50</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Scaffolding</p>
     </Col>
     <Col md={2}>
@@ -27194,16 +27441,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Purchases */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>38.60</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Purchases</p>
     </Col>
     <Col md={2}>
@@ -27215,16 +27464,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Loss & Damage */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>38.70</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Loss & Damage</p>
     </Col>
     <Col md={2}>
@@ -27236,16 +27487,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Other */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>38.80</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Other</p>
     </Col>
     <Col md={2}>
@@ -27257,20 +27510,22 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* GRIP EQUIPMENT Total */}
     <Row className='mt-3 mb-1' >
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     <p></p>
     </Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <Col className={ `${styles.Overview} my-0 pt-1`} md={6} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL GRIP EQUIPMENT </p>
     </Col>
-    <Col md={3} >
+    <Col md={1} >
     </Col>
     <Col md={2} >
     <div className={`${styles.Box3} 
@@ -27281,7 +27536,8 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
@@ -27289,11 +27545,12 @@ const Budget = (props) => {
     {/* SOUND EQUIPMENT -------------------------------------- */}
     <div className='mt-4'>
     <Row>
+    <Col md={1} ></Col>
     <Col xs={1}>
     <p className={`${styles.Underline}`}>39.00</p>
     </Col>
-    <Col xs={10}>
-    <p className={ `${styles.BoldBlack} mb-2`}>SOUND EQUIPMENT</p>
+    <Col xs={8}>
+    <p className={ `${styles.BoldBlack}`}>SOUND EQUIPMENT</p>
     </Col>
     </Row>
     {/* TITLES */}
@@ -27324,10 +27581,11 @@ const Budget = (props) => {
     </Row>
     {/* Basic Package Rentals */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>39.10</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Basic Package Rentals</p>
     </Col>
     <Col md={2}>
@@ -27339,16 +27597,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Daily Rentals */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>39.20</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Daily Rentals</p>
     </Col>
     <Col md={2}>
@@ -27360,16 +27620,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Wireless Microphones */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>39.30</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Wireless Microphones</p>
     </Col>
     <Col md={2}>
@@ -27381,16 +27643,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Purchases */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>39.40</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Purchases</p>
     </Col>
     <Col md={2}>
@@ -27402,16 +27666,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Walkie Talkies */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>39.50</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Walkie Talkies</p>
     </Col>
     <Col md={2}>
@@ -27423,16 +27689,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Other */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>39.60</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Other</p>
     </Col>
     <Col md={2}>
@@ -27444,20 +27712,22 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* SOUND EQUIPMENT Total */}
     <Row className='mt-3 mb-1' >
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     <p></p>
     </Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <Col className={ `${styles.Overview} my-0 pt-1`} md={6} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL SOUND EQUIPMENT </p>
     </Col>
-    <Col md={3} >
+    <Col md={1} >
     </Col>
     <Col md={2} >
     <div className={`${styles.Box4} 
@@ -27468,7 +27738,8 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
@@ -27476,11 +27747,12 @@ const Budget = (props) => {
     {/* SECOND UNIT ------------------------------------------ */}
     <div className='mt-4'>
     <Row>
+    <Col md={1} ></Col>
     <Col xs={1}>
     <p className={`${styles.Underline}`}>40.00</p>
     </Col>
-    <Col xs={10}>
-    <p className={ `${styles.BoldBlack} mb-2`}>SECOND UNIT</p>
+    <Col xs={8}>
+    <p className={ `${styles.BoldBlack}`}>SECOND UNIT</p>
     </Col>
     </Row>
     {/* TITLES */}
@@ -27511,10 +27783,11 @@ const Budget = (props) => {
     </Row>
     {/* Crew */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>40.10</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Crew</p>
     </Col>
     <Col md={2}>
@@ -27526,16 +27799,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Equipment */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>40.20</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Equipment</p>
     </Col>
     <Col md={2}>
@@ -27547,16 +27822,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Travel & Living */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>40.30</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Travel & Living</p>
     </Col>
     <Col md={2}>
@@ -27568,16 +27845,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Transport */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>40.40</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Transport</p>
     </Col>
     <Col md={2}>
@@ -27589,16 +27868,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Materials/Supplies */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>40.50</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Materials/Supplies</p>
     </Col>
     <Col md={2}>
@@ -27610,16 +27891,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Aerial Unit */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>40.60</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Aerial Unit</p>
     </Col>
     <Col md={2}>
@@ -27631,16 +27914,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Marine Unit */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>40.70</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Marine Unit</p>
     </Col>
     <Col md={2}>
@@ -27652,16 +27937,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Other */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>40.80</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Other</p>
     </Col>
     <Col md={2}>
@@ -27673,16 +27960,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Fringes & Taxes */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>40.90</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Fringes & Taxes</p>
     </Col>
     <Col md={2}>
@@ -27694,20 +27983,22 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* SECOND UNIT Total */}
     <Row className='mt-3 mb-1' >
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     <p></p>
     </Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <Col className={ `${styles.Overview} my-0 pt-1`} md={6} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL SECOND UNIT</p>
     </Col>
-    <Col md={3} >
+    <Col md={1} >
     </Col>
     <Col md={2} >
     <div className={`${styles.Box3} 
@@ -27718,7 +28009,8 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
@@ -27726,11 +28018,12 @@ const Budget = (props) => {
     {/* STOCK & LAB ------------------------------------------ */}
     <div className='mt-4'>
     <Row>
+    <Col md={1} ></Col>
     <Col xs={1}>
     <p className={`${styles.Underline}`}>41.00</p>
     </Col>
-    <Col xs={10}>
-    <p className={ `${styles.BoldBlack} mb-2`}>PRODUCTION STOCK & LAB</p>
+    <Col xs={8}>
+    <p className={ `${styles.BoldBlack}`}>PRODUCTION STOCK & LAB</p>
     </Col>
     </Row>
     {/* TITLES */}
@@ -27761,10 +28054,11 @@ const Budget = (props) => {
     </Row>
     {/* Film Stock */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>41.10</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Film Stock</p>
     </Col>
     <Col md={2}>
@@ -27776,16 +28070,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Video Stock */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>41.20</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Video Stock</p>
     </Col>
     <Col md={2}>
@@ -27797,16 +28093,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Digital Stock */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>41.30</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Digital Stock</p>
     </Col>
     <Col md={2}>
@@ -27818,16 +28116,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Transfer Stock */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>41.40</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Transfer Stock</p>
     </Col>
     <Col md={2}>
@@ -27839,16 +28139,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Hard Drives */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>41.50</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Hard Drives</p>
     </Col>
     <Col md={2}>
@@ -27860,16 +28162,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Dailies */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>41.60</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Dailies</p>
     </Col>
     <Col md={2}>
@@ -27881,16 +28185,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Telecine */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>41.70</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Telecine</p>
     </Col>
     <Col md={2}>
@@ -27902,16 +28208,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Audio Stock */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>41.80</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Audio Stock</p>
     </Col>
     <Col md={2}>
@@ -27923,16 +28231,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Magnetic Transfer */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>41.90</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Magnetic Transfer</p>
     </Col>
     <Col md={2}>
@@ -27944,16 +28254,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Stills */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>41.91</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Stills</p>
     </Col>
     <Col md={2}>
@@ -27965,16 +28277,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Loss & Damage */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>41.92</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Loss & Damage</p>
     </Col>
     <Col md={2}>
@@ -27986,16 +28300,18 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* Other */}
     <Row>
+    <Col md={1} ></Col>
     <Col md={1}>
     <p className={`${styles.Underline}`}>41.93</p>
     </Col>
-    <Col md={9}>
+    <Col md={7}>
     <p className={`${styles.Underline}`}>Other</p>
     </Col>
     <Col md={2}>
@@ -28007,20 +28323,22 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
     {/* PRODUCTION STOCK & LAB Total */}
     <Row className='mt-3 mb-1' >
+    <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     <p></p>
     </Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+    <Col className={ `${styles.Overview} my-0 pt-1`} md={6} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL PRODUCTION STOCK & LAB </p>
     </Col>
-    <Col md={3} >
+    <Col md={1} >
     </Col>
     <Col md={2} >
     <div className={`${styles.Box3} 
@@ -28031,7 +28349,8 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
@@ -28040,7 +28359,7 @@ const Budget = (props) => {
     <div className="mt-5 pl-3">
     <Row >
     <Col md={1} ></Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={8} >
+    <Col className={ `${styles.Overview} my-0 pt-1`} md={8} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - "B" PRODUCTION - COSTS </p>
     </Col>
     <Col md={2} >
@@ -28055,7 +28374,7 @@ const Budget = (props) => {
     <div className="mt-3 pl-3">
     <Row >
     <Col md={1} ></Col>
-    <Col className={ `${styles.Overview} my-0 py-0`} md={8} >
+    <Col className={ `${styles.Overview} my-0 pt-1`} md={8} >
     <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - "B" LABOUR AND COSTS </p>
     </Col>
     <Col md={2} >
