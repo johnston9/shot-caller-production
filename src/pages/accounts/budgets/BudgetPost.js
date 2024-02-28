@@ -222,10 +222,11 @@ const BudgetPost = (props) => {
         {/* POST PRODUCTION STAFF/FACILITIES ---------------------- */}
         <div className='mt-4'>
         <Row>
+        <Col md={1}></Col>
         <Col xs={1}>
         <p className={`${styles.Underline}`}>42.00</p>
         </Col>
-        <Col xs={10}>
+        <Col xs={8}>
         <p className={ `${styles.BoldBlack}`}>POST PRODUCTION STAFF/FACILITIES</p>
         </Col>
         </Row>
@@ -256,11 +257,12 @@ const BudgetPost = (props) => {
         <Col md={1}></Col>
         </Row>
         {/* Post Production Supervisor */}
-        <Row  >
+        <Row>
+        <Col md={1}></Col>
         <Col md={1} >
         <p className={`${styles.Underline}`}>42.10</p>
         </Col>
-        <Col md={5} >
+        <Col md={3} >
         <p className={`${styles.Underline}`}>Post Production Supervisor</p>
         </Col>
         <Col md={1} >
@@ -296,16 +298,18 @@ const BudgetPost = (props) => {
         </Row>
         {/* hr */}
         <Row>
-        <Col >
+        <Col md={1}></Col>
+        <Col md={10} >
         <hr className={`${styles.Break1} mt-0 mb-0`}/>
         </Col>
         </Row>
         {/* Post Production Coordinator */}
         <Row  >
+        <Col md={1}></Col>
         <Col md={1} >
         <p className={`${styles.Underline}`}>42.20</p>
         </Col>
-        <Col md={5} >
+        <Col md={3} >
         <p className={`${styles.Underline}`}>Post Production Coordinator</p>
         </Col>
         <Col md={1} >
@@ -341,16 +345,18 @@ const BudgetPost = (props) => {
         </Row>
         {/* hr */}
         <Row>
-        <Col >
+        <Col md={1}></Col>
+        <Col md={10} >
         <hr className={`${styles.Break1} mt-0 mb-0`}/>
         </Col>
         </Row>
         {/* Post Production Assistants */}
         <Row  >
+        <Col md={1}></Col>
         <Col md={1} >
         <p className={`${styles.Underline}`}>42.30</p>
         </Col>
-        <Col md={5} >
+        <Col md={3} >
         <p className={`${styles.Underline}`}>Post Production Assistants</p>
         </Col>
         <Col md={1} >
@@ -386,16 +392,18 @@ const BudgetPost = (props) => {
         </Row>
         {/* hr */}
         <Row>
-        <Col >
+        <Col md={1}></Col>
+        <Col md={10} >
         <hr className={`${styles.Break1} mt-0 mb-0`}/>
         </Col>
         </Row>
         {/* Post Production Accountants */}
         <Row  >
+        <Col md={1}></Col>
         <Col md={1} >
         <p className={`${styles.Underline}`}>42.40</p>
         </Col>
-        <Col md={5} >
+        <Col md={3} >
         <p className={`${styles.Underline}`}>Post Production Accountants</p>
         </Col>
         <Col md={1} >
@@ -431,16 +439,18 @@ const BudgetPost = (props) => {
         </Row>
         {/* hr */}
         <Row>
-        <Col >
+        <Col md={1}></Col>
+        <Col md={10} >
         <hr className={`${styles.Break1} mt-0 mb-0`}/>
         </Col>
         </Row>
         {/* Post Production Accounting Assistants */}
         <Row  >
+        <Col md={1}></Col>
         <Col md={1} >
         <p className={`${styles.Underline}`}>42.50</p>
         </Col>
-        <Col md={5} >
+        <Col md={3} >
         <p className={`${styles.Underline}`}>Post Production Accounting Assistants</p>
         </Col>
         <Col md={1} >
@@ -476,16 +486,18 @@ const BudgetPost = (props) => {
         </Row>
         {/* hr */}
         <Row>
-        <Col >
+        <Col md={1}></Col>
+        <Col md={10} >
         <hr className={`${styles.Break1} mt-0 mb-0`}/>
         </Col>
         </Row>
         {/* Post Production Consultant */}
         <Row>
+        <Col md={1}></Col>
         <Col md={1} >
         <p className={`${styles.Underline}`}>42.60</p>
         </Col>
-        <Col md={9} >
+        <Col md={7} >
         <p className={`${styles.Underline}`}>Post Production Consultant</p>
         </Col>
         <Col md={2}>
@@ -497,16 +509,18 @@ const BudgetPost = (props) => {
         </Row>
         {/* hr */}
         <Row>
-        <Col >
+        <Col md={1}></Col>
+        <Col md={10} >
         <hr className={`${styles.Break1} mt-0 mb-0`}/>
         </Col>
         </Row>
         {/* Post Production Office Rental */}
         <Row>
+        <Col md={1}></Col>
         <Col md={1} >
         <p className={`${styles.Underline}`}>42.70</p>
         </Col>
-        <Col md={9} >
+        <Col md={7} >
         <p className={`${styles.Underline}`}>Post Production Office Rental</p>
         </Col>
         <Col md={2}>
@@ -518,16 +532,18 @@ const BudgetPost = (props) => {
         </Row>
         {/* hr */}
         <Row>
-        <Col >
+        <Col md={1}></Col>
+        <Col md={10} >
         <hr className={`${styles.Break1} mt-0 mb-0`}/>
         </Col>
         </Row>
         {/* Post Office Equipment */}
         <Row>
+        <Col md={1}></Col>
         <Col md={1} >
         <p className={`${styles.Underline}`}>42.80</p>
         </Col>
-        <Col md={9} >
+        <Col md={7} >
         <p className={`${styles.Underline}`}>Post Office Equipment</p>
         </Col>
         <Col md={2}>
@@ -539,16 +555,18 @@ const BudgetPost = (props) => {
         </Row>
         {/* hr */}
         <Row>
-        <Col >
+        <Col md={1}></Col>
+        <Col md={10} >
         <hr className={`${styles.Break1} mt-0 mb-0`}/>
         </Col>
         </Row>
         {/* Post Office Supplies */}
         <Row>
+        <Col md={1}></Col>
         <Col md={1} >
         <p className={`${styles.Underline}`}>42.90</p>
         </Col>
-        <Col md={9} >
+        <Col md={7} >
         <p className={`${styles.Underline}`}>Post Office Supplies</p>
         </Col>
         <Col md={2}>
@@ -560,16 +578,18 @@ const BudgetPost = (props) => {
         </Row>
         {/* hr */}
         <Row>
-        <Col >
+        <Col md={1}></Col>
+        <Col md={10} >
         <hr className={`${styles.Break1} mt-0 mb-0`}/>
         </Col>
         </Row>
         {/* Post IT, Network Equipment & Support*/}
         <Row>
+        <Col md={1}></Col>
         <Col md={1} >
         <p className={`${styles.Underline}`}>42.91</p>
         </Col>
-        <Col md={9} >
+        <Col md={7} >
         <p className={`${styles.Underline}`}>Post IT, Network Equipment & Support</p>
         </Col>
         <Col md={2}>
@@ -581,16 +601,18 @@ const BudgetPost = (props) => {
         </Row>
         {/* hr */}
         <Row>
-        <Col >
+        <Col md={1}></Col>
+        <Col md={10} >
         <hr className={`${styles.Break1} mt-0 mb-0`}/>
         </Col>
         </Row>
         {/* Post Phone & Internet */}
         <Row>
+        <Col md={1}></Col>
         <Col md={1} >
         <p className={`${styles.Underline}`}>42.92</p>
         </Col>
-        <Col md={9} >
+        <Col md={7} >
         <p className={`${styles.Underline}`}>Post Phone & Internet</p>
         </Col>
         <Col md={2}>
@@ -602,16 +624,18 @@ const BudgetPost = (props) => {
         </Row>
         {/* hr */}
         <Row>
-        <Col >
+        <Col md={1}></Col>
+        <Col md={10} >
         <hr className={`${styles.Break1} mt-0 mb-0`}/>
         </Col>
         </Row>
         {/* Post Computers & Software */}
         <Row>
+        <Col md={1}></Col>
         <Col md={1} >
         <p className={`${styles.Underline}`}>42.93</p>
         </Col>
-        <Col md={9} >
+        <Col md={7} >
         <p className={`${styles.Underline}`}>Post Computers & Software</p>
         </Col>
         <Col md={2}>
@@ -623,16 +647,18 @@ const BudgetPost = (props) => {
         </Row>
         {/* hr */}
         <Row>
-        <Col >
+        <Col md={1}></Col>
+        <Col md={10} >
         <hr className={`${styles.Break1} mt-0 mb-0`}/>
         </Col>
         </Row>
         {/* Post Storage */}
         <Row>
+        <Col md={1}></Col>
         <Col md={1} >
         <p className={`${styles.Underline}`}>42.94</p>
         </Col>
-        <Col md={9} >
+        <Col md={7} >
         <p className={`${styles.Underline}`}>Post Storage</p>
         </Col>
         <Col md={2}>
@@ -644,16 +670,18 @@ const BudgetPost = (props) => {
         </Row>
         {/* hr */}
         <Row>
-        <Col >
+        <Col md={1}></Col>
+        <Col md={10} >
         <hr className={`${styles.Break1} mt-0 mb-0`}/>
         </Col>
         </Row>
         {/* Post Shipping */}
         <Row>
+        <Col md={1}></Col>
         <Col md={1} >
         <p className={`${styles.Underline}`}>42.95</p>
         </Col>
-        <Col md={9} >
+        <Col md={7} >
         <p className={`${styles.Underline}`}>Post Shipping</p>
         </Col>
         <Col md={2}>
@@ -665,16 +693,18 @@ const BudgetPost = (props) => {
         </Row>
         {/* hr */}
         <Row>
-        <Col >
+        <Col md={1}></Col>
+        <Col md={10} >
         <hr className={`${styles.Break1} mt-0 mb-0`}/>
         </Col>
         </Row>
         {/* Post Catering & Craft Services */}
         <Row>
+        <Col md={1}></Col>
         <Col md={1} >
         <p className={`${styles.Underline}`}>42.96</p>
         </Col>
-        <Col md={9} >
+        <Col md={7} >
         <p className={`${styles.Underline}`}>Post Catering & Craft Services</p>
         </Col>
         <Col md={2}>
@@ -686,16 +716,18 @@ const BudgetPost = (props) => {
         </Row>
         {/* hr */}
         <Row>
-        <Col >
+        <Col md={1}></Col>
+        <Col md={10} >
         <hr className={`${styles.Break1} mt-0 mb-0`}/>
         </Col>
         </Row>
         {/* Other */}
         <Row>
+        <Col md={1}></Col>
         <Col md={1} >
         <p className={`${styles.Underline}`}>42.97</p>
         </Col>
-        <Col md={9} >
+        <Col md={7} >
         <p className={`${styles.Underline}`}>Other</p>
         </Col>
         <Col md={2}>
@@ -707,16 +739,18 @@ const BudgetPost = (props) => {
         </Row>
         {/* hr */}
         <Row>
-        <Col >
+        <Col md={1}></Col>
+        <Col md={10} >
         <hr className={`${styles.Break1} mt-0 mb-0`}/>
         </Col>
         </Row>
-        {/* Fringes & Taxes post_other */}
+        {/* Fringes & Taxes */}
         <Row>
+        <Col md={1}></Col>
         <Col md={1} >
         <p className={`${styles.Underline}`}>42.98</p>
         </Col>
-        <Col md={9} >
+        <Col md={7} >
         <p className={`${styles.Underline}`}>Fringes & Taxes</p>
         </Col>
         <Col md={2}>
@@ -728,20 +762,22 @@ const BudgetPost = (props) => {
         </Row>
         {/* hr */}
         <Row>
-        <Col >
+        <Col md={1}></Col>
+        <Col md={10} >
         <hr className={`${styles.Break1} mt-0 mb-0`}/>
         </Col>
         </Row>
         {/* POST PRODUCTION STAFF/FACILITIES Total */}
         <Row className='mt-3 mb-1' >
+        <Col md={1}></Col>
         <Col md={1} >
         <p className={`${styles.Underline}`}></p>
         <p></p>
         </Col>
-        <Col className={ `${styles.Overview} my-0 py-0`} md={6} >
+        <Col className={ `${styles.Overview} my-0 pt-1`} md={6} >
         <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL POST PRODUCTION STAFF/FACILITIES </p>
         </Col>
-        <Col md={3} >
+        <Col md={1} >
         </Col>
         <Col md={2} >
         <div className={`${styles.Box3} 
@@ -752,12 +788,13 @@ const BudgetPost = (props) => {
         </Row>
         {/* hr */}
         <Row>
-        <Col >
+        <Col md={1}></Col>
+        <Col md={10} >
         <hr className={`${styles.Break1} mt-0 mb-0`}/>
         </Col>
         </Row>
         </div>
-        {/* EDITING ----------------------------------------------- */}
+        {/* EDITING here----------------------------------------------- */}
         <div className='mt-4'>
         <Row>
         <Col xs={1}>
