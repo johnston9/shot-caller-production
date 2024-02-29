@@ -8,8 +8,8 @@ import btnStyles from "../../../styles/Button.module.css";
 import Button from "react-bootstrap/Button";
 import InfoGlobals from "./InfoGlobals";
 
-const Globals = () => {
-  const [showInformation, setShowInformation] = useState(false);
+const Globals = ({setShow}) => {
+  const [showInfo, setShowInfo] = useState(false);
 
   return (
     <div>
@@ -17,9 +17,11 @@ const Globals = () => {
         <Col md={{span: 10, offset: 1}}>
         <div className={`text-center px-3 pt-1 ${styles.SubTitle2 }`}>
         <h5 className={`text-center `} >Globals</h5> 
+        </div> 
+        <div className={`px-3 pt-1 ${styles.SubTitle77 }`}>
         {/* close/INFO */}
         <Row className="mt-1 ml-2 px-3" >
-            <Col xs={12}>
+            <Col >
             <Button
               className={`${btnStyles.Button} ${btnStyles.Blue} mb-2`}
               onClick={() => setShow(false)}
@@ -37,7 +39,7 @@ const Globals = () => {
               ) : (
                 <InfoGlobals  /> 
         ) }  
-         </div> 
+        </div>
         </Col>
       </Row>
     </div>

@@ -949,7 +949,7 @@ const Budget = (props) => {
     <h2 className={`py-2 ${styles.BoldBlack} ${appStyles.playfair}
      text-center`} >{title} Budget Pages </h2>
     </div>
-    {/* back/INFO */}
+    {/* back/INFO*/}
     <Row className="mt-1 ml-2 px-3" >
         <Col xs={12}>
         <Button
