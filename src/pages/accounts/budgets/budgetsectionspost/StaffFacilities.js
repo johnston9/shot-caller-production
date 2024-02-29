@@ -1108,14 +1108,14 @@ const StaffFacilities = (props) => {
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>
-    {/* Other */}
+    {/* Other - incl. 6th/7th Days, Overtime and Holidays */}
     <Row className="py-1 d-flex align-items-center">
     <Col md={1} ></Col>
     <Col md={1} >
     <p className={`${styles.Underline}`}>42.97</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Other</p>
+    <p className={`${styles.Underline}`}>Other - incl. 6th/7th Days, Overtime and Holidays</p>
     </Col>
     <Col md={1} >
     <p></p>

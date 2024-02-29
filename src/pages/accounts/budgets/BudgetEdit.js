@@ -9758,7 +9758,9 @@ function BudgetEdit() {
     {!showGlobals ? (
       ""
           ) : (
-            <Globals  /> 
+            <Globals
+            setShow={setShowGlobals}
+            /> 
     ) } 
     <Form className="mt-1 px-3" onSubmit={handleSubmit}>
       <Row>

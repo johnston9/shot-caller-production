@@ -1263,7 +1263,7 @@ const Postsound = (props) => {
     <p className={`${styles.Underline}`}>44.99</p>
     </Col>
     <Col md={6} >
-    <p className={`${styles.Underline}`}>Other</p>
+    <p className={`${styles.Underline}`}>Other - incl. 6th/7th Days, Overtime and Holidays</p>
     </Col>
     <Col md={1} >
     <p></p>

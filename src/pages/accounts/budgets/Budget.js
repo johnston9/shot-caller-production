@@ -14,7 +14,7 @@ import BudgetPost from './BudgetPost';
 
 const Budget = (props) => {
   const [showInfo, setShowInfo] = useState(false);
-  const [showPost, setShowPost] = useState(false);
+  // const [showPost, setShowPost] = useState(false);
 
   const {
     budget1, budget2, budget3, projectId,
@@ -921,62 +921,6 @@ const Budget = (props) => {
     film_stock, video_stock, digital_stock, transfer_stock,
     hard_drives, dalies, telecine, audio_stock, magnetic_transfer,
     stills, loss_dam_lab, other_lab, stockLab_total,
-    // Post Production Staff/Facilities
-    post_supervisor_qty, post_supervisor_uno, 
-    post_supervisor_una, post_supervisor_rt, 
-    post_coordinator_qty, post_coordinator_uno,
-    post_coordinator_una, post_coordinator_rt,
-    post_assistants_qty, post_assistants_uno,
-    post_assistants_una, post_assistants_rt,
-    post_accountants_qty, post_accountants_uno,
-    post_accountants_una, post_accountants_rt,
-    post_accountants_ass_qty, post_accountants_ass_uno,
-    post_accountants_ass_una, post_accountants_ass_rt,
-    post_office_rent, post_office_equ, post_office_sup, post_consultant, 
-    post_it_network, post_phone_net, post_computers_soft, post_store,
-    post_ship, post_craft, fringes_taxes_post, post_other,
-    postSuper_total,postCoordin_total, postAssist_total, 
-    postAccount_total, postAccountAss_total, postStaffFac_total,
-    // Editing
-    editor_qty, editor_uno, editor_una, editor_rt,
-    editor_vfx_qty, editor_vfx_uno, editor_vfx_una, editor_vfx_rt,
-    editor_ass_qty, editor_ass_uno, editor_ass_una, editor_ass_rt,
-    colorist_grader_qty, colorist_grader_uno, colorist_grader_una, colorist_grader_rt,
-    graphics_qty, graphics_uno, graphics_una, graphics_rt,
-    edit_rooms, edit_equip, edit_equip_nonlin, online,
-    vfx_ed_system, post_edit_pur, lossdam_edit, fringes_taxes_post_edit,
-    other_post_edit, editor_total, editorVfx_total, editorAss_total,
-    grader_total, graphics_total, editing_total,
-    // Post Sound
-    sound_designer_qty, sound_designer_uno, sound_designer_una, sound_designer_rt,
-    editor_sound_qty, editor_sound_uno, editor_sound_una, editor_sound_rt,
-    editor_music_qty, editor_music_uno, editor_music_una, editor_music_rt,
-    ed_sound_ass_qty, ed_sound_ass_uno, ed_sound_ass_una, ed_sound_ass_rt,
-    adr_super_qty, adr_super_uno, adr_super_una, adr_super_rt,
-    foley_labour_qty, foley_labour_uno, foley_labour_una, foley_labour_rt,
-    sound_edit_rooms, sound_edit_equ, music_edit_equ,
-    post_sound_edit_pur, adr, foley, pre_mix, mix, printmaster, transfers_deliverables,
-    lossdam_sound, fringes_taxes_post_sound, other_post_sound,
-    desSound_total, editorSound_total, editorMusic_total, 
-    soundEdAss_total, adrSup_total, folLab_total, postSound_total,
-    // VFX
-    vfx_producer, vfx_supervisor, vfx_coordinator, vfx_post_other_lab,
-    vfx_storyboard, vfx_pre_vis_team, vfx_post_vis_team, cyberscanning,
-    vfx_rentals, vfx_purchases, vfx_vendor_1, vfx_vendor_2, vfx_vendor_3,
-    vfx_vendor_4, vfx_vendor_5, vfx_vendor_6, vfx_vendor_7, vfx_vendor_8,
-    vfx_vendor_9, vfx_vendor_10, vfx_vendors_x, vfx_traliv, vfx_expenses,
-    miniatures_build, miniatures_shoot, motion_capture, lossdam_vfx,
-    box_ren_vfx, fringes_taxes_vfx, other_post_vfx, postVfx_total,
-    // Post Lab/Video Copies
-    stock, neg_cutting, color_cor, interpos_neg, prints,
-    transfers, other_media_delivery, distribution_copies, 
-    storage_post, postLab_total,
-    // Post Titles/Opticals/Stock Footage
-    titles, opticals, stock_footage, con_script_ccsl, postTitles_total,
-    // Versioning,
-    dubs, subtitles, closed_caption, versioning, trailers,
-    ads, transfers_ver, prints_ver, dig_copies_ver, 
-    other_copies_ver, postVersion_total,
     // Publicity
     tests_theater_ren, tests_other, unit_publicist,
     pub_press_ex, photography, epk, promotion, pr, firnges_pub,
@@ -28409,7 +28353,7 @@ const Budget = (props) => {
       /> 
     ) } */}
     <BudgetPost
-      setShow={setShowPost}
+      // setShow={setShowPost}
       budget={budget13}
       post_productionC_total={post_productionC_total}
       belowB_andC_total={belowB_andC_total}
@@ -29381,7 +29325,7 @@ const Budget = (props) => {
     </Row>
     </div>
     {/* TOTAL - GRAND */}
-    <div className='mt-5 px-3'>
+    <div className='mt-5 px-3 pb-3'>
     <Row className='pl-3 mb-3' >
     <Col md={1} ></Col>
     <Col className={ `${styles.Overview} my-0 pt-1`} md={8} >
