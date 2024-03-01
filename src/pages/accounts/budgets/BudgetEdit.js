@@ -63,7 +63,8 @@ import Insurance from "./budgetsectionsother/Insurance";
 import GeneralEx from "./budgetsectionsother/GeneralEx";
 import IndirectCosts from "./budgetsectionsother/IndirectCosts";
 import InfoBudEdit from "./InfoBudEdit";
-import Globals from "./Globals";
+import InfoGlobals from "./InfoGlobals";
+// import Globals from "./Globals";
 
 function BudgetEdit() {
   const [errors, setErrors] = useState({});
@@ -135,6 +136,59 @@ function BudgetEdit() {
   const [budgetNumber1, setBudgetNumber1] = useState("");
   const [budgetNumber2, setBudgetNumber2] = useState("");
   const [budgetNumber3, setBudgetNumber3] = useState("");
+
+  // GLOBALS
+  const [globalData, setGlobalData] = useState({
+    prep_global: "",
+    shoot_global: "",
+    wrap_global: "",
+  })
+
+  const {prep_global, shoot_global, wrap_global} = globalData;
+
+  const handleChangeGlobals = (event) => {
+    setGlobalData({
+      ...globalData,
+      [event.target.name]: event.target.value.replace(/[^0-9.]/g, ''),
+    });
+  };
+
+  const setPrep = () => {
+    /* Function to set all crew call times to the unit call time */
+    setPostDataProduction({
+      ...postDataProduction,
+    production_manager_uno_prep: prep_global,
+    });
+    setPostDataDesign({
+      ...postDataDesign,
+      pro_designer_uno_prep: prep_global,
+    });
+  };
+
+  const setShoot = () => {
+    /* Function to set all crew call times to the unit call time */
+    setPostDataProduction({
+      ...postDataProduction,
+      production_manager_units_number: shoot_global,
+    });
+    setPostDataDesign({
+      ...postDataDesign,
+      production_designer_units_number: shoot_global,
+    });
+  };
+
+  const setWrap = () => {
+    /* Function to set all crew call times to the unit call time */
+    setPostDataProduction({
+      ...postDataProduction,
+      production_manager_uno_wrap: wrap_global,
+    });
+    setPostDataDesign({
+      ...postDataDesign,
+      pro_designer_uno_wrap: wrap_global,
+    });
+  };
+
 
   // INFO / LENGTH-------------------------------
   // Info postData 
@@ -9744,8 +9798,122 @@ function BudgetEdit() {
           ) : (
             <InfoBudEdit  /> 
     ) } 
+    {/* GLOBALS */}
+    <div>
+    <Row className="mb-3">
+    <Col md={{span: 10, offset: 1}}>
+    <div className={`text-center px-3 pt-1 ${styles.SubTitle2 }`}>
+    <h5 className={`text-center `} >Globals</h5> 
+    </div> 
+    <div className={`px-3 pt-1 ${styles.SubTitle77 }`}>
+    {/* INFO */}
+    <Row className="mt-1 ml-2 px-3" >
+        <Col >
+        <Button
+          className={`float-right py-0 mt-1 ${btnStyles.Blue} ${btnStyles.Button}`}
+          onClick={() => setShowInfo(showInfo => !showInfo)} >Information
+        </Button>
+        </Col>
+    </Row>
+    {/* INFO COMPONENT */}
+    <div>
+    {!showInfo ? (
+      ""
+          ) : (
+            <InfoGlobals  /> 
+    ) }  
+    </div>
+    {/* Prep Shoot Wrap Globals input boxes and set buttons*/}
+    <div>
+    <Row>
+    {/* prep */}
+    <Col xs={4} className="d-flex justify-content-center p-0 p-md-2">
+    <Form.Group controlId="prep_global" 
+    className={`${styles.Width95} text-center mb-0`}  >
+        <Form.Label className={`${styles.Bold}`} >Prep Global</Form.Label>
+        <Form.Control 
+          className={`${styles.Input}`}
+          type="text"
+          name="prep_global"
+          value={prep_global}
+          onChange={handleChangeGlobals}
+            />
+    </Form.Group>
+    {errors?.prep_global?.map((message, idx) => (
+      <Alert variant="warning" key={idx}>
+        {message}
+      </Alert>
+    ))}
+    </Col>
+    {/* shoot */}
+    <Col xs={4} className="d-flex justify-content-center p-0 p-md-2">
+    <Form.Group controlId="shoot_global" 
+    className={`${styles.Width95} text-center mb-0`}>
+        <Form.Label className={`${styles.Bold} text-center`}>Shoot Global</Form.Label>
+        <Form.Control 
+          className={`${styles.Input}`}
+          type="text"
+          name="shoot_global"
+          value={shoot_global}
+          onChange={handleChangeGlobals}
+            />
+    </Form.Group>
+    {errors?.shoot_global?.map((message, idx) => (
+      <Alert variant="warning" key={idx}>
+        {message}
+      </Alert>
+    ))}
+    </Col>
+    {/* wrap */}
+    <Col xs={4} className="d-flex justify-content-center p-0 p-md-2">
+    <Form.Group controlId="wrap_global" 
+    className={`${styles.Width95} text-center mb-0`}>
+        <Form.Label className={`${styles.Bold} text-center`}>Wrap Global</Form.Label>
+        <Form.Control 
+          className={`${styles.Input}`}
+          type="text"
+          name="wrap_global"
+          value={wrap_global}
+          onChange={handleChangeGlobals}
+            />
+    </Form.Group>
+    {errors?.wrap_global?.map((message, idx) => (
+      <Alert variant="warning" key={idx}>
+        {message}
+      </Alert>
+    ))}
+    </Col>
+    </Row>
+    </div>
+    {/* Prep Shoot Wrap Globals set buttons*/}
+    <div>
+    <Row>
+    <Col xs={4} className="text-center" >
+    <Button
+        className={`py-0 my-2 px-5 ${btnStyles.Shed} ${btnStyles.Button}`}
+        onClick={setPrep} >SET PREP
+      </Button>
+    </Col>
+    <Col xs={4} className="text-center" >
+    <Button
+        className={`py-0 my-2 px-5 ${btnStyles.Shed} ${btnStyles.Button}`}
+        onClick={setShoot} >SET SHOOT
+    </Button>
+    </Col>
+    <Col xs={4} className="text-center" >
+    <Button
+      className={`py-0 my-2 px-5 ${btnStyles.Shed} ${btnStyles.Button}`}
+      onClick={setWrap} >SET WRAP
+    </Button>
+    </Col>
+    </Row>
+    </div>
+    </div>
+    </Col>
+    </Row>
+    </div>
     {/* Globals button */}
-    <Row className="mt-1 ml-0" >
+    {/* <Row className="mt-1 ml-0" >
         <Col className="text-center" xs={12}>
         <Button
           className={`py-1 px-5 mt-1 mb-3 ${btnStyles.Order} ${btnStyles.Button}`}
@@ -9753,26 +9921,29 @@ function BudgetEdit() {
             Globals
         </Button>
         </Col>
-    </Row>
+    </Row> */}
     {/* Globals */}
-    {!showGlobals ? (
+    {/* {!showGlobals ? (
       ""
           ) : (
             <Globals
+            setPostDataProduction={setPostDataProduction}
+            postDataProduction={postDataProduction}
             setShow={setShowGlobals}
             /> 
-    ) } 
-    <Form className="mt-1 px-3" onSubmit={handleSubmit}>
-      <Row>
-        <Col>
-        <p>One</p>
-        <p>{budgetId1} - {budgetNumber1} </p>
-        <p>Two</p>
-        <p>{budgetId2} - {budgetNumber2} </p>
-        <p>Three</p>
-        <p>{budgetId3} - {budgetNumber3} </p>
-        </Col>
-      </Row>
+    ) }  */}
+    {/* MAIN FORM */}
+    <Form className="mt-5 px-3" onSubmit={handleSubmit}>
+    {/* <Row>
+      <Col>
+      <p>One</p>
+      <p>{budgetId1} - {budgetNumber1} </p>
+      <p>Two</p>
+      <p>{budgetId2} - {budgetNumber2} </p>
+      <p>Three</p>
+      <p>{budgetId3} - {budgetNumber3} </p>
+      </Col>
+    </Row> */}
     {prepare}
     {/* above total */}
     <Row className={ `${styles.OverviewBlue} mx-1 mt-5 py-1`}>
