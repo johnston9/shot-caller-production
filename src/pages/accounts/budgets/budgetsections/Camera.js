@@ -1661,7 +1661,7 @@ const Camera = (props) => {
     <Form.Group controlId="cam_ac1_rt" 
         className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
-        type="number"
+        type="text"
         className={styles.Input}
         name="cam_ac1_rt"
         value={cam_ac1_rt}
@@ -2603,17 +2603,17 @@ const Camera = (props) => {
     <p className={`${styles.Underline7}`}>Shoot</p>
     </Col>
     <Col className="px-1 mx-0" md={1} >
-    <Form.Group controlId="stead_qty_wrap" 
+    <Form.Group controlId="steadicam_qty" 
         className={`${styles.Width95} text-center mb-0`} >
         <Form.Control 
         type="text"
         className={styles.Input}
-        name="stead_qty_wrap"
-        value={stead_qty_wrap}
+        name="steadicam_qty"
+        value={steadicam_qty}
         onChange={handleChange}
             />
     </Form.Group>
-    {errors?.stead_qty_wrap?.map((message, idx) => (
+    {errors?.steadicam_qty?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
         {message}
         </Alert>

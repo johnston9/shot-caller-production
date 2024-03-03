@@ -28,6 +28,9 @@ const BudgetPage = () => {
         setBudget2({ results: [budget2] });
         setBudget3({ results: [budget3] });
         setHasLoaded(true);
+        console.log(budget1);
+        console.log(budget2);
+        console.log(budget3);
         // const { data } = await axiosReq.get(`/budgets/?project=${id}`);
       } catch (err) {
         console.log(err);

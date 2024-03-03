@@ -2816,7 +2816,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>05.60</p>
     </Col>
     <Col md={7}>
-    <p className={`${styles.BoldBlack}`}>Fringes/Taxes</p>
+    <p className={`${styles.BoldBlack}`}>Fringes & Taxes</p>
     </Col>
     <Col md={2}>
     <div className={`${styles.Box3} 
@@ -2989,7 +2989,7 @@ const Budget = (props) => {
     <p className={`${styles.Underline}`}>05.94</p>
     </Col>
     <Col md={7}>
-    <p className={`${styles.BoldBlack}`}>Fringes and Taxes</p>
+    <p className={`${styles.BoldBlack}`}>Fringes & Taxes</p>
     </Col>
     <Col md={2}>
     <div className={`${styles.Box3} 
@@ -6583,8 +6583,8 @@ const Budget = (props) => {
     <Col md={1} >
     <div className={`${styles.Box} 
       py-0 d-flex align-items-center justify-content-center`}>
-    </div>
     <p className={`${styles.Underline}`}>{ass_director_2nd_una_wrap}</p>
+    </div>
     </Col>
     <Col md={1} >
     <div className={`${styles.Box} 
@@ -28832,7 +28832,8 @@ const Budget = (props) => {
     </Row>
     {/* hr */}
     <Row>
-    <Col >
+    <Col md={1}></Col>
+    <Col md={10} >
     <hr className={`${styles.Break1} mt-0 mb-0`}/>
     </Col>
     </Row>

@@ -810,7 +810,7 @@ const ProductionStaff = (props) => {
     const addproassprep = () => {
       setProassprepTotal((parseFloat(production_ass_qty_prep || 0) * 
       parseFloat(production_ass_uno_prep || 0) * 
-      parseFloat(production_assistants_rate || 0)).toFixed())
+      parseFloat(production_ass_rt_prep || 0)).toFixed())
     }
     const timer = setTimeout(() => {
       addproassprep();

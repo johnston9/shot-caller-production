@@ -9797,7 +9797,7 @@ function BudgetEdit() {
           ) : (
             <InfoBudEdit  /> 
     ) } 
-    {/* GLOBALS */}
+    {/* GLOBALS in Edit Page*/}
     <div>
     <Row className="mb-3">
     <Col md={{span: 10, offset: 1}}>
@@ -9921,16 +9921,42 @@ function BudgetEdit() {
         </Button>
         </Col>
     </Row>
-    {/* Globals */}
+    {/* Globals Component */}
     {!showGlobals ? (
       ""
           ) : (
             <Globals
-            setPostDataProduction={setPostDataProduction}
+            setShow={setShowGlobals}
             postDataProduction={postDataProduction}
+            setPostDataProduction={setPostDataProduction}
             postDataDesign={postDataDesign}
             setPostDataDesign={setPostDataDesign}
-            setShow={setShowGlobals}
+            postDataConstruction={postDataConstruction}
+            setPostDataConstruction={setPostDataConstruction}
+            postDataSetDressing={postDataSetDressing}
+            setPostDataSetDressing={setPostDataSetDressing}
+            postDataProperty={postDataProperty}
+            setPostDataProperty={setPostDataProperty}
+            postDataWrangling={postDataWrangling}
+            setPostDataWrangling={setPostDataWrangling}
+            postDataSpecialEffects={postDataSpecialEffects}
+            setPostDataSpecialEffects={setPostDataSpecialEffects}
+            postDataWardrobe={postDataWardrobe}
+            setPostDataWardrobe={setPostDataWardrobe}
+            postDataMakeup={postDataMakeup}
+            setPostDataMakeup={setPostDataMakeup}
+            postDataCamera={postDataCamera}
+            setPostDataCamera={setPostDataCamera}
+            postDataElectric={postDataElectric}
+            setPostDataElectric={setPostDataElectric}
+            postDataGrip={postDataGrip}
+            setPostDataGrip={setPostDataGrip}
+            postDataSoundPro={postDataSoundPro}
+            setPostDataSoundPro={setPostDataSoundPro}
+            postDataTransport={postDataTransport}
+            setPostDataTransport={setPostDataTransport}
+            postDataTV={postDataTV}
+            setPostDataTV={setPostDataTV}
             /> 
     ) } 
     {/* MAIN FORM */}

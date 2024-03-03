@@ -527,7 +527,7 @@ const SetDressingLabour = (props) => {
         parseFloat(leadmanallTotal || 0) +
         parseFloat(dressallTotal || 0) +
         parseFloat(swinggallTotal || 0) +
-        parseFloat(dressingbuyerTotal || 0) +
+        parseFloat(dressbuyallTotal || 0) +
         parseFloat(days6th7th_dres || 0) +
         parseFloat(overtime_dres || 0) +
         parseFloat(holidays_dres || 0) +
