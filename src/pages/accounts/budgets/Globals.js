@@ -30,6 +30,7 @@ const Globals = (props) => {
   } = props;
 
   const [showInfo, setShowInfo] = useState(false);
+  // eslint-disable-next-line
   const [errors, setErrors] = useState({});
 
   // GLOBALS
@@ -402,10 +403,6 @@ const Globals = (props) => {
         set_dres_uno_wrap: wrap_global,
         swing_g_uno_wrap: wrap_global,
         set_d_buy_uno_wrap: wrap_global,
-        staaaaaaars: wrap_global,
-        staaaaaaars: wrap_global,
-        staaaaaaars: wrap_global,
-        staaaaaaars: wrap_global,
     });
     setPostDataProperty({
         ...postDataProperty,

@@ -17,6 +17,7 @@ import {
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
 import { useRedirect } from '../../hooks/Redirect';
+import TopBox from "../../components/TopBox";
 
 const UsernameForm = () => {
   useRedirect();
@@ -55,6 +56,18 @@ const UsernameForm = () => {
   };
 
   return (
+    <div className="px-3">
+      <TopBox title="Change Username" />
+    <Row>
+    <Col xs={3}>
+    <Button
+      className={`${btnStyles.Button} ${btnStyles.Blue} my-2`}
+      onClick={() => history.goBack()}
+    >
+      Back
+    </Button>
+    </Col>
+    </Row>
     <Row>
       <Col className="py-2 mx-auto text-center" md={6}>
         <Container className={appStyles.Content}>
@@ -89,6 +102,7 @@ const UsernameForm = () => {
         </Container>
       </Col>
     </Row>
+    </div>
   );
 };
 

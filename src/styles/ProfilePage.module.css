@@ -1,3 +1,28 @@
+.Name {
+    color: rgb(17, 91, 91);
+    font-style: italic;
+}
+
+.Back2 {
+    background-color: rgb(17, 91, 91);
+}
+
+.Back2 h3 {
+    color: #fff;
+}
+
+.Back2 h4 {
+    color: #fff;
+}
+
+.White {
+    color: #fff;
+}
+
+.Break7 {
+    border-top: 1px solid #1e98ae;
+}
+
 .TopName {
     font-size: 1.25rem;
 }

@@ -7,7 +7,7 @@ import React from 'react';
 import styles from "../../styles/Profiles.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import { useCurrentUser } from '../../contexts/CurrentUserContext';
-import { Link } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import Avatar from '../../components/Avatar';
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
@@ -44,7 +44,7 @@ const Profile = (props) => {
                     <div>
                     <h5 className={`${styles.WordBreakWhite}`}
                     style={{ textTransform: 'capitalize'}}> 
-                    {name} {owner}
+                    {name}
                     </h5>
                     </div>
                     </Col>
