@@ -1033,8 +1033,8 @@ const Budget = (props) => {
     {/* BUDGET ALL */}
     <div className={`${styles.WhiteBack} mx-5 mt-3 mb-5`}>
     <div className='mt-3'>
-    <Row className={ `${styles.OverviewBlue} mx-0 my-3 py-3 text-center`}>
-    <Col md={12}>
+    <Row className={ `${styles.OverviewBlue} mx-0 mt-3 py-3 text-center`}>
+    <Col xs={12}>
     <h5 className={ `${styles.BoldBlack}`}>BUDGET DETAIL PAGE</h5>
     </Col>
     </Row>
