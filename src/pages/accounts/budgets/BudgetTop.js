@@ -352,9 +352,9 @@ contingency, completion_bond, transportlabour_total, tvspecificlabour_total,
     </div>
     {/* ABOVE THE LINE */}
     <div className='px-3 mt-5'>
-     {/* Title */}
+    {/* Title */}
     <Row className={ `${styles.OverviewBlue} mx-0 mb-2 mt-4 py-1 text-center`}>
-    <Col md={12}>
+    <Col xs={12}>
     <h5 className={ `${styles.BoldBlack}`}>ABOVE THE LINE - "A" </h5>
     </Col>
     </Row>
@@ -491,7 +491,7 @@ contingency, completion_bond, transportlabour_total, tvspecificlabour_total,
     <div className='px-3'>
      {/* Title */}
     <Row className={ `${styles.OverviewBlue} mx-1 mt-3 mb-2 py-1 text-center`}>
-    <Col md={12}>
+    <Col xs={12}>
     <h5 className={ `${styles.BoldBlack}`}>BELOW THE LINE - "B" PRODUCTION LABOUR </h5>
     </Col>
     </Row>
@@ -859,7 +859,7 @@ contingency, completion_bond, transportlabour_total, tvspecificlabour_total,
     <div className='px-3'>
      {/* Title */}
     <Row className={ `${styles.OverviewBlue} mx-1 mt-3 mb-2 py-1 text-center`}>
-    <Col md={12}>
+    <Col xs={12}>
     <h5 className={ `${styles.BoldBlack}`}>BELOW THE LINE - "B" PRODUCTION - COSTS </h5>
     </Col>
     </Row>
@@ -1325,217 +1325,344 @@ contingency, completion_bond, transportlabour_total, tvspecificlabour_total,
     </div>
     {/* "C" POST PRODUCTION ----------------------------------- */}
     <div className='px-3'>
+    {/* Title */}
     <Row className={ `${styles.OverviewBlue} mx-1 mt-3 mb-2 py-1 text-center`}>
-    <Col md={12}>
+    <Col xs={12}>
     <h5 className={ `${styles.BoldBlack}`}>"C" POST PRODUCTION</h5>
     </Col>
     </Row>
-    {/* POST PRODUCTION STAFF/FACILITIES*/}
-    <Row>
-    <Col md={1} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
-    <p className="mb-2">42.00</p>
-    </Col>
-    <Col md={9} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`} >
-    <p className={ `${styles.BoldBlack} pb-0 mb-0`}>POST PRODUCTION STAFF/FACILITIES</p>
-    </Col>
-    <Col md={2} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
-    <p className="mb-2">{postStaffFac_total}</p>
-    </Col>
-    </Row>
-    {/* EDITING */}
-    <Row>
-    <Col md={1} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
-    <p className="mb-2">43.00</p>
-    </Col>
-    <Col md={9} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`} >
-    <p className={ `${styles.BoldBlack} pb-0 mb-0`}>EDITING</p>
-    </Col>
-    <Col md={2} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
-    <p className="mb-2">{editing_total}</p>
-    </Col>
-    </Row>
-    {/* POST SOUND */}
-    <Row>
-    <Col md={1} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
-    <p className="mb-2">44.00</p>
-    </Col>
-    <Col md={9} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`} >
-    <p className={ `${styles.BoldBlack} pb-0 mb-0`}>POST SOUND</p>
-    </Col>
-    <Col md={2} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
-    <p className="mb-2">{postSound_total}</p>
-    </Col>
-    </Row>
-    {/* VISUAL EFFECTS */}
-    <Row>
-    <Col md={1} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
-    <p className="mb-2">45.00</p>
-    </Col>
-    <Col md={9} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`} >
-    <p className={ `${styles.BoldBlack} pb-0 mb-0`}>VISUAL EFFECTS</p>
-    </Col>
-    <Col md={2} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
-    <p className="mb-2">{postVfx_total}</p>
-    </Col>
-    </Row>
-    {/* POST LAB/VIDEO COPIES */}
-    <Row>
-    <Col md={1} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
-    <p className="mb-2">46.00</p>
-    </Col>
-    <Col md={9} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`} >
-    <p className={ `${styles.BoldBlack} pb-0 mb-0`}>POST PRODUCTION LAB/VIDEO COPIES</p>
-    </Col>
-    <Col md={2} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
-    <p className="mb-2">{postLab_total}</p>
-    </Col>
-    </Row>
-    {/* TITLES/OPTICALS/STOCK FOOTAGE */}
-    <Row>
-    <Col md={1} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
-    <p className="mb-2">47.00</p>
-    </Col>
-    <Col md={9} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`} >
-    <p className={ `${styles.BoldBlack} pb-0 mb-0`}>TITLES/OPTICALS/STOCK FOOTAGE</p>
-    </Col>
-    <Col md={2} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
-    <p className="mb-2">{postTitles_total}</p>
-    </Col>
-    </Row>
-    {/* VERSIONING/CLOSED-CAPTIONING/COPIES */}
-    <Row>
-    <Col md={1} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
-    <p className="mb-2">48.00</p>
-    </Col>
-    <Col md={9} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`} >
-    <p className={ `${styles.BoldBlack} pb-0 mb-0`}>VERSIONING/CLOSED-CAPTIONING/COPIES</p>
-    </Col>
-    <Col md={2} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
-    <p className="mb-2">{postVersion_total}</p>
-    </Col>
-    </Row>
+    {/* Sections */}
+     <Row>
+     <Col md={6} className={ `${styles.RightBorder} my-0 py-0`}>
+     {/* POST PRODUCTION STAFF/FACILITIES */}
+     <Row className='px-3' >
+     <Col md={1} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
+     <p className={`${styles.Underline}`}>42.00</p>
+     </Col>
+     <Col md={9} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`} >
+     <p className={ `${styles.BoldBlack} pb-0 mb-0`}>POST PRODUCTION STAFF/FACILITIES</p>
+     </Col>
+     <Col md={2} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
+     <div className={`${styles.Box7} 
+          d-flex align-items-center justify-content-center`}>
+     <p className={`${styles.Underline}`}>{postStaffFac_total}</p>
+     </div>
+     </Col>
+     </Row>
+     {/* hr */}
+     <Row>
+     <Col >
+     <hr className={`${styles.Break3} mb-1 mt-1`}/>
+     </Col>
+     </Row>
+     {/* EDITING */}
+     <Row className='px-3' >
+     <Col md={1} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
+     <p className={`${styles.Underline}`}>43.00</p>
+     </Col>
+     <Col md={9} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`} >
+     <p className={ `${styles.BoldBlack} pb-0 mb-0`}>EDITING</p>
+     </Col>
+     <Col md={2} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
+     <div className={`${styles.Box7} 
+          d-flex align-items-center justify-content-center`}>
+     <p className={`${styles.Underline}`}>{editing_total}</p>
+     </div>
+     </Col>
+     </Row>
+     {/* hr */}
+     <Row>
+     <Col >
+     <hr className={`${styles.Break3} mb-1 mt-1`}/>
+     </Col>
+     </Row>
+     {/* POST SOUND */}
+     <Row className='px-3' >
+     <Col md={1} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
+     <p className={`${styles.Underline}`}>44.00</p>
+     </Col>
+     <Col md={9} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`} >
+     <p className={ `${styles.BoldBlack} pb-0 mb-0`}>POST SOUND</p>
+     </Col>
+     <Col md={2} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
+     <div className={`${styles.Box7} 
+          d-flex align-items-center justify-content-center`}>
+     <p className={`${styles.Underline}`}>{postSound_total}</p>
+     </div>
+     </Col>
+     </Row>
+     {/* hr */}
+     <Row>
+     <Col >
+     <hr className={`${styles.Break3} mb-1 mt-1`}/>
+     </Col>
+     </Row>
+     {/* VISUAL EFFECTS */}
+     <Row className='px-3' >
+     <Col md={1} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
+     <p className={`${styles.Underline}`}>45.00</p>
+     </Col>
+     <Col md={9} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`} >
+     <p className={ `${styles.BoldBlack} pb-0 mb-0`}>VISUAL EFFECTS</p>
+     </Col>
+     <Col md={2} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
+     <div className={`${styles.Box7} 
+          d-flex align-items-center justify-content-center`}>
+     <p className={`${styles.Underline}`}>{postVfx_total}</p>
+     </div>
+     </Col>
+     </Row>
+     {/* hr */}
+     <Row>
+     <Col >
+     <hr className={`${styles.Break3} mb-1 mt-1`}/>
+     </Col>
+     </Row>
+     </Col>
+     <Col md={6} >
+     {/* POST PRODUCTION LAB/VIDEO COPIES */}
+     <Row className='px-3' >
+     <Col md={1} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
+     <p className={`${styles.Underline}`}>46.00</p>
+     </Col>
+     <Col md={9} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`} >
+     <p className={ `${styles.BoldBlack} pb-0 mb-0`}>POST PRODUCTION LAB/VIDEO COPIES</p>
+     </Col>
+     <Col md={2} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
+     <div className={`${styles.Box7} 
+          d-flex align-items-center justify-content-center`}>
+     <p className={`${styles.Underline}`}>{postLab_total}</p>
+     </div>
+     </Col>
+     </Row>
+     {/* hr */}
+     <Row>
+     <Col >
+     <hr className={`${styles.Break3} mb-1 mt-1`}/>
+     </Col>
+     </Row>
+     {/* TITLES/OPTICALS/STOCK FOOTAGE */}
+     <Row className='px-3' >
+     <Col md={1} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
+     <p className={`${styles.Underline}`}>47.00</p>
+     </Col>
+     <Col md={9} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`} >
+     <p className={ `${styles.BoldBlack} pb-0 mb-0`}>TITLES/OPTICALS/STOCK FOOTAGE</p>
+     </Col>
+     <Col md={2} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
+     <div className={`${styles.Box7} 
+          d-flex align-items-center justify-content-center`}>
+     <p className={`${styles.Underline}`}>{postTitles_total}</p>
+     </div>
+     </Col>
+     </Row>
+     {/* hr */}
+     <Row>
+     <Col >
+     <hr className={`${styles.Break3} mb-1 mt-1`}/>
+     </Col>
+     </Row>
+     {/* VERSIONING/CLOSED-CAPTIONING/COPIES */}
+     <Row className='px-3' >
+     <Col md={1} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
+     <p className={`${styles.Underline}`}>48.00</p>
+     </Col>
+     <Col md={9} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`} >
+     <p className={ `${styles.BoldBlack} pb-0 mb-0`}>VERSIONING/CLOSED-CAPTIONING/COPIES</p>
+     </Col>
+     <Col md={2} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
+     <div className={`${styles.Box7} 
+          d-flex align-items-center justify-content-center`}>
+     <p className={`${styles.Underline}`}>{postVersion_total}</p>
+     </div>
+     </Col>
+     </Row>
+     {/* hr */}
+     <Row>
+     <Col >
+     <hr className={`${styles.Break3} mb-1 mt-1`}/>
+     </Col>
+     </Row>
+     </Col>
+     </Row>
     {/* TOTAL - POST PRODUCTION "C" */}
-    <Row className='mt-3 mb-3' >
+    <Row className='mt-3' >
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     <p></p>
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={9} >
-    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - POST PRODUCTION "C" </p>
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - POST PRODUCTION "C"</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Bold} mb-0`}>{post_productionC_total || 0}</p>
+    <div className={`${styles.Box7} 
+         d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.BoldBlack} mb-0`}>{post_productionC_total || 0}</p>
+    </div>
     </Col>
     </Row>
     {/* TOTAL - BELOW "B" and "C" */}
-    <Row className='mt-3 mb-3' >
+    <Row className='mt-3' >
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     <p></p>
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={9} >
-    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - BELOW "B" and "C" </p>
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - BELOW "B" and "C"</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Bold} mb-0`}>{belowB_andC_total || 0}</p>
+    <div className={`${styles.Box7} 
+         d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.BoldBlack} mb-0`}>{belowB_andC_total || 0}</p>
+    </div>
     </Col>
     </Row>
     {/* TOTAL - ABOVE/BELOW "A" "B" and "C" */}
-    <Row className='mt-3 mb-3' >
+    <Row className='mt-3' >
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     <p></p>
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={9} >
-    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - ABOVE/BELOW "A" "B" and "C" </p>
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - ABOVE/BELOW "A" "B" and "C"</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Bold} mb-0`}>{above_belowABC_total || 0}</p>
+    <div className={`${styles.Box7} 
+         d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.BoldBlack} mb-0`}>{above_belowABC_total || 0}</p>
+    </div>
     </Col>
     </Row>
     </div>
     {/* "D" OTHER --------------------------------------------- */}
     <div className='px-3'>
+    {/* Title */}
     <Row className={ `${styles.OverviewBlue} mx-1 mt-3 mb-2 py-1 text-center`}>
-    <Col md={12}>
+    <Col xs={12}>
     <h5 className={ `${styles.BoldBlack}`}>"D" OTHER</h5>
     </Col>
     </Row>
-    {/* PUBLICITY */}
-    <Row>
-    <Col md={1} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
-    <p className="mb-2">49.00</p>
-    </Col>
-    <Col md={9} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`} >
-    <p className={ `${styles.BoldBlack} pb-0 mb-0`}>PUBLICITY</p>
-    </Col>
-    <Col md={2} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
-    <p className="mb-2">{pub_total}</p>
-    </Col>
-    </Row>
-    {/* INSURANCE */}
-    <Row>
-    <Col md={1} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
-    <p className="mb-2">50.00</p>
-    </Col>
-    <Col md={9} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`} >
-    <p className={ `${styles.BoldBlack} pb-0 mb-0`}>INSURANCE</p>
-    </Col>
-    <Col md={2} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
-    <p className="mb-2">{insur_total}</p>
-    </Col>
-    </Row>
-    {/* GENERAL EXPENSES */}
-    <Row>
-    <Col md={1} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
-    <p className="mb-2">51.00</p>
-    </Col>
-    <Col md={9} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`} >
-    <p className={ `${styles.BoldBlack} pb-0 mb-0`}>GENERAL EXPENSES</p>
-    </Col>
-    <Col md={2} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
-    <p className="mb-2">{genEx_total}</p>
-    </Col>
-    </Row>
-    {/* INDIRECT COSTS */}
-    <Row>
-    <Col md={1} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
-    <p className="mb-2">51.00</p>
-    </Col>
-    <Col md={9} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`} >
-    <p className={ `${styles.BoldBlack} pb-0 mb-0`}>INDIRECT COSTS</p>
-    </Col>
-    <Col md={2} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
-    <p className="mb-2">{indirCo_total}</p>
-    </Col>
-    </Row>
+    {/* Sections */}
+     <Row>
+     <Col md={6} className={ `${styles.RightBorder} my-0 py-0`}>
+     {/* PUBLICITY */}
+     <Row className='px-3' >
+     <Col md={1} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
+     <p className={`${styles.Underline}`}>49.00</p>
+     </Col>
+     <Col md={9} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`} >
+     <p className={ `${styles.BoldBlack} pb-0 mb-0`}>PUBLICITY</p>
+     </Col>
+     <Col md={2} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
+     <div className={`${styles.Box7} 
+          d-flex align-items-center justify-content-center`}>
+     <p className={`${styles.Underline}`}>{pub_total}</p>
+     </div>
+     </Col>
+     </Row>
+     {/* hr */}
+     <Row>
+     <Col >
+     <hr className={`${styles.Break3} mb-1 mt-1`}/>
+     </Col>
+     </Row>
+     {/* INSURANCE */}
+     <Row className='px-3' >
+     <Col md={1} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
+     <p className={`${styles.Underline}`}>50.00</p>
+     </Col>
+     <Col md={9} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`} >
+     <p className={ `${styles.BoldBlack} pb-0 mb-0`}>INSURANCE</p>
+     </Col>
+     <Col md={2} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
+     <div className={`${styles.Box7} 
+          d-flex align-items-center justify-content-center`}>
+     <p className={`${styles.Underline}`}>{insur_total}</p>
+     </div>
+     </Col>
+     </Row>
+     {/* hr */}
+     <Row>
+     <Col >
+     <hr className={`${styles.Break3} mb-1 mt-1`}/>
+     </Col>
+     </Row>
+     </Col>
+     <Col md={6} >
+     {/* GENERAL EXPENSES */}
+     <Row className='px-3' >
+     <Col md={1} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
+     <p className={`${styles.Underline}`}>51.00</p>
+     </Col>
+     <Col md={9} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`} >
+     <p className={ `${styles.BoldBlack} pb-0 mb-0`}>GENERAL EXPENSES</p>
+     </Col>
+     <Col md={2} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
+     <div className={`${styles.Box7} 
+          d-flex align-items-center justify-content-center`}>
+     <p className={`${styles.Underline}`}>{genEx_total}</p>
+     </div>
+     </Col>
+     </Row>
+     {/* hr */}
+     <Row>
+     <Col >
+     <hr className={`${styles.Break3} mb-1 mt-1`}/>
+     </Col>
+     </Row>
+     {/* INDIRECT COSTS */}
+     <Row className='px-3' >
+     <Col md={1} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
+     <p className={`${styles.Underline}`}>51.00</p>
+     </Col>
+     <Col md={9} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`} >
+     <p className={ `${styles.BoldBlack} pb-0 mb-0`}>INDIRECT COSTS</p>
+     </Col>
+     <Col md={2} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
+     <div className={`${styles.Box7} 
+          d-flex align-items-center justify-content-center`}>
+     <p className={`${styles.Underline}`}>{indirCo_total}</p>
+     </div>
+     </Col>
+     </Row>
+     {/* hr */}
+     <Row>
+     <Col >
+     <hr className={`${styles.Break3} mb-1 mt-1`}/>
+     </Col>
+     </Row>
+     </Col>
+     </Row>
     {/* TOTAL - OTHER "D" */}
-    <Row className='mt-3 mb-3' >
+    <Row className='mt-3' >
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     <p></p>
     </Col>
     <Col className={ `${styles.Overview} my-0 py-0`} md={9} >
-    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - OTHER "D" </p>
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - OTHER "D"</p>
     </Col>
     <Col md={2} >
-    <p className={`${styles.Bold} mb-0`}>{otherD_total || 0}</p>
+    <div className={`${styles.Box7} 
+         d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.BoldBlack} mb-0`}>{otherD_total || 0}</p>
+    </div>
     </Col>
     </Row>
-    </div>
     {/* TOTAL - A, B, C and D */}
-    <div className='px-3 mt-3'>
-    <Row className='mt-5' >
+    <Row className='mt-3' >
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     <p></p>
     </Col>
-    <Col className={ `${styles.Overview} my-0 py-2`} md={8} >
-    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - "A", "B", "C" and "D" </p>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={9} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - "A", "B", "C" and "D"</p>
     </Col>
-    <Col md={1}></Col>
     <Col md={2} >
-    <p className={`${styles.Bold} mb-0 my-2`}>{above_belowABCandD_total || 0}</p>
+    <div className={`${styles.Box7} 
+         d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.BoldBlack} mb-0`}>{above_belowABCandD_total || 0}</p>
+    </div>
     </Col>
     </Row>
     </div>
