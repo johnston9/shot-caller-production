@@ -132,8 +132,9 @@ function ChatsPage({message, filter=""} ) {
         </Form>
         </Col>
     </Row>
-    <Row>
-        <Col className="py-2 p-0 p-lg-2" >
+    <Row >
+        <Col md={1}></Col>
+        <Col md={10} className="py-2 mx-3" >
         {/* chats */}
         {hasLoaded ? (
           <>

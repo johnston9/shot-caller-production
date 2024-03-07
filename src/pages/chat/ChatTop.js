@@ -81,7 +81,7 @@ const ChatTop = (props) => {
       };
 
   return (
-    <div>
+    <div >
         <Card >
             <Card.Body className={`${styles.ChatTop} py-1`} >
             <Row className="d-flex align-items-center">
@@ -90,16 +90,70 @@ const ChatTop = (props) => {
                 <Avatar src={profile_image} height={45}  />
                 </Link>
                 </Col>
-                <Col xs={8} className='px-0' >
-                    <Row>
-                    <Col className='text-center px-0' xs={12} lg={6}>
-                    <span style={{textTransform: 'capitalize', color:'#fff'}} 
-                    >{name} {company} 
+                {/* xs */}
+                <Col xs={8} className='d-block d-lg-none' >
+                    <Row className="d-flex align-items-center">
+                    <Col className='text-center px-0' xs={12}>
+                    <span style={{fontWeight: '600', textTransform: 'capitalize', color:'#fff'}} 
+                    >{name} - <span style={{fontStyle:'italic'}}>{company} </span>
                      </span>
                     </Col>
-                    <Col className='text-center px-0' xs={12} lg={6}>
+                    </Row>
+                    <Row className="d-flex align-items-center">
+                    <Col className='text-center px-0 pb-0'
+                     xs={6}><span style={{color:'#fff'}} >{updated_at}</span></Col>
+                    <Col className='text-center px-0' xs={6} >
                     <div className={` ${styles.PostBar}`} >
-                    <span className='mr-2'>{updated_at}</span>
+                    {/* like */}
+                    {is_owner ? (
+                    <OverlayTrigger
+                    placement="top"
+                    overlay={<Tooltip>You can't like your own post!</Tooltip>}
+                    >
+                    <i className="far fa-heart" />
+                    </OverlayTrigger>
+                ) : like_id ? (
+                    <span onClick={handleUnlike}>
+                    <i className={`fas fa-heart ${styles.Heart}`} />
+                    </span>
+                ) : currentUser ? (
+                    <span onClick={handleLike}>
+                    <i className={`far fa-heart ${styles.HeartOutline}`} />
+                    </span>
+                ) : (
+                    <OverlayTrigger
+                    placement="top"
+                    overlay={<Tooltip>Log in to like posts!</Tooltip>}
+                    >
+                    <i className="far fa-heart" />
+                    </OverlayTrigger>
+                )}
+                                {likes_count}
+                    <OverlayTrigger
+                        placement="top"
+                        overlay={<Tooltip>Comments</Tooltip>}
+                        >
+                    <Link to={`/posts/${id}`}>
+                        <i className="far fa-comments" />
+                    </Link>
+                    </OverlayTrigger>
+                    {comments_count}
+                    </div> 
+                    </Col>
+                    </Row>           
+                </Col> 
+                {/* md */}
+                <Col xs={8} className='d-none d-lg-block' >
+                    <Row className="d-flex align-items-center">
+                    <Col className='text-center px-0 pb-0'
+                     xs={2}><span style={{color:'#fff'}} >{updated_at}</span></Col>
+                    <Col className='text-center px-0' xs={8}>
+                    <h5 style={{fontWeight: '600', textTransform: 'capitalize', color:'#fff'}} 
+                    >{name} - <span style={{fontStyle:'italic'}}>{company} </span>
+                     </h5>
+                    </Col>
+                    <Col className='text-center px-0' xs={2} >
+                    <div className={` ${styles.PostBar}`} >
                     {/* like */}
                     {is_owner ? (
                     <OverlayTrigger

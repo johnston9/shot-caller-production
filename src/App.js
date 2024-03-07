@@ -30,6 +30,7 @@ import BudgetCreate from "./pages/accounts/budgets/BudgetCreate";
 import BudgetEdit from "./pages/accounts/budgets/BudgetEdit";
 import NeedToSignIn from "./pages/chat/NeedToSignIn";
 import ProjectEdit from "./pages/accounts/ProjectEdit";
+import Budgeting from "./pages/home/Budgeting";
 
 function App() {
   const currentUser = useCurrentUser()
@@ -46,6 +47,7 @@ function App() {
           <Route exact path="/signin" render={() => <SignInForm />} />
           <Route exact path="/signup" render={() => <SignUpForm /> } />
           {/* features */}
+          <Route exact path="/budgeting" render={() => <Budgeting /> } />
           <Route exact path="/moodboards" render={() => <Moodboards /> } />
           <Route exact path="/charslocates" render={() => <CharsLocates /> } />
           <Route exact path="/workspaces" render={() => <Workspaces /> } />

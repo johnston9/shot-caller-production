@@ -1668,48 +1668,74 @@ contingency, completion_bond, transportlabour_total, tvspecificlabour_total,
     </div>
     {/* CONTINGENCY/BOND ------------------------------------------- */}
     <div className='px-3 mt-3'>
-    {/* Contingency */}
-    <Row>
-    <Col md={1} >
-    <p className={`${styles.Underline}`}></p>
-    </Col>
-    <Col md={9} >
-    <p className={`${styles.Underline}`}>Contingency</p>
-    </Col>
-    <Col md={2}>
-    <p className={`${styles.Underline}`}>{contingency || 0} </p>
-    </Col>
+     {/* Sections */}
+     <Row>
+     <Col md={6} className={ `${styles.RightBorder} my-0 py-0`}>
+     {/* Contingency */}
+    <Row className='px-3' >
+     <Col md={1} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
+     <p className={`${styles.Underline}`}></p>
+     </Col>
+     <Col md={9} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`} >
+     <p className={ `${styles.BoldBlack} pb-0 mb-0`}>Contingency</p>
+     </Col>
+     <Col md={2} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
+     <div className={`${styles.Box7} 
+          d-flex align-items-center justify-content-center`}>
+     <p className={`${styles.Underline}`}>{contingency || 0}</p>
+     </div>
+     </Col>
     </Row>
-    {/* Completion Bond */}
-    <Row>
-    <Col md={1} >
-    <p className={`${styles.Underline}`}></p>
-    </Col>
-    <Col md={9} >
-    <p className={`${styles.Underline}`}>Completion Bond</p>
-    </Col>
-    <Col md={2}>
-    <p className={`${styles.Underline}`}>{completion_bond || 0} </p>
-    </Col>
+     {/* hr */}
+     <Row>
+     <Col >
+     <hr className={`${styles.Break3} mb-1 mt-1`}/>
+     </Col>
+     </Row>
+     </Col>
+     <Col md={6} >
+     {/* Completion Bond */}
+    <Row className='px-3' >
+     <Col md={1} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
+     <p className={`${styles.Underline}`}></p>
+     </Col>
+     <Col md={9} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`} >
+     <p className={ `${styles.BoldBlack} pb-0 mb-0`}>Completion Bond</p>
+     </Col>
+     <Col md={2} className={`p-0 m-0 ${styles.BorderRightLeftBottom}`}>
+     <div className={`${styles.Box7} 
+          d-flex align-items-center justify-content-center`}>
+     <p className={`${styles.Underline}`}>{completion_bond || 0}</p>
+     </div>
+     </Col>
     </Row>
+    {/* hr */}
+    <Row>
+     <Col >
+     <hr className={`${styles.Break3} mb-1 mt-1`}/>
+     </Col>
+     </Row>
+     </Col>
+     </Row>
     </div>
     {/* TOTAL - GRAND */}
-    <div className='px-3 mt-3'>
-    <Row className='mt-3 mb-3' >
+    <div className='px-3 mt-3 mb-3'>
+    <Row className='mt-3' >
     <Col md={1} >
     <p className={`${styles.Underline}`}></p>
     <p></p>
     </Col>
-    <Col className={ `${styles.Overview} my-3 py-3`} md={8} >
-    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - GRAND </p>
+    <Col className={ `${styles.Overview} my-0 py-0`} md={9} >
+    <p className={ `${styles.Bold} pb-0 mb-0`}>TOTAL - GRAND</p>
     </Col>
-    <Col md={1}></Col>
-    <Col md={2} className="pt-3" >
-    <p className={`${styles.Bold} mt-3 mb-0`}>{grand_total || 0}</p>
+    <Col md={2} >
+    <div className={`${styles.Box7} 
+         d-flex align-items-center justify-content-center`}>
+    <p className={`${styles.BoldBlack} mb-0`}>{grand_total || 0}</p>
+    </div>
     </Col>
     </Row>
     </div>
-
     <h5
     className={`mt-1 mb-2 pl-5 py-1 text-center ${styles.SubTitle }`}>
       End Topsheet
