@@ -19,6 +19,7 @@ const ProfilesPage = () => {
   return (
     <div>
       <TopBox title="Profiles"/>
+      <div className="px-3">
       <Row>
       <Col xs={3}>
       <Button
@@ -49,6 +50,7 @@ const ProfilesPage = () => {
         <Asset spinner />
       )}
       </Row>
+      </div>
     </div>
   );
 };
