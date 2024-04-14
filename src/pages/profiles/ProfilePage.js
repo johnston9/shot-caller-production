@@ -62,9 +62,13 @@ function ProfilePage() {
             className={styles.ProfileImage}
             roundedCircle
             src={profile?.image}
-            height={40}
-            width={40}
+            height={100}
+            width={100}
           />
+          <div className="d-block d-lg-none">
+          {profile?.is_owner && <ProfileEditDropdown
+           id={profile?.id} />}
+          </div>
         </Col>
         <Col lg={6}>
         <h4 className="m-0">{profile?.name}</h4>
@@ -89,7 +93,9 @@ function ProfilePage() {
           </Row>
         </Col>
         <Col lg={3} className="text-lg-right">
-        {profile?.is_owner && <ProfileEditDropdown id={profile?.id} />}
+        {profile?.is_owner && <ProfileEditDropdown
+        className="d-none d-lg-block"
+         id={profile?.id} />}
           {currentUser &&
             !is_owner &&
             (profile?.following_id ? (

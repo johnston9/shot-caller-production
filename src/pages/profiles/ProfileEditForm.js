@@ -8,6 +8,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Alert from "react-bootstrap/Alert";
+// import { useSetEditProfileContext } from '../../contexts/ProfileDataContext';
 
 import { axiosReq } from "../../api/axiosDefaults";
 import {
@@ -22,6 +23,7 @@ import TopBox from "../../components/TopBox";
 
 const ProfileEditForm = () => {
   useRedirect();
+  // const setEditProfile = useSetEditProfileContext();
   const currentUser = useCurrentUser();
   const setCurrentUser = useSetCurrentUser();
   const { id } = useParams();
@@ -82,6 +84,7 @@ const ProfileEditForm = () => {
         profile_image: data.image,
       }));
       history.goBack();
+      // setEditProfile(true);
     } catch (err) {
       console.log(err);
       setErrors(err.response?.data);

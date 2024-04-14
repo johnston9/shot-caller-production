@@ -13,7 +13,19 @@ const SetProfileDataContext = createContext();
 export const useProfileData = () => useContext(ProfileDataContext);
 export const useSetProfileData = () => useContext(SetProfileDataContext);
 
+export const QueryContext = createContext();
+export const SetQueryContext = createContext();
+export const useQueryContext = () => useContext(QueryContext);
+export const useSetQueryContext  = () => useContext(SetQueryContext);
+
+export const EditProfileContext = createContext();
+export const SetEditProfileContext = createContext();
+export const useEditProfileContext = () => useContext(EditProfileContext);
+export const useSetEditProfileContext = () => useContext(SetEditProfileContext);
+
 export const ProfileDataProvider = ({ children }) => {
+  const [editProfile, setEditProfile] = useState(false);
+  const[query, setQuery] = useState("");
   const [profileData, setProfileData] = useState({
     // This is used on the Profile page
     profilePage: { results: [] },
@@ -77,25 +89,32 @@ export const ProfileDataProvider = ({ children }) => {
   useEffect(() => {
     const handleMount = async () => {
       try {
-        const { data } = await axiosReq.get(
-          "/profiles/?ordering=-followers_count"
-        );
+        const { data } = await axiosReq.get(`/profiles/?ordering=-followers_count&search=${query}`);
         setProfileData((prevState) => ({
           ...prevState,
           profilesAll: data,
         }));
+        setEditProfile(false);
       } catch (err) {
         console.log(err);
       }
     };
 
     handleMount();
-  }, [currentUser]);
+  }, [currentUser, query, editProfile]);
 
   return (
     <ProfileDataContext.Provider value={profileData}>
       <SetProfileDataContext.Provider value={{setProfileData, handleFollow, handleUnfollow}}>
-        {children}
+        <QueryContext.Provider value={query}>
+          <SetQueryContext.Provider value={setQuery}>
+            <EditProfileContext.Provider value={editProfile}>
+              <SetEditProfileContext.Provider value={setEditProfile}>
+                {children}
+              </SetEditProfileContext.Provider>
+            </EditProfileContext.Provider>
+          </SetQueryContext.Provider>
+        </QueryContext.Provider>
       </SetProfileDataContext.Provider>
     </ProfileDataContext.Provider>
   );
