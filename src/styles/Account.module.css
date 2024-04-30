@@ -246,8 +246,18 @@
     color: #fff;
 }
 
-.ProTop i {
+/* .ProTop i {
     color: #666; 
+} */
+
+.ProTop i {
+  color: #9b4242;
+  font-size: 1em !important;
+}
+
+.ProTop i:hover {
+  color: #ef5151;
+  font-size: 1em !important;
 }
 
 .BudgetLink {

@@ -113,7 +113,7 @@ function CreateProject({setShow, fetchProjects} ) {
   };
 
   return (
-    <div >
+    <div className="px-3">
     <Row >
     <Col className={`${styles.Back} mt-3`} md={{span: 6, offset: 3}}>
     <h5 style={{ textTransform: 'uppercase'}} 

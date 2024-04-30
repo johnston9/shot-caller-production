@@ -52,3 +52,8 @@ i {
     color: #fff;
     font-size: 1em !important;
 }
+
+i:hover {
+    color: #f48686;
+    font-size: 1em !important;
+}

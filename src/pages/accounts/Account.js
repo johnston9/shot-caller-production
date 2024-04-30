@@ -78,7 +78,7 @@ const accountInfo = (
   </div>
 )
 return (
-  <div >
+  <div className="px-3" >
     <div className="d-none d-md-block">{topProfile}</div>
     <div className="d-block d-md-none">{topProfileMo}</div> 
     {/* back */}

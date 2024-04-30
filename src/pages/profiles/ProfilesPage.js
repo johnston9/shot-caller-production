@@ -40,7 +40,7 @@ const ProfilesPage = () => {
       }, [name])
 
   return (
-    <div>
+    <div className="px-3">
       <TopBox title="Profiles"/>
       <div className="px-3">
       <Row>
