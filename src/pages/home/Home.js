@@ -170,7 +170,7 @@ const Home = () => {
         {/* part 1 - platform */}
         <Row className="mt-1 mt-md-5 d-flex align-items-center justify-content-center">
         <Col xs={6} md={{span: 3, offset: 1 }} className="text-center" >
-        <p >
+        <p className={` ${appStyles.playfair}`}>
         Build and manage TV and Film Production in the 
         one platform utilizing interlinking tools.
         </p>

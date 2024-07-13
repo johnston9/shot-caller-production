@@ -196,3 +196,85 @@ The interface is aesthetically functionally all the time creating a positive rea
 <h2 align="center">
 <img src="documentation/readme-images/home6.png" width="90%">
 </h2>
+
+### Stripe
+
+  Stripe is used for the payment system.
+
+<h2 align="center">
+<img src="documentation/readme-images/home6.png" width="90%">
+</h2>
+
+[Back to Table of Content](#table-of-content)
+
+## Future Features
+
+### Social Account Login
+This function allows users to sign up and log in using an existing third party account such as Google and Facebook. This would make encouraging users to sign up easier as they are just a click away and don't have to do any more. For the site owners apart from having more users sregister this opens up huge areas in terms of information and marketing.
+
+## Information Architecture ????????????????????????????
+
+- Development 
+**SQLite3** was used during development and comes with Django Rest Frameworks. 
+
+- Deployment 
+**Postgres** is used for deployment, and was added as an add-on with Heroku.
+
+### Database structure - Model Tables by App
+
+#### Django contrib auth
+1 - <strong>User</strong> - to hold the authenticated users.<br>
+  - OneToOne Key to Profile
+
+#### Accounts App
+1 - <strong>Account</strong> - to hold the user's account details.<br>
+
+2 - <strong>Project</strong> - to hold the user's Projects.
+  - Foreign Key to User. 
+
+#### Budget App
+1 - <strong>Budget</strong> - to hold the Project's Budget information<br>
+
+#### Profiles App
+1 - <strong>UserProfile</strong> - to hold the registered users details.<br>
+  - OneToOne Key to User
+
+#### Chat App
+1 - <strong>Chat</strong> - to hold the Chats.<br>
+  - Foreign Key to User
+
+#### Comments App
+1 - <strong>Comment</strong> - to hold the Chat's Comments.<br>
+  - Foreign Key to User
+  - Foreign Key to Chat
+
+#### Profiles App
+1 - <strong>Profile</strong> - to hold the user's profile details.<br>
+  - OneToOne Key to User
+
+#### Followers App
+1 - <strong>Follower</strong> - to hold the Profile's Followers.<br>
+  - Foreign Key to User (as owner, who is following)
+  - Foreign Key to User (as followed, who is followed)
+
+#### Likes App
+1 - <strong>Like</strong> - to hold the Profile's Followers.<br>
+  - Foreign Key to User 
+  - Foreign Key to Chat
+
+<p align="center"><strong>Entity Relationship Diagram</strong></p>
+
+<h2 align="center">
+<img src="documentation/readme-images/er_diagram.png" width="100%">
+</h2>
+
+[Back to Table of Content](#table-of-content)
+
+## Languages Used
+
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+- [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+- [JAVASCRIPT](https://en.wikipedia.org/wiki/JavaScript)
+- [PYTHON](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [djangotemplatelanguage](
+  https://docs.djangoproject.com/en/3.2reftemplateslanguage/)
