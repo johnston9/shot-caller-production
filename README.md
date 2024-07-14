@@ -265,7 +265,7 @@ This function allows users to sign up and log in using an existing third party a
 <p align="center"><strong>Entity Relationship Diagram</strong></p>
 
 <h2 align="center">
-<img src="documentation/readme-images/er_diagram.png" width="100%">
+<img src="documentation/readme-images/home6.png" width="100%">
 </h2>
 
 [Back to Table of Content](#table-of-content)
@@ -278,3 +278,129 @@ This function allows users to sign up and log in using an existing third party a
 - [PYTHON](https://en.wikipedia.org/wiki/Python_(programming_language))
 - [djangotemplatelanguage](
   https://docs.djangoproject.com/en/3.2reftemplateslanguage/)
+
+## Frameworks, Databases, Libraries & Programs Used ?????????????????????????????????
+
+- [React Bootstrap:](https://react-bootstrap.netlify.app/)
+   - React Bootstrap with it's grid-based format was used to create the overall framework for the site. This included the primary responsiveness.
+     and overall styling of the website. Also specific 
+     Bootstrap features, which include the "Selectpicker", 
+     the "Navbar", and "DataTables" were used in the site.
+- [React:](//https://react.dev/)
+   - React , the JavaScript library, was used to build the app's Front End User User Iterface.
+- [Django Rest Frameworks:](https://www.django-rest-framework.org/)
+   - Django Rest Frameworks the high-level Python Web framework was used to build the app's Backend.
+- [SQLite3:](https://www.sqlite.org/index.html)
+   - SQLight came with Django and was used as the database for development.
+- [Postgres:](https://www.heroku.com/postgres) ?????????????????????????
+   - Postgres was added with Heroku and was used as the database for production.
+- [AWS S3:](https://aws.amazon.com/) ????????????????????????????
+   - AWS was used to hold the static and media files.
+- [Cloudinary:](https://cloudinary.com/)
+   - Cloudinary was used to hold the media files.
+- [Axios](https://axios-http.com/docs/intro)
+   - Axios was used to make all the XMLHttpRequests.
+- [jwt-decode](https://github.com/auth0/jwt-decode)
+   - jwt-decode was used to decode the JSONweb tokens.
+- [Stripe](https://stripe.com/en-ie)
+   - Stripe was used to handle the payments.
+- [PIP3](https://pip.pypa.io/en/stable/installing/)
+   - PIP3 was used to install everything.
+- [Font Awesome:](https://fontawesome.com/)
+   - Font Awesome was used throughout the website for the icons.
+- [Google Fonts](https://fonts.google.com/)
+   - Google Fonts was used throughout the website for the fonts.
+- [Git](https://git-scm.com/)
+   - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
+- [GitHub:](https://github.com/)
+   - GitHub is used to store the projects code after being pushed from Git.
+- [Balsamiq:](https://balsamiq.com/)
+   - Balsamiq was used to create the [wireframes](https://github.com/johnston9/MS3-Shot-Caller) during the design process.
+- [Freeformatter](https://www.freeformatter.com/html-formatter.html)
+   - Freeformatter was used to tidy up the final code.
+- [Gauger](https://gauger.io/fonticon/)
+   - Gauger was used to create the favicon icon.
+- [Am-I-Responsive](http://ami.responsivedesign.is/):
+   - Am I Responsive was used to test the site's responsive sizings and to generate responsive sizing images.
+- [GitHub Wiki TOC generator:](http://ecotrust-canada.github.io/markdown-toc/)
+   - GitHub Wiki TOC generator was used to create the Table of Contents.
+- [dbdiagram.io](https://dbdiagram.io/home)
+   - dbdiagram.io was used to create the Entity-Relationship Diagram.
+- [Gmail](https://www.google.com/gmail/)
+   - Gmail was used for the email backend.
+
+A number of imports were used in Django Rest Frameworks and an inventory of these can be found in the Deployment section.
+
+[Back to Table of Content](#table-of-content)
+
+## Testing
+All functionality was tested as it was being built to ensure there were no errors, that it did what it was meant to do and that all database errors were handled correctly. 
+
+On completion the functionality of the entire app was repeatedly tested on various devices both by the development team and by Capital Numbers, the infotech company responsible for some of the high level configuration work.
+
+Pylint was also used in the backend workspace as the project was being built for Python and Django code and all errors were fixed on an ongoing process. 
+
+Where necessary some functionality was tested in Further Testing. All pages were checked in Lighthouse. All errors were documented and fixed.
+
+W3C Markup Validator, W3C CSS Validator, PEP8 and JSHint were used to validate all HTML, CSS, Python and JS in the project, the results are in documentation.
+
+- [W3C Markup Validator](https://validator.w3.org/)   ?????????????????????????
+  - On validated by URL no errors were shown - Info messages were given for the trailing slash in the link and meta tags in index.html but were left in anyhow.
+  [Result](documentation/testing/w3c-html.png)
+
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) 
+  - W3C CSS Validator gave no errors.
+  [Results](documentation/testing/w3c-css.png)
+
+- [JSHint](https://jshint.com/) 
+  - JSHint was used with "New JavaScript features (ES6)" checked in the configuration menu.
+  [Results](documentation/testing/jshint)
+    
+- [PythonChecker](https://www.pythonchecker.com/) 
+  - PythonChecker approved all DRF python pages apart from a few too long lines in the setting.py which I decided to leave. [Results](documentation/testing/)
+
+
+[Back to Table of Content](#table-of-content)
+
+## Testing User Stories from User Experience (UX) 
+
+### First Time User Goals
+
+1. #### As a First Time User, I want to learn what the site has to offer and how to use the site quickly.
+
+    - The site is designed for first time learning. It is streamlined for specific user goals that upon first use the user with a few clicks will be able to find any item, feature or page. At the top of every page the navbar displays all options for the user so they can select their desired destination quickly and a menu is available on landing on the shop page.
+
+<p align="center"><strong>Navbar and on Entry Shop Page</strong></p>   
+<h2 align="center">
+<img src="documentation/readme-images/home6.png" width="90%">
+</h2>
+
+2. #### As a First Time User, I want to view specific categories and specific products.
+
+    - Upon entering the user is take to the shop page where they can use the menu to find specific categories. They have the option to close the menu to shop from a larger items page and browse directly from the navbar. 
+
+<p align="center"><strong>Menu Input</strong></p>   
+<h2 align="center">
+<img src="documentation/readme-images/home6.png" width="90%">
+</h2>
+
+<p align="center"><strong>Menu Result</strong></p>   
+<h2 align="center">
+<img src="documentation/readme-images/home6.png" width="90%">
+</h2>
+
+3. #### As a First Time User, I want to search for a specific product, know if it's available or not and see how many results there are for the search.
+
+    - At the top of all pages is a search bar where the user can search for specific items. The number of results is displayed above the results or a message saying there were no results if that is the case.
+
+<p align="center"><strong>Search Input</strong></p>   
+<h2 align="center">
+<img src="documentation/readme-images/home6.png" width="90%">
+</h2>
+
+<p align="center"><strong>Search Result</strong></p>   
+<h2 align="center">
+<img src="documentation/readme-images/home6.png" width="90%">
+</h2>
+
+[Back to Table of Content](#table-of-content)
