@@ -357,7 +357,8 @@ W3C Markup Validator, W3C CSS Validator, PEP8 and JSHint were used to validate a
   [Results](documentation/testing/jshint)
     
 - [PythonChecker](https://www.pythonchecker.com/) 
-  - PythonChecker approved all DRF python pages apart from a few too long lines in the setting.py which I decided to leave. [Results](documentation/testing/)
+  - PythonChecker approved all DRF python pages apart from a few too long lines in the setting.py which I decided to leave. 
+  [Results](documentation/testing/)
 
 
 [Back to Table of Content](#table-of-content)
@@ -366,39 +367,86 @@ W3C Markup Validator, W3C CSS Validator, PEP8 and JSHint were used to validate a
 
 ### First Time User Goals
 
-1. #### As a First Time User, I want to learn what the site has to offer and how to use the site quickly.
+1. #### As a First Time User, I want to learn what the site has to offer and how to navigate the site quickly.
 
-    - The site is designed for first time learning. It is streamlined for specific user goals that upon first use the user with a few clicks will be able to find any item, feature or page. At the top of every page the navbar displays all options for the user so they can select their desired destination quickly and a menu is available on landing on the shop page.
+    - The Landing/Home page is split into three sections. The first informs the user as to the nature of the site and what it offers immediatly through the image and text used. The text saying offers both an "All in One" Film, TV and Video Production Software platform and the Budgeting Software as a individual product.<br>
+    It then lists the software's features headed under the Creative and the Production side. These can be clicked on to take the user quickly to the information page for that feature.<br>
+    The second section gives a brief easy to understand overview of what the sortware does and what it can be used for.<br>
+    The site is designed for first time learning. It is streamlined for specific user goal that upon first use the user with a clicks will be able to find all information about the software's features. At the top of every page the navbar displays all options for the user so they can select their desired destination quickly.
 
-<p align="center"><strong>Navbar and on Entry Shop Page</strong></p>   
+<p align="center"><strong>Landing Page and navbar</strong></p>   
 <h2 align="center">
 <img src="documentation/readme-images/home6.png" width="90%">
 </h2>
 
-2. #### As a First Time User, I want to view specific categories and specific products.
+2. #### As a First Time User, I want to view information on the different features of the software.
 
-    - Upon entering the user is take to the shop page where they can use the menu to find specific categories. They have the option to close the menu to shop from a larger items page and browse directly from the navbar. 
+    - The third section of the home page gives a brief summary of the above mentioned features and when again clicked on, as with the links in the image, take the user to that feature's information page. These pages give a clear easy to understand explanation of the feature with actual images of the software. Links to these pages can again be found in the navbar.
 
-<p align="center"><strong>Menu Input</strong></p>   
+<p align="center"><strong>Feature's Information Page</strong></p>   
 <h2 align="center">
 <img src="documentation/readme-images/home6.png" width="90%">
 </h2>
 
-<p align="center"><strong>Menu Result</strong></p>   
+<p align="center"><strong></strong></p>   
 <h2 align="center">
 <img src="documentation/readme-images/home6.png" width="90%">
 </h2>
 
-3. #### As a First Time User, I want to search for a specific product, know if it's available or not and see how many results there are for the search.
+3. #### As a First Time User, I want to register an account easily.
 
-    - At the top of all pages is a search bar where the user can search for specific items. The number of results is displayed above the results or a message saying there were no results if that is the case.
+    - The user will be given the option to Register immediatly by a link at the bottom of the landing page image and anytime in the My Account nav link. On clicking they will be taken to the Register Page and only have to enter a username and password to sign up. The Registration page is designed to be friendly and completly uncomplicated for greater user experience.<br>
 
-<p align="center"><strong>Search Input</strong></p>   
+<p align="center"><strong>Register page</strong></p>   
+<h2 align="center">
+<img src="documentation/readme-images/hone6.png" width="90%">
+</h2>
+
+<p align="center"><strong>Register page - Mobile view</strong></p>   
+<h2 align="center">
+<img src="documentation/readme-images/home6.png" width="25%">
+</h2>
+
+[Back to Table of Content](#table-of-content)
+
+1. As a Returning User, I want to easily login and logout.
+2. As a Returning User, I want to view or update my profile.
+3. As a Returning User, I want to see what people are saying about the app and know if it is professional and trustworthy.
+4. As a Returning User, I want purchase products easily.
+
+### Returning User Goals
+
+1. #### As a Returning User, I want to easily login and logout.
+
+    - The user can login and logout easily from the My Account nav link. The login takes them to Sign In page and the logout is automatic. <br>
+    The site also includes a feature that keeps a user signed in for 24 hours so they don't have to go to the trouble of signing in if they are using it regularly. This is achieved by a check function it the utils folder for the token timestamp that is sent to the user when they sign in and lasts 24 hours.
+
+<p align="center"><strong>xxxxxxx</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/home6.png" width="90%">
 </h2>
 
-<p align="center"><strong>Search Result</strong></p>   
+<p align="center"><strong>Logout - Mobile View</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/home6.png" width="25%">
+</h2>
+
+2. #### As a Returning User, I want to view or update my profile.
+
+    - On clicking on the profile nav link in My Account the user is taken to their Profile Page where they can update their Primary Delivery Address and receive a success message on doing so. This info is preset as the Delivery address when they checkout.
+
+<p align="center"><strong>xxxxxxx</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/home6.png" width="90%">
+</h2>
+
+[Back to Table of Content](#table-of-content)
+
+3. #### As a Returning User, I want to see products ratings and reviews.
+
+    - The product average customer rating is displayed for each item on the shop and view item pages. On the view item page the user will see a link to the item's reviews and another link to add a review if the user is authenticated or sign up to add a review if not. On the add review page the user can rate the product and this is displayed in stars on their review and also used to calculate the average rating. A customised Bootstrap paginated table is used to hold the reviews which includes a search function which I figured out from the Bootstrap4 docs. [DataTables](https://datatables.net/examples/styling/bootstrap4)
+
+<p align="center"><strong>xxxxxx</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/home6.png" width="90%">
 </h2>
