@@ -194,7 +194,8 @@ The interface is aesthetically functionally all the time creating a positive rea
 
 ### The Chat page
 
-  This allows users to add and view chats. It also has a link to the profiles page which contains all existing users and the ability for the user to to follow them. In doing so the user will create their feed of posts from their followed users.
+  This allows users to add and view chats. It also has a link to the profiles page which contains all existing users and the ability for the user to to follow them. In doing so the user will create their feed of posts from their followed users. It is intended to build a community for the users of the app where they can share their thoughts and experiences and promote themselves and in return the actaul software itself.<br>
+  First time and returning users who are trying to find out about the software and deciding whether or not to purchase a product can browse all the Chat messages from users who are already using the software, along with their comments, in the Chat feature. This will give the user a real unfiltered idea about the actual realtime use of the app. 
 
 <h2 align="center">
 <img src="documentation/readme-images/home6.png" width="90%">
@@ -412,9 +413,6 @@ W3C Markup Validator, W3C CSS Validator, PEP8 and JSHint were used to validate a
 
 [Back to Table of Content](#table-of-content)
 
-3. As a Returning User, I want to see what people are saying about the app and know if it is professional and trustworthy.
-4. As a Returning User, I want purchase products easily.
-
 ### Returning User Goals
 
 1. #### As a Returning User, I want to easily login and logout.
@@ -442,11 +440,22 @@ W3C Markup Validator, W3C CSS Validator, PEP8 and JSHint were used to validate a
 <img src="documentation/readme-images/home6.png" width="90%">
 </h2>
 
-[Back to Table of Content](#table-of-content)
+3. #### As a Returning User, I want to see what people are saying about the app and know if it is professional and trustworthy.
 
-3. #### As a Returning User, I want to see products ratings and reviews.
+    - The user can view reviews and testimonials from bonified users on the Testimonials page, which is easily accessible from a link in the navbar. Positive, short and concise lines from these will also be added to the landing page to immediatly make an impact on the user.<br>
+    The user can also browse all the Chat messages from users who are already using the software, along with their comments, in the Chat feature. This will give the user a real unfiltered idea about the actual realtime use of the app. 
 
-    - The product average customer rating is displayed for each item on the shop and view item pages. On the view item page the user will see a link to the item's reviews and another link to add a review if the user is authenticated or sign up to add a review if not. On the add review page the user can rate the product and this is displayed in stars on their review and also used to calculate the average rating. A customised Bootstrap paginated table is used to hold the reviews which includes a search function which I figured out from the Bootstrap4 docs. [DataTables](https://datatables.net/examples/styling/bootstrap4)
+<p align="center"><strong>xxxxxx</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/home6.png" width="90%">
+</h2>
+
+4. #### As a Returning User, I want purchase products easily.
+
+    - Once the user has Registered whenever they login their My Account link will display in the navbar. On going to their Account page the user will immediatly see the "Create Project" and "Create Budget" features with a brief summary of each product above it. <br> It also contains a concise explaination of what happens when a product is created and how the user should proceed.
+    <br>The Create Project is for the "All in One Platform" and the user can choose which version, the Film, TV or Video/Short production software, best suits their project using the summary above to guide them. The Create Budget is for the Budgeting software. Both the Projects and Budgets will have a discounted student version and the Projects have a one month free trial both of which are designed to create more sales.<br>
+    Once the user selects a product they will be take to a stripe page to complete the transaction. And once the sale goes through the user will receive an email confirming the purchase and containing the project details. These detail include the Project URL and the user's username and password.<br>
+    Lastly the project or Budget will now display on the user's account page with it's URL.
 
 <p align="center"><strong>xxxxxx</strong></p>
 <h2 align="center">
@@ -454,3 +463,32 @@ W3C Markup Validator, W3C CSS Validator, PEP8 and JSHint were used to validate a
 </h2>
 
 [Back to Table of Content](#table-of-content)
+
+### Frequent User Goals
+
+1. #### As a Frequent User, I want to view my purchased products and projects.
+
+    - The user can easily view their purchased products and projects in their account page, the link for which is clearly displayed in the navbar.
+
+<p align="center"><strong>xxxxxxx</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/home6.png" width="90%">
+</h2>
+
+1. #### As a Frequent User, I want to easily reset my password if I forget it.
+
+    - The user can easily reset their password by clicking the Forgot Password link which is clearly displayed in the navbar.
+
+<p align="center"><strong>xxxxxxx</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/home6.png" width="90%">
+</h2>
+
+1. #### As a Frequent User, I want to view my order history and payment details.
+
+    - The user can easily view their order history and payment details by click on the link for this in their account page.
+
+<p align="center"><strong>xxxxxxx</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/home6.png" width="90%">
+</h2>
