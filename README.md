@@ -161,7 +161,10 @@ The interface is aesthetically functionally all the time creating a positive rea
   Django Rest Frameworks is used for the backend and has its own register and login features. These include it's inbuilt security measures concerning for regeristerings and logging in and out. it also deals with all other issues like changing and forgetting passwords.<br>
   See [Django Rest Frameworks](documentation/drf) for all Django Rest Frameworks images and testing images.
 
-  The site has a number of other security measures firstly the use of front end measures to prevent unauthorised users form accessing pages they do not have permisssion to, mainly other users's account pages. Then in the DRF backend the views have also a security check to do the same.
+  The site has a number of other security measures firstly the use of front end measures to prevent unauthorised users form accessing pages they do not have permisssion to, mainly other users's account pages. <br>
+  <br>
+  This is achieved firstly in the Front End by an interceptor function in the CurrentUserContext file that checks on each request, via the utils folder shouldRefreshToken function, if there is a vaild timestamp token in local storage and refreshes it. If not it takes the user to the Sign In page.
+  Secondly in the DRF backend the views have also a security check to check if the user is authorised to access each page or component.
 
 [Back to Table of Content](#table-of-content)
 
@@ -409,8 +412,6 @@ W3C Markup Validator, W3C CSS Validator, PEP8 and JSHint were used to validate a
 
 [Back to Table of Content](#table-of-content)
 
-1. As a Returning User, I want to easily login and logout.
-2. As a Returning User, I want to view or update my profile.
 3. As a Returning User, I want to see what people are saying about the app and know if it is professional and trustworthy.
 4. As a Returning User, I want purchase products easily.
 
@@ -419,7 +420,8 @@ W3C Markup Validator, W3C CSS Validator, PEP8 and JSHint were used to validate a
 1. #### As a Returning User, I want to easily login and logout.
 
     - The user can login and logout easily from the My Account nav link. The login takes them to Sign In page and the logout is automatic. <br>
-    The site also includes a feature that keeps a user signed in for 24 hours so they don't have to go to the trouble of signing in if they are using it regularly. This is achieved by a check function it the utils folder for the token timestamp that is sent to the user when they sign in and lasts 24 hours.
+    The site also includes a feature that keeps a user signed in for 24 hours so they don't have to go to the trouble of signing in if they are using it regularly.<br>
+    This is achieved by an interceptor function in the CurrentUserContext file that checks, via the utils folder shouldRefreshToken function, if there is a vaild timestamp token in local storage and refreshes it.
 
 <p align="center"><strong>xxxxxxx</strong></p>
 <h2 align="center">
@@ -433,7 +435,7 @@ W3C Markup Validator, W3C CSS Validator, PEP8 and JSHint were used to validate a
 
 2. #### As a Returning User, I want to view or update my profile.
 
-    - On clicking on the profile nav link in My Account the user is taken to their Profile Page where they can update their Primary Delivery Address and receive a success message on doing so. This info is preset as the Delivery address when they checkout.
+    - On clicking on the My Profile tab in the My Account navbar the user is taken to their Profile Page where they can view and update their Profile details.
 
 <p align="center"><strong>xxxxxxx</strong></p>
 <h2 align="center">
