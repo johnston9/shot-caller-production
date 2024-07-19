@@ -4,18 +4,21 @@
 
 A web application for film, TV and video production.<br>
 
-Essentially it site consists of two elements. One to introduce the user to the products, give them clear information about them and to encourage them to create an account and purchase products. The second contains the user's account and allows them to purchase products and find their already purchased ones easily.
+Essentially the site consists of two elements. The first to introduce the user to the products, give them clear information about them and to encourage them to create an account and purchase products. The second contains the user's account page which allows them to purchase products and view their already purchased ones easily.
 <br>
-
+To use the site to gather information the user can click on any link in the Home page or Navbar to take the that feature's information page. <br>
+To use the site to view and purchase products the User first creates an account by clicking on any of the Register links then on their Account page they can select and purchase products and view all their already purchased products.<br>
+Once a User has purchased the software product they will receive a URL to the software and a username and password for it. Nothing elese is necessary for the User to get started using it.<br.>
+If a User has any issues they can contacts the site through the Contact Us page.
 <h2 align="center"><img src="documentation/readme-images/home6.png" width="90%"></h2>
 
 # Table of Content
 
 ## User Experience (UX)
 
-The business goals are to establish the app as a professional film production software platform, to create an online presence and establish it as a brand. It's primary purpose is to entice new customer to register and purchase products and secure regular returning customers. It aims to initially create curiosity with the user to encourage them to explore the features then inspire trust and build a customer base.
+The business goals are to establish the app as a professional film production software platform, to create an online presence and establish it as a brand. It's primary purpose is to entice new customer to register and purchase products and secure regular returning customers. It aims to initially  to chatch the user's attention by making an immediate impact on the as to the nature of the software and create curiosity with the user to encourage them to explore the software's features, buils trust and ultimatly inspire them to create an account and purchase products. It aspires to build a customer base.
 
-For the user, the initial goal of the site is to find out about the software and register an account easily. Then to create projects by purchasing them. Ongoing they will find all their projects in their account page.
+For the user, the initial goal of the site is to find out about the software and register an account easily. Then to create projects by purchasing them. For the regestered user the goal is to access their Account page and view and purchase products..
 
 Ther Home page contains a brief overview of the software's abilities by section, i.e. the different aspects of fim production that it facilitates. Each section when clicked on opens a page detailing and explaining that section with images.
 
@@ -23,7 +26,10 @@ Ther Home page contains a brief overview of the software's abilities by section,
 
 The aim of the site is to introduce Shot Caller to it's potential customers.
 
-It aims to create a brand to establish an image in the public eye for the platform, to show its quality and professionalism. Its elegant bright sophisticated but simple design aims to encourage users to explore it. It's clear navigation and easily understood sections encourage customers to explore it's features fully, create an account and to purchase it's products.
+It aims to create a brand to establish an image in the public eye for the platform, to immediatly impact on them the use and quality of the product. Its elegant bright sophisticated but simple design, clear navigation and easily understood sections aims to encourage customers to explore it's features fully, then create an account and to purchase it's products.
+
+The site aims to, build a relationship with the user through its clear and obvious inherent professional knowledge of the film making process. Making this even clearer by it's breaking down of the process into two sides, the Creative side and the Production side.<br>
+One major strategic move was to seperate the Budgeting software available as part of the platform into an individual product. This idea being that user would more readily open to purchase this very necessary tool and seeing its quality be more open to trusting the All in One Platform.
 
 #### Brand Identity
 - Brand promise: The most complete film production software on the market.
@@ -55,9 +61,9 @@ What features are necessary to make the products sellable?<br>
 
 ### Structure Plane
 
-The site is structured so the user can navigate in an intuitive way through the different features of the products, all pages keeping a uniformed consistency.<br>
+The site is structured so the user can navigate easily and in an intuitive way through the different features of the products, all pages keeping a uniformed consistency.<br>
 
-The user is taken on a journey into the site, all elements being discoverable as they proceed along. From finding out about the two products, the "All in one Production Platform" and the "Budgeting Software", available to creating an account. The site aims to, through its easy to navigate structure, build a relationship with the user.<br>
+The user is taken on a journey into the site, all elements being discoverable as they proceed along. From finding out about the two products, the "All in one Production Platform" and the "Budgeting Software" available, to creating an account. 
 
 The information architecture is a tree structure allowing users to move through content quickly and simply becoming aware of the site’s inherent structure as they go. 
 
@@ -92,16 +98,12 @@ The interface is aesthetically functionally all the time creating a positive rea
 2. As a Frequent User, I want to easily recover my password if I forget it.
 3. As a Frequent User, I want to view my order history and payment details.
 
-  - #### Owner/Admin User Goals ????????????????????????????????????????
+  - #### Owner/Admin User Goals 
 
-1. As the Owner/Admin User I want to upload new products.
-2. As the Owner/Admin User I want to edit product details.
-3. As the Owner/Admin User I want to edit product prices.
-4. As the Owner/Admin User I want to edit images.
-5. As the Owner/Admin User I want to delete images and products.
-6. As the Owner/Admin User I want to upload new recipes.
-7. As the Owner/Admin User I want to edit recipes.
-8. As the Owner/Admin User I want to post or respond on chat to users questions.
+1. As the Owner/Admin User I want to edit product prices and details.
+2. As the Owner/Admin User I want to add testimonials and reviews to the Testimonial page.
+3. As the Owner/Admin User I want add new testimonial lines and other marketing and sales items to the landing page.
+8. As the Owner/Admin User I want to post or respond to messages in the Chat feature.
 9. As the Owner/Admin User I want control over material posted on the site for legal and other purposes.
 
 [Back to Table of Content](#table-of-content)
@@ -136,7 +138,7 @@ The interface is aesthetically functionally all the time creating a positive rea
 
 [Back to Table of Content](#table-of-content)
 
-## Existing Features
+## Existing Features - Usage and Testing
 
 ### Responsive Design
 
@@ -158,13 +160,23 @@ The interface is aesthetically functionally all the time creating a positive rea
 
   The user can browse and view the features on the site but they are encouraged to create an account. They can do this or login or logout easily from My Account in the navbar. There are also a number of other links to register, one being on the Home page, and on doing so the user is brought to the Register page which has a personal easy to use feel.<br>
   
-  Django Rest Frameworks is used for the backend and has its own register and login features. These include it's inbuilt security measures concerning for regeristerings and logging in and out. it also deals with all other issues like changing and forgetting passwords.<br>
+  Django Rest Frameworks is used for the backend and has its own register and login features. These include it's inbuilt security measures concerning for registering and logging in and out. it also deals with all other issues like changing and forgetting passwords.<br>
   See [Django Rest Frameworks](documentation/drf) for all Django Rest Frameworks images and testing images.
+
+<p align="center"> <strong>Large Screen</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/home6.png" width="90%">
+</h2>
 
   The site has a number of other security measures firstly the use of front end measures to prevent unauthorised users form accessing pages they do not have permisssion to, mainly other users's account pages. <br>
   <br>
   This is achieved firstly in the Front End by an interceptor function in the CurrentUserContext file that checks on each request, via the utils folder shouldRefreshToken function, if there is a vaild timestamp token in local storage and refreshes it. If not it takes the user to the Sign In page.
   Secondly in the DRF backend the views have also a security check to check if the user is authorised to access each page or component.
+
+<p align="center"> <strong>Large Screen</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/home6.png" width="90%">
+</h2>
 
 [Back to Table of Content](#table-of-content)
 
@@ -201,7 +213,7 @@ The interface is aesthetically functionally all the time creating a positive rea
 <img src="documentation/readme-images/home6.png" width="90%">
 </h2>
 
-### Stripe
+### Stripe ????????????????????
 
   Stripe is used for the payment system.
 
@@ -475,7 +487,7 @@ W3C Markup Validator, W3C CSS Validator, PEP8 and JSHint were used to validate a
 <img src="documentation/readme-images/home6.png" width="90%">
 </h2>
 
-1. #### As a Frequent User, I want to easily reset my password if I forget it.
+2. #### As a Frequent User, I want to easily reset my password if I forget it.
 
     - The user can easily reset their password by clicking the Forgot Password link which is clearly displayed in the navbar.
 
@@ -484,7 +496,7 @@ W3C Markup Validator, W3C CSS Validator, PEP8 and JSHint were used to validate a
 <img src="documentation/readme-images/home6.png" width="90%">
 </h2>
 
-1. #### As a Frequent User, I want to view my order history and payment details.
+3. #### As a Frequent User, I want to view my order history and payment details.
 
     - The user can easily view their order history and payment details by click on the link for this in their account page.
 
@@ -492,3 +504,98 @@ W3C Markup Validator, W3C CSS Validator, PEP8 and JSHint were used to validate a
 <h2 align="center">
 <img src="documentation/readme-images/home6.png" width="90%">
 </h2>
+
+### Owner/Admin User Goals
+
+1. #### As the Owner/Admin User I want to edit product prices and details.
+
+    - This is easily achieved through the site's development editor and re-deployment.
+
+<p align="center"><strong>xxxxxxx</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/home6.png" width="90%">
+</h2> 
+
+2. #### As the Owner/Admin User I want to add testimonials and reviews to the Testimonial page.
+
+    - This is easily achieved through the site's development editor and re-deployment.
+
+<p align="center"><strong>xxxxxxx</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/home6.png" width="90%">
+</h2> 
+
+3. #### As the Owner/Admin User I want add new testimonial lines and other marketing and sales items to the landing page.
+
+    - This is easily achieved through the site's development editor and re-deployment.
+
+<p align="center"><strong>xxxxxxx</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/home6.png" width="90%">
+</h2> 
+
+4. #### As the Owner/Admin User I want to post messages or respond to messages in the Chat feature.
+
+    - The Owner/Admin User can easily post messages or respond to messages with new posts or comments in the Chat feature, their posts being clearly distinguishable through styling.
+
+<p align="center"><strong>xxxxxxx</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/home6.png" width="90%">
+</h2> 
+
+5. #### As the Owner/Admin User I want control over material posted on the site for legal and other purposes.
+
+    - The Owner/Admin User delete post's and comments in the chat feature. They can also delete Users.
+
+<p align="center"><strong>xxxxxxx</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/home6.png" width="90%">
+</h2> 
+
+## Further Testing
+
+<!-- ### Testing Stripe Card and Details Input Errors
+
+If incorrect details or there are required boxes not filled in an error message will display.
+
+<p align="center"><strong>Missing Details</strong></p>
+
+<h2 align="center">
+<img src="documentation/readme-images/home6.png" width="25%">
+</h2>
+
+<p align="center"><strong>Incorrect Card Number</strong></p>
+
+<h2 align="center">
+<img src="documentation/readme-images/card-inco.png" width="90%">
+</h2>
+
+
+### Testing Stripe Two-step authentication
+
+The testing method for Two-step authentication was used and it proved successfully.<br>
+The card number for this is 4000 0000 0000 3220.
+
+<p align="center"><strong>First Fail was Selected then Complete</strong></p>
+
+<h2 align="center">
+<img src="documentation/readme-images/home6.png" width="90%">
+</h2>
+
+<p align="center"><strong>Fail Result</strong></p>
+
+<h2 align="center">
+<img src="documentation/readme-images/home6.png" width="90%">
+</h2>
+
+<p align="center"><strong>Complete Result</strong></p>
+
+<h2 align="center">
+<img src="documentation/readme-images/home6.png" width="90%">
+</h2> -->
+
+[Back to Table of Content](#table-of-content)
+
+## Lighthouse
+
+Lighthouse was used to test every page on desktop and mobile screens.
