@@ -4,7 +4,7 @@
 
 A web application for film, TV and video production.<br>
 
-Essentially the site consists of two elements. The first to introduce the user to the products, give them clear information about them and to encourage them to create an account and purchase products. The second contains the user's account page which allows them to purchase products and view their already purchased ones easily.
+Essentially the site consists of two elements. The first to introduce the user to the software products, give them clear information about them and to encourage them to create an account and purchase products. The second contains the user's account page which allows them to purchase products and view their already purchased ones easily.
 <br>
 To use the site to gather information the user can click on any link in the Home page or Navbar to take the that feature's information page. <br>
 To use the site to view and purchase products the User first creates an account by clicking on any of the Register links then on their Account page they can select and purchase products and view all their already purchased products.<br>
@@ -24,7 +24,7 @@ Ther Home page contains a brief overview of the software's abilities by section,
 
 ### Strategy Plane
 
-The aim of the site is to introduce Shot Caller to it's potential customers.
+The aim of the site is to introduce Shot Caller Production to it's potential customers.
 
 It aims to create a brand to establish an image in the public eye for the platform, to immediatly impact on them the use and quality of the product. Its elegant bright sophisticated but simple design, clear navigation and easily understood sections aims to encourage customers to explore it's features fully, then create an account and to purchase it's products.
 
@@ -34,8 +34,7 @@ One major strategic move was to seperate the Budgeting software available as par
 #### Brand Identity
 - Brand promise: The most complete film production software on the market.
 - Vision: Professional Creativity.
-- Mission: To combine the creative and production sides of filmmaking in one all encompasing 
-  platform.
+- Mission: To combine the creative and production sides of filmmaking in one all encompasing platform.
 - Values: Professional, Creative and Easy to Use.
 
 <h2 align="center">
@@ -126,15 +125,14 @@ The interface is aesthetically functionally all the time creating a positive rea
 ### Typography ?????????????
  - Playfair Display, a serif non-formal friendly font was used as the main font for the site. It has a sophisticated slightly old fashioned classy feel. Lato was used alongside it for more matter of fact details. And Playball, a very stylish, flamboyant romantic feeling font was used for the main titles and in some other places to give the shop a classy romantic feel.
 
-
 ### Imagery
  - Images of the actual software were used to show the user how the software looks and how it works.
 
-### Wireframes
+<!-- ### Wireframes
 
  - PDF – Balsamic was used to design the layout for all pages.
 
-   [View on Github](https://github.com/johnston9/la-donut)
+   [View on Github](https://github.com/johnston9/la-donut) -->
 
 [Back to Table of Content](#table-of-content)
 
@@ -188,7 +186,7 @@ The interface is aesthetically functionally all the time creating a positive rea
 <img src="documentation/readme-images/home6.png" width="90%">
 </h2>
 
-### The Creative, Production and Budgeting features explanatory pages
+### The Creative, Production and Budgeting Features Explanatory Pages
 
   When clicked on in the nav bar, the Home page image or the Home page section the page for that feature opens. It gives a brief concise overview of that feature along with image from the actual software.
 
@@ -196,9 +194,9 @@ The interface is aesthetically functionally all the time creating a positive rea
 <img src="documentation/readme-images/home6.png" width="90%">
 </h2>
 
-### The Account page
+### The Account Page
 
-  When clicked on in the nav bar the user's Account page opens. It will show all the user's projects and have a section where they create and purchase new projects.
+  When clicked on in the navbar the user's Account page opens. It will show all the user's projects and have a section where they create and purchase new projects.
 
 <h2 align="center">
 <img src="documentation/readme-images/home6.png" width="90%">
@@ -599,3 +597,43 @@ The card number for this is 4000 0000 0000 3220.
 ## Lighthouse
 
 Lighthouse was used to test every page on desktop and mobile screens.
+
+### Summary of Issues 
+
+#### Performance.
+
+1. xxxxxxxxxxx
+
+<p align="center"><strong>Performance Diagnostics</strong></p>
+<h2 align="center">
+<img src="documentation/testing/home6.png" width="90%">
+</h2>
+
+### Best Practices
+
+1. xxxxxxxxxxxxx
+
+<p align="center"><strong>Performance Diagnostics</strong></p>
+<h2 align="center">
+<img src="documentation/testing/home6.png" width="90%">
+</h2>
+
+### Outcome of Issues
+
+These issues were brought 
+
+### Issues Resolved
+
+1. On the Bag Page
+
+### Home Page
+
+## Bugs 
+
+### bug 1
+xxxxxxxx
+
+## Bugs Fixed
+
+### bug 1
+ - The adding of
