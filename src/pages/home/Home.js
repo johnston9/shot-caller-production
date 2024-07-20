@@ -199,14 +199,14 @@ const Home = () => {
                 </p>
                 <Row >
                 {/* Breakdowns / Workspaces */}
-                <Col mx={6} >
+                <Col md={6} >
                 <p className={`${styles.Depts}`}
                   onClick={() => history.push('/workspaces')}>
                 Breakdowns / Workspaces
                 </p>
                 </Col>
                 {/* Moodboards / Indexshots */}
-                <Col mx={6} >
+                <Col md={6} >
                 <p className={`${styles.Depts}`}
                   onClick={() => history.push('/moodboards')}>
                 Moodboards / Indexshots
@@ -215,13 +215,13 @@ const Home = () => {
                 </Row>
                 <Row>
                 {/* Shotlists / Storyboards */}
-                <Col xs={6} >
+                <Col md={6} >
                 <span className={`${styles.Depts}`}
                   onClick={() => history.push('/shotstory')} >
                 Storyboard / Shotlists / Script
                 </span>
                 </Col>
-                <Col mx={6}>
+                <Col md={6}>
                 {/* Characters / Locations  */}
                 <span className={`${styles.Depts}`}
                   onClick={() => history.push('/charslocates')} >
@@ -240,14 +240,14 @@ const Home = () => {
                 </p>
                 <Row>
                 {/* Schedule / Stripboard */}
-                <Col xs={6}>
+                <Col md={6}>
                 <p className={`${styles.Depts}`}
                   onClick={() => history.push('/schedule')}>
                 Schedule / Stripboard
                 </p>
                 </Col>
                 {/* Callsheets */}
-                <Col mx={6}>
+                <Col md={6}>
                 <p className={`${styles.Depts}`}
                   onClick={() => history.push('/callsheets')} >
                 Callsheets
@@ -256,14 +256,14 @@ const Home = () => {
                 </Row>
                 <Row>
                 {/* Cast / Crew */}
-                <Col mx={6}>
+                <Col md={6}>
                 <p className={`${styles.Depts}`}
                   onClick={() => history.push('/castcrew')}>
                 Cast / Crew
                 </p>
                 </Col>
                 {/* Mobile View */}
-                <Col mx={6}>
+                <Col md={6}>
                 <p className={`${styles.Depts}`}
                   onClick={() => history.push('/mobile')} >
                 Mobile View
