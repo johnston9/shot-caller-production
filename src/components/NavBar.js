@@ -49,7 +49,7 @@ const NavBar = () => {
     ref={refw}
     id="nav-dropdown1"
     // activeClassName={styles.Active}
-    className={`mt-1 ${styles.NavLink} `}
+    className={`pt-1 ${styles.NavLink} `}
     >
     <NavDropdown.Item >
     <NavLink
@@ -107,7 +107,7 @@ const NavBar = () => {
     ref={reff}
     id="nav-dropdown2"
     // activeClassName={styles.Active}
-    className={`mt-1 ${styles.NavLink} `}
+    className={`pt-1 ${styles.NavLink} `}
     >
     <NavDropdown.Item >
     <NavLink
@@ -168,7 +168,7 @@ const NavBar = () => {
               <i className="fas fa-play"></i>
               My Account 
                   <Avatar src={currentUser?.profile_image} 
-                  text="" height={40} />
+                  text="" height={30} />
             </span>
           }
           ref={refp}
