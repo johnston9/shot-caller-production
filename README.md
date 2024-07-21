@@ -4,12 +4,23 @@
 
 A web application for film, TV and video production.<br>
 
-Essentially the site consists of two elements. The first to introduce the user to the software products, give them clear information about them and to encourage them to create an account and purchase products. The second contains the user's account page which allows them to purchase products and view their already purchased ones easily.
+## Purpose
+Essentially the site consists of three elements. The first to introduce the user to it's two software products, one an "All in One Film, TV, and Video Production Platform" and two "Budgeting Software". This element aims to give them about them clear information about the products and encourage them to create an account and purchase them. The second contains the user's account page which allows them to purchase products and view their already purchased ones easily. The third is the actual Budgeting Software. This is available as a seperate product but is also included as part of the "All in One Platform".
 <br>
-To use the site to gather information the user can click on any link in the Home page or Navbar to take the that feature's information page. <br>
+
+## Usage
+To use the site to gather information the user can click on any link in the Home page or Navbar to take them to that feature's information page. <br>
 To use the site to view and purchase products the User first creates an account by clicking on any of the Register links then on their Account page they can select and purchase products and view all their already purchased products.<br>
-Once a User has purchased the software product they will receive a URL to the software and a username and password for it. Nothing elese is necessary for the User to get started using it.<br.>
+Once a user has purchased an "All in One Platform" they will be given a URL, by email, connecting them to a seperate appliction where the actual software is held along with a username and password for it. The product will also now show in their account page along with the URL to the platform and a seperate link to the product's Budgeting software.<br>
+If a user just purchases the Budgeting software they will also receive a URL, by email, for it along with a username and password for it and the product will also now show in their account page along with the URL to it.<br>
+More detailed information abote the featire of this site and how o use it can be founf in the [Existing Features section](#existing-features---usage-and-testing)
+<br>
+There is no installation needed or requirement for the "Allin One Platform" or "Budgeting" software or for this site.<br>
+Here is the link to that Platform Apps's Readme. [Shot Caller](https://)<br>
+
+## Issues
 If a User has any issues they can contacts the site through the Contact Us page.
+
 <h2 align="center"><img src="documentation/readme-images/home6.png" width="90%"></h2>
 
 # Table of Content
@@ -107,7 +118,7 @@ The interface is aesthetically functionally all the time creating a positive rea
 
 [Back to Table of Content](#table-of-content)
 
-## Design
+## Design ?????????????????
 
 <h2 align="center">
 <img src="documentation/readme-images/home6.png" width="90%">
@@ -226,7 +237,7 @@ The interface is aesthetically functionally all the time creating a positive rea
 ### Social Account Login
 This function allows users to sign up and log in using an existing third party account such as Google and Facebook. This would make encouraging users to sign up easier as they are just a click away and don't have to do any more. For the site owners apart from having more users sregister this opens up huge areas in terms of information and marketing.
 
-## Information Architecture ????????????????????????????
+## Information Architecture 
 
 - Development 
 **SQLite3** was used during development and comes with Django Rest Frameworks. 

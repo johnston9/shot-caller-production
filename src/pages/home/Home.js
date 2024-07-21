@@ -15,9 +15,10 @@ import home1 from "../../assets/home1.png";
 import home2 from "../../assets/home2.png";
 import home3 from "../../assets/home3.png";
 import home8 from "../../assets/home8.png";
+import features from "../../assets/home75.png";
 // eslint-disable-next-line 
 import city2 from "../../assets/city2.png";
-import features from "../../assets/r-1.png";
+// import features from "../../assets/r-1.png";
 import Container from "react-bootstrap/Container";
 import TopBox2 from "../../components/TopBox2";
 import { Image } from "react-bootstrap";

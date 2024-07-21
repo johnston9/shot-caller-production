@@ -4,7 +4,8 @@
    Am looking for a way to resolve this issue */  
 import React from 'react';
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
-import logo from "../assets/logo1.png";
+// import logo from "../assets/logo1.png";
+import logo from "../assets/logo30.png";
 import styles from "../styles/NavBar.module.css";
 import { NavLink } from "react-router-dom";
 import { useCurrentUser, useSetCurrentUser } from "../contexts/CurrentUserContext";
@@ -225,7 +226,7 @@ const NavBar = () => {
       expand="lg" fixed="top">
         <NavLink to="/landing">
           <Navbar.Brand>
-          <img src={logo} alt="logo" height="30" /> Shot Caller
+          <img src={logo} alt="logo" height="30" length="30" /> Shot Caller
           </Navbar.Brand>
         </NavLink>
         <Navbar.Toggle
