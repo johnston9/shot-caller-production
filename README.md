@@ -5,18 +5,18 @@
 A web application for film, TV and video production.<br>
 
 ## Purpose
-Essentially the site consists of three elements. The first to introduce the user to it's two software products, one an "All in One Film, TV, and Video Production Platform" and two "Budgeting Software". This element aims to give them about them clear information about the products and encourage them to create an account and purchase them. The second contains the user's account page which allows them to purchase products and view their already purchased ones easily. The third is the actual Budgeting Software. This is available as a seperate product but is also included as part of the "All in One Platform".
+Essentially the site consists of three elements. The first to introduce the user to its two software products, one an "All in One Film, TV, and Video Production Platform" and two "Budgeting Software". This element aims to give them about them clear information about the products and encourage them to create an account and purchase them. The second contains the user's account page which allows them to purchase products and view their already purchased ones easily. The third is the actual Budgeting Software. This is available as a separate product but is also included as part of the "All in One Platform".
 <br>
 
 ## Usage
 To use the site to gather information the user can click on any link in the Home page or Navbar to take them to that feature's information page. <br>
 To use the site to view and purchase products the User first creates an account by clicking on any of the Register links then on their Account page they can select and purchase products and view all their already purchased products.<br>
-Once a user has purchased an "All in One Platform" they will be given a URL, by email, connecting them to a seperate appliction where the actual software is held along with a username and password for it. The product will also now show in their account page along with the URL to the platform and a seperate link to the product's Budgeting software.<br>
+Once a user has purchased an "All in One Platform" they will be given a URL, by email, connecting them to a separate application where the actual software is held along with a username and password for it. The product will also now show in their account page along with the URL to the platform and a separate link to the product's Budgeting software.<br>
 If a user just purchases the Budgeting software they will also receive a URL, by email, for it along with a username and password for it and the product will also now show in their account page along with the URL to it.<br>
-More detailed information abote the featire of this site and how o use it can be founf in the [Existing Features section](#existing-features---usage-and-testing)
+More detailed information about the features of this site and how to use it can be found in the [Existing Features section](#existing-features---usage-and-testing)
 <br>
-There is no installation needed or requirement for the "Allin One Platform" or "Budgeting" software or for this site.<br>
-Here is the link to that Platform Apps's Readme. [Shot Caller](https://)<br>
+There is no installation needed or requirements for the "All in One Platform" or "Budgeting" Software" for the App.<br>
+Here is the link to that Platform App's Readme. [Shot Caller](https://)<br>
 
 ## Issues
 If a User has any issues they can contacts the site through the Contact Us page.
@@ -27,25 +27,25 @@ If a User has any issues they can contacts the site through the Contact Us page.
 
 ## User Experience (UX)
 
-The business goals are to establish the app as a professional film production software platform, to create an online presence and establish it as a brand. It's primary purpose is to entice new customer to register and purchase products and secure regular returning customers. It aims to initially  to chatch the user's attention by making an immediate impact on the as to the nature of the software and create curiosity with the user to encourage them to explore the software's features, buils trust and ultimatly inspire them to create an account and purchase products. It aspires to build a customer base.
+The business goals are to establish the app as a professional film production software platform, to create an online presence and establish it as a brand. Its primary purpose is to entice new customer to register and purchase products and secure regular returning customers. It aims initially to catch the user's attention by making an immediate impact on them as to the nature of the software and create curiosity with the user to encourage them to explore the software's features. It aims to build trust and ultimately inspire them to create an account and purchase products. It aspires to build a customer base.
 
-For the user, the initial goal of the site is to find out about the software and register an account easily. Then to create projects by purchasing them. For the regestered user the goal is to access their Account page and view and purchase products..
+For the user, the initial goal of the site is to find out about the software and register an account easily. Then to create projects by purchasing them. For the registered user the goal is to access their Account page and view and purchase products.
 
-Ther Home page contains a brief overview of the software's abilities by section, i.e. the different aspects of fim production that it facilitates. Each section when clicked on opens a page detailing and explaining that section with images.
+The Home page contains a brief overview of the software's abilities by section, i.e. the different aspects of film production that it facilitates. Each section when clicked on opens a page detailing and explaining that section with images.
 
 ### Strategy Plane
 
-The aim of the site is to introduce Shot Caller Production to it's potential customers.
+The aim of the site is to introduce Shot Caller Production to its potential customers.
 
-It aims to create a brand to establish an image in the public eye for the platform, to immediatly impact on them the use and quality of the product. Its elegant bright sophisticated but simple design, clear navigation and easily understood sections aims to encourage customers to explore it's features fully, then create an account and to purchase it's products.
+It aims to create a brand to establish an image in the public eye for the platform, to immediately impact on them the use and quality of the product. Its simple design, clear navigation and easily understood sections aims to encourage customers to explore it's features fully, then create an account and to purchase it's products.
 
-The site aims to, build a relationship with the user through its clear and obvious inherent professional knowledge of the film making process. Making this even clearer by it's breaking down of the process into two sides, the Creative side and the Production side.<br>
-One major strategic move was to seperate the Budgeting software available as part of the platform into an individual product. This idea being that user would more readily open to purchase this very necessary tool and seeing its quality be more open to trusting the All in One Platform.
+The site aims to, build a relationship with the user through its clear and obvious inherent professional knowledge of the film making process. Making this even clearer by its breaking down of the process into two sides, the Creative side and the Production side.<br>
+One major strategic move was to separate the Budgeting software available as part of the platform into an individual product. This idea being that user would more readily open to purchase this very necessary tool and seeing its quality be more open to trusting the All in One Platform.
 
 #### Brand Identity
-- Brand promise: The most complete film production software on the market.
+- Brand promise: A complete film production software platform.
 - Vision: Professional Creativity.
-- Mission: To combine the creative and production sides of filmmaking in one all encompasing platform.
+- Mission: To combine the creative and production sides of filmmaking in one all-encompassing platform.
 - Values: Professional, Creative and Easy to Use.
 
 <h2 align="center">
@@ -57,15 +57,11 @@ One major strategic move was to seperate the Budgeting software available as par
 The features included in the app at present reflect choices made around the following reflections.
 <br>
 
-What is absolutely necessary for the app to deliver its basic marketed functionality?<br>  
+What is absolutely necessary for the app to deliver its basic functionality?<br>  
 
-What is the most enticing user friendly way of doing building these?<br>
+What is the most enticing user friendly way of building this?<br>
 
-What types of design would further these and become great user experience in themselves?<br>
-
-Which proposed features are buildable?<br>
-
-What features are necessary to make the products sellable?<br>
+Which proposed features are buildable and necessary?<br>
 
 [Back to Table of Content](#table-of-content)
 
@@ -73,17 +69,11 @@ What features are necessary to make the products sellable?<br>
 
 The site is structured so the user can navigate easily and in an intuitive way through the different features of the products, all pages keeping a uniformed consistency.<br>
 
-The user is taken on a journey into the site, all elements being discoverable as they proceed along. From finding out about the two products, the "All in one Production Platform" and the "Budgeting Software" available, to creating an account. 
-
-The information architecture is a tree structure allowing users to move through content quickly and simply becoming aware of the site’s inherent structure as they go. 
-
-<h2 align="center">
-<img src="documentation/readme-images/home6.png" width="90%">
-</h2>
+The user is taken on a journey into the site, all elements being discoverable as they proceed along. From finding out about the two products, the "All in one Production Platform" and the "Budgeting Software" available, to creating an account and finally using the Budgeting Software.
 
 ### Skeleton Plane
 
-The interface is aesthetically functionally all the time creating a positive reaction in the user with every click, making the user feel both at home here and part of an interesting journey. Details of this are found in the Design section.
+The interface is aesthetically functionally all the time creating a positive reaction in the user with every click, making the user feel both at home here and part of an productive and creative journey. Details of this are found in the Design section.
 
 [Back to Table of Content](#table-of-content)
 
@@ -107,6 +97,7 @@ The interface is aesthetically functionally all the time creating a positive rea
 1. As a Frequent User, I want to view my purchased products and projects.
 2. As a Frequent User, I want to easily recover my password if I forget it.
 3. As a Frequent User, I want to view my order history and payment details.
+4. As a Frequent User, I want to use the Budgeting Software,
 
   - #### Owner/Admin User Goals 
 
@@ -125,7 +116,7 @@ The interface is aesthetically functionally all the time creating a positive rea
 </h2>
 
 ### Landing page
- - The landing page image is intended to inform the user of the site purpose and encourage them to explore it. It containd links to all the site explainatory pages and ....
+ - The landing page image is intended to inform the user of the site purpose and encourage them to explore it. It contains links to all the site explanatory pages and selling points.
 
  - The logo....
 
@@ -139,15 +130,11 @@ The interface is aesthetically functionally all the time creating a positive rea
 ### Imagery
  - Images of the actual software were used to show the user how the software looks and how it works.
 
-<!-- ### Wireframes
-
- - PDF – Balsamic was used to design the layout for all pages.
-
-   [View on Github](https://github.com/johnston9/la-donut) -->
-
 [Back to Table of Content](#table-of-content)
 
 ## Existing Features - Usage and Testing
+
+### Budgeting Software
 
 ### Responsive Design
 
@@ -167,9 +154,9 @@ The interface is aesthetically functionally all the time creating a positive rea
 
 ### Login/Register/Logout Pages and Security
 
-  The user can browse and view the features on the site but they are encouraged to create an account. They can do this or login or logout easily from My Account in the navbar. There are also a number of other links to register, one being on the Home page, and on doing so the user is brought to the Register page which has a personal easy to use feel.<br>
+  The user can browse and view the features on the site but they are encouraged to create an account. They can do this or login or logout easily from My Account in the Navbar. There are also a number of other links to register, one being on the Home page, and on doing so the user is brought to the Register page which has a personal easy to use feel.<br>
   
-  Django Rest Frameworks is used for the backend and has its own register and login features. These include it's inbuilt security measures concerning for registering and logging in and out. it also deals with all other issues like changing and forgetting passwords.<br>
+  Django Rest Frameworks is used for the backend and has its own register and login features. These include its inbuilt security measures concerning for registering and logging in and out. it also deals with all other issues like changing and forgetting passwords.<br>
   See [Django Rest Frameworks](documentation/drf) for all Django Rest Frameworks images and testing images.
 
 <p align="center"> <strong>Large Screen</strong></p>
@@ -177,9 +164,9 @@ The interface is aesthetically functionally all the time creating a positive rea
 <img src="documentation/readme-images/home6.png" width="90%">
 </h2>
 
-  The site has a number of other security measures firstly the use of front end measures to prevent unauthorised users form accessing pages they do not have permisssion to, mainly other users's account pages. <br>
+  The site has a number of other security measures firstly the use of front end measures to prevent unauthorised users form accessing pages they do not have permission to, mainly other user's account pages. <br>
   <br>
-  This is achieved firstly in the Front End by an interceptor function in the CurrentUserContext file that checks on each request, via the utils folder shouldRefreshToken function, if there is a vaild timestamp token in local storage and refreshes it. If not it takes the user to the Sign In page.
+  This is achieved firstly in the Front End by an interceptor function in the CurrentUserContext file that checks on each request, via the utils folder shouldRefreshToken function, if there is a valid timestamp token in local storage and refreshes it. If not it takes the user to the Sign In page.
   Secondly in the DRF backend the views have also a security check to check if the user is authorised to access each page or component.
 
 <p align="center"> <strong>Large Screen</strong></p>
@@ -191,7 +178,7 @@ The interface is aesthetically functionally all the time creating a positive rea
 
 ### The Home Page
 
-  This page is intended to primarily sell the product and is divided in three sections. Fisrt the landing page image which has links to the different information pages and a register link. Secondly a bullet point section giving an overview of the app. The last section has a brief summary of the Creative, Production and Budgeting features and when clicked on takes the user to that feature's information page.
+  This page is intended to primarily sell the product and is divided in three sections. First the landing page image which has links to the different information pages and a register link. Secondly a bullet point section giving an overview of the app. The last section has a brief summary of the Creative, Production and Budgeting features and when clicked on takes the user to that feature's information page.
 
 <h2 align="center">
 <img src="documentation/readme-images/home6.png" width="90%">
@@ -199,7 +186,7 @@ The interface is aesthetically functionally all the time creating a positive rea
 
 ### The Creative, Production and Budgeting Features Explanatory Pages
 
-  When clicked on in the nav bar, the Home page image or the Home page section the page for that feature opens. It gives a brief concise overview of that feature along with image from the actual software.
+  When clicked on in the Navbar, the Home page image or the Home page section the page for that feature opens. It gives a brief concise overview of that feature along with image from the actual software.
 
 <h2 align="center">
 <img src="documentation/readme-images/home6.png" width="90%">
@@ -207,7 +194,7 @@ The interface is aesthetically functionally all the time creating a positive rea
 
 ### The Account Page
 
-  When clicked on in the navbar the user's Account page opens. It will show all the user's projects and have a section where they create and purchase new projects.
+  When clicked on in the Navbar the user's Account page opens. It will show all the user's projects and have a section where they create and purchase new projects.
 
 <h2 align="center">
 <img src="documentation/readme-images/home6.png" width="90%">
@@ -215,7 +202,7 @@ The interface is aesthetically functionally all the time creating a positive rea
 
 ### The Chat page
 
-  This allows users to add and view chats. It also has a link to the profiles page which contains all existing users and the ability for the user to to follow them. In doing so the user will create their feed of posts from their followed users. It is intended to build a community for the users of the app where they can share their thoughts and experiences and promote themselves and in return the actaul software itself.<br>
+  This allows users to add and view chats. It also has a link to the profiles page which contains all existing users and the ability for the user to follow them. In doing so the user will create their feed of posts from their followed users. It is intended to build a community for the users of the app where they can share their thoughts and experiences and promote themselves and in return the actual software itself.<br>
   First time and returning users who are trying to find out about the software and deciding whether or not to purchase a product can browse all the Chat messages from users who are already using the software, along with their comments, in the Chat feature. This will give the user a real unfiltered idea about the actual realtime use of the app. 
 
 <h2 align="center">
@@ -234,10 +221,7 @@ The interface is aesthetically functionally all the time creating a positive rea
 
 ## Future Features
 
-### Social Account Login
-This function allows users to sign up and log in using an existing third party account such as Google and Facebook. This would make encouraging users to sign up easier as they are just a click away and don't have to do any more. For the site owners apart from having more users sregister this opens up huge areas in terms of information and marketing.
-
-## Information Architecture 
+## Information Architecture ??????????????
 
 - Development 
 **SQLite3** was used during development and comes with Django Rest Frameworks. 
@@ -301,18 +285,16 @@ This function allows users to sign up and log in using an existing third party a
 - [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 - [JAVASCRIPT](https://en.wikipedia.org/wiki/JavaScript)
 - [PYTHON](https://en.wikipedia.org/wiki/Python_(programming_language))
-- [djangotemplatelanguage](
-  https://docs.djangoproject.com/en/3.2reftemplateslanguage/)
 
 ## Frameworks, Databases, Libraries & Programs Used ?????????????????????????????????
 
 - [React Bootstrap:](https://react-bootstrap.netlify.app/)
-   - React Bootstrap with it's grid-based format was used to create the overall framework for the site. This included the primary responsiveness.
+   - React Bootstrap with its grid-based format was used to create the overall    framework for the site. This included the primary responsiveness
      and overall styling of the website. Also specific 
-     Bootstrap features, which include the "Selectpicker", 
-     the "Navbar", and "DataTables" were used in the site.
+     Bootstrap features like
+     the Navbar were used in the site.
 - [React:](//https://react.dev/)
-   - React , the JavaScript library, was used to build the app's Front End User User Iterface.
+   - React, the JavaScript library, was used to build the app's Front End User User Iterface.
 - [Django Rest Frameworks:](https://www.django-rest-framework.org/)
    - Django Rest Frameworks the high-level Python Web framework was used to build the app's Backend.
 - [SQLite3:](https://www.sqlite.org/index.html)
@@ -320,7 +302,7 @@ This function allows users to sign up and log in using an existing third party a
 - [Postgres:](https://www.heroku.com/postgres) ?????????????????????????
    - Postgres was added with Heroku and was used as the database for production.
 - [AWS S3:](https://aws.amazon.com/) ????????????????????????????
-   - AWS was used to hold the static and media files.
+   - AWS was used to hold the media files.
 - [Cloudinary:](https://cloudinary.com/)
    - Cloudinary was used to hold the media files.
 - [Axios](https://axios-http.com/docs/intro)
@@ -339,8 +321,6 @@ This function allows users to sign up and log in using an existing third party a
    - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
 - [GitHub:](https://github.com/)
    - GitHub is used to store the projects code after being pushed from Git.
-- [Balsamiq:](https://balsamiq.com/)
-   - Balsamiq was used to create the [wireframes](https://github.com/johnston9/MS3-Shot-Caller) during the design process.
 - [Freeformatter](https://www.freeformatter.com/html-formatter.html)
    - Freeformatter was used to tidy up the final code.
 - [Gauger](https://gauger.io/fonticon/)
@@ -361,7 +341,7 @@ A number of imports were used in Django Rest Frameworks and an inventory of thes
 ## Testing
 All functionality was tested as it was being built to ensure there were no errors, that it did what it was meant to do and that all database errors were handled correctly. 
 
-On completion the functionality of the entire app was repeatedly tested on various devices both by the development team and by Capital Numbers, the infotech company responsible for some of the high level configuration work.
+On completion the functionality of the entire app was repeatedly tested on various devices both by the development team and by Capital Numbers, the InfoTech company responsible for some of the high level configuration work.
 
 Pylint was also used in the backend workspace as the project was being built for Python and Django code and all errors were fixed on an ongoing process. 
 
@@ -385,7 +365,6 @@ W3C Markup Validator, W3C CSS Validator, PEP8 and JSHint were used to validate a
   - PythonChecker approved all DRF python pages apart from a few too long lines in the setting.py which I decided to leave. 
   [Results](documentation/testing/)
 
-
 [Back to Table of Content](#table-of-content)
 
 ## Testing User Stories from User Experience (UX) 
@@ -394,12 +373,12 @@ W3C Markup Validator, W3C CSS Validator, PEP8 and JSHint were used to validate a
 
 1. #### As a First Time User, I want to learn what the site has to offer and how to navigate the site quickly.
 
-    - The Landing/Home page is split into three sections. The first informs the user as to the nature of the site and what it offers immediatly through the image and text used. The text saying offers both an "All in One" Film, TV and Video Production Software platform and the Budgeting Software as a individual product.<br>
+    - The Landing/Home page is split into three sections. The first informs the user as to the nature of the site and what it offers immediately through the image and text used. The text saying offers both an "All in One" Film, TV and Video Production Software platform and the Budgeting Software as a individual product.<br>
     It then lists the software's features headed under the Creative and the Production side. These can be clicked on to take the user quickly to the information page for that feature.<br>
-    The second section gives a brief easy to understand overview of what the sortware does and what it can be used for.<br>
-    The site is designed for first time learning. It is streamlined for specific user goal that upon first use the user with a clicks will be able to find all information about the software's features. At the top of every page the navbar displays all options for the user so they can select their desired destination quickly.
+    The second section gives a brief easy to understand overview of what the software does and what it can be used for.<br>
+    The site is designed for first time learning. It is streamlined for specific user goal that upon first use the user with a clicks will be able to find all information about the software's features. At the top of every page the Navbar displays all options for the user so they can select their desired destination quickly.
 
-<p align="center"><strong>Landing Page and navbar</strong></p>   
+<p align="center"><strong>Landing Page and Navbar</strong></p>   
 <h2 align="center">
 <img src="documentation/readme-images/home6.png" width="90%">
 </h2>
@@ -420,7 +399,7 @@ W3C Markup Validator, W3C CSS Validator, PEP8 and JSHint were used to validate a
 
 3. #### As a First Time User, I want to register an account easily.
 
-    - The user will be given the option to Register immediatly by a link at the bottom of the landing page image and anytime in the My Account nav link. On clicking they will be taken to the Register Page and only have to enter a username and password to sign up. The Registration page is designed to be friendly and completly uncomplicated for greater user experience.<br>
+    - The user will be given the option to Register immediately by a link at the bottom of the landing page image and anytime in the My Account nav link. On clicking they will be taken to the Register Page and only have to enter a username and password to sign up. The Registration page is designed to be friendly and completely uncomplicated for greater user experience.<br>
 
 <p align="center"><strong>Register page</strong></p>   
 <h2 align="center">
@@ -439,8 +418,7 @@ W3C Markup Validator, W3C CSS Validator, PEP8 and JSHint were used to validate a
 1. #### As a Returning User, I want to easily login and logout.
 
     - The user can login and logout easily from the My Account nav link. The login takes them to Sign In page and the logout is automatic. <br>
-    The site also includes a feature that keeps a user signed in for 24 hours so they don't have to go to the trouble of signing in if they are using it regularly.<br>
-    This is achieved by an interceptor function in the CurrentUserContext file that checks, via the utils folder shouldRefreshToken function, if there is a vaild timestamp token in local storage and refreshes it.
+    The site also includes a feature that keeps a user signed in for 24 hours so they don't have to go to the trouble of signing in if they are using it regularly. This is achieved by an interceptor function in the CurrentUserContext file that checks, via the utils folder shouldRefreshToken function, if there is a vaild timestamp token in local storage and refreshes it.
 
 <p align="center"><strong>xxxxxxx</strong></p>
 <h2 align="center">
@@ -454,7 +432,7 @@ W3C Markup Validator, W3C CSS Validator, PEP8 and JSHint were used to validate a
 
 2. #### As a Returning User, I want to view or update my profile.
 
-    - On clicking on the My Profile tab in the My Account navbar the user is taken to their Profile Page where they can view and update their Profile details.
+    - On clicking on the My Profile tab in the My Account Navbar the user is taken to their Profile Page where they can view and update their Profile details.
 
 <p align="center"><strong>xxxxxxx</strong></p>
 <h2 align="center">
@@ -463,8 +441,8 @@ W3C Markup Validator, W3C CSS Validator, PEP8 and JSHint were used to validate a
 
 3. #### As a Returning User, I want to see what people are saying about the app and know if it is professional and trustworthy.
 
-    - The user can view reviews and testimonials from bonified users on the Testimonials page, which is easily accessible from a link in the navbar. Positive, short and concise lines from these will also be added to the landing page to immediatly make an impact on the user.<br>
-    The user can also browse all the Chat messages from users who are already using the software, along with their comments, in the Chat feature. This will give the user a real unfiltered idea about the actual realtime use of the app. 
+    - The user can view reviews and testimonials from registered users on the Testimonials page, which is easily accessible from a link in the Navbar. Positive, short and concise lines from these will also be added to the landing page to immediately make an impact on the user.<br>
+    The user can also browse all the Chat messages from users who are already using the software, along with their comments, in the Chat feature. This will give the user a real unfiltered idea about the actual real-time use of the app. 
 
 <p align="center"><strong>xxxxxx</strong></p>
 <h2 align="center">
@@ -473,10 +451,10 @@ W3C Markup Validator, W3C CSS Validator, PEP8 and JSHint were used to validate a
 
 4. #### As a Returning User, I want purchase products easily.
 
-    - Once the user has Registered whenever they login their My Account link will display in the navbar. On going to their Account page the user will immediatly see the "Create Project" and "Create Budget" features with a brief summary of each product above it. <br> It also contains a concise explaination of what happens when a product is created and how the user should proceed.
+    - Once the user has Registered whenever they login their My Account link will display in the Navbar. On going to their Account page the user will immediately see the "Create Project" and "Create Budget" features with a brief summary of each product above it. <br> It also contains a concise explanation of what happens when a product is created and how the user should proceed.
     <br>The Create Project is for the "All in One Platform" and the user can choose which version, the Film, TV or Video/Short production software, best suits their project using the summary above to guide them. The Create Budget is for the Budgeting software. Both the Projects and Budgets will have a discounted student version and the Projects have a one month free trial both of which are designed to create more sales.<br>
-    Once the user selects a product they will be take to a stripe page to complete the transaction. And once the sale goes through the user will receive an email confirming the purchase and containing the project details. These detail include the Project URL and the user's username and password.<br>
-    Lastly the project or Budget will now display on the user's account page with it's URL.
+    Once the user selects a product they will be taken to the Stripe page to complete the transaction. And once the sale goes through the user will receive an email confirming the purchase and containing the project details. These detail include the Project URL and the user's username and password.<br>
+    Lastly the project or Budget will now display on the user's account page with its URL.
 
 <p align="center"><strong>xxxxxx</strong></p>
 <h2 align="center">
@@ -489,7 +467,7 @@ W3C Markup Validator, W3C CSS Validator, PEP8 and JSHint were used to validate a
 
 1. #### As a Frequent User, I want to view my purchased products and projects.
 
-    - The user can easily view their purchased products and projects in their account page, the link for which is clearly displayed in the navbar.
+    - The user can easily view their purchased products and projects in their account page, the link for which is clearly displayed in the Navbar.
 
 <p align="center"><strong>xxxxxxx</strong></p>
 <h2 align="center">
@@ -513,6 +491,11 @@ W3C Markup Validator, W3C CSS Validator, PEP8 and JSHint were used to validate a
 <h2 align="center">
 <img src="documentation/readme-images/home6.png" width="90%">
 </h2>
+
+4. #### As a Frequent User, I want to use the Budgeting Software.
+
+    - A complete breakdown of the usage and testing of this is in the Existing Features section.
+
 
 ### Owner/Admin User Goals
 
@@ -554,7 +537,7 @@ W3C Markup Validator, W3C CSS Validator, PEP8 and JSHint were used to validate a
 
 5. #### As the Owner/Admin User I want control over material posted on the site for legal and other purposes.
 
-    - The Owner/Admin User delete post's and comments in the chat feature. They can also delete Users.
+    - The Owner/Admin User can delete posts and comments in the Chat feature. They can also delete Users.
 
 <p align="center"><strong>xxxxxxx</strong></p>
 <h2 align="center">
@@ -578,7 +561,6 @@ If incorrect details or there are required boxes not filled in an error message 
 <h2 align="center">
 <img src="documentation/readme-images/card-inco.png" width="90%">
 </h2>
-
 
 ### Testing Stripe Two-step authentication
 
@@ -648,3 +630,76 @@ xxxxxxxx
 
 ### bug 1
  - The adding of
+
+## Deployment
+
+### Development platform
+
+   [Gitpod:](https://www.gitpod.io/docs/)
+   - Gitpod was used as the development platform.
+
+### Repository
+   [Github](https://github.com/)
+   - Github was used as the repository for the project.
+
+### Deploy to Heroku
+Heroku was used to deploy the project.
+
+[Heroku](https://www.heroku.com/platform)
+
+### Requirements
+asgiref==3.5.2
+cloudinary==1.29.0
+dj-database-url==1.0.0
+dj-rest-auth==2.2.5
+Django==3.2.15
+django-allauth==0.50.0
+django-cloudinary-storage==0.3.0
+django-cors-headers==3.13.0
+django-filter==22.1
+djangorestframework==3.13.1
+djangorestframework-simplejwt==5.2.0
+gunicorn==20.1.0
+oauthlib==3.2.0
+Pillow==9.2.0
+psycopg2==2.9.3
+PyJWT==2.4.0
+python3-openid==3.2.0
+pytz==2022.2.1
+requests-oauthlib==1.3.1
+sqlparse==0.4.2
+
+[Back to Table of Content](#table-of-content)
+
+## Credits
+
+### Code
+
+- [Code Institute](https://codeinstitute.net/)
+  The code for the basic React/DRF set-up for the app from Code Institute course material. This includes the Requests, the Current User Context, the Profiles and the Posts, Likes and Followers in the Front End and the Models, Views and Serializers for all apps in the Back End.
+- [Django Rest Framework](https://www.django-rest-framework.org/)
+  I referred to these throughout the project.
+- [stackoverflow.com]()
+  I referred to Stack Overflow to check out different approaches for some issues. It was here I learnt the Regex for input boxes.
+- [w3schools.com]()
+  I referred to W3 a number of times for Javascript code examples.
+  
+### Content
+
+All content was written by the developer and Capital Numbers.
+
+### Media
+
+The photos used for the images in the site were obtained from:
+
+  1. [FreeImages.com](https://www.freeimages.com/)
+
+  2. [pexels.com](https://www.pexels.com)
+
+  3. [Unsplash.com](https://unsplash.com/photos/irRhPKPqP9Y)
+
+### Acknowledgements
+   
+- I would like to thank ...
+
+[Back to Table of Content](#table-of-content)
