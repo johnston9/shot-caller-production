@@ -51,8 +51,6 @@ const Project = ({id, name, url, stripe_id, company, owner} ) => {
                     {company && <p style={{ fontStyle: 'italic' }}
                     className="mb-0 mt-2 pb-0 text-center">{company}</p>}
                     <hr className='my-2' />
-                    <Card.Text>Project Id: {id}</Card.Text>
-                    <Card.Text>Stripe Id: {stripe_id}</Card.Text>
                     <Card.Text>URL: {url} </Card.Text>
                     <Row className="mt-1" >
                     <Col >
@@ -61,6 +59,8 @@ const Project = ({id, name, url, stripe_id, company, owner} ) => {
                     <span className={ `${styles.BudgetLink} px-md-5 mx-1`}>Budget</span>
                     </div>
                     </Link>
+                    {/* <Card.Text>Project Id: {id}</Card.Text> */}
+                    {/* <Card.Text>Stripe Id: {stripe_id}</Card.Text> */}
                     </Col>
                     </Row>
                 </Card.Body>

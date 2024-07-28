@@ -5,7 +5,7 @@
 A web application for film, TV and video production.<br>
 
 ## Purpose
-Essentially the site consists of three elements. The first to introduce the user to its two software products, one an "All in One Film, TV, and Video Production Platform" and two "Budgeting Software". This element aims to give them about them clear information about the products and encourage them to create an account and purchase them. The second contains the user's account page which allows them to purchase products and view their already purchased ones easily. The third is the actual Budgeting Software. This is available as a separate product but is also included as part of the "All in One Platform".
+Essentially the site consists of three elements. The first to introduce the user to its two software products, an "All in One Film, TV, and Video Production Platform" and "Budgeting Software". This element aims to give them about them clear information about the products and encourage them to create an account and purchase them. The second contains the user's account page which allows them to purchase products and view their already purchased ones easily. The third is the actual Budgeting Software. This is available as a separate product but is also included as part of the "All in One Platform".
 <br>
 
 ## Usage
@@ -15,7 +15,8 @@ Once a user has purchased an "All in One Platform" they will be given a URL, by 
 If a user just purchases the Budgeting software they will also receive a URL, by email, for it along with a username and password for it and the product will also now show in their account page along with the URL to it.<br>
 More detailed information about the features of this site and how to use it can be found in the [Existing Features section](#existing-features---usage-and-testing)
 <br>
-There is no installation needed or requirements for the "All in One Platform" or "Budgeting" Software" for the App.<br>
+To use the "Budgeting Software" the user simply clicks on the link to be taken to it and there they will find information on how to use it.<br>
+There is no installation needed or requirements for the "All in One Platform" or "Budgeting Software" for the App.<br>
 Here is the link to that Platform App's Readme. [Shot Caller](https://)<br>
 
 ## Issues
@@ -29,9 +30,8 @@ If a User has any issues they can contacts the site through the Contact Us page.
 
 The business goals are to establish the app as a professional film production software platform, to create an online presence and establish it as a brand. Its primary purpose is to entice new customer to register and purchase products and secure regular returning customers. It aims initially to catch the user's attention by making an immediate impact on them as to the nature of the software and create curiosity with the user to encourage them to explore the software's features. It aims to build trust and ultimately inspire them to create an account and purchase products. It aspires to build a customer base.
 
-For the user, the initial goal of the site is to find out about the software and register an account easily. Then to create projects by purchasing them. For the registered user the goal is to access their Account page and view and purchase products.
-
-The Home page contains a brief overview of the software's abilities by section, i.e. the different aspects of film production that it facilitates. Each section when clicked on opens a page detailing and explaining that section with images.
+For the user, the initial goal of the site is to find out about the software and register an account easily. The Home page contains a brief overview of the software's abilities by section, i.e. the different aspects of film production that it facilitates. Each section when clicked on opens a page detailing and explaining that section with images.<br>
+For the registered user the goal is to access their Account page to create projects easily by purchasing them and view their purchase products. For the user who has purchased the seperate "Budgeting Software" the goal is for them to understand how to use it as quickly as possible and to make using it a clear productive process.
 
 ### Strategy Plane
 

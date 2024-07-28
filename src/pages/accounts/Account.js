@@ -15,11 +15,11 @@ const Account = ({id, profile, account} ) => {
   const history = useHistory();
 
 const topProfile = (
-    <div className={`px-3 py-1 ${styles.Top}`}>
-      <Row className="mx-2 mt-2 ">
+    <div className={`px-0 py-1 ${styles.Top}`}>
+      <Row className=" x-2 mt-2 ">
         <Col md={3} >
         <Image
-            className={styles.ProfileImage}
+            className={`${styles.ProfileImage}`}
             height={40}
             width={40}
             roundedCircle
@@ -41,8 +41,8 @@ const topProfile = (
 
 const topProfileMo = (
   <div className={`px-3 py-1 ${styles.Top}`}>
-    <Row className="mx-2 mt-2 ">
-      <Col xs={{span: 8, offset: 2}} className="text-center" >
+    <Row className="mt-2 ">
+      <Col xs={10} className="text-center" >
       <Image
           className={styles.ProfileImage}
           height={40}
@@ -55,7 +55,7 @@ const topProfileMo = (
       <Col xs={2}>
       {profile?.is_owner && <ProfileEditDropdown id={profile?.id} />}
       </Col>
-      <Col xs={12} className="text-center" >
+      <Col xs={10} className="text-center" >
         <h3 className={`pl-5 ${styles.TopCompany}`}>{profile?.company} 
         </h3>
       </Col>

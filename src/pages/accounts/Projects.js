@@ -86,7 +86,7 @@ const Projects = ({id} ) => {
       </Col>
     </Row>
     {/* projects */}
-    <Row className="px-5">
+    <Row className="px-md-5">
         {hasLoaded ? (
         <>
         {projects.results.length ? (

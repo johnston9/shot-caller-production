@@ -1,4 +1,4 @@
-/* Component rendered on the ChatssPage to display the 
+/* Component rendered on the ChatsPage to display the 
    cover info for each Chat
  * When clicked on it opens that Chat's ChatPage */
 import React from 'react';
@@ -84,75 +84,98 @@ const ChatTop = (props) => {
     <div >
         <Card >
             <Card.Body className={`${styles.ChatTop} py-1`} >
-            <Row className="d-flex align-items-center">
-                <Col xs={2} >
+              <div className='d-block d-lg-none'>
+                {/* Image */}
+              <Row className="d-flex align-items-center">
+                <Col xs={6} className='px-0' >
                 <Link to={`/profiles/${profile_id}`}>
-                <Avatar src={profile_image} height={45}  />
+                <Avatar src={profile_image} height={30}  />
                 </Link>
                 </Col>
-                {/* xs */}
-                <Col xs={8} className='d-block d-lg-none' >
-                    <Row className="d-flex align-items-center">
+                <Col xs={6} 
+                className="d-flex align-items-center justify-content-center" >
+                {is_owner && (
+                    <UniDropdown
+                    handleEdit={handleEdit}
+                    handleDelete={handleDelete}
+                />
+                ) } 
+                </Col>
+              </Row>
+              {/* name */}
+              <Row className="d-flex align-items-center">
                     <Col className='text-center px-0' xs={12}>
                     <span style={{fontWeight: '600', textTransform: 'capitalize', color:'#fff'}} 
-                    >{name} - <span style={{fontStyle:'italic'}}>{company} </span>
+                    >{name}
                      </span>
                     </Col>
-                    </Row>
-                    <Row className="d-flex align-items-center">
-                    <Col className='text-center px-0 pb-0'
-                     xs={6}><span style={{color:'#fff'}} >{updated_at}</span></Col>
-                    <Col className='text-center px-0' xs={6} >
-                    <div className={` ${styles.PostBar}`} >
-                    {/* like */}
-                    {is_owner ? (
-                    <OverlayTrigger
-                    placement="top"
-                    overlay={<Tooltip>You can't like your own post!</Tooltip>}
-                    >
-                    <i className="far fa-heart" />
-                    </OverlayTrigger>
-                ) : like_id ? (
-                    <span onClick={handleUnlike}>
-                    <i className={`fas fa-heart ${styles.Heart}`} />
-                    </span>
-                ) : currentUser ? (
-                    <span onClick={handleLike}>
-                    <i className={`far fa-heart ${styles.HeartOutline}`} />
-                    </span>
-                ) : (
-                    <OverlayTrigger
-                    placement="top"
-                    overlay={<Tooltip>Log in to like posts!</Tooltip>}
-                    >
-                    <i className="far fa-heart" />
-                    </OverlayTrigger>
-                )}
-                                {likes_count}
-                    <OverlayTrigger
-                        placement="top"
-                        overlay={<Tooltip>Comments</Tooltip>}
-                        >
-                    <Link to={`/posts/${id}`}>
-                        <i className="far fa-comments" />
-                    </Link>
-                    </OverlayTrigger>
-                    {comments_count}
-                    </div> 
+                    <Col className='text-center px-0' xs={12}>
+                    <span style={{fontWeight: '600', textTransform: 'capitalize', color:'#fff'}} 
+                    ><span style={{fontStyle:'italic'}}>{company} </span>
+                     </span>
                     </Col>
-                    </Row>           
-                </Col> 
+              </Row>
+              <Row className="d-flex align-items-center">
+              <Col className='text-center px-0 pb-0'
+                xs={6}><span style={{color:'#fff'}} >{updated_at}</span></Col>
+              <Col className='text-center px-0' xs={6} >
+              <div className={` ${styles.PostBar}`} >
+              {/* like */}
+              {is_owner ? (
+              <OverlayTrigger
+              placement="top"
+              overlay={<Tooltip>You can't like your own post!</Tooltip>}
+              >
+              <i className="far fa-heart" />
+              </OverlayTrigger>
+          ) : like_id ? (
+              <span onClick={handleUnlike}>
+              <i className={`fas fa-heart ${styles.Heart}`} />
+              </span>
+          ) : currentUser ? (
+              <span onClick={handleLike}>
+              <i className={`far fa-heart ${styles.HeartOutline}`} />
+              </span>
+          ) : (
+              <OverlayTrigger
+              placement="top"
+              overlay={<Tooltip>Log in to like posts!</Tooltip>}
+              >
+              <i className="far fa-heart" />
+              </OverlayTrigger>
+          )}
+                          {likes_count}
+              <OverlayTrigger
+                  placement="top"
+                  overlay={<Tooltip>Comments</Tooltip>}
+                  >
+              <Link to={`/posts/${id}`}>
+                  <i className="far fa-comments" />
+              </Link>
+              </OverlayTrigger>
+              {comments_count}
+              </div> 
+              </Col>
+              </Row>           
+              </div>
+              <div className='d-none d-lg-block'>
+              <Row className="d-flex align-items-center">
+                <Col md={1} className='px-0' >
+                <Link to={`/profiles/${profile_id}`}>
+                <Avatar src={profile_image} height={30}  />
+                </Link>
+                </Col>
                 {/* md */}
-                <Col xs={8} className='d-none d-lg-block' >
+                <Col md={10} >
                     <Row className="d-flex align-items-center">
                     <Col className='text-center px-0 pb-0'
-                     xs={2}><span style={{color:'#fff'}} >{updated_at}</span></Col>
+                     md={2}><span style={{color:'#fff'}} >{updated_at}</span></Col>
                     <Col className='text-center px-0' xs={8}>
                     <h5 style={{fontWeight: '600', textTransform: 'capitalize', color:'#fff'}} 
                     >{name} - <span style={{fontStyle:'italic'}}>{company} </span>
                      </h5>
                     </Col>
-                    <Col className='text-center px-0' xs={2} >
+                    <Col className='text-center px-0' md={2} >
                     <div className={` ${styles.PostBar}`} >
                     {/* like */}
                     {is_owner ? (
@@ -192,7 +215,7 @@ const ChatTop = (props) => {
                     </Col>
                     </Row>            
                 </Col>                    
-                <Col xs={2} 
+                <Col md={1} 
                 className="d-flex align-items-center justify-content-center" >
                 {is_owner && (
                     <UniDropdown
@@ -202,14 +225,15 @@ const ChatTop = (props) => {
                 ) } 
                 </Col>
             </Row>
+              </div>
             </Card.Body>
             {/* end new */}
             <Link to={`/chat/${id}`}>
-            <Card.Body className={`${styles.ChatTopLink} py-1`}  >
+            <Card.Body className={`${styles.ChatTopLink} py-0`}  >
                 {title && <h4 style={{ fontStyle: 'italic' }}
                 className="mb-0 pb-0 text-center">{title}</h4>}
-                <hr />
-                {content && <Card.Text>{content}</Card.Text>}
+                {/* <hr />
+                {content && <Card.Text>{content}</Card.Text>} */}
             </Card.Body>
             </Link>
         </Card>
