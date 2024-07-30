@@ -61,7 +61,7 @@ const SignUpForm = () => {
           </Col>
           <Col className="my-auto py-2 p-md-2" xs={10} >
           <Row >
-            <Col md= {3} className="d-nome d-md-block"></Col>
+            <Col md= {3} className="d-none d-md-block"></Col>
             <Col xs={12} md={6} >
               <Container >
                 <h1 className={styles.Header}>sign up</h1>

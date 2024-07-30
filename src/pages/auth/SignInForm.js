@@ -66,11 +66,11 @@ const SignInForm = () => {
                 className={`${styles.FillerImagel}`}
                 src={door}/>
           </Col>
-          <Col className="my-auto py-2 p-md-2" xs={10}>
+          <Col className="py-2 p-md-2" xs={10}>
             <Row>
              <Col md= {3} className="d-none d-md-block"></Col>
                <Col xs={12} md={6} className="text-center" >
-               <Container>
+               <Container className="mt-5">
                 <h1 className={`${styles.Header}`}>Sign in</h1>
                 <Form onSubmit={handleSubmit} className={styles.Form} >
                   <Form.Group controlId="username" className="mb-2" >

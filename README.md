@@ -136,6 +136,26 @@ The interface is aesthetically functionally all the time creating a positive rea
 
 ### Budgeting Software
 
+- Find the Budget Page for the "All in One Platform" or the seperate "Budgeting Software" easily.
+
+- Create the Budget.
+
+- Add Production details easily.
+
+- Add/Edit the "Above the Line" numbers and see the Totals change with each input.
+
+- Add/Edit the "Below the Line" Labour numbers and see the Totals change with each input.
+
+- Add/Edit the "Below the Line" Costs numbers and see the Totals change with each input.
+
+- Add/Edit the Post, Other and Contingency numbers and see the Totals change with each input.
+
+- View the finished Budget in it's easy to Read format.
+
+- Download or Print the finished Budget.
+
+- Use the Globals feature to give all the Crew's Production working "Weeks Length" a universal value for their "Prep", "Shoot" and "Wrap" inputs and see the Totals change with each change.
+
 ### Responsive Design
 
 - The site is responsive to all sizes and the images remain whole and in proportion at all sizes. 
