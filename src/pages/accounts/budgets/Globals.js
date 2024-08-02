@@ -158,7 +158,6 @@ const Globals = (props) => {
       electrician_uno: shoot_global,
       generator_op_uno: shoot_global,
       other_elec_uno: shoot_global,
-      dailies_elec_uno: shoot_global,
     });
     setPostDataGrip({
       ...postDataGrip,
@@ -314,7 +313,6 @@ const Globals = (props) => {
         elec_uno_prep: prep_global,
         gen_op_uno_prep: prep_global,
         ot_el_uno_prep: prep_global,
-        d_elec_uno_prep: prep_global,
     });
     setPostDataGrip({
         ...postDataGrip,
@@ -464,7 +462,6 @@ const Globals = (props) => {
         elec_uno_wrap: wrap_global,
         gen_op_uno_wrap: wrap_global,
         ot_el_uno_wrap: wrap_global,
-        d_elec_uno_wrap: wrap_global,
     });
     setPostDataGrip({
         ...postDataGrip,

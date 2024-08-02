@@ -1038,14 +1038,14 @@ const Budget = (props) => {
     <h5 className={ `${styles.BoldBlack}`}>BUDGET DETAIL PAGE</h5>
     </Col>
     </Row>
-    <div className="px-2" >
+    {/* <div className="px-2" >
     <Row>
         <Col>
         <p>One</p>
         <p>{id} - {budget_number} </p>
         </Col>
       </Row>
-    </div>
+    </div> */}
     {/* DETAILS LENGTH */}
     <div className={ `my-0 py-0`}>
     <Row className='px-5'>

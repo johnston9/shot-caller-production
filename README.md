@@ -136,25 +136,185 @@ The interface is aesthetically functionally all the time creating a positive rea
 
 ### Budgeting Software
 
-- Find the Budget Page for the "All in One Platform" or the seperate "Budgeting Software" easily.
+- Find the Budget Page for the "All in One Platform" or the seperate "Budgeting Software" easily on the User Account page.
+
+<p align="center"> <strong>Find the Budget for the projects in the Platform</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/bud1find.png" width="50%">
+</h2>
+
+<p align="center"> <strong>Find the Budget purchased as a seperate item</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/bud1find.png" width="90%">
+</h2>
 
 - Create the Budget.
 
-- Add Production details easily.
+<p align="center"> <strong>Create Budget by inputing some details</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/bud3create1.png" width="90%">
+</h2>
 
-- Add/Edit the "Above the Line" numbers and see the Totals change with each input.
+<p align="center"> <strong>Created Budget</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/bud4create2.png" width="90%">
+</h2>
 
-- Add/Edit the "Below the Line" Labour numbers and see the Totals change with each input.
+- On the Budget Edit Page find each Budget Section link along with its current total, which when clicked it opens that section's inputs page along with all the current Totals.
+<p align="center"> <strong>Budget Sections and Totals</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/bud5edit1.png" width="90%">
+</h2>
 
-- Add/Edit the "Below the Line" Costs numbers and see the Totals change with each input.
+<p align="center"> <strong>Clicking on the Visual effects link opens its page</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/bud6edit2.png" width="90%">
+</h2>
 
-- Add/Edit the Post, Other and Contingency numbers and see the Totals change with each input.
+- Add/Edit the "Above the Line" sections and see the Totals change with each input.
 
-- View the finished Budget in it's easy to Read format.
+<p align="center"> <strong>The Pre-Production & Development section with inputs and total</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/bud7above1.png" width="90%">
+</h2>
+
+<p align="center"> <strong>The Pre-Production & Development section link with the new total and the Totals showing the changes</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/bud8above2.png" width="90%">
+</h2>
+
+- Add/Edit the "Below the Line" Labour sections and see the Totals change with each input. The Labour section calculates the total for each crew member's Prep, Shoot and Wrap total, which is in turn calculated by multiplying the number of crew in the role by the number of Weeks by the Rate. 
+
+<p align="center"> <strong>The Electrical Labour section with inputs and total - top half</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/bud9belowlab1.png" width="90%">
+</h2>
+
+<p align="center"> <strong>The Electrical Labour section with inputs and total - bottom half</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/bud10belowlab2.png" width="90%">
+</h2>
+
+<p align="center"> <strong>The Electrical Labour section link with the new total and the Totals showing the changes</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/bud11belowlab3.png" width="90%">
+</h2>
+
+- Add/Edit the "Below the Line" Costs sections and see the Totals change with each input.
+
+<p align="center"> <strong>The Construction Material section with inputs and total</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/bud12belowcos1.png" width="90%">
+</h2>
+
+<p align="center"> <strong>The Construction Material section link with the new total and the Totals showing the changes</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/bud13belowcos2.png" width="90%">
+</h2>
+
+- Add/Edit the Post Production sections and see the Totals change with each input.
+
+<p align="center"> <strong>The Editing section with inputs and total</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/bud14post1.png" width="90%">
+</h2>
+
+<p align="center"> <strong>The Editing section link with the new total and the Totals showing the changes</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/bud15post2.png" width="90%">
+</h2>
+
+- Add/Edit the Other sections and the Contingency and see the Totals change with each input.
+
+<p align="center"> <strong>The Publicity section with inputs and total</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/bud16oth1.png" width="90%">
+</h2>
+
+<p align="center"> <strong>The Publicity section link with the new total and totals showing the changes</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/bud17oth2.png" width="90%">
+</h2>
+
+<p align="center"> <strong>The Contingincy and Bond inputs totals showing the changes</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/bud18oth3.png" width="90%">
+</h2>
+
+- View the finished Budget in it's easy to Read format and all above imputs showing correctly.
+
+<p align="center"> <strong>The Details and Totals match the Edit pages' ones which were submitted</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/bud19detntot.png" width="90%">
+</h2>
+<p align="center"> <strong>The Pre-Production & Development values match the Edit pages' ones which were submitted</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/bud20prepro.png" width="90%">
+</h2>
+
+<p align="center"> <strong>The Electrical Labour values match the Edit pages' ones which were submitted</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/bud21eleclab.png" width="90%">
+</h2>
+
+<p align="center"> <strong>The Construction Material values match the Edit pages' ones which were submitted</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/bud22conmat.png" width="90%">
+</h2>
+
+<p align="center"> <strong>The Editing values match the Edit pages' ones which were submitted</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/bud23edit.png" width="90%">
+</h2>
+
+<p align="center"> <strong>The Publicity values match the Edit pages' ones which were submitted</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/bud24pub.png" width="90%">
+</h2>
+
+<p align="center"> <strong>The Contingincy and Bond match the Edit pages' ones which were submitted along with the Totals</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/bud7above1.png" width="90%">
+</h2>
 
 - Download or Print the finished Budget.
 
+<p align="center"> <strong>The Pre-Production & Development section with inputs and total</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/bud7above1.png" width="90%">
+</h2>
+
+<p align="center"> <strong>The Pre-Production & Development section link with the new total and totals showing the changes</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/bud8above2.png" width="90%">
+</h2>
+
 - Use the Globals feature to give all the Crew's Production working "Weeks Length" a universal value for their "Prep", "Shoot" and "Wrap" inputs and see the Totals change with each change.
+
+<p align="center"> <strong>Set the Globals in seconds</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/bud25globset.png" width="90%">
+</h2>
+
+<p align="center"> <strong>The Glodals added the empty inputs in the Camera Labour section</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/bud27glob3.png" width="90%">
+</h2>
+
+<p align="center"> <strong>The Glodals updated the pre-existing values in the Electrical Labour section</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/bud28globel2.png" width="90%">
+</h2>
+
+<p align="center"> <strong>The Edit page updated totals</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/bud29globetot.png" width="90%">
+</h2>
+
+<p align="center"> <strong>The Budget page updated totals after being submitted</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/bud30totp.png" width="90%">
+</h2>
 
 ### Responsive Design
 

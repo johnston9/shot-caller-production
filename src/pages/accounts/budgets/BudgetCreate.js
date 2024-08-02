@@ -427,7 +427,7 @@ function BudgetCreate() {
     <Row className={ `${styles.OverviewBlue} mx-1 mb-1 py-3 text-center`}>
     <Col md={12}>
     <h5 className={ `${styles.BoldBlack}`}>
-      CREATE BUDGET - Project Title: {title} Project ID: {id}</h5>
+      CREATE BUDGET - Project Title: {title}</h5>
     </Col>
     </Row>
     <Row className="mt-1 ml-0 px-3" >
