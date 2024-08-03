@@ -25,7 +25,6 @@ const Budget = (props) => {
   const budget13 = budget3.results[0] || "" ;
 
   const {// totals
-    id, budget_number,
     above_the_line_total, below_the_lineB_total, 
     below_the_lineB_costs_total, b_labour_and_costs_total, 
     post_productionC_total, belowB_andC_total,
@@ -1038,15 +1037,6 @@ const Budget = (props) => {
     <h5 className={ `${styles.BoldBlack}`}>BUDGET DETAIL PAGE</h5>
     </Col>
     </Row>
-    {/* <div className="px-2" >
-    <Row>
-        <Col>
-        <p>One</p>
-        <p>{id} - {budget_number} </p>
-        </Col>
-      </Row>
-    </div> */}
-    {/* DETAILS LENGTH */}
     <div className={ `my-0 py-0`}>
     <Row className='px-5'>
     <Col md={1} ></Col>

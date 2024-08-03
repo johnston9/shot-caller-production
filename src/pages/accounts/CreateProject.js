@@ -101,7 +101,7 @@ function CreateProject({setShow, fetchProjects} ) {
     formData.append("url", url);
 
     try {
-      const { data } = await axiosReq.post("/projects/", formData);
+      await axiosReq.post("/projects/", formData);
       setShow(false);
       fetchProjects();
     } catch (err) {

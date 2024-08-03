@@ -8,7 +8,7 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import { Form } from 'react-bootstrap';
 import styles from "../../styles/Profiles.module.css";
-import { useProfileData, useSetQueryContext, useSetEditProfileContext } from '../../contexts/ProfileDataContext';
+import { useProfileData, useSetQueryContext } from '../../contexts/ProfileDataContext';
 import btnStyles from "../../styles/Button.module.css";
 import { useHistory } from 'react-router-dom';
 import Button from "react-bootstrap/Button";

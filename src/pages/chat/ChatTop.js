@@ -27,7 +27,6 @@ const ChatTop = (props) => {
         likes_count,
         like_id,
         title,
-        content,
         updated_at,
         setChat,
       } = props;

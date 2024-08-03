@@ -6,7 +6,6 @@ import appStyles from "../../App.module.css";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import bb from "../../assets/bb.png";
-import bb3 from "../../assets/bb3.png";
 import bbedit from "../../assets/bbedit.png";
 import bbtop from "../../assets/bbtop.png";
 import bbglob3 from "../../assets/bbglob3.png";

@@ -5,42 +5,32 @@
 A web application for film, TV and video production.<br>
 
 ## Purpose
-Essentially the site consists of three elements. The first to introduce the user to its two software products, an "All in One Film, TV, and Video Production Platform" and "Budgeting Software". This element aims to give them about them clear information about the products and encourage them to create an account and purchase them. The second contains the user's account page which allows them to purchase products and view their already purchased ones easily. The third is the actual Budgeting Software. This is available as a separate product but is also included as part of the "All in One Platform".
+Essentially the site consists of three elements. The first to introduce the User to its two software products, an "All in One Film, TV, and Video Production Platform" and "Budgeting Software". This element aims to give them about them clear information about the products and encourage them to create an account and purchase them. The second contains the User's account page which allows them to purchase products and view their already purchased ones. The third is the actual Budgeting Software. This is available as a separate product but is also included as part of the "All in One Platform".
 <br>
 
 ## Usage
-To use the site to gather information the user can click on any link in the Home page or Navbar to take them to that feature's information page. <br>
+To use the site to gather information the User can click on any link in the Home page or Navbar to take them to that feature's information page. <br>
 To use the site to view and purchase products the User first creates an account by clicking on any of the Register links then on their Account page they can select and purchase products and view all their already purchased products.<br>
-Once a user has purchased an "All in One Platform" they will be given a URL, by email, connecting them to a separate application where the actual software is held along with a username and password for it. The product will also now show in their account page along with the URL to the platform and a separate link to the product's Budgeting software.<br>
-If a user just purchases the Budgeting software they will also receive a URL, by email, for it along with a username and password for it and the product will also now show in their account page along with the URL to it.<br>
-More detailed information about the features of this site and how to use it can be found in the [Existing Features section](#existing-features---usage-and-testing)
-<br>
-To use the "Budgeting Software" the user simply clicks on the link to be taken to it and there they will find information on how to use it.<br>
-There is no installation needed or requirements for the "All in One Platform" or "Budgeting Software" for the App.<br>
-Here is the link to that Platform App's Readme. [Shot Caller](https://)<br>
 
-## Issues
-If a User has any issues they can contacts the site through the Contact Us page.
+When a User has purchased an "All in One Platform" they will be given a URL by email to a separate application where the actual software is held along with a username and password for it. The product will also now show in their account page along with the URL to the platform and a separate link to the product's Budgeting software.<br>
 
-<h2 align="center"><img src="documentation/readme-images/home6.png" width="90%"></h2>
+If a User just purchases the Budgeting software they will also receive a URL by email for it along with a username and password and the product will also now show in their account page along with the URL to it. To use the "Budgeting Software" the User clicks on the link to be taken to it and there they will find information on how to use it.<br>
+
+There is no installation needed or requirements for the "All in One Platform" or the "Budgeting Software". If a User has any issues they can contacts the site through the Contact Us page.<br>
+Go to Shot Caller to view the Platform App's Readme. [Shot Caller](https://)<br>
 
 # Table of Content
 
 ## User Experience (UX)
+The business goals are to establish the app as a professional film production software platform, to create an online presence and to entice Users to register and purchase products.<br>
 
-The business goals are to establish the app as a professional film production software platform, to create an online presence and establish it as a brand. Its primary purpose is to entice new customer to register and purchase products and secure regular returning customers. It aims initially to catch the user's attention by making an immediate impact on them as to the nature of the software and create curiosity with the user to encourage them to explore the software's features. It aims to build trust and ultimately inspire them to create an account and purchase products. It aspires to build a customer base.
-
-For the user, the initial goal of the site is to find out about the software and register an account easily. The Home page contains a brief overview of the software's abilities by section, i.e. the different aspects of film production that it facilitates. Each section when clicked on opens a page detailing and explaining that section with images.<br>
-For the registered user the goal is to access their Account page to create projects easily by purchasing them and view their purchase products. For the user who has purchased the seperate "Budgeting Software" the goal is for them to understand how to use it as quickly as possible and to make using it a clear productive process.
+The User goals are to find out about the software, register an account, access their Account page to create and view their projects and use the "Budgeting Software".
 
 ### Strategy Plane
 
-The aim of the site is to introduce Shot Caller Production to its potential customers.
+The site aims to make an immediately impact on the User as to the nature and quality of its products through its obvious inherent professional knowledge of the film making process encouraging them to explore it's features fully, create an account and purchase products.<br>
 
-It aims to create a brand to establish an image in the public eye for the platform, to immediately impact on them the use and quality of the product. Its simple design, clear navigation and easily understood sections aims to encourage customers to explore it's features fully, then create an account and to purchase it's products.
-
-The site aims to, build a relationship with the user through its clear and obvious inherent professional knowledge of the film making process. Making this even clearer by its breaking down of the process into two sides, the Creative side and the Production side.<br>
-One major strategic move was to separate the Budgeting software available as part of the platform into an individual product. This idea being that user would more readily open to purchase this very necessary tool and seeing its quality be more open to trusting the All in One Platform.
+The Budgeting Software is available as an individual product as a User will more readily open to purchase this smaller but necessary tool and seeing its quality be more open to trusting the All in One Platform.
 
 #### Brand Identity
 - Brand promise: A complete film production software platform.
@@ -48,34 +38,24 @@ One major strategic move was to separate the Budgeting software available as par
 - Mission: To combine the creative and production sides of filmmaking in one all-encompassing platform.
 - Values: Professional, Creative and Easy to Use.
 
-<h2 align="center">
-<img src="documentation/readme-images/home6.png" width="90%">
-</h2>
-
 ### Scope Plane
 
-The features included in the app at present reflect choices made around the following reflections.
-<br>
-
-What is absolutely necessary for the app to deliver its basic functionality?<br>  
-
-What is the most enticing user friendly way of building this?<br>
-
-Which proposed features are buildable and necessary?<br>
-
-[Back to Table of Content](#table-of-content)
+The Scope was what was absolutely necessary for the app to deliver its basic functionality and what is the most enticing user friendly way of building this. For the Budgeting Software the Scope was simply to build the most comprenhensive and easy to use software possible.<br>
 
 ### Structure Plane
 
-The site is structured so the user can navigate easily and in an intuitive way through the different features of the products, all pages keeping a uniformed consistency.<br>
-
-The user is taken on a journey into the site, all elements being discoverable as they proceed along. From finding out about the two products, the "All in one Production Platform" and the "Budgeting Software" available, to creating an account and finally using the Budgeting Software.
+The site is structured so the user can navigate easily and in an intuitive way through the different features of the products. The user is taken on a journey from finding out about the two products, to purchasing products and finially using the Budgeting Software.
 
 ### Skeleton Plane
 
-The interface is aesthetically functionally all the time creating a positive reaction in the user with every click, making the user feel both at home here and part of an productive and creative journey. Details of this are found in the Design section.
+The interface is aesthetically functionally all the time creating a positive reaction in the user with every click making the user feel part of an productive and creative journey. 
 
-[Back to Table of Content](#table-of-content)
+#### Design ?????????????????
+
+ - The logo:
+ - Colour Scheme: The site aims to be professional...
+ - Typography: Playfair Display, a serif non-formal friendly font was used as the main font for the site. It has a sophisticated classy feel. Lato was used alongside it for more matter of fact details. And Playball, a very stylish, 
+ - Imagery: Images of the actual software were used to show the user how the software looks and how it works.
 
 ### User Stories
 
@@ -111,55 +91,33 @@ All User Stories testing is covered in the Testing page. [Testing](/TESTING.md)
 
 [Back to Table of Content](#table-of-content)
 
-## Design ?????????????????
-
-<h2 align="center">
-<img src="documentation/readme-images/home6.png" width="90%">
-</h2>
-
-### Landing page
- - The landing page image is intended to inform the user of the site purpose and encourage them to explore it. It contains links to all the site explanatory pages and selling points.
-
- - The logo....
-
-### Colour Scheme
- - The site aims to be professional...
-
-  
-### Typography ?????????????
- - Playfair Display, a serif non-formal friendly font was used as the main font for the site. It has a sophisticated classy feel. Lato was used alongside it for more matter of fact details. And Playball, a very stylish, 
-
-### Imagery
- - Images of the actual software were used to show the user how the software looks and how it works.
-
-[Back to Table of Content](#table-of-content)
-
 ## Features
-- For the complete coverage of the Features Testing go to the Testing page. [Testing](/TESTING.md)
 
 ### Budgeting Software
 - Create professional standard budgets easily, includes Globals.
 
 ### Login/Register/Logout Pages and Security
-The user can Register, Login and Logout easily and the entire software has both frontend and backend security.
+- The user can Register, Login and Logout easily and the entire software has both frontend and backend security.
 
 ### The Home Page
-This page primarily aims to give the User information about and sell the products. 
+- This page primarily aims to give the User information about and sell the products. 
 
 ### The Creative, Production and Budgeting Features Explanatory Pages
-These give brief concise overviews of each feature.
+- These give brief concise overviews of each feature.
 
 ### The User's Account Page
-This page holds all the User's projects and allows the userto create and purchase new projects.
+- This page holds all the User's projects and allows the userto create and purchase new projects.
 
 ### The Chat page
-This is where the User can view or add Chats and Comments, it also hols all the Users Profiles.
+- This is where the User can view or add Chats and Comments, it also hols all the Users Profiles.
 
 ### Stripe ????????????????????
-Stripe is used for the payment system.
+- Stripe is used for the payment system.
 
 ### Responsive Design
 - The site is responsive to all screen sizes and the images respond in proportion. 
+
+For the complete coverage of the Features Testing go to the Testing page. [Testing](/TESTING.md)
 
 ## Information Architecture ??????????????
 
@@ -210,12 +168,6 @@ Stripe is used for the payment system.
 1 - <strong>Like</strong> - to hold the Profile's Followers.<br>
   - Foreign Key to User 
   - Foreign Key to Chat
-
-<p align="center"><strong>Entity Relationship Diagram</strong></p>
-
-<h2 align="center">
-<img src="documentation/readme-images/home6.png" width="100%">
-</h2>
 
 [Back to Table of Content](#table-of-content)
 
@@ -279,7 +231,7 @@ A number of imports were used in Django Rest Frameworks and an inventory of thes
 [Back to Table of Content](#table-of-content)
 
 ## Testing
-- For the complete coverage of Fearures, User Stories and lighthouse testing see go to the Testing page.
+- For the complete coverage of Features, User Stories and Lighthouse testing go to the Testing page.
 [Testing](/TESTING.md)
 
 All functionality was tested as it was being built to ensure there were no errors, that it did what it was meant to do and that all database errors were handled correctly. 
@@ -356,7 +308,7 @@ sqlparse==0.4.2 <br>
 ### Code
 
 - [Code Institute](https://codeinstitute.net/)
-  The code for the basic React/DRF set-up for the app from Code Institute course material. This includes the Requests, the Current User Context, the Profiles and the Posts, Likes and Followers in the Front End and the Models, Views and Serializers for all apps in the Back End.
+  The code for the basic React/DRF set-up for the app from Code Institute. This includes the Requests, the Current User Context, the Profiles and the Posts, Likes and Followers in the Front End and the Models, Views and Serializers for all apps in the Back End.
 - [Django Rest Framework](https://www.django-rest-framework.org/)
   I referred to these throughout the project.
 - [stackoverflow.com]()

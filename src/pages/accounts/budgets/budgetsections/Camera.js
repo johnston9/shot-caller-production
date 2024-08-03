@@ -109,8 +109,8 @@ const Camera = (props) => {
       const addDop = () => {
       setDopTotal((parseFloat(dop_qty || 0) * 
       parseFloat(dop_uno || 0) * 
-      parseFloat(dop_rt || 0)).toFixed())
-      }
+      parseFloat(dop_rt || 0)).toFixed());
+      };
       const timer = setTimeout(() => {
         addDop();
       }, 2000);

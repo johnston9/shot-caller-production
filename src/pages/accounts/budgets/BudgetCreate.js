@@ -369,8 +369,7 @@ function BudgetCreate() {
   formData.append("location", location);
 
   try {
-    const { data } = await axiosReq.post("/budgets1/", formData);
-    // console.log(`submit create Budgets 1 ${data}`);
+    await axiosReq.post("/budgets1/", formData);
     handleSubmit2(event);
   } catch (err) {
     console.log(err);
@@ -389,8 +388,7 @@ function BudgetCreate() {
     formData.append("budget_number", "2");
 
     try {
-      const { data } = await axiosReq.post("/budgets2/", formData);
-      // console.log(`submit create Budgets 2 ${data}`);
+      await axiosReq.post("/budgets2/", formData);
       handleSubmit3(event);
     } catch (err) {
       console.log(err);
@@ -409,8 +407,7 @@ function BudgetCreate() {
     formData.append("budget_number", "3");
 
     try {
-      const { data } = await axiosReq.post("/budgets3/", formData);
-      // console.log(`submit create Budget 3 ${data}`);
+      await axiosReq.post("/budgets3/", formData);
       history.goBack();
     } catch (err) {
       console.log(err);

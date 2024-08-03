@@ -63,7 +63,6 @@ import Insurance from "./budgetsectionsother/Insurance";
 import GeneralEx from "./budgetsectionsother/GeneralEx";
 import IndirectCosts from "./budgetsectionsother/IndirectCosts";
 import InfoBudEdit from "./InfoBudEdit";
-import InfoGlobals from "./InfoGlobals";
 import Globals from "./Globals";
 
 function BudgetEdit() {
@@ -133,62 +132,12 @@ function BudgetEdit() {
   const [budgetId3, setBudgetId3] = useState("");
 
   // Budget Numbers ------------------------------- 
+  // eslint-disable-next-line
   const [budgetNumber1, setBudgetNumber1] = useState("");
+  // eslint-disable-next-line
   const [budgetNumber2, setBudgetNumber2] = useState("");
+  // eslint-disable-next-line
   const [budgetNumber3, setBudgetNumber3] = useState("");
-
-  // GLOBALS
-  // const [globalData, setGlobalData] = useState({
-  //   prep_global: "",
-  //   shoot_global: "",
-  //   wrap_global: "",
-  // })
-
-  // const {prep_global, shoot_global, wrap_global} = globalData;
-
-  // const handleChangeGlobals = (event) => {
-  //   setGlobalData({
-  //     ...globalData,
-  //     [event.target.name]: event.target.value.replace(/[^0-9.]/g, ''),
-  //   });
-  // };
-
-  // const setPrep = () => {
-  //   /* Function to set all crew call times to the unit call time */
-  //   setPostDataProduction({
-  //     ...postDataProduction,
-  //   production_manager_uno_prep: prep_global,
-  //   });
-  //   setPostDataDesign({
-  //     ...postDataDesign,
-  //     pro_designer_uno_prep: prep_global,
-  //   });
-  // };
-
-  // const setShoot = () => {
-  //   /* Function to set all crew call times to the unit call time */
-  //   setPostDataProduction({
-  //     ...postDataProduction,
-  //     production_manager_units_number: shoot_global,
-  //   });
-  //   setPostDataDesign({
-  //     ...postDataDesign,
-  //     production_designer_units_number: shoot_global,
-  //   });
-  // };
-
-  // const setWrap = () => {
-  //   /* Function to set all crew call times to the unit call time */
-  //   setPostDataProduction({
-  //     ...postDataProduction,
-  //     production_manager_uno_wrap: wrap_global,
-  //   });
-  //   setPostDataDesign({
-  //     ...postDataDesign,
-  //     pro_designer_uno_wrap: wrap_global,
-  //   });
-  // };
-
 
   // INFO / LENGTH-------------------------------
   // Info postData 
@@ -8193,7 +8142,7 @@ function BudgetEdit() {
   formData.append("armorall_total", armorallTotal);
 
   try {
-    const { data } = await axiosReq.put(`/budgets1/${budgetId1}/`, formData);
+    await axiosReq.put(`/budgets1/${budgetId1}/`, formData);
     // console.log(`submit1 ${data}`);
     handleSubmit2(event);
   } catch (err) {
@@ -9076,8 +9025,7 @@ function BudgetEdit() {
   formData.append("otsoundall_total", otsoundallTotal);
 
   try {
-    const { data } = await axiosReq.put(`/budgets2/${budgetId2}/`, formData);
-    // console.log(`submit2 ${data}`);
+    axiosReq.put(`/budgets2/${budgetId2}/`, formData);
     handleSubmit3(event); 
   } catch (err) {
     console.log(err);
@@ -9690,7 +9638,7 @@ function BudgetEdit() {
   formData.append("vfx_coordinator", vfx_coordinator);
   formData.append("vfx_storyboard", vfx_storyboard);
   formData.append("vfx_pre_vis_team", vfx_pre_vis_team);
-  formData.append("vfx_post_vis_team", vfx_post_vis_team);
+  formData.append("vconst { data } = awaitfx_post_vis_team", vfx_post_vis_team);
   formData.append("vfx_post_other_lab", vfx_post_other_lab);
   formData.append("miniatures_build", miniatures_build);
   formData.append("miniatures_shoot", miniatures_shoot);
@@ -9757,8 +9705,7 @@ function BudgetEdit() {
   formData.append("completion_bond", completion_bond);
 
   try {
-    const { data } = await axiosReq.put(`/budgets3/${budgetId3}/`, formData);
-    // console.log(`submit3 ${data}`);
+    await axiosReq.put(`/budgets3/${budgetId3}/`, formData);
     history.goBack();
   } catch (err) {
     console.log(err);

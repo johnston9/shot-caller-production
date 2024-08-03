@@ -25,4 +25,4 @@ export const useRedirect = () => {
   }, [user, history]);
 };
 
-export default useRedirect
+export default useRedirect;
