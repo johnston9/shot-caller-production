@@ -1,5 +1,18 @@
 <h1 align="center"><strong>Shot Caller Production</strong></h1>
 
+- Use Case: xxxxxxxxx<br>
+
+  1. xxxxxxxxxxxxxxxxx.<br>
+  2. xxxxxxxxxxxxxx.<br>
+
+- Use Case: Add/Edit values to an "Above the Line" section.<br>
+
+  1. Add/Edit input values to the Edit page "xxx" section.<br>
+  2. The Edit page Totals change with each input.<br>
+
+  The "xxx" Section with Inputs and Total
+  The Edit page Sections Titles and the Totals Showing the Changes
+
 [View the project live here.](https://)
 
 A web application for film, TV and video production.<br>

@@ -1,183 +1,261 @@
 ## Features - Usage and Testing
 
 ### Budgeting Software
+Description: View and create Budgets for the "All in One Platform" or the separate Budgeting Software.<br>
 
-- Find the Budget Page for the "All in One Platform" or the separate "Budgeting Software" easily on the User Account page.
+- Use Case: Access the Budget for the "All in One Platform" or the separate Budgeting Software.<br>
 
-<p align="center"> <strong>Find the Budget for the projects in the Platform</strong></p>
+  1. Click on the My Account link in the Navbar.<br>
+  2. The Account page opens displaying all the Platform products and separate Budgeting Software products purchased with a "Budget" tab displaying.<br>
+  3. Click on the Budget tab and a new empty Budget Detail page opens with the Create Budget, "Cover Page" and "Top Sheet" tabs displaying on top.<br>
+
+<p align="center"> <strong>"All in One Platform" products</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/bud1find.png" width="50%">
 </h2>
 
-<p align="center"> <strong>Find the Budget purchased as a separate item</strong></p>
+<p align="center"> <strong>Separate Budgeting Software products</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/bud1find.png" width="90%">
+<img src="documentation/readme-images/bud1find.png" width="50%">
 </h2>
 
-- Create the Budget.
-
-<p align="center"> <strong>Create Budget by inputing some details</strong></p>
+<p align="center"> <strong>New empty Budget page</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/bud3create1.png" width="90%">
+<img src="documentation/readme-images/xxxxxxxx.png" width="50%">
 </h2>
 
-<p align="center"> <strong>Created Budget</strong></p>
+- Use Case: Initialize the Budget<br>
+
+  1. Click on the "Create Budget" tab to open the Create Budget page.<br>
+  2. Input production details in one or as many fields as desired at this moment and click "Create".<br>
+  3. The newly created Budget Detail page opens displaying the new details inputted. 
+  3. An "Edit Budget" tab has now replaced the "Create Budget" tab.
+
+<p align="center"> <strong>Input production details</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/bud4create2.png" width="90%">
+<img src="documentation/readme-images/bud3create1.png" width="50%">
 </h2>
 
-- On the Budget Edit Page find each Budget Section link along with its current total, which when clicked it opens that section's inputs page along with all the current Totals.
+<p align="center"> <strong>Newly Created Budget Detail page</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/bud4create2.png" width="50%">
+</h2>
+
+- Use Case: Input Budget values by Section.<br>
+
+  1. Click the "Edit Button" to open the Edit Budget page.<br>
+  2. Below the Production Details section the Above the line, Below the Line Labour, Below the Line Costs, Post Production and Other titles display with their current totals each containing the titles of their respective sections also with their current totals displaying.<br>
+  3. More Totals including the "Grand Total" display below.<br>
+  4. Click on a section title, "Visual Effects" and its form opens below.<br>
+
 <p align="center"> <strong>Budget Sections and Totals</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/bud5edit1.png" width="90%">
+<img src="documentation/readme-images/bud5edit1.png" width="50%">
 </h2>
 
-<p align="center"> <strong>Clicking on the Visual effects link opens its page</strong></p>
+<p align="center"> <strong>Visual Effects Form opens after clicking its Section Title</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/bud6edit2.png" width="90%">
-</h2>
-
-[Back to README](/README.md)
-
-- Add/Edit the "Above the Line" sections and see the Totals change with each input.
-
-<p align="center"> <strong>The Pre-Production & Development section with inputs and total</strong></p>
-<h2 align="center">
-<img src="documentation/readme-images/bud7above1.png" width="90%">
-</h2>
-
-<p align="center"> <strong>The Pre-Production & Development section link with the new total and the Totals showing the changes</strong></p>
-<h2 align="center">
-<img src="documentation/readme-images/bud8above2.png" width="90%">
-</h2>
-
-- Add/Edit the "Below the Line" Labour sections and see the Totals change with each input. The Labour section calculates the total for each crew member's Prep, Shoot and Wrap total, which is in turn calculated by multiplying the number of crew in the role by the number of Weeks by the Rate. 
-
-<p align="center"> <strong>The Electrical Labour section with inputs and total - top half</strong></p>
-<h2 align="center">
-<img src="documentation/readme-images/bud9belowlab1.png" width="90%">
-</h2>
-
-<p align="center"> <strong>The Electrical Labour section with inputs and total - bottom half</strong></p>
-<h2 align="center">
-<img src="documentation/readme-images/bud10belowlab2.png" width="90%">
-</h2>
-
-<p align="center"> <strong>The Electrical Labour section link with the new total and the Totals showing the changes</strong></p>
-<h2 align="center">
-<img src="documentation/readme-images/bud11belowlab3.png" width="90%">
+<img src="documentation/readme-images/bud6edit2.png" width="50%">
 </h2>
 
 [Back to README](/README.md)
 
-- Add/Edit the "Below the Line" Costs sections and see the Totals change with each input.
+- Use Case: Add/Edit values to an "Above the Line" section.<br>
 
-<p align="center"> <strong>The Construction Material section with inputs and total</strong></p>
+  1. Add/Edit input values to the Edit page "Pre-Production & Development" section.<br>
+  2. The Edit page Totals change with each input.<br>
+
+<p align="center"> <strong>The "Pre-Production & Development" Section with Inputs and Total</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/bud12belowcos1.png" width="90%">
+<img src="documentation/readme-images/bud7above1.png" width="50%">
 </h2>
 
-<p align="center"> <strong>The Construction Material section link with the new total and the Totals showing the changes</strong></p>
+<p align="center"> <strong>The Edit page Sections Titles and the Totals Showing the Changes</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/bud13belowcos2.png" width="90%">
+<img src="documentation/readme-images/bud8above2.png" width="50%">
 </h2>
 
-- Add/Edit the Post Production sections and see the Totals change with each input.
+- Use Case: Add/Edit values to a "Below the Line Labour" section.<br>
 
-<p align="center"> <strong>The Editing section with inputs and total</strong></p>
+  1. Add/Edit input values to the Edit page "Electrical Labour" section.<br>
+  2. Each crew member's Prep, Shoot and Wrap total is calculated from the number of crew in the role and the number of Weeks and the Rate.
+  2. The Edit page Totals change with each input.<br> 
+
+<p align="center"> <strong>The "Electrical Labour" Section with Inputs and Total - top half</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/bud14post1.png" width="90%">
+<img src="documentation/readme-images/bud9belowlab1.png" width="50%">
 </h2>
 
-<p align="center"> <strong>The Editing section link with the new total and the Totals showing the changes</strong></p>
+<p align="center"> <strong>The "Electrical Labour" Section with Inputs and Total - bottom half</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/bud15post2.png" width="90%">
+<img src="documentation/readme-images/bud10belowlab2.png" width="50%">
 </h2>
 
-- Add/Edit the Other sections and the Contingency and see the Totals change with each input.
-
-<p align="center"> <strong>The Publicity section with inputs and total</strong></p>
+<p align="center"> <strong>The Edit page Sections Titles and the Totals Showing the Changes</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/bud16oth1.png" width="90%">
-</h2>
-
-<p align="center"> <strong>The Publicity section link with the new total and totals showing the changes</strong></p>
-<h2 align="center">
-<img src="documentation/readme-images/bud17oth2.png" width="90%">
-</h2>
-
-[Back to README](/README.md)
-
-<p align="center"> <strong>The Contingincy and Bond inputs totals showing the changes</strong></p>
-<h2 align="center">
-<img src="documentation/readme-images/bud18oth3.png" width="90%">
-</h2>
-
-- View the finished Budget in it's easy to Read format and all above imputs showing correctly.
-
-<p align="center"> <strong>The Details and Totals match the Edit pages' ones which were submitted</strong></p>
-<h2 align="center">
-<img src="documentation/readme-images/bud19detntot.png" width="90%">
-</h2>
-<p align="center"> <strong>The Pre-Production & Development values match the Edit pages' ones which were submitted</strong></p>
-<h2 align="center">
-<img src="documentation/readme-images/bud20prepro.png" width="90%">
-</h2>
-
-<p align="center"> <strong>The Electrical Labour values match the Edit pages' ones which were submitted</strong></p>
-<h2 align="center">
-<img src="documentation/readme-images/bud21eleclab.png" width="90%">
+<img src="documentation/readme-images/bud11belowlab3.png" width="50%">
 </h2>
 
 [Back to README](/README.md)
 
-<p align="center"> <strong>The Construction Material values match the Edit pages' ones which were submitted</strong></p>
+- Use Case: Add/Edit values to an ""Below the Line Costs" section.<br>
+
+  1. Add/Edit input values to the Edit page "Pre-Production & Development" section.<br>
+  2. The Edit page Totals change with each input.<br>
+
+<p align="center"> <strong>The "Construction Material" Section with Inputs and Total</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/bud22conmat.png" width="90%">
+<img src="documentation/readme-images/bud12belowcos1.png" width="50%">
 </h2>
 
-<p align="center"> <strong>The Editing values match the Edit pages' ones which were submitted</strong></p>
+<p align="center"> <strong>The Edit page Sections Titles and the Totals Showing the Changes</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/bud23edit.png" width="90%">
+<img src="documentation/readme-images/bud13belowcos2.png" width="50%">
 </h2>
 
-<p align="center"> <strong>The Publicity values match the Edit pages' ones which were submitted</strong></p>
+- Use Case: Add/Edit values to a "Post Production" section.<br>
+
+  1. Add/Edit input values to the Edit page "Editing" section.<br>
+  2. The Edit page Totals change with each input.<br>
+
+<p align="center"> <strong>The "Editing" Section with Inputs and Total</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/bud24pub.png" width="90%">
+<img src="documentation/readme-images/bud14post1.png" width="50%">
 </h2>
 
-<p align="center"> <strong>The Contingincy and Bond match the Edit pages' ones which were submitted along with the Totals</strong></p>
+<p align="center"> <strong>The Edit page Sections Titles and the Totals Showing the Changes</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/bud25con.png" width="90%">
+<img src="documentation/readme-images/bud15post2.png" width="50%">
+</h2>
+
+- Use Case: Add/Edit values to an "Other" section.<br>
+
+  1. Add/Edit input values to the Edit page "Publicity" section.<br>
+  2. The Edit page Totals change with each input.<br>
+
+<p align="center"> <strong>The "Publicity" Section with Inputs and Total</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/bud16oth1.png" width="50%">
+</h2>
+
+<p align="center"> <strong>The Edit page Sections Titles and the Totals Showing the Changes</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/bud17oth2.png" width="50%">
+</h2>
+
+- Use Case: Add/Edit values to the "Contingincy" and "Bond" inputs.<br>
+
+  1. Add/Edit input values to the Edit page "Contingincy" and "Bond" inputs.<br>
+  2. The Edit page "Grand Total" changes with each input.<br>
+
+<p align="center"> <strong>The Contingincy and Bond inputs and Grand Total showing the changes</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/bud18oth3.png" width="50%">
 </h2>
 
 [Back to README](/README.md)
 
-- Use the Globals feature to give all the Crew's Production working "Weeks Length" a universal value for their "Prep", "Shoot" and "Wrap" inputs and see the Totals change with each change.
+- Use Case: Create the Budget Detail page with all the values inputted and calculated on the edit page.<br>
 
-<p align="center"> <strong>Set the Globals in seconds</strong></p>
+  1. Submit the Edit page with all the newly added changes.<br>
+  2. The Budget Detail page displays all above imputs showing correctly.<br>
+
+<p align="center"> <strong>The "Details" and "Totals" match the Edit page ones which were submitted</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/bud25globset.png" width="90%">
+<img src="documentation/readme-images/bud19detntot.png" width="50%">
 </h2>
 
-<p align="center"> <strong>The Glodals added to the empty inputs in the Camera Labour section</strong></p>
+<p align="center"> <strong>The "Pre-Production & Development" values match the Edit pages ones which were submitted</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/bud27glob3.png" width="90%">
+<img src="documentation/readme-images/bud20prepro.png" width="50%">
+</h2>
+
+<p align="center"> <strong>The "Electrical Labour" values match the Edit page ones which were submitted</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/bud21eleclab.png" width="50%">
+</h2>
+
+<p align="center"> <strong>The "Construction Material" values match the Edit page ones which were submitted</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/bud22conmat.png" width="50%">
+</h2>
+
+<p align="center"> <strong>The "Editing" values match the Edit page ones which were submitted</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/bud23edit.png" width="50%">
+</h2>
+
+<p align="center"> <strong>The "Publicity" values match the Edit page ones which were submitted</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/bud24pub.png" width="50%">
+</h2>
+
+<p align="center"> <strong>The "Contingincy" and "Bond" inputs and the Totals match the Edit page ones which were submitted</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/bud25con.png" width="50%">
+</h2>
+
+- Use Case: Create the Budget Cover Page displaying the values inputted on the Edit page.<br>
+
+  1. Submit the Edit page with all the newly added changes including the production title "Test budget".<br>
+  2. Click the "Budget Cover Page" tab.
+  2. The "Budget Cover Page" opens displaying all above imputs correctly including the production title "Test budget".<br>
+
+<p align="center"> <strong>Budget Cover Page</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/budcover.png" width="50%">
+</h2>
+
+- Use Case: Create the Budget Top page with all the values calculated on the Edit page.<br>
+
+  1. Submit the Edit page with all the newly added changes.<br>
+  2. Click the "Budget Top Sheet" tab.
+  2. The "Budget Top Sheet" displays all above values showing correctly.<br>
+
+<p align="center"> <strong>Budget Top Sheet</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/budtop1.png" width="50%">
+</h2>
+<h2 align="center">
+<img src="documentation/readme-images/budtop2.png" width="50%">
+</h2>
+<h2 align="center">
+<img src="documentation/readme-images/budtop3.png" width="50%">
+</h2>
+
+[Back to README](/README.md)
+
+- Use Case: Use the "Globals" feature to give the Crew's production work's "Weeks Length" a universal value for their "Prep", "Shoot" and "Wrap" inputs.<br>
+
+  1. On the Edit page click on the "Globals" tab.<br>
+  2. The "Globals" form opens.<br>
+  3. Input the values "2.2" in the "Prep" input, "7.6" in the "Shoot" input and "3.4" in the "Wrap" input. One, two or all three may be set. <br>
+  4. Click set.<br>
+  5. The Globals are added to the correct Edit page inputs.<br>
+
+<p align="center"> <strong>Input and Set the "Prep", "Shoot" and "Wrap" Globals </strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/bud25globset.png" width="50%">
+</h2>
+
+<p align="center"> <strong>The Globals added to the empty inputs in the Camera Labour section</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/bud27glob3.png" width="50%">
 </h2>
 
 <p align="center"> <strong>The Glodals updated the pre-existing values in the Electrical Labour section and the totals re-calculated instantly</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/bud28globel2.png" width="90%">
+<img src="documentation/readme-images/bud28globel2.png" width="50%">
 </h2>
 
 <p align="center"> <strong>The Edit page updated totals after setting the Globals</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/bud29globetot.png" width="90%">
+<img src="documentation/readme-images/bud29globetot.png" width="50%">
 </h2>
 
-<p align="center"> <strong>The Budget page updated totals after setting the Globals and submiting the Edit page</strong></p>
+<p align="center"> <strong>The Budget Detail page's updated totals after setting the Globals and submiting the Edit page</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/bud30totp.png" width="90%">
+<img src="documentation/readme-images/bud30totp.png" width="50%">
 </h2>
 
 - Download or Print the finished Budget.
