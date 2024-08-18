@@ -42,7 +42,6 @@ The User goals are to find out about the software, register an account, access t
 ### Strategy Plane
 
 The site aims to make an immediately impact on the User as to the nature and quality of its products through its obvious inherent professional knowledge of the film making process encouraging them to explore it's features fully, create an account and purchase products.<br>
-
 The Budgeting Software is available as an individual product as a User will more readily open to purchase this smaller but necessary tool and seeing its quality be more open to trusting the All in One Platform.
 
 #### Brand Identity
@@ -90,7 +89,9 @@ The interface is aesthetically functionally all the time creating a positive rea
 1. As a Frequent User, I want to view my purchased products and projects.
 2. As a Frequent User, I want to easily recover my password if I forget it.
 3. As a Frequent User, I want to view my order history and payment details.
-4. As a Frequent User, I want to use the Budgeting Software,
+4. As a Frequent User, I want to post messages and comments on the Chat page.
+5. As a Frequent User, I want to easily change my password and username.
+6. As a Frequent User, I want to use the Budgeting Software.
 
   - #### Owner/Admin User Goals 
 
@@ -108,18 +109,22 @@ All User Stories testing is covered in the Testing page. [Testing](/TESTING.md)
 
 ### Budgeting Software
 - Create professional standard budgets easily, includes Globals.
+  All Budgeting Software testing is covered in the Features section of the Testing page. [Testing](/TESTING.md)
 
-### Login/Register/Logout Pages and Security
-- The user can Register, Login and Logout easily and the entire software has both frontend and backend security.
+### Login/Register/Logout Pages
+- The user can Register, Login and Logout easily.
+
+### Security
+- The entire software uses both frontend and backend security.
 
 ### The Home Page
-- This page primarily aims to give the User information about and sell the products. 
+- This page primarily aims to give the User information about the products and to sell them. 
 
 ### The Creative, Production and Budgeting Features Explanatory Pages
 - These give brief concise overviews of each feature.
 
 ### The User's Account Page
-- This page holds all the User's projects and allows the userto create and purchase new projects.
+- This page holds all the User's projects and allows the user to create and purchase new projects.
 
 ### The Chat page
 - This is where the User can view or add Chats and Comments, it also hols all the Users Profiles.
@@ -130,7 +135,8 @@ All User Stories testing is covered in the Testing page. [Testing](/TESTING.md)
 ### Responsive Design
 - The site is responsive to all screen sizes and the images respond in proportion. 
 
-For the complete coverage of the Features Testing go to the Testing page. [Testing](/TESTING.md)
+For the complete coverage of the Features Testing go to the Testing page.<br>
+The Budgeting Software, Stripe and Responsive Design are covered in their own sections in Features Testing section while the rest of the features are covered in the User Stories section. [Testing](/TESTING.md)
 
 ## Information Architecture ??????????????
 
