@@ -57,10 +57,10 @@ const SignInForm = () => {
   }
 
   return (
-      <div className={`${styles.SignupBox} mx-3`}>
+      <div className={`${styles.SignupBox}`}>
         <TopBox title="Sign In" />
-        <Row className={styles.Row1}>
-          <Col className="my-3 text-center"
+        <Row >
+          <Col className="my-3 text-center pr-0 pr-md-3"
             xs={1} md={1}>
             <Image
                 className={`${styles.FillerImagel}`}
@@ -126,7 +126,7 @@ const SignInForm = () => {
                </Col>
              </Row>
           </Col>
-          <Col className={`my-3 text-center`}
+          <Col className={`my-3 text-center pl-0 pl-md-3`}
             xs={1} md={1}>
             <Image
               className={`${styles.FillerImagel}`}
