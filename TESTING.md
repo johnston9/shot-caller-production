@@ -279,12 +279,7 @@ Description: Django Rest Frameworks is used for the backend and has its own regi
   1. Click on any of the Sign Up/Register links on the Home page or the one in the Navbar.<br>
   2. The Register page opens.<br>
   3. Enter a Username and Password and submit.<br>
-  4. The Sign In page opens.
-
-<p align="center"> <strong>xxxxxxxxx</strong></p>
-<h2 align="center">
-<img src="documentation/readme-images/home6.png" width="50%">
-</h2>
+  4. The Sign In page opens and entering the Username and Password the Home page opens. <br>
 
 - Use Case: Log In<br>
 
@@ -356,7 +351,7 @@ Description: When a feature link is clicked on in the Navbar, the Home page imag
 
 [Back to README](/README.md)
 
-### The User's Account Page
+### The Account Page
 Description: When clicked on in the Navbar the user's Account page opens. It will show all the user's projects and have a section where they create and purchase new "Platform" projects and separate "Budgeting Software".<br>
 
 - Use Case: View "Platform" projects and separate "Budgeting Software". <br>
@@ -454,13 +449,13 @@ First time and returning users who are trying to find out about the software and
 </h2>
 
 ### Stripe ????????????????????
-Description: When clicked on in the Navbar the user's Account page opens. It will show all the user's projects and have a section where they create and purchase new "Platform" projects and separate "Budgeting Software".<br>
+Description: <br>
 
-- Use Case: View "Platform" projects and separate "Budgeting Software". <br>
+- Use Case:  <br>
 
-  1. Click on the My account link and the Account page opens.<br>
-  2. The User's "Platform" projects and separate "Budgeting Software" products are displayed.<br>
-  3. The new project is displayed below.
+  1. Cmm<br>
+  2. mmm<br>
+  3. mmm
 
   Stripe is used for the payment system. On selecting a product the User will be brought to the Stripe payment page.
   <br>For the "All in One Platform" this feature will take the User's details and after a Free trial period will take a monthly payment if the User does not cancel. For the separate "Budgeting Software" it will take the whole sum after a Free Trial period if the User does not cancel. It also allows the user to cancel at any time.

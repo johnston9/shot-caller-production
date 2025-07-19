@@ -16,8 +16,10 @@ The Production side contains Scheduling, Callsheets and Cast and Crew management
 ## Usage
 In "Shot caller Production" a User can click on any of the features links on the Home page or Navbar to take them to that feature's information page. <br>
  
-A User can create account by clicking on any of the Register links on "Shot caller Production" then on the subscription page they can select and purchase a Platform or Budgeting Subscription. The User now creates Projects or Budgets on their Account page, and they are given the URL which enables a specific version of the software for their Project or Budget to function. They are also given a Username and Password and the "superadmin" permission for their project. They can now register other Users who will in turn receive an email containing their Username and Password. These Users are each given a specific Permission, superadmin, admin, admincreative, crew or cast, admins, like superadmins, having the ability to register users to the Project. Once registered the User can use the features they have access to by clicking on the feature links in the navbar or home page.
-<br>
+A User can create account by clicking on any of the Register links on "Shot caller Production" then on the subscription page they can select and purchase a Platform or Budgeting Subscription. The User now creates Projects or Budgets on their Account page, and they are given the URL which enables a specific version of the software for their Project or Budget to function. They are also given a Username and Password and the "superadmin" permission for their project.<br>
+
+They can now register other Users who will in turn receive an email containing their Username and Password. These Users are each given a specific Permission, superadmin, admin, admincreative, crew or cast, admins, like superadmins, having the ability to register users to the Project. Once registered the User can use the features they have access to by clicking on the feature links in the navbar or home page.<br>
+
 If a User just purchases the Budgeting software they will also receive a URL by email for it along with a username and password and the product will also now show in their account page along with the URL to it. To use the "Budgeting Software" the User clicks on the link to be taken to it and there they will find information on how to share and use it.<br>
  
 
