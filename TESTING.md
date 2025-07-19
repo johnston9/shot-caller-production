@@ -693,46 +693,6 @@ Note: Functional aspects of some User Stories are covered in the Features Testin
 ## Lighthouse
 
 Lighthouse was used to test every page on desktop and mobile screens.<br>
-To view all Lighthouse testing go to the Testing page.
-
-### Summary of Issues 
-
-#### Performance.
-
-1. xxxxxxxxxxx
-
-<p align="center"><strong>Performance Diagnostics</strong></p>
-<h2 align="center">
-<img src="documentation/testing/home6.png" width="50%">
-</h2>
-
-### Best Practices
-
-1. xxxxxxxxxxxxx
-
-<p align="center"><strong>Performance Diagnostics</strong></p>
-<h2 align="center">
-<img src="documentation/testing/home6.png" width="50%">
-</h2>
-
-### Outcome of Issues
-
-These issues were brought 
-
-### Issues Resolved
-
-1. On the Bag Page
-
-### Home Page
-
-## Bugs 
-
-### bug 1
-xxxxxxxx
-
-## Bugs Fixed
-
-### bug 1
- - The adding of
+To view all Lighthouse testing go to the Testing page. Issues were resolved if necessary.
 
  [Back to README](/README.md)
