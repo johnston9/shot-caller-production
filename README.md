@@ -18,9 +18,6 @@ In "Shot caller Production" a User can click on any of the features links on the
  
 A User can create account by clicking on any of the Register links on "Shot caller Production" then on the subscription page they can select and purchase a Platform or Budgeting Subscription. The User now creates Projects or Budgets on their Account page, and they are given the URL which enables a specific version of the software for their Project or Budget to function. They are also given a Username and Password and the "superadmin" permission for their project. They can now register other Users who will in turn receive an email containing their Username and Password. These Users are each given a specific Permission, superadmin, admin, admincreative, crew or cast, admins, like superadmins, having the ability to register users to the Project. Once registered the User can use the features they have access to by clicking on the feature links in the navbar or home page.
 <br>
-Depending on their Premission the User will has access to use different features of the app. The superadmin and Admin have access to all aspects of the app Creative and the production side, the only difference is that the SuperAdmin can delete users and has access to the "Freeze" feature which allows them to freeze Scene numbers, so the cannot be changed, at a certain moment in Production. <br>
-The admincreative has working access to only the Creative side of production but can view all the rest while the crew permission has only working access to Scenes Workspaces and Departments but still can view all the rest. The cast has only access to the Callsheets. For a full breakdown of Permissions see below.[Permissions](#permission-types)
-<br>
 If a User just purchases the Budgeting software they will also receive a URL by email for it along with a username and password and the product will also now show in their account page along with the URL to it. To use the "Budgeting Software" the User clicks on the link to be taken to it and there they will find information on how to share and use it.<br>
  
 
@@ -132,7 +129,14 @@ All Features testing for each app is covered in its Testing page. [Testing](/TES
 
 [Back to Table of Content](#table-of-content)
 
-## Permission Types
+## Permissions
+
+Depending on their Premission the User will has access to use different features of the app. The superadmin and Admin have access to all aspects of the app Creative and the production side, the only difference is that the SuperAdmin can delete users and has access to the "Freeze" feature which allows them to freeze Scene numbers, so the cannot be changed, at a certain moment in Production. <br>
+The admincreative has working access to only the Creative side of production but can view all the rest while the crew permission has only working access to Scenes Workspaces and Departments but still can view all the rest. The cast has only access to the Callsheets. For a full breakdown of Permissions see below.
+<br>
+
+### Permission Types
+
 1: superadmin <br>
 2: admin<br>
 3: admincreative<br>
@@ -371,120 +375,46 @@ pytz==2022.2.1 <br>
 requests-oauthlib==1.3.1 <br>
 sqlparse==0.4.2 <br>
 
-### Dependencies for the Shot Caller  React Frontend in the package.ason file
-{
-  "name": "shot-caller",
-  "version": "0.1.0",
-  "engines": {
-    "node": "16.13.0"
-  },
-  "private": true,
-  "dependencies": {
-    "@emailjs/browser": "^3.10.0",
-    "@react-google-maps/api": "^2.12.0",
-    "@testing-library/jest-dom": "^5.15.0",
-    "@testing-library/react": "^11.2.7",
-    "@testing-library/user-event": "^12.8.3",
-    "axios": "^0.24.0",
-    "bootstrap": "^4.6.0",
-    "jwt-decode": "^3.1.2",
-    "npm": "^8.12.2",
-    "react": "^17.0.2",
-    "react-bootstrap": "^2.0.2",
-    "react-calendar": "^3.7.0",
-    "react-datepicker": "^4.5.0",
-    "react-dom": "^17.0.2",
-    "react-infinite-scroll-component": "^6.1.0",
-    "react-router": "^6.3.0",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.3",
-    "react-toastify": "^9.0.0",
-    "type-fest": "^0.13.1",
-    "use-places-autocomplete": "^4.0.0",
-    "web-vitals": "^1.1.2"
-  },
-  "scripts": {
-    "heroku-prebuild": "npm install -g serve",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "msw": "^0.36.0"
-  }
-}
+### Dependencies for the Shot Caller React Frontend
 
-### Dependencies for the Shot Caller Production React Frontend in the package.ason file
-{
-  "name": "shotcallerpro",
-  "version": "0.1.0",
-  "engines": {
-    "node": "16.13.0"
-  },
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^11.2.7",
-    "@testing-library/user-event": "^12.8.3",
-    "axios": "^0.21.4",
-    "bootstrap": "^4.6.0",
-    "jwt-decode": "^3.1.2",
-    "react": "^17.0.2",
-    "react-bootstrap": "^1.6.3",
-    "react-dom": "^17.0.2",
-    "react-infinite-scroll-component": "^6.1.0",
-    "react-router-dom": "^5.3.0",
-    "react-scripts": "^4.0.3",
-    "web-vitals": "^1.1.2"
-  },
-  "scripts": {
-    "heroku-prebuild": "npm install -g serve",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "msw": "^0.35.0"
-  }
-}
+"@emailjs/browser": "^3.10.0" <br>
+"@react-google-maps/api": "^2.12.0", <br>
+"@testing-library/jest-dom": "^5.15.0",<br>
+"@testing-library/react": "^11.2.7",<br>
+"@testing-library/user-event": "^12.8.3",<br>
+"axios": "^0.24.0",<br>
+"bootstrap": "^4.6.0",<br>
+"jwt-decode": "^3.1.2",<br>
+"npm": "^8.12.2",<br>
+"react": "^17.0.2",<br>
+"react-bootstrap": "^2.0.2",<br>
+"react-calendar": "^3.7.0",<br>
+"react-datepicker": "^4.5.0",<br>
+"react-dom": "^17.0.2",<br>
+"react-infinite-scroll-component": "^6.1.0",<br>
+"react-router": "^6.3.0",<br>
+"react-router-dom": "^5.2.0",<br>
+"react-scripts": "4.0.3",<br>
+"react-toastify": "^9.0.0",<br>
+"type-fest": "^0.13.1",<br>
+"use-places-autocomplete": "^4.0.0",<br>
+"web-vitals": "^1.1.2"<br>
+
+### Dependencies for the Shot Caller Production React Frontend
+
+"@testing-library/jest-dom": "^5.16.5", <br>
+"@testing-library/react": "^11.2.7",<br>
+"@testing-library/user-event": "^12.8.3",<br>
+"axios": "^0.21.4",<br>
+"bootstrap": "^4.6.0",<br>
+"jwt-decode": "^3.1.2",<br>
+"react": "^17.0.2",<br>
+"react-bootstrap": "^1.6.3",<br>
+"react-dom": "^17.0.2",<br>
+"react-infinite-scroll-component": "^6.1.0",<br>
+"react-router-dom": "^5.3.0",<br>
+"react-scripts": "^4.0.3",<br>
+"web-vitals": "^1.1.2"<br>
  
 
 [Back to Table of Content](#table-of-content)
