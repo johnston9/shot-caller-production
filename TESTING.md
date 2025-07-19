@@ -278,19 +278,24 @@ Description: Django Rest Frameworks is used for the backend and has its own regi
 
   1. Click on any of the Sign Up/Register links on the Home page or the one in the Navbar.<br>
   2. The Register page opens.<br>
-  3. Enter a Username and Password and submit.<br>
-  4. The Sign In page opens and entering the Username and Password the Home page opens. <br>
+  3. Enter a Username, Email, Password and Confirm Password and submit.<br>
+  4. The Sign In page opens and on entering the Username and Password the Home page opens, (see image for Sign In page below) <br>
+
+<p align="center"> <strong>Sign Up Page</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/signup.png" width="50%">
+</h2>
 
 - Use Case: Log In<br>
 
   1. Click on the Sign In link on the Home page or the one in the Navbar.<br>
   2. The Sign In page opens.<br>
   3. Enter a Username and Password and submit.<br>
-  4. The Home page opens.
+  4. The Home page opens.<br>
 
-<p align="center"> <strong>xxxxxxxxx</strong></p>
+<p align="center"> <strong>Sign In Page</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/home6.png" width="50%">
+<img src="documentation/readme-images/Signin1.png" width="50%">
 </h2>
 
 - Use Case: Log Out<br>
@@ -301,25 +306,20 @@ Description: Django Rest Frameworks is used for the backend and has its own regi
 ### Security
 Description: Django Rest Frameworks is used for the backend and has its own security checks dealing with Permissions and Authorisations. The site also uses a number of security measures to prevent unauthorised users from accessing pages they do not have permission to, mainly other user's account pages. <br>
 
-- Use Case: Access an Account without valid Authorisation and not being registered for a different Account.<br>????????????????????????/
+- Use Case: Access an Account without valid Authorisation and not being registered for a different Account.<br>
 
-  1. Enter an Account URL without valid Authorisation in the browser and click enter.<br>
-  2. ????????????.<br>
+  1. Enter an Account URL in the browser without valid Authorisation and click enter, e.g. "...../acccounts/43".<br>
+  2. The screen goes blank apart from a Spiiner.<br>
 
-<p align="center"> <strong>xxxxxxxxx</strong></p>
+<p align="center"> <strong>No Access</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/home6.png" width="50%">
+<img src="documentation/readme-images/secacc1.png" width="50%">
 </h2>
 
-- Use Case: Access an Account without valid Authorisation despite being registered for a different Account.<br>????????????????????????/
+- Use Case: Access an Account without valid Authorisation despite being registered for a different Account.<br>
 
   1. Enter an Account URL without valid Authorisation in the browser and click enter.<br>
-  2. ????????????.<br>
-
-<p align="center"> <strong>xxxxxxxxx</strong></p>
-<h2 align="center">
-<img src="documentation/readme-images/home6.png" width="50%">
-</h2>
+  2. The screen goes blank apart from a Spinner. <br>
 
 [Back to README](/README.md)
 
@@ -336,7 +336,7 @@ Description: This page primarily aims to give the User information about the app
 <img src="documentation/readme-images/home6.png" width="50%">
 </h2>
 
-### The Creative, Production and Budgeting Features Explanatory Pages ???????????
+### The Creative, Production and Budgeting Features Explanatory Pages
 Description: When a feature link is clicked on in the Navbar, the Home page image or the Home page section the page for that feature opens. It gives a brief concise overview of that feature along with image from the actual software.<br>
 
 - Use Case: Find information about the Schedule feature. <br>
@@ -344,15 +344,68 @@ Description: When a feature link is clicked on in the Navbar, the Home page imag
   1. Click a Schedule link on the Home page.<br>
   2. The Schedule information page opens.<br>
 
-<p align="center"> <strong>xxx</strong></p>
+<p align="center"> <strong>Schedule Information Page</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/home6.png" width="50%">
+<img src="documentation/readme-images/homesched.png" width="50%">
 </h2>
 
 [Back to README](/README.md)
 
+### The Subscription Page
+
+- Use Case: View and purchase Subscriptions. <br>
+
+  1. Click on the Subscription Plans link and the Subscriptions page opens.<br>
+  2. Click on a Plan and the Stripe page opens.<br>
+  3. Enter you Details but don't tick the Terms and Conditions box and submit.<br>
+  4. A Message appears telling you to tick the bow.<br>
+  5. Tick the box and submit.<br>
+  6. You are taken back to the Subscriptions page and now your plan is active and all lower plans are Unavailable and all higher plans have an Upgrade option.<br>
+  7. An email is sent to you advising you of your plan.<br>
+
+<p align="center"> <strong>Subscriptions page</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/subscrip1.png" width="50%">
+</h2>
+
+<p align="center"> <strong>The Stripe Page Filled In</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/stripe.png" width="50%">
+</h2>
+
+<p align="center"> <strong>The tick the Terms and Conditions Box Message</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/terms.png" width="50%">
+</h2>
+
+replace this
+<p align="center"> <strong>The Active Plan</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/subactive.png" width="50%">
+</h2>
+
+<p align="center"> <strong>The Email</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/subemail.png" width="50%">
+</h2>
+
+- Use Case: Purchase separate "Budgeting Software" products. <br>
+
+  1. Click on the Subscription Plans link and the Subscription page opens.<br>
+  2. Click on a Budget Plan and the Stripe page opens.<br>
+  3. Enter you Details but don't tick the Terms and Conditions box and submit.<br>
+  4. A Message appears telling you to tick the bow.<br>
+  5. Tick the box and submit.<br>
+  6. You are taken back to the Subscriptions page and now your plan is active and all lower plans are Unavailable and all higher plans have an Upgrade option<br>
+  7. An email is sent to you advising you of your plan.<br>
+
+<p align="center"> <strong>Active Budget Plan</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/home6.png" width="50%">
+</h2>
+
 ### The Account Page
-Description: When clicked on in the Navbar the user's Account page opens. It will show all the user's projects and have a section where they create and purchase new "Platform" projects and separate "Budgeting Software".<br>
+Description: When My Account is clicked on in the Navbar the user's Account page opens. It will show all the user's Projects and a link to the user's Budgets. It will tell how may Projects are left on the subscription and have a "Create Projects button.<br>
 
 - Use Case: View "Platform" projects and separate "Budgeting Software". <br>
 
