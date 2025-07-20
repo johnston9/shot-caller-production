@@ -353,10 +353,10 @@ Description: When a feature link is clicked on in the Navbar, the Home page imag
 
 ### The Subscription Page
 
-- Use Case: View and purchase Subscriptions. <br>
+- Use Case: View and purchase Platform Subscriptions. <br>
 
-  1. Click on the Subscription Plans link and the Subscriptions page opens.<br>
-  2. Click on a Plan and the Stripe page opens.<br>
+  1. Click on the Subscription Plans link and the Subscriptions page opens displaying all the plans.<br>
+  2. Click on a Platform Plan and the Stripe page opens.<br>
   3. Enter you Details but don't tick the Terms and Conditions box and submit.<br>
   4. A Message appears telling you to tick the bow.<br>
   5. Tick the box and submit.<br>
@@ -378,7 +378,8 @@ Description: When a feature link is clicked on in the Navbar, the Home page imag
 <img src="documentation/readme-images/terms.png" width="50%">
 </h2>
 
-replace this
+<h1>Errors - Upgrade and unavailable need fix replace this image</h1>
+
 <p align="center"> <strong>The Active Plan</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/subactive.png" width="50%">
@@ -389,25 +390,122 @@ replace this
 <img src="documentation/readme-images/subemail.png" width="50%">
 </h2>
 
+- Use Case: Upgrade a Platform product. <br>
+
+  1. Click on the Subscription Plans link and the Subscription page opens with your current plan, e.g. Gold++.<br>
+  2. Click on a higher Budget Plan you want to upgrade to, e.g. Platinum, and the Stripe page opens.<br>
+  3. Enter you Details and submit.<br>
+  4. You are taken back to the Subscriptions page and now your new plan, Platinum, is active not you old one, and all lower plans are Unavailable and all higher plans would have have an Upgrade option if they were any.<br>
+  5. An email is sent to you advising you of your new plan.<br>
+  6. On the My Account Budget page the message displaying the correct number of remaing Projects and the total for that plan displays correctly, e.g. 39 Projects remaining out of 40. <br>
+
+<h1>Errors - email wording error - need fix replace this image</h1>
+
+<p align="center"> <strong>Upgrade Email</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/subbudemail.png" width="50%">
+</h2>
+
+<h1>Errors - After Upgrading a project plan the old plan all the lower plans should be unavailable - need fix replace this image</h1>
+
+<p align="center"> <strong>New Active Platform Plan</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/home6.png" width="50%">
+</h2>
+
+<h1>Errors - After Upgrading a project plan the remaining is not calculating correctly - need fix replace this image</h1>
+
+<p align="center"> <strong>The Correct New Number of remaning Projects</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/home.png" width="50%">
+</h2>
+
+- Use Case: Cancel a Platform Product. <br>
+
+  1. Click on the Subscription Plans link and the Subscription page opens with your current plan, e.g. Platninum.<br>
+  2. Click on the Cancel button and a message displays asking you to confirm delete.<br>
+  3. Click Yes.<br>
+  4. You are taken back to the Subscriptions page and now your new plan has a message saying that your subscription is canceled but you can use the service till the end ot the current payment cycle.<br>
+
+<p align="center"> <strong>Confirm Delete</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/subconcanbud.png" width="50%">
+</h2>
+
+<h1>Errors - After Canceling a budget plan the old plan should be canceled and  unavailable - need fix replace this image</h1>
+
+<p align="center"> <strong>Confirm Delete</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/subbudcancel.png" width="50%">
+</h2>
+
 - Use Case: Purchase separate "Budgeting Software" products. <br>
 
   1. Click on the Subscription Plans link and the Subscription page opens.<br>
   2. Click on a Budget Plan and the Stripe page opens.<br>
   3. Enter you Details but don't tick the Terms and Conditions box and submit.<br>
-  4. A Message appears telling you to tick the bow.<br>
+  4. A Message appears telling you to tick the box.<br>
   5. Tick the box and submit.<br>
   6. You are taken back to the Subscriptions page and now your plan is active and all lower plans are Unavailable and all higher plans have an Upgrade option<br>
   7. An email is sent to you advising you of your plan.<br>
+  8. On the My Account Budget page the message displaying the correct number of remaing Budgets and the total for that plan displays correctly, e.g. 29 Budgets remaining out of 30. <br>
+
+<p align="center"> <strong>Stripe</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/subbudstripe.png" width="50%">
+</h2>
 
 <p align="center"> <strong>Active Budget Plan</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/subbudget1.png" width="50%">
+</h2>
+
+- Use Case: Upgrade a separate "Budgeting Software" product. <br>
+
+  1. Click on the Subscription Plans link and the Subscription page opens with your current plan, e.g. Platinum.<br>
+  2. Click on a higher Budget Plan you want to upgrade to, e.g. D2, and the Stripe page opens.<br>
+  3. Enter your Details and submit.<br>
+  4. You are taken back to the Subscriptions page and now your new plan, D2, is active not you old one,and all lower plans are Unavailable and all higher plans would have have an Upgrade option if they were any.<br>
+  5. An email is sent to you advising you of your new plan.<br>
+  6. On the My Account Budget page the message displaying the correct number of remaing Budgets and the total for that plan displays correctly, e.g. 39 Budgets remaining out of 40. <br>
+
+<h1>Errors - email wording error - need fix replace this image</h1>
+
+<p align="center"> <strong>Upgrade Email</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/subbudemail.png" width="50%">
+</h2>
+
+<h1>Errors - After Upgrading a budget plan the old plan should be canceled and  unavailable - need fix replace this image</h1>
+
+<p align="center"> <strong>New Active Budget Plan</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/home6.png" width="50%">
 </h2>
 
-### The Account Page
-Description: When My Account is clicked on in the Navbar the user's Account page opens. It will show all the user's Projects and a link to the user's Budgets. It will tell how may Projects are left on the subscription and have a "Create Projects button.<br>
+- Use Case: Cancel a separate "Budgeting Software" product. <br>
 
-- Use Case: View "Platform" projects and separate "Budgeting Software". <br>
+  1. Click on the Subscription Plans link and the Subscription page opens with your current plan, e.g. Platinum.<br>
+  2. Click on the Cancel button and a message displays asking you to confirm delete.<br>
+  3. Click Yes.<br>
+  4. You are taken back to the Subscriptions page and now your new plan has a message saying that your subscription is canceled but you can use the service till the end ot the current payment cycle.<br>
+
+<p align="center"> <strong>Confirm Delete</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/subconcanbud.png" width="50%">
+</h2>
+
+<h1>Errors - After Canceling a budget plan the old plan should be canceled and  unavailable - need fix replace this image</h1>
+
+<p align="center"> <strong>Confirm Delete</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/subbudcancel.png" width="50%">
+</h2>
+
+### The Account Page
+Description: When My Account is clicked on in the Navbar the user's Account page opens. It will show all the user's Projects and a link to the user's Budgets. It will tell how many Projects are left on the subscription and have a "Create Projects button.<br>
+
+- Use Case: View "Platform" Projects. <br>
 
   1. Click on the My account link and the Account page opens.<br>
   2. The User's "Platform" projects and separate "Budgeting Software" products are displayed.<br>
@@ -438,6 +536,23 @@ Description: When My Account is clicked on in the Navbar the user's Account page
 <p align="center"> <strong>xxx</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/home6.png" width="50%">
+</h2>
+
+- Use Case: Edit your profile. <br>
+
+  1. Click on the My Account link and the Account page opens.<br>
+  2. Click the 3 Dots and a menu appears. Select Edit profile.<br>
+  3. Enter the new info and an image and submit.<br>
+  4. The new info and image display.<br>
+
+<p align="center"> <strong>New Info</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/profileed1.png" width="50%">
+</h2>
+
+<p align="center"> <strong>New Info Displays</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/profileed2.png" width="50%">
 </h2>
 
 ### The Chat page
