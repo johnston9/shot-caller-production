@@ -272,7 +272,7 @@ Description: View and create Budgets for the "All in One Platform" or the separa
 [Back to README](/README.md)
 
 ### Login/Register/Logout Pages
-Description: Django Rest Frameworks is used for the backend and has its own register and login functionality which is used when a User registers, logs in or logs out. This functionality include its inbuilt security measures for registering and logging in.<br>
+Description: Django Rest Frameworks is used for the backend and has built in register and login functionality which is used when a User registers, logs in or logs out.<br>
 
 - Use Case: Register an account<br>
 
@@ -301,7 +301,120 @@ Description: Django Rest Frameworks is used for the backend and has its own regi
 - Use Case: Log Out<br>
 
   1. Click on the Sign Out tab in the Navbar.<br>
-  2. The User is signed ot and the Sign In page opens.
+  2. The User is signed ot and the Sign In page opens.<br>
+
+### Edit Profile/Change Username/Change Password/Forgot Password
+
+- Use Case: Edit User profile. <br>
+
+  1. Click on the My Account link and the Account page opens.<br>
+  2. Click the 3 Dots and a menu appears. Select Edit profile.<br>
+  3. Enter the new info and an image and submit.<br>
+  4. The new info and image display.<br>
+
+<p align="center"> <strong>New Info</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/profileed1.png" width="50%">
+</h2>
+
+<p align="center"> <strong>New Info Displays</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/profileed2.png" width="50%">
+</h2>
+
+- Use Case: Change Username. <br>
+
+  1. Click on the My Account link and the Account page opens.<br>
+  2. Click the 3 Dots and a menu appears. Select Change Username.<br>
+  3. Enter the new Username and submit.<br>
+  4. The new Username display correctly and on logging out and signing in with that Username the User is taken to the Home page. The old username no longer is valid.<br>
+  5. This has no effect on the Username for Projects.
+
+<p align="center"> <strong>New Username</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/profileeditusername.png" width="50%">
+</h2>
+
+<p align="center"> <strong>New Username Displays</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/profileeditusername2.png" width="50%">
+</h2>
+
+<p align="center"> <strong>On Logging In</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/changeuser3.png" width="50%">
+</h2>
+
+- Use Case: Change Password. <br>
+
+  1. Click on the My Account link and the Account page opens.<br>
+  2. Click the 3 Dots and a menu appears. Select Change Password.<br>
+  3. The Change Password form opens. Enter the new Password and submit.<br>
+  4. On logging out and signing in with that Password the user is taken to the Home page. The old Password no longer is valid.<br>
+  5. This has no effect on the Passwords for Projects which still use their own one.
+
+<p align="center"> <strong>New Password</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/changepass1.png" width="50%">
+</h2>
+
+<p align="center"> <strong>Password is Updated</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/changepass2.png" width="50%">
+</h2>
+
+<p align="center"> <strong>Old Password no Longer Valid</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/changepass3.png" width="50%">
+</h2>
+
+<p align="center"> <strong>New Password has no Effect on the Project's Passwords</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/changepass4.png" width="50%">
+</h2>
+
+- Use Case: Forgot Password. <br>
+
+  1. Click the "Forgot Password" link on the Sign In and the Forgot Password page opens.<br>
+  2. Enter the correct email for the account and submit.<br>
+  3. A message appears on top saying that a Reset password Link has been sent to the email address.<br>
+  4. On clicking on the link the Reset password page opens.<br>
+  4. Enter the new password but enter a different one for the confirm password field and submit.<br>
+  4. An error message displays saying the passwords don't match.<br>
+  4. Enter the new password and the same one for the confirm password field and submit.<br>
+  4. A message displays saying that the password is successfully reset.<br>
+  4. On using it to log in the user is logged in successfully and taken to the Home page.<br>
+  5. This has no effect on the Passwords for Projects which still use their own one.
+
+<p align="center"> <strong>Forgot Password</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/forgotpass1.png" width="50%">
+</h2>
+
+<p align="center"> <strong>Reset Message</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/forgotpass2.png" width="50%">
+</h2>
+
+<p align="center"> <strong>The Email</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/forgotpass3.png" width="50%">
+</h2>
+
+<p align="center"> <strong>Error message for Mismatched Passwords</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/forgotpass4.png" width="50%">
+</h2>
+
+<p align="center"> <strong>Password Succcessfully Reset</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/forgotpass5.png" width="50%">
+</h2>
+
+<p align="center"> <strong>Logged In Successfully Using the New Password</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/forgotpass6.png" width="50%">
+</h2>
 
 ### Security
 Description: Django Rest Frameworks is used for the backend and has its own security checks dealing with Permissions and Authorisations. The site also uses a number of security measures to prevent unauthorised users from accessing pages they do not have permission to, mainly other user's account pages. <br>
@@ -538,7 +651,7 @@ Description: When My Account is clicked on in the Navbar the user's Account page
 <img src="documentation/readme-images/home6.png" width="50%">
 </h2>
 
-- Use Case: Edit your profile. <br>
+- Use Case: Edit User profile. <br>
 
   1. Click on the My Account link and the Account page opens.<br>
   2. Click the 3 Dots and a menu appears. Select Edit profile.<br>
@@ -553,6 +666,24 @@ Description: When My Account is clicked on in the Navbar the user's Account page
 <p align="center"> <strong>New Info Displays</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/profileed2.png" width="50%">
+</h2>
+
+- Use Case: Edit Username. <br>
+
+  1. Click on the My Account link and the Account page opens.<br>
+  2. Click the 3 Dots and a menu appears. Select Change Username.<br>
+  3. Enter the new username and submit.<br>
+  4. The new username display correctly and on logging oit and signing in with that username the user is taken to the Home page. The old user name no longer is valid.<br>
+  5. This has no effect on the usernames for projects.
+
+<p align="center"> <strong>New Username</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/profileeditusername.png" width="50%">
+</h2>
+
+<p align="center"> <strong>New Username Displays</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/profileeditusername2.png" width="50%">
 </h2>
 
 ### The Chat page
