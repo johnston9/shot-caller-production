@@ -278,12 +278,24 @@ Description: Django Rest Frameworks is used for the backend and has built in reg
 
   1. Click on any of the Sign Up/Register links on the Home page or the one in the Navbar.<br>
   2. The Register page opens.<br>
-  3. Enter a Username, Email, Password and Confirm Password and submit.<br>
+  3. Enter a Username, Email, Password but enter a different one for the confirm password field and submit.<br>
+  4. An error message displays saying the passwords don't match.<br>
+  5. Enter a Username, Email, Password and correct Confirm Password and submit.<br>
   4. The Sign In page opens and on entering the Username and Password the Home page opens, (see image for Sign In page below) <br>
 
 <p align="center"> <strong>Sign Up Page</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/signup.png" width="50%">
+</h2>
+
+<p align="center"> <strong>Password Error message</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/signuperr.png" width="50%">
+</h2>
+
+<p align="center"> <strong>Log In Page</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/signup3.png" width="50%">
 </h2>
 
 - Use Case: Log In<br>
@@ -379,12 +391,12 @@ Description: Django Rest Frameworks is used for the backend and has built in reg
   2. Enter the correct email for the account and submit.<br>
   3. A message appears on top saying that a Reset password Link has been sent to the email address.<br>
   4. On clicking on the link the Reset password page opens.<br>
-  4. Enter the new password but enter a different one for the confirm password field and submit.<br>
-  4. An error message displays saying the passwords don't match.<br>
-  4. Enter the new password and the same one for the confirm password field and submit.<br>
-  4. A message displays saying that the password is successfully reset.<br>
-  4. On using it to log in the user is logged in successfully and taken to the Home page.<br>
-  5. This has no effect on the Passwords for Projects which still use their own one.
+  5. Enter the new password but enter a different one for the confirm password field and submit.<br>
+  6. An error message displays saying the passwords don't match.<br>
+  7. Enter the new password and the same one for the confirm password field and submit.<br>
+  8. A message displays saying that the password is successfully reset.<br>
+  9. On using it to log in the user is logged in successfully and taken to the Home page.<br>
+  10. This has no effect on the Passwords for Projects which still use their own one.
 
 <p align="center"> <strong>Forgot Password</strong></p>
 <h2 align="center">
@@ -466,7 +478,7 @@ Description: When a feature link is clicked on in the Navbar, the Home page imag
 
 ### The Subscription Page
 
-- Use Case: View and purchase Platform Subscriptions. <br>
+- Use Case: View and Purchase Platform Subscriptions. <br>
 
   1. Click on the Subscription Plans link and the Subscriptions page opens displaying all the plans.<br>
   2. Click on a Platform Plan and the Stripe page opens.<br>
@@ -539,6 +551,7 @@ Description: When a feature link is clicked on in the Navbar, the Home page imag
   2. Click on the Cancel button and a message displays asking you to confirm delete.<br>
   3. Click Yes.<br>
   4. You are taken back to the Subscriptions page and now your new plan has a message saying that your subscription is canceled but you can use the service till the end ot the current payment cycle.<br>
+  3. Once the payment cycle ends the Subscription plan along with all other plans revert back to "Buy" and the Projects no longer display in the My Account page.<br>
 
 <p align="center"> <strong>Confirm Delete</strong></p>
 <h2 align="center">
@@ -547,9 +560,14 @@ Description: When a feature link is clicked on in the Navbar, the Home page imag
 
 <h1>Errors - After Canceling a budget plan the old plan should be canceled and  unavailable - need fix replace this image</h1>
 
-<p align="center"> <strong>Confirm Delete</strong></p>
+<p align="center"> <strong>Cancelled with Use Message</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/subbudcancel.png" width="50%">
+</h2>
+
+<p align="center"> <strong>Subscriptions Revert to Buy</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/subrev.png" width="50%">
 </h2>
 
 - Use Case: Purchase separate "Budgeting Software" products. <br>
@@ -616,12 +634,13 @@ Description: When a feature link is clicked on in the Navbar, the Home page imag
 </h2>
 
 ### The Account Page
-Description: When My Account is clicked on in the Navbar the user's Account page opens. It will show all the user's Projects and a link to the user's Budgets. It will tell how many Projects are left on the subscription and have a "Create Projects button.<br>
+Description: When My Account is clicked on in the Navbar the user's Account page opens. It displays all the user's Projects and a link to the user's Budgets. It displays how many Projects are left on the subscription and has a "Create Projects" button.<br>
+Note: If a plan is cancelled and the user purchases a new plan all their old Projects will display and be usable but they are not included in the total remaining.
 
 - Use Case: View "Platform" Projects. <br>
 
-  1. Click on the My account link and the Account page opens.<br>
-  2. The User's "Platform" projects and separate "Budgeting Software" products are displayed.<br>
+  1. Click on the My account link and the My Account page opens.<br>
+  2. The User's "Platform" Projects display along with a link to the seperate "Budgeting Software".<br>
   3. The new project is displayed below.
 
 <p align="center"> <strong>xxx</strong></p>
@@ -898,7 +917,7 @@ Note: Functional aspects of some User Stories are covered in the Features Testin
 
     - The user can easily view their purchased products and projects in their Account page, the link for which is clearly displayed in the Navbar. See Features Testing for more.
 
-2. #### As a Frequent User, I want to easily reset my password if I forget it. ??????????
+2. #### As a Frequent User, I want to easily reset my password if I forget it.
 
     - The user can easily reset their password by clicking the Forgot Password link which is clearly displayed on the Sign In page.
 
