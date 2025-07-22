@@ -278,8 +278,12 @@ Description: Django Rest Frameworks is used for the backend and has built in reg
 
   1. Click on any of the Sign Up/Register links on the Home page or the one in the Navbar.<br>
   2. The Register page opens.<br>
-  3. Enter a Username, Email, Password but enter a different one for the confirm password field and submit.<br>
+  3. Enter a Username, Email, Password but enter a different Password for the confirm password field and submit.<br>
   4. An error message displays saying the passwords don't match.<br>
+  3. Enter an Email, Password but enter a Username that is already taken and submit.<br>
+  4. An error message displays saying the Usename already exists.<br>
+  3. Enter a Username, Email, Password but enter an Email that is already taken and submit.<br>
+  4. An error message displays saying the Email already exists.<br>
   5. Enter a Username, Email, Password and correct Confirm Password and submit.<br>
   4. The Sign In page opens and on entering the Username and Password the Home page opens, (see image for Sign In page below) <br>
 
@@ -291,6 +295,15 @@ Description: Django Rest Frameworks is used for the backend and has built in reg
 <p align="center"> <strong>Password Error message</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/signuperr.png" width="50%">
+</h2>
+
+<p align="center"> <strong>Username Error message</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/signupusererr.png" width="50%">
+</h2>
+<p align="center"> <strong>Email Error message</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/signupemailerr.png" width="50%">
 </h2>
 
 <p align="center"> <strong>Log In Page</strong></p>
@@ -641,22 +654,113 @@ Note: If a plan is cancelled and the user purchases a new plan all their old Pro
 
   1. Click on the My account link and the My Account page opens.<br>
   2. The User's "Platform" Projects display along with a link to the seperate "Budgeting Software".<br>
-  3. The new project is displayed below.
 
-<p align="center"> <strong>xxx</strong></p>
-<h2 align="center">
-<img src="documentation/readme-images/home6.png" width="50%">
-</h2>
-
-- Use Case: Create and purchase "Platform" projects. <br>
+- Use Case: Create a Project. <br>
 
   1. Click on the My Account link and the Account page opens.<br>
-  2. Use the "Create Project" feature to create and purchase new "Platform" projects.<br>
-  3. The new project is displayed below.
+  2. If the Subscription has been newly bought no Projects will display, except as in the case mentioned above and the number of remaing Projects and total available displays, e.g. "10 projects remaining out of 10". <br>
+  3. Click the "Create Project" button and the Create New Project form opens.<br>
+  4. Enter a title, e.g."The First" and select a Project Type, Film, TV or Video, e.g. "Film" and submit.<br>
+  5. A success message displays and the new project displays below.<br>
+  6. Close the Create Project form and the number of remaing Projects and total available displays and the new project displays below where all future Projects will also.<br>
+  7. An email is sent to the User with the Project's URL and their Username and Password to access it.<br>
 
-<p align="center"> <strong>xxx</strong></p>
+<p align="center"> <strong>New Account Page</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/home6.png" width="50%">
+<img src="documentation/readme-images/account1.png" width="50%">
+</h2>
+
+<p align="center"> <strong>Create Project</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/accpro1.png" width="50%">
+</h2>
+
+<p align="center"> <strong>Susscess Message</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/accpromes.png" width="50%">
+</h2>
+
+<p align="center"> <strong>Account Projects Page with the New Project</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/accpromes.png" width="50%">
+</h2>
+
+<p align="center"> <strong>Email</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/accproemail.png" width="50%">
+</h2>
+
+
+- Use Case: Use the URL, Username and Password to Login the Project and a Second Project. <br>
+
+1. Click the URL in the email or on the Account page and use the Username and Password to Log In and a Film type project "The First" opens.
+2. Create another Project, e.g. type is "TV" and name is "Second".<br>
+3. A success message displays, the Project displays and an email is sent telling the User to use their "Current Password.<br>
+4. Click the URL in the email or on the Account page and use the Username and "current" Password to Log In and a TV type project "Second" opens.<br>
+
+<p align="center"> <strong>Use the Password from the email to Log In to "The First"</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/accfirst1.png" width="50%">
+</h2>
+
+<p align="center"> <strong>Logged in Successfully to "The First" with the email's Password</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/accprolog.png" width="50%">
+</h2>
+
+<p align="center"> <strong>Create "Second"</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/accprosec.png" width="50%">
+</h2>
+
+<p align="center"> <strong>"Second" Created</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/accprosec2.png" width="50%">
+</h2>
+
+<p align="center"> <strong>"Second" email saying Use Current Password</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/accprosec2.png" width="50%">
+</h2>
+
+<p align="center"> <strong>Use the "Current" Password from the email to Log In to "Second"</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/accseclog1.png" width="50%">
+</h2>
+
+<p align="center"> <strong>Logged in Successfully to "Second" Using the Original Password used for "The First"</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/accseclog2.png" width="50%">
+</h2>
+
+- Use Case: Change the Password in any Project and successfully Login that Project and all other Projects. <br>
+
+
+1. Click the URL in the email or on the Account page and use the Username and Password to Log In and a Film type project "The First" opens.
+2. On the My Profile page Change the Password and a success message displays.<br>
+3. Log out the back in again successfully using the new Password.<br>
+4. Attenpt to lofin to a different project with the old Password It is unsuccessful.<br>
+5. Login to a different Project, e.g. "Second" using the new Password.<br>
+4. Login is successful<br>
+
+<p align="center"> <strong>Success message from Password Change for "The First"</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/accchangpass1.png" width="50%">
+</h2>
+
+<p align="center"> <strong>Login Successfully to "The First" with the New Password</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/accchanpass2.png" width="50%">
+</h2>
+
+<p align="center"> <strong>Use the New Password to Login to "Second"</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/accchangepass3.png" width="50%">
+</h2>
+
+<p align="center"> <strong>Login Successfully to "Second" with the New Password</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/accchangpass4.png" width="50%">
 </h2>
 
 - Use Case: Create and purchase separate "Budgeting Software" products. <br>
@@ -670,39 +774,13 @@ Note: If a plan is cancelled and the user purchases a new plan all their old Pro
 <img src="documentation/readme-images/home6.png" width="50%">
 </h2>
 
-- Use Case: Edit User profile. <br>
+- Use Case: View All Transactions. <br>
 
-  1. Click on the My Account link and the Account page opens.<br>
-  2. Click the 3 Dots and a menu appears. Select Edit profile.<br>
-  3. Enter the new info and an image and submit.<br>
-  4. The new info and image display.<br>
+  1. Click on the Transactions link and the Transactions page opens.<br>
 
-<p align="center"> <strong>New Info</strong></p>
+<p align="center"> <strong>Transactions</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/profileed1.png" width="50%">
-</h2>
-
-<p align="center"> <strong>New Info Displays</strong></p>
-<h2 align="center">
-<img src="documentation/readme-images/profileed2.png" width="50%">
-</h2>
-
-- Use Case: Edit Username. <br>
-
-  1. Click on the My Account link and the Account page opens.<br>
-  2. Click the 3 Dots and a menu appears. Select Change Username.<br>
-  3. Enter the new username and submit.<br>
-  4. The new username display correctly and on logging oit and signing in with that username the user is taken to the Home page. The old user name no longer is valid.<br>
-  5. This has no effect on the usernames for projects.
-
-<p align="center"> <strong>New Username</strong></p>
-<h2 align="center">
-<img src="documentation/readme-images/profileeditusername.png" width="50%">
-</h2>
-
-<p align="center"> <strong>New Username Displays</strong></p>
-<h2 align="center">
-<img src="documentation/readme-images/profileeditusername2.png" width="50%">
+<img src="documentation/readme-images/home6.png" width="50%">
 </h2>
 
 ### The Chat page
