@@ -2,27 +2,17 @@
 Note: User Stories aspects of some Features are covered in the User Stories Testing section. [User Stories Testing](#User-stories-testing)
 
 ### Budgeting Software
-Description: View and create Budgets for the "All in One Platform" or the separate Budgeting Software.<br>
+Description: View and create Budgets for the "All in One Platform".<br>
 
-- Use Case: Access the Budget for the "All in One Platform" or the separate Budgeting Software<br>
+- Use Case: Access the Budget for an "All in One Platform" Project.<br>
 
   1. Click on the My Account link in the Navbar.<br>
-  2. The Account page opens displaying all the Platform products and separate Budgeting Software products purchased with a "Budget" tab displaying.<br>
-  3. Click on the Budget tab and a new empty Budget Detail page opens with the Create Budget, "Cover Page" and "Top Sheet" tabs displaying on top.<br>
+  2. The Account page opens displaying all the Platform Projects.<br>
+  3. Click on a Project's Budget tab and the Create Budget page opens.<br>
 
-<p align="center"> <strong>"All in One Platform" products</strong></p>
+<p align="center"> <strong>"All in One Platform" Projects</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/bud1find.png" width="50%">
-</h2>
-
-<p align="center"> <strong>Separate Budgeting Software products</strong></p>
-<h2 align="center">
-<img src="documentation/readme-images/bud1find.png" width="50%">
-</h2>
-
-<p align="center"> <strong>New empty Budget page</strong></p>
-<h2 align="center">
-<img src="documentation/readme-images/xxxxxxxx.png" width="50%">
 </h2>
 
 - Use Case: Initialize the Budget<br>
@@ -59,8 +49,6 @@ Description: View and create Budgets for the "All in One Platform" or the separa
 <img src="documentation/readme-images/bud6edit2.png" width="50%">
 </h2>
 
-[Back to README](/README.md)
-
 - Use Case: Add/Edit values to an "Above the Line" section<br>
 
   1. Add/Edit input values to the Edit page "Pre-Production & Development" section.<br>
@@ -96,8 +84,6 @@ Description: View and create Budgets for the "All in One Platform" or the separa
 <h2 align="center">
 <img src="documentation/readme-images/bud11belowlab3.png" width="50%">
 </h2>
-
-[Back to README](/README.md)
 
 - Use Case: Add/Edit values to an ""Below the Line Costs" section<br>
 
@@ -153,8 +139,6 @@ Description: View and create Budgets for the "All in One Platform" or the separa
 <h2 align="center">
 <img src="documentation/readme-images/bud18oth3.png" width="50%">
 </h2>
-
-[Back to README](/README.md)
 
 - Use Case: Create the Budget Detail page with all the values inputted and calculated on the edit page<br>
 
@@ -224,8 +208,6 @@ Description: View and create Budgets for the "All in One Platform" or the separa
 <img src="documentation/readme-images/budtop3.png" width="50%">
 </h2>
 
-[Back to README](/README.md)
-
 - Use Case: Use the "Globals" feature to give the Crew's production work's "Weeks Length" a universal value for their "Prep", "Shoot" and "Wrap" inputs<br>
 
   1. On the Edit page click on the "Globals" tab.<br>
@@ -268,8 +250,6 @@ Description: View and create Budgets for the "All in One Platform" or the separa
 <h2 align="center">
 <img src="documentation/readme-images/bud7above1.png" width="90%">
 </h2>
-
-[Back to README](/README.md)
 
 ### Login/Register/Logout Pages
 Description: Django Rest Frameworks is used for the backend and has built in register and login functionality which is used when a User registers, logs in or logs out.<br>
@@ -491,6 +471,8 @@ Description: When a feature link is clicked on in the Navbar, the Home page imag
 
 ### The Subscription Page
 
+#### Platform Plans
+
 - Use Case: View and Purchase Platform Subscriptions. <br>
 
   1. Click on the Subscription Plans link and the Subscriptions page opens displaying all the plans.<br>
@@ -583,6 +565,8 @@ Description: When a feature link is clicked on in the Navbar, the Home page imag
 <img src="documentation/readme-images/subrev.png" width="50%">
 </h2>
 
+#### Separate Budgeting Software Plans
+
 - Use Case: Purchase separate "Budgeting Software" products. <br>
 
   1. Click on the Subscription Plans link and the Subscription page opens.<br>
@@ -613,7 +597,7 @@ Description: When a feature link is clicked on in the Navbar, the Home page imag
   5. An email is sent to you advising you of your new plan.<br>
   6. On the My Account Budget page the message displaying the correct number of remaing Budgets and the total for that plan displays correctly, e.g. 39 Budgets remaining out of 40. <br>
 
-<h1>Errors - email wording error - need fix replace this image</h1>
+<h1>Errors - email wording error - need fix replace this image payment nor cancel</h1>
 
 <p align="center"> <strong>Upgrade Email</strong></p>
 <h2 align="center">
@@ -647,12 +631,14 @@ Description: When a feature link is clicked on in the Navbar, the Home page imag
 </h2>
 
 ### The Account Page
-Description: When My Account is clicked on in the Navbar the user's Account page opens. It displays all the user's Projects and a link to the user's Budgets. It displays how many Projects are left on the subscription and has a "Create Projects" button.<br>
+Description: When My Account is clicked on in the Navbar the user's Account page opens. It displays all the user's Projects and a link to the user's Budgets. <br>
 Note: If a plan is cancelled and the user purchases a new plan all their old Projects will display and be usable but they are not included in the total remaining.
+
+#### Platform Projects
 
 - Use Case: View "Platform" Projects. <br>
 
-  1. Click on the My account link and the My Account page opens.<br>
+  1. On purchasing a Subscription click on the My account link and the My Account page opens.<br>
   2. The User's "Platform" Projects display along with a link to the seperate "Budgeting Software".<br>
 
 - Use Case: Create a Project. <br>
@@ -690,13 +676,12 @@ Note: If a plan is cancelled and the user purchases a new plan all their old Pro
 <img src="documentation/readme-images/accproemail.png" width="50%">
 </h2>
 
-
 - Use Case: Use the URL, Username and Password to Login the Project and a Second Project. <br>
 
-1. Click the URL in the email or on the Account page and use the Username and Password to Log In and a Film type project "The First" opens.
-2. Create another Project, e.g. type is "TV" and name is "Second".<br>
-3. A success message displays, the Project displays and an email is sent telling the User to use their "Current Password.<br>
-4. Click the URL in the email or on the Account page and use the Username and "current" Password to Log In and a TV type project "Second" opens.<br>
+  1. Click the URL in the email or on the Account page and use the Username and Password to Log In and a Film type project "The First" opens.
+  2. Create another Project, e.g. type is "TV" and name is "Second".<br>
+  3. A success message displays, the Project displays and an email is sent telling the User to use their "Current Password.<br>
+  4. Click the URL in the email or on the Account page and use the Username and "current" Password to Log In and a TV type project "Second" opens.<br>
 
 <p align="center"> <strong>Use the Password from the email to Log In to "The First"</strong></p>
 <h2 align="center">
@@ -736,12 +721,12 @@ Note: If a plan is cancelled and the user purchases a new plan all their old Pro
 - Use Case: Change the Password in any Project and successfully Login that Project and all other Projects. <br>
 
 
-1. Click the URL in the email or on the Account page and use the Username and Password to Log In and a Film type project "The First" opens.
-2. On the My Profile page Change the Password and a success message displays.<br>
-3. Log out the back in again successfully using the new Password.<br>
-4. Attenpt to lofin to a different project with the old Password It is unsuccessful.<br>
-5. Login to a different Project, e.g. "Second" using the new Password.<br>
-4. Login is successful<br>
+  1. Click the URL in the email or on the Account page and use the Username and Password to Log In and a Film type project "The First" opens.
+  2. On the My Profile page Change the Password and a success message displays.<br>
+  3. Log out the back in again successfully using the new Password.<br>
+  4. Attenpt to lofin to a different project with the old Password It is unsuccessful.<br>
+  5. Login to a different Project, e.g. "Second" using the new Password.<br>
+  4. Login is successful<br>
 
 <p align="center"> <strong>Success message from Password Change for "The First"</strong></p>
 <h2 align="center">
@@ -763,24 +748,95 @@ Note: If a plan is cancelled and the user purchases a new plan all their old Pro
 <img src="documentation/readme-images/accchangpass4.png" width="50%">
 </h2>
 
-- Use Case: Create and purchase separate "Budgeting Software" products. <br>
+- Use Case: Use the Budget software for a Project.<br>
 
-  1. Click on the My Account link and the Account page opens.<br>
-  2. Use the "Create Budget" feature to create and purchase new "Platform" "Budgeting Software" products.<br>
-  3. The new product is displayed below.
+  1. Click the Budget tab on a project to be taken to that Project's Create Budget page.<br>
+  2. Input some Project Details info and submit.
+  3. A success message displays and the Budget opens on the Budget Detail page.<br>
 
-<p align="center"> <strong>xxx</strong></p>
+<p align="center"> <strong>Success Message</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/home6.png" width="50%">
+<img src="documentation/readme-images/accprobud1.png" width="50%">
 </h2>
+
+<p align="center"> <strong>Budget Page</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/xxx.png" width="50%">
+</h2>
+
+- Use Case: Use the separate "Budgeting Software". <br>
+
+The Budgeting Software is testing coverage here.
+[Budgeting Software Testing](#Budgeting-software)
+
+#### Separate "Budgeting Software" Products
+
+- Use Case: Create Budgets on the separate "Budgeting Software" Plans. <br>
+
+  1. Click on the Budget tab on the My Account page and the Budget page opens.<br>
+  2. It correctly displays the number of remaining Budgets out of the total available on the plan so when first opened on a new Gold++ subscription it says "30 Budgets Remaining out of 30".<br>
+  3. Click on the Create Budget link and the Create budget page opens with a form for the details of the Project the Budget is for.<br>
+  4. Input any amount of Project details on this form and submit.<br>
+  5. A success message displays and the Budget page opens with the newly created budget in it and the correct total remaing e.g. "29 remaining out of 30".<br>
+
+<p align="center"> <strong>Succcess Message</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/accbud2.png" width="50%">
+</h2>
+
+<p align="center"> <strong>Budget Page with the New Budget and Correct Remaining Total</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/accbud3.png" width="50%">
+</h2>
+
+- Use Case: Use the separate "Budgeting Software". <br>
+
+The Budgeting Software is testing coverage here.
+[Budgeting Software Testing](#Budgeting-software)
+
+- Use Case: Edit a Project Title. <br>
+
+  1. On the Account page click on a Project's 3 Dots and select the Edit Icon.<br>
+  2. Make the change, e.g. change "The First" to "The First One" and submit.<br>
+  3. The Project is now called "The First One".<br>
+
+<p align="center"> <strong>Make Changes</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/accproedit1.png" width="50%">
+</h2>
+
+<p align="center"> <strong>The New Title</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/accproedit2.png" width="50%">
+</h2>
+
+- Use Case: Delete a Project. <br>
+
+  1. On the Account page click on a Project's 3 Dots and select the Delete Icon.<br>
+  2. A pop apperas asking to Confirm Delete.<br>
+  3. Click Confirm and the Project is deleted and the Remaing total adjusts accordingly.<br>
+  4. The URL for the Budget for that Project is no longer valid and takes the User to the Home page.
+
+<p align="center"> <strong>Confirn Delete</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/accprodel1.png" width="50%">
+</h2>
+
+<p align="center"> <strong>Project deleted</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/accprodel2.png" width="50%">
+</h2>
+
+### Transactions
 
 - Use Case: View All Transactions. <br>
 
   1. Click on the Transactions link and the Transactions page opens.<br>
+  2. The payment for the Gold++ subscription that started after the end of the free trial is displaying.<br>
 
 <p align="center"> <strong>Transactions</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/home6.png" width="50%">
+<img src="documentation/readme-images/acctran.png" width="50%">
 </h2>
 
 ### The Chat page
