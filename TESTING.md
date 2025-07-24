@@ -759,15 +759,45 @@ Note: If a plan is cancelled and the user purchases a new plan all their old Pro
 <img src="documentation/readme-images/accprobud1.png" width="50%">
 </h2>
 
+<h1>fix budget error</h1>
+
 <p align="center"> <strong>Budget Page</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/xxx.png" width="50%">
 </h2>
 
-- Use Case: Use the separate "Budgeting Software". <br>
+- Use Case: Edit a Project Title. <br>
 
-The Budgeting Software is testing coverage here.
-[Budgeting Software Testing](#Budgeting-software)
+  1. On the Account page click on a Project's 3 Dots and select the Edit Icon.<br>
+  2. Make the change, e.g. change "The First" to "The First One" and submit.<br>
+  3. The Project is now called "The First One".<br>
+
+<p align="center"> <strong>Make Changes</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/accproedit1.png" width="50%">
+</h2>
+
+<p align="center"> <strong>The New Title</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/accproedit2.png" width="50%">
+</h2>
+
+- Use Case: Delete a Project. <br>
+
+  1. On the Account page click on a Project's 3 Dots and select the Delete Icon.<br>
+  2. A pop apperas asking to Confirm Delete.<br>
+  3. Click Confirm and the Project is deleted and the Remaing total adjusts accordingly.<br>
+  4. The URL for the Budget for that Project is no longer valid and takes the User to the Home page.
+
+<p align="center"> <strong>Confirm Delete</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/accprodel1.png" width="50%">
+</h2>
+
+<p align="center"> <strong>Project deleted</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/accprodel2.png" width="50%">
+</h2>
 
 #### Separate "Budgeting Software" Products
 
@@ -794,37 +824,83 @@ The Budgeting Software is testing coverage here.
 The Budgeting Software is testing coverage here.
 [Budgeting Software Testing](#Budgeting-software)
 
-- Use Case: Edit a Project Title. <br>
+- Use Case: Share the Budget so other Users can work on it.<br>
 
-  1. On the Account page click on a Project's 3 Dots and select the Edit Icon.<br>
-  2. Make the change, e.g. change "The First" to "The First One" and submit.<br>
-  3. The Project is now called "The First One".<br>
+  1. Click on the Share Budget tab and the Share Budget form opens. E.g. for the "First Subscription Budget" <br>
+  2. Enter the name and email of the New User who it is to be shared with and submit.<br>
+  3. A success message displays.<br>
+  4. The New User gets an email with the Budget URL.<br>
+  5. On clicking the Budget URL the "First Subscription Budget" opens for the New User.<br>
+  6. The New User can use the software. They enter a value and the totals change correctly.<br.> 
+  E.g. Before: Research = 0 and Grand Total = 4110.  <br>
+  After: Research = 1190 and Grand Total = 5300<br>
+  7. The New User submits and the Budget Detail page reflects the changes correctly, E.g. Grand Total = 5300.<br>
 
-<p align="center"> <strong>Make Changes</strong></p>
+<p align="center"> <strong>Details Entered</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/accproedit1.png" width="50%">
+<img src="documentation/readme-images/accbudshare1.png" width="50%">
 </h2>
 
-<p align="center"> <strong>The New Title</strong></p>
+<p align="center"> <strong>Success Message</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/accproedit2.png" width="50%">
+<img src="documentation/readme-images/accbudshare2.png" width="50%">
 </h2>
 
-- Use Case: Delete a Project. <br>
-
-  1. On the Account page click on a Project's 3 Dots and select the Delete Icon.<br>
-  2. A pop apperas asking to Confirm Delete.<br>
-  3. Click Confirm and the Project is deleted and the Remaing total adjusts accordingly.<br>
-  4. The URL for the Budget for that Project is no longer valid and takes the User to the Home page.
-
-<p align="center"> <strong>Confirn Delete</strong></p>
+<p align="center"> <strong>Email</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/accprodel1.png" width="50%">
+<img src="documentation/readme-images/accbudshare3.png" width="50%">
 </h2>
 
-<p align="center"> <strong>Project deleted</strong></p>
+<p align="center"> <strong>Budget Opens for New user</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/accprodel2.png" width="50%">
+<img src="documentation/readme-images/accbudshare4.png" width="50%">
+</h2>
+
+<p align="center"> <strong>Edit Page Budget Values Before</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/accbudshare5.png" width="50%">
+</h2>
+
+<p align="center"> <strong>Edit Page Budget Values After</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/accbudshare6.png" width="50%">
+</h2>
+
+<p align="center"> <strong>Budget After submitting</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/accbudshare7.png" width="50%">
+</h2>
+
+- Use Case: View all User who the Budget has been shared with. <br>
+
+  1. On the Budget click on the Shared budget Info tab.<br>
+  2. The share Budget page opens with the info of the User who the Budget was shared with, e.g. John Strong.<br>
+
+<p align="center"> <strong>Share Budget</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/accbudshareview.png" width="50%">
+</h2>
+
+- Use Case: Delete a Budget. <br>
+
+  1. On the Budget page click on a Budget's 3 Dots and select the Delete Icon.<br>
+  2. A pop appears asking to Confirm Delete.<br>
+  3. Click Confirm and the Budget is deleted and the Remaing total adjusts accordingly.<br>
+  4. The URL for the Budget gets a Page not Found message.
+
+<p align="center"> <strong>Confirm Delete</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/accbuddel1.png" width="50%">
+</h2>
+
+<p align="center"> <strong>Budget Deleted</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/accbuddel2.png" width="50%">
+</h2>
+
+<p align="center"> <strong>No Budget Found message</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/accbuddel3.png" width="50%">
 </h2>
 
 ### Transactions
