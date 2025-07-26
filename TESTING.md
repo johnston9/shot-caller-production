@@ -523,26 +523,26 @@ Description: When a feature link is clicked on in the Navbar, the Home page imag
 
 <p align="center"> <strong>Upgrade Email</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/subbudemail.png" width="50%">
+<img src="documentation/readme-images/xxxxxxx.png" width="50%">
 </h2>
 
 <h1>Errors - After Upgrading a project plan the old plan all the lower plans should be unavailable - need fix replace this image</h1>
 
 <p align="center"> <strong>New Active Platform Plan</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/home6.png" width="50%">
+<img src="documentation/readme-images/xxxxxx.png" width="50%">
 </h2>
 
 <h1>Errors - After Upgrading a project plan the remaining is not calculating correctly - need fix replace this image</h1>
 
 <p align="center"> <strong>The Correct New Number of remaning Projects</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/home.png" width="50%">
+<img src="documentation/readme-images/xxxxx.png" width="50%">
 </h2>
 
 - Use Case: Cancel a Platform Product. <br>
 
-  1. Click on the Subscription Plans link and the Subscription page opens with your current plan, e.g. Platninum.<br>
+  1. Click on the Subscription Plans link and the Subscription page opens with your current plan, e.g. Platinum.<br>
   2. Click on the Cancel button and a message displays asking you to confirm delete.<br>
   3. Click Yes.<br>
   4. You are taken back to the Subscriptions page and now your new plan has a message saying that your subscription is canceled but you can use the service till the end ot the current payment cycle.<br>
@@ -550,19 +550,19 @@ Description: When a feature link is clicked on in the Navbar, the Home page imag
 
 <p align="center"> <strong>Confirm Delete</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/subconcanbud.png" width="50%">
+<img src="documentation/readme-images/xxxxxxxxxxxx.png" width="50%">
 </h2>
 
 <h1>Errors - After Canceling a budget plan the old plan should be canceled and  unavailable - need fix replace this image</h1>
 
 <p align="center"> <strong>Cancelled with Use Message</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/subbudcancel.png" width="50%">
+<img src="documentation/readme-images/xxxxxxxxxxxxxx.png" width="50%">
 </h2>
 
 <p align="center"> <strong>Subscriptions Revert to Buy</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/subrev.png" width="50%">
+<img src="documentation/readme-images/xxxxxxxxxxxx.png" width="50%">
 </h2>
 
 #### Separate Budgeting Software Plans
@@ -613,7 +613,7 @@ Description: When a feature link is clicked on in the Navbar, the Home page imag
 
 - Use Case: Cancel a separate "Budgeting Software" product. <br>
 
-  1. Click on the Subscription Plans link and the Subscription page opens with your current plan, e.g. Platinum.<br>
+  1. Click on the Subscription Plans link and the Subscription page opens with your current plan, e.g. D2.<br>
   2. Click on the Cancel button and a message displays asking you to confirm delete.<br>
   3. Click Yes.<br>
   4. You are taken back to the Subscriptions page and now your new plan has a message saying that your subscription is canceled but you can use the service till the end ot the current payment cycle.<br>
@@ -625,7 +625,7 @@ Description: When a feature link is clicked on in the Navbar, the Home page imag
 
 <h1>Errors - After Canceling a budget plan the old plan should be canceled and  unavailable - need fix replace this image</h1>
 
-<p align="center"> <strong>Confirm Delete</strong></p>
+<p align="center"> <strong>Plan Canceled</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/subbudcancel.png" width="50%">
 </h2>
@@ -976,21 +976,92 @@ First time and returning users who are trying to find out about the software and
 <img src="documentation/readme-images/home6.png" width="50%">
 </h2>
 
-### Stripe ????????????????????
-Description: <br>
+### Stripe
+Description: Stripe is used for the monthly subscription payments. On selecting a product the User will be brought to the Stripe payment page.<br>
+For the "All in One Platform" and "Budgeting Software" products Stripe will take the User's card details and after a Free trial period will take a monthly payment if the User does not cancel. It also allows the user to cancel at any time.
 
-- Use Case:  <br>
+- Use Case: Use Stripe to set up a monthly subscription payment.<br>
+This is covered in the Use Case: View and Purchase Platform Subscriptions.<br>
 
-  1. Cmm<br>
-  2. mmm<br>
-  3. mmm
+- Use Case: Have Stripe take the first monthly subscription payment for the "All in One Platform" after the Free Trial is over. No money is taken till the free trial is over.<br>
 
-  Stripe is used for the payment system. On selecting a product the User will be brought to the Stripe payment page.
-  <br>For the "All in One Platform" this feature will take the User's details and after a Free trial period will take a monthly payment if the User does not cancel. For the separate "Budgeting Software" it will take the whole sum after a Free Trial period if the User does not cancel. It also allows the user to cancel at any time.
+  1. For testing purposes the trial period and subscription period were set to one day.<br>
+  2. Buy a Platform Subscription, e.g. The Gold++ plan on July 22 2025.<br>
+  3. An email is sent to User david3 confirming, the Gold++ plan was commenced with a 1 day trial on July 22 2025.<br>
+  4. On the Transaction page nothing displays for the purchase yet.<br>
+  5. In the Backend admin page xxxxxx displays for the purchase of the Gold++ plan for David3.<br>
+  6. On July 23 2025 after the free trial is over on the Transaction page the first payment is taken.<br>
+  7. On July 23 2025 after the free trial is over in the Backend admin Payments page  "Succeeded" displays for the first payment for the purchase Of the Gold++ plan for David3 and 150 is is taken.<br>
 
-<p align="center"> <strong>xxx</strong></p>
+<p align="center"> <strong>An email is sent to User david3 confirming, the Gold++ plan was commenced with a 1 day trial on July 22 2025</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/home6.png" width="50%">
+<img src="documentation/readme-images/stripeplatemail.png" width="50%">
+</h2>
+
+<p align="center"> <strong>In the site backend no money is taken on the 22 July and the first payment is taken on the 23 July</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/stripeplat1.png" width="50%">
+</h2>
+
+<p align="center"> <strong>On the Transactions page no money is taken on the 22 July and the first payment is taken on the 23 July</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/stripetran.png" width="50%">
+</h2>
+
+- Use Case: Have Stripe take the first monthly subscription payment for the "Budgeting Software" after the Free Trial is over. No money is taken till the free trial is over.<br>
+
+1. For testing purposes the trial period and subscription period were set to one day.<br>
+2. Buy a Budgeting Subscription, e.g. The Platinum Plan on July 23 2025.<br>
+3. An email is sent to User david3 confirming, the Platinum Plan plan was commenced with a 1 day trial on July 23 2025.<br>
+4. On the Transaction page nothing displays for the purchase yet.<br>
+5. In the Backend admin page xxxxxx displays for the purchase of the Platinum Plan for David3 on July 23.<br>
+6. On July 24 2025 after the free trial is over on the Transaction page the first payment is taken.<br>
+7. On July 24 2025 after the free trial is over in the Backend Admin Payments page  "Succeeded" displays for the first payment for the purchase Of the Platform Plan for David3 and 40 is is taken.<br>
+
+<p align="center"> <strong>An email is sent to User david3 confirming, the Platinum Plan was commenced with a 1 day trial on July 23 2025</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/stripeplatemail.png" width="50%">
+</h2>
+
+<p align="center"> <strong>In the site backend no money is taken on the 23 July and the first payment is taken on the 24 July</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/stripebud1.png" width="50%">
+</h2>
+
+<p align="center"> <strong>On the Transactions page no money is taken on the 23 July and the first payment is taken on the 24 July</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/stripetran.png" width="50%">
+</h2>
+
+
+- Use Case: Have Stripe stop taking the monthly subscription payment for a Platform once a subscription is cancelled.<br>
+
+1. For testing purposes the trial period and subscription period were set to one day.<br>
+2. Click the Cancel Button on a Platform Subscription. E.G for User david2 who bought a G++ Platform on 19 July then canceled it that day there was no payment taken on 19 or 20 July.
+
+<p align="center"> <strong>Email of Platform Purchased on 19 July</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/stripeplatemail.png" width="50%">
+</h2>
+
+<p align="center"> <strong>No Payments taken 19 or 20 July</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/stripeplat1.png" width="50%">
+</h2>
+
+- Use Case: Have Stripe stop taking the monthly subscription payment for a Budget plan once a subscription is cancelled.<br>
+
+1. For testing purposes the trial period and subscription period were set to one day.<br>
+2. Click the Cancel Button on a Budget Subscription. E.G for User david2 who bought a Platinum Plan Budget on 12 June then canceled it that day there was no payment taken on 12 or 13 June.
+
+<p align="center"> <strong>Email of Platform Purchased on 12 June</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/stripebudcanemail.png" width="50%">
+</h2>
+
+<p align="center"> <strong>No Payments taken 12 or 13 June</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/stripebudcan1.png" width="50%">
 </h2>
 
 <!-- ### Testing Stripe Card and Details Input Errors
