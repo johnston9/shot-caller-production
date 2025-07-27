@@ -1141,56 +1141,34 @@ Note: Functional aspects of some User Stories are covered in the Features Testin
 
     - The third section of the home page gives a brief summary of the above mentioned features and when again clicked on, as with the links in the image, take the user to that feature's information page. These pages give a clear easy to understand explanation of the feature with actual images of the software. Links to these pages can again be found in the Navbar.
 
-<p align="center"><strong>Feature's Information Page</strong></p>   
+<p align="center"> <strong>Schedule Information Page</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/home6.png" width="50%">
+<img src="documentation/readme-images/homesched.png" width="50%">
 </h2>
 
 3. #### As a First Time User, I want to register an account easily.
 
     - The user will be given the option to Register immediately by a link at the bottom of the landing page image and in the Navbar. On clicking they will be taken to the Register Page and only have to enter a username and password to sign up. See Features Testing for more.<br>
 
-[Back to README](/README.md)
-
 ### Returning User Goals
 
 1. #### As a Returning User, I want to easily login and logout.
 
-    - The user can login and logout easily from the My Account nav link. 
-    The site also includes a feature that keeps a user signed in for 24 hours so they don't have to go to the trouble of signing in if they are using it regularly. See Features Testing for more.
+    - The user can login and logout. The User can login and logout easily from the navbar. See Features Testing for more.
 
 2. #### As a Returning User, I want to view or update my profile.
 
-    - On clicking on the My Profile tab in the My Account Navbar the User is taken to their Profile Page where they can view and update their Profile details.
-
-<p align="center"><strong>xxxxxxx</strong></p>
-<h2 align="center">
-<img src="documentation/readme-images/home6.png" width="50%">
-</h2>
+    - On clicking on the My Profile tab in the My Account Navbar the User is taken to their Profile Page where they can view and update their Profile details. See Features Testing for more.
 
 3. #### As a Returning User, I want to see what people are saying about the app and know if it is professional and trustworthy.
 
-    - The user can view reviews and testimonials from registered users on the Testimonials page, which is easily accessible from a link in the Navbar. Positive, short and concise lines from these will also be added to the landing page to immediately make an impact on the user.<br>
-    The user can also browse all the Chat messages from users who are already using the software, along with their comments, in the Chat feature. This will give the user a real unfiltered idea about the actual real-time use of the app. 
-
-<p align="center"><strong>xxxxxx</strong></p>
-<h2 align="center">
-<img src="documentation/readme-images/home6.png" width="50%">
-</h2>
+    - The user can view reviews and testimonials from registered users on the Testimonials page, which is easily accessible from a link in the Navbar. Snippets from these will be added to the landing page to immediately make an impact on the user.<br>
 
 4. #### As a Returning User, I want purchase products easily.
 
-    - Once the user has Registered whenever they login their My Account link will display in the Navbar. On going to their Account page the user will immediately see the "Create Project" and "Create Budget" features with a brief summary of each product above it. <br> It also contains a concise explanation of what happens when a product is created and how the user should proceed.
-    <br>The Create Project is for the "All in One Platform" and the user can choose which version, the Film, TV or Video/Short production software, best suits their project using the summary above to guide them. The Create Budget is for the Budgeting software. Both the Projects and Budgets will have a discounted student version and the Projects have a one month free trial both of which are designed to create more sales.<br>
+    - Once the user has Registered their My Account link will display in the Navbar. From this they can purchase Platform and Budgets Subscriptions. With the Platform product they can select from Film, TV or Video/Short options for their Project.<br> Both the Projects and Budgets will have a discounted student version and a one month free trial.<br>
     Once the user selects a product they will be taken to the Stripe page to complete the transaction. And once the sale goes through the user will receive an email confirming the purchase and containing the project details. These detail include the Project URL and the user's username and password.<br>
     Lastly the project or Budget will now display on the user's account page with its URL. See Features Testing for more.
-
-<p align="center"><strong>xxxxxx</strong></p>
-<h2 align="center">
-<img src="documentation/readme-images/home6.png" width="50%">
-</h2>
-
-[Back to README](/README.md)
 
 ### Frequent User Goals
 
@@ -1200,40 +1178,19 @@ Note: Functional aspects of some User Stories are covered in the Features Testin
 
 2. #### As a Frequent User, I want to easily reset my password if I forget it.
 
-    - The user can easily reset their password by clicking the Forgot Password link which is clearly displayed on the Sign In page.
-
-<p align="center"><strong>xxxxxxx</strong></p>
-<h2 align="center">
-<img src="documentation/readme-images/home6.png" width="50%">
-</h2>
+    - The user can easily reset their password by clicking the Forgot Password link which is clearly displayed on the Sign In page. See Features Testing for more.
 
 3. #### As a Frequent User, I want to view my order history and payment details.
 
-    - The user can easily view their order history and payment details by click on the link for this in their account page.
+    - The user can easily view their order history and payment details by click on the Transactions link in the Navbar. See Features Testing for more.
 
-<p align="center"><strong>xxxxxxx</strong></p>
-<h2 align="center">
-<img src="documentation/readme-images/home6.png" width="50%">
-</h2>
+4. #### As a Frequent User, I want to easily change my password and username.
 
-4. #### As a Frequent User, I want to post messages and comments on the Chat page.
+- The user can easily change their password and username by clicking on the link on their Profile page. See Features Testing for more.
 
-     - See Features Testing.
+5. #### As a Frequent User, I want to use the Budgeting Software.
 
-5. #### As a Frequent User, I want to easily change my password and username.
-
-- The user can easily change their password and username by clicking on the link on their Profile page.
-
-<p align="center"><strong>xxxxxxx</strong></p>
-<h2 align="center">
-<img src="documentation/readme-images/home6.png" width="50%">
-</h2>
-
-6. #### As a Frequent User, I want to use the Budgeting Software.
-
-    - A complete breakdown of the usage and testing of this is in the Features section.
-
-[Back to README](/README.md)
+    - A User can click on their Budgets links to open their Budgeting software. A complete breakdown of the usage and testing of this is in the Features section.
 
 ### Owner/Admin User Goals
 
