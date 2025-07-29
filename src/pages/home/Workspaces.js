@@ -10,7 +10,6 @@ import work1 from "../../assets/work1.png";
 import work4 from "../../assets/work4.png";
 import work5 from "../../assets/work5.png";
 import work6 from "../../assets/work6.png";
-import work7 from "../../assets/work7.png";
 import break23 from "../../assets/break23.png";
 import charbg from "../../assets/charbg.png";
 import btnStyles from "../../styles/Button.module.css";
@@ -40,7 +39,7 @@ const Workspaces = () => {
     <Row className="mt-1 mt-md-3 pb-4 px-3 d-flex align-items-center justify-content-center">
     <Col xs={12} md={{span: 3, offset: 1 }} className="text-center px-1 px-md-3" >
     <p >
-    Create the Scenes quickly then easily select a Scene
+    Create the Scenes quickly then easily select a Scene to work in
     </p>
     </Col>
     <Col xs={12} md={8}>
@@ -67,6 +66,7 @@ const Workspaces = () => {
     </p>
     </Col>
     </Row>
+    {/* three */}
     <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
     <Col xs={12} md={8}>
     <div className="text-center px-1 px-md-3">
@@ -84,18 +84,18 @@ const Workspaces = () => {
     </Col>
     </Row>
     <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
-    {/* three */}
+    {/* four */}
     <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
     <Col xs={12} md={{span: 3, offset: 1 }}
       className="text-center px-1 px-md-3" >
     <p >
     Collaborate in the Scene Workspaces by Department using Requirements, Workspaces 
-    and Finals Categories
+    and Finals categories
     </p>
     </Col>
     <Col xs={12} md={8}>
     <div className="text-center px-1 px-md-3">
-      <Image src={work7} alt="image" 
+      <Image src={work5} alt="image" 
       className={` ${styles.FeatureImage}`} />
     </div>
     </Col>
@@ -112,7 +112,7 @@ const Workspaces = () => {
     <Col xs={12} md={{span: 3, offset: 0 }}
       className="text-center px-1 px-md-3" >
     <p >
-    Use the Workspace Posts for precise reference of every Project area
+    Use each Department's Categoty's Posts to for precise work in the Scene
     </p>
     </Col>
     </Row>

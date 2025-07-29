@@ -36,7 +36,7 @@ const ShotStory = () => {
         </Button>
         </Col>
     </Row>
-    {/* story */}
+    {/* story 1 */}
     <Row className="mt-1 mt-md-3 px-3 pb-4 d-flex align-items-center justify-content-center">
     <Col xs={12} md={{span: 3, offset: 1 }} className="text-center" >
     <p >
@@ -52,7 +52,7 @@ const ShotStory = () => {
     </Col>
     </Row>
     <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
-    {/* shot 1*/}
+    {/* shot 2*/}
     <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
     <Col xs={12} md={8}>
     <div className="text-center">
@@ -63,13 +63,13 @@ const ShotStory = () => {
     <Col xs={12} md={{span: 3, offset: 0 }}
       className="text-center" >
     <p >
-    Create easy to read Shotlists on each Scene Page. Each Shot
-    can be quickly edited without a page refresh.
+    Create detailed easy to read Shotlists for each Scene. Use Drag and Drop
+    to quickly re-order them and their Order Number quickly.
     </p>
     </Col>
     </Row>
     <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
-    {/* shot 2  */}
+    {/* shot 3 */}
     <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
     <Col xs={12} md={{span: 3, offset: 1 }}
       className="text-center" >
@@ -85,7 +85,7 @@ const ShotStory = () => {
     </Col>
     </Row>
     <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
-    {/* shot 3 */}
+    {/* shot 4 */}
     <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
     <Col xs={12} md={8}>
     <div className="text-center">
@@ -102,7 +102,7 @@ const ShotStory = () => {
     </Row>
     <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
     {/* shot Create*/}
-    <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
+    {/* <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
     <Col xs={12} md={8}>
     <div className="text-center">
     <Image src={shot2} alt="image" 
@@ -110,21 +110,21 @@ const ShotStory = () => {
     </div>
     </Col>
     <Col xs={12} md={{span: 3, offset: 0 }}
-    className="text-center" >
+    className=" ext-center" >
     <p >
     Create each shot, including a camera and lighting sketch,
      for the Scene Shotlist in the Shotlist Create form
     </p>
     </Col>
-    </Row>
+    </Row> */}
     <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
     {/* story/shotlist  */}
     <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
     <Col xs={12} md={{span: 3, offset: 1 }}
       className="text-center" >
     <p >
-    View the Storyboard and the Shotlist Create Form 
-    side by side to facilitate the process
+    View the Storyboard and the Shotlist
+    side by side to facilitate adding Shots 
     </p>
     </Col>
     <Col xs={12} md={8}>
