@@ -9,6 +9,7 @@ import char1 from "../../assets/char1.png";
 import char2 from "../../assets/char2.png";
 import loca1 from "../../assets/loca1.png";
 import loca2 from "../../assets/loca2.png";
+import fullsize from "../../assets/fullsize.png";
 import btnStyles from "../../styles/Button.module.css";
 import Button from "react-bootstrap/Button";
 import { Image } from "react-bootstrap";
@@ -37,7 +38,10 @@ const CharsLocates = () => {
     <Row className="pb-4 d-flex align-items-center justify-content-center">
     <Col xs={12} md={{span: 3, offset: 1 }} className="text-center px-1 px-md-3" >
     <p >
-    Add the Character Details, Actor Details and Actor Callsheet Details
+    Add Character, Actor and Actor Callsheet Details.
+    </p>
+    <p >
+    View and add the Character's Moodboards quickly from the links on top.
     </p>
     </Col>
     <Col xs={12} md={8}>
@@ -60,8 +64,8 @@ const CharsLocates = () => {
     <Col xs={12} md={{span: 3, offset: 0 }}
     className="text-center px-1 px-md-3" >
     <p >
-    Add the Character Makeup Details and Image 
-    and up to seven Costume Details and Images
+    Add the Character Makeup Image and Details
+    and up to seven Costume Images and Details
     </p>
     </Col>
     </Row>
@@ -71,7 +75,10 @@ const CharsLocates = () => {
     <Col xs={12} md={{span: 3, offset: 1 }}
       className="text-center px-1 px-md-3" >
     <p >
-    Add Location details and addresses
+    Add Location description and shooting location addresses.
+    </p>
+    <p >
+    View and add the Location's Moodboards quickly from the links on top.
     </p>
     </Col>
     <Col xs={12} md={8}>
@@ -93,8 +100,23 @@ const CharsLocates = () => {
     <Col xs={12} md={{span: 3, offset: 0 }}
       className="text-center px-1 px-md-3" >
     <p >
-    Add Location Images 
+    Add up to 8 Location Images and Descriptions
     </p>
+    </Col>
+    </Row>
+    {/* full size */}
+    <Row className="px-3 pb-4 mt-4  d-flex align-items-center justify-content-center">
+    <Col xs={12} md={{span: 3, offset: 1 }}
+      className="text-center px-1 px-md-3" >
+    <p >
+    Click on images to view Fullsize
+    </p>
+    </Col>
+    <Col xs={12} md={8}>
+    <div className="text-center px-1 px-md-3">
+    <Image src={fullsize} alt="image" 
+      className={` ${styles.FeatureImage}`} />
+    </div>
     </Col>
     </Row>
     </div>
