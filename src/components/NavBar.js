@@ -59,17 +59,7 @@ const NavBar = () => {
     ref={refw3}
     to="workspaces"
     >
-    <i className="navicon fas fa-play"></i>Breakdowns / Workspaces
-    </NavLink>
-    </NavDropdown.Item>
-    <NavDropdown.Item >
-    <NavLink
-    className={` ${styles.NavLink} `}
-    activeClassName={styles.Active}
-    ref={refw1}
-    to="/moodboards"
-    >
-    <i className="navicon fas fa-play"></i>Moodboards / Indexshots
+    <i className="navicon fas fa-play"></i>Scenes - Breakdown / Workspace
     </NavLink>
     </NavDropdown.Item>
     <NavDropdown.Item >
@@ -79,7 +69,7 @@ const NavBar = () => {
     ref={refw4}
     to="shotstory" Indexshots
     >
-    <i className="navicon fas fa-play"></i>Storyboard / Shotlist / Script
+    <i className="navicon fas fa-play"></i>Scenes - Shotlist / Storyboard / Script
     </NavLink>
     </NavDropdown.Item>
     <NavDropdown.Item >
@@ -90,6 +80,16 @@ const NavBar = () => {
     to="charslocates"
     >
     <i className="navicon fas fa-play"></i>Characters / Locations 
+    </NavLink>
+    </NavDropdown.Item>
+    <NavDropdown.Item >
+    <NavLink
+    className={` ${styles.NavLink} `}
+    activeClassName={styles.Active}
+    ref={refw1}
+    to="/moodboards"
+    >
+    <i className="navicon fas fa-play"></i>Moodboards / Indexcards / Indexshots
     </NavLink>
     </NavDropdown.Item>
     </NavDropdown>

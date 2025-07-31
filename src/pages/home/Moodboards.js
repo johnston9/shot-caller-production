@@ -19,7 +19,7 @@ const Moodboards = () => {
     <div className={`mt-0 ${styles.BlueBody}`}>
     <div className={`${styles.Overview}`}>
     <h2 className={`py-2 ${styles.OverviewText} ${appStyles.playfair}
-     text-center`} >Moodboards and Indexshots</h2>
+     text-center`} >Moodboards / Indexcards / Indexshots</h2>
     </div>
     <Row className="mt-1 ml-2" >
         <Col xs={3}>

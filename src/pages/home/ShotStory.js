@@ -24,7 +24,7 @@ const ShotStory = () => {
     <div className={`mt-0 ${styles.BlueBody}`}>
     <div className={`mt-0 ${styles.Overview}`}>
     <h2 className={`py-2 ${styles.OverviewText} ${appStyles.playfair}
-     text-center`} >Storyboard, Shotlist and Script</h2>
+     text-center`} >Scenes - Storyboard / Shotlist / Script</h2>
     </div>
     <Row className="mt-1" >
         <Col xs={3}>
