@@ -20,7 +20,7 @@ const Schedules = () => {
       <div>
       <div className={`mt-0 ${styles.Overview}`}>
       <h2 className={`py-2 ${styles.OverviewText} ${appStyles.playfair}
-       text-center`} >Schedules and Stripboards</h2>
+       text-center`} >Schedules / Stripboards</h2>
       </div>
       <Row className="mt-1 ml-2" >
           <Col xs={3}>
@@ -36,10 +36,9 @@ const Schedules = () => {
       <Row className="mt-1 mt-md-3 pb-4 px-3 d-flex align-items-center justify-content-center">
       <Col xs={12} md={{span: 3, offset: 1 }} className="text-center px-1 px-md-3" >
       <p >
-      Create easy to read Stripboards in minutes</p>
+      Create Shooting Schedules with easy to read Stripboards in minutes</p>
       <p >
-      Edit them by the edit button 
-      and re-order then in a flash by the re-order button.</p>
+      Re-order then in a flash by Drag and Drop</p>
       </Col>
       <Col xs={12} md={8}>
       <div className="text-center px-1 px-md-3">
@@ -60,10 +59,9 @@ const Schedules = () => {
       <Col xs={12} md={{span: 3, offset: 0 }}
       className="text-center px-1 px-md-3" >
       <p >
-      This is done by selecting scenes from the Act or 
-      Location menus to autogenerate Stripboard Scenes from
-      the Scene Breakdown, Character and BG Info and
-      then adding the Shooting Info
+      This is done by first selecting a Scene by Act or 
+      Location to autofill the Stripboard Scene Breakdown Info and then by
+      adding the Shooting Info
       </p>
       </Col>
       </Row>
@@ -72,7 +70,7 @@ const Schedules = () => {
       <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
       <Col xs={12} md={{span: 3, offset: 1 }}
         className="text-center px-1 px-md-3" >
-      <p> Open the Scene Info box for extra Info 
+      <p> Click the Info box for extra Info also pre-filled on selection
       </p>
       </Col>
       <Col xs={12} md={8}>
@@ -94,7 +92,7 @@ const Schedules = () => {
       <Col xs={12} md={{span: 3, offset: 0 }}
         className="text-center px-1 px-md-3" >
       <p >
-      Open the Cast box for Cast, BG and Costumes Info
+      Click the Cast box for Pre-filled Cast, BG and Costumes Info
       </p>
       </Col>
       </Row>

@@ -49,12 +49,12 @@ const NavBar = () => {
     }
     ref={refw}
     id="nav-dropdown1"
-    // activeClassName={styles.Active}
+    activeClassName={styles.Active}
     className={`pt-1 ${styles.NavLink} `}
     >
     <NavDropdown.Item >
     <NavLink
-    className={`mt-2 ${styles.NavLink} `}
+    className={`mt-2 ${styles.DropLink} `}
     activeClassName={styles.Active}
     ref={refw3}
     to="workspaces"
@@ -64,7 +64,7 @@ const NavBar = () => {
     </NavDropdown.Item>
     <NavDropdown.Item >
     <NavLink
-    className={`mt-2 ${styles.NavLink} `}
+    className={`mt-2 ${styles.DropLink} `}
     activeClassName={styles.Active}
     ref={refw4}
     to="shotstory" Indexshots
@@ -74,7 +74,7 @@ const NavBar = () => {
     </NavDropdown.Item>
     <NavDropdown.Item >
     <NavLink
-    className={`mt-2 ${styles.NavLink} `}
+    className={`mt-2 ${styles.DropLink} `}
     activeClassName={styles.Active}
     ref={refw2}
     to="charslocates"
@@ -84,7 +84,7 @@ const NavBar = () => {
     </NavDropdown.Item>
     <NavDropdown.Item >
     <NavLink
-    className={` ${styles.NavLink} `}
+    className={` ${styles.DropLink} `}
     activeClassName={styles.Active}
     ref={refw1}
     to="/moodboards"
@@ -107,22 +107,22 @@ const NavBar = () => {
     }
     ref={reff}
     id="nav-dropdown2"
-    // activeClassName={styles.Active}
+    activeClassName={styles.Active}
     className={`pt-1 ${styles.NavLink} `}
     >
     <NavDropdown.Item >
     <NavLink
-    className={`mt-2 ${styles.NavLink} `}
+    className={`mt-2 ${styles.DropLink} `}
     activeClassName={styles.Active}
     ref={reff2}
     to="schedule"
     >
-    <i className="navicon fas fa-play"></i>Schedule and Stripboard
+    <i className="navicon fas fa-play"></i>Schedules / Stripboards
     </NavLink>
     </NavDropdown.Item>
     <NavDropdown.Item >
     <NavLink
-    className={`mt-2 ${styles.NavLink} `}
+    className={`mt-2 ${styles.DropLink} `}
     activeClassName={styles.Active}
     ref={reff3}
     to="callsheets"
@@ -137,17 +137,17 @@ const NavBar = () => {
     ref={reff1}
     to="/castcrew"
     >
-    <i className="navicon fas fa-play"></i>Cast and Crew
+    <i className="navicon fas fa-play"></i>Cast / Crew
     </NavLink>
     </NavDropdown.Item>
     <NavDropdown.Item >
     <NavLink
-    className={`mt-2 ${styles.NavLink} `}
+    className={`mt-2 ${styles.DropLink} `}
     activeClassName={styles.Active}
     ref={reff4}
     to="mobile"
     >
-    <i className="navicon fas fa-play"></i>Mobile and Quick Find 
+    <i className="navicon fas fa-play"></i>Mobile / Quick Find Posts
     </NavLink>
     </NavDropdown.Item>
     </NavDropdown>
