@@ -47,8 +47,11 @@ const Callsheets = () => {
         className="text-center px-1 px-md-3" >
       <p >
       Create Callsheets for each Shoot Day. The top section containing 
-      Company info, Times, Automatic live weather info
-      and a Personalised Calltime for each individual user.
+      Company info, Times and Weather info
+      and a Personalised Calltime for each individual user
+      </p>
+      <p>
+      Use the Send Button to send the callsheet to all Cast and Crew with one click
       </p>
       </Col>
       <Col xs={12} md={8}>
@@ -71,19 +74,18 @@ const Callsheets = () => {
         className="text-center px-1 px-md-3" >
       <p >
       View the Callsheet on mobile with the top section displaying 
-      all desktop info including the Personalised Calltime and with 
-      links below to open all the other sections below it.
+      all info as the desktop view and with 
+      links below to all the other sections
       </p>
       </Col>
       </Row>
       <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
-      {/* Locations  */}
+      {/* 3 Locations  */}
       <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
       <Col xs={12} md={{span: 3, offset: 1 }}
         className="text-center px-1 px-md-3" >
       <p >
-      The Locations section show all Locations 
-      each with a Google Maps box that opens underneath it.
+      The Locations section
       </p>
       </Col>
       <Col xs={12} md={8}>
@@ -105,8 +107,7 @@ const Callsheets = () => {
       <Col xs={12} md={{span: 3, offset: 0 }}
         className="text-center px-1 px-md-3" >
       <p >
-      View the Locations section on Mobile, as with the desktop 
-      each Location with a Google Maps box that opens underneath it.
+      Click the the Locations link on Mobile to view
       </p>
       </Col>
       </Row>
@@ -116,8 +117,11 @@ const Callsheets = () => {
       <Col xs={12} md={{span: 3, offset: 1 }}
         className="text-center px-1 px-md-3" >
       <p >
-      View the Schedule section beneath which is added 
+      The Schedule section which is added 
       automatically from the Schedule page
+      </p>
+      <p >
+      Clicking the Cast and Info opens those sections
       </p>
       </Col>
       <Col xs={12} md={8}>
@@ -139,8 +143,8 @@ const Callsheets = () => {
       <Col xs={12} md={{span: 3, offset: 0 }}
         className="text-center px-1 px-md-3" >
       <p >
-      View the Schedule section on Mobile with extra info 
-      opening in a seperate bos beneath 
+      View the Schedule section on Mobile with the Cast and Info boxes
+      opening beneath 
       </p>
       </Col>
       </Row>
