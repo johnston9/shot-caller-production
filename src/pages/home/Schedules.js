@@ -70,7 +70,7 @@ const Schedules = () => {
       <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
       <Col xs={12} md={{span: 3, offset: 1 }}
         className="text-center px-1 px-md-3" >
-      <p> Click the Info link for extra Info also pre-filled on selection
+      <p> Click the Info link to view extra Info also pre-filled on selection
       </p>
       </Col>
       <Col xs={12} md={8}>
@@ -92,7 +92,7 @@ const Schedules = () => {
       <Col xs={12} md={{span: 3, offset: 0 }}
         className="text-center px-1 px-md-3" >
       <p >
-      Click the Cast link for Pre-filled Cast, BG and Costumes Info
+      Click the Cast link to view Pre-filled Cast, BG and Costumes Info
       </p>
       </Col>
       </Row>

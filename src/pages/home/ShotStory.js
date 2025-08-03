@@ -36,6 +36,8 @@ const ShotStory = () => {
         </Button>
         </Col>
     </Row>
+    {/* desktop */}
+    <div className="d-none d-md-block">
     {/* story 1 */}
     <Row className="mt-1 mt-md-3 px-3 pb-4 d-flex align-items-center justify-content-center">
     <Col xs={12} md={{span: 3, offset: 1 }} className="text-center" >
@@ -74,7 +76,7 @@ const ShotStory = () => {
     <Col xs={12} md={{span: 3, offset: 1 }}
       className="text-center" >
     <p >
-    Expand each shot to view Extra Info
+    Click the Info link to view Extra Info
     </p>
     </Col>
     <Col xs={12} md={8}>
@@ -96,27 +98,10 @@ const ShotStory = () => {
     <Col xs={12} md={{span: 3, offset: 0 }}
       className="text-center" >
     <p >
-    Expand each shot to view the Shot Sketch
+    Click the Image link to view the Shot Sketch
     </p>
     </Col>
     </Row>
-    <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
-    {/* shot Create*/}
-    {/* <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
-    <Col xs={12} md={8}>
-    <div className="text-center">
-    <Image src={shot2} alt="image" 
-      className={` ${styles.FeatureImage}`} />
-    </div>
-    </Col>
-    <Col xs={12} md={{span: 3, offset: 0 }}
-    className=" ext-center" >
-    <p >
-    Create each shot, including a camera and lighting sketch,
-     for the Scene Shotlist in the Shotlist Create form
-    </p>
-    </Col>
-    </Row> */}
     <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
     {/* story/shotlist  */}
     <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
@@ -124,7 +109,7 @@ const ShotStory = () => {
       className="text-center" >
     <p >
     View the Storyboard and the Shotlist
-    side by side to facilitate adding Shots 
+    side by side to facilitate Shotlist creation
     </p>
     </Col>
     <Col xs={12} md={8}>
@@ -150,10 +135,112 @@ const ShotStory = () => {
     changes details and notes.
     </p>
     <p>
-      The whole Script can be added to the Scenes page.
+      The whole Script is added on the Scenes page.
     </p>
     </Col>
     </Row>
+    </div>
+    {/* mobile */}
+    <div className="d-block d-md-none">
+    {/* story 1 */}
+    <Row className="mt-3 px-3 d-flex align-items-center justify-content-center">
+    <Col xs={12} md={8}>
+    <div className="text-center px-1 px-md-3">
+    <Image src={story1} alt="image" 
+      className={` ${styles.FeatureImage}`} />
+    </div>
+    </Col>
+    <Col xs={12} md={{span: 3, offset: 1 }} className="text-center mt-3 px-3" >
+    <p >
+    Create the Scene Storyboard in your prefered method then upload it 
+    to the Scene Page
+    </p>
+    </Col>
+    </Row>
+    <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
+    {/* shot 2*/}
+    <Row className="px-3 mt-3 d-flex align-items-center justify-content-center">
+    <Col xs={12} md={8}>
+    <div className="text-center px-1">
+    <Image src={shot7} alt="image" 
+      className={` ${styles.FeatureImage}`} />
+    </div>
+    </Col>
+    <Col xs={12} md={{span: 3, offset: 0 }}
+      className="text-center mt-3 px-3" >
+    <p >
+    Create detailed easy to read Shotlists for each Scene. Use Drag and Drop
+    to quickly re-order them and their Order Number quickly.
+    </p>
+    </Col>
+    </Row>
+    <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
+    {/* shot 3 */}
+    <Row className="px-3 mt-3 d-flex align-items-center justify-content-center">
+    <Col xs={12} md={8}>
+    <div className="text-center px-1">
+    <Image src={shot5} alt="image" 
+      className={` ${styles.FeatureImage}`} />
+    </div>
+    </Col>
+    <Col xs={12} className="text-center mt-3 px-3" >
+    <p >
+    Click the Info link to view Extra Info
+    </p>
+    </Col>
+    </Row>
+    <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
+    {/* shot 4 */}
+    <Row className="px-3 mt-3 d-flex align-items-center justify-content-center">
+    <Col xs={12} md={8}>
+    <div className="text-center px-1">
+    <Image src={sketchshot} alt="image" 
+      className={` ${styles.FeatureImage}`} />
+    </div>
+    </Col>
+    <Col xs={12} md={{span: 3, offset: 0 }} className="text-center px-3 mt-3" >
+    <p >
+    Click the Image link to view the Shot Sketch
+    </p>
+    </Col>
+    </Row>
+    <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
+    {/* story/shotlist  */}
+    <Row className="px-3 mt-3 d-flex align-items-center justify-content-center">
+    <Col xs={12} md={8}>
+    <div className="text-center px-1">
+    <Image src={shot1} alt="image" 
+      className={` ${styles.FeatureImage}`} />
+    </div>
+    </Col>
+    <Col xs={12} className="text-center px-3 mt-3" >
+    <p >
+    View the Storyboard and the Shotlist
+    side by side to facilitate Shotlist creation
+    </p>
+    </Col>
+    </Row>
+    <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
+    {/* scipt */} 
+    <Row className="px-3 mt-4 pb-4 d-flex align-items-center justify-content-center">
+    <Col xs={12} md={8}>
+    <div className="text-center px-1">
+    <Image src={break2} alt="image" 
+      className={` ${styles.FeatureImage}`} />
+    </div>
+    </Col>
+    <Col xs={12} md={{span: 3, offset: 0 }}
+      className="text-center px-1 mt-3" >
+    <p >
+    Add the Scene script to the Scene page along with
+    changes details and notes.
+    </p>
+    <p>
+      The whole Script is added on the Scenes page.
+    </p>
+    </Col>
+    </Row>
+    </div>
     </div>
   )
 }
