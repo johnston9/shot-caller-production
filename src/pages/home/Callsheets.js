@@ -43,9 +43,9 @@ const Callsheets = () => {
       </Row>
       {/* 1  */}
       <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
-      <Col xs={12} md={{span: 3, offset: 1 }}
+      <Col xs={{order: 12, span: 12}} md={{order: 1, span: 3, offset: 1 }}
         className="text-center px-1 px-md-3" >
-      <p >
+      <p className="mt-2">
       Create Callsheets for each Shoot Day. The top section containing 
       Company info, Times and Weather info
       and a Personalised Calltime for each individual user
@@ -54,7 +54,7 @@ const Callsheets = () => {
       Use the Send Button to send the callsheet to all Cast and Crew with one click
       </p>
       </Col>
-      <Col xs={12} md={8}>
+      <Col xs={{order: 1, span: 12}} md={{order: 12, span: 8}}>
       <div className="text-center px-1 px-md-3">
       <Image src={top2} alt="image" 
         className={` ${styles.FeatureImage}`} />
@@ -71,7 +71,7 @@ const Callsheets = () => {
       </div>
       </Col>
       <Col xs={12} md={{span: 3, offset: 0 }}
-        className="text-center px-1 px-md-3" >
+        className="text-center px-1 px-md-3 mt-2" >
       <p >
       View the Callsheet on mobile with the top section displaying 
       all info as the desktop view and with 
@@ -107,7 +107,7 @@ const Callsheets = () => {
       <Col xs={12} md={{span: 3, offset: 0 }}
         className="text-center px-1 px-md-3" >
       <p >
-      Click the the Locations link on Mobile to view
+      View the Locations section on Mobile by clicking on the Locations link
       </p>
       </Col>
       </Row>
@@ -121,7 +121,7 @@ const Callsheets = () => {
       automatically from the Schedule page
       </p>
       <p >
-      Clicking the Cast and Info opens those sections
+      View the Cast and Info by clicking on their links
       </p>
       </Col>
       <Col xs={12} md={8}>
@@ -141,10 +141,12 @@ const Callsheets = () => {
       </div>
       </Col>
       <Col xs={12} md={{span: 3, offset: 0 }}
-        className="text-center px-1 px-md-3" >
+        className="text-center px-1 px-md-3 mt-2" >
       <p >
-      View the Schedule section on Mobile with the Cast and Info boxes
-      opening beneath 
+      View the Schedule section on Mobile by clicking on the Schedule link
+      </p>
+      <p >
+      The Cast and Info open by clicking on their links
       </p>
       </Col>
       </Row>
@@ -154,10 +156,10 @@ const Callsheets = () => {
       <Col xs={12} md={{span: 3, offset: 1 }}
         className="text-center px-1 px-md-3" >
       <p >
-      View the Advanced Schedule section which is added 
-      automatically from the Schedule page. Underneath view 
-      the Walkies Channels
+      The Advanced Schedule section which is added 
+      automatically from the Schedule page
       </p>
+      <p className="mt-5">The Walkies Channels section below it</p>
       </Col>
       <Col xs={12} md={8}>
       <div className="text-center px-1 px-md-3">
