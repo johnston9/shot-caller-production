@@ -17,7 +17,7 @@ const Budgeting = () => {
     const history = useHistory();
   
     return (
-      <div>
+      <div className={`mt-0 ${styles.BlueBody}`}>
       <div className={`mt-0 ${styles.Overview}`}>
       <h2 className={`py-2 ${styles.OverviewText} ${appStyles.playfair}
        text-center`} >Budgeting</h2>

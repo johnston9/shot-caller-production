@@ -26,7 +26,7 @@ const Callsheets = () => {
     const history = useHistory();
   
     return (
-      <div>
+      <div className={`mt-0 ${styles.BlueBody}`}>
       <div className={`mt-0 ${styles.Overview}`}>
       <h2 className={`py-2 ${styles.OverviewText} ${appStyles.playfair}
        text-center`} >Callsheets</h2>
@@ -43,7 +43,7 @@ const Callsheets = () => {
       </Row>
       {/* 1  */}
       <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
-      <Col xs={{order: 12, span: 12}} md={{order: 1, span: 3, offset: 1 }}
+      <Col xs={12} md={{span: 3, offset: 1 }}
         className="text-center px-1 px-md-3" >
       <p className="mt-2">
       Create Callsheets for each Shoot Day. The top section containing 
@@ -54,7 +54,7 @@ const Callsheets = () => {
       Use the Send Button to send the callsheet to all Cast and Crew with one click
       </p>
       </Col>
-      <Col xs={{order: 1, span: 12}} md={{order: 12, span: 8}}>
+      <Col xs={12} md={8}>
       <div className="text-center px-1 px-md-3">
       <Image src={top2} alt="image" 
         className={` ${styles.FeatureImage}`} />
@@ -180,7 +180,7 @@ const Callsheets = () => {
       <Col xs={12} md={{span: 3, offset: 0 }}
         className="text-center px-1 px-md-3" >
       <p >
-      View the Cast and BG / Standins</p>
+      The Cast and BG Calltimes section</p>
       </Col>
       </Row>
       <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
