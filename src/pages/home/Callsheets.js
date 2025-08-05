@@ -12,6 +12,7 @@ import callocdesk from "../../assets/callocdesk.png";
 import callocmo from "../../assets/callocmo.png";
 import shedcast5 from "../../assets/shedcast5.png";
 import calshed2 from "../../assets/calshed2.png";
+import crewaddcal from "../../assets/crewaddcal.png";
 import calshedmo2 from "../../assets/calshedmo2.png";
 import adshed from "../../assets/adshed.png";
 import caltal from "../../assets/caltal.png";
@@ -189,9 +190,7 @@ const Callsheets = () => {
       <Col xs={12} md={{span: 3, offset: 1 }}
         className="text-center px-1 px-md-3" >
       <p >
-      View the Crew Calls by Department. Easily add Calltime in the Create Callsheet form 
-      as Crew added to the Crew Info page will at automatically display 
-      with an imput box for their Calltime.
+      The the Crew Call Times by Department
       </p>
       </Col>
       <Col xs={12} md={8}>
@@ -213,19 +212,17 @@ const Callsheets = () => {
       <Col xs={12} md={{span: 3, offset: 0 }}
         className="text-center px-1 px-md-3" >
       <p >
-      View Department, Transport and Important notes</p>
+      The Department, Transport and Important notes section</p>
       </Col>
       </Row>
+      <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
       {/* cast add */}
       <Row className="mt-1 mt-md-3 pb-4 px-3 d-flex align-items-center justify-content-center">
       <Col xs={12} md={{span: 3, offset: 1 }} className="text-center px-1 px-md-1" >
       <p >
-      When creating the Callsheet the Add Cast and Add BG forms allow 
-      the Cast and BG calls to be quickly added.
-      The Select Role feature allows Cast members to be quickly selected
-      from a character dropdown. Once selected their details including their Makeup
-      and Commute times will display on top and their address will be automatically
-      prefilled. The Cast Added box displays all previously added characters. 
+      Add the Add Cast quickly to the Callsheet by selecting a Role
+      to pre-fill their details and display their Makeup
+      and Commute times on top while all previously added characters display below 
       </p>
       </Col>
       <Col xs={12} md={8}>
@@ -247,28 +244,43 @@ const Callsheets = () => {
       <Col xs={12} md={{span: 3, offset: 0 }}
       className="text-center px-1 px-md-3" >
       <p >
-      View the Add Cast and Add BG / Stand-Ins forms beside the Schedule for 
+      View the Add Cast and Add BG forms beside the Schedule for 
       maximum efficiency. Open each Scene's "Cast" box to find 
       which cast members and BG to add.
       </p>
       </Col>
       </Row>
-      {/* emails */}
+      <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
+      {/* add crew */}
       <Row className="mt-1 mt-md-3 pb-4 px-3 d-flex align-items-center justify-content-center">
       <Col xs={12} md={{span: 3, offset: 1 }} className="text-center px-1 px-md-1" >
       <p >
-       Once a Callsheet is complete simply click the Send button to Send
-       a group email to all Crew members and the relevant Cast members</p>
+        Add all the Crew Call Times in a second by using the Set Unit Call button which
+        sets all times to it's value</p>
        <p>
-       This email automatically includes a link to the Callsheet url and
-       Shootday and Company info.
-      </p>
+       Then set any different Calls individually by Department pre-filled from the Crew Info page
+       </p>
       </Col>
+      <Col xs={12} md={8}>
+      <div className="text-center px-1 px-md-3">
+      <Image src={crewaddcal} alt="image" 
+        className={` ${styles.FeatureImage}`} />
+      </div>
+      </Col>
+      </Row>
+      <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
+      {/* emails */}
+      <Row className="mt-1 mt-md-3 pb-4 px-3 d-flex align-items-center justify-content-center">
       <Col xs={12} md={8}>
       <div className="text-center px-1 px-md-3">
       <Image src={email4} alt="image" 
         className={` ${styles.FeatureImage}`} />
       </div>
+      </Col>
+      <Col xs={12} md={{span: 3, offset: 0 }} className="text-center px-1 px-md-1" >
+      <p >
+       Use the Send button to send the Callsheet link
+       to all Crew members and the relevant Cast members</p>
       </Col>
       </Row>
       <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
