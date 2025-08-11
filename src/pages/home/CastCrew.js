@@ -33,6 +33,8 @@ const CastCrew = () => {
         </Button>
         </Col>
     </Row>
+    {/* desktop */}
+    <div className="d-none d-md-block">
     {/* cast */}
     <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
     <Col xs={12} md={8}>
@@ -126,6 +128,100 @@ const CastCrew = () => {
     </Col>
     </Row>
     <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
+    </div>
+    {/* mobile */}
+    <div className="d-block d-md-none">
+    {/* cast */}
+    <Row className="mt-3 px-3 d-flex align-items-center justify-content-center">
+    <Col xs={12} md={8}>
+    <div className="text-center px-1 px-md-3">
+    <Image src={calact} alt="image" 
+      className={` ${styles.FeatureImage}`} />
+    </div>
+    </Col>
+    <Col xs={12} className="text-center px-3 mt-3" >
+    <p >
+    Add Cast members to their Character page allowing their details
+       to be pre-filled on selection in the Callsheet Cast Call Times section
+    </p>
+    <p >
+    This also enables Callsheets to be automatically sent to their email
+    </p>
+    </Col>
+    </Row>
+    <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
+    {/* crew one */}
+    <Row className="mt-3 px-3 d-flex align-items-center justify-content-center">
+      <Col xs={12} md={8}>
+      <div className="text-center px-1 px-md-3">
+      <Image src={crewaddview} alt="image" 
+        className={` ${styles.FeatureImage}`} />
+      </div>
+      </Col>
+      <Col xs={12} className="text-center px-3 mt-3" >
+      <p >
+       The Crew Info conprised two sections the Callsheet Main Crew 
+       and the Non-Callsheet Extra Crew 
+       </p>
+      <p >
+       Add the Callsheet Main Crew to their Department allowing their details
+       to be pre-filled on the Callsheet Crew Call Times section
+       </p>
+       <p >
+      This also enables Callsheets to be automatically sent to their email
+      </p>
+      </Col>
+    </Row>
+    <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
+    {/* crew two */}
+    <Row className="mt-3 px-3 align-items-center justify-content-center">
+    <Col xs={12} md={8}>
+    <div className="text-center px-1 px-md-3">
+    <Image src={crewaddview2} alt="image" 
+      className={` ${styles.FeatureImage}`} />
+    </div>
+    </Col>
+    <Col xs={12} className="text-center px-3 mt-3" >
+    <p>
+      Add the Non-Callsheet Extra Crew to their Department in a section
+      below the Main Crew
+    </p>
+    </Col>
+    </Row>
+    {/* crew mo one */}
+    <Row className="mt-3 px-3 d-flex align-items-center justify-content-center">
+      <Col xs={12} md={8}>
+      <div className="text-center px-1 px-md-3">
+      <Image src={crewmoview} alt="image" 
+        className={` ${styles.FeatureImage}`} />
+      </div>
+      </Col>
+      <Col xs={12} className="text-center px-3 mt-3" >
+      <p >
+       Add and View both Main and Extra Crew on Mobile
+       </p>
+      <p >
+       The mobile View Main Crew page
+       </p>
+      </Col>
+    </Row>
+    <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
+    {/* crew mo two */}
+    <Row className="mt-3 px-3 d-flex align-items-center justify-content-center">
+    <Col xs={12} md={8}>
+    <div className="text-center px-1 px-md-3">
+    <Image src={crewmoadd} alt="image" 
+      className={` ${styles.FeatureImage}`} />
+    </div>
+    </Col>
+    <Col xs={12} className="text-center px-3 mt-3" >
+      <p >
+       The mobile Add Main Crew page
+    </p>
+    </Col>
+    </Row>
+    <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
+    </div>
     </div>
   )
 }

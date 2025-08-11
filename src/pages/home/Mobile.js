@@ -5,10 +5,10 @@ import styles from "../../styles/Home.module.css";
 import appStyles from "../../App.module.css";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import promo from "../../assets/promo.png";
-import find from "../../assets/find.png";
-import charsmo from "../../assets/charsmo.png";
-import scenemo from "../../assets/scenemo.png";
+import moscenes from "../../assets/moscenes.png";
+import moscene from "../../assets/moscene.png";
+import moposts from "../../assets/moposts.png";
+import mopost2 from "../../assets/mopost2.png";
 import btnStyles from "../../styles/Button.module.css";
 import Button from "react-bootstrap/Button";
 import { Image } from "react-bootstrap";
@@ -32,76 +32,62 @@ const Mobile = () => {
           </Button>
           </Col>
       </Row>
-      {/* one */}
-      <Row className="mt-1 mt-md-3 pb-4 px-3 d-flex align-items-center justify-content-center">
-      <Col xs={12} md={{span: 3, offset: 1 }} className="text-center px-1 px-md-3" >
+      <Row>
+      <Col className="text-center" >
       <p >
-      The entire app is totally compatable with mobile in terms 
+      All features apart from the Budget are totally compatable with mobile in terms 
       of functionality and view.
       </p>
-      <p>
-      Scene Workspace in mobile view.
-      </p>
-      </Col>
-      <Col xs={12} md={8}>
-      <div className="text-center px-1 px-md-3">
-      <Image src={scenemo} alt="image" 
-        className={` ${styles.FeatureImage}`} />
-      </div>
       </Col>
       </Row>
-      <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
-      {/* two */}
-      <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
-      <Col xs={12} md={8}>
+      {/* one Scenes */}
+      <Row className="px-3 pb-md-4 mt-3 d-flex align-items-center justify-content-center">
+      <Col xs={12} md={6}>
       <div className="text-center px-1 px-md-3">
-      <Image src={charsmo} alt="image" 
+      <Image src={moscenes} alt="image" 
         className={` ${styles.FeatureImage}`} />
       </div>
+      <p className="mt-3 text-center">
+      Scene page in mobile view.
+      </p>
       </Col>
-      <Col xs={12} md={{span: 3, offset: 0 }}
-      className="text-center px-1 px-md-3" >
-      <p>
-      Scene Characters and BG in mobile view.
+      <Col xs={12} md={6}>
+      <div className="text-center px-1 px-md-3">
+      <Image src={moscene} alt="image" 
+        className={` ${styles.FeatureImage}`} />
+      </div>
+      <p className="mt-3 text-center">
+      Scene page and Workspace in mobile view.
       </p>
       </Col>
       </Row>
       <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
-      {/* three  */}
-      <Row className="mt-1 mt-md-3 pb-4 px-3 d-flex align-items-center justify-content-center">
-      <Col xs={12} md={{span: 3, offset: 1 }} className="text-center px-1 px-md-3" >
-      <p>
-      Production Department crew info in mobile view.
-      </p>
-      </Col>
-      <Col xs={12} md={8}>
+      {/* two Posts */}
+      <Row className="px-3 pb-md-4 mt-3 d-flex align-items-center justify-content-center">
+      <Col xs={12} md={6}>
       <div className="text-center px-1 px-md-3">
-      <Image src={promo} alt="image" 
+      <Image src={moposts} alt="image" 
         className={` ${styles.FeatureImage}`} />
       </div>
+      <p className="mt-3 text-center">
+      A Department Category's Posts page in mobile view.
+      </p>
+      </Col>
+      <Col xs={12} md={6}>
+      <div className="text-center px-1 px-md-3">
+      <Image src={mopost2} alt="image" 
+        className={` ${styles.FeatureImage}`} />
+      </div>
+      <p className="mt-3 text-center">
+      A Department Category Post in mobile view.
+      </p>
       </Col>
       </Row>
+      <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
+
       <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
       {/* four */}
-      <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
-      <Col xs={12} md={8}>
-      <div className="text-center px-1 px-md-3">
-      <Image src={find} alt="image" 
-        className={` ${styles.FeatureImage}`} />
-      </div>
-      </Col>
-      <Col xs={12} md={{span: 3, offset: 0 }}
-      className="text-center px-1 px-md-3" >
-      <p>
-      Find Workspace post quickly on the Quickfind page
-      by Department, liked or feed.
-      </p>
-      <p>
-      The Requirement posts for each departemnt are brought
-      in order of Scene number.
-      </p>
-      </Col>
-      </Row>
+
       </div>
     )
   }
