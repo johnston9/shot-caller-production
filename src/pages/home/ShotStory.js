@@ -103,7 +103,7 @@ const ShotStory = () => {
     </Col>
     </Row>
     <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
-    {/* story/shotlist  */}
+    {/* story/shotlist 5 */}
     <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
     <Col xs={12} md={{span: 3, offset: 1 }}
       className="text-center" >
@@ -120,7 +120,7 @@ const ShotStory = () => {
     </Col>
     </Row>
     <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
-    {/* scipt */} 
+    {/* scipt 6 */} 
     <Row className="px-3 mt-4 pb-4 d-flex align-items-center justify-content-center">
     <Col xs={12} md={8}>
     <div className="text-center px-1 px-md-3">

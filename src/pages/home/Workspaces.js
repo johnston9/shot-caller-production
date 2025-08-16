@@ -152,6 +152,45 @@ const Workspaces = () => {
     </div>
     </Col>
     </Row>
+    <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
+    {/* 8 */}
+    <Row className="mt-1 mt-md-3 pb-4 px-3 d-flex align-items-center justify-content-center">
+    <Col xs={12} md={8} className="text-center px-1 px-md-3" >
+    <div className="text-center px-1 px-md-3 mb-3">
+    <Image src={work7} alt="image" 
+      className={` ${styles.FeatureImage}`} />
+    </div>
+    </Col>
+    <Col xs={12} md={{span: 3, offset: 0 }}
+    className="text-center px-1 px-md-3" >
+      <p >
+    The Find Post page facilitates collaboration in the Scenes Workspace and is designed
+    to make sure you don't miss any Posts relevent to yor work
+    </p>
+    <p>
+    Use it to find Posts by Department, the Requirement Posts being returned in Scene order
+    </p>
+    </Col>
+    </Row>
+    <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
+    {/* 9 */}
+    <Row className="mt-1 mt-md-3 pb-4 px-3 d-flex align-items-center justify-content-center">
+    <Col xs={12} md={{span: 3, offset: 1 }} className="text-center px-1 px-md-3" >
+    <p >
+    Here you can also view your Feed, set up by simply folllowing users on the profiles page,
+    so you can be up to date with whatever production Posts you need
+    </p>
+    <p >
+    You can also view all your Liked and Starred Posts here too
+    </p>
+    </Col>
+    <Col xs={12} md={8}>
+    <div className="text-center px-1 px-md-3">
+    <Image src={break23} alt="image" 
+      className={` ${styles.FeatureImage}`} />
+    </div>
+    </Col>
+    </Row>
     </div>
     {/* mobile */}
     <div className="d-block d-md-none">

@@ -1,5 +1,4 @@
 ## Features Testing
-Note: User Stories aspects of some Features are covered in the User Stories Testing section. [User Stories Testing](#User-stories-testing)
 
 ### Budgeting Software
 Description: View and create Budgets for the "All in One Platform".<br>

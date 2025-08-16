@@ -237,3 +237,29 @@ hr.grey100 {
 .offwhite {
 	color: #F5F5F5;
 }
+
+@media screen and (max-width: 600px) {
+  p {
+    font-size: .75rem;
+  }
+
+  h5 {
+    font-size: 1rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 1rem;
+  }
+}
