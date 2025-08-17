@@ -327,7 +327,7 @@ const Workspaces = () => {
     </div>
     </Col>
     <Col xs={12} md={{span: 3, offset: 1 }}
-      className="text-center px-3" >
+      className="text-center px-3 mt-3" >
     <p >
     The Find Post page facilitates collaboration in the Scenes Workspace and is designed
     to make sure relevant Posts are easily found
@@ -348,7 +348,7 @@ const Workspaces = () => {
     </div>
     </Col>
     <Col xs={12} md={{span: 3, offset: 1 }}
-      className="text-center px-3" >
+      className="text-center px-3 mt-3" >
     <p>
     Use the Departments here to return all a Department's Requirements, Workspace or Finals
     Posts
@@ -360,7 +360,7 @@ const Workspaces = () => {
     </Row>
     </div>
     <Row>
-    <Col className="text-center" >
+    <Col className="text-center mt-4" >
     <p >
     Find the mobile view images in the Mobile View page
     </p>
