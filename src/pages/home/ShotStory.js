@@ -65,8 +65,11 @@ const ShotStory = () => {
     <Col xs={12} md={{span: 3, offset: 0 }}
       className="text-center" >
     <p >
-    Create detailed easy to read Shotlists for each Scene. Use Drag and Drop
-    to quickly re-order them and their Order Number quickly.
+    Create detailed easy to read Shotlists for each Scene
+    </p>
+    <p >
+    Use Drag and Drop to re-order them quickly and automatically change
+    all Order numbers
     </p>
     </Col>
     </Row>
@@ -169,8 +172,11 @@ const ShotStory = () => {
     <Col xs={12} md={{span: 3, offset: 0 }}
       className="text-center mt-3 px-3" >
     <p >
-    Create detailed easy to read Shotlists for each Scene. Use Drag and Drop
-    to quickly re-order them and their Order Number quickly.
+    Create detailed easy to read Shotlists for each Scene
+    </p>
+    <p >
+    Use Drag and Drop to re-order them quickly and automatically change
+    all Order numbers
     </p>
     </Col>
     </Row>
@@ -241,6 +247,13 @@ const ShotStory = () => {
     </Col>
     </Row>
     </div>
+    <Row>
+    <Col className="text-center" >
+    <p >
+    Find the mobile view images in the Mobile View page
+    </p>
+    </Col>
+    </Row>
     </div>
   )
 }

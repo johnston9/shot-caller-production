@@ -43,7 +43,7 @@ const Mobile = () => {
       All features apart from the Budget are totally compatable in Mobile in terms 
       of functionality and view.
       </p>
-      <p>Some of the Info Pages contain images of these but here are some more
+      <p>Some of the Info Pages contain Mobile View images but here are some more
       examples.
       </p>
       <h4 className={`py-2 ${styles.OverviewText} ${appStyles.playfair}

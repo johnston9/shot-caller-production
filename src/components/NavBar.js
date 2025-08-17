@@ -147,7 +147,7 @@ const NavBar = () => {
     ref={reff4}
     to="mobile"
     >
-    <i className="navicon fas fa-play"></i>Mobile / Quick Find Posts
+    <i className="navicon fas fa-play"></i>Mobile View
     </NavLink>
     </NavDropdown.Item>
     </NavDropdown>

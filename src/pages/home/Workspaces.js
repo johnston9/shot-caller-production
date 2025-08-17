@@ -110,7 +110,10 @@ const Workspaces = () => {
       className="text-center px-1 px-md-3" >
     <p >
     Collaborate in the Scene Workspaces by Department using Requirements, Workspaces 
-    and Finals categories
+    and Finals Categories
+    </p>
+    <p >
+    Each Category displaying the number of Read and Unread Posts to guide collaboration
     </p>
     </Col>
     <Col xs={12} md={8}>
@@ -165,10 +168,13 @@ const Workspaces = () => {
     className="text-center px-1 px-md-3" >
       <p >
     The Find Post page facilitates collaboration in the Scenes Workspace and is designed
-    to make sure you don't miss any Posts relevent to yor work
+    to make sure relevant Posts are easily found
     </p>
-    <p>
-    Use it to find Posts by Department, the Requirement Posts being returned in Scene order
+    <p >
+    Click the Feed tab to view Posts by Users that are being followed
+    </p>
+    <p >
+    Click the Liked or Starred tabs to return all Liked or Starred Posts 
     </p>
     </Col>
     </Row>
@@ -176,12 +182,12 @@ const Workspaces = () => {
     {/* 9 */}
     <Row className="mt-1 mt-md-3 pb-4 px-3 d-flex align-items-center justify-content-center">
     <Col xs={12} md={{span: 3, offset: 1 }} className="text-center px-1 px-md-3" >
-    <p >
-    Here you can also view your Feed, set up by simply folllowing users on the profiles page,
-    so you can be up to date with whatever production Posts you need
+    <p>
+    Use the Departments here to return all a Department's Requirements, Workspace or Finals
+    Posts
     </p>
-    <p >
-    You can also view all your Liked and Starred Posts here too
+    <p>
+    The Requirement and Finals Posts being returned in Scene order
     </p>
     </Col>
     <Col xs={12} md={8}>
@@ -272,7 +278,10 @@ const Workspaces = () => {
       className="text-center px-3 mt-3" >
     <p >
     Collaborate in the Scene Workspaces by Department using Requirements, Workspaces 
-    and Finals categories
+    and Finals Categories
+    </p>
+    <p >
+    Each Category displaying the number of Read and Unread Posts to guide collaboration
     </p>
     </Col>
     </Row>
@@ -301,14 +310,62 @@ const Workspaces = () => {
       className={` ${styles.FeatureImage}`} />
     </div>
     </Col>
-    <Col xs={12} md={{span: 3, offset: 1 }}
-      className="text-center px-3" >
+    <Col xs={12} md={{span: 3, offset: 0 }}
+      className="text-center px-3 mt-3" >
     <p >
     Upload Ideas and Images/Files in Posts each with a Comments Section
     </p>
     </Col>
     </Row>
+    <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
+    {/* 8 */}
+    <Row className="px-3 mt-3 d-flex align-items-center justify-content-center">
+    <Col xs={12} md={8}>
+    <div className="text-center px-1 px-md-3">
+    <Image src={work4} alt="image" 
+      className={` ${styles.FeatureImage}`} />
     </div>
+    </Col>
+    <Col xs={12} md={{span: 3, offset: 1 }}
+      className="text-center px-3" >
+    <p >
+    The Find Post page facilitates collaboration in the Scenes Workspace and is designed
+    to make sure relevant Posts are easily found
+    </p>
+    <p >
+    Click the Feed tab to view Posts by Users that are being followed
+    </p>
+    <p >
+    Click the Liked or Starred tabs to return all Liked or Starred Posts 
+    </p>
+    </Col>
+    </Row>
+    <Row className="px-3 mt-3 d-flex align-items-center justify-content-center">
+    <Col xs={12} md={8}>
+    <div className="text-center px-1 px-md-3">
+    <Image src={work4} alt="image" 
+      className={` ${styles.FeatureImage}`} />
+    </div>
+    </Col>
+    <Col xs={12} md={{span: 3, offset: 1 }}
+      className="text-center px-3" >
+    <p>
+    Use the Departments here to return all a Department's Requirements, Workspace or Finals
+    Posts
+    </p>
+    <p>
+    The Requirement and Finals Posts being returned in Scene order
+    </p>
+    </Col>
+    </Row>
+    </div>
+    <Row>
+    <Col className="text-center" >
+    <p >
+    Find the mobile view images in the Mobile View page
+    </p>
+    </Col>
+    </Row>
     </div>
   )
 }
