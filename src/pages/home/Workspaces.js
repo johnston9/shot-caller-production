@@ -11,6 +11,8 @@ import work4 from "../../assets/work4.png";
 import work5 from "../../assets/work5.png";
 import work6 from "../../assets/work6.png";
 import work7 from "../../assets/work7.png";
+import quick1 from "../../assets/quick1.png";
+import quick2 from "../../assets/quick2.png";
 import break23 from "../../assets/break23.png";
 import charbg from "../../assets/charbg.png";
 import btnStyles from "../../styles/Button.module.css";
@@ -42,6 +44,9 @@ const Workspaces = () => {
     <Row className="mt-1 mt-md-3 pb-4 px-3 d-flex align-items-center justify-content-center">
     <Col xs={12} md={{span: 3, offset: 1 }} className="text-center px-1 px-md-3" >
     <p >
+    The Primary Creative work place is the Scene page
+    </p>
+    <p >
     Create the Scenes quickly then easily select a Scene to work in
     </p>
     </Col>
@@ -65,7 +70,7 @@ const Workspaces = () => {
     className="text-center px-1 px-md-3" >
     <p >
     Each Scene contains a Breakdown, Workspace, Shotlist, Characters/BG,
-    Storyboard, Moodboards and Script feature to work in
+    Storyboard, Moodboards and Script feature
     </p>
     </Col>
     </Row>
@@ -160,14 +165,14 @@ const Workspaces = () => {
     <Row className="mt-1 mt-md-3 pb-4 px-3 d-flex align-items-center justify-content-center">
     <Col xs={12} md={8} className="text-center px-1 px-md-3" >
     <div className="text-center px-1 px-md-3 mb-3">
-    <Image src={work7} alt="image" 
+    <Image src={quick1} alt="image" 
       className={` ${styles.FeatureImage}`} />
     </div>
     </Col>
     <Col xs={12} md={{span: 3, offset: 0 }}
     className="text-center px-1 px-md-3" >
       <p >
-    The Find Post page facilitates collaboration in the Scenes Workspace and is designed
+    The Quick Find Posts page facilitates collaboration in the Scenes Workspace and is designed
     to make sure relevant Posts are easily found
     </p>
     <p >
@@ -183,7 +188,7 @@ const Workspaces = () => {
     <Row className="mt-1 mt-md-3 pb-4 px-3 d-flex align-items-center justify-content-center">
     <Col xs={12} md={{span: 3, offset: 1 }} className="text-center px-1 px-md-3" >
     <p>
-    Use the Departments here to return all a Department's Requirements, Workspace or Finals
+    THere the Departments return all a Department's Requirements, Workspace or Finals
     Posts
     </p>
     <p>
@@ -192,11 +197,12 @@ const Workspaces = () => {
     </Col>
     <Col xs={12} md={8}>
     <div className="text-center px-1 px-md-3">
-    <Image src={break23} alt="image" 
+    <Image src={quick2} alt="image" 
       className={` ${styles.FeatureImage}`} />
     </div>
     </Col>
     </Row>
+    <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
     </div>
     {/* mobile */}
     <div className="d-block d-md-none">
@@ -209,6 +215,9 @@ const Workspaces = () => {
     </div>
     </Col>
     <Col xs={12} className="text-center mt-3 px-3" >
+    <p >
+    The Primary Creative workplace is the Scene page
+    </p>
     <p >
     Create the Scenes quickly then easily select a Scene to work in
     </p>
@@ -227,7 +236,7 @@ const Workspaces = () => {
     className="text-center px-3" >
     <p >
     Each Scene contains a Breakdown, Workspace, Shotlist, Characters/BG,
-    Storyboard, Moodboards and Script feature to work in
+    Storyboard, Moodboards and Script feature
     </p>
     </Col>
     </Row>
@@ -329,7 +338,7 @@ const Workspaces = () => {
     <Col xs={12} md={{span: 3, offset: 1 }}
       className="text-center px-3 mt-3" >
     <p >
-    The Find Post page facilitates collaboration in the Scenes Workspace and is designed
+    The Quick Find Posts facilitates collaboration in the Scenes Workspace and is designed
     to make sure relevant Posts are easily found
     </p>
     <p >
@@ -340,17 +349,18 @@ const Workspaces = () => {
     </p>
     </Col>
     </Row>
+    {/* 9 */}
     <Row className="px-3 mt-3 d-flex align-items-center justify-content-center">
     <Col xs={12} md={8}>
     <div className="text-center px-1 px-md-3">
-    <Image src={work4} alt="image" 
+    <Image src={quick2} alt="image" 
       className={` ${styles.FeatureImage}`} />
     </div>
     </Col>
     <Col xs={12} md={{span: 3, offset: 1 }}
       className="text-center px-3 mt-3" >
     <p>
-    Use the Departments here to return all a Department's Requirements, Workspace or Finals
+    The Quick Find Posts Departments return all a Department's Requirements, Workspace or Finals
     Posts
     </p>
     <p>
@@ -358,11 +368,12 @@ const Workspaces = () => {
     </p>
     </Col>
     </Row>
+    <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
     </div>
     <Row>
     <Col className="text-center mt-4" >
-    <p >
-    Find the mobile view images in the Mobile View page
+    <p className={` ${styles.Find}`}style={{fontStyle: 'italic'}}>
+    Find the mobile view images for Scenes features on the Mobile View page
     </p>
     </Col>
     </Row>

@@ -47,8 +47,11 @@ const Moodboards = () => {
     className="text-center px-1 px-md-3" >
     <p >
     Create Moodboards for Characters, Locations,
-    Scenes or other themes. They can be created or viewed from 
-    their respective pages or from the Moodboards page.
+    Scenes or other themes
+    </p>
+    <p >
+    They can be created or viewed from 
+    their respective pages or from the Moodboards page
     </p>
     </Col>
     </Row>
@@ -58,9 +61,7 @@ const Moodboards = () => {
     <Col xs={12} md={{span: 3, offset: 1 }}
       className="text-center px-1 px-md-3" >
     <p >
-    Use Moodboards for the exploration,
-    design and guidance of Visual Style. Multiple Moodboards may be used
-    for each Character, Location and Scene.
+    Multiple Moodboards may be used for each Character, Location and Scene
     </p>
     </Col>
     <Col xs={12} md={8}>
@@ -84,7 +85,7 @@ const Moodboards = () => {
     <p >
     A Moodboard can be added solely for a Character, Location 
     and Scene or any combination of the three, interlinking them and 
-    allowing general or specific exploration and design.
+    allowing general or specific exploration and design
     </p>
     </Col>
     </Row>
@@ -118,12 +119,12 @@ const Moodboards = () => {
       className="text-center px-1 px-md-3" >
     <p>
     Use Indexshots to pre-visualize action, style,
-    colour or shots sequences and themes. 
+    colour or shot sequences and themes
     </p>
     <p>
     Similar to Moodboards but of unlimited length this feature is 
     designed for action sequences and exploring themes that may run throughout the
-    entire production.
+    entire production
     </p>
     </Col>
     </Row>
@@ -142,8 +143,11 @@ const Moodboards = () => {
     className="text-center px-3 mt-3" >
     <p >
     Create Moodboards for Characters, Locations,
-    Scenes or other themes. They can be created or viewed from 
-    their respective pages or from the Moodboards page.
+    Scenes or other themes
+    </p>
+    <p >
+    They can be created or viewed from 
+    their respective pages or from the Moodboards page
     </p>
     </Col>
     </Row>
@@ -158,9 +162,7 @@ const Moodboards = () => {
     </Col>
     <Col xs={12} className="text-center px-3 mt-3" >
     <p >
-    Use Moodboards for the exploration,
-    design and guidance of Visual Style. Multiple Moodboards may be used
-    for each Character, Location and Scene.
+    Multiple Moodboards may be used for each Character, Location and Scene
     </p>
     </Col>
     </Row>
@@ -178,7 +180,7 @@ const Moodboards = () => {
     <p >
     A Moodboard can be added solely for a Character, Location 
     and Scene or any combination of the three, interlinking them and 
-    allowing general or specific exploration and design.
+    allowing general or specific exploration and design
     </p>
     </Col>
     </Row>
@@ -212,12 +214,12 @@ const Moodboards = () => {
       className="text-center px-3 mt-3" >
     <p>
     Use Indexshots to pre-visualize action, style,
-    colour or shots sequences and themes. 
+    colour or shot sequences and themes
     </p>
     <p>
     Similar to Moodboards but of unlimited length this feature is 
     designed for action sequences and exploring themes that may run throughout the
-    entire production.
+    entire production
     </p>
     </Col>
     </Row>

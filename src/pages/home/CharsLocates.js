@@ -39,10 +39,10 @@ const CharsLocates = () => {
     <Row className="px-3 mt-4 pb-3 d-flex align-items-center justify-content-center">
     <Col xs={12} md={{span: 3, offset: 1 }} className="text-center px-1 px-md-3" >
     <p >
-    Add Character, Actor and Actor Callsheet Details.
+    Add Character, Actor and Actor Callsheet Details
     </p>
     <p >
-    View and add the Character's Moodboards quickly from the links on top.
+    View and add the Character's Moodboards quickly from the links on top
     </p>
     </Col>
     <Col xs={12} md={8}>
@@ -75,10 +75,10 @@ const CharsLocates = () => {
     <Col xs={12} md={{span: 3, offset: 1 }}
       className="text-center px-1 px-md-3" >
     <p >
-    Add Location description and shooting location addresses.
+    Add Location description and shooting location addresses
     </p>
     <p >
-    View and add the Location's Moodboards quickly from the links on top.
+    View and add the Location's Moodboards quickly from the links on top
     </p>
     </Col>
     <Col xs={12} md={8}>

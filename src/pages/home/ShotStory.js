@@ -13,6 +13,7 @@ import shot2 from "../../assets/shot2.png";
 import sketchshot from "../../assets/sketchshot.png";
 import shot5 from "../../assets/shot5.png";
 import shot7 from "../../assets/shot7.png";
+import scenescript from "../../assets/scenescript.png";
 import btnStyles from "../../styles/Button.module.css";
 import Button from "react-bootstrap/Button";
 import { Image } from "react-bootstrap";
@@ -127,21 +128,35 @@ const ShotStory = () => {
     <Row className="px-3 mt-4 pb-4 d-flex align-items-center justify-content-center">
     <Col xs={12} md={8}>
     <div className="text-center px-1 px-md-3">
-    <Image src={break2} alt="image" 
+    <Image src={scenescript} alt="image" 
       className={` ${styles.FeatureImage}`} />
     </div>
     </Col>
     <Col xs={12} md={{span: 3, offset: 0 }}
       className="text-center px-1 px-md-3" >
     <p >
-    Add the Scene script to the Scene page along with
-    changes details and notes.
-    </p>
-    <p>
-      The whole Script is added on the Scenes page.
+    The Scene Script can be add to the Scene page and changed when necessary
     </p>
     </Col>
     </Row>
+    <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
+    {/* full script */}
+    <Row className="px-3 pb-4 mt-4 d-flex align-items-center justify-content-center">
+    <Col xs={12} md={{span: 3, offset: 1 }}
+      className="text-center" >
+    <p >
+    Add the Full Script to the Scenes page along with
+    changes details and notes
+    </p>
+    </Col>
+    <Col xs={12} md={8}>
+    <div className="text-center">
+    <Image src={break2} alt="image" 
+      className={` ${styles.FeatureImage}`} />
+    </div>
+    </Col>
+    </Row>
+    <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
     </div>
     {/* mobile */}
     <div className="d-block d-md-none">
@@ -227,30 +242,42 @@ const ShotStory = () => {
     </Col>
     </Row>
     <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
-    {/* scipt */} 
+    {/* scene scipt */} 
     <Row className="px-3 mt-4 pb-4 d-flex align-items-center justify-content-center">
     <Col xs={12} md={8}>
     <div className="text-center px-1">
-    <Image src={break2} alt="image" 
+    <Image src={scenescript} alt="image" 
       className={` ${styles.FeatureImage}`} />
     </div>
     </Col>
     <Col xs={12} md={{span: 3, offset: 0 }}
       className="text-center px-1 mt-3" >
     <p >
-    Add the Scene script to the Scene page along with
-    changes details and notes.
-    </p>
-    <p>
-      The whole Script is added on the Scenes page.
+    The Scene Script can be add to the Scene page and changed when necessary
     </p>
     </Col>
     </Row>
+    {/* full script  */}
+    <Row className="px-3 mt-3 d-flex align-items-center justify-content-center">
+    <Col xs={12} md={8}>
+    <div className="text-center px-1">
+    <Image src={break2} alt="image" 
+      className={` ${styles.FeatureImage}`} />
+    </div>
+    </Col>
+    <Col xs={12} className="text-center px-3 mt-3" >
+    <p >
+    Add the Full Script to the Scenes page along with
+    changes details and notes
+    </p>
+    </Col>
+    </Row>
+    <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
     </div>
     <Row>
-    <Col className="text-center" >
-    <p >
-    Find the mobile view images in the Mobile View page
+    <Col className="text-center mt-4" >
+    <p className={` ${styles.Find}`}style={{fontStyle: 'italic'}}>
+    Find the mobile view images for Scenes features on the Mobile View page
     </p>
     </Col>
     </Row>

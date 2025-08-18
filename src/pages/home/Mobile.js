@@ -43,8 +43,8 @@ const Mobile = () => {
       All features apart from the Budget are totally compatable in Mobile in terms 
       of functionality and view.
       </p>
-      <p>Some of the Info Pages contain Mobile View images but here are some more
-      examples.
+      <p>The Production Info pages contain their Mobile View images and below are the
+        images of the Scenes features.
       </p>
       <h4 className={`py-2 ${styles.OverviewText} ${appStyles.playfair}
        text-center`} >Scenes features including Breakdown & Workspace</h4>
