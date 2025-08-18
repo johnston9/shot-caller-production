@@ -94,14 +94,15 @@ const CastCrew = () => {
     </p>
     </Col>
     </Row>
+    <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
     {/* crew mo one */}
     <Row className="mt-1 mt-md-3 pb-4 px-3 d-flex align-items-center justify-content-center">
       <Col xs={12} md={{span: 3, offset: 1 }} className="text-center px-1 px-md-3" >
       <p >
-       Add and View both Main and Extra Crew on Mobile
+       The Mobile View Main Crew page
        </p>
-      <p >
-       The mobile View Main Crew page
+       <p >
+       The Extra Crew displays similarly on Mobile
        </p>
       </Col>
       <Col xs={12} md={8}>
@@ -123,8 +124,11 @@ const CastCrew = () => {
     <Col xs={12} md={{span: 3, offset: 0 }}
     className="text-center px-1 px-md-3" >
       <p >
-       The mobile Add Main Crew page
+       The Mobile View Add Main Crew page
     </p>
+    <p >
+       The Add Extra Crew displays similarly on Mobile
+       </p>
     </Col>
     </Row>
     <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
@@ -188,6 +192,7 @@ const CastCrew = () => {
     </p>
     </Col>
     </Row>
+    <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
     {/* crew mo one */}
     <Row className="mt-3 px-3 d-flex align-items-center justify-content-center">
       <Col xs={12} md={8}>
@@ -198,10 +203,10 @@ const CastCrew = () => {
       </Col>
       <Col xs={12} className="text-center px-3 mt-3" >
       <p >
-       Add and View both Main and Extra Crew on Mobile
+       The Mobile View Main Crew page
        </p>
-      <p >
-       The mobile View Main Crew page
+       <p >
+       The Extra Crew displays similarly on Mobile
        </p>
       </Col>
     </Row>
@@ -216,8 +221,11 @@ const CastCrew = () => {
     </Col>
     <Col xs={12} className="text-center px-3 mt-3" >
       <p >
-       The mobile Add Main Crew page
+       The Mobile Add Main Crew page
     </p>
+    <p >
+       The Add Extra Crew displays similarly on Mobile
+       </p>
     </Col>
     </Row>
     <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>

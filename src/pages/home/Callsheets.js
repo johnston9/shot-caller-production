@@ -51,12 +51,12 @@ const Callsheets = () => {
       <Col xs={12} md={{span: 3, offset: 1 }}
         className="text-center px-1 px-md-3" >
       <p className="mt-2">
-      Create Callsheets for each Shoot Day. The top section containing 
+      Create Callsheets for each Shoot Day, the top section containing 
       Company info, Times and Weather info
       and a Personalised Calltime for each individual user
       </p>
       <p>
-      Use the Send Button to send the callsheet to all Cast and Crew with one click
+      Use the Send Button to send the Callsheet to all Cast and Crew with one click
       </p>
       </Col>
       <Col xs={12} md={8}>
@@ -246,7 +246,7 @@ const Callsheets = () => {
       <Col xs={12} md={{span: 3, offset: 0 }}
         className="text-center px-1 px-md-3" >
       <p >
-      The Department, Transport and Important notes section</p>
+      The Department, Transport and Important Notes section</p>
       </Col>
       </Row>
       <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
@@ -279,8 +279,11 @@ const Callsheets = () => {
       className="text-center px-1 px-md-3" >
       <p >
       View the Add Cast and Add BG forms beside the Schedule for 
-      maximum efficiency. Open each Scene's "Cast" box to find 
-      which cast members and BG to add.
+      maximum efficiency
+      </p>
+      <p >
+      Click a Scene's Cast link to find 
+      which cast members and BG to add
       </p>
       </Col>
       </Row>
@@ -331,7 +334,7 @@ const Callsheets = () => {
       </Col>
       <Col xs={12} className="text-center px-3 mt-3" >
       <p className="mt-2">
-      Create Callsheets for each Shoot Day. The top section containing 
+      Create Callsheets for each Shoot Day, the top section containing 
       Company info, Times and Weather info
       and a Personalised Calltime for each individual user
       </p>
@@ -509,11 +512,11 @@ const Callsheets = () => {
       </Col>
       <Col xs={12} className="text-center px-3 mt-3" >
       <p >
-      The Department, Transport and Important notes section</p>
+      The Department, Transport and Important Notes section</p>
       </Col>
       </Row>
       <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
-      {/* cast add */}
+      {/* cast add  */}
       <Row className="mt-3 px-3 d-flex align-items-center justify-content-center">
       <Col xs={12} md={8}>
       <div className="text-center px-1 px-md-3">
@@ -541,8 +544,11 @@ const Callsheets = () => {
       <Col xs={12} className="text-center px-3 mt-3" >
       <p >
       View the Add Cast and Add BG forms beside the Schedule for 
-      maximum efficiency. Open each Scene's "Cast" box to find 
-      which cast members and BG to add.
+      maximum efficiency
+      </p>
+      <p >
+      Click a Scene's Cast link to find 
+      which cast members and BG to add
       </p>
       </Col>
       </Row>

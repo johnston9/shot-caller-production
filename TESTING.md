@@ -723,9 +723,9 @@ Note: If a plan is cancelled and the user purchases a new plan all their old Pro
   1. Click the URL in the email or on the Account page and use the Username and Password to Log In and a Film type project "The First" opens.
   2. On the My Profile page Change the Password and a success message displays.<br>
   3. Log out the back in again successfully using the new Password.<br>
-  4. Attenpt to lofin to a different project with the old Password It is unsuccessful.<br>
+  4. Attenpt to login to a different project with the old Password. It is unsuccessful.<br>
   5. Login to a different Project, e.g. "Second" using the new Password.<br>
-  4. Login is successful<br>
+  4. Login is successful.<br>
 
 <p align="center"> <strong>Success message from Password Change for "The First"</strong></p>
 <h2 align="center">

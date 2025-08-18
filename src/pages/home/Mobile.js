@@ -43,9 +43,6 @@ const Mobile = () => {
       All features apart from the Budget are totally compatable in Mobile in terms 
       of functionality and view.
       </p>
-      <p>The Production Info pages contain their Mobile View images and below are the
-        images of the Scenes features.
-      </p>
       <h4 className={`py-2 ${styles.OverviewText} ${appStyles.playfair}
        text-center`} >Scenes features including Breakdown & Workspace</h4>
       </Col>
@@ -58,7 +55,7 @@ const Mobile = () => {
         className={` ${styles.FeatureImage}`} />
       </div>
       <p className="mt-3 text-center">
-      The Scenes page in mobile view.
+      The Scenes page in mobile view
       </p>
       <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
       </Col>
@@ -68,7 +65,7 @@ const Mobile = () => {
         className={` ${styles.FeatureImage}`} />
       </div>
       <p className="mt-3 text-center">
-      The Scene page and Workspace in mobile view.
+      The Scene page and Workspace in mobile view
       </p>
       <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
       </Col>
@@ -81,7 +78,7 @@ const Mobile = () => {
         className={` ${styles.FeatureImage}`} />
       </div>
       <p className="mt-3 text-center">
-      The Workspace Posts page in mobile view.
+      The Workspace Posts page in mobile view
       </p>
       <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
       </Col>
@@ -91,7 +88,7 @@ const Mobile = () => {
         className={` ${styles.FeatureImage}`} />
       </div>
       <p className="mt-3 text-center">
-      A Workspace Post in mobile view.
+      A Workspace Post in mobile view
       </p>
       <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
       </Col>
@@ -104,7 +101,7 @@ const Mobile = () => {
         className={` ${styles.FeatureImage}`} />
       </div>
       <p className="mt-3 text-center">
-      The Scene Breakdown page in mobile view.
+      The Scene Breakdown page in mobile view
       </p>
       <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
       </Col>
@@ -133,7 +130,7 @@ const Mobile = () => {
         className={` ${styles.FeatureImage}`} />
       </div>
       <p className="mt-3 text-center">
-      The Shotlist in mobile view.
+      The Shotlist in mobile view
       </p>
       <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
       </Col>
@@ -156,7 +153,7 @@ const Mobile = () => {
         className={` ${styles.FeatureImage}`} />
       </div>
       <p className="mt-3 text-center">
-      The Shotlist Edit page in mobile view.
+      The Shotlist Edit page in mobile view
       </p>
       <div className={`${styles.Overview} py-4 px-0 mx-0`}></div>
       </Col>
