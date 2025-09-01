@@ -129,7 +129,7 @@ Find these here. [Shot Caller Readme](https://github.com/johnston9/shot-caller/b
 **SQLite3** was used during development and comes with Django Rest Frameworks. 
 
 - Deployment 
-**Postgres** ?????????????
+**Postgres** 
 
 ### Database structure for Shot Caller Production - Model Tables by App
 
@@ -191,8 +191,8 @@ Find these here. [Shot Caller Readme](https://github.com/johnston9/shot-caller/b
    - Django Rest Frameworks the high-level Python Web framework was used to build the app's Backend.
 - [SQLite3:](https://www.sqlite.org/index.html)
    - SQLight came with Django and was used as the database for development.
-- [Postgres:](https://www.heroku.com/postgres) ?????????????????????????
-   - Postgres was added with Heroku and was used as the database for production.??????????????????
+- [Postgres:](https://www.heroku.com/postgres)
+   - Postgres was added with Heroku and was used as the database for production.
 - [Cloudinary:](https://cloudinary.com/)
    - Cloudinary was used to hold the media files.
 - [Axios](https://axios-http.com/docs/intro)
@@ -298,19 +298,34 @@ sqlparse==0.4.2 <br>
 
 ### Dependencies for the Shot Caller Production React Frontend
 
-"@testing-library/jest-dom": "^5.16.5", <br>
-"@testing-library/react": "^11.2.7",<br>
-"@testing-library/user-event": "^12.8.3",<br>
-"axios": "^0.21.4",<br>
-"bootstrap": "^4.6.0",<br>
-"jwt-decode": "^3.1.2",<br>
-"react": "^17.0.2",<br>
-"react-bootstrap": "^1.6.3",<br>
-"react-dom": "^17.0.2",<br>
-"react-infinite-scroll-component": "^6.1.0",<br>
-"react-router-dom": "^5.3.0",<br>
-"react-scripts": "^4.0.3",<br>
-"web-vitals": "^1.1.2"<br>
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@mantine/core": "^6.0.17",
+    "@mantine/dates": "^6.0.17",
+    "@mantine/form": "^6.0.17",
+    "@mantine/hooks": "^6.0.17",
+    "@mantine/modals": "^6.0.17",
+    "@mui/material": "^6.0.1",
+    "@stripe/react-stripe-js": "^2.8.0",
+    "@stripe/stripe-js": "^4.3.0",
+    "@tanstack/react-table": "^8.20.5",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "axios": "^0.21.4",
+    "bootstrap": "^4.6.0",
+    "dayjs": "^1.11.9",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^2.5.2",
+    "jwt-decode": "^3.1.2",
+    "react": "^17.0.2",
+    "react-bootstrap": "^1.6.3",
+    "react-dom": "^17.0.2",
+    "react-hot-toast": "^2.4.1",
+    "react-infinite-scroll-component": "^6.1.0",
+    "react-router-dom": "^5.3.0",
+    "react-scripts": "^4.0.3",
+    "web-vitals": "^1.1.2"
  
 
 [Back to Table of Content](#table-of-content)
