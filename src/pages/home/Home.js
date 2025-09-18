@@ -33,130 +33,9 @@ const Home = () => {
         <TopBox2 title="SHOT CALLER PRODUCTION" className="mt-5" />
         {/* Section 1 - the temporary background image city1
             and The Creative and Production feature information links */}
-        <div className={`${styles.HomeBoxMo} d-md-none`}>
-        <Row className={styles.Row}>
-          <Col className="my-5" xs={12}>
-            <Row>
-               <Col xs={12} className={` text-center ${styles.Header}`} >
-                <h2 className={`${styles.Header}`} >TV and Film Production Software</h2>
-                <h5 className={`${styles.Header}`}  style={{fontStyle: 'italic'}}>
-                  The entire Creative and Production processes 
-                  in one Workflow.</h5>
-                <Row className="mt-5" >
-                <Col className={`text-center  ${styles.Creative} `} xs={12} >
-                <h4 className={`mb-2 ${styles.Creative}`}>
-                Budgeting
-                </h4>
-                <p className={`${styles.Creative}`} 
-                  style={{fontStyle: 'italic'}}>
-                Create Industry standard Budgets easily
-                </p>
-                </Col>
-                </Row>
-                <Row>
-                <Col xs={12} >
-                <p className={`${styles.Depts}`}
-                  onClick={() => history.push('/budgeting')}>
-                Budgeting
-                </p>
-                </Col>
-                </Row>
-                <Row className="mt-3" >
-                <Col className={`text-center  ${styles.Creative} `} md={6}>
-                {/* The Creative links */}
-                <h4 className={`mb-2 ${styles.Creative}`}>
-                The Creative
-                </h4>
-                <p className={`${styles.Creative}`} 
-                  style={{fontStyle: 'italic'}}>
-                Collaborate and design in Scene Department Workspaces
-                </p>
-                <Row >
-                {/* Breakdowns / Workspaces */}
-                <Col xs={12} >
-                <p className={`${styles.Depts}`}
-                  onClick={() => history.push('/workspaces')}>
-                Breakdowns / Workspaces
-                </p>
-                </Col>
-                {/* Moodboards / Indexshots */}
-                <Col xs={12}>
-                <p className={`${styles.Depts}`}
-                  onClick={() => history.push('/moodboards')}>
-                Moodboards / Indexshots
-                </p>
-                </Col>
-                </Row>
-                <Row>
-                {/* Shotlists / Storyboards */}
-                <Col xs={12} >
-                <span className={`${styles.Depts}`}
-                  onClick={() => history.push('/shotstory')} >
-                Storyboard / Shotlists / Script
-                </span>
-                </Col>
-                <Col xs={12}>
-                {/* Characters / Locations  */}
-                <span className={`${styles.Depts}`}
-                  onClick={() => history.push('/charslocates')} >
-                Characters / Locations 
-                </span>
-                </Col>
-                </Row>
-                </Col>
-                <Col xs={12} className={` ${styles.Creative} `} >
-                <h4 className={`mb-2 ${styles.Creative}`}>
-                Production
-                </h4>
-                <p className={`${styles.Header}`}
-                  style={{fontStyle: 'italic'}}>
-                All Production Software Tools in one Connected Workflow
-                </p>
-                <Row>
-                {/* Schedule / Stripboard */}
-                <Col xs={12}>
-                <p className={`${styles.Depts}`}
-                  onClick={() => history.push('/schedule')}>
-                Schedule / Stripboard
-                </p>
-                </Col>
-                {/* Callsheets */}
-                <Col xs={12}>
-                <p className={`${styles.Depts}`}
-                  onClick={() => history.push('/callsheets')} >
-                Callsheets
-                </p>
-                </Col>
-                </Row>
-                <Row>
-                {/* Cast / Crew */}
-                <Col xs={12}>
-                <p className={`${styles.Depts}`}
-                  onClick={() => history.push('/castcrew')}>
-                Cast / Crew
-                </p>
-                </Col>
-                {/* Mobile View */}
-                <Col xs={12}>
-                <p className={`${styles.Depts}`}
-                  onClick={() => history.push('/mobile')} >
-                Mobile View
-                </p>
-                </Col>
-                </Row>
-                </Col>
-                </Row>
-                <Container className="mt-3" >
-                <Link className={styles.Link} to="/signup">
-                  Sign up <span>Here</span>
-                </Link>
-                </Container>
-               </Col>
-             </Row>
-          </Col>
-        </Row>
-        </div>
-        <div className={`${styles.HomeBox} d-none d-md-block`}
+        {/* Desktop view */}
+        {/* <div className={`${styles.HomeBox} d-none d-md-block`} */}
+        <div className={`${styles.HomeBox}`}
           style={{ backgroundImage: `url(${city1})`,
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat', }}
@@ -169,7 +48,8 @@ const Home = () => {
                 <h5 className={`${styles.Header}`}  style={{fontStyle: 'italic'}}>
                   The entire Creative and Production processes 
                   in one Workflow.</h5>
-                <Row className="mt-5" >
+                  {/* Budgeting */}
+                <Row className="mt-3" >
                 <Col className={`text-center  ${styles.Creative} `} xs={12} >
                 <h4 className={`mb-2 ${styles.Creative}`}>
                 Budgeting
@@ -189,14 +69,14 @@ const Home = () => {
                 </Col>
                 </Row>
                 <Row className="mt-3" >
-                <Col className={`text-center  ${styles.Creative} `} md={6}>
+                <Col className={`text-center  ${styles.Creative} `} xs={6} md={6}>
                 {/* The Creative links */}
                 <h4 className={`mb-2 ${styles.Creative}`}>
                 The Creative
                 </h4>
                 <p className={`${styles.Creative}`} 
                   style={{fontStyle: 'italic'}}>
-                Collaborate and design in Scene Department Workspaces
+                Collaborate and design in Scene Workspaces
                 </p>
                 <Row >
                 {/* Breakdowns / Workspaces */}
@@ -215,36 +95,36 @@ const Home = () => {
                 </Col>
                 </Row>
                 <Row>
-                {/* Shotlists / Storyboards */}
-                <Col md={6} >
-                <span className={`${styles.Depts}`}
-                  onClick={() => history.push('/shotstory')} >
-                Storyboard / Shotlists / Script
-                </span>
-                </Col>
+                  {/* Characters / Locations  */}
                 <Col md={6}>
-                {/* Characters / Locations  */}
-                <span className={`${styles.Depts}`}
+                <p className={`${styles.Depts}`}
                   onClick={() => history.push('/charslocates')} >
                 Characters / Locations 
-                </span>
+                </p>
+                </Col>
+                {/* Shotlists / Storyboards */}
+                <Col md={6} >
+                <p className={`${styles.Depts}`}
+                  onClick={() => history.push('/shotstory')} >
+                Shotlists
+                </p>
                 </Col>
                 </Row>
                 </Col>
-                <Col md={6} className={` ${styles.Creative} `} >
+                <Col xs={6} md={6} className={` ${styles.Creative} `} >
                 <h4 className={`mb-2 ${styles.Creative}`}>
                 Production
                 </h4>
                 <p className={`${styles.Header}`}
                   style={{fontStyle: 'italic'}}>
-                All Production Software Tools in one Connected Workflow
+                All Production in one Connected Workflow
                 </p>
                 <Row>
                 {/* Schedule / Stripboard */}
                 <Col md={6}>
                 <p className={`${styles.Depts}`}
                   onClick={() => history.push('/schedule')}>
-                Schedule / Stripboard
+                Scheduling
                 </p>
                 </Col>
                 {/* Callsheets */}
@@ -283,6 +163,125 @@ const Home = () => {
           </Col>
         </Row>
         </div>
+        {/* Mobile view possibly don't need one */}
+        {/* <div className={`${styles.HomeBoxMo} d-md-none`}
+        style={{ backgroundImage: `url(${city1})`,
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat', }}
+        >
+        <Row className={styles.Row}>
+          <Col className="my-5" xs={12}>
+            <Row>
+               <Col xs={12} className={` text-center ${styles.Header}`} >
+                <h2 className={`${styles.Header}`} >TV and Film Production Software</h2>
+                <h5 className={`${styles.Header}`}  style={{fontStyle: 'italic'}}>
+                  The entire Creative and Production processes 
+                  in one Workflow.</h5>
+                <Row className="mt-5" >
+                <Col className={`text-center  ${styles.Creative} `} xs={12} >
+                <h4 className={`mb-2 ${styles.Creative}`}>
+                Budgeting
+                </h4>
+                <p className={`${styles.Creative}`} 
+                  style={{fontStyle: 'italic'}}>
+                Create Industry standard Budgets easily
+                </p>
+                </Col>
+                </Row>
+                <Row>
+                <Col xs={12} >
+                <p className={`${styles.Depts}`}
+                  onClick={() => history.push('/budgeting')}>
+                Budgeting
+                </p>
+                </Col>
+                </Row>
+                <Row className="mt-3" >
+                <Col className={`text-center  ${styles.Creative} `} md={6}>
+                <h4 className={`mb-2 ${styles.Creative}`}>
+                The Creative
+                </h4>
+                <p className={`${styles.Creative}`} 
+                  style={{fontStyle: 'italic'}}>
+                Collaborate and design in Scene Department Workspaces
+                </p>
+                <Row >
+                <Col xs={12} >
+                <p className={`${styles.Depts}`}
+                  onClick={() => history.push('/workspaces')}>
+                Breakdowns / Workspaces
+                </p>
+                </Col>
+                <Col xs={12}>
+                <p className={`${styles.Depts}`}
+                  onClick={() => history.push('/moodboards')}>
+                Moodboards / Indexshots
+                </p>
+                </Col>
+                </Row>
+                <Row>
+                <Col xs={12} >
+                <p className={`${styles.Depts}`}
+                  onClick={() => history.push('/shotstory')} >
+                Shotlists
+                </p>
+                </Col>
+                <Col xs={12}>
+                <p className={`${styles.Depts}`}
+                  onClick={() => history.push('/charslocates')} >
+                Characters / Locations 
+                </p>
+                </Col>
+                </Row>
+                </Col>
+                <Col xs={12} className={` ${styles.Creative} `} >
+                <h4 className={`mb-2 ${styles.Creative}`}>
+                Production
+                </h4>
+                <p className={`${styles.Header}`}
+                  style={{fontStyle: 'italic'}}>
+                All Production Software Tools in one Connected Workflow
+                </p>
+                <Row>
+                <Col xs={12}>
+                <p className={`${styles.Depts}`}
+                  onClick={() => history.push('/schedule')}>
+                Schedule Stripboards
+                </p>
+                </Col>
+                <Col xs={12}>
+                <p className={`${styles.Depts}`}
+                  onClick={() => history.push('/callsheets')} >
+                Callsheets
+                </p>
+                </Col>
+                </Row>
+                <Row>
+                <Col xs={12}>
+                <p className={`${styles.Depts}`}
+                  onClick={() => history.push('/castcrew')}>
+                Cast / Crew
+                </p>
+                </Col>
+                <Col xs={12}>
+                <p className={`${styles.Depts}`}
+                  onClick={() => history.push('/mobile')} >
+                Mobile View
+                </p>
+                </Col>
+                </Row>
+                </Col>
+                </Row>
+                <Container className="mt-3" >
+                <Link className={styles.Link} to="/signup">
+                  Sign up <span>Here</span>
+                </Link>
+                </Container>
+               </Col>
+             </Row>
+          </Col>
+        </Row>
+        </div> */}
         {/* Section 2 - Overview in 4 parts with
             temporary image   */}
         <div>
@@ -360,7 +359,7 @@ const Home = () => {
         <h2 className={`pb-1 ${styles.OverviewText} ${appStyles.playfair} 
         text-center`} >The Creative Features</h2>
         </div>
-        <div className="px-5">
+        <div className="px-3">
         <Row className="mb-3 mt-5">
         {/* Workspaces */}
         <Col xs={12} md={6} >
@@ -388,7 +387,7 @@ const Home = () => {
         </div>
         </Col>
         {/* Moodboards and Script*/}
-        <Col xs={12} md={6} >
+        <Col xs={12} md={6} className="mt-3 mt-md-0">
         <div onClick={() => history.push('/moodboards')}
           className={`${styles.FeatureLink} `}>
         <Row >
@@ -440,7 +439,7 @@ const Home = () => {
         </div>
         </Col>
         {/* Characters and Locations */}
-        <Col xs={12} md={6}>
+        <Col xs={12} md={6} className="mt-3 mt-md-0">
         <div onClick={() => history.push('/charslocates')}
           className={`${styles.FeatureLink}`}>
         <Row >
@@ -470,11 +469,11 @@ const Home = () => {
         <h2 className={`pb-1 ${styles.OverviewText} ${appStyles.playfair} 
         text-center`} >Production Features</h2>
         </div>
-        <div className="px-5">
+        <div className="px-3">
         <Row className="mb-3 mt-5">
         {/* Budgeting */}
         <Col xs={12} md={6} >
-        <div onClick={() => history.push('/castcrew')}
+        <div onClick={() => history.push('/budgeting')}
           className={`${styles.FeatureLink} `}>
         <Row >
         <Col xs={3} >
@@ -496,7 +495,7 @@ const Home = () => {
         </div>
         </Col>
         {/* Scheduling */}
-        <Col xs={12} md={6}>
+        <Col xs={12} md={6} className="mt-3 mt-md-0">
         <div onClick={() => history.push('/schedule')}
           className={`${styles.FeatureLink}`}>
         <Row >
@@ -539,14 +538,13 @@ const Home = () => {
         <h4>Callsheets</h4>
         <p >
         Create stylish Callsheets with personalized Call Times
-        and Google Maps for Locations
         </p>
         </Col>
         </Row>
         </div>
         </Col>
         {/* Cast and Crew */}
-        <Col xs={12} md={6} >
+        <Col xs={12} md={6} className="mt-3 mt-md-0">
         <div onClick={() => history.push('/castcrew')}
           className={`${styles.FeatureLink} `}>
         <Row >
@@ -572,11 +570,11 @@ const Home = () => {
         <Row className="my-3">
         {/* Mobile */}
         <Col className="d-none d-md-block" md={2}></Col>
-        <Col xs={12} md={8}>
+        <Col xs={12} md={8} className="mt-3 mt-md-0">
         <div onClick={() => history.push('/mobile')}
           className={`${styles.FeatureLink} `}>
         <Row>
-        <Col xs={2} >
+        <Col xs={3} >
         <div className="text-center" >
         <Image 
           height={height}
@@ -585,14 +583,14 @@ const Home = () => {
           className={`round ${styles.FeaturesImage}`} />
         </div>
         </Col>
-        <Col xs={8} className="text-center" >
+        <Col xs={9} md={6} className="text-center" >
         <h4>Mobile View</h4>
         <p >
-        Use all Features in Mobile View and find all Info fast 
+        Use all Features in Mobile View and find all Posts fast 
         using the Quick Find Feature
         </p>
         </Col>
-        <Col xs={2} >
+        <Col xs={3} className="d-none d-md-block" >
         <div className="text-center" >
         <Image 
           height={height}
