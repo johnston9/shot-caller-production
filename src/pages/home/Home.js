@@ -282,6 +282,7 @@ const Home = () => {
           </Col>
         </Row>
         </div> */}
+        
         {/* Section 2 - Overview in 4 parts with
             temporary image   */}
         <div>
